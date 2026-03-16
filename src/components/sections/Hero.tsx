@@ -5,17 +5,72 @@ import { motion } from "framer-motion";
 import { Link } from "@/i18n/navigation";
 import { ArrowRight, ChevronDown } from "lucide-react";
 import { fadeInUp, staggerContainer } from "@/lib/animations";
+import { useState, useCallback } from "react";
 
 export function Hero() {
   const t = useTranslations("Hero");
+  const [mousePosition, setMousePosition] = useState({ x: 0, y: 0 });
+
+  const handleMouseMove = useCallback(
+    (e: React.MouseEvent<HTMLElement>) => {
+      const rect = e.currentTarget.getBoundingClientRect();
+      setMousePosition({
+        x: e.clientX - rect.left,
+        y: e.clientY - rect.top,
+      });
+    },
+    []
+  );
 
   return (
-    <section className="relative min-h-screen flex items-center justify-center overflow-hidden">
-      {/* Background gradient orbs */}
+    <section
+      className="relative min-h-screen flex items-center justify-center overflow-hidden"
+      onMouseMove={handleMouseMove}
+    >
+      {/* Mouse-follow gradient (desktop only) */}
+      <div
+        className="absolute inset-0 hidden md:block pointer-events-none"
+        style={{
+          background: `radial-gradient(600px circle at ${mousePosition.x}px ${mousePosition.y}px, rgba(255,107,53,0.06), transparent 60%)`,
+        }}
+      />
+
+      {/* Animated background orbs */}
       <div className="absolute inset-0 overflow-hidden">
-        <div className="absolute top-1/4 -left-32 w-96 h-96 bg-spicy-400/20 rounded-full blur-[128px]" />
-        <div className="absolute bottom-1/4 -right-32 w-96 h-96 bg-spicy-400/10 rounded-full blur-[128px]" />
-        <div className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-[600px] h-[600px] bg-spicy-400/5 rounded-full blur-[128px]" />
+        <motion.div
+          animate={{
+            y: [-20, 20, -20],
+            x: [-10, 10, -10],
+          }}
+          transition={{ duration: 6, repeat: Infinity, ease: "easeInOut" }}
+          className="absolute top-1/4 -left-32 w-96 h-96 bg-spicy-400/20 rounded-full blur-[128px]"
+        />
+        <motion.div
+          animate={{
+            y: [15, -15, 15],
+            x: [10, -10, 10],
+          }}
+          transition={{
+            duration: 8,
+            repeat: Infinity,
+            ease: "easeInOut",
+            delay: 1,
+          }}
+          className="absolute bottom-1/4 -right-32 w-96 h-96 bg-spicy-400/10 rounded-full blur-[128px]"
+        />
+        <motion.div
+          animate={{
+            y: [-10, 10, -10],
+            scale: [1, 1.05, 1],
+          }}
+          transition={{
+            duration: 7,
+            repeat: Infinity,
+            ease: "easeInOut",
+            delay: 2,
+          }}
+          className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-[600px] h-[600px] bg-spicy-400/5 rounded-full blur-[128px]"
+        />
       </div>
 
       {/* Grid pattern overlay */}
@@ -34,11 +89,15 @@ export function Hero() {
           animate="visible"
           className="space-y-8"
         >
-          {/* Badge */}
+          {/* Badge with shimmer */}
           <motion.div variants={fadeInUp}>
-            <span className="inline-flex items-center gap-2 px-4 py-1.5 rounded-full text-sm font-medium bg-spicy-400/10 text-spicy-400 border border-spicy-400/20">
-              <span className="w-1.5 h-1.5 rounded-full bg-spicy-400 animate-pulse" />
-              {t("badge")}
+            <span className="relative inline-flex items-center gap-2 px-4 py-1.5 rounded-full text-sm font-medium bg-spicy-400/10 text-spicy-400 overflow-hidden">
+              <span className="absolute inset-0 rounded-full border border-spicy-400/20" />
+              <span className="absolute inset-0 rounded-full shimmer-border opacity-30" />
+              <span className="relative flex items-center gap-2">
+                <span className="w-1.5 h-1.5 rounded-full bg-spicy-400 animate-pulse" />
+                {t("badge")}
+              </span>
             </span>
           </motion.div>
 
@@ -49,7 +108,7 @@ export function Hero() {
           >
             {t("title")}
             <br />
-            <span className="text-transparent bg-clip-text bg-gradient-to-r from-spicy-400 to-spicy-300">
+            <span className="animated-gradient-text">
               {t("titleHighlight")}
             </span>
           </motion.h1>
@@ -69,10 +128,10 @@ export function Hero() {
           >
             <Link
               href="/contact"
-              className="inline-flex items-center gap-2 px-8 py-4 bg-spicy-400 text-white rounded-lg text-base font-semibold hover:bg-spicy-500 transition-all shadow-lg shadow-spicy-400/25 hover:shadow-xl hover:shadow-spicy-400/30"
+              className="group inline-flex items-center gap-2 px-8 py-4 bg-spicy-400 text-white rounded-lg text-base font-semibold hover:bg-spicy-500 transition-all shadow-lg shadow-spicy-400/25 hover:shadow-xl hover:shadow-spicy-400/40"
             >
               {t("cta")}
-              <ArrowRight className="w-4 h-4" />
+              <ArrowRight className="w-4 h-4 group-hover:translate-x-1 transition-transform" />
             </Link>
             <Link
               href="/services"

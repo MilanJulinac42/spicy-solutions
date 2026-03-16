@@ -12,11 +12,11 @@ interface ProjectCardProps {
   category: string;
 }
 
-const categoryColors: Record<string, string> = {
-  website: "from-blue-500 to-blue-600",
-  enterprise: "from-purple-500 to-purple-600",
-  ai: "from-emerald-500 to-emerald-600",
-  automation: "from-amber-500 to-amber-600",
+const categoryGradients: Record<string, string> = {
+  website: "from-blue-500 via-indigo-500 to-purple-500",
+  enterprise: "from-purple-500 via-pink-500 to-rose-500",
+  ai: "from-emerald-500 via-teal-500 to-cyan-500",
+  automation: "from-amber-500 via-orange-500 to-red-500",
 };
 
 export function ProjectCard({
@@ -28,23 +28,36 @@ export function ProjectCard({
   return (
     <motion.div
       variants={fadeInUp}
-      whileHover={{ y: -4 }}
-      className="group relative rounded-2xl bg-surface-secondary border border-border-default hover:border-spicy-400/50 overflow-hidden transition-all duration-300"
+      whileHover={{ y: -6, transition: { type: "spring", stiffness: 300, damping: 20 } }}
+      className="group relative rounded-2xl bg-surface-secondary border border-border-default hover:border-spicy-400/50 overflow-hidden transition-all duration-300 hover:shadow-xl hover:shadow-spicy-400/10"
     >
-      {/* Project image placeholder with gradient */}
+      {/* Animated gradient image placeholder */}
       <div
-        className={`h-48 bg-gradient-to-br ${categoryColors[category] || categoryColors.website} relative overflow-hidden`}
+        className={`h-48 bg-gradient-to-br ${categoryGradients[category] || categoryGradients.website} animated-mesh relative overflow-hidden`}
       >
-        <div className="absolute inset-0 bg-black/20 group-hover:bg-black/10 transition-colors" />
+        {/* Grid overlay pattern */}
+        <div
+          className="absolute inset-0 opacity-20"
+          style={{
+            backgroundImage: `radial-gradient(circle at 25% 25%, rgba(255,255,255,0.2) 1px, transparent 1px), radial-gradient(circle at 75% 75%, rgba(255,255,255,0.15) 1px, transparent 1px)`,
+            backgroundSize: "30px 30px",
+          }}
+        />
+
+        <div className="absolute inset-0 bg-black/30 group-hover:bg-black/10 transition-all duration-500" />
+
         <div className="absolute inset-0 flex items-center justify-center">
-          <div className="w-16 h-16 rounded-2xl bg-white/20 backdrop-blur-sm flex items-center justify-center">
-            <ExternalLink className="w-6 h-6 text-white" />
-          </div>
+          <motion.div
+            whileHover={{ scale: 1.1, rotate: 5 }}
+            className="w-16 h-16 rounded-2xl bg-white/20 backdrop-blur-sm flex items-center justify-center group-hover:bg-white/30 transition-colors"
+          >
+            <ExternalLink className="w-6 h-6 text-white group-hover:scale-110 transition-transform" />
+          </motion.div>
         </div>
       </div>
 
       <div className="p-6">
-        <h3 className="text-lg font-semibold text-foreground mb-2 group-hover:text-spicy-400 transition-colors">
+        <h3 className="text-lg font-semibold text-foreground mb-2 group-hover:text-spicy-400 transition-colors duration-300">
           {title}
         </h3>
         <p className="text-sm text-foreground-muted leading-relaxed mb-4">

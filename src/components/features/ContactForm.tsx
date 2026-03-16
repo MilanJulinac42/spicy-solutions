@@ -3,8 +3,8 @@
 import { useState } from "react";
 import { useTranslations } from "next-intl";
 import { motion } from "framer-motion";
-import { Send, CheckCircle, AlertCircle } from "lucide-react";
-import { fadeInUp } from "@/lib/animations";
+import { Send, CheckCircle, AlertCircle, ArrowRight } from "lucide-react";
+import { fadeInUp, staggerContainer } from "@/lib/animations";
 
 export function ContactForm() {
   const t = useTranslations("Contact.form");
@@ -27,51 +27,51 @@ export function ContactForm() {
       initial="hidden"
       whileInView="visible"
       viewport={{ once: true, margin: "-100px" }}
-      variants={fadeInUp}
+      variants={staggerContainer}
       className="space-y-5"
     >
-      <div>
+      <motion.div variants={fadeInUp}>
         <label className="block text-sm font-medium text-foreground mb-1.5">
           {t("name")}
         </label>
         <input
           type="text"
           required
-          className="w-full px-4 py-3 rounded-lg bg-surface-secondary border border-border-default text-foreground placeholder:text-foreground-muted focus:outline-none focus:ring-2 focus:ring-spicy-400/50 focus:border-spicy-400 transition-all"
+          className="w-full px-4 py-3 rounded-lg bg-surface-secondary border border-border-default text-foreground placeholder:text-foreground-muted focus:outline-none focus:ring-2 focus:ring-spicy-400/50 focus:border-spicy-400 focus:shadow-[0_0_15px_rgba(255,107,53,0.15)] transition-all"
           placeholder={t("name")}
         />
-      </div>
+      </motion.div>
 
-      <div>
+      <motion.div variants={fadeInUp}>
         <label className="block text-sm font-medium text-foreground mb-1.5">
           {t("email")}
         </label>
         <input
           type="email"
           required
-          className="w-full px-4 py-3 rounded-lg bg-surface-secondary border border-border-default text-foreground placeholder:text-foreground-muted focus:outline-none focus:ring-2 focus:ring-spicy-400/50 focus:border-spicy-400 transition-all"
+          className="w-full px-4 py-3 rounded-lg bg-surface-secondary border border-border-default text-foreground placeholder:text-foreground-muted focus:outline-none focus:ring-2 focus:ring-spicy-400/50 focus:border-spicy-400 focus:shadow-[0_0_15px_rgba(255,107,53,0.15)] transition-all"
           placeholder={t("email")}
         />
-      </div>
+      </motion.div>
 
-      <div>
+      <motion.div variants={fadeInUp}>
         <label className="block text-sm font-medium text-foreground mb-1.5">
           {t("company")}
         </label>
         <input
           type="text"
-          className="w-full px-4 py-3 rounded-lg bg-surface-secondary border border-border-default text-foreground placeholder:text-foreground-muted focus:outline-none focus:ring-2 focus:ring-spicy-400/50 focus:border-spicy-400 transition-all"
+          className="w-full px-4 py-3 rounded-lg bg-surface-secondary border border-border-default text-foreground placeholder:text-foreground-muted focus:outline-none focus:ring-2 focus:ring-spicy-400/50 focus:border-spicy-400 focus:shadow-[0_0_15px_rgba(255,107,53,0.15)] transition-all"
           placeholder={t("company")}
         />
-      </div>
+      </motion.div>
 
-      <div>
+      <motion.div variants={fadeInUp}>
         <label className="block text-sm font-medium text-foreground mb-1.5">
           {t("service")}
         </label>
         <select
           required
-          className="w-full px-4 py-3 rounded-lg bg-surface-secondary border border-border-default text-foreground focus:outline-none focus:ring-2 focus:ring-spicy-400/50 focus:border-spicy-400 transition-all"
+          className="w-full px-4 py-3 rounded-lg bg-surface-secondary border border-border-default text-foreground focus:outline-none focus:ring-2 focus:ring-spicy-400/50 focus:border-spicy-400 focus:shadow-[0_0_15px_rgba(255,107,53,0.15)] transition-all"
           defaultValue=""
         >
           <option value="" disabled>
@@ -84,37 +84,40 @@ export function ContactForm() {
           <option value="automation">{t("serviceOptions.automation")}</option>
           <option value="other">{t("serviceOptions.other")}</option>
         </select>
-      </div>
+      </motion.div>
 
-      <div>
+      <motion.div variants={fadeInUp}>
         <label className="block text-sm font-medium text-foreground mb-1.5">
           {t("message")}
         </label>
         <textarea
           required
           rows={5}
-          className="w-full px-4 py-3 rounded-lg bg-surface-secondary border border-border-default text-foreground placeholder:text-foreground-muted focus:outline-none focus:ring-2 focus:ring-spicy-400/50 focus:border-spicy-400 transition-all resize-none"
+          className="w-full px-4 py-3 rounded-lg bg-surface-secondary border border-border-default text-foreground placeholder:text-foreground-muted focus:outline-none focus:ring-2 focus:ring-spicy-400/50 focus:border-spicy-400 focus:shadow-[0_0_15px_rgba(255,107,53,0.15)] transition-all resize-none"
           placeholder={t("message")}
         />
-      </div>
+      </motion.div>
 
-      <button
-        type="submit"
-        disabled={status === "sending"}
-        className="w-full inline-flex items-center justify-center gap-2 px-6 py-3.5 bg-spicy-400 text-white rounded-lg font-semibold hover:bg-spicy-500 transition-colors shadow-lg shadow-spicy-400/25 disabled:opacity-50 disabled:cursor-not-allowed cursor-pointer"
-      >
-        {status === "sending" ? (
-          <>
-            <div className="w-4 h-4 border-2 border-white/30 border-t-white rounded-full animate-spin" />
-            {t("sending")}
-          </>
-        ) : (
-          <>
-            <Send className="w-4 h-4" />
-            {t("submit")}
-          </>
-        )}
-      </button>
+      <motion.div variants={fadeInUp}>
+        <button
+          type="submit"
+          disabled={status === "sending"}
+          className="group w-full inline-flex items-center justify-center gap-2 px-6 py-3.5 bg-spicy-400 text-white rounded-lg font-semibold hover:bg-spicy-500 transition-colors shadow-lg shadow-spicy-400/25 disabled:opacity-50 disabled:cursor-not-allowed cursor-pointer"
+        >
+          {status === "sending" ? (
+            <>
+              <div className="w-4 h-4 border-2 border-white/30 border-t-white rounded-full animate-spin" />
+              {t("sending")}
+            </>
+          ) : (
+            <>
+              <Send className="w-4 h-4" />
+              {t("submit")}
+              <ArrowRight className="w-4 h-4 transition-transform group-hover:translate-x-1" />
+            </>
+          )}
+        </button>
+      </motion.div>
 
       {status === "success" && (
         <motion.div

@@ -7,6 +7,7 @@ import { Link } from "@/i18n/navigation";
 import { navLinks } from "@/lib/constants";
 import { ThemeToggle } from "@/components/shared/ThemeToggle";
 import { LanguageSwitcher } from "@/components/shared/LanguageSwitcher";
+import { staggerContainer, fadeInRight } from "@/lib/animations";
 
 interface MobileMenuProps {
   isOpen: boolean;
@@ -46,11 +47,16 @@ export function MobileMenu({ isOpen, onClose, pathname }: MobileMenuProps) {
             </div>
 
             <nav className="flex-1 p-4">
-              <ul className="space-y-1">
+              <motion.ul
+                variants={staggerContainer}
+                initial="hidden"
+                animate="visible"
+                className="space-y-1"
+              >
                 {navLinks.map((link) => {
                   const isActive = pathname === link.href;
                   return (
-                    <li key={link.href}>
+                    <motion.li key={link.href} variants={fadeInRight}>
                       <Link
                         href={link.href}
                         onClick={onClose}
@@ -62,10 +68,10 @@ export function MobileMenu({ isOpen, onClose, pathname }: MobileMenuProps) {
                       >
                         {t(link.titleKey)}
                       </Link>
-                    </li>
+                    </motion.li>
                   );
                 })}
-              </ul>
+              </motion.ul>
             </nav>
 
             <div className="p-4 border-t border-border-default flex items-center gap-3">

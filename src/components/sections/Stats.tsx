@@ -8,6 +8,7 @@ import { fadeInUp, staggerContainer } from "@/lib/animations";
 
 function useCounter(target: number, duration: number = 2000) {
   const [count, setCount] = useState(0);
+  const [progress, setProgress] = useState(0);
   const [started, setStarted] = useState(false);
 
   useEffect(() => {
@@ -17,10 +18,11 @@ function useCounter(target: number, duration: number = 2000) {
 
     const animate = (timestamp: number) => {
       if (!startTime) startTime = timestamp;
-      const progress = Math.min((timestamp - startTime) / duration, 1);
-      const eased = 1 - Math.pow(1 - progress, 3);
+      const rawProgress = Math.min((timestamp - startTime) / duration, 1);
+      const eased = 1 - Math.pow(1 - rawProgress, 3);
       setCount(Math.floor(eased * target));
-      if (progress < 1) {
+      setProgress(eased);
+      if (rawProgress < 1) {
         rafId = requestAnimationFrame(animate);
       }
     };
@@ -29,7 +31,7 @@ function useCounter(target: number, duration: number = 2000) {
     return () => cancelAnimationFrame(rafId);
   }, [started, target, duration]);
 
-  return { count, start: () => setStarted(true) };
+  return { count, progress, start: () => setStarted(true) };
 }
 
 interface StatItemProps {
@@ -41,19 +43,64 @@ interface StatItemProps {
 function StatItem({ value, suffix, label }: StatItemProps) {
   const ref = useRef(null);
   const isInView = useInView(ref, { once: true, margin: "-100px" });
-  const { count, start } = useCounter(value);
+  const { count, progress, start } = useCounter(value);
 
   useEffect(() => {
     if (isInView) start();
   }, [isInView, start]);
 
+  const radius = 54;
+  const circumference = 2 * Math.PI * radius;
+  const strokeDashoffset = circumference - progress * circumference;
+
   return (
     <motion.div ref={ref} variants={fadeInUp} className="text-center">
-      <div className="text-4xl md:text-5xl font-bold text-spicy-400">
-        {count}
-        <span>{suffix}</span>
+      <div className="relative inline-flex items-center justify-center w-32 h-32 md:w-36 md:h-36">
+        {/* Circular progress ring SVG */}
+        <svg
+          className="absolute inset-0 w-full h-full -rotate-90"
+          viewBox="0 0 120 120"
+        >
+          {/* Background ring */}
+          <circle
+            cx="60"
+            cy="60"
+            r={radius}
+            fill="none"
+            stroke="currentColor"
+            strokeWidth="4"
+            className="text-spicy-400/10"
+          />
+          {/* Animated progress ring */}
+          <circle
+            cx="60"
+            cy="60"
+            r={radius}
+            fill="none"
+            stroke="currentColor"
+            strokeWidth="4"
+            strokeLinecap="round"
+            className="text-spicy-400 transition-[stroke-dashoffset] duration-75"
+            style={{
+              strokeDasharray: circumference,
+              strokeDashoffset: isInView ? strokeDashoffset : circumference,
+            }}
+          />
+        </svg>
+        {/* Stat number */}
+        <div className="relative text-4xl md:text-5xl font-bold text-spicy-400">
+          {count}
+          <span>{suffix}</span>
+        </div>
       </div>
-      <div className="mt-2 text-sm text-foreground-muted">{label}</div>
+      <div className="mt-2 text-sm text-foreground-muted flex items-center justify-center gap-2">
+        {/* Pulsing dot */}
+        <span className="relative flex h-2 w-2">
+          <span className="animate-ping absolute inline-flex h-full w-full rounded-full bg-spicy-400 opacity-75" />
+          <span className="relative inline-flex rounded-full h-2 w-2 bg-spicy-400" />
+        </span>
+        {label}
+      </div>
     </motion.div>
   );
 }

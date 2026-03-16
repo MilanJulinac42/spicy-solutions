@@ -46,7 +46,7 @@ export function ProblemSection() {
               <motion.div
                 key={problem.key}
                 variants={fadeInUp}
-                className="group p-6 rounded-2xl bg-surface border border-border-default hover:border-red-400/30 transition-all"
+                className="group p-6 rounded-2xl bg-surface border border-border-default hover:border-red-400/30 hover:shadow-lg hover:shadow-red-500/10 transition-all"
               >
                 <div className="w-12 h-12 flex items-center justify-center rounded-xl bg-red-500/10 text-red-400 mb-4 group-hover:bg-red-500/20 transition-colors">
                   <Icon className="w-6 h-6" />

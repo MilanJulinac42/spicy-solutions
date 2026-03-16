@@ -32,8 +32,12 @@ export function SectionHeading({
           {subtitle}
         </p>
       )}
-      <div
-        className={`mt-4 h-1 w-16 bg-spicy-400 rounded-full ${centered ? "mx-auto" : ""}`}
+      <motion.div
+        initial={{ width: 0 }}
+        whileInView={{ width: "4rem" }}
+        viewport={{ once: true }}
+        transition={{ duration: 0.8, ease: "easeOut", delay: 0.3 }}
+        className={`mt-4 h-1 bg-spicy-400 rounded-full ${centered ? "mx-auto" : ""}`}
       />
     </motion.div>
   );

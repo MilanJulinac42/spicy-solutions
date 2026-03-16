@@ -6,6 +6,8 @@ import { routing } from "@/i18n/routing";
 import { ThemeProvider } from "next-themes";
 import { Navbar } from "@/components/layout/Navbar";
 import { Footer } from "@/components/layout/Footer";
+import { ScrollProgress } from "@/components/ui/ScrollProgress";
+import { BackToTop } from "@/components/ui/BackToTop";
 import "@/app/globals.css";
 
 const geistSans = Geist({
@@ -46,9 +48,11 @@ export default async function LocaleLayout({
           disableTransitionOnChange
         >
           <NextIntlClientProvider locale={locale} messages={messages}>
+            <ScrollProgress />
             <Navbar />
             <main className="min-h-screen">{children}</main>
             <Footer />
+            <BackToTop />
           </NextIntlClientProvider>
         </ThemeProvider>
       </body>

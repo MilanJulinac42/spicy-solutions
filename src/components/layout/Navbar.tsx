@@ -87,7 +87,7 @@ export function Navbar() {
               <ThemeToggle />
               <Link
                 href="/contact"
-                className="px-5 py-2 bg-spicy-400 text-white rounded-lg text-sm font-medium hover:bg-spicy-500 transition-colors shadow-lg shadow-spicy-400/25"
+                className="px-5 py-2 bg-spicy-400 text-white rounded-lg text-sm font-medium hover:bg-spicy-500 transition-colors shadow-lg shadow-spicy-400/25 hover:shadow-xl hover:shadow-spicy-400/40"
               >
                 {t("Navbar.getStarted")}
               </Link>
