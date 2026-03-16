@@ -4,226 +4,271 @@
     "services": "Usluge",
     "about": "O nama",
     "contact": "Kontakt",
-    "getStarted": "Započnite"
+    "getStarted": "Besplatan IT Audit"
   },
   "Hero": {
-    "title": "Gradimo digitalna rešenja koja",
-    "titleHighlight": "začine stvari",
-    "subtitle": "Od elegantnih sajtova do velikih sistema, AI chatbot-ova do automatizacije — isporučujemo tehnologiju koja pokreće vaš biznis.",
-    "cta": "Započnite",
-    "ctaSecondary": "Naše usluge"
+    "badge": "Srpske firme preplaćuju IT usluge. Došli smo da to promenimo.",
+    "title": "Vaš IT provajder vam naplaćuje",
+    "titleHighlight": "Previše",
+    "subtitle": "Velike agencije preplaćuju, ne isporučuju dovoljno, i drže vas zarobljene. Spicy Solutions nudi modernu tehnologiju, transparentne cene i nula zavlačenja. Dva smo inženjera koji veruju da srpski biznisi zaslužuju bolje.",
+    "cta": "Besplatan IT Audit",
+    "ctaSecondary": "Kako štedimo vaš novac"
+  },
+  "ProblemSection": {
+    "title": "Problem o kome niko ne govori",
+    "subtitle": "Srpski biznisi se opljačkaju od strane IT kompanija. Evo kako.",
+    "problems": {
+      "p1": {
+        "title": "5-10x veća cena razvoja",
+        "description": "Velike agencije naplaćuju enterprise cene za standardan posao. Sajt koji treba da košta 500-1.500 EUR? Oni traže 5.000-15.000."
+      },
+      "p2": {
+        "title": "Mesečne naknade ni za šta",
+        "description": "Plaćate 200-500 EUR mesečno za 'održavanje' sajta kome treba 15 minuta rada? To nije podrška — to je pretplata na pljačku."
+      },
+      "p3": {
+        "title": "Zastarela tehnologija prodata kao moderna",
+        "description": "Prodaju vam WordPress iz 2015. i kažu da je 'najsavremeniji.' U međuvremenu, vaša konkurencija koristi AI i automatizaciju da bude brža."
+      },
+      "p4": {
+        "title": "Zaključavanje kod provajdera",
+        "description": "Ne možete da premestite sajt? Nemate pristup kodu? To nije funkcija — to je zamka napravljena da plaćate zauvek."
+      }
+    },
+    "solution": {
+      "title": "Postoji bolji način",
+      "point1": "Transparentne, fiksne cene — tačno znate koliko plaćate pre nego što krenemo",
+      "point2": "Sve je vaše — kod, podaci, hosting. Bez zaključavanja, ikada",
+      "point3": "Moderan tech stack — Next.js, AI, automatizacija. Ne reciklirani WordPress šabloni",
+      "point4": "Direktan pristup inženjerima koji prave vaš proizvod. Bez posrednika, bez account menadžera"
+    },
+    "cta": "Saznajte da li preplaćujete"
   },
   "ServicesOverview": {
-    "title": "Šta radimo",
-    "subtitle": "Sveobuhvatna digitalna rešenja prilagođena vašim poslovnim potrebama",
+    "title": "Šta vam zaista treba (po fer ceni)",
+    "subtitle": "Iste usluge koje velike agencije prodaju — bez 10x maržde i skrivenih troškova",
     "websites": {
-      "title": "Sajtovi i blogovi",
-      "description": "Prelepi, responsivni sajtovi i blogovi izgrađeni modernim tehnologijama za maksimalne performanse i SEO."
+      "title": "Sajtovi i web aplikacije",
+      "description": "Prestanite da plaćate hiljade za šablonske sajtove. Pravimo brze, moderne, SEO-optimizovane sajtove za delić onoga što agencije naplaćuju — i posedujete svaku liniju koda."
     },
     "enterprise": {
-      "title": "Enterprise sistemi",
-      "description": "Skalabilne, robusne web aplikacije, dashboard-ovi i SaaS platforme za kompleksne poslovne potrebe."
+      "title": "Poslovni sistemi po meri",
+      "description": "Dashboard-ovi, SaaS platforme, interni alati. Enterprise kvalitet ne zahteva enterprise cene. Isporučujemo isti kvalitet za delić troškova."
     },
     "ai": {
       "title": "AI i RAG chatbot-ovi",
-      "description": "Inteligentni chatbot-ovi pokretani veštačkom inteligencijom, RAG sistemi i LLM integracije za vaš biznis."
+      "description": "Vaša konkurencija već koristi AI. Pametni chatbot-ovi koji poznaju vaš biznis iznutra, smanjuju troškove podrške za 50-70% i služe korisnike 24/7."
     },
     "automation": {
-      "title": "Automatizacija putem n8n",
-      "description": "Optimizujte svoje radne tokove sa prilagođenim automatizacijama, API integracijama i obradom podataka."
+      "title": "Automatizacija (n8n)",
+      "description": "Zašto plaćate zaposlenog da radi ono što n8n radi besplatno? Pravimo automatizacije koje povezuju vaše alate, eliminišu manuelni rad i štede 40+ sati nedeljno."
     }
   },
   "Stats": {
-    "projects": "Isporučenih projekata",
-    "clients": "Zadovoljnih klijenata",
-    "technologies": "Tehnologija",
-    "experience": "Godina iskustva"
+    "savings": "Prosečna ušteda klijenata",
+    "cheaper": "Jeftinije od agencijskih cena",
+    "hours": "Sati uštedenih automatizacijom",
+    "satisfaction": "Zadovoljstvo klijenata"
   },
   "Projects": {
-    "title": "Naši radovi",
-    "subtitle": "Izbor projekata na koje smo ponosni",
+    "title": "Stvarni rezultati, stvarne uštede",
+    "subtitle": "Pogledajte šta se desi kad biznisi prestanu da preplaćuju i počnu da rade sa nama",
     "viewProject": "Pogledaj projekat",
     "project1": {
-      "title": "E-Commerce platforma",
-      "description": "Kompletna onlajn prodavnica sa upravljanjem zalihama, procesiranjem plaćanja i analitičkim dashboard-om."
+      "title": "E-Commerce: Sa ponude od 8.000 EUR na realnih 2.000 EUR",
+      "description": "Maloprodajni biznis je dobio ponudu od 8.000 EUR od beogradske agencije. Mi smo napravili istu platformu — sa boljim performansama i Stripe integracijom — za manje od 2.000 EUR."
     },
     "project2": {
-      "title": "AI podrška za korisnike",
-      "description": "RAG chatbot koji je smanjio broj tiketa podrške za 60% koristeći integraciju baze znanja kompanije."
+      "title": "AI Chatbot: 60% manje tiketa podrške",
+      "description": "Klijent je plaćao 2 zaposlena za podršku. Naš RAG chatbot sada obrađuje 60% upita, štedeći preko 3.000 EUR mesečno na troškovima rada."
     },
     "project3": {
-      "title": "Automatizacija radnih tokova",
-      "description": "Prilagođena n8n automatizacija koja je povezala 12 različitih poslovnih alata, uštedivši 40+ sati nedeljno."
+      "title": "Automatizacija: 40+ sati uštedenih nedeljno",
+      "description": "Manuelni unos podataka preko 12 alata koštao je ovu kompaniju 1.000 EUR mesečno u izgubljenom vremenu. Naša n8n automatizacija je to potpuno eliminisala."
     },
     "project4": {
-      "title": "Zdravstveni dashboard",
-      "description": "Dashboard za analitiku podataka pacijenata u realnom vremenu sa kontrolom pristupa zasnovanom na ulogama."
+      "title": "Rebuild sistema: Bekstvo od zaključavanja",
+      "description": "Zdravstvena kompanija je bila zarobljena plaćajući 500 EUR mesečno za 'održavanje' sistema koji nisu mogli da menjaju. Mi smo ga ponovo izgradili, dali im potpuno vlasništvo i smanjili troškove za 80%."
     }
   },
   "Testimonials": {
-    "title": "Šta kažu naši klijenti",
-    "subtitle": "Ne verujte nam na reč",
+    "title": "Trenutak kad su shvatili",
+    "subtitle": "Šta kažu naši klijenti kad saznaju koliko IT zaista treba da košta",
     "testimonial1": {
-      "quote": "Spicy Solutions je transformisao naše digitalno prisustvo. Njihova pažnja prema detaljima i tehnička ekspertiza su nadmašili naša očekivanja.",
+      "quote": "Plaćali smo velikoj agenciji 400 EUR mesečno samo za hosting i sitne izmene. Spicy Solutions nas je prebacio na bolji setup za jednokratnu naknadu. Još uvek sam besan koliko dugo smo preplaćivali.",
       "name": "Marko Petrović",
       "role": "CEO",
       "company": "TechVentures"
     },
     "testimonial2": {
-      "quote": "AI chatbot koji su napravili za nas je promenio igru. Naši rezultati zadovoljstva korisnika nikad nisu bili bolji.",
+      "quote": "Tražili su nam 12.000 EUR za chatbot. Spicy Solutions je napravio nešto bolje za četvrtinu te cene. ROI je bio očigledan već prvog meseca.",
       "name": "Ana Jovanović",
       "role": "CTO",
       "company": "DataFlow Inc."
     },
     "testimonial3": {
-      "quote": "Njihova n8n automatizacija nam je uštedela bezbroj sati manuelnog rada. Profesionalni, brzi i neverovatno pouzdani.",
+      "quote": "Nisam ni znao da n8n postoji. Imali smo dvoje ljudi koji su radili unos podataka koji besplatan alat može da automatizuje. Spicy Solutions je to podesio za nedelju dana i uštedeo nam 1.500 EUR mesečno.",
       "name": "Stefan Nikolić",
       "role": "Menadžer operacija",
       "company": "LogiPro"
     }
   },
   "CTA": {
-    "title": "Spremni da začinite vaše digitalno prisustvo?",
-    "subtitle": "Hajde da zajedno izgradimo nešto sjajno.",
-    "button": "Kontaktirajte nas"
+    "title": "Mislite da možda preplaćujete?",
+    "subtitle": "Dobijte besplatan IT audit bez ikakvih obaveza. Pokazaćemo vam tačno gde gubite novac — i kako da to popravite.",
+    "button": "Zakažite besplatan audit"
   },
   "Services": {
-    "title": "Naše usluge",
-    "subtitle": "Kompletna digitalna rešenja za biznise svih veličina",
+    "title": "Usluge i realne cene",
+    "subtitle": "Transparentne cene. Bez skrivenih troškova. Bez iznenađenja. Evo šta radimo i koliko zaista košta.",
     "websites": {
-      "title": "Sajtovi i blogovi",
-      "description": "Kreiramo zapanjujuće, visoko-performantne sajtove koji ostavljaju trajni utisak. Od ličnih blogova do korporativnih sajtova, svaki projekat je izrađen sa pažnjom prema dizajnu, brzini i SEO-u.",
+      "title": "Sajtovi i web aplikacije",
+      "description": "Verovatno preplaćujete za vaš sajt. Bilo da je nov sajt ili oslobađanje od agencije koja vam drži sajt kao taoca — isporučujemo moderne, brze sajtove u vašem potpunom vlasništvu po poštenim cenama.",
+      "comparison": "Tipična ponuda agencije: 5.000-15.000 EUR. Naša cena: 500-3.000 EUR za isti (ili bolji) rezultat.",
       "features": {
-        "f1": "Responsivan dizajn za sve uređaje",
-        "f2": "SEO optimizacija od samog početka",
-        "f3": "Munjevite performanse",
-        "f4": "Sistemi za upravljanje sadržajem",
-        "f5": "Prilagođene animacije i interakcije"
+        "f1": "Responsivan dizajn, svi uređaji, sve veličine ekrana",
+        "f2": "SEO ugrađen od prvog dana — nije plaćeni dodatak",
+        "f3": "Učitavanje ispod sekunde sa Next.js",
+        "f4": "CMS uključen — ažurirajte sadržaj sami, bez mesečne naknade",
+        "f5": "Sve je vaše: kod, domen, hosting"
       }
     },
     "enterprise": {
-      "title": "Enterprise sistemi",
-      "description": "Kompleksno ne mora da znači komplikovano. Gradimo skalabilne enterprise aplikacije, dashboard-ove i SaaS platforme koje obrađuju vašu poslovnu logiku sa elegancijom i pouzdanošću.",
+      "title": "Poslovni sistemi po meri",
+      "description": "Dashboard-ovi, SaaS platforme, interni alati, API integracije. 'Enterprise kvalitet' ne mora da znači 'enterprise cena.' Gradimo skalabilne, production-ready sisteme bez naduvanih agencijskih troškova.",
+      "comparison": "Velike firme naplaćuju 20.000-50.000+ EUR. Mi isporučujemo uporediv kvalitet od 3.000 EUR.",
       "features": {
-        "f1": "Skalabilna mikroservisna arhitektura",
+        "f1": "Skalabilna arhitektura koja raste sa vama",
         "f2": "Dashboard-ovi i analitika u realnom vremenu",
-        "f3": "Kontrola pristupa zasnovana na ulogama",
-        "f4": "CI/CD pipeline-ovi i DevOps",
-        "f5": "Dizajn i optimizacija baze podataka"
+        "f3": "Kontrola pristupa i bezbednost zasnovana na ulogama",
+        "f4": "CI/CD pipeline-ovi i automatski deployment",
+        "f5": "Kompletna dokumentacija i predaja izvornog koda"
       }
     },
     "ai": {
       "title": "AI integracija i RAG chatbot-ovi",
-      "description": "Iskoristite moć veštačke inteligencije. Gradimo prilagođena AI rešenja, od RAG chatbot-ova koji poznaju vaš biznis iznutra, do inteligentne obrade dokumenata i analize podataka.",
+      "description": "Vaša konkurencija već koristi AI. Ako vi ne koristite, zaostajete. Gradimo inteligentne chatbot-ove, obradu dokumenata i AI pretragu koji transformišu korisničko iskustvo — po cenama koje imaju smisla.",
+      "comparison": "AI agencije naplaćuju 10.000-30.000 EUR za chatbot projekte. Mi krećemo od 1.500 EUR.",
       "features": {
-        "f1": "Razvoj prilagođenih RAG chatbot-ova",
-        "f2": "LLM integracija i fino podešavanje",
-        "f3": "Obrada dokumenata i baze znanja",
-        "f4": "Konverzacioni AI interfejsi",
-        "f5": "AI pretraga i preporuke"
+        "f1": "RAG chatbot-ovi obučeni na VAŠIM poslovnim podacima",
+        "f2": "Integracija sa vašim postojećim alatima i sistemima",
+        "f3": "Baza znanja koja uči i poboljšava se vremenom",
+        "f4": "24/7 podrška korisnicima bez zapošljavanja novih ljudi",
+        "f5": "Merljiv ROI već prvog meseca"
       }
     },
     "automation": {
       "title": "Automatizacija putem n8n",
-      "description": "Prestanite da ručno radite ono što mašine mogu bolje. Dizajniramo i implementiramo prilagođene automatizacione tokove koristeći n8n koji povezuju vaše alate, optimizuju procese i oslobađaju vaš tim da se fokusira na ono što je važno.",
+      "description": "Prestanite da plaćate ljude da rade ono što softver može instant. n8n je besplatna, open-source platforma za automatizaciju. Mi je podešavamo, povezujemo vaše alate i gradimo tokove koji štede desetine sati nedeljno.",
+      "comparison": "Zaposleni koji ručno unosi podatke košta vas 800-1.200 EUR mesečno. Naša automatizacija je jednokratna naknada od 500 EUR.",
       "features": {
-        "f1": "Vizuelna automatizacija radnih tokova",
-        "f2": "API i webhook integracije",
-        "f3": "Pipeline-ovi za transformaciju podataka",
-        "f4": "Automatizacija zakazanih zadataka",
-        "f5": "Monitoring i upravljanje greškama"
+        "f1": "Vizuelni workflow builder — lako razumljiv i prilagodljiv",
+        "f2": "Povezuje 400+ aplikacija i bilo koji REST API",
+        "f3": "Automatska sinhronizacija podataka, izveštavanje i obaveštenja",
+        "f4": "Zakazani zadaci koji rade 24/7 bez ljudske intervencije",
+        "f5": "Self-hosted: vaši podaci ostaju na vašim serverima"
       }
     },
     "process": {
       "title": "Kako radimo",
-      "subtitle": "Provereni proces koji donosi rezultate",
+      "subtitle": "Jednostavan proces. Bez misterije. Bez iznenađenja.",
       "step1": {
-        "title": "Istraživanje",
-        "description": "Duboko se upoznajemo sa vašim poslovnim potrebama, ciljevima i izazovima kako bismo kreirali prilagođenu strategiju."
+        "title": "Besplatan audit",
+        "description": "Analiziramo vaš trenutni IT setup i pokazujemo gde preplaćujete. Bez obaveza, bez prodajnog pitča."
       },
       "step2": {
-        "title": "Dizajn",
-        "description": "Kreiramo arhitekturu i vizuelni dizajn, osiguravajući da sve bude usklađeno sa vašom vizijom."
+        "title": "Poštena ponuda",
+        "description": "Fiksna cena, detaljan obim. Tačno znate šta dobijate i šta plaćate. Bez skrivenih troškova."
       },
       "step3": {
-        "title": "Razvoj",
-        "description": "Naš tim gradi vaše rešenje koristeći moderne tehnologije sa rigoroznim testiranjem u svakom koraku."
+        "title": "Razvoj i isporuka",
+        "description": "Gradimo brzo sa modernim alatima. Dobijate redovna ažuriranja i direktan pristup developerima."
       },
       "step4": {
-        "title": "Isporuka",
-        "description": "Lansiramo vaš projekat i pružamo stalnu podršku za dugoročni uspeh."
+        "title": "Predaja i sloboda",
+        "description": "Sve je vaše: kod, podaci, hosting. Nudimo opcionalnu podršku, ali nikada niste zaključani."
       }
     },
     "cta": {
-      "title": "Imate projekat na umu?",
-      "subtitle": "Hajde da razgovaramo kako možemo pomoći da vaše ideje ožive.",
-      "button": "Javite nam se"
+      "title": "Spremni da prestanete da preplaćujete?",
+      "subtitle": "Dobijte besplatan IT audit i saznajte koliko vaš IT zaista treba da košta.",
+      "button": "Zakažite besplatan audit"
     }
   },
   "About": {
     "title": "O Spicy Solutions",
-    "subtitle": "Tim strastvenih developera i dizajnera koji grade digitalnu budućnost",
+    "subtitle": "Dva developera kojima je bilo dosta gledanja kako srpski biznisi budu opljačkani od IT kompanija",
     "story": {
-      "title": "Naša priča",
-      "p1": "Spicy Solutions je nastao iz jednostavne ideje: tehnologija treba da osnažuje biznise, ne da ih komplikuje. Osnovana od strane dva strastvena developera, krenuli smo da premostimo jaz između najnovije tehnologije i stvarnih poslovnih potreba.",
-      "p2": "Danas radimo sa biznisima svih veličina — od startapa koji lansiraju svoj prvi sajt do enterprise kompanija koje modernizuju svoj tech stack sa AI i automatizacijom. Ono što nas izdvaja je posvećenost razumevanju vaših jedinstvenih izazova i isporuci rešenja koja zaista čine razliku."
+      "title": "Zašto smo počeli",
+      "p1": "Gledali smo kako se to dešava svima oko nas. Prijatelji koji vode male firme, članovi porodice sa startapima, lokalne prodavnice koje pokušavaju da se digitalizuju — svima naplaćuju apsurdne cene za bazičan posao. 5.000 EUR za jednostavan sajt. 500 EUR mesečno za 'održavanje' koje traje 10 minuta. To nas je razljutilo.",
+      "p2": "Mi smo dva inženjera koji rade sa modernim tehnologijama godinama. Tačno znamo koliko stvari koštaju da se naprave, i znamo da industrija u Srbiji prenaplaćuje 5-10x po celoj liniji. Zato smo pokrenuli Spicy Solutions — da damo biznisima pristup istom kvalitetu po poštenim cenama. Bez korporativnog overhead-a. Bez account menadžera. Samo inženjeri koji pišu kod i rešavaju probleme."
     },
     "values": {
-      "title": "Naše vrednosti",
+      "title": "U šta verujemo",
       "innovation": {
-        "title": "Inovacija",
-        "description": "Uvek smo korak ispred, stalno istražujemo nove tehnologije za isporuku najboljih rešenja."
+        "title": "Samo moderna tehnologija",
+        "description": "Nema recikliranih WordPress šablona iz 2015. Koristimo Next.js, AI, n8n — iste alate koje koristi Silicijumska dolina."
       },
       "quality": {
-        "title": "Kvalitet",
-        "description": "Svaka linija koda, svaki piksel, svaka interakcija je izrađena sa preciznošću i pažnjom."
+        "title": "Kvalitet bez kompromisa",
+        "description": "Pristupačno ne znači jeftino. Svaki projekat dobija isti inženjerski rigor koji bismo primenili na sopstvene proizvode."
       },
       "transparency": {
-        "title": "Transparentnost",
-        "description": "Otvorena komunikacija, iskreni rokovi i jasne cene. Bez iznenađenja, ikada."
+        "title": "Radikalna transparentnost",
+        "description": "Fiksne cene, otvorena komunikacija, bez skrivenih troškova. Uvek vidite tačno za šta plaćate."
       },
       "partnership": {
-        "title": "Partnerstvo",
-        "description": "Ne gradimo samo softver — gradimo odnose. Vaš uspeh je naš uspeh."
+        "title": "Vaš kod, vaši podaci",
+        "description": "Sve što napravimo pripada vama. Bez zaključavanja, bez talačkih situacija. Možete otići kad god hoćete — ali nećete hteti."
       }
     },
     "team": {
-      "title": "Upoznajte tim",
+      "title": "Tim",
       "member1": {
         "name": "Osnivač 1",
-        "role": "Suosnivač i developer",
-        "bio": "Full-stack developer sa strašću za izgradnju skalabilnih sistema i AI integracija."
+        "role": "Suosnivač i inženjer",
+        "bio": "Full-stack developer specijalizovan za skalabilne sisteme, AI integracije i pravljenje enterprise tehnologije pristupačnom."
       },
       "member2": {
         "name": "Osnivač 2",
-        "role": "Suosnivač i developer",
-        "bio": "Softverski inženjer specijalizovan za moderne web tehnologije i automatizaciju radnih tokova."
+        "role": "Suosnivač i inženjer",
+        "bio": "Softverski inženjer fokusiran na moderne web platforme i automatizaciju. Veruje da sjajan softver ne treba da zahteva drugi kredit."
       }
     },
     "tech": {
-      "title": "Tehnologije koje koristimo"
+      "title": "Naš tech stack"
     }
   },
   "Contact": {
-    "title": "Javite nam se",
-    "subtitle": "Imate projekat na umu? Voleli bismo da čujemo o njemu.",
+    "title": "Besplatan IT Audit",
+    "subtitle": "Recite nam o vašem trenutnom IT setup-u i pokazaćemo vam gde gubite novac. Bez ikakvih obaveza.",
+    "audit": {
+      "title": "Šta dobijate (besplatno)",
+      "description": "Naš IT audit pokriva sve što treba da znate:",
+      "bullets": {
+        "b1": "Detaljan pregled koliko trenutno plaćate u poređenju sa onim što bi trebalo da košta",
+        "b2": "Identifikacija nepotrebnih mesečnih naknada i zamki zaključavanja kod provajdera",
+        "b3": "Konkretne preporuke za modernizaciju (AI, automatizacija, moderan stack)"
+      }
+    },
     "form": {
       "name": "Vaše ime",
       "email": "Email adresa",
-      "company": "Kompanija (opciono)",
-      "service": "Usluga koja vas zanima",
+      "company": "Kompanija",
+      "service": "Šta vas zanima?",
       "serviceOptions": {
-        "select": "Izaberite uslugu",
-        "websites": "Sajtovi i blogovi",
-        "enterprise": "Enterprise sistemi",
-        "ai": "AI i RAG chatbot-ovi",
-        "automation": "Automatizacija putem n8n",
-        "other": "Ostalo"
+        "select": "Izaberite opciju",
+        "audit": "Besplatan IT Audit",
+        "websites": "Sajt / Web aplikacija",
+        "enterprise": "Poslovni sistem po meri",
+        "ai": "AI i chatbot integracija",
+        "automation": "Automatizacija radnih tokova",
+        "other": "Nešto drugo"
       },
-      "message": "Opišite nam vaš projekat",
-      "submit": "Pošaljite poruku",
+      "message": "Opišite nam vašu trenutnu IT situaciju",
+      "submit": "Zakažite besplatan audit",
       "sending": "Slanje...",
-      "success": "Poruka uspešno poslata! Javićemo vam se uskoro.",
+      "success": "Zahtev primljen! Analiziraćemo vašu situaciju i javiti vam se u roku od 24 sata.",
       "error": "Nešto je pošlo po zlu. Pokušajte ponovo."
     },
     "info": {
@@ -235,7 +280,7 @@
     }
   },
   "Footer": {
-    "description": "Gradimo digitalna rešenja koja začine stvari. Od sajtova do AI — pokriveni ste.",
+    "description": "Pošten IT za srpske biznise. Moderna tehnologija, fer cene, nula zaključavanja.",
     "quickLinks": "Brzi linkovi",
     "services": "Usluge",
     "connect": "Povežite se",
@@ -243,7 +288,7 @@
   },
   "Common": {
     "learnMore": "Saznajte više",
-    "contactUs": "Kontaktirajte nas",
+    "contactUs": "Besplatan audit",
     "viewProject": "Pogledaj projekat",
     "readMore": "Pročitajte više"
   }

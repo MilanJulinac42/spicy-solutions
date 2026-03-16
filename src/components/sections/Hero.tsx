@@ -38,7 +38,7 @@ export function Hero() {
           <motion.div variants={fadeInUp}>
             <span className="inline-flex items-center gap-2 px-4 py-1.5 rounded-full text-sm font-medium bg-spicy-400/10 text-spicy-400 border border-spicy-400/20">
               <span className="w-1.5 h-1.5 rounded-full bg-spicy-400 animate-pulse" />
-              IT Outsourcing & Digital Solutions
+              {t("badge")}
             </span>
           </motion.div>
 

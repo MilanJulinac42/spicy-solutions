@@ -77,6 +77,7 @@ export function ContactForm() {
           <option value="" disabled>
             {t("serviceOptions.select")}
           </option>
+          <option value="audit">{t("serviceOptions.audit")}</option>
           <option value="websites">{t("serviceOptions.websites")}</option>
           <option value="enterprise">{t("serviceOptions.enterprise")}</option>
           <option value="ai">{t("serviceOptions.ai")}</option>

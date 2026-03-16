@@ -2,7 +2,7 @@
 
 import { useTranslations } from "next-intl";
 import { motion } from "framer-motion";
-import { Mail, Phone, MapPin, Github, Linkedin, Twitter } from "lucide-react";
+import { Mail, Phone, MapPin, Github, Linkedin, Twitter, CheckCircle2, Shield } from "lucide-react";
 import { Container } from "@/components/ui/Container";
 import { SectionHeading } from "@/components/ui/SectionHeading";
 import { ContactForm } from "@/components/features/ContactForm";
@@ -30,6 +30,35 @@ export default function ContactPage() {
           <div className="grid grid-cols-1 lg:grid-cols-2 gap-12">
             {/* Form */}
             <div>
+              {/* Free IT Audit info card */}
+              <div className="p-6 rounded-2xl bg-gradient-to-br from-spicy-400/10 via-spicy-400/5 to-transparent border border-spicy-400/20 mb-8">
+                <div className="flex items-center gap-3 mb-4">
+                  <div className="w-10 h-10 flex items-center justify-center rounded-xl bg-spicy-400/10 text-spicy-400">
+                    <Shield className="w-5 h-5" />
+                  </div>
+                  <h3 className="text-lg font-semibold text-foreground">
+                    {t("Contact.audit.title")}
+                  </h3>
+                </div>
+                <p className="text-sm text-foreground-muted mb-4">
+                  {t("Contact.audit.description")}
+                </p>
+                <ul className="space-y-3">
+                  <li className="flex items-start gap-2 text-sm text-foreground-secondary">
+                    <CheckCircle2 className="w-4 h-4 text-spicy-400 shrink-0 mt-0.5" />
+                    <span>{t("Contact.audit.bullets.b1")}</span>
+                  </li>
+                  <li className="flex items-start gap-2 text-sm text-foreground-secondary">
+                    <CheckCircle2 className="w-4 h-4 text-spicy-400 shrink-0 mt-0.5" />
+                    <span>{t("Contact.audit.bullets.b2")}</span>
+                  </li>
+                  <li className="flex items-start gap-2 text-sm text-foreground-secondary">
+                    <CheckCircle2 className="w-4 h-4 text-spicy-400 shrink-0 mt-0.5" />
+                    <span>{t("Contact.audit.bullets.b3")}</span>
+                  </li>
+                </ul>
+              </div>
+
               <ContactForm />
             </div>
 

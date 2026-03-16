@@ -62,10 +62,10 @@ export function Stats() {
   const t = useTranslations("Stats");
 
   const stats = [
-    { value: 50, suffix: "+", label: t("projects") },
-    { value: 30, suffix: "+", label: t("clients") },
-    { value: 20, suffix: "+", label: t("technologies") },
-    { value: 5, suffix: "+", label: t("experience") },
+    { value: 60, suffix: "%", label: t("savings") },
+    { value: 70, suffix: "%", label: t("cheaper") },
+    { value: 200, suffix: "+", label: t("hours") },
+    { value: 100, suffix: "%", label: t("satisfaction") },
   ];
 
   return (

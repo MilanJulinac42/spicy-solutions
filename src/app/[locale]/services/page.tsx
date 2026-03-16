@@ -12,6 +12,7 @@ import {
   Code2,
   Rocket,
   CheckCircle2,
+  TrendingDown,
 } from "lucide-react";
 import { Container } from "@/components/ui/Container";
 import { SectionHeading } from "@/components/ui/SectionHeading";
@@ -95,6 +96,16 @@ export default function ServicesPage() {
                       </li>
                     ))}
                   </ul>
+                  {/* Pricing comparison callout */}
+                  <div className="p-4 rounded-xl bg-spicy-400/5 border border-spicy-400/20 mb-6">
+                    <div className="flex items-start gap-3">
+                      <TrendingDown className="w-5 h-5 text-spicy-400 shrink-0 mt-0.5" />
+                      <p className="text-sm font-medium text-foreground-secondary">
+                        {t(`Services.${service.id}.comparison`)}
+                      </p>
+                    </div>
+                  </div>
+
                   <div className="flex flex-wrap gap-2">
                     {service.technologies.map((tech) => (
                       <Badge key={tech}>{tech}</Badge>

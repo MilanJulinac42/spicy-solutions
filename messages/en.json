@@ -4,226 +4,271 @@
     "services": "Services",
     "about": "About",
     "contact": "Contact",
-    "getStarted": "Get Started"
+    "getStarted": "Free IT Audit"
   },
   "Hero": {
-    "title": "We Build Digital Solutions That",
-    "titleHighlight": "Spice Things Up",
-    "subtitle": "From sleek websites to enterprise systems, AI-powered chatbots to workflow automation — we deliver technology that drives your business forward.",
-    "cta": "Get Started",
-    "ctaSecondary": "Our Services"
+    "badge": "Serbian businesses are overpaying for IT. We're here to fix that.",
+    "title": "Your IT Provider Is Charging You",
+    "titleHighlight": "Way Too Much",
+    "subtitle": "Big agencies overcharge, underdeliver, and lock you in. Spicy Solutions gives you modern tech, transparent pricing, and zero bull. We're two engineers who believe Serbian businesses deserve better.",
+    "cta": "Get a Free IT Audit",
+    "ctaSecondary": "See How We Save You Money"
+  },
+  "ProblemSection": {
+    "title": "The Problem Nobody Talks About",
+    "subtitle": "Serbian businesses are getting ripped off by IT companies. Here's how.",
+    "problems": {
+      "p1": {
+        "title": "5-10x Markup on Development",
+        "description": "Large agencies charge enterprise prices for standard work. A website that should cost 500-1,500 EUR? They'll quote you 5,000-15,000."
+      },
+      "p2": {
+        "title": "Monthly Fees for Nothing",
+        "description": "Paying 200-500 EUR/month for 'maintenance' on a site that needs a 15-minute update? That's not support — that's a subscription to being robbed."
+      },
+      "p3": {
+        "title": "Outdated Tech Sold as Modern",
+        "description": "They sell you WordPress from 2015 and call it 'cutting-edge.' Meanwhile, your competitors are using AI and automation to move faster."
+      },
+      "p4": {
+        "title": "Vendor Lock-in by Design",
+        "description": "Can't move your site? Can't access your code? That's not a feature — it's a trap designed to keep you paying forever."
+      }
+    },
+    "solution": {
+      "title": "There's a Better Way",
+      "point1": "Transparent, fixed pricing — you know exactly what you're paying before we start",
+      "point2": "You own everything — your code, your data, your hosting. No lock-in, ever",
+      "point3": "Modern tech stack — Next.js, AI, automation. Not recycled WordPress templates",
+      "point4": "Direct access to the engineers who build your product. No middlemen, no account managers"
+    },
+    "cta": "Find Out If You're Overpaying"
   },
   "ServicesOverview": {
-    "title": "What We Do",
-    "subtitle": "Comprehensive digital solutions tailored to your business needs",
+    "title": "What You Actually Need (at a Fair Price)",
+    "subtitle": "The same services the big agencies sell — without the 10x markup and hidden fees",
     "websites": {
-      "title": "Websites & Blogs",
-      "description": "Beautiful, responsive websites and blogs built with modern technologies for maximum performance and SEO."
+      "title": "Websites & Web Apps",
+      "description": "Stop paying thousands for cookie-cutter sites. We build fast, modern, SEO-optimized websites at a fraction of what agencies charge — and you own every line of code."
     },
     "enterprise": {
-      "title": "Enterprise Systems",
-      "description": "Scalable, robust web applications, dashboards, and SaaS platforms built for complex business needs."
+      "title": "Custom Business Systems",
+      "description": "Dashboards, SaaS platforms, internal tools. Enterprise quality doesn't require enterprise prices. We deliver the same caliber for a fraction of the cost."
     },
     "ai": {
       "title": "AI & RAG Chatbots",
-      "description": "Intelligent chatbots powered by AI, custom RAG systems, and LLM integrations for your business."
+      "description": "Your competitors are already using AI. Custom chatbots that know your business inside out, reducing support costs by 50-70% while serving customers 24/7."
     },
     "automation": {
-      "title": "Automation via n8n",
-      "description": "Streamline your workflows with custom automation pipelines, API integrations, and data processing."
+      "title": "Workflow Automation (n8n)",
+      "description": "Why pay an employee to do what n8n does for free? We build automations that connect your tools, eliminate manual work, and save you 40+ hours per week."
     }
   },
   "Stats": {
-    "projects": "Projects Delivered",
-    "clients": "Happy Clients",
-    "technologies": "Technologies",
-    "experience": "Years Experience"
+    "savings": "Average Client Savings",
+    "cheaper": "Cheaper Than Agency Pricing",
+    "hours": "Hours Saved via Automation",
+    "satisfaction": "Client Satisfaction"
   },
   "Projects": {
-    "title": "Our Work",
-    "subtitle": "A selection of projects we're proud of",
+    "title": "Real Results, Real Savings",
+    "subtitle": "See what happens when businesses stop overpaying and start working with us",
     "viewProject": "View Project",
     "project1": {
-      "title": "E-Commerce Platform",
-      "description": "A full-featured online store with inventory management, payment processing, and analytics dashboard."
+      "title": "E-Commerce: From 8,000 EUR Quote to 2,000 EUR Reality",
+      "description": "A retail business was quoted 8,000 EUR by a Belgrade agency. We built the same platform — with better performance and Stripe integration — for under 2,000 EUR."
     },
     "project2": {
-      "title": "AI Customer Support Bot",
-      "description": "RAG-powered chatbot that reduced support tickets by 60% using company knowledge base integration."
+      "title": "AI Chatbot: 60% Fewer Support Tickets",
+      "description": "A client was paying 2 full-time support staff. Our RAG-powered chatbot now handles 60% of inquiries, saving over 3,000 EUR/month in labor costs."
     },
     "project3": {
-      "title": "Workflow Automation Suite",
-      "description": "Custom n8n automation that connected 12 different business tools, saving 40+ hours per week."
+      "title": "Automation: 40+ Hours Saved Per Week",
+      "description": "Manual data entry across 12 tools was costing this company 1,000 EUR/month in wasted time. Our n8n automation eliminated it completely."
     },
     "project4": {
-      "title": "Healthcare Dashboard",
-      "description": "Real-time analytics dashboard for patient data management with role-based access control."
+      "title": "System Rebuild: Escaped Vendor Lock-in",
+      "description": "A healthcare company was trapped paying 500 EUR/month for 'maintenance' on a system they couldn't modify. We rebuilt it, gave them full ownership, and cut costs by 80%."
     }
   },
   "Testimonials": {
-    "title": "What Our Clients Say",
-    "subtitle": "Don't just take our word for it",
+    "title": "The Moment They Realized",
+    "subtitle": "What our clients say after finding out what IT should actually cost",
     "testimonial1": {
-      "quote": "Spicy Solutions transformed our digital presence. Their attention to detail and technical expertise exceeded our expectations.",
+      "quote": "We were paying a big agency 400 EUR/month just for hosting and minor updates. Spicy Solutions moved us to a better setup for a one-time fee. I'm still angry at how long we overpaid.",
       "name": "Marko Petrovic",
       "role": "CEO",
       "company": "TechVentures"
     },
     "testimonial2": {
-      "quote": "The AI chatbot they built for us has been a game-changer. Our customer satisfaction scores have never been higher.",
+      "quote": "They quoted us 12,000 EUR for a chatbot. Spicy Solutions built something better for a quarter of that price. The ROI was obvious within the first month.",
       "name": "Ana Jovanovic",
       "role": "CTO",
       "company": "DataFlow Inc."
     },
     "testimonial3": {
-      "quote": "Their n8n automation saved us countless hours of manual work. Professional, fast, and incredibly reliable.",
+      "quote": "I didn't even know n8n existed. We had two people doing data entry that a free tool can automate. Spicy Solutions set it up in a week and saved us 1,500 EUR/month.",
       "name": "Stefan Nikolic",
       "role": "Operations Manager",
       "company": "LogiPro"
     }
   },
   "CTA": {
-    "title": "Ready to Spice Up Your Digital Presence?",
-    "subtitle": "Let's build something amazing together.",
-    "button": "Contact Us"
+    "title": "Think You Might Be Overpaying?",
+    "subtitle": "Get a free, no-strings-attached IT audit. We'll show you exactly where you're losing money — and how to fix it.",
+    "button": "Get Your Free Audit"
   },
   "Services": {
-    "title": "Our Services",
-    "subtitle": "End-to-end digital solutions for businesses of all sizes",
+    "title": "Services & Real Pricing",
+    "subtitle": "Transparent rates. No hidden fees. No surprises. Here's what we do and what it actually costs.",
     "websites": {
-      "title": "Websites & Blogs",
-      "description": "We create stunning, high-performance websites that leave lasting impressions. From personal blogs to corporate sites, every project is crafted with attention to design, speed, and SEO.",
+      "title": "Websites & Web Apps",
+      "description": "You're probably paying too much for your website. Whether it's a new build or getting free from an agency that holds your site hostage — we deliver modern, fast, fully-owned websites at honest prices.",
+      "comparison": "Typical agency quote: 5,000-15,000 EUR. Our range: 500-3,000 EUR for the same (or better) result.",
       "features": {
-        "f1": "Responsive design for all devices",
-        "f2": "SEO optimized from the ground up",
-        "f3": "Lightning-fast performance",
-        "f4": "Content management systems",
-        "f5": "Custom animations and interactions"
+        "f1": "Responsive design, all devices, all screen sizes",
+        "f2": "SEO built in from day one — not a paid add-on",
+        "f3": "Sub-second load times with Next.js",
+        "f4": "CMS included — update content yourself, no monthly fee",
+        "f5": "You own everything: code, domain, hosting"
       }
     },
     "enterprise": {
-      "title": "Enterprise Systems",
-      "description": "Complex doesn't have to mean complicated. We build scalable enterprise applications, dashboards, and SaaS platforms that handle your business logic with elegance and reliability.",
+      "title": "Custom Business Systems",
+      "description": "Dashboards, SaaS platforms, internal tools, API integrations. 'Enterprise-grade' does not mean 'enterprise-priced.' We build scalable, production-ready systems without the bloated agency overhead.",
+      "comparison": "Big firms charge 20,000-50,000+ EUR. We deliver comparable quality starting from 3,000 EUR.",
       "features": {
-        "f1": "Scalable microservices architecture",
+        "f1": "Scalable architecture that grows with you",
         "f2": "Real-time dashboards and analytics",
-        "f3": "Role-based access control",
-        "f4": "CI/CD pipelines and DevOps",
-        "f5": "Database design and optimization"
+        "f3": "Role-based access control and security",
+        "f4": "CI/CD pipelines and automated deployment",
+        "f5": "Full documentation and source code handover"
       }
     },
     "ai": {
       "title": "AI Integration & RAG Chatbots",
-      "description": "Harness the power of artificial intelligence. We build custom AI solutions, from RAG-powered chatbots that know your business inside out, to intelligent document processing and data analysis.",
+      "description": "Your competitors are already using AI. If you're not, you're falling behind. We build intelligent chatbots, document processors, and AI search that transform your customer experience — at prices that actually make sense.",
+      "comparison": "AI agencies charge 10,000-30,000 EUR for chatbot projects. We start from 1,500 EUR.",
       "features": {
-        "f1": "Custom RAG chatbot development",
-        "f2": "LLM integration and fine-tuning",
-        "f3": "Document processing and knowledge bases",
-        "f4": "Conversational AI interfaces",
-        "f5": "AI-powered search and recommendations"
+        "f1": "RAG chatbots trained on YOUR business data",
+        "f2": "Integrates with your existing tools and systems",
+        "f3": "Knowledge base that learns and improves over time",
+        "f4": "24/7 customer support without hiring more staff",
+        "f5": "Measurable ROI within the first month"
       }
     },
     "automation": {
-      "title": "Automation via n8n",
-      "description": "Stop doing manually what machines can do better. We design and implement custom automation workflows using n8n that connect your tools, streamline processes, and free your team to focus on what matters.",
+      "title": "Workflow Automation via n8n",
+      "description": "Stop paying people to do what software can do instantly. n8n is a free, open-source automation platform. We set it up, connect your tools, and build workflows that save you dozens of hours every week.",
+      "comparison": "That employee doing manual data entry costs you 800-1,200 EUR/month. Our automation setup is a one-time fee starting from 500 EUR.",
       "features": {
-        "f1": "Visual workflow automation",
-        "f2": "API and webhook integrations",
-        "f3": "Data transformation pipelines",
-        "f4": "Scheduled task automation",
-        "f5": "Monitoring and error handling"
+        "f1": "Visual workflow builder — easy to understand and modify",
+        "f2": "Connects 400+ apps and any REST API",
+        "f3": "Automated data sync, reporting, and notifications",
+        "f4": "Scheduled tasks that run 24/7 without human intervention",
+        "f5": "Self-hosted: your data stays on your servers"
       }
     },
     "process": {
       "title": "How We Work",
-      "subtitle": "A proven process that delivers results",
+      "subtitle": "Straightforward process. No mystery. No surprises.",
       "step1": {
-        "title": "Discovery",
-        "description": "We dive deep into your business needs, goals, and challenges to create a tailored strategy."
+        "title": "Free Audit",
+        "description": "We analyze your current IT setup and show you where you're overpaying. No obligation, no sales pitch."
       },
       "step2": {
-        "title": "Design",
-        "description": "We craft the architecture and visual design, ensuring everything aligns with your vision."
+        "title": "Honest Quote",
+        "description": "Fixed price, detailed scope. You know exactly what you get and what you pay. No hidden costs."
       },
       "step3": {
-        "title": "Development",
-        "description": "Our team builds your solution using modern technologies with rigorous testing at every step."
+        "title": "Build & Ship",
+        "description": "We build fast with modern tools. You get regular updates and direct access to the developers."
       },
       "step4": {
-        "title": "Delivery",
-        "description": "We launch your project and provide ongoing support to ensure long-term success."
+        "title": "Handover & Freedom",
+        "description": "Everything is yours: code, data, hosting. We offer optional support, but you're never locked in."
       }
     },
     "cta": {
-      "title": "Have a Project in Mind?",
-      "subtitle": "Let's discuss how we can help bring your ideas to life.",
-      "button": "Get in Touch"
+      "title": "Ready to Stop Overpaying?",
+      "subtitle": "Get a free IT audit and see what your tech should actually cost.",
+      "button": "Request Free Audit"
     }
   },
   "About": {
     "title": "About Spicy Solutions",
-    "subtitle": "We're a team of passionate developers and designers building the digital future",
+    "subtitle": "Two developers who got tired of watching Serbian businesses get ripped off by IT companies",
     "story": {
-      "title": "Our Story",
-      "p1": "Spicy Solutions was born from a simple idea: technology should empower businesses, not complicate them. Founded by two passionate developers, we set out to bridge the gap between cutting-edge technology and real business needs.",
-      "p2": "Today, we work with businesses of all sizes — from startups launching their first website to enterprises modernizing their tech stack with AI and automation. What sets us apart is our commitment to understanding your unique challenges and delivering solutions that truly make a difference."
+      "title": "Why We Started",
+      "p1": "We saw it happening to everyone around us. Friends running small businesses, family members with startups, local shops trying to go digital — all being quoted absurd prices by IT agencies for basic work. 5,000 EUR for a simple website. 500 EUR/month for 'maintenance' that took 10 minutes. It made us angry.",
+      "p2": "We're two engineers who've worked with modern tech stacks for years. We know exactly what things cost to build, and we know the industry is overcharging by 5-10x across the board in Serbia. So we started Spicy Solutions — to give businesses access to the same quality at honest prices. No corporate overhead. No account managers. Just engineers who write code and solve problems."
     },
     "values": {
-      "title": "Our Values",
+      "title": "What We Stand For",
       "innovation": {
-        "title": "Innovation",
-        "description": "We stay ahead of the curve, constantly exploring new technologies to deliver the best solutions."
+        "title": "Modern Tech Only",
+        "description": "No recycled WordPress templates from 2015. We use Next.js, AI, n8n, and the same tools Silicon Valley uses."
       },
       "quality": {
-        "title": "Quality",
-        "description": "Every line of code, every pixel, every interaction is crafted with precision and care."
+        "title": "No-Compromise Quality",
+        "description": "Affordable doesn't mean cheap. Every project gets the same engineering rigor we'd apply to our own products."
       },
       "transparency": {
-        "title": "Transparency",
-        "description": "Open communication, honest timelines, and clear pricing. No surprises, ever."
+        "title": "Radical Transparency",
+        "description": "Fixed pricing, open communication, no hidden fees. You see exactly what you're paying for, always."
       },
       "partnership": {
-        "title": "Partnership",
-        "description": "We don't just build software — we build relationships. Your success is our success."
+        "title": "Your Code, Your Data",
+        "description": "Everything we build belongs to you. No lock-in, no hostage situations. Walk away whenever you want — but you won't want to."
       }
     },
     "team": {
-      "title": "Meet the Team",
+      "title": "The Team",
       "member1": {
         "name": "Founder 1",
-        "role": "Co-Founder & Developer",
-        "bio": "Full-stack developer with a passion for building scalable systems and AI integrations."
+        "role": "Co-Founder & Engineer",
+        "bio": "Full-stack developer specializing in scalable systems, AI integrations, and making enterprise tech affordable."
       },
       "member2": {
         "name": "Founder 2",
-        "role": "Co-Founder & Developer",
-        "bio": "Software engineer specializing in modern web technologies and workflow automation."
+        "role": "Co-Founder & Engineer",
+        "bio": "Software engineer focused on modern web platforms and workflow automation. Believes great tech shouldn't require a second mortgage."
       }
     },
     "tech": {
-      "title": "Technologies We Use"
+      "title": "Our Tech Stack"
     }
   },
   "Contact": {
-    "title": "Get in Touch",
-    "subtitle": "Have a project in mind? We'd love to hear about it.",
+    "title": "Get a Free IT Audit",
+    "subtitle": "Tell us about your current setup and we'll show you where you're losing money. No strings attached.",
+    "audit": {
+      "title": "What You Get (Free)",
+      "description": "Our IT audit covers everything you need to know:",
+      "bullets": {
+        "b1": "Detailed breakdown of what you're currently paying vs. what it should cost",
+        "b2": "Identification of unnecessary monthly fees and vendor lock-in traps",
+        "b3": "Specific recommendations for modernization (AI, automation, modern stack)"
+      }
+    },
     "form": {
       "name": "Your Name",
       "email": "Email Address",
-      "company": "Company (optional)",
-      "service": "Service You're Interested In",
+      "company": "Company",
+      "service": "What are you interested in?",
       "serviceOptions": {
-        "select": "Select a service",
-        "websites": "Websites & Blogs",
-        "enterprise": "Enterprise Systems",
-        "ai": "AI & RAG Chatbots",
-        "automation": "Automation via n8n",
-        "other": "Other"
+        "select": "Choose one",
+        "audit": "Free IT Audit",
+        "websites": "Website / Web App",
+        "enterprise": "Custom Business System",
+        "ai": "AI & Chatbot Integration",
+        "automation": "Workflow Automation",
+        "other": "Something Else"
       },
-      "message": "Tell us about your project",
-      "submit": "Send Message",
+      "message": "Tell us about your current IT situation",
+      "submit": "Request Free Audit",
       "sending": "Sending...",
-      "success": "Message sent successfully! We'll get back to you soon.",
+      "success": "Request received! We'll analyze your situation and get back to you within 24 hours.",
       "error": "Something went wrong. Please try again."
     },
     "info": {
@@ -235,7 +280,7 @@
     }
   },
   "Footer": {
-    "description": "Building digital solutions that spice things up. From websites to AI — we've got you covered.",
+    "description": "Honest IT for Serbian businesses. Modern tech, fair prices, zero lock-in.",
     "quickLinks": "Quick Links",
     "services": "Services",
     "connect": "Connect",
@@ -243,7 +288,7 @@
   },
   "Common": {
     "learnMore": "Learn More",
-    "contactUs": "Contact Us",
+    "contactUs": "Get a Free Audit",
     "viewProject": "View Project",
     "readMore": "Read More"
   }
