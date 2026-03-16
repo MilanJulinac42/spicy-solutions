@@ -1,0 +1,250 @@
+{
+  "Navbar": {
+    "home": "Home",
+    "services": "Services",
+    "about": "About",
+    "contact": "Contact",
+    "getStarted": "Get Started"
+  },
+  "Hero": {
+    "title": "We Build Digital Solutions That",
+    "titleHighlight": "Spice Things Up",
+    "subtitle": "From sleek websites to enterprise systems, AI-powered chatbots to workflow automation — we deliver technology that drives your business forward.",
+    "cta": "Get Started",
+    "ctaSecondary": "Our Services"
+  },
+  "ServicesOverview": {
+    "title": "What We Do",
+    "subtitle": "Comprehensive digital solutions tailored to your business needs",
+    "websites": {
+      "title": "Websites & Blogs",
+      "description": "Beautiful, responsive websites and blogs built with modern technologies for maximum performance and SEO."
+    },
+    "enterprise": {
+      "title": "Enterprise Systems",
+      "description": "Scalable, robust web applications, dashboards, and SaaS platforms built for complex business needs."
+    },
+    "ai": {
+      "title": "AI & RAG Chatbots",
+      "description": "Intelligent chatbots powered by AI, custom RAG systems, and LLM integrations for your business."
+    },
+    "automation": {
+      "title": "Automation via n8n",
+      "description": "Streamline your workflows with custom automation pipelines, API integrations, and data processing."
+    }
+  },
+  "Stats": {
+    "projects": "Projects Delivered",
+    "clients": "Happy Clients",
+    "technologies": "Technologies",
+    "experience": "Years Experience"
+  },
+  "Projects": {
+    "title": "Our Work",
+    "subtitle": "A selection of projects we're proud of",
+    "viewProject": "View Project",
+    "project1": {
+      "title": "E-Commerce Platform",
+      "description": "A full-featured online store with inventory management, payment processing, and analytics dashboard."
+    },
+    "project2": {
+      "title": "AI Customer Support Bot",
+      "description": "RAG-powered chatbot that reduced support tickets by 60% using company knowledge base integration."
+    },
+    "project3": {
+      "title": "Workflow Automation Suite",
+      "description": "Custom n8n automation that connected 12 different business tools, saving 40+ hours per week."
+    },
+    "project4": {
+      "title": "Healthcare Dashboard",
+      "description": "Real-time analytics dashboard for patient data management with role-based access control."
+    }
+  },
+  "Testimonials": {
+    "title": "What Our Clients Say",
+    "subtitle": "Don't just take our word for it",
+    "testimonial1": {
+      "quote": "Spicy Solutions transformed our digital presence. Their attention to detail and technical expertise exceeded our expectations.",
+      "name": "Marko Petrovic",
+      "role": "CEO",
+      "company": "TechVentures"
+    },
+    "testimonial2": {
+      "quote": "The AI chatbot they built for us has been a game-changer. Our customer satisfaction scores have never been higher.",
+      "name": "Ana Jovanovic",
+      "role": "CTO",
+      "company": "DataFlow Inc."
+    },
+    "testimonial3": {
+      "quote": "Their n8n automation saved us countless hours of manual work. Professional, fast, and incredibly reliable.",
+      "name": "Stefan Nikolic",
+      "role": "Operations Manager",
+      "company": "LogiPro"
+    }
+  },
+  "CTA": {
+    "title": "Ready to Spice Up Your Digital Presence?",
+    "subtitle": "Let's build something amazing together.",
+    "button": "Contact Us"
+  },
+  "Services": {
+    "title": "Our Services",
+    "subtitle": "End-to-end digital solutions for businesses of all sizes",
+    "websites": {
+      "title": "Websites & Blogs",
+      "description": "We create stunning, high-performance websites that leave lasting impressions. From personal blogs to corporate sites, every project is crafted with attention to design, speed, and SEO.",
+      "features": {
+        "f1": "Responsive design for all devices",
+        "f2": "SEO optimized from the ground up",
+        "f3": "Lightning-fast performance",
+        "f4": "Content management systems",
+        "f5": "Custom animations and interactions"
+      }
+    },
+    "enterprise": {
+      "title": "Enterprise Systems",
+      "description": "Complex doesn't have to mean complicated. We build scalable enterprise applications, dashboards, and SaaS platforms that handle your business logic with elegance and reliability.",
+      "features": {
+        "f1": "Scalable microservices architecture",
+        "f2": "Real-time dashboards and analytics",
+        "f3": "Role-based access control",
+        "f4": "CI/CD pipelines and DevOps",
+        "f5": "Database design and optimization"
+      }
+    },
+    "ai": {
+      "title": "AI Integration & RAG Chatbots",
+      "description": "Harness the power of artificial intelligence. We build custom AI solutions, from RAG-powered chatbots that know your business inside out, to intelligent document processing and data analysis.",
+      "features": {
+        "f1": "Custom RAG chatbot development",
+        "f2": "LLM integration and fine-tuning",
+        "f3": "Document processing and knowledge bases",
+        "f4": "Conversational AI interfaces",
+        "f5": "AI-powered search and recommendations"
+      }
+    },
+    "automation": {
+      "title": "Automation via n8n",
+      "description": "Stop doing manually what machines can do better. We design and implement custom automation workflows using n8n that connect your tools, streamline processes, and free your team to focus on what matters.",
+      "features": {
+        "f1": "Visual workflow automation",
+        "f2": "API and webhook integrations",
+        "f3": "Data transformation pipelines",
+        "f4": "Scheduled task automation",
+        "f5": "Monitoring and error handling"
+      }
+    },
+    "process": {
+      "title": "How We Work",
+      "subtitle": "A proven process that delivers results",
+      "step1": {
+        "title": "Discovery",
+        "description": "We dive deep into your business needs, goals, and challenges to create a tailored strategy."
+      },
+      "step2": {
+        "title": "Design",
+        "description": "We craft the architecture and visual design, ensuring everything aligns with your vision."
+      },
+      "step3": {
+        "title": "Development",
+        "description": "Our team builds your solution using modern technologies with rigorous testing at every step."
+      },
+      "step4": {
+        "title": "Delivery",
+        "description": "We launch your project and provide ongoing support to ensure long-term success."
+      }
+    },
+    "cta": {
+      "title": "Have a Project in Mind?",
+      "subtitle": "Let's discuss how we can help bring your ideas to life.",
+      "button": "Get in Touch"
+    }
+  },
+  "About": {
+    "title": "About Spicy Solutions",
+    "subtitle": "We're a team of passionate developers and designers building the digital future",
+    "story": {
+      "title": "Our Story",
+      "p1": "Spicy Solutions was born from a simple idea: technology should empower businesses, not complicate them. Founded by two passionate developers, we set out to bridge the gap between cutting-edge technology and real business needs.",
+      "p2": "Today, we work with businesses of all sizes — from startups launching their first website to enterprises modernizing their tech stack with AI and automation. What sets us apart is our commitment to understanding your unique challenges and delivering solutions that truly make a difference."
+    },
+    "values": {
+      "title": "Our Values",
+      "innovation": {
+        "title": "Innovation",
+        "description": "We stay ahead of the curve, constantly exploring new technologies to deliver the best solutions."
+      },
+      "quality": {
+        "title": "Quality",
+        "description": "Every line of code, every pixel, every interaction is crafted with precision and care."
+      },
+      "transparency": {
+        "title": "Transparency",
+        "description": "Open communication, honest timelines, and clear pricing. No surprises, ever."
+      },
+      "partnership": {
+        "title": "Partnership",
+        "description": "We don't just build software — we build relationships. Your success is our success."
+      }
+    },
+    "team": {
+      "title": "Meet the Team",
+      "member1": {
+        "name": "Founder 1",
+        "role": "Co-Founder & Developer",
+        "bio": "Full-stack developer with a passion for building scalable systems and AI integrations."
+      },
+      "member2": {
+        "name": "Founder 2",
+        "role": "Co-Founder & Developer",
+        "bio": "Software engineer specializing in modern web technologies and workflow automation."
+      }
+    },
+    "tech": {
+      "title": "Technologies We Use"
+    }
+  },
+  "Contact": {
+    "title": "Get in Touch",
+    "subtitle": "Have a project in mind? We'd love to hear about it.",
+    "form": {
+      "name": "Your Name",
+      "email": "Email Address",
+      "company": "Company (optional)",
+      "service": "Service You're Interested In",
+      "serviceOptions": {
+        "select": "Select a service",
+        "websites": "Websites & Blogs",
+        "enterprise": "Enterprise Systems",
+        "ai": "AI & RAG Chatbots",
+        "automation": "Automation via n8n",
+        "other": "Other"
+      },
+      "message": "Tell us about your project",
+      "submit": "Send Message",
+      "sending": "Sending...",
+      "success": "Message sent successfully! We'll get back to you soon.",
+      "error": "Something went wrong. Please try again."
+    },
+    "info": {
+      "title": "Contact Information",
+      "email": "hello@spicysolutions.dev",
+      "phone": "+381 XX XXX XXXX",
+      "address": "Belgrade, Serbia",
+      "social": "Follow Us"
+    }
+  },
+  "Footer": {
+    "description": "Building digital solutions that spice things up. From websites to AI — we've got you covered.",
+    "quickLinks": "Quick Links",
+    "services": "Services",
+    "connect": "Connect",
+    "copyright": "© 2026 Spicy Solutions. All rights reserved."
+  },
+  "Common": {
+    "learnMore": "Learn More",
+    "contactUs": "Contact Us",
+    "viewProject": "View Project",
+    "readMore": "Read More"
+  }
+}

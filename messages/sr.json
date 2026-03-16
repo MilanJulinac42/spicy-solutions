@@ -1,0 +1,250 @@
+{
+  "Navbar": {
+    "home": "Početna",
+    "services": "Usluge",
+    "about": "O nama",
+    "contact": "Kontakt",
+    "getStarted": "Započnite"
+  },
+  "Hero": {
+    "title": "Gradimo digitalna rešenja koja",
+    "titleHighlight": "začine stvari",
+    "subtitle": "Od elegantnih sajtova do velikih sistema, AI chatbot-ova do automatizacije — isporučujemo tehnologiju koja pokreće vaš biznis.",
+    "cta": "Započnite",
+    "ctaSecondary": "Naše usluge"
+  },
+  "ServicesOverview": {
+    "title": "Šta radimo",
+    "subtitle": "Sveobuhvatna digitalna rešenja prilagođena vašim poslovnim potrebama",
+    "websites": {
+      "title": "Sajtovi i blogovi",
+      "description": "Prelepi, responsivni sajtovi i blogovi izgrađeni modernim tehnologijama za maksimalne performanse i SEO."
+    },
+    "enterprise": {
+      "title": "Enterprise sistemi",
+      "description": "Skalabilne, robusne web aplikacije, dashboard-ovi i SaaS platforme za kompleksne poslovne potrebe."
+    },
+    "ai": {
+      "title": "AI i RAG chatbot-ovi",
+      "description": "Inteligentni chatbot-ovi pokretani veštačkom inteligencijom, RAG sistemi i LLM integracije za vaš biznis."
+    },
+    "automation": {
+      "title": "Automatizacija putem n8n",
+      "description": "Optimizujte svoje radne tokove sa prilagođenim automatizacijama, API integracijama i obradom podataka."
+    }
+  },
+  "Stats": {
+    "projects": "Isporučenih projekata",
+    "clients": "Zadovoljnih klijenata",
+    "technologies": "Tehnologija",
+    "experience": "Godina iskustva"
+  },
+  "Projects": {
+    "title": "Naši radovi",
+    "subtitle": "Izbor projekata na koje smo ponosni",
+    "viewProject": "Pogledaj projekat",
+    "project1": {
+      "title": "E-Commerce platforma",
+      "description": "Kompletna onlajn prodavnica sa upravljanjem zalihama, procesiranjem plaćanja i analitičkim dashboard-om."
+    },
+    "project2": {
+      "title": "AI podrška za korisnike",
+      "description": "RAG chatbot koji je smanjio broj tiketa podrške za 60% koristeći integraciju baze znanja kompanije."
+    },
+    "project3": {
+      "title": "Automatizacija radnih tokova",
+      "description": "Prilagođena n8n automatizacija koja je povezala 12 različitih poslovnih alata, uštedivši 40+ sati nedeljno."
+    },
+    "project4": {
+      "title": "Zdravstveni dashboard",
+      "description": "Dashboard za analitiku podataka pacijenata u realnom vremenu sa kontrolom pristupa zasnovanom na ulogama."
+    }
+  },
+  "Testimonials": {
+    "title": "Šta kažu naši klijenti",
+    "subtitle": "Ne verujte nam na reč",
+    "testimonial1": {
+      "quote": "Spicy Solutions je transformisao naše digitalno prisustvo. Njihova pažnja prema detaljima i tehnička ekspertiza su nadmašili naša očekivanja.",
+      "name": "Marko Petrović",
+      "role": "CEO",
+      "company": "TechVentures"
+    },
+    "testimonial2": {
+      "quote": "AI chatbot koji su napravili za nas je promenio igru. Naši rezultati zadovoljstva korisnika nikad nisu bili bolji.",
+      "name": "Ana Jovanović",
+      "role": "CTO",
+      "company": "DataFlow Inc."
+    },
+    "testimonial3": {
+      "quote": "Njihova n8n automatizacija nam je uštedela bezbroj sati manuelnog rada. Profesionalni, brzi i neverovatno pouzdani.",
+      "name": "Stefan Nikolić",
+      "role": "Menadžer operacija",
+      "company": "LogiPro"
+    }
+  },
+  "CTA": {
+    "title": "Spremni da začinite vaše digitalno prisustvo?",
+    "subtitle": "Hajde da zajedno izgradimo nešto sjajno.",
+    "button": "Kontaktirajte nas"
+  },
+  "Services": {
+    "title": "Naše usluge",
+    "subtitle": "Kompletna digitalna rešenja za biznise svih veličina",
+    "websites": {
+      "title": "Sajtovi i blogovi",
+      "description": "Kreiramo zapanjujuće, visoko-performantne sajtove koji ostavljaju trajni utisak. Od ličnih blogova do korporativnih sajtova, svaki projekat je izrađen sa pažnjom prema dizajnu, brzini i SEO-u.",
+      "features": {
+        "f1": "Responsivan dizajn za sve uređaje",
+        "f2": "SEO optimizacija od samog početka",
+        "f3": "Munjevite performanse",
+        "f4": "Sistemi za upravljanje sadržajem",
+        "f5": "Prilagođene animacije i interakcije"
+      }
+    },
+    "enterprise": {
+      "title": "Enterprise sistemi",
+      "description": "Kompleksno ne mora da znači komplikovano. Gradimo skalabilne enterprise aplikacije, dashboard-ove i SaaS platforme koje obrađuju vašu poslovnu logiku sa elegancijom i pouzdanošću.",
+      "features": {
+        "f1": "Skalabilna mikroservisna arhitektura",
+        "f2": "Dashboard-ovi i analitika u realnom vremenu",
+        "f3": "Kontrola pristupa zasnovana na ulogama",
+        "f4": "CI/CD pipeline-ovi i DevOps",
+        "f5": "Dizajn i optimizacija baze podataka"
+      }
+    },
+    "ai": {
+      "title": "AI integracija i RAG chatbot-ovi",
+      "description": "Iskoristite moć veštačke inteligencije. Gradimo prilagođena AI rešenja, od RAG chatbot-ova koji poznaju vaš biznis iznutra, do inteligentne obrade dokumenata i analize podataka.",
+      "features": {
+        "f1": "Razvoj prilagođenih RAG chatbot-ova",
+        "f2": "LLM integracija i fino podešavanje",
+        "f3": "Obrada dokumenata i baze znanja",
+        "f4": "Konverzacioni AI interfejsi",
+        "f5": "AI pretraga i preporuke"
+      }
+    },
+    "automation": {
+      "title": "Automatizacija putem n8n",
+      "description": "Prestanite da ručno radite ono što mašine mogu bolje. Dizajniramo i implementiramo prilagođene automatizacione tokove koristeći n8n koji povezuju vaše alate, optimizuju procese i oslobađaju vaš tim da se fokusira na ono što je važno.",
+      "features": {
+        "f1": "Vizuelna automatizacija radnih tokova",
+        "f2": "API i webhook integracije",
+        "f3": "Pipeline-ovi za transformaciju podataka",
+        "f4": "Automatizacija zakazanih zadataka",
+        "f5": "Monitoring i upravljanje greškama"
+      }
+    },
+    "process": {
+      "title": "Kako radimo",
+      "subtitle": "Provereni proces koji donosi rezultate",
+      "step1": {
+        "title": "Istraživanje",
+        "description": "Duboko se upoznajemo sa vašim poslovnim potrebama, ciljevima i izazovima kako bismo kreirali prilagođenu strategiju."
+      },
+      "step2": {
+        "title": "Dizajn",
+        "description": "Kreiramo arhitekturu i vizuelni dizajn, osiguravajući da sve bude usklađeno sa vašom vizijom."
+      },
+      "step3": {
+        "title": "Razvoj",
+        "description": "Naš tim gradi vaše rešenje koristeći moderne tehnologije sa rigoroznim testiranjem u svakom koraku."
+      },
+      "step4": {
+        "title": "Isporuka",
+        "description": "Lansiramo vaš projekat i pružamo stalnu podršku za dugoročni uspeh."
+      }
+    },
+    "cta": {
+      "title": "Imate projekat na umu?",
+      "subtitle": "Hajde da razgovaramo kako možemo pomoći da vaše ideje ožive.",
+      "button": "Javite nam se"
+    }
+  },
+  "About": {
+    "title": "O Spicy Solutions",
+    "subtitle": "Tim strastvenih developera i dizajnera koji grade digitalnu budućnost",
+    "story": {
+      "title": "Naša priča",
+      "p1": "Spicy Solutions je nastao iz jednostavne ideje: tehnologija treba da osnažuje biznise, ne da ih komplikuje. Osnovana od strane dva strastvena developera, krenuli smo da premostimo jaz između najnovije tehnologije i stvarnih poslovnih potreba.",
+      "p2": "Danas radimo sa biznisima svih veličina — od startapa koji lansiraju svoj prvi sajt do enterprise kompanija koje modernizuju svoj tech stack sa AI i automatizacijom. Ono što nas izdvaja je posvećenost razumevanju vaših jedinstvenih izazova i isporuci rešenja koja zaista čine razliku."
+    },
+    "values": {
+      "title": "Naše vrednosti",
+      "innovation": {
+        "title": "Inovacija",
+        "description": "Uvek smo korak ispred, stalno istražujemo nove tehnologije za isporuku najboljih rešenja."
+      },
+      "quality": {
+        "title": "Kvalitet",
+        "description": "Svaka linija koda, svaki piksel, svaka interakcija je izrađena sa preciznošću i pažnjom."
+      },
+      "transparency": {
+        "title": "Transparentnost",
+        "description": "Otvorena komunikacija, iskreni rokovi i jasne cene. Bez iznenađenja, ikada."
+      },
+      "partnership": {
+        "title": "Partnerstvo",
+        "description": "Ne gradimo samo softver — gradimo odnose. Vaš uspeh je naš uspeh."
+      }
+    },
+    "team": {
+      "title": "Upoznajte tim",
+      "member1": {
+        "name": "Osnivač 1",
+        "role": "Suosnivač i developer",
+        "bio": "Full-stack developer sa strašću za izgradnju skalabilnih sistema i AI integracija."
+      },
+      "member2": {
+        "name": "Osnivač 2",
+        "role": "Suosnivač i developer",
+        "bio": "Softverski inženjer specijalizovan za moderne web tehnologije i automatizaciju radnih tokova."
+      }
+    },
+    "tech": {
+      "title": "Tehnologije koje koristimo"
+    }
+  },
+  "Contact": {
+    "title": "Javite nam se",
+    "subtitle": "Imate projekat na umu? Voleli bismo da čujemo o njemu.",
+    "form": {
+      "name": "Vaše ime",
+      "email": "Email adresa",
+      "company": "Kompanija (opciono)",
+      "service": "Usluga koja vas zanima",
+      "serviceOptions": {
+        "select": "Izaberite uslugu",
+        "websites": "Sajtovi i blogovi",
+        "enterprise": "Enterprise sistemi",
+        "ai": "AI i RAG chatbot-ovi",
+        "automation": "Automatizacija putem n8n",
+        "other": "Ostalo"
+      },
+      "message": "Opišite nam vaš projekat",
+      "submit": "Pošaljite poruku",
+      "sending": "Slanje...",
+      "success": "Poruka uspešno poslata! Javićemo vam se uskoro.",
+      "error": "Nešto je pošlo po zlu. Pokušajte ponovo."
+    },
+    "info": {
+      "title": "Kontakt informacije",
+      "email": "hello@spicysolutions.dev",
+      "phone": "+381 XX XXX XXXX",
+      "address": "Beograd, Srbija",
+      "social": "Pratite nas"
+    }
+  },
+  "Footer": {
+    "description": "Gradimo digitalna rešenja koja začine stvari. Od sajtova do AI — pokriveni ste.",
+    "quickLinks": "Brzi linkovi",
+    "services": "Usluge",
+    "connect": "Povežite se",
+    "copyright": "© 2026 Spicy Solutions. Sva prava zadržana."
+  },
+  "Common": {
+    "learnMore": "Saznajte više",
+    "contactUs": "Kontaktirajte nas",
+    "viewProject": "Pogledaj projekat",
+    "readMore": "Pročitajte više"
+  }
+}

@@ -1,0 +1,170 @@
+"use client";
+
+import { useTranslations } from "next-intl";
+import { Link } from "@/i18n/navigation";
+import { Flame, Github, Linkedin, Twitter, Mail, MapPin, Phone } from "lucide-react";
+import { siteConfig } from "@/lib/constants";
+
+export function Footer() {
+  const t = useTranslations();
+
+  return (
+    <footer className="bg-[#0a0a0a] text-gray-300 border-t border-white/5">
+      <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-16">
+        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-10">
+          {/* Brand Column */}
+          <div className="lg:col-span-1">
+            <div className="flex items-center gap-2 mb-4">
+              <Flame className="w-6 h-6 text-spicy-400" />
+              <span className="text-lg font-bold text-white">
+                Spicy<span className="text-spicy-400">Solutions</span>
+              </span>
+            </div>
+            <p className="text-sm text-gray-400 leading-relaxed">
+              {t("Footer.description")}
+            </p>
+            <div className="flex items-center gap-3 mt-6">
+              <a
+                href={siteConfig.socials.github}
+                target="_blank"
+                rel="noopener noreferrer"
+                className="p-2 rounded-lg bg-white/5 hover:bg-spicy-400/10 hover:text-spicy-400 transition-colors"
+              >
+                <Github className="w-4 h-4" />
+              </a>
+              <a
+                href={siteConfig.socials.linkedin}
+                target="_blank"
+                rel="noopener noreferrer"
+                className="p-2 rounded-lg bg-white/5 hover:bg-spicy-400/10 hover:text-spicy-400 transition-colors"
+              >
+                <Linkedin className="w-4 h-4" />
+              </a>
+              <a
+                href={siteConfig.socials.twitter}
+                target="_blank"
+                rel="noopener noreferrer"
+                className="p-2 rounded-lg bg-white/5 hover:bg-spicy-400/10 hover:text-spicy-400 transition-colors"
+              >
+                <Twitter className="w-4 h-4" />
+              </a>
+            </div>
+          </div>
+
+          {/* Quick Links */}
+          <div>
+            <h4 className="text-sm font-semibold text-white uppercase tracking-wider mb-4">
+              {t("Footer.quickLinks")}
+            </h4>
+            <ul className="space-y-3">
+              <li>
+                <Link
+                  href="/"
+                  className="text-sm text-gray-400 hover:text-spicy-400 transition-colors"
+                >
+                  {t("Navbar.home")}
+                </Link>
+              </li>
+              <li>
+                <Link
+                  href="/services"
+                  className="text-sm text-gray-400 hover:text-spicy-400 transition-colors"
+                >
+                  {t("Navbar.services")}
+                </Link>
+              </li>
+              <li>
+                <Link
+                  href="/about"
+                  className="text-sm text-gray-400 hover:text-spicy-400 transition-colors"
+                >
+                  {t("Navbar.about")}
+                </Link>
+              </li>
+              <li>
+                <Link
+                  href="/contact"
+                  className="text-sm text-gray-400 hover:text-spicy-400 transition-colors"
+                >
+                  {t("Navbar.contact")}
+                </Link>
+              </li>
+            </ul>
+          </div>
+
+          {/* Services */}
+          <div>
+            <h4 className="text-sm font-semibold text-white uppercase tracking-wider mb-4">
+              {t("Footer.services")}
+            </h4>
+            <ul className="space-y-3">
+              <li>
+                <Link
+                  href="/services"
+                  className="text-sm text-gray-400 hover:text-spicy-400 transition-colors"
+                >
+                  {t("ServicesOverview.websites.title")}
+                </Link>
+              </li>
+              <li>
+                <Link
+                  href="/services"
+                  className="text-sm text-gray-400 hover:text-spicy-400 transition-colors"
+                >
+                  {t("ServicesOverview.enterprise.title")}
+                </Link>
+              </li>
+              <li>
+                <Link
+                  href="/services"
+                  className="text-sm text-gray-400 hover:text-spicy-400 transition-colors"
+                >
+                  {t("ServicesOverview.ai.title")}
+                </Link>
+              </li>
+              <li>
+                <Link
+                  href="/services"
+                  className="text-sm text-gray-400 hover:text-spicy-400 transition-colors"
+                >
+                  {t("ServicesOverview.automation.title")}
+                </Link>
+              </li>
+            </ul>
+          </div>
+
+          {/* Contact */}
+          <div>
+            <h4 className="text-sm font-semibold text-white uppercase tracking-wider mb-4">
+              {t("Footer.connect")}
+            </h4>
+            <ul className="space-y-3">
+              <li className="flex items-center gap-2">
+                <Mail className="w-4 h-4 text-spicy-400 shrink-0" />
+                <a
+                  href={`mailto:${siteConfig.email}`}
+                  className="text-sm text-gray-400 hover:text-spicy-400 transition-colors"
+                >
+                  {siteConfig.email}
+                </a>
+              </li>
+              <li className="flex items-center gap-2">
+                <Phone className="w-4 h-4 text-spicy-400 shrink-0" />
+                <span className="text-sm text-gray-400">{siteConfig.phone}</span>
+              </li>
+              <li className="flex items-center gap-2">
+                <MapPin className="w-4 h-4 text-spicy-400 shrink-0" />
+                <span className="text-sm text-gray-400">{siteConfig.address}</span>
+              </li>
+            </ul>
+          </div>
+        </div>
+
+        {/* Copyright */}
+        <div className="mt-12 pt-8 border-t border-white/5 text-center">
+          <p className="text-sm text-gray-500">{t("Footer.copyright")}</p>
+        </div>
+      </div>
+    </footer>
+  );
+}
