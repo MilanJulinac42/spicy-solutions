@@ -225,12 +225,12 @@
     "team": {
       "title": "The Team",
       "member1": {
-        "name": "Founder 1",
+        "name": "Milan Julinac",
         "role": "Co-Founder & Engineer",
         "bio": "Full-stack developer specializing in scalable systems, AI integrations, and making enterprise tech affordable."
       },
       "member2": {
-        "name": "Founder 2",
+        "name": "Dragan Jelačić",
         "role": "Co-Founder & Engineer",
         "bio": "Software engineer focused on modern web platforms and workflow automation. Believes great tech shouldn't require a second mortgage."
       }

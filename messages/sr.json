@@ -225,12 +225,12 @@
     "team": {
       "title": "Tim",
       "member1": {
-        "name": "Osnivač 1",
+        "name": "Milan Julinac",
         "role": "Suosnivač i inženjer",
         "bio": "Full-stack developer specijalizovan za skalabilne sisteme, AI integracije i pravljenje enterprise tehnologije pristupačnom."
       },
       "member2": {
-        "name": "Osnivač 2",
+        "name": "Dragan Jelačić",
         "role": "Suosnivač i inženjer",
         "bio": "Softverski inženjer fokusiran na moderne web platforme i automatizaciju. Veruje da sjajan softver ne treba da zahteva drugi kredit."
       }

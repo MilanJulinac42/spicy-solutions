@@ -7,13 +7,18 @@ import {
   Shield,
   Eye,
   Handshake,
-  Users,
 } from "lucide-react";
+import Image from "next/image";
 import { Container } from "@/components/ui/Container";
 import { SectionHeading } from "@/components/ui/SectionHeading";
 import { Badge } from "@/components/ui/Badge";
 import { fadeInUp, fadeInLeft, fadeInRight, staggerContainer } from "@/lib/animations";
 import { technologies } from "@/lib/constants";
+
+const teamPhotos: Record<string, string> = {
+  member1: "/team/milan.jpg",
+  member2: "/team/dragan.jpg",
+};
 
 const valueIcons = {
   innovation: Lightbulb,
@@ -153,8 +158,14 @@ export default function AboutPage() {
               >
                 <div className="w-24 h-24 mx-auto mb-4 relative flex items-center justify-center">
                   <div className="absolute inset-0 rounded-full bg-gradient-to-br from-spicy-400 via-spicy-500 to-spicy-400 animate-spin" style={{ animationDuration: '8s' }} />
-                  <div className="w-20 h-20 rounded-full bg-gradient-to-br from-spicy-400 to-spicy-500 flex items-center justify-center relative z-10">
-                    <Users className="w-8 h-8 text-white" />
+                  <div className="w-20 h-20 rounded-full overflow-hidden relative z-10 ring-2 ring-surface">
+                    <Image
+                      src={teamPhotos[member]}
+                      alt={t(`About.team.${member}.name`)}
+                      width={80}
+                      height={80}
+                      className="w-full h-full object-cover"
+                    />
                   </div>
                 </div>
                 <h4 className="text-lg font-semibold text-foreground">
