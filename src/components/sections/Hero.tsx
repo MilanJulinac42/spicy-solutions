@@ -4,7 +4,12 @@ import { useTranslations } from "next-intl";
 import { motion } from "framer-motion";
 import { Link } from "@/i18n/navigation";
 import { ArrowRight, ChevronDown } from "lucide-react";
-import { fadeInUp, staggerContainer } from "@/lib/animations";
+import {
+  fadeInUp,
+  staggerContainer,
+  textRevealContainer,
+  textRevealWord,
+} from "@/lib/animations";
 import { useState, useCallback } from "react";
 
 export function Hero() {
@@ -24,7 +29,7 @@ export function Hero() {
 
   return (
     <section
-      className="relative min-h-screen flex items-center justify-center overflow-hidden"
+      className="relative min-h-screen flex items-center justify-center overflow-hidden noise-overlay"
       onMouseMove={handleMouseMove}
     >
       {/* Mouse-follow gradient (desktop only) */}
@@ -101,16 +106,36 @@ export function Hero() {
             </span>
           </motion.div>
 
-          {/* Main headline */}
+          {/* Main headline with word-by-word reveal */}
           <motion.h1
-            variants={fadeInUp}
+            variants={textRevealContainer}
+            initial="hidden"
+            animate="visible"
             className="text-4xl sm:text-5xl md:text-6xl lg:text-7xl font-bold text-foreground leading-tight"
           >
-            {t("title")}
+            {t("title")
+              .split(" ")
+              .map((word, i) => (
+                <motion.span
+                  key={i}
+                  variants={textRevealWord}
+                  className="inline-block mr-[0.3em]"
+                >
+                  {word}
+                </motion.span>
+              ))}
             <br />
-            <span className="animated-gradient-text">
-              {t("titleHighlight")}
-            </span>
+            {t("titleHighlight")
+              .split(" ")
+              .map((word, i) => (
+                <motion.span
+                  key={`h-${i}`}
+                  variants={textRevealWord}
+                  className="inline-block mr-[0.3em] animated-gradient-text"
+                >
+                  {word}
+                </motion.span>
+              ))}
           </motion.h1>
 
           {/* Subtitle */}

@@ -111,7 +111,7 @@ export default function AboutPage() {
                 <motion.div
                   key={key}
                   variants={fadeInUp}
-                  className="p-6 rounded-2xl bg-surface border border-border-default text-center hover:border-spicy-400/30 hover:shadow-lg hover:shadow-spicy-400/5 transition-all duration-300"
+                  className="p-6 rounded-2xl glass text-center hover:border-spicy-400/30 hover:shadow-lg hover:shadow-spicy-400/5 transition-all duration-300"
                 >
                   <motion.div
                     whileHover={{ rotate: 10, scale: 1.1 }}

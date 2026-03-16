@@ -21,7 +21,7 @@ export function CTABanner() {
   const t = useTranslations("CTA");
 
   return (
-    <section className="py-20 md:py-28 relative overflow-hidden">
+    <section className="py-20 md:py-28 relative overflow-hidden noise-overlay">
       {/* Orange gradient background */}
       <div className="absolute inset-0 bg-gradient-to-r from-spicy-500 via-spicy-400 to-spicy-300" />
 

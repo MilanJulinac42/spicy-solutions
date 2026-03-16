@@ -116,7 +116,7 @@ export function Stats() {
   ];
 
   return (
-    <section className="py-20 md:py-28 bg-surface-secondary">
+    <section className="py-20 md:py-28 bg-surface-secondary noise-overlay">
       <Container>
         <motion.div
           variants={staggerContainer}

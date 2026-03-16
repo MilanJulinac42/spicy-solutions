@@ -28,7 +28,7 @@ export function ProblemSection() {
   const t = useTranslations("ProblemSection");
 
   return (
-    <section className="py-20 md:py-28 bg-surface-secondary">
+    <section className="py-20 md:py-28 bg-surface-secondary noise-overlay">
       <Container>
         <SectionHeading title={t("title")} subtitle={t("subtitle")} />
 
@@ -68,7 +68,7 @@ export function ProblemSection() {
           whileInView="visible"
           viewport={{ once: true, margin: "-100px" }}
           variants={fadeInUp}
-          className="relative p-8 md:p-10 rounded-2xl bg-gradient-to-br from-spicy-400/10 via-spicy-400/5 to-transparent border border-spicy-400/20"
+          className="relative p-8 md:p-10 rounded-2xl glass border-spicy-400/20"
         >
           <h3 className="text-2xl md:text-3xl font-bold text-foreground mb-6">
             {t("solution.title")}

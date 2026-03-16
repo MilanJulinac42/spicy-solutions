@@ -132,3 +132,33 @@ export const drawLine: Variants = {
     transition: { duration: 0.8, ease: "easeOut", delay: 0.3 },
   },
 };
+
+// === TEXT REVEAL ANIMATION ===
+
+export const textRevealContainer: Variants = {
+  hidden: {},
+  visible: {
+    transition: {
+      staggerChildren: 0.08,
+      delayChildren: 0.2,
+    },
+  },
+};
+
+export const textRevealWord: Variants = {
+  hidden: {
+    opacity: 0,
+    y: 20,
+    filter: "blur(4px)",
+  },
+  visible: {
+    opacity: 1,
+    y: 0,
+    filter: "blur(0px)",
+    transition: {
+      type: "spring",
+      stiffness: 150,
+      damping: 20,
+    },
+  },
+};
