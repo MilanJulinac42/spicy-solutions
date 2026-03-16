@@ -26,7 +26,7 @@ export function Footer() {
       </div>
 
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-16">
-        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-10">
+        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-5 gap-10">
           {/* Brand Column */}
           <div className="lg:col-span-1">
             <div className="flex items-center gap-2 mb-4">
@@ -143,6 +143,31 @@ export function Footer() {
                   className="text-sm text-gray-400 hover:text-spicy-400 transition-colors link-underline"
                 >
                   {t("ServicesOverview.automation.title")}
+                </Link>
+              </li>
+            </ul>
+          </div>
+
+          {/* Legal */}
+          <div>
+            <h4 className="text-sm font-semibold text-white uppercase tracking-wider mb-4">
+              {t("Footer.legal")}
+            </h4>
+            <ul className="space-y-3">
+              <li>
+                <Link
+                  href="/privacy"
+                  className="text-sm text-gray-400 hover:text-spicy-400 transition-colors link-underline"
+                >
+                  {t("Footer.privacy")}
+                </Link>
+              </li>
+              <li>
+                <Link
+                  href="/terms"
+                  className="text-sm text-gray-400 hover:text-spicy-400 transition-colors link-underline"
+                >
+                  {t("Footer.terms")}
                 </Link>
               </li>
             </ul>
