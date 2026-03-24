@@ -7,67 +7,67 @@
     "getStarted": "Besplatan IT Audit"
   },
   "Hero": {
-    "badge": "Srpske firme preplaćuju IT usluge. Došli smo da to promenimo.",
-    "title": "Vaš IT provajder vam naplaćuje",
-    "titleHighlight": "Previše",
-    "subtitle": "Velike agencije preplaćuju, ne isporučuju dovoljno, i drže vas zarobljene. Solvera nudi modernu tehnologiju, transparentne cene i nula zavlačenja. Dva smo inženjera koji veruju da srpski biznisi zaslužuju bolje.",
+    "badge": "Brza isporuka. Direktna komunikacija. Kvalitet bez kompromisa.",
+    "title": "Vaš sledeći projekat zaslužuje",
+    "titleHighlight": "Bolje",
+    "subtitle": "Dok druge agencije mesecima razvlače rokove, mi isporučujemo brzo i kvalitetno. Direktan pristup inženjerima koji grade vaš proizvod — bez posrednika, bez čekanja, bez kompromisa.",
     "cta": "Besplatan IT Audit",
-    "ctaSecondary": "Kako štedimo vaš novac"
+    "ctaSecondary": "Pogledajte naš proces"
   },
   "ProblemSection": {
-    "title": "Problem o kome niko ne govori",
-    "subtitle": "Srpski biznisi se opljačkaju od strane IT kompanija. Evo kako.",
+    "title": "Zašto vas IT projekti frustriraju?",
+    "subtitle": "Većina agencija radi sporo, komunicira loše i isporučuje ispod očekivanja.",
     "problems": {
       "p1": {
-        "title": "5-10x veća cena razvoja",
-        "description": "Velike agencije naplaćuju enterprise cene za standardan posao. Sajt koji treba da košta 500-1.500 EUR? Oni traže 5.000-15.000."
+        "title": "Mesecima čekate na rezultate",
+        "description": "Jednostavan sajt se razvija mesecima. Svaka izmena zahteva nedelje čekanja. Vaš biznis ne može da čeka — a agencije ne žure."
       },
       "p2": {
-        "title": "Mesečne naknade ni za šta",
-        "description": "Plaćate 200-500 EUR mesečno za 'održavanje' sajta kome treba 15 minuta rada? To nije podrška — to je pretplata na pljačku."
+        "title": "Komunikacija kroz 5 slojeva",
+        "description": "Account menadžer priča sa PM-om, PM priča sa developerom. Vaša poruka se izgubi usput. Nikada ne razgovarate direktno sa osobom koja piše kod."
       },
       "p3": {
-        "title": "Zastarela tehnologija prodata kao moderna",
-        "description": "Prodaju vam WordPress iz 2015. i kažu da je 'najsavremeniji.' U međuvremenu, vaša konkurencija koristi AI i automatizaciju da bude brža."
+        "title": "Zastarela tehnologija usporava sve",
+        "description": "Rade sa alatima iz 2015. dok vaša konkurencija koristi AI i automatizaciju. Rezultat? Sporiji razvoj, lošije performanse, teže održavanje."
       },
       "p4": {
-        "title": "Zaključavanje kod provajdera",
-        "description": "Ne možete da premestite sajt? Nemate pristup kodu? To nije funkcija — to je zamka napravljena da plaćate zauvek."
+        "title": "Nemate kontrolu nad sopstvenim kodom",
+        "description": "Ne možete da premestite sajt? Nemate pristup izvornom kodu? To nije partnerstvo — to je zavisnost koja vas sputava."
       }
     },
     "solution": {
       "title": "Postoji bolji način",
-      "point1": "Transparentne, fiksne cene — tačno znate koliko plaćate pre nego što krenemo",
+      "point1": "Brza isporuka — radimo efikasno sa modernim alatima i ne razvlačimo rokove",
       "point2": "Sve je vaše — kod, podaci, hosting. Bez zaključavanja, ikada",
-      "point3": "Moderan tech stack — Next.js, AI, automatizacija. Ne reciklirani WordPress šabloni",
-      "point4": "Direktan pristup inženjerima koji prave vaš proizvod. Bez posrednika, bez account menadžera"
+      "point3": "Moderan tech stack — Next.js, AI, automatizacija. Tehnologija koja ubrzava razvoj",
+      "point4": "Direktan pristup inženjerima koji prave vaš proizvod. Bez posrednika, bez čekanja"
     },
-    "cta": "Saznajte da li preplaćujete"
+    "cta": "Zakažite besplatan audit"
   },
   "ServicesOverview": {
-    "title": "Šta vam zaista treba (po fer ceni)",
-    "subtitle": "Iste usluge koje velike agencije prodaju — bez 10x maržde i skrivenih troškova",
+    "title": "Šta vam zaista treba",
+    "subtitle": "Moderan razvoj, brza isporuka i direktna komunikacija sa inženjerima koji grade vaš proizvod",
     "websites": {
       "title": "Sajtovi i web aplikacije",
-      "description": "Prestanite da plaćate hiljade za šablonske sajtove. Pravimo brze, moderne, SEO-optimizovane sajtove za delić onoga što agencije naplaćuju — i posedujete svaku liniju koda."
+      "description": "Brzi, moderni, SEO-optimizovani sajtovi izgrađeni sa Next.js. Isporučujemo u kratkim rokovima, sa punim vlasništvom nad kodom i bez zavisnosti od provajdera."
     },
     "enterprise": {
       "title": "Poslovni sistemi po meri",
-      "description": "Dashboard-ovi, SaaS platforme, interni alati. Enterprise kvalitet ne zahteva enterprise cene. Isporučujemo isti kvalitet za delić troškova."
+      "description": "Dashboard-ovi, SaaS platforme, interni alati. Skalabilna arhitektura, production-ready kvalitet i redovna komunikacija tokom celog razvoja."
     },
     "ai": {
       "title": "AI i RAG chatbot-ovi",
-      "description": "Vaša konkurencija već koristi AI. Pametni chatbot-ovi koji poznaju vaš biznis iznutra, smanjuju troškove podrške za 50-70% i služe korisnike 24/7."
+      "description": "Pametni chatbot-ovi koji poznaju vaš biznis iznutra. Automatizuju korisničku podršku, obrađuju upite 24/7 i oslobađaju vaš tim za važnije zadatke."
     },
     "automation": {
       "title": "Automatizacija (n8n)",
-      "description": "Zašto plaćate zaposlenog da radi ono što n8n radi besplatno? Pravimo automatizacije koje povezuju vaše alate, eliminišu manuelni rad i štede 40+ sati nedeljno."
+      "description": "Povezujemo vaše alate, eliminišemo manuelni rad i automatizujemo ponavljajuće procese. Vaš tim se fokusira na strategiju, a softver radi sve ostalo."
     }
   },
   "Stats": {
-    "savings": "Prosečna ušteda klijenata",
-    "cheaper": "Jeftinije od agencijskih cena",
-    "hours": "Sati uštedenih automatizacijom",
+    "savings": "Brža isporuka",
+    "cheaper": "Vlasništvo nad kodom",
+    "hours": "Automatizovanih procesa",
     "satisfaction": "Zadovoljstvo klijenata"
   },
   "Projects": {
@@ -114,49 +114,49 @@
     }
   },
   "WhyTrustUs": {
-    "title": "Zasto da nam verujete?",
-    "subtitle": "Mali smo tim — ali upravo zato isporucujemo bolje rezultate za manje novca",
+    "title": "Zašto da nam verujete?",
+    "subtitle": "Mali smo tim — ali upravo zato isporučujemo brže i efikasnije",
     "code": {
-      "title": "Inzenjeri, ne prodavci",
-      "description": "Radite direktno sa developerima koji pisu vas kod. Bez account menadzera, bez posrednika, bez gluvih telefona. Brza komunikacija, bolji rezultati."
+      "title": "Inženjeri, ne prodavci",
+      "description": "Radite direktno sa developerima koji pišu vaš kod. Bez account menadžera, bez posrednika, bez gluvih telefona. Brza komunikacija, bolji rezultati."
     },
     "ownership": {
-      "title": "Sve je vase",
-      "description": "Svaka linija koda, svaki dizajn fajl, svaki dokument — pripada vama. Bez zakljucavanja kod provajdera, bez talackih situacija. Mozete otici kad god zelite."
+      "title": "Sve je vaše",
+      "description": "Svaka linija koda, svaki dizajn fajl, svaki dokument — pripada vama. Bez zaključavanja kod provajdera, bez talačkih situacija. Možete otići kad god želite."
     },
     "speed": {
       "title": "Moderan stack, brza isporuka",
-      "description": "Koristimo Next.js, AI, n8n i iste alate koje koriste vrhunske tech kompanije. Bez recikliranih WordPress sablona. Vas projekat se gradi tehnologijom koja zaista radi."
+      "description": "Koristimo Next.js, AI, n8n i iste alate koje koriste vrhunske tech kompanije. Bez recikliranih WordPress šablona. Vaš projekat se gradi tehnologijom koja zaista radi."
     },
     "direct": {
-      "title": "Transparentne, fiksne cene",
-      "description": "Znate tacnu cenu pre nego sto napisemo jednu liniju koda. Bez iznenadjenja sa satnicom, bez dodatnih troskova. Cena koju ponudimo je cena koju placate."
+      "title": "Direktna komunikacija",
+      "description": "Odgovaramo u roku od 24h. Redovna ažuriranja o napretku projekta. Uvek znate šta se dešava — bez iznenađenja, bez čekanja na odgovor danima."
     }
   },
   "CTA": {
-    "title": "Mislite da možda preplaćujete?",
-    "subtitle": "Dobijte besplatan IT audit bez ikakvih obaveza. Pokazaćemo vam tačno gde gubite novac — i kako da to popravite.",
+    "title": "Spremni za brži razvoj?",
+    "subtitle": "Dobijte besplatan IT audit bez ikakvih obaveza. Pokazaćemo vam gde gubite vreme i kako da ubrzate digitalni razvoj.",
     "button": "Zakažite besplatan audit"
   },
   "Services": {
-    "title": "Usluge i realne cene",
-    "subtitle": "Transparentne cene. Bez skrivenih troškova. Bez iznenađenja. Evo šta radimo i koliko zaista košta.",
+    "title": "Naše usluge",
+    "subtitle": "Moderan razvoj, brza isporuka i direktna komunikacija od početka do kraja projekta.",
     "websites": {
       "title": "Sajtovi i web aplikacije",
-      "description": "Verovatno preplaćujete za vaš sajt. Bilo da je nov sajt ili oslobađanje od agencije koja vam drži sajt kao taoca — isporučujemo moderne, brze sajtove u vašem potpunom vlasništvu po poštenim cenama.",
-      "comparison": "Tipična ponuda agencije: 5.000-15.000 EUR. Naša cena: 500-3.000 EUR za isti (ili bolji) rezultat.",
+      "description": "Pravimo moderne, brze sajtove sa Next.js koji se učitavaju za manje od sekunde. Kompletno vlasništvo nad kodom, bez zavisnosti od provajdera, sa isporukom u kratkim rokovima.",
+      "comparison": "Brz razvoj sa modernim tech stackom i potpunim vlasništvom nad kodom.",
       "features": {
         "f1": "Responsivan dizajn, svi uređaji, sve veličine ekrana",
-        "f2": "SEO ugrađen od prvog dana — nije plaćeni dodatak",
+        "f2": "SEO ugrađen od prvog dana",
         "f3": "Učitavanje ispod sekunde sa Next.js",
-        "f4": "CMS uključen — ažurirajte sadržaj sami, bez mesečne naknade",
+        "f4": "CMS uključen — ažurirajte sadržaj sami",
         "f5": "Sve je vaše: kod, domen, hosting"
       }
     },
     "enterprise": {
       "title": "Poslovni sistemi po meri",
-      "description": "Dashboard-ovi, SaaS platforme, interni alati, API integracije. 'Enterprise kvalitet' ne mora da znači 'enterprise cena.' Gradimo skalabilne, production-ready sisteme bez naduvanih agencijskih troškova.",
-      "comparison": "Velike firme naplaćuju 20.000-50.000+ EUR. Mi isporučujemo uporediv kvalitet od 3.000 EUR.",
+      "description": "Dashboard-ovi, SaaS platforme, interni alati, API integracije. Gradimo skalabilne, production-ready sisteme sa fokusom na kvalitet koda i redovnu komunikaciju tokom razvoja.",
+      "comparison": "Enterprise kvalitet sa agilnim razvojem i direktnim pristupom timu.",
       "features": {
         "f1": "Skalabilna arhitektura koja raste sa vama",
         "f2": "Dashboard-ovi i analitika u realnom vremenu",
@@ -167,20 +167,20 @@
     },
     "ai": {
       "title": "AI integracija i RAG chatbot-ovi",
-      "description": "Vaša konkurencija već koristi AI. Ako vi ne koristite, zaostajete. Gradimo inteligentne chatbot-ove, obradu dokumenata i AI pretragu koji transformišu korisničko iskustvo — po cenama koje imaju smisla.",
-      "comparison": "AI agencije naplaćuju 10.000-30.000 EUR za chatbot projekte. Mi krećemo od 1.500 EUR.",
+      "description": "Vaša konkurencija već koristi AI. Gradimo inteligentne chatbot-ove, obradu dokumenata i AI pretragu koji transformišu korisničko iskustvo i oslobađaju vaš tim za strateške zadatke.",
+      "comparison": "Brza implementacija AI rešenja sa merljivim rezultatima od prvog meseca.",
       "features": {
         "f1": "RAG chatbot-ovi obučeni na VAŠIM poslovnim podacima",
         "f2": "Integracija sa vašim postojećim alatima i sistemima",
         "f3": "Baza znanja koja uči i poboljšava se vremenom",
         "f4": "24/7 podrška korisnicima bez zapošljavanja novih ljudi",
-        "f5": "Merljiv ROI već prvog meseca"
+        "f5": "Merljiv rezultat već prvog meseca"
       }
     },
     "automation": {
       "title": "Automatizacija putem n8n",
-      "description": "Prestanite da plaćate ljude da rade ono što softver može instant. n8n je besplatna, open-source platforma za automatizaciju. Mi je podešavamo, povezujemo vaše alate i gradimo tokove koji štede desetine sati nedeljno.",
-      "comparison": "Zaposleni koji ručno unosi podatke košta vas 800-1.200 EUR mesečno. Naša automatizacija je jednokratna naknada od 500 EUR.",
+      "description": "n8n je open-source platforma za automatizaciju. Mi je podešavamo, povezujemo vaše alate i gradimo tokove koji eliminišu manuelni rad — vaš tim se fokusira na ono što zaista pravi razliku.",
+      "comparison": "Eliminišite ponavljajuće zadatke i oslobodite tim za strateški rad.",
       "features": {
         "f1": "Vizuelni workflow builder — lako razumljiv i prilagodljiv",
         "f2": "Povezuje 400+ aplikacija i bilo koji REST API",
@@ -194,11 +194,11 @@
       "subtitle": "Jednostavan proces. Bez misterije. Bez iznenađenja.",
       "step1": {
         "title": "Besplatan audit",
-        "description": "Analiziramo vaš trenutni IT setup i pokazujemo gde preplaćujete. Bez obaveza, bez prodajnog pitča."
+        "description": "Analiziramo vaš trenutni IT setup i identifikujemo gde gubite vreme i efikasnost. Bez obaveza."
       },
       "step2": {
-        "title": "Poštena ponuda",
-        "description": "Fiksna cena, detaljan obim. Tačno znate šta dobijate i šta plaćate. Bez skrivenih troškova."
+        "title": "Jasan plan",
+        "description": "Detaljan obim posla, jasni rokovi i direktna komunikacija. Tačno znate šta dobijate i kada."
       },
       "step3": {
         "title": "Razvoj i isporuka",
@@ -210,18 +210,18 @@
       }
     },
     "cta": {
-      "title": "Spremni da prestanete da preplaćujete?",
-      "subtitle": "Dobijte besplatan IT audit i saznajte koliko vaš IT zaista treba da košta.",
+      "title": "Spremni da ubrzate razvoj?",
+      "subtitle": "Dobijte besplatan IT audit i saznajte kako da digitalni razvoj bude brži i efikasniji.",
       "button": "Zakažite besplatan audit"
     }
   },
   "About": {
     "title": "O Solvera",
-    "subtitle": "Dva developera kojima je bilo dosta gledanja kako srpski biznisi budu opljačkani od IT kompanija",
+    "subtitle": "Dva inženjera koji veruju da srpski biznisi zaslužuju brži, kvalitetniji IT",
     "story": {
       "title": "Zašto smo počeli",
-      "p1": "Gledali smo kako se to dešava svima oko nas. Prijatelji koji vode male firme, članovi porodice sa startapima, lokalne prodavnice koje pokušavaju da se digitalizuju — svima naplaćuju apsurdne cene za bazičan posao. 5.000 EUR za jednostavan sajt. 500 EUR mesečno za 'održavanje' koje traje 10 minuta. To nas je razljutilo.",
-      "p2": "Mi smo dva inženjera koji rade sa modernim tehnologijama godinama. Tačno znamo koliko stvari koštaju da se naprave, i znamo da industrija u Srbiji prenaplaćuje 5-10x po celoj liniji. Zato smo pokrenuli Solvera — da damo biznisima pristup istom kvalitetu po poštenim cenama. Bez korporativnog overhead-a. Bez account menadžera. Samo inženjeri koji pišu kod i rešavaju probleme."
+      "p1": "Gledali smo kako se to dešava svima oko nas. Prijatelji koji vode firme, članovi porodice sa startapima — svi čekaju mesecima na jednostavne stvari. Komunikacija ide kroz pet slojeva. Koriste se alati iz 2015. A na kraju dobijaju prosečan rezultat. To nas je frustriralo.",
+      "p2": "Mi smo dva inženjera koji rade sa modernim tehnologijama godinama. Znamo da se stvari mogu raditi brže, kvalitetnije i sa boljom komunikacijom. Zato smo pokrenuli Solvera — da pokažemo da IT razvoj ne mora da bude spor i frustrirajuć. Bez korporativnog overhead-a. Bez account menadžera. Samo inženjeri koji pišu kod i rešavaju probleme."
     },
     "values": {
       "title": "U šta verujemo",
@@ -231,11 +231,11 @@
       },
       "quality": {
         "title": "Kvalitet bez kompromisa",
-        "description": "Pristupačno ne znači jeftino. Svaki projekat dobija isti inženjerski rigor koji bismo primenili na sopstvene proizvode."
+        "description": "Brzo ne znači površno. Svaki projekat dobija isti inženjerski rigor koji bismo primenili na sopstvene proizvode."
       },
       "transparency": {
         "title": "Radikalna transparentnost",
-        "description": "Fiksne cene, otvorena komunikacija, bez skrivenih troškova. Uvek vidite tačno za šta plaćate."
+        "description": "Otvorena komunikacija, redovna ažuriranja, bez iznenađenja. Uvek znate šta se dešava sa vašim projektom."
       },
       "partnership": {
         "title": "Vaš kod, vaši podaci",
@@ -247,12 +247,12 @@
       "member1": {
         "name": "Milan Julinac",
         "role": "Suosnivač i inženjer",
-        "bio": "Full-stack developer specijalizovan za skalabilne sisteme, AI integracije i pravljenje enterprise tehnologije pristupačnom."
+        "bio": "Full-stack developer specijalizovan za skalabilne sisteme, AI integracije i brzu isporuku kvalitetnih rešenja."
       },
       "member2": {
         "name": "Dragan Jelačić",
         "role": "Suosnivač i inženjer",
-        "bio": "Softverski inženjer fokusiran na moderne web platforme i automatizaciju. Veruje da sjajan softver ne treba da zahteva drugi kredit. A jos je i mutav"
+        "bio": "Softverski inženjer fokusiran na moderne web platforme i automatizaciju. Veruje da sjajan softver treba da se isporuči brzo i bez kompromisa."
       }
     },
     "tech": {
@@ -261,14 +261,14 @@
   },
   "Contact": {
     "title": "Besplatan IT Audit",
-    "subtitle": "Recite nam o vašem trenutnom IT setup-u i pokazaćemo vam gde gubite novac. Bez ikakvih obaveza.",
+    "subtitle": "Recite nam o vašem trenutnom IT setup-u i pokazaćemo vam gde gubite vreme i efikasnost. Bez ikakvih obaveza.",
     "audit": {
       "title": "Šta dobijate (besplatno)",
       "description": "Naš IT audit pokriva sve što treba da znate:",
       "bullets": {
-        "b1": "Detaljan pregled koliko trenutno plaćate u poređenju sa onim što bi trebalo da košta",
-        "b2": "Identifikacija nepotrebnih mesečnih naknada i zamki zaključavanja kod provajdera",
-        "b3": "Konkretne preporuke za modernizaciju (AI, automatizacija, moderan stack)"
+        "b1": "Analiza trenutnih procesa i identifikacija uskih grla",
+        "b2": "Preporuke za ubrzanje razvoja i modernizaciju tehnologije",
+        "b3": "Konkretne preporuke za automatizaciju i optimizaciju (AI, n8n, moderan stack)"
       }
     },
     "form": {
@@ -395,7 +395,7 @@
     }
   },
   "Footer": {
-    "description": "Pošten IT za srpske biznise. Moderna tehnologija, fer cene, nula zaključavanja.",
+    "description": "Brz i kvalitetan IT za srpske biznise. Moderna tehnologija, direktna komunikacija, nula čekanja.",
     "quickLinks": "Brzi linkovi",
     "services": "Usluge",
     "connect": "Povežite se",

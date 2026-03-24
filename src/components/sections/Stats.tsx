@@ -109,8 +109,8 @@ export function Stats() {
   const t = useTranslations("Stats");
 
   const stats = [
-    { value: 60, suffix: "%", label: t("savings") },
-    { value: 70, suffix: "%", label: t("cheaper") },
+    { value: 2, suffix: "x", label: t("savings") },
+    { value: 100, suffix: "%", label: t("cheaper") },
     { value: 200, suffix: "+", label: t("hours") },
     { value: 100, suffix: "%", label: t("satisfaction") },
   ];

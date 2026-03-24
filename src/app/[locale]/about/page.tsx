@@ -83,7 +83,7 @@ export default function AboutPage() {
                 <div className="p-4 font-mono text-sm space-y-2">
                   <div className="text-spicy-400">$ <span className="text-foreground-secondary">npm run build</span></div>
                   <div className="text-emerald-400">✓ Compiled successfully</div>
-                  <div className="text-foreground-muted">→ Saving 60% on IT costs</div>
+                  <div className="text-foreground-muted">→ Deployed in record time</div>
                   <div className="text-foreground-muted">→ Zero vendor lock-in</div>
                   <div className="text-foreground-muted">→ Modern tech stack</div>
                   <div className="text-spicy-400 mt-4">$ <span className="text-foreground-secondary">deploy --production</span></div>
