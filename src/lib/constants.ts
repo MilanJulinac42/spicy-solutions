@@ -8,16 +8,16 @@ export const navLinks: NavLink[] = [
 ];
 
 export const siteConfig = {
-  name: "Spicy Solutions",
+  name: "Solvera",
   description: "IT Outsourcing & Digital Solutions",
-  url: "https://spicysolutions.dev",
-  email: "hello@spicysolutions.dev",
+  url: "https://solvera.rs",
+  email: "hello@solvera.rs",
   phone: "+381 XX XXX XXXX",
   address: "Belgrade, Serbia",
   socials: {
-    github: "https://github.com/spicysolutions",
-    linkedin: "https://linkedin.com/company/spicysolutions",
-    twitter: "https://twitter.com/spicysolutions",
+    github: "https://github.com/solvera",
+    linkedin: "https://linkedin.com/company/solvera",
+    twitter: "https://twitter.com/solvera",
   },
 };
 

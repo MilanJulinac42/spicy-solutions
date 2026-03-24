@@ -77,7 +77,7 @@ export default function AboutPage() {
                   <div className="w-3 h-3 rounded-full bg-red-400" />
                   <div className="w-3 h-3 rounded-full bg-yellow-400" />
                   <div className="w-3 h-3 rounded-full bg-green-400" />
-                  <span className="ml-2 text-xs text-foreground-muted font-mono">spicy-solutions</span>
+                  <span className="ml-2 text-xs text-foreground-muted font-mono">solvera</span>
                 </div>
                 {/* Terminal content */}
                 <div className="p-4 font-mono text-sm space-y-2">

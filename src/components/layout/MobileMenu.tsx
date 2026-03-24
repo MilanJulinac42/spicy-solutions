@@ -6,7 +6,6 @@ import { useTranslations } from "next-intl";
 import { Link } from "@/i18n/navigation";
 import { navLinks } from "@/lib/constants";
 import { ThemeToggle } from "@/components/shared/ThemeToggle";
-import { LanguageSwitcher } from "@/components/shared/LanguageSwitcher";
 import { staggerContainer, fadeInRight } from "@/lib/animations";
 
 interface MobileMenuProps {
@@ -75,7 +74,6 @@ export function MobileMenu({ isOpen, onClose, pathname }: MobileMenuProps) {
             </nav>
 
             <div className="p-4 border-t border-border-default flex items-center gap-3">
-              <LanguageSwitcher />
               <ThemeToggle />
             </div>
           </motion.div>

@@ -7,7 +7,6 @@ import { Menu, Flame } from "lucide-react";
 import { motion } from "framer-motion";
 import { navLinks } from "@/lib/constants";
 import { ThemeToggle } from "@/components/shared/ThemeToggle";
-import { LanguageSwitcher } from "@/components/shared/LanguageSwitcher";
 import { MobileMenu } from "./MobileMenu";
 
 export function Navbar() {
@@ -46,7 +45,7 @@ export function Navbar() {
             <Link href="/" className="flex items-center gap-2 group">
               <Flame className="w-7 h-7 text-spicy-400 group-hover:scale-110 transition-transform" />
               <span className="text-xl font-bold text-foreground">
-                Spicy<span className="text-spicy-400">Solutions</span>
+                Solvera
               </span>
             </Link>
 
@@ -83,7 +82,6 @@ export function Navbar() {
 
             {/* Desktop Actions */}
             <div className="hidden lg:flex items-center gap-3">
-              <LanguageSwitcher />
               <ThemeToggle />
               <Link
                 href="/contact"

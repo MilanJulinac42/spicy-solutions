@@ -10,7 +10,7 @@
     "badge": "Serbian businesses are overpaying for IT. We're here to fix that.",
     "title": "Your IT Provider Is Charging You",
     "titleHighlight": "Way Too Much",
-    "subtitle": "Big agencies overcharge, underdeliver, and lock you in. Spicy Solutions gives you modern tech, transparent pricing, and zero bull. We're two engineers who believe Serbian businesses deserve better.",
+    "subtitle": "Big agencies overcharge, underdeliver, and lock you in. Solvera gives you modern tech, transparent pricing, and zero bull. We're two engineers who believe Serbian businesses deserve better.",
     "cta": "Get a Free IT Audit",
     "ctaSecondary": "See How We Save You Money"
   },
@@ -95,22 +95,42 @@
     "title": "The Moment They Realized",
     "subtitle": "What our clients say after finding out what IT should actually cost",
     "testimonial1": {
-      "quote": "We were paying a big agency 400 EUR/month just for hosting and minor updates. Spicy Solutions moved us to a better setup for a one-time fee. I'm still angry at how long we overpaid.",
+      "quote": "We were paying a big agency 400 EUR/month just for hosting and minor updates. Solvera moved us to a better setup for a one-time fee. I'm still angry at how long we overpaid.",
       "name": "Marko Petrovic",
       "role": "CEO",
       "company": "TechVentures"
     },
     "testimonial2": {
-      "quote": "They quoted us 12,000 EUR for a chatbot. Spicy Solutions built something better for a quarter of that price. The ROI was obvious within the first month.",
+      "quote": "They quoted us 12,000 EUR for a chatbot. Solvera built something better for a quarter of that price. The ROI was obvious within the first month.",
       "name": "Ana Jovanovic",
       "role": "CTO",
       "company": "DataFlow Inc."
     },
     "testimonial3": {
-      "quote": "I didn't even know n8n existed. We had two people doing data entry that a free tool can automate. Spicy Solutions set it up in a week and saved us 1,500 EUR/month.",
+      "quote": "I didn't even know n8n existed. We had two people doing data entry that a free tool can automate. Solvera set it up in a week and saved us 1,500 EUR/month.",
       "name": "Stefan Nikolic",
       "role": "Operations Manager",
       "company": "LogiPro"
+    }
+  },
+  "WhyTrustUs": {
+    "title": "Why Trust Us?",
+    "subtitle": "We're a small team — but that's exactly why we deliver better results for less",
+    "code": {
+      "title": "Engineers, Not Salespeople",
+      "description": "You work directly with the developers who write your code. No account managers, no middlemen, no game of telephone. Faster communication, better results."
+    },
+    "ownership": {
+      "title": "You Own Everything",
+      "description": "Every line of code, every design file, every piece of documentation — it's yours. No vendor lock-in, no hostage situations. Walk away whenever you want."
+    },
+    "speed": {
+      "title": "Modern Stack, Fast Delivery",
+      "description": "We use Next.js, AI, n8n, and the same tools top tech companies use. No recycled WordPress templates. Your project gets built with technology that actually performs."
+    },
+    "direct": {
+      "title": "Transparent, Fixed Pricing",
+      "description": "You know the exact cost before we write a single line of code. No hourly billing surprises, no scope creep fees. The price we quote is the price you pay."
     }
   },
   "CTA": {
@@ -196,12 +216,12 @@
     }
   },
   "About": {
-    "title": "About Spicy Solutions",
+    "title": "About Solvera",
     "subtitle": "Two developers who got tired of watching Serbian businesses get ripped off by IT companies",
     "story": {
       "title": "Why We Started",
       "p1": "We saw it happening to everyone around us. Friends running small businesses, family members with startups, local shops trying to go digital — all being quoted absurd prices by IT agencies for basic work. 5,000 EUR for a simple website. 500 EUR/month for 'maintenance' that took 10 minutes. It made us angry.",
-      "p2": "We're two engineers who've worked with modern tech stacks for years. We know exactly what things cost to build, and we know the industry is overcharging by 5-10x across the board in Serbia. So we started Spicy Solutions — to give businesses access to the same quality at honest prices. No corporate overhead. No account managers. Just engineers who write code and solve problems."
+      "p2": "We're two engineers who've worked with modern tech stacks for years. We know exactly what things cost to build, and we know the industry is overcharging by 5-10x across the board in Serbia. So we started Solvera — to give businesses access to the same quality at honest prices. No corporate overhead. No account managers. Just engineers who write code and solve problems."
     },
     "values": {
       "title": "What We Stand For",
@@ -273,7 +293,7 @@
     },
     "info": {
       "title": "Contact Information",
-      "email": "hello@spicysolutions.dev",
+      "email": "hello@solvera.rs",
       "phone": "+381 XX XXX XXXX",
       "address": "Belgrade, Serbia",
       "social": "Follow Us"
@@ -283,7 +303,7 @@
     "title": "Privacy Policy",
     "subtitle": "How we collect, use, and protect your data",
     "lastUpdated": "Last updated: March 2026.",
-    "intro": "Spicy Solutions (hereinafter: \"we\", \"us\") is committed to protecting your privacy. This policy explains how we handle your data in accordance with the Data Protection Act of the Republic of Serbia.",
+    "intro": "Solvera (hereinafter: \"we\", \"us\") is committed to protecting your privacy. This policy explains how we handle your data in accordance with the Data Protection Act of the Republic of Serbia.",
     "section1": {
       "title": "What Data We Collect",
       "p1": "We only collect data that you voluntarily provide through our contact form:",
@@ -318,24 +338,24 @@
         "i3": "Request deletion of your data",
         "i4": "Withdraw consent for data processing at any time"
       },
-      "p2": "To exercise any of these rights, contact us at hello@spicysolutions.dev."
+      "p2": "To exercise any of these rights, contact us at hello@solvera.rs."
     },
     "section5": {
       "title": "Contact",
       "p1": "For any questions about privacy and data protection:",
-      "company": "Spicy Solutions",
+      "company": "Solvera",
       "address": "Belgrade, Serbia",
-      "email": "hello@spicysolutions.dev"
+      "email": "hello@solvera.rs"
     }
   },
   "Terms": {
     "title": "Terms of Service",
     "subtitle": "Rules and conditions for using our services",
     "lastUpdated": "Last updated: March 2026.",
-    "intro": "By using the spicysolutions.dev website and our services, you accept the following terms. Please read them carefully.",
+    "intro": "By using the solvera.rs website and our services, you accept the following terms. Please read them carefully.",
     "section1": {
       "title": "About Us",
-      "p1": "Spicy Solutions is an IT company based in Belgrade, Serbia. We provide software development, web application, AI integration, and business process automation services."
+      "p1": "Solvera is an IT company based in Belgrade, Serbia. We provide software development, web application, AI integration, and business process automation services."
     },
     "section2": {
       "title": "Services",
@@ -344,7 +364,7 @@
     },
     "section3": {
       "title": "Code Ownership",
-      "p1": "Upon project completion and final payment, the client receives full ownership of all delivered code, design, and documentation. Spicy Solutions retains no proprietary rights over the delivered work.",
+      "p1": "Upon project completion and final payment, the client receives full ownership of all delivered code, design, and documentation. Solvera retains no proprietary rights over the delivered work.",
       "p2": "Open-source libraries and third-party tools used in the project retain their original licenses."
     },
     "section4": {
@@ -354,12 +374,12 @@
     },
     "section5": {
       "title": "Limitation of Liability",
-      "p1": "Spicy Solutions commits to providing services professionally and in accordance with agreed specifications. However, we do not guarantee specific business outcomes (sales increases, traffic growth, etc.).",
+      "p1": "Solvera commits to providing services professionally and in accordance with agreed specifications. However, we do not guarantee specific business outcomes (sales increases, traffic growth, etc.).",
       "p2": "Our total liability is limited to the amount the client has paid for the specific service."
     },
     "section6": {
       "title": "Intellectual Property",
-      "p1": "The content of this website (text, design, logo) is the property of Spicy Solutions and is protected by intellectual property laws of the Republic of Serbia.",
+      "p1": "The content of this website (text, design, logo) is the property of Solvera and is protected by intellectual property laws of the Republic of Serbia.",
       "p2": "Copying, reproduction, or distribution of website content without written permission is not permitted."
     },
     "section7": {
@@ -369,9 +389,9 @@
     "section8": {
       "title": "Contact",
       "p1": "For any questions about these terms:",
-      "company": "Spicy Solutions",
+      "company": "Solvera",
       "address": "Belgrade, Serbia",
-      "email": "hello@spicysolutions.dev"
+      "email": "hello@solvera.rs"
     }
   },
   "Footer": {
@@ -382,7 +402,7 @@
     "legal": "Legal",
     "privacy": "Privacy Policy",
     "terms": "Terms of Service",
-    "copyright": "© 2026 Spicy Solutions. All rights reserved."
+    "copyright": "© 2026 Solvera. All rights reserved."
   },
   "Common": {
     "learnMore": "Learn More",

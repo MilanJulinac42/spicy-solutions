@@ -10,7 +10,7 @@
     "badge": "Srpske firme preplaćuju IT usluge. Došli smo da to promenimo.",
     "title": "Vaš IT provajder vam naplaćuje",
     "titleHighlight": "Previše",
-    "subtitle": "Velike agencije preplaćuju, ne isporučuju dovoljno, i drže vas zarobljene. Spicy Solutions nudi modernu tehnologiju, transparentne cene i nula zavlačenja. Dva smo inženjera koji veruju da srpski biznisi zaslužuju bolje.",
+    "subtitle": "Velike agencije preplaćuju, ne isporučuju dovoljno, i drže vas zarobljene. Solvera nudi modernu tehnologiju, transparentne cene i nula zavlačenja. Dva smo inženjera koji veruju da srpski biznisi zaslužuju bolje.",
     "cta": "Besplatan IT Audit",
     "ctaSecondary": "Kako štedimo vaš novac"
   },
@@ -95,22 +95,42 @@
     "title": "Trenutak kad su shvatili",
     "subtitle": "Šta kažu naši klijenti kad saznaju koliko IT zaista treba da košta",
     "testimonial1": {
-      "quote": "Plaćali smo velikoj agenciji 400 EUR mesečno samo za hosting i sitne izmene. Spicy Solutions nas je prebacio na bolji setup za jednokratnu naknadu. Još uvek sam besan koliko dugo smo preplaćivali.",
+      "quote": "Plaćali smo velikoj agenciji 400 EUR mesečno samo za hosting i sitne izmene. Solvera nas je prebacio na bolji setup za jednokratnu naknadu. Još uvek sam besan koliko dugo smo preplaćivali.",
       "name": "Marko Petrović",
       "role": "CEO",
       "company": "TechVentures"
     },
     "testimonial2": {
-      "quote": "Tražili su nam 12.000 EUR za chatbot. Spicy Solutions je napravio nešto bolje za četvrtinu te cene. ROI je bio očigledan već prvog meseca.",
+      "quote": "Tražili su nam 12.000 EUR za chatbot. Solvera je napravio nešto bolje za četvrtinu te cene. ROI je bio očigledan već prvog meseca.",
       "name": "Ana Jovanović",
       "role": "CTO",
       "company": "DataFlow Inc."
     },
     "testimonial3": {
-      "quote": "Nisam ni znao da n8n postoji. Imali smo dvoje ljudi koji su radili unos podataka koji besplatan alat može da automatizuje. Spicy Solutions je to podesio za nedelju dana i uštedeo nam 1.500 EUR mesečno.",
+      "quote": "Nisam ni znao da n8n postoji. Imali smo dvoje ljudi koji su radili unos podataka koji besplatan alat može da automatizuje. Solvera je to podesio za nedelju dana i uštedeo nam 1.500 EUR mesečno.",
       "name": "Stefan Nikolić",
       "role": "Menadžer operacija",
       "company": "LogiPro"
+    }
+  },
+  "WhyTrustUs": {
+    "title": "Zasto da nam verujete?",
+    "subtitle": "Mali smo tim — ali upravo zato isporucujemo bolje rezultate za manje novca",
+    "code": {
+      "title": "Inzenjeri, ne prodavci",
+      "description": "Radite direktno sa developerima koji pisu vas kod. Bez account menadzera, bez posrednika, bez gluvih telefona. Brza komunikacija, bolji rezultati."
+    },
+    "ownership": {
+      "title": "Sve je vase",
+      "description": "Svaka linija koda, svaki dizajn fajl, svaki dokument — pripada vama. Bez zakljucavanja kod provajdera, bez talackih situacija. Mozete otici kad god zelite."
+    },
+    "speed": {
+      "title": "Moderan stack, brza isporuka",
+      "description": "Koristimo Next.js, AI, n8n i iste alate koje koriste vrhunske tech kompanije. Bez recikliranih WordPress sablona. Vas projekat se gradi tehnologijom koja zaista radi."
+    },
+    "direct": {
+      "title": "Transparentne, fiksne cene",
+      "description": "Znate tacnu cenu pre nego sto napisemo jednu liniju koda. Bez iznenadjenja sa satnicom, bez dodatnih troskova. Cena koju ponudimo je cena koju placate."
     }
   },
   "CTA": {
@@ -196,12 +216,12 @@
     }
   },
   "About": {
-    "title": "O Spicy Solutions",
+    "title": "O Solvera",
     "subtitle": "Dva developera kojima je bilo dosta gledanja kako srpski biznisi budu opljačkani od IT kompanija",
     "story": {
       "title": "Zašto smo počeli",
       "p1": "Gledali smo kako se to dešava svima oko nas. Prijatelji koji vode male firme, članovi porodice sa startapima, lokalne prodavnice koje pokušavaju da se digitalizuju — svima naplaćuju apsurdne cene za bazičan posao. 5.000 EUR za jednostavan sajt. 500 EUR mesečno za 'održavanje' koje traje 10 minuta. To nas je razljutilo.",
-      "p2": "Mi smo dva inženjera koji rade sa modernim tehnologijama godinama. Tačno znamo koliko stvari koštaju da se naprave, i znamo da industrija u Srbiji prenaplaćuje 5-10x po celoj liniji. Zato smo pokrenuli Spicy Solutions — da damo biznisima pristup istom kvalitetu po poštenim cenama. Bez korporativnog overhead-a. Bez account menadžera. Samo inženjeri koji pišu kod i rešavaju probleme."
+      "p2": "Mi smo dva inženjera koji rade sa modernim tehnologijama godinama. Tačno znamo koliko stvari koštaju da se naprave, i znamo da industrija u Srbiji prenaplaćuje 5-10x po celoj liniji. Zato smo pokrenuli Solvera — da damo biznisima pristup istom kvalitetu po poštenim cenama. Bez korporativnog overhead-a. Bez account menadžera. Samo inženjeri koji pišu kod i rešavaju probleme."
     },
     "values": {
       "title": "U šta verujemo",
@@ -273,7 +293,7 @@
     },
     "info": {
       "title": "Kontakt informacije",
-      "email": "hello@spicysolutions.dev",
+      "email": "hello@solvera.rs",
       "phone": "+381 XX XXX XXXX",
       "address": "Beograd, Srbija",
       "social": "Pratite nas"
@@ -283,7 +303,7 @@
     "title": "Politika privatnosti",
     "subtitle": "Kako prikupljamo, koristimo i štitimo vaše podatke",
     "lastUpdated": "Poslednje ažuriranje: mart 2026.",
-    "intro": "Spicy Solutions (u daljem tekstu: \"mi\", \"nas\") posvećen je zaštiti vaše privatnosti. Ova politika objašnjava kako postupamo sa vašim podacima u skladu sa Zakonom o zaštiti podataka o ličnosti Republike Srbije.",
+    "intro": "Solvera (u daljem tekstu: \"mi\", \"nas\") posvećen je zaštiti vaše privatnosti. Ova politika objašnjava kako postupamo sa vašim podacima u skladu sa Zakonom o zaštiti podataka o ličnosti Republike Srbije.",
     "section1": {
       "title": "Koji podaci se prikupljaju",
       "p1": "Prikupljamo samo podatke koje nam vi dobrovoljno dostavite putem kontakt forme:",
@@ -318,24 +338,24 @@
         "i3": "Zatražite brisanje vaših podataka",
         "i4": "Povučete saglasnost za obradu podataka u bilo kom trenutku"
       },
-      "p2": "Za ostvarivanje bilo kog od ovih prava, kontaktirajte nas na hello@spicysolutions.dev."
+      "p2": "Za ostvarivanje bilo kog od ovih prava, kontaktirajte nas na hello@solvera.rs."
     },
     "section5": {
       "title": "Kontakt",
       "p1": "Za sva pitanja u vezi sa privatnošću i zaštitom podataka:",
-      "company": "Spicy Solutions",
+      "company": "Solvera",
       "address": "Beograd, Srbija",
-      "email": "hello@spicysolutions.dev"
+      "email": "hello@solvera.rs"
     }
   },
   "Terms": {
     "title": "Uslovi korišćenja",
     "subtitle": "Pravila i uslovi za korišćenje naših usluga",
     "lastUpdated": "Poslednje ažuriranje: mart 2026.",
-    "intro": "Korišćenjem sajta spicysolutions.dev i naših usluga, prihvatate sledeće uslove. Molimo vas da ih pažljivo pročitate.",
+    "intro": "Korišćenjem sajta solvera.rs i naših usluga, prihvatate sledeće uslove. Molimo vas da ih pažljivo pročitate.",
     "section1": {
       "title": "O nama",
-      "p1": "Spicy Solutions je IT kompanija sa sedištem u Beogradu, Srbija. Pružamo usluge razvoja softvera, web aplikacija, AI integracija i automatizacije poslovnih procesa."
+      "p1": "Solvera je IT kompanija sa sedištem u Beogradu, Srbija. Pružamo usluge razvoja softvera, web aplikacija, AI integracija i automatizacije poslovnih procesa."
     },
     "section2": {
       "title": "Usluge",
@@ -344,7 +364,7 @@
     },
     "section3": {
       "title": "Vlasništvo nad kodom",
-      "p1": "Po završetku projekta i konačnom plaćanju, klijent dobija puno vlasništvo nad svim isporučenim kodom, dizajnom i dokumentacijom. Spicy Solutions ne zadržava nikakva vlasnička prava nad isporučenim radom.",
+      "p1": "Po završetku projekta i konačnom plaćanju, klijent dobija puno vlasništvo nad svim isporučenim kodom, dizajnom i dokumentacijom. Solvera ne zadržava nikakva vlasnička prava nad isporučenim radom.",
       "p2": "Open-source biblioteke i alati treće strane koji se koriste u projektu zadržavaju svoje originalne licence."
     },
     "section4": {
@@ -354,12 +374,12 @@
     },
     "section5": {
       "title": "Ograničenje odgovornosti",
-      "p1": "Spicy Solutions se obavezuje da će pružiti usluge profesionalno i u skladu sa dogovorenim specifikacijama. Međutim, ne garantujemo specifične poslovne rezultate (povećanje prodaje, prometa, itd.).",
+      "p1": "Solvera se obavezuje da će pružiti usluge profesionalno i u skladu sa dogovorenim specifikacijama. Međutim, ne garantujemo specifične poslovne rezultate (povećanje prodaje, prometa, itd.).",
       "p2": "Naša ukupna odgovornost je ograničena na iznos koji je klijent platio za konkretnu uslugu."
     },
     "section6": {
       "title": "Intelektualna svojina",
-      "p1": "Sadržaj ovog sajta (tekst, dizajn, logotip) je vlasništvo Spicy Solutions i zaštićen je zakonima o intelektualnoj svojini Republike Srbije.",
+      "p1": "Sadržaj ovog sajta (tekst, dizajn, logotip) je vlasništvo Solvera i zaštićen je zakonima o intelektualnoj svojini Republike Srbije.",
       "p2": "Nije dozvoljeno kopiranje, reprodukcija ili distribucija sadržaja sajta bez pisane dozvole."
     },
     "section7": {
@@ -369,9 +389,9 @@
     "section8": {
       "title": "Kontakt",
       "p1": "Za sva pitanja u vezi sa ovim uslovima:",
-      "company": "Spicy Solutions",
+      "company": "Solvera",
       "address": "Beograd, Srbija",
-      "email": "hello@spicysolutions.dev"
+      "email": "hello@solvera.rs"
     }
   },
   "Footer": {
@@ -382,7 +402,7 @@
     "legal": "Pravne informacije",
     "privacy": "Politika privatnosti",
     "terms": "Uslovi korišćenja",
-    "copyright": "© 2026 Spicy Solutions. Sva prava zadržana."
+    "copyright": "© 2026 Solvera. Sva prava zadržana."
   },
   "Common": {
     "learnMore": "Saznajte više",
