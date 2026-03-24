@@ -293,7 +293,7 @@
     },
     "info": {
       "title": "Contact Information",
-      "email": "hello@solvera.rs",
+      "email": "hello@solveradev.rs",
       "phone": "+381 XX XXX XXXX",
       "address": "Belgrade, Serbia",
       "social": "Follow Us"
@@ -338,21 +338,21 @@
         "i3": "Request deletion of your data",
         "i4": "Withdraw consent for data processing at any time"
       },
-      "p2": "To exercise any of these rights, contact us at hello@solvera.rs."
+      "p2": "To exercise any of these rights, contact us at hello@solveradev.rs."
     },
     "section5": {
       "title": "Contact",
       "p1": "For any questions about privacy and data protection:",
       "company": "Solvera",
       "address": "Belgrade, Serbia",
-      "email": "hello@solvera.rs"
+      "email": "hello@solveradev.rs"
     }
   },
   "Terms": {
     "title": "Terms of Service",
     "subtitle": "Rules and conditions for using our services",
     "lastUpdated": "Last updated: March 2026.",
-    "intro": "By using the solvera.rs website and our services, you accept the following terms. Please read them carefully.",
+    "intro": "By using the solveradev.rs website and our services, you accept the following terms. Please read them carefully.",
     "section1": {
       "title": "About Us",
       "p1": "Solvera is an IT company based in Belgrade, Serbia. We provide software development, web application, AI integration, and business process automation services."
@@ -391,7 +391,7 @@
       "p1": "For any questions about these terms:",
       "company": "Solvera",
       "address": "Belgrade, Serbia",
-      "email": "hello@solvera.rs"
+      "email": "hello@solveradev.rs"
     }
   },
   "Footer": {

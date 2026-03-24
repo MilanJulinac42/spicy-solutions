@@ -293,7 +293,7 @@
     },
     "info": {
       "title": "Kontakt informacije",
-      "email": "hello@solvera.rs",
+      "email": "hello@solveradev.rs",
       "phone": "+381 XX XXX XXXX",
       "address": "Beograd, Srbija",
       "social": "Pratite nas"
@@ -338,21 +338,21 @@
         "i3": "Zatražite brisanje vaših podataka",
         "i4": "Povučete saglasnost za obradu podataka u bilo kom trenutku"
       },
-      "p2": "Za ostvarivanje bilo kog od ovih prava, kontaktirajte nas na hello@solvera.rs."
+      "p2": "Za ostvarivanje bilo kog od ovih prava, kontaktirajte nas na hello@solveradev.rs."
     },
     "section5": {
       "title": "Kontakt",
       "p1": "Za sva pitanja u vezi sa privatnošću i zaštitom podataka:",
       "company": "Solvera",
       "address": "Beograd, Srbija",
-      "email": "hello@solvera.rs"
+      "email": "hello@solveradev.rs"
     }
   },
   "Terms": {
     "title": "Uslovi korišćenja",
     "subtitle": "Pravila i uslovi za korišćenje naših usluga",
     "lastUpdated": "Poslednje ažuriranje: mart 2026.",
-    "intro": "Korišćenjem sajta solvera.rs i naših usluga, prihvatate sledeće uslove. Molimo vas da ih pažljivo pročitate.",
+    "intro": "Korišćenjem sajta solveradev.rs i naših usluga, prihvatate sledeće uslove. Molimo vas da ih pažljivo pročitate.",
     "section1": {
       "title": "O nama",
       "p1": "Solvera je IT kompanija sa sedištem u Beogradu, Srbija. Pružamo usluge razvoja softvera, web aplikacija, AI integracija i automatizacije poslovnih procesa."
@@ -391,7 +391,7 @@
       "p1": "Za sva pitanja u vezi sa ovim uslovima:",
       "company": "Solvera",
       "address": "Beograd, Srbija",
-      "email": "hello@solvera.rs"
+      "email": "hello@solveradev.rs"
     }
   },
   "Footer": {
