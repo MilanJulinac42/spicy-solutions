@@ -154,7 +154,7 @@ export default function ContactPage() {
               <div className="mt-10 p-6 rounded-2xl bg-gradient-to-br from-spicy-400/10 to-transparent border border-spicy-400/20">
                 <p className="text-sm text-foreground-muted leading-relaxed">
                   <span className="text-spicy-400 font-semibold">
-                    Spicy Solutions
+                    Solvera
                   </span>{" "}
                   — {t("Footer.description")}
                 </p>

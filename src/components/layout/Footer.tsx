@@ -32,7 +32,7 @@ export function Footer() {
             <div className="flex items-center gap-2 mb-4">
               <Flame className="w-6 h-6 text-spicy-400" />
               <span className="text-lg font-bold text-white">
-                Spicy<span className="text-spicy-400">Solutions</span>
+                Solvera
               </span>
             </div>
             <p className="text-sm text-gray-400 leading-relaxed">
