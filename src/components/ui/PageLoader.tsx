@@ -49,7 +49,7 @@ export function PageLoader() {
         transition={{ delay: 0.2, duration: 0.4 }}
         className="mt-4 text-lg font-bold tracking-widest animated-gradient-text"
       >
-        SPICY
+        SOLVERA
       </motion.span>
 
       {/* Bouncing dots */}
