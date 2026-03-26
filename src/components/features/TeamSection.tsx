@@ -1,7 +1,7 @@
 "use client";
 
 import { useState } from "react";
-import { AnimatePresence, LayoutGroup, motion } from "framer-motion";
+import { AnimatePresence, motion } from "framer-motion";
 import { useTranslations } from "next-intl";
 import { Container } from "@/components/ui/Container";
 import { SectionHeading } from "@/components/ui/SectionHeading";
@@ -21,32 +21,30 @@ export function TeamSection() {
       <Container>
         <SectionHeading title={t("About.team.title")} />
 
-        <LayoutGroup>
-          <motion.div
-            variants={staggerContainer}
-            initial="hidden"
-            whileInView="visible"
-            viewport={{ once: true, margin: "-100px" }}
-            className="grid grid-cols-1 md:grid-cols-2 gap-8 max-w-2xl mx-auto"
-          >
-            {teamMembers.map((member) => (
-              <TeamMemberCard
-                key={member.id}
-                member={member}
-                onClick={() => setSelectedId(member.id)}
-              />
-            ))}
-          </motion.div>
+        <motion.div
+          variants={staggerContainer}
+          initial="hidden"
+          whileInView="visible"
+          viewport={{ once: true, margin: "-100px" }}
+          className="grid grid-cols-1 md:grid-cols-2 gap-8 max-w-2xl mx-auto"
+        >
+          {teamMembers.map((member) => (
+            <TeamMemberCard
+              key={member.id}
+              member={member}
+              onClick={() => setSelectedId(member.id)}
+            />
+          ))}
+        </motion.div>
 
-          <AnimatePresence>
-            {selectedMember && (
-              <TeamMemberDetail
-                member={selectedMember}
-                onClose={() => setSelectedId(null)}
-              />
-            )}
-          </AnimatePresence>
-        </LayoutGroup>
+        <AnimatePresence>
+          {selectedMember && (
+            <TeamMemberDetail
+              member={selectedMember}
+              onClose={() => setSelectedId(null)}
+            />
+          )}
+        </AnimatePresence>
       </Container>
     </section>
   );

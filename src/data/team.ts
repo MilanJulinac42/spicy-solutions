@@ -20,6 +20,8 @@ export interface TeamMember {
   capabilities: Capability[];
   github?: string;
   linkedin?: string;
+  instagram?: string;
+  facebook?: string;
 }
 
 export const teamMembers: TeamMember[] = [
@@ -27,7 +29,9 @@ export const teamMembers: TeamMember[] = [
     id: "member1",
     photo: "/team/milan.jpg",
     github: "https://github.com/MilanJulinac42",
-    linkedin: "https://www.linkedin.com/in/milan-julinac",
+    linkedin: "https://www.linkedin.com/in/milanjulinac/",
+    instagram: "https://www.instagram.com/milanjulinac/",
+    facebook: "https://www.facebook.com/milan.julinac.9",
     stats: [
       { key: "years" },
       { key: "projects" },

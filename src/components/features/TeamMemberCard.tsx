@@ -30,7 +30,6 @@ export function TeamMemberCard({ member, onClick }: TeamMemberCardProps) {
             style={{ animationDuration: "8s" }}
           />
           <motion.div
-            layoutId={`photo-${member.id}`}
             className="w-24 h-24 rounded-full overflow-hidden relative z-10 ring-2 ring-surface"
           >
             <Image

@@ -8,6 +8,8 @@ import {
   X,
   Github,
   Linkedin,
+  Instagram,
+  Facebook,
   Rocket,
   Shield,
   Zap,
@@ -130,7 +132,6 @@ function PanelContent({
       {/* Header */}
       <div className="flex flex-col items-center md:items-start md:flex-row gap-6 mb-10">
         <motion.div
-          layoutId={`photo-${member.id}`}
           className="w-24 h-24 rounded-full overflow-hidden ring-2 ring-spicy-400/30 flex-shrink-0"
         >
           <Image
@@ -173,6 +174,26 @@ function PanelContent({
                 className="w-9 h-9 flex items-center justify-center rounded-lg bg-surface-secondary border border-border-default hover:border-spicy-400/30 hover:text-spicy-400 text-foreground-muted transition-all"
               >
                 <Linkedin className="w-4 h-4" />
+              </a>
+            )}
+            {member.instagram && (
+              <a
+                href={member.instagram}
+                target="_blank"
+                rel="noopener noreferrer"
+                className="w-9 h-9 flex items-center justify-center rounded-lg bg-surface-secondary border border-border-default hover:border-spicy-400/30 hover:text-spicy-400 text-foreground-muted transition-all"
+              >
+                <Instagram className="w-4 h-4" />
+              </a>
+            )}
+            {member.facebook && (
+              <a
+                href={member.facebook}
+                target="_blank"
+                rel="noopener noreferrer"
+                className="w-9 h-9 flex items-center justify-center rounded-lg bg-surface-secondary border border-border-default hover:border-spicy-400/30 hover:text-spicy-400 text-foreground-muted transition-all"
+              >
+                <Facebook className="w-4 h-4" />
               </a>
             )}
           </div>
