@@ -1,9 +1,9 @@
 import type { Metadata } from "next";
 
 export const metadata: Metadata = {
-  title: "Solvera | IT Outsourcing & Digital Solutions",
+  title: "Solvera | Vi vodite biznis, mi brinemo o tehnologiji",
   description:
-    "From websites to enterprise systems, AI chatbots to workflow automation — we deliver technology that drives your business forward.",
+    "Od sajtova do poslovnih sistema, AI chatbot-ova do automatizacije — isporučujemo tehnologiju koja pokreće vaš biznis napred. Brza isporuka, direktna komunikacija, bez kompromisa.",
 };
 
 export default function RootLayout({
