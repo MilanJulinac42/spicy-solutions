@@ -1,7 +1,8 @@
 "use client";
 
 import { motion } from "framer-motion";
-import { Flame } from "lucide-react";
+
+const letters = "SOLVERA".split("");
 
 export function PageLoader() {
   return (
@@ -11,61 +12,38 @@ export function PageLoader() {
       transition={{ duration: 0.4, ease: "easeInOut" }}
       className="fixed inset-0 z-[100] flex flex-col items-center justify-center bg-surface"
     >
-      {/* Glow ring behind icon */}
-      <motion.div
-        animate={{
-          rotate: 360,
-          scale: [1, 1.1, 1],
-        }}
-        transition={{
-          rotate: { duration: 3, repeat: Infinity, ease: "linear" },
-          scale: { duration: 1.5, repeat: Infinity, ease: "easeInOut" },
-        }}
-        className="absolute w-24 h-24 rounded-full"
-        style={{
-          background:
-            "conic-gradient(from 0deg, transparent, rgba(255,107,53,0.3), transparent)",
-        }}
-      />
+      {/* Ring + S container */}
+      <div className="relative w-20 h-20 flex items-center justify-center">
+        <motion.div
+          animate={{ rotate: 360 }}
+          transition={{ duration: 2, repeat: Infinity, ease: "linear" }}
+          className="absolute inset-0 rounded-full border-2 border-transparent"
+          style={{
+            borderTopColor: "rgba(255,107,53,0.8)",
+            borderRightColor: "rgba(255,107,53,0.2)",
+          }}
+        />
+        <motion.span
+          animate={{ opacity: [0.4, 1, 0.4] }}
+          transition={{ duration: 2, repeat: Infinity, ease: "easeInOut" }}
+          className="text-4xl font-bold text-spicy-400"
+        >
+          S
+        </motion.span>
+      </div>
 
-      {/* Flame icon */}
-      <motion.div
-        animate={{
-          scale: [1, 1.15, 1],
-        }}
-        transition={{
-          duration: 1.2,
-          repeat: Infinity,
-          ease: "easeInOut",
-        }}
-      >
-        <Flame className="w-12 h-12 text-spicy-400" />
-      </motion.div>
-
-      {/* Brand text */}
-      <motion.span
-        initial={{ opacity: 0, y: 10 }}
-        animate={{ opacity: 1, y: 0 }}
-        transition={{ delay: 0.2, duration: 0.4 }}
-        className="mt-4 text-lg font-bold tracking-widest animated-gradient-text"
-      >
-        SOLVERA
-      </motion.span>
-
-      {/* Bouncing dots */}
-      <div className="flex gap-1.5 mt-4">
-        {[0, 1, 2].map((i) => (
-          <motion.div
+      {/* Letter-by-letter SOLVERA */}
+      <div className="flex mt-6 gap-[2px]">
+        {letters.map((letter, i) => (
+          <motion.span
             key={i}
-            animate={{ y: [0, -8, 0] }}
-            transition={{
-              duration: 0.6,
-              repeat: Infinity,
-              delay: i * 0.15,
-              ease: "easeInOut",
-            }}
-            className="w-2 h-2 rounded-full bg-spicy-400"
-          />
+            initial={{ opacity: 0, y: 8 }}
+            animate={{ opacity: 1, y: 0 }}
+            transition={{ delay: 0.1 + i * 0.08, duration: 0.3 }}
+            className="text-sm font-bold tracking-[0.25em] text-foreground-muted"
+          >
+            {letter}
+          </motion.span>
         ))}
       </div>
     </motion.div>
