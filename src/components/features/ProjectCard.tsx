@@ -1,10 +1,9 @@
 "use client";
 
 import { motion } from "framer-motion";
-import { ExternalLink } from "lucide-react";
+import { Globe, Building2, Brain, Workflow, ShoppingCart, Bot, Repeat, Unlock } from "lucide-react";
 import { Badge } from "@/components/ui/Badge";
 import { fadeInUp } from "@/lib/animations";
-import { TiltCard } from "@/components/ui/TiltCard";
 
 interface ProjectCardProps {
   title: string;
@@ -13,11 +12,38 @@ interface ProjectCardProps {
   category: string;
 }
 
-const categoryGradients: Record<string, string> = {
-  website: "from-blue-500 via-indigo-500 to-purple-500",
-  enterprise: "from-purple-500 via-pink-500 to-rose-500",
-  ai: "from-emerald-500 via-teal-500 to-cyan-500",
-  automation: "from-amber-500 via-orange-500 to-red-500",
+const categoryIcons: Record<string, React.ElementType> = {
+  website: ShoppingCart,
+  ai: Bot,
+  automation: Repeat,
+  enterprise: Unlock,
+};
+
+const categoryAccents: Record<string, { bg: string; border: string; icon: string; glow: string }> = {
+  enterprise: {
+    bg: "from-spicy-400/10 via-spicy-400/5 to-transparent",
+    border: "border-spicy-400/20",
+    icon: "text-spicy-400 bg-spicy-400/10",
+    glow: "group-hover:shadow-spicy-400/10",
+  },
+  ai: {
+    bg: "from-emerald-400/10 via-emerald-400/5 to-transparent",
+    border: "border-emerald-400/20",
+    icon: "text-emerald-400 bg-emerald-400/10",
+    glow: "group-hover:shadow-emerald-400/10",
+  },
+  automation: {
+    bg: "from-violet-400/10 via-violet-400/5 to-transparent",
+    border: "border-violet-400/20",
+    icon: "text-violet-400 bg-violet-400/10",
+    glow: "group-hover:shadow-violet-400/10",
+  },
+  website: {
+    bg: "from-sky-400/10 via-sky-400/5 to-transparent",
+    border: "border-sky-400/20",
+    icon: "text-sky-400 bg-sky-400/10",
+    glow: "group-hover:shadow-sky-400/10",
+  },
 };
 
 export function ProjectCard({
@@ -26,52 +52,39 @@ export function ProjectCard({
   technologies,
   category,
 }: ProjectCardProps) {
+  const Icon = categoryIcons[category] || Globe;
+  const accent = categoryAccents[category] || categoryAccents.enterprise;
+
   return (
-    <TiltCard intensity={8}>
-      <motion.div
-        variants={fadeInUp}
-        whileHover={{ y: -6, transition: { type: "spring", stiffness: 300, damping: 20 } }}
-        className="group relative rounded-2xl bg-surface-secondary border border-border-default hover:border-spicy-400/50 overflow-hidden transition-all duration-300 hover:shadow-xl hover:shadow-spicy-400/10"
-      >
-        {/* Animated gradient image placeholder */}
-        <div
-          className={`h-48 bg-gradient-to-br ${categoryGradients[category] || categoryGradients.website} animated-mesh relative overflow-hidden`}
-        >
-          {/* Grid overlay pattern */}
-          <div
-            className="absolute inset-0 opacity-20"
-            style={{
-              backgroundImage: `radial-gradient(circle at 25% 25%, rgba(255,255,255,0.2) 1px, transparent 1px), radial-gradient(circle at 75% 75%, rgba(255,255,255,0.15) 1px, transparent 1px)`,
-              backgroundSize: "30px 30px",
-            }}
-          />
+    <motion.div
+      variants={fadeInUp}
+      whileHover={{ y: -4, transition: { type: "spring", stiffness: 300, damping: 20 } }}
+      className={`group relative rounded-2xl bg-surface-secondary border ${accent.border} hover:border-spicy-400/40 overflow-hidden transition-all duration-300 hover:shadow-xl ${accent.glow}`}
+    >
+      {/* Subtle gradient background */}
+      <div className={`absolute inset-0 bg-gradient-to-br ${accent.bg} opacity-0 group-hover:opacity-100 transition-opacity duration-500`} />
 
-          <div className="absolute inset-0 bg-black/30 group-hover:bg-black/10 transition-all duration-500" />
-
-          <div className="absolute inset-0 flex items-center justify-center">
-            <motion.div
-              whileHover={{ scale: 1.1, rotate: 5 }}
-              className="w-16 h-16 rounded-2xl bg-white/20 backdrop-blur-sm flex items-center justify-center group-hover:bg-white/30 transition-colors"
-            >
-              <ExternalLink className="w-6 h-6 text-white group-hover:scale-110 transition-transform" />
-            </motion.div>
-          </div>
+      <div className="relative p-6 md:p-8">
+        {/* Icon */}
+        <div className={`w-12 h-12 rounded-xl ${accent.icon} flex items-center justify-center mb-5 transition-transform duration-300 group-hover:scale-110`}>
+          <Icon className="w-6 h-6" />
         </div>
 
-        <div className="p-6">
-          <h3 className="text-lg font-semibold text-foreground mb-2 group-hover:text-spicy-400 transition-colors duration-300">
-            {title}
-          </h3>
-          <p className="text-sm text-foreground-muted leading-relaxed mb-4">
-            {description}
-          </p>
-          <div className="flex flex-wrap gap-2">
-            {technologies.map((tech) => (
-              <Badge key={tech}>{tech}</Badge>
-            ))}
-          </div>
+        {/* Content */}
+        <h3 className="text-lg font-semibold text-foreground mb-3 group-hover:text-spicy-400 transition-colors duration-300">
+          {title}
+        </h3>
+        <p className="text-sm text-foreground-muted leading-relaxed mb-5">
+          {description}
+        </p>
+
+        {/* Tech badges */}
+        <div className="flex flex-wrap gap-2">
+          {technologies.map((tech) => (
+            <Badge key={tech}>{tech}</Badge>
+          ))}
         </div>
-      </motion.div>
-    </TiltCard>
+      </div>
+    </motion.div>
   );
 }

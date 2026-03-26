@@ -2,7 +2,7 @@
 
 import { useTranslations } from "next-intl";
 import { motion } from "framer-motion";
-import { Mail, Phone, MapPin, Github, Linkedin, Twitter, CheckCircle2, Shield } from "lucide-react";
+import { Mail, Phone, MapPin, Github, Linkedin, Instagram, CheckCircle2, Shield } from "lucide-react";
 import { Container } from "@/components/ui/Container";
 import { SectionHeading } from "@/components/ui/SectionHeading";
 import { ContactForm } from "@/components/features/ContactForm";
@@ -140,12 +140,12 @@ export default function ContactPage() {
                     <Linkedin className="w-5 h-5" />
                   </a>
                   <a
-                    href={siteConfig.socials.twitter}
+                    href={siteConfig.socials.instagram}
                     target="_blank"
                     rel="noopener noreferrer"
                     className="p-3 rounded-lg bg-surface-secondary border border-border-default hover:border-spicy-400/50 hover:text-spicy-400 transition-all"
                   >
-                    <Twitter className="w-5 h-5" />
+                    <Instagram className="w-5 h-5" />
                   </a>
                 </div>
               </div>

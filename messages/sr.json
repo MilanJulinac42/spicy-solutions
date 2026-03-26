@@ -71,24 +71,24 @@
     "satisfaction": "Zadovoljstvo klijenata"
   },
   "Projects": {
-    "title": "Stvarni rezultati, stvarne uštede",
-    "subtitle": "Pogledajte šta se desi kad biznisi prestanu da preplaćuju i počnu da rade sa nama",
-    "viewProject": "Pogledaj projekat",
+    "title": "Kako pomažemo",
+    "subtitle": "Tipični scenariji u kojima pravimo razliku za vaš biznis",
+    "viewProject": "Saznaj više",
     "project1": {
-      "title": "E-Commerce: Sa ponude od 8.000 EUR na realnih 2.000 EUR",
-      "description": "Maloprodajni biznis je dobio ponudu od 8.000 EUR od beogradske agencije. Mi smo napravili istu platformu — sa boljim performansama i Stripe integracijom — za manje od 2.000 EUR."
+      "title": "Online prodavnica koja zarađuje",
+      "description": "Treba vam e-commerce platforma? Ne morate da čekate mesecima niti da plaćate agencijsku cenu. Napravimo modernu prodavnicu sa plaćanjem, upravljanjem proizvodima i svime što vam treba da počnete da prodajete."
     },
     "project2": {
-      "title": "AI Chatbot: 60% manje tiketa podrške",
-      "description": "Klijent je plaćao 2 zaposlena za podršku. Naš RAG chatbot sada obrađuje 60% upita, štedeći preko 3.000 EUR mesečno na troškovima rada."
+      "title": "AI podrška koja nikad ne spava",
+      "description": "Vaši klijenti čekaju na odgovor? Postavimo AI chatbot koji poznaje vaš biznis iznutra i odgovara na pitanja umesto vas — non-stop, bez pauze, bez bolovanja."
     },
     "project3": {
-      "title": "Automatizacija: 40+ sati uštedenih nedeljno",
-      "description": "Manuelni unos podataka preko 12 alata koštao je ovu kompaniju 1.000 EUR mesečno u izgubljenom vremenu. Naša n8n automatizacija je to potpuno eliminisala."
+      "title": "Automatizacija umesto ručnog posla",
+      "description": "Gubite sate na copy-paste između alata? Povezujemo vaše sisteme i automatizujemo ponavljajuće procese tako da se vaš tim fokusira na ono što zaista donosi vrednost."
     },
     "project4": {
-      "title": "Rebuild sistema: Bekstvo od zaključavanja",
-      "description": "Zdravstvena kompanija je bila zarobljena plaćajući 500 EUR mesečno za 'održavanje' sistema koji nisu mogli da menjaju. Mi smo ga ponovo izgradili, dali im potpuno vlasništvo i smanjili troškove za 80%."
+      "title": "Oslobađanje od zastarelog sistema",
+      "description": "Zarobljeni ste u sistemu koji ne možete da menjate bez da platite nekome ko vas drži kao taoca? Mi ga ponovo gradimo, dajemo vam potpuno vlasništvo nad kodom i slobodu da birate."
     }
   },
   "Testimonials": {
@@ -337,9 +337,9 @@
     },
     "info": {
       "title": "Kontakt informacije",
-      "email": "hello@solveradev.rs",
-      "phone": "+381 XX XXX XXXX",
-      "address": "Beograd, Srbija",
+      "email": "milanjulinac996@gmail.com",
+      "phone": "+381 63 838 4196",
+      "address": "Novi Sad, Srbija",
       "social": "Pratite nas"
     }
   },
@@ -382,14 +382,14 @@
         "i3": "Zatražite brisanje vaših podataka",
         "i4": "Povučete saglasnost za obradu podataka u bilo kom trenutku"
       },
-      "p2": "Za ostvarivanje bilo kog od ovih prava, kontaktirajte nas na hello@solveradev.rs."
+      "p2": "Za ostvarivanje bilo kog od ovih prava, kontaktirajte nas na milanjulinac996@gmail.com."
     },
     "section5": {
       "title": "Kontakt",
       "p1": "Za sva pitanja u vezi sa privatnošću i zaštitom podataka:",
       "company": "Solvera",
-      "address": "Beograd, Srbija",
-      "email": "hello@solveradev.rs"
+      "address": "Novi Sad, Srbija",
+      "email": "milanjulinac996@gmail.com"
     }
   },
   "Terms": {
@@ -434,8 +434,8 @@
       "title": "Kontakt",
       "p1": "Za sva pitanja u vezi sa ovim uslovima:",
       "company": "Solvera",
-      "address": "Beograd, Srbija",
-      "email": "hello@solveradev.rs"
+      "address": "Novi Sad, Srbija",
+      "email": "milanjulinac996@gmail.com"
     }
   },
   "Footer": {

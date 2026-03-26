@@ -6,7 +6,7 @@ export const projects: Project[] = [
     titleKey: "Projects.project1.title",
     descriptionKey: "Projects.project1.description",
     technologies: ["Next.js", "Tailwind", "PostgreSQL", "Stripe"],
-    category: "enterprise",
+    category: "website",
   },
   {
     id: "project2",

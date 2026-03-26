@@ -2,7 +2,7 @@
 
 import { useTranslations } from "next-intl";
 import { Link } from "@/i18n/navigation";
-import { Github, Linkedin, Twitter, Mail, MapPin, Phone } from "lucide-react";
+import { Github, Linkedin, Instagram, Mail, MapPin, Phone } from "lucide-react";
 import Image from "next/image";
 import { siteConfig } from "@/lib/constants";
 
@@ -54,12 +54,12 @@ export function Footer() {
                 <Linkedin className="w-4 h-4" />
               </a>
               <a
-                href={siteConfig.socials.twitter}
+                href={siteConfig.socials.instagram}
                 target="_blank"
                 rel="noopener noreferrer"
                 className="p-2 rounded-lg bg-white/5 hover:bg-spicy-400/10 hover:text-spicy-400 hover:scale-110 hover:shadow-lg hover:shadow-spicy-400/25 transition-all"
               >
-                <Twitter className="w-4 h-4" />
+                <Instagram className="w-4 h-4" />
               </a>
             </div>
           </div>

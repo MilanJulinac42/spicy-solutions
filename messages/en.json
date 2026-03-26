@@ -71,24 +71,24 @@
     "satisfaction": "Client Satisfaction"
   },
   "Projects": {
-    "title": "Real Results, Real Savings",
-    "subtitle": "See what happens when businesses stop overpaying and start working with us",
-    "viewProject": "View Project",
+    "title": "How We Help",
+    "subtitle": "Typical scenarios where we make a difference for your business",
+    "viewProject": "Learn More",
     "project1": {
-      "title": "E-Commerce: From 8,000 EUR Quote to 2,000 EUR Reality",
-      "description": "A retail business was quoted 8,000 EUR by a Belgrade agency. We built the same platform — with better performance and Stripe integration — for under 2,000 EUR."
+      "title": "An Online Store That Sells",
+      "description": "Need an e-commerce platform? No need to wait months or pay agency prices. We build a modern store with payments, product management, and everything you need to start selling."
     },
     "project2": {
-      "title": "AI Chatbot: 60% Fewer Support Tickets",
-      "description": "A client was paying 2 full-time support staff. Our RAG-powered chatbot now handles 60% of inquiries, saving over 3,000 EUR/month in labor costs."
+      "title": "AI Support That Never Sleeps",
+      "description": "Your customers are waiting for answers? We set up an AI chatbot that knows your business inside out and responds on your behalf — around the clock, no breaks, no sick days."
     },
     "project3": {
-      "title": "Automation: 40+ Hours Saved Per Week",
-      "description": "Manual data entry across 12 tools was costing this company 1,000 EUR/month in wasted time. Our n8n automation eliminated it completely."
+      "title": "Automation Instead of Manual Work",
+      "description": "Spending hours on copy-paste between tools? We connect your systems and automate repetitive processes so your team can focus on what actually brings value."
     },
     "project4": {
-      "title": "System Rebuild: Escaped Vendor Lock-in",
-      "description": "A healthcare company was trapped paying 500 EUR/month for 'maintenance' on a system they couldn't modify. We rebuilt it, gave them full ownership, and cut costs by 80%."
+      "title": "Freedom From Legacy Systems",
+      "description": "Stuck with a system you can't change without paying someone who holds you hostage? We rebuild it, give you full code ownership and the freedom to choose."
     }
   },
   "Testimonials": {
@@ -337,9 +337,9 @@
     },
     "info": {
       "title": "Contact Information",
-      "email": "hello@solveradev.rs",
-      "phone": "+381 XX XXX XXXX",
-      "address": "Belgrade, Serbia",
+      "email": "milanjulinac996@gmail.com",
+      "phone": "+381 63 838 4196",
+      "address": "Novi Sad, Serbia",
       "social": "Follow Us"
     }
   },
@@ -382,14 +382,14 @@
         "i3": "Request deletion of your data",
         "i4": "Withdraw consent for data processing at any time"
       },
-      "p2": "To exercise any of these rights, contact us at hello@solveradev.rs."
+      "p2": "To exercise any of these rights, contact us at milanjulinac996@gmail.com."
     },
     "section5": {
       "title": "Contact",
       "p1": "For any questions about privacy and data protection:",
       "company": "Solvera",
-      "address": "Belgrade, Serbia",
-      "email": "hello@solveradev.rs"
+      "address": "Novi Sad, Serbia",
+      "email": "milanjulinac996@gmail.com"
     }
   },
   "Terms": {
@@ -399,7 +399,7 @@
     "intro": "By using the solveradev.rs website and our services, you accept the following terms. Please read them carefully.",
     "section1": {
       "title": "About Us",
-      "p1": "Solvera is an IT company based in Belgrade, Serbia. We provide software development, web application, AI integration, and business process automation services."
+      "p1": "Solvera is an IT company based in Novi Sad, Serbia. We provide software development, web application, AI integration, and business process automation services."
     },
     "section2": {
       "title": "Services",
@@ -434,8 +434,8 @@
       "title": "Contact",
       "p1": "For any questions about these terms:",
       "company": "Solvera",
-      "address": "Belgrade, Serbia",
-      "email": "hello@solveradev.rs"
+      "address": "Novi Sad, Serbia",
+      "email": "milanjulinac996@gmail.com"
     }
   },
   "Footer": {

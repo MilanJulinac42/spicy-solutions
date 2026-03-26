@@ -11,13 +11,13 @@ export const siteConfig = {
   name: "Solvera",
   description: "Vi vodite biznis, mi brinemo o tehnologiji",
   url: "https://solveradev.rs",
-  email: "hello@solveradev.rs",
-  phone: "+381 XX XXX XXXX",
-  address: "Belgrade, Serbia",
+  email: "milanjulinac996@gmail.com",
+  phone: "+381 63 838 4196",
+  address: "Novi Sad, Srbija",
   socials: {
-    github: "https://github.com/solvera",
-    linkedin: "https://linkedin.com/company/solvera",
-    twitter: "https://twitter.com/solvera",
+    github: "https://github.com/MilanJulinac42",
+    linkedin: "https://www.linkedin.com/in/milanjulinac/",
+    instagram: "https://www.instagram.com/solveradev.rs/",
   },
 };
 

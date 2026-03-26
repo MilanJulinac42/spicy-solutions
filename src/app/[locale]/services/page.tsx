@@ -20,6 +20,7 @@ import { Badge } from "@/components/ui/Badge";
 import { CTABanner } from "@/components/sections/CTABanner";
 import { fadeInUp, fadeInLeft, fadeInRight, staggerContainer } from "@/lib/animations";
 import { services } from "@/data/services";
+import { ServiceIllustration } from "@/components/features/ServiceIllustration";
 import { Link } from "@/i18n/navigation";
 import { ArrowRight } from "lucide-react";
 
@@ -121,9 +122,7 @@ export default function ServicesPage() {
                   variants={isReversed ? fadeInLeft : fadeInRight}
                   className={isReversed ? "lg:order-1" : ""}
                 >
-                  <div className="aspect-square max-w-md mx-auto rounded-2xl bg-gradient-to-br from-spicy-400/20 via-spicy-400/10 to-transparent border border-border-default flex items-center justify-center">
-                    <Icon className="w-24 h-24 text-spicy-400/40" />
-                  </div>
+                  <ServiceIllustration serviceId={service.id} />
                 </motion.div>
               </div>
             </Container>
