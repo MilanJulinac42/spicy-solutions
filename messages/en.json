@@ -8,8 +8,8 @@
   },
   "Hero": {
     "badge": "Serbian businesses are overpaying for IT. We're here to fix that.",
-    "title": "Your IT Provider Is Charging You",
-    "titleHighlight": "Way Too Much",
+    "title": "You Know What You Need",
+    "titleHighlight": "We Know How to Build It",
     "subtitle": "Big agencies overcharge, underdeliver, and lock you in. Solvera gives you modern tech, transparent pricing, and zero bull. We're two engineers who believe Serbian businesses deserve better.",
     "cta": "Get a Free IT Audit",
     "ctaSecondary": "See How We Save You Money"
@@ -256,7 +256,8 @@
       }
     },
     "tech": {
-      "title": "Our Tech Stack"
+      "title": "Our Tech Stack",
+      "subtitle": "Technologies we use to build modern digital solutions"
     }
   },
   "Contact": {

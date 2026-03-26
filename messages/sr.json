@@ -8,8 +8,8 @@
   },
   "Hero": {
     "badge": "Brza isporuka. Direktna komunikacija. Kvalitet bez kompromisa.",
-    "title": "Vaš sledeći projekat zaslužuje",
-    "titleHighlight": "Bolje",
+    "title": "Znate šta želite",
+    "titleHighlight": "Mi znamo kako da to napravimo",
     "subtitle": "Dok druge agencije mesecima razvlače rokove, mi isporučujemo brzo i kvalitetno. Direktan pristup inženjerima koji grade vaš proizvod — bez posrednika, bez čekanja, bez kompromisa.",
     "cta": "Besplatan IT Audit",
     "ctaSecondary": "Pogledajte naš proces"
@@ -256,7 +256,8 @@
       }
     },
     "tech": {
-      "title": "Naš tech stack"
+      "title": "Naš tech stack",
+      "subtitle": "Tehnologije koje koristimo za izgradnju modernih digitalnih rešenja"
     }
   },
   "Contact": {

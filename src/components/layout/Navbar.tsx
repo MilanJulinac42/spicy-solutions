@@ -3,9 +3,10 @@
 import { useState, useEffect } from "react";
 import { useTranslations } from "next-intl";
 import { Link, usePathname } from "@/i18n/navigation";
-import { Menu, Flame } from "lucide-react";
+import { Menu } from "lucide-react";
 import { motion } from "framer-motion";
 import { navLinks } from "@/lib/constants";
+import Image from "next/image";
 import { ThemeToggle } from "@/components/shared/ThemeToggle";
 import { MobileMenu } from "./MobileMenu";
 
@@ -42,11 +43,8 @@ export function Navbar() {
             }`}
           >
             {/* Logo */}
-            <Link href="/" className="flex items-center gap-2 group">
-              <Flame className="w-7 h-7 text-spicy-400 group-hover:scale-110 transition-transform" />
-              <span className="text-xl font-bold text-foreground">
-                Solvera
-              </span>
+            <Link href="/" className="group">
+              <Image src="/logo.png" alt="Solvera" width={400} height={120} className="h-28 w-auto group-hover:scale-105 transition-transform" />
             </Link>
 
             {/* Desktop Navigation */}

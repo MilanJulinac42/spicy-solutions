@@ -13,7 +13,7 @@ import { Container } from "@/components/ui/Container";
 import { SectionHeading } from "@/components/ui/SectionHeading";
 import { Badge } from "@/components/ui/Badge";
 import { fadeInUp, fadeInLeft, fadeInRight, staggerContainer } from "@/lib/animations";
-import { technologies } from "@/lib/constants";
+import { TechStack } from "@/components/sections/TechStack";
 
 const teamPhotos: Record<string, string> = {
   member1: "/team/milan.jpg",
@@ -184,21 +184,7 @@ export default function AboutPage() {
       </section>
 
       {/* Technologies */}
-      <section className="py-20 md:py-28 bg-surface-secondary">
-        <Container>
-          <SectionHeading title={t("About.tech.title")} />
-
-          <div className="overflow-hidden">
-            <div className="animate-marquee flex gap-3 whitespace-nowrap">
-              {[...technologies, ...technologies].map((tech, i) => (
-                <span key={`${tech}-${i}`} className="inline-flex items-center px-4 py-2 rounded-lg bg-surface border border-border-default text-sm font-medium text-foreground-secondary hover:border-spicy-400/50 hover:text-spicy-400 transition-colors shrink-0">
-                  {tech}
-                </span>
-              ))}
-            </div>
-          </div>
-        </Container>
-      </section>
+      <TechStack />
     </>
   );
 }

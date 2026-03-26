@@ -2,7 +2,8 @@
 
 import { useTranslations } from "next-intl";
 import { Link } from "@/i18n/navigation";
-import { Flame, Github, Linkedin, Twitter, Mail, MapPin, Phone } from "lucide-react";
+import { Github, Linkedin, Twitter, Mail, MapPin, Phone } from "lucide-react";
+import Image from "next/image";
 import { siteConfig } from "@/lib/constants";
 
 export function Footer() {
@@ -29,11 +30,8 @@ export function Footer() {
         <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-5 gap-10">
           {/* Brand Column */}
           <div className="lg:col-span-1">
-            <div className="flex items-center gap-2 mb-4">
-              <Flame className="w-6 h-6 text-spicy-400" />
-              <span className="text-lg font-bold text-white">
-                Solvera
-              </span>
+            <div className="mb-4">
+              <Image src="/logo.png" alt="Solvera" width={360} height={112} className="h-24 w-auto" />
             </div>
             <p className="text-sm text-gray-400 leading-relaxed">
               {t("Footer.description")}
