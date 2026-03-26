@@ -13,7 +13,7 @@ import { SectionHeading } from "@/components/ui/SectionHeading";
 import { Badge } from "@/components/ui/Badge";
 import { fadeInUp, fadeInLeft, fadeInRight, staggerContainer } from "@/lib/animations";
 import { TechStack } from "@/components/sections/TechStack";
-import { TeamSection } from "@/components/features/TeamSection";
+// import { TeamSection } from "@/components/features/TeamSection";
 
 const valueIcons = {
   innovation: Lightbulb,
@@ -133,8 +133,8 @@ export default function AboutPage() {
         </Container>
       </section>
 
-      {/* Team */}
-      <TeamSection />
+      {/* Team - temporarily disabled */}
+      {/* <TeamSection /> */}
 
       {/* Technologies */}
       <TechStack />
