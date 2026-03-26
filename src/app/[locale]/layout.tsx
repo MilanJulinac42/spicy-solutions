@@ -40,12 +40,7 @@ export default async function LocaleLayout({
 
   return (
     <html lang={locale} suppressHydrationWarning>
-      <head>
-        <Script
-          src="https://t.contentsquare.net/uxa/408e5dc179c08.js"
-          strategy="afterInteractive"
-        />
-      </head>
+      <head />
       <body
         className={`${geistSans.variable} ${geistMono.variable} antialiased bg-surface text-foreground`}
       >
@@ -63,6 +58,10 @@ export default async function LocaleLayout({
               <Footer />
               <BackToTop />
             </PageLoaderProvider>
+            <Script
+              src="https://t.contentsquare.net/uxa/408e5dc179c08.js"
+              strategy="afterInteractive"
+            />
           </NextIntlClientProvider>
         </ThemeProvider>
       </body>
