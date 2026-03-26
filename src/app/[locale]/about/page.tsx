@@ -8,17 +8,12 @@ import {
   Eye,
   Handshake,
 } from "lucide-react";
-import Image from "next/image";
 import { Container } from "@/components/ui/Container";
 import { SectionHeading } from "@/components/ui/SectionHeading";
 import { Badge } from "@/components/ui/Badge";
 import { fadeInUp, fadeInLeft, fadeInRight, staggerContainer } from "@/lib/animations";
 import { TechStack } from "@/components/sections/TechStack";
-
-const teamPhotos: Record<string, string> = {
-  member1: "/team/milan.jpg",
-  member2: "/team/dragan.jpg",
-};
+import { TeamSection } from "@/components/features/TeamSection";
 
 const valueIcons = {
   innovation: Lightbulb,
@@ -139,49 +134,7 @@ export default function AboutPage() {
       </section>
 
       {/* Team */}
-      <section className="py-20 md:py-28">
-        <Container>
-          <SectionHeading title={t("About.team.title")} />
-
-          <motion.div
-            variants={staggerContainer}
-            initial="hidden"
-            whileInView="visible"
-            viewport={{ once: true, margin: "-100px" }}
-            className="grid grid-cols-1 md:grid-cols-2 gap-8 max-w-2xl mx-auto"
-          >
-            {(["member1", "member2"] as const).map((member) => (
-              <motion.div
-                key={member}
-                variants={fadeInUp}
-                className="text-center p-8 rounded-2xl bg-surface-secondary border border-border-default hover:border-spicy-400/30 hover:shadow-lg hover:shadow-spicy-400/5 transition-all duration-300"
-              >
-                <div className="w-24 h-24 mx-auto mb-4 relative flex items-center justify-center">
-                  <div className="absolute inset-0 rounded-full bg-gradient-to-br from-spicy-400 via-spicy-500 to-spicy-400 animate-spin" style={{ animationDuration: '8s' }} />
-                  <div className="w-20 h-20 rounded-full overflow-hidden relative z-10 ring-2 ring-surface">
-                    <Image
-                      src={teamPhotos[member]}
-                      alt={t(`About.team.${member}.name`)}
-                      width={80}
-                      height={80}
-                      className="w-full h-full object-cover"
-                    />
-                  </div>
-                </div>
-                <h4 className="text-lg font-semibold text-foreground">
-                  {t(`About.team.${member}.name`)}
-                </h4>
-                <p className="text-sm text-spicy-400 font-medium mb-2">
-                  {t(`About.team.${member}.role`)}
-                </p>
-                <p className="text-sm text-foreground-muted">
-                  {t(`About.team.${member}.bio`)}
-                </p>
-              </motion.div>
-            ))}
-          </motion.div>
-        </Container>
-      </section>
+      <TeamSection />
 
       {/* Technologies */}
       <TechStack />

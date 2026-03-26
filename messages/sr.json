@@ -8,8 +8,8 @@
   },
   "Hero": {
     "badge": "Brza isporuka. Direktna komunikacija. Kvalitet bez kompromisa.",
-    "title": "Znate šta želite",
-    "titleHighlight": "Mi znamo kako da to napravimo",
+    "title": "Vi vodite biznis",
+    "titleHighlight": "Mi brinemo o tehnologiji",
     "subtitle": "Dok druge agencije mesecima razvlače rokove, mi isporučujemo brzo i kvalitetno. Direktan pristup inženjerima koji grade vaš proizvod — bez posrednika, bez čekanja, bez kompromisa.",
     "cta": "Besplatan IT Audit",
     "ctaSecondary": "Pogledajte naš proces"
@@ -244,15 +244,58 @@
     },
     "team": {
       "title": "Tim",
+      "viewProfile": "Pogledaj profil",
+      "closeProfile": "Zatvori",
+      "capabilitiesTitle": "Kako vam mogu pomoći",
+      "techTitle": "Tehnologije",
+      "comingSoon": "Pun profil uskoro dolazi",
+      "skillCategories": {
+        "frontend": "Web aplikacije",
+        "backend": "Serveri i API-ji",
+        "cloud": "Cloud i infrastruktura",
+        "database": "Baze podataka"
+      },
       "member1": {
         "name": "Milan Julinac",
         "role": "Suosnivač i inženjer",
-        "bio": "Full-stack developer specijalizovan za skalabilne sisteme, AI integracije i brzu isporuku kvalitetnih rešenja."
+        "bio": "Gradim web aplikacije koje rade brzo, izgledaju profesionalno i donose rezultate. Od ideje do produkcije — bez nepotrebnog čekanja.",
+        "stats": {
+          "years": { "value": "5+", "label": "Godina iskustva" },
+          "projects": { "value": "20+", "label": "Isporučenih projekata" },
+          "clients": { "value": "100%", "label": "Klijenata koji se vraćaju" },
+          "response": { "value": "<24h", "label": "Vreme odgovora" }
+        },
+        "capabilities": {
+          "webapps": {
+            "title": "Web aplikacije",
+            "description": "Kompletne aplikacije od nule — frontend, backend, baza. Brzo, responzivno, spremno za korisnike."
+          },
+          "ecommerce": {
+            "title": "Online prodavnice",
+            "description": "Plaćanja, korpe, korisničke naloge — sve što vam treba da počnete da prodajete online."
+          },
+          "ai": {
+            "title": "AI integracije",
+            "description": "Pametne preporuke, automatizacija, chatbotovi — AI koji realno pomaže vašem biznisu."
+          },
+          "leadership": {
+            "title": "Vođenje tima",
+            "description": "Koordinacija razvoja, arhitektura sistema i direktna komunikacija — bez posrednika."
+          },
+          "performance": {
+            "title": "Optimizacija",
+            "description": "Brže učitavanje, manji troškovi servera, bolje korisničko iskustvo. Merljivi rezultati."
+          },
+          "reliability": {
+            "title": "Pouzdanost",
+            "description": "Automatizovano testiranje, CI/CD, migracije bez prekida — vaš softver radi 24/7."
+          }
+        }
       },
       "member2": {
         "name": "Dragan Jelačić",
         "role": "Suosnivač i inženjer",
-        "bio": "Softverski inženjer fokusiran na moderne web platforme i automatizaciju. Veruje da sjajan softver treba da se isporuči brzo i bez kompromisa."
+        "bio": "Pravi moderne web platforme i automatizuje poslovne procese. Fokusiran na to da vaš softver radi pouzdano — dan za danom."
       }
     },
     "tech": {

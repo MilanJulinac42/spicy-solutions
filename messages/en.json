@@ -8,8 +8,8 @@
   },
   "Hero": {
     "badge": "Serbian businesses are overpaying for IT. We're here to fix that.",
-    "title": "You Know What You Need",
-    "titleHighlight": "We Know How to Build It",
+    "title": "You Run the Business",
+    "titleHighlight": "We Handle the Technology",
     "subtitle": "Big agencies overcharge, underdeliver, and lock you in. Solvera gives you modern tech, transparent pricing, and zero bull. We're two engineers who believe Serbian businesses deserve better.",
     "cta": "Get a Free IT Audit",
     "ctaSecondary": "See How We Save You Money"
@@ -244,15 +244,58 @@
     },
     "team": {
       "title": "The Team",
+      "viewProfile": "View Profile",
+      "closeProfile": "Close",
+      "capabilitiesTitle": "How I can help you",
+      "techTitle": "Technologies",
+      "comingSoon": "Full profile coming soon",
+      "skillCategories": {
+        "frontend": "Web Applications",
+        "backend": "Servers & APIs",
+        "cloud": "Cloud & Infrastructure",
+        "database": "Databases"
+      },
       "member1": {
         "name": "Milan Julinac",
         "role": "Co-Founder & Engineer",
-        "bio": "Full-stack developer specializing in scalable systems, AI integrations, and making enterprise tech affordable."
+        "bio": "I build web apps that load fast, look professional, and deliver results. From idea to production — without unnecessary delays.",
+        "stats": {
+          "years": { "value": "5+", "label": "Years of experience" },
+          "projects": { "value": "20+", "label": "Delivered projects" },
+          "clients": { "value": "100%", "label": "Client retention rate" },
+          "response": { "value": "<24h", "label": "Response time" }
+        },
+        "capabilities": {
+          "webapps": {
+            "title": "Web Applications",
+            "description": "Complete apps from scratch — frontend, backend, database. Fast, responsive, ready for users."
+          },
+          "ecommerce": {
+            "title": "Online Stores",
+            "description": "Payments, carts, user accounts — everything you need to start selling online."
+          },
+          "ai": {
+            "title": "AI Integrations",
+            "description": "Smart recommendations, automation, chatbots — AI that actually helps your business."
+          },
+          "leadership": {
+            "title": "Team Leadership",
+            "description": "Development coordination, system architecture, and direct communication — no middlemen."
+          },
+          "performance": {
+            "title": "Optimization",
+            "description": "Faster loading, lower server costs, better user experience. Measurable results."
+          },
+          "reliability": {
+            "title": "Reliability",
+            "description": "Automated testing, CI/CD, zero-downtime migrations — your software runs 24/7."
+          }
+        }
       },
       "member2": {
         "name": "Dragan Jelačić",
         "role": "Co-Founder & Engineer",
-        "bio": "Software engineer focused on modern web platforms and workflow automation. Believes great tech shouldn't require a second mortgage."
+        "bio": "Builds modern web platforms and automates business processes. Focused on making your software work reliably — day after day."
       }
     },
     "tech": {

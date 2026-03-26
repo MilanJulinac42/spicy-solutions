@@ -145,6 +145,34 @@ export const textRevealContainer: Variants = {
   },
 };
 
+export const slideInRight: Variants = {
+  hidden: { x: "100%", opacity: 0.8 },
+  visible: {
+    x: 0,
+    opacity: 1,
+    transition: { type: "spring", stiffness: 300, damping: 30 },
+  },
+  exit: {
+    x: "100%",
+    opacity: 0.8,
+    transition: { duration: 0.3, ease: "easeIn" },
+  },
+};
+
+export const slideUpFull: Variants = {
+  hidden: { y: "100%", opacity: 0.8 },
+  visible: {
+    y: 0,
+    opacity: 1,
+    transition: { type: "spring", stiffness: 300, damping: 30 },
+  },
+  exit: {
+    y: "100%",
+    opacity: 0.8,
+    transition: { duration: 0.3, ease: "easeIn" },
+  },
+};
+
 export const textRevealWord: Variants = {
   hidden: {
     opacity: 0,
