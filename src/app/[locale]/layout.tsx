@@ -59,6 +59,18 @@ export default async function LocaleLayout({
               <BackToTop />
             </PageLoaderProvider>
             <Script
+              src="https://www.googletagmanager.com/gtag/js?id=G-WDNDKK0PBT"
+              strategy="afterInteractive"
+            />
+            <Script id="google-analytics" strategy="afterInteractive">
+              {`
+                window.dataLayer = window.dataLayer || [];
+                function gtag(){dataLayer.push(arguments);}
+                gtag('js', new Date());
+                gtag('config', 'G-WDNDKK0PBT');
+              `}
+            </Script>
+            <Script
               src="https://t.contentsquare.net/uxa/408e5dc179c08.js"
               strategy="afterInteractive"
             />
