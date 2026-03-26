@@ -9,6 +9,7 @@ import { Navbar } from "@/components/layout/Navbar";
 import { Footer } from "@/components/layout/Footer";
 import { ScrollProgress } from "@/components/ui/ScrollProgress";
 import { BackToTop } from "@/components/ui/BackToTop";
+import { WhatsAppButton } from "@/components/ui/WhatsAppButton";
 import { PageLoaderProvider } from "@/components/ui/PageLoaderProvider";
 import "@/app/globals.css";
 
@@ -57,6 +58,7 @@ export default async function LocaleLayout({
               <main className="min-h-screen">{children}</main>
               <Footer />
               <BackToTop />
+              <WhatsAppButton />
             </PageLoaderProvider>
             <Script
               src="https://www.googletagmanager.com/gtag/js?id=G-WDNDKK0PBT"

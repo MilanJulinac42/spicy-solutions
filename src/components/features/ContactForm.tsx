@@ -3,22 +3,41 @@
 import { useState } from "react";
 import { useTranslations } from "next-intl";
 import { motion } from "framer-motion";
-import { Send, CheckCircle, AlertCircle, ArrowRight } from "lucide-react";
+import { Send, CheckCircle, AlertCircle, ArrowRight, X } from "lucide-react";
+import { AnimatePresence } from "framer-motion";
+import { createPortal } from "react-dom";
 import { fadeInUp, staggerContainer } from "@/lib/animations";
 
 export function ContactForm() {
   const t = useTranslations("Contact.form");
   const [status, setStatus] = useState<"idle" | "sending" | "success" | "error">("idle");
 
-  const handleSubmit = (e: React.FormEvent<HTMLFormElement>) => {
+  const handleSubmit = async (e: React.FormEvent<HTMLFormElement>) => {
     e.preventDefault();
     setStatus("sending");
 
-    // Simulate form submission - replace with actual API call
-    setTimeout(() => {
-      setStatus("success");
+    const form = e.currentTarget;
+    const formData = new FormData(form);
+
+    try {
+      const response = await fetch("https://formspree.io/f/mzdkzgvz", {
+        method: "POST",
+        body: formData,
+        headers: { Accept: "application/json" },
+      });
+
+      if (response.ok) {
+        setStatus("success");
+        form.reset();
+        setTimeout(() => setStatus("idle"), 3000);
+      } else {
+        setStatus("error");
+        setTimeout(() => setStatus("idle"), 3000);
+      }
+    } catch {
+      setStatus("error");
       setTimeout(() => setStatus("idle"), 3000);
-    }, 1500);
+    }
   };
 
   return (
@@ -36,6 +55,7 @@ export function ContactForm() {
         </label>
         <input
           type="text"
+          name="name"
           required
           className="w-full px-4 py-3 rounded-lg bg-surface-secondary border border-border-default text-foreground placeholder:text-foreground-muted focus:outline-none focus:ring-2 focus:ring-spicy-400/50 focus:border-spicy-400 focus:shadow-[0_0_15px_rgba(255,107,53,0.15)] transition-all"
           placeholder={t("name")}
@@ -48,6 +68,7 @@ export function ContactForm() {
         </label>
         <input
           type="email"
+          name="email"
           required
           className="w-full px-4 py-3 rounded-lg bg-surface-secondary border border-border-default text-foreground placeholder:text-foreground-muted focus:outline-none focus:ring-2 focus:ring-spicy-400/50 focus:border-spicy-400 focus:shadow-[0_0_15px_rgba(255,107,53,0.15)] transition-all"
           placeholder={t("email")}
@@ -60,6 +81,7 @@ export function ContactForm() {
         </label>
         <input
           type="text"
+          name="company"
           className="w-full px-4 py-3 rounded-lg bg-surface-secondary border border-border-default text-foreground placeholder:text-foreground-muted focus:outline-none focus:ring-2 focus:ring-spicy-400/50 focus:border-spicy-400 focus:shadow-[0_0_15px_rgba(255,107,53,0.15)] transition-all"
           placeholder={t("company")}
         />
@@ -70,6 +92,7 @@ export function ContactForm() {
           {t("service")}
         </label>
         <select
+          name="service"
           required
           className="w-full px-4 py-3 rounded-lg bg-surface-secondary border border-border-default text-foreground focus:outline-none focus:ring-2 focus:ring-spicy-400/50 focus:border-spicy-400 focus:shadow-[0_0_15px_rgba(255,107,53,0.15)] transition-all"
           defaultValue=""
@@ -91,6 +114,7 @@ export function ContactForm() {
           {t("message")}
         </label>
         <textarea
+          name="message"
           required
           rows={5}
           className="w-full px-4 py-3 rounded-lg bg-surface-secondary border border-border-default text-foreground placeholder:text-foreground-muted focus:outline-none focus:ring-2 focus:ring-spicy-400/50 focus:border-spicy-400 focus:shadow-[0_0_15px_rgba(255,107,53,0.15)] transition-all resize-none"
@@ -119,27 +143,59 @@ export function ContactForm() {
         </button>
       </motion.div>
 
-      {status === "success" && (
-        <motion.div
-          initial={{ opacity: 0, y: 10 }}
-          animate={{ opacity: 1, y: 0 }}
-          className="flex items-center gap-2 p-4 rounded-lg bg-emerald-500/10 text-emerald-500 border border-emerald-500/20"
-        >
-          <CheckCircle className="w-5 h-5 shrink-0" />
-          <span className="text-sm">{t("success")}</span>
-        </motion.div>
-      )}
-
-      {status === "error" && (
-        <motion.div
-          initial={{ opacity: 0, y: 10 }}
-          animate={{ opacity: 1, y: 0 }}
-          className="flex items-center gap-2 p-4 rounded-lg bg-red-500/10 text-red-500 border border-red-500/20"
-        >
-          <AlertCircle className="w-5 h-5 shrink-0" />
-          <span className="text-sm">{t("error")}</span>
-        </motion.div>
+      {(status === "success" || status === "error") && (
+        <Toast
+          status={status}
+          onClose={() => setStatus("idle")}
+          successText={t("success")}
+          errorText={t("error")}
+        />
       )}
     </motion.form>
+  );
+}
+
+function Toast({
+  status,
+  onClose,
+  successText,
+  errorText,
+}: {
+  status: "success" | "error";
+  onClose: () => void;
+  successText: string;
+  errorText: string;
+}) {
+  const isSuccess = status === "success";
+
+  return createPortal(
+    <AnimatePresence>
+      <motion.div
+        initial={{ opacity: 0, y: -40, x: "-50%" }}
+        animate={{ opacity: 1, y: 0, x: "-50%" }}
+        exit={{ opacity: 0, y: -40, x: "-50%" }}
+        className={`fixed top-6 left-1/2 z-[100] flex items-center gap-3 px-5 py-3.5 rounded-xl shadow-2xl border backdrop-blur-sm ${
+          isSuccess
+            ? "bg-emerald-500/15 border-emerald-500/30 text-emerald-400"
+            : "bg-red-500/15 border-red-500/30 text-red-400"
+        }`}
+      >
+        {isSuccess ? (
+          <CheckCircle className="w-5 h-5 shrink-0" />
+        ) : (
+          <AlertCircle className="w-5 h-5 shrink-0" />
+        )}
+        <span className="text-sm font-medium">
+          {isSuccess ? successText : errorText}
+        </span>
+        <button
+          onClick={onClose}
+          className="ml-2 p-1 rounded-md hover:bg-white/10 transition-colors cursor-pointer"
+        >
+          <X className="w-3.5 h-3.5" />
+        </button>
+      </motion.div>
+    </AnimatePresence>,
+    document.body
   );
 }
