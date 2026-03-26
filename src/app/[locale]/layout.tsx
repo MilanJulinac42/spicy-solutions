@@ -70,10 +70,6 @@ export default async function LocaleLayout({
                 gtag('config', 'G-WDNDKK0PBT');
               `}
             </Script>
-            <Script
-              src="https://t.contentsquare.net/uxa/408e5dc179c08.js"
-              strategy="afterInteractive"
-            />
           </NextIntlClientProvider>
         </ThemeProvider>
       </body>
