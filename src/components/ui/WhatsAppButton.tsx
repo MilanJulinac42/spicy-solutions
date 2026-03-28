@@ -2,10 +2,11 @@
 
 import { useState, useEffect } from "react";
 import { motion, AnimatePresence } from "framer-motion";
-import { MessageCircle, X } from "lucide-react";
+import { X } from "lucide-react";
+import { SiWhatsapp } from "react-icons/si";
 
 const PHONE = "381638384196";
-const MESSAGE = "Zdravo! Zanima me saradnja sa Solvera.";
+const MESSAGE = "Zdravo! Interesuje me besplatna konsultacija.";
 
 export function WhatsAppButton() {
   const [isVisible, setIsVisible] = useState(false);
@@ -65,7 +66,7 @@ export function WhatsAppButton() {
         className="w-14 h-14 bg-[#25D366] rounded-full flex items-center justify-center shadow-lg shadow-[#25D366]/30 hover:shadow-xl hover:shadow-[#25D366]/40 transition-shadow"
         aria-label="Kontaktirajte nas na WhatsApp"
       >
-        <MessageCircle className="w-7 h-7 text-white" />
+        <SiWhatsapp className="w-7 h-7 text-white" />
       </motion.a>
     </div>
   );
