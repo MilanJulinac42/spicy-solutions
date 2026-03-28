@@ -4,14 +4,14 @@
     "services": "Usluge",
     "about": "O nama",
     "contact": "Kontakt",
-    "getStarted": "Besplatan IT Audit"
+    "getStarted": "Besplatna konsultacija"
   },
   "Hero": {
     "badge": "Brza isporuka. Direktna komunikacija. Kvalitet bez kompromisa.",
     "title": "Vi vodite biznis",
     "titleHighlight": "Mi brinemo o tehnologiji",
     "subtitle": "Dok druge agencije mesecima razvlače rokove, mi isporučujemo brzo i kvalitetno. Direktan pristup inženjerima koji grade vaš proizvod — bez posrednika, bez čekanja, bez kompromisa.",
-    "cta": "Besplatan IT Audit",
+    "cta": "Besplatna konsultacija",
     "ctaSecondary": "Pogledajte naš proces"
   },
   "ProblemSection": {
@@ -42,7 +42,7 @@
       "point3": "Moderan tech stack — Next.js, AI, automatizacija. Tehnologija koja ubrzava razvoj",
       "point4": "Direktan pristup inženjerima koji prave vaš proizvod. Bez posrednika, bez čekanja"
     },
-    "cta": "Zakažite besplatan audit"
+    "cta": "Zakažite besplatnu konsultaciju"
   },
   "ServicesOverview": {
     "title": "Šta vam zaista treba",
@@ -135,8 +135,8 @@
   },
   "CTA": {
     "title": "Spremni za brži razvoj?",
-    "subtitle": "Dobijte besplatan IT audit bez ikakvih obaveza. Pokazaćemo vam gde gubite vreme i kako da ubrzate digitalni razvoj.",
-    "button": "Zakažite besplatan audit"
+    "subtitle": "Dobijte besplatnu konsultaciju bez ikakvih obaveza. Pokazaćemo vam gde gubite vreme i kako da ubrzate digitalni razvoj.",
+    "button": "Zakažite besplatnu konsultaciju"
   },
   "Services": {
     "title": "Naše usluge",
@@ -189,7 +189,7 @@
           },
           "q4": {
             "question": "Šta ako mi treba nešto specifično?",
-            "answer": "Javite nam se za besplatan audit — analiziramo šta vam treba i dajemo jasan predlog sa rokovima i cenama."
+            "answer": "Javite nam se za besplatnu konsultaciju — analiziramo šta vam treba i dajemo jasan predlog sa rokovima i cenama."
           }
         },
         "ctaText": "Zakažite besplatan razgovor"
@@ -363,7 +363,7 @@
       "title": "Kako radimo",
       "subtitle": "Jednostavan proces. Bez misterije. Bez iznenađenja.",
       "step1": {
-        "title": "Besplatan audit",
+        "title": "Besplatna konsultacija",
         "description": "Analiziramo vaš trenutni IT setup i identifikujemo gde gubite vreme i efikasnost. Bez obaveza."
       },
       "step2": {
@@ -381,8 +381,8 @@
     },
     "cta": {
       "title": "Spremni da ubrzate razvoj?",
-      "subtitle": "Dobijte besplatan IT audit i saznajte kako da digitalni razvoj bude brži i efikasniji.",
-      "button": "Zakažite besplatan audit"
+      "subtitle": "Dobijte besplatnu konsultaciju i saznajte kako da digitalni razvoj bude brži i efikasniji.",
+      "button": "Zakažite besplatnu konsultaciju"
     }
   },
   "About": {
@@ -474,11 +474,11 @@
     }
   },
   "Contact": {
-    "title": "Besplatan IT Audit",
+    "title": "Besplatna konsultacija",
     "subtitle": "Recite nam o vašem trenutnom IT setup-u i pokazaćemo vam gde gubite vreme i efikasnost. Bez ikakvih obaveza.",
     "audit": {
       "title": "Šta dobijate (besplatno)",
-      "description": "Naš IT audit pokriva sve što treba da znate:",
+      "description": "Naša konsultacija pokriva sve što treba da znate:",
       "bullets": {
         "b1": "Analiza trenutnih procesa i identifikacija uskih grla",
         "b2": "Preporuke za ubrzanje razvoja i modernizaciju tehnologije",
@@ -492,7 +492,7 @@
       "service": "Šta vas zanima?",
       "serviceOptions": {
         "select": "Izaberite opciju",
-        "audit": "Besplatan IT Audit",
+        "audit": "Besplatna konsultacija",
         "websites": "Sajt / Web aplikacija",
         "enterprise": "Poslovni sistem po meri",
         "ai": "AI i chatbot integracija",
@@ -500,7 +500,7 @@
         "other": "Nešto drugo"
       },
       "message": "Opišite nam vašu trenutnu IT situaciju",
-      "submit": "Zakažite besplatan audit",
+      "submit": "Zakažite besplatnu konsultaciju",
       "sending": "Slanje...",
       "success": "Zahtev primljen! Analiziraćemo vašu situaciju i javiti vam se u roku od 24 sata.",
       "error": "Nešto je pošlo po zlu. Pokušajte ponovo."
@@ -532,7 +532,7 @@
     "section2": {
       "title": "Kako koristimo vaše podatke",
       "items": {
-        "i1": "Da odgovorimo na vaš upit ili zahtev za audit",
+        "i1": "Da odgovorimo na vaš upit ili zahtev za konsultaciju",
         "i2": "Da vas kontaktiramo u vezi sa uslugama koje ste zatražili",
         "i3": "Da poboljšamo našu komunikaciju sa klijentima"
       },
@@ -574,7 +574,7 @@
     "section2": {
       "title": "Usluge",
       "p1": "Sve usluge se pružaju na osnovu pojedinačnih ugovora ili ponuda sa fiksnom cenom. Obim posla, rokovi i cene se precizno definišu pre početka projekta.",
-      "p2": "Besplatan IT audit ne obavezuje vas na korišćenje naših usluga."
+      "p2": "Besplatna konsultacija ne obavezuje vas na korišćenje naših usluga."
     },
     "section3": {
       "title": "Vlasništvo nad kodom",
@@ -620,7 +620,7 @@
   },
   "Common": {
     "learnMore": "Saznajte više",
-    "contactUs": "Besplatan audit",
+    "contactUs": "Besplatna konsultacija",
     "viewProject": "Pogledaj projekat",
     "readMore": "Pročitajte više"
   }
