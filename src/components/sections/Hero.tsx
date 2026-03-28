@@ -29,7 +29,7 @@ export function Hero() {
 
   return (
     <section
-      className="relative min-h-screen flex items-center justify-center overflow-hidden noise-overlay"
+      className="relative min-h-screen flex items-center justify-center overflow-hidden"
       onMouseMove={handleMouseMove}
     >
       {/* Mouse-follow gradient (desktop only) */}
@@ -40,42 +40,10 @@ export function Hero() {
         }}
       />
 
-      {/* Animated background orbs */}
-      <div className="absolute inset-0 overflow-hidden">
-        <motion.div
-          animate={{
-            y: [-20, 20, -20],
-            x: [-10, 10, -10],
-          }}
-          transition={{ duration: 6, repeat: Infinity, ease: "easeInOut" }}
-          className="absolute top-1/4 -left-32 w-96 h-96 bg-spicy-400/20 rounded-full blur-[128px]"
-        />
-        <motion.div
-          animate={{
-            y: [15, -15, 15],
-            x: [10, -10, 10],
-          }}
-          transition={{
-            duration: 8,
-            repeat: Infinity,
-            ease: "easeInOut",
-            delay: 1,
-          }}
-          className="absolute bottom-1/4 -right-32 w-96 h-96 bg-spicy-400/10 rounded-full blur-[128px]"
-        />
-        <motion.div
-          animate={{
-            y: [-10, 10, -10],
-            scale: [1, 1.05, 1],
-          }}
-          transition={{
-            duration: 7,
-            repeat: Infinity,
-            ease: "easeInOut",
-            delay: 2,
-          }}
-          className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-[600px] h-[600px] bg-spicy-400/5 rounded-full blur-[128px]"
-        />
+      {/* Animated background orbs (desktop only for performance) */}
+      <div className="absolute inset-0 overflow-hidden hidden md:block">
+        <div className="absolute top-1/4 -left-32 w-96 h-96 bg-spicy-400/20 rounded-full blur-[128px] animate-pulse" style={{ animationDuration: '6s' }} />
+        <div className="absolute bottom-1/4 -right-32 w-96 h-96 bg-spicy-400/10 rounded-full blur-[128px] animate-pulse" style={{ animationDuration: '8s' }} />
       </div>
 
       {/* Grid pattern overlay */}

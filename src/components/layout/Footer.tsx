@@ -31,7 +31,7 @@ export function Footer() {
           {/* Brand Column */}
           <div className="lg:col-span-1">
             <div className="mb-4">
-              <Image src="/logo.png" alt="Solvera" width={360} height={112} className="h-24 w-auto" />
+              <Image src="/logo.png" alt="Solvera" width={120} height={96} className="h-24 w-auto" />
             </div>
             <p className="text-sm text-gray-400 leading-relaxed">
               {t("Footer.description")}

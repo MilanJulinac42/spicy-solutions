@@ -28,7 +28,7 @@ export function ProblemSection() {
   const t = useTranslations("ProblemSection");
 
   return (
-    <section className="py-20 md:py-28 bg-surface-secondary noise-overlay">
+    <section className="py-20 md:py-28 bg-surface-secondary">
       <Container>
         <SectionHeading title={t("title")} subtitle={t("subtitle")} />
 

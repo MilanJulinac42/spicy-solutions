@@ -1,6 +1,6 @@
 "use client";
 
-import { useState, useEffect } from "react";
+import { useState, useEffect, useCallback, useRef } from "react";
 import { useTranslations } from "next-intl";
 import { Link, usePathname } from "@/i18n/navigation";
 import { Menu } from "lucide-react";
@@ -16,13 +16,21 @@ export function Navbar() {
   const [isScrolled, setIsScrolled] = useState(false);
   const [isMobileMenuOpen, setIsMobileMenuOpen] = useState(false);
 
+  const ticking = useRef(false);
+  const handleScroll = useCallback(() => {
+    if (!ticking.current) {
+      ticking.current = true;
+      requestAnimationFrame(() => {
+        setIsScrolled(window.scrollY > 20);
+        ticking.current = false;
+      });
+    }
+  }, []);
+
   useEffect(() => {
-    const handleScroll = () => {
-      setIsScrolled(window.scrollY > 20);
-    };
     window.addEventListener("scroll", handleScroll, { passive: true });
     return () => window.removeEventListener("scroll", handleScroll);
-  }, []);
+  }, [handleScroll]);
 
   return (
     <>
@@ -32,7 +40,7 @@ export function Navbar() {
         transition={{ duration: 0.5, ease: "easeOut" }}
         className={`fixed top-0 left-0 right-0 z-30 transition-all duration-300 ${
           isScrolled
-            ? "bg-surface/80 backdrop-blur-xl border-b border-border-default shadow-sm"
+            ? "bg-surface/90 backdrop-blur-md border-b border-border-default shadow-sm"
             : "bg-transparent"
         }`}
       >
@@ -44,7 +52,7 @@ export function Navbar() {
           >
             {/* Logo */}
             <Link href="/" className="group">
-              <Image src="/logo.png" alt="Solvera" width={400} height={120} className="h-28 w-auto group-hover:scale-105 transition-transform" />
+              <Image src="/logo.png" alt="Solvera" width={140} height={112} priority className="h-28 w-auto group-hover:scale-105 transition-transform" />
             </Link>
 
             {/* Desktop Navigation */}

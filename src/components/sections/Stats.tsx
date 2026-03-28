@@ -94,11 +94,7 @@ function StatItem({ value, suffix, label }: StatItemProps) {
         </div>
       </div>
       <div className="mt-2 text-sm text-foreground-muted flex items-center justify-center gap-2">
-        {/* Pulsing dot */}
-        <span className="relative flex h-2 w-2">
-          <span className="animate-ping absolute inline-flex h-full w-full rounded-full bg-spicy-400 opacity-75" />
-          <span className="relative inline-flex rounded-full h-2 w-2 bg-spicy-400" />
-        </span>
+        <span className="inline-flex rounded-full h-2 w-2 bg-spicy-400" />
         {label}
       </div>
     </motion.div>
@@ -116,7 +112,7 @@ export function Stats() {
   ];
 
   return (
-    <section className="py-20 md:py-28 bg-surface-secondary noise-overlay">
+    <section className="py-20 md:py-28 bg-surface-secondary">
       <Container>
         <motion.div
           variants={staggerContainer}

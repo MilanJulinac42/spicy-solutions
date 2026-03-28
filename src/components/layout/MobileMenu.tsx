@@ -6,7 +6,7 @@ import { useTranslations } from "next-intl";
 import { Link } from "@/i18n/navigation";
 import { navLinks } from "@/lib/constants";
 import { ThemeToggle } from "@/components/shared/ThemeToggle";
-import { staggerContainer, fadeInRight } from "@/lib/animations";
+// Removed stagger animations for performance
 
 interface MobileMenuProps {
   isOpen: boolean;
@@ -25,14 +25,14 @@ export function MobileMenu({ isOpen, onClose, pathname }: MobileMenuProps) {
             initial={{ opacity: 0 }}
             animate={{ opacity: 1 }}
             exit={{ opacity: 0 }}
-            className="fixed inset-0 bg-black/50 backdrop-blur-sm z-40"
+            className="fixed inset-0 bg-black/60 z-40"
             onClick={onClose}
           />
           <motion.div
             initial={{ x: "100%" }}
             animate={{ x: 0 }}
             exit={{ x: "100%" }}
-            transition={{ type: "spring", damping: 25, stiffness: 200 }}
+            transition={{ type: "tween", duration: 0.25, ease: "easeOut" }}
             className="fixed right-0 top-0 bottom-0 w-72 bg-surface-elevated border-l border-border-default z-50 flex flex-col"
           >
             <div className="flex items-center justify-between p-4 border-b border-border-default">
@@ -46,16 +46,11 @@ export function MobileMenu({ isOpen, onClose, pathname }: MobileMenuProps) {
             </div>
 
             <nav className="flex-1 p-4">
-              <motion.ul
-                variants={staggerContainer}
-                initial="hidden"
-                animate="visible"
-                className="space-y-1"
-              >
+              <ul className="space-y-1">
                 {navLinks.map((link) => {
                   const isActive = pathname === link.href;
                   return (
-                    <motion.li key={link.href} variants={fadeInRight}>
+                    <li key={link.href}>
                       <Link
                         href={link.href}
                         onClick={onClose}
@@ -67,10 +62,10 @@ export function MobileMenu({ isOpen, onClose, pathname }: MobileMenuProps) {
                       >
                         {t(link.titleKey)}
                       </Link>
-                    </motion.li>
+                    </li>
                   );
                 })}
-              </motion.ul>
+              </ul>
             </nav>
 
             <div className="p-4 border-t border-border-default flex items-center gap-3">

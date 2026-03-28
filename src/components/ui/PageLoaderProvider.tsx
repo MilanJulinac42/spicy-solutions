@@ -20,7 +20,7 @@ export function PageLoaderProvider({
     const timer = setTimeout(() => {
       setIsLoading(false);
       isInitialLoad.current = false;
-    }, 1200);
+    }, 800);
 
     return () => clearTimeout(timer);
   }, []);
@@ -35,7 +35,7 @@ export function PageLoaderProvider({
 
     const timer = setTimeout(() => {
       setIsLoading(false);
-    }, 600);
+    }, 400);
 
     return () => clearTimeout(timer);
   }, [pathname]);

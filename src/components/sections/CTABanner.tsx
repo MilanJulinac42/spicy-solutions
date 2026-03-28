@@ -9,19 +9,14 @@ import { fadeInUp, staggerContainer } from "@/lib/animations";
 const floatingDots = [
   { size: 6, top: "10%", left: "5%", duration: 6, delay: 0 },
   { size: 10, top: "20%", right: "10%", duration: 8, delay: 1 },
-  { size: 4, bottom: "15%", left: "15%", duration: 5, delay: 0.5 },
   { size: 8, top: "60%", right: "20%", duration: 7, delay: 2 },
-  { size: 5, bottom: "30%", left: "70%", duration: 9, delay: 1.5 },
-  { size: 12, top: "40%", left: "85%", duration: 6.5, delay: 0.8 },
-  { size: 3, top: "75%", left: "30%", duration: 7.5, delay: 2.5 },
-  { size: 7, top: "15%", left: "50%", duration: 5.5, delay: 1.2 },
 ];
 
 export function CTABanner() {
   const t = useTranslations("CTA");
 
   return (
-    <section className="py-20 md:py-28 relative overflow-hidden noise-overlay">
+    <section className="py-20 md:py-28 relative overflow-hidden">
       {/* Orange gradient background */}
       <div className="absolute inset-0 bg-gradient-to-r from-spicy-500 via-spicy-400 to-spicy-300" />
 
@@ -33,11 +28,11 @@ export function CTABanner() {
         }}
       />
 
-      {/* Floating animated circles */}
+      {/* Floating animated circles (hidden on mobile for performance) */}
       {floatingDots.map((dot, i) => (
         <motion.div
           key={i}
-          className="absolute rounded-full bg-white/20"
+          className="absolute rounded-full bg-white/20 hidden md:block"
           style={{
             width: dot.size,
             height: dot.size,
