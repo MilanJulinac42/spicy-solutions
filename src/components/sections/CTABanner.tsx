@@ -6,7 +6,7 @@ import { Link } from "@/i18n/navigation";
 import { ArrowRight } from "lucide-react";
 import { fadeInUp, staggerContainer } from "@/lib/animations";
 
-const floatingDots = [
+const floatingDots: { size: number; top?: string; left?: string; right?: string; bottom?: string; duration: number; delay: number }[] = [
   { size: 6, top: "10%", left: "5%", duration: 6, delay: 0 },
   { size: 10, top: "20%", right: "10%", duration: 8, delay: 1 },
   { size: 8, top: "60%", right: "20%", duration: 7, delay: 2 },
