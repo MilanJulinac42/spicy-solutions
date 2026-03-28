@@ -16,21 +16,12 @@ export const metadata: Metadata = {
     title: "Solvera | Vi vodite biznis, mi brinemo o tehnologiji",
     description:
       "Od sajtova do poslovnih sistema, AI chatbot-ova do automatizacije — isporučujemo tehnologiju koja pokreće vaš biznis napred.",
-    images: [
-      {
-        url: "/og-image.png",
-        width: 1200,
-        height: 630,
-        alt: "Solvera - IT rešenja za srpske biznise",
-      },
-    ],
   },
   twitter: {
     card: "summary_large_image",
     title: "Solvera | Vi vodite biznis, mi brinemo o tehnologiji",
     description:
       "Od sajtova do poslovnih sistema, AI chatbot-ova do automatizacije — isporučujemo tehnologiju koja pokreće vaš biznis napred.",
-    images: ["/og-image.png"],
   },
   icons: {
     icon: [
