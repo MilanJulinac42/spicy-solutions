@@ -28,7 +28,7 @@
       },
       "p3": {
         "title": "Outdated Tech Sold as Modern",
-        "description": "They sell you WordPress from 2015 and call it 'cutting-edge.' Meanwhile, your competitors are using AI and automation to move faster."
+        "description": "They sell you outdated tech from 2015 and call it 'cutting-edge.' Meanwhile, your competitors are using AI and automation to move faster."
       },
       "p4": {
         "title": "Vendor Lock-in by Design",
@@ -39,7 +39,7 @@
       "title": "There's a Better Way",
       "point1": "Transparent, fixed pricing — you know exactly what you're paying before we start",
       "point2": "You own everything — your code, your data, your hosting. No lock-in, ever",
-      "point3": "Modern tech stack — Next.js, AI, automation. Not recycled WordPress templates",
+      "point3": "Modern tech stack — Next.js, AI, automation. Built with technology that actually performs",
       "point4": "Direct access to the engineers who build your product. No middlemen, no account managers"
     },
     "cta": "Find Out If You're Overpaying"
@@ -126,7 +126,7 @@
     },
     "speed": {
       "title": "Modern Stack, Fast Delivery",
-      "description": "We use Next.js, AI, n8n, and the same tools top tech companies use. No recycled WordPress templates. Your project gets built with technology that actually performs."
+      "description": "We use Next.js, AI, n8n, and the same tools top tech companies use. Your project gets built with technology that actually performs."
     },
     "direct": {
       "title": "Transparent, Fixed Pricing",
@@ -227,7 +227,7 @@
       "title": "What We Stand For",
       "innovation": {
         "title": "Modern Tech Only",
-        "description": "No recycled WordPress templates from 2015. We use Next.js, AI, n8n, and the same tools Silicon Valley uses."
+        "description": "We use Next.js, AI, n8n — the same tools top tech companies use. Modern development, fast delivery."
       },
       "quality": {
         "title": "No-Compromise Quality",

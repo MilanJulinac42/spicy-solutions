@@ -1,7 +1,8 @@
 "use client";
 
+import { useState } from "react";
 import { useTranslations } from "next-intl";
-import { motion } from "framer-motion";
+import { AnimatePresence, motion } from "framer-motion";
 import {
   Globe,
   Building2,
@@ -13,6 +14,7 @@ import {
   Rocket,
   CheckCircle2,
   TrendingDown,
+  ArrowRight,
 } from "lucide-react";
 import { Container } from "@/components/ui/Container";
 import { SectionHeading } from "@/components/ui/SectionHeading";
@@ -21,8 +23,8 @@ import { CTABanner } from "@/components/sections/CTABanner";
 import { fadeInUp, fadeInLeft, fadeInRight, staggerContainer } from "@/lib/animations";
 import { services } from "@/data/services";
 import { ServiceIllustration } from "@/components/features/ServiceIllustration";
+import { ServiceDetailPanel } from "@/components/features/ServiceDetailPanel";
 import { Link } from "@/i18n/navigation";
-import { ArrowRight } from "lucide-react";
 
 const serviceIcons = {
   websites: Globe,
@@ -40,6 +42,7 @@ const processSteps = [
 
 export default function ServicesPage() {
   const t = useTranslations();
+  const [selectedService, setSelectedService] = useState<string | null>(null);
 
   return (
     <>
@@ -107,11 +110,19 @@ export default function ServicesPage() {
                     </div>
                   </div>
 
-                  <div className="flex flex-wrap gap-2">
+                  <div className="flex flex-wrap gap-2 mb-6">
                     {service.technologies.map((tech) => (
                       <Badge key={tech}>{tech}</Badge>
                     ))}
                   </div>
+
+                  <button
+                    onClick={() => setSelectedService(service.id)}
+                    className="inline-flex items-center gap-2 text-spicy-400 font-medium text-sm hover:text-spicy-300 transition-colors cursor-pointer group"
+                  >
+                    {t("Services.learnMore")}
+                    <ArrowRight className="w-4 h-4 group-hover:translate-x-1 transition-transform" />
+                  </button>
                 </motion.div>
 
                 {/* Visual */}
@@ -200,6 +211,16 @@ export default function ServicesPage() {
           </motion.div>
         </Container>
       </section>
+
+      {/* Service Detail Panel */}
+      <AnimatePresence>
+        {selectedService && (
+          <ServiceDetailPanel
+            serviceId={selectedService}
+            onClose={() => setSelectedService(null)}
+          />
+        )}
+      </AnimatePresence>
     </>
   );
 }

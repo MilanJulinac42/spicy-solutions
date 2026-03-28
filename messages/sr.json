@@ -126,7 +126,7 @@
     },
     "speed": {
       "title": "Moderan stack, brza isporuka",
-      "description": "Koristimo Next.js, AI, n8n i iste alate koje koriste vrhunske tech kompanije. Bez recikliranih WordPress šablona. Vaš projekat se gradi tehnologijom koja zaista radi."
+      "description": "Koristimo Next.js, AI, n8n i iste alate koje koriste vrhunske tech kompanije. Vaš projekat se gradi tehnologijom koja zaista radi."
     },
     "direct": {
       "title": "Direktna komunikacija",
@@ -151,6 +151,48 @@
         "f3": "Učitavanje ispod sekunde sa Next.js",
         "f4": "CMS uključen — ažurirajte sadržaj sami",
         "f5": "Sve je vaše: kod, domen, hosting"
+      },
+      "detail": {
+        "extendedDescription": "Bilo da vam treba jednostavan sajt za prezentaciju firme ili kompleksna web aplikacija sa korisničkim nalozima i dashboardom — mi pravimo rešenja koja izgledaju profesionalno, rade munjevito brzo i potpuno su vaša.",
+        "examplesTitle": "Šta sve radimo",
+        "examples": {
+          "e1": {
+            "title": "Landing page za vaš biznis",
+            "description": "Profesionalna prezentacija firme sa kontakt formom, SEO optimizacijom i brzim učitavanjem. Idealno za privlačenje novih klijenata."
+          },
+          "e2": {
+            "title": "E-commerce prodavnica",
+            "description": "Online prodavnica sa katalogom proizvoda, korpom, plaćanjem i praćenjem porudžbina. Sve što vam treba da počnete da prodajete online."
+          },
+          "e3": {
+            "title": "Web aplikacija sa dashboard-om",
+            "description": "Korisnički nalozi, admin panel, analitika u realnom vremenu. Za firme kojima treba više od prostog sajta."
+          },
+          "e4": {
+            "title": "Blog ili portfolio",
+            "description": "Sadržaj koji vi sami ažurirate bez programera. CMS ugrađen, SEO podešen, dizajn prilagođen vašem brendu."
+          }
+        },
+        "faqTitle": "Česta pitanja",
+        "faq": {
+          "q1": {
+            "question": "Koliko traje izrada sajta?",
+            "answer": "Brzo. Landing page 2-5 dana, e-commerce 1-2 nedelje, web aplikacija 2-4 nedelje. Kompleksnije aplikacije mogu trajati duže — dobijate jasan rok pre početka."
+          },
+          "q2": {
+            "question": "Ko je vlasnik koda i sajta?",
+            "answer": "Vi. Kompletno. Kod, domen, hosting — sve je vaše od prvog dana. Nikada niste zaključani kod nas."
+          },
+          "q3": {
+            "question": "Da li mogu sam da menjam sadržaj?",
+            "answer": "Da! Svaki sajt dolazi sa CMS-om gde možete menjati tekstove, slike i stranice bez ikakvog tehničkog znanja."
+          },
+          "q4": {
+            "question": "Šta ako mi treba nešto specifično?",
+            "answer": "Javite nam se za besplatan audit — analiziramo šta vam treba i dajemo jasan predlog sa rokovima i cenama."
+          }
+        },
+        "ctaText": "Zakažite besplatan razgovor"
       }
     },
     "enterprise": {
@@ -163,6 +205,48 @@
         "f3": "Kontrola pristupa i bezbednost zasnovana na ulogama",
         "f4": "CI/CD pipeline-ovi i automatski deployment",
         "f5": "Kompletna dokumentacija i predaja izvornog koda"
+      },
+      "detail": {
+        "extendedDescription": "Vaš biznis ima specifične potrebe koje gotova rešenja ne pokrivaju. Mi gradimo sisteme koji se savršeno uklapaju u vaš način rada — od internih alata i dashboard-ova do kompleksnih SaaS platformi.",
+        "examplesTitle": "Šta sve radimo",
+        "examples": {
+          "e1": {
+            "title": "Interni poslovni alati",
+            "description": "CRM, ERP, sistemi za upravljanje zalihama ili zaposlenima — prilagođeni tačno vašem procesu rada, bez nepotrebnih funkcija."
+          },
+          "e2": {
+            "title": "SaaS platforma",
+            "description": "Vaša ideja pretvorena u proizvod sa korisničkim nalozima, plaćanjem, admin panelom i svim što vam treba za lansiranje."
+          },
+          "e3": {
+            "title": "Dashboard i analitika",
+            "description": "Svi vaši podaci na jednom mestu. Grafici, izveštaji, KPI-jevi u realnom vremenu — donosite odluke na osnovu podataka, ne intuicije."
+          },
+          "e4": {
+            "title": "API integracije",
+            "description": "Povezujemo vaše postojeće sisteme da komuniciraju jedni sa drugima. ERP sa e-commerce-om, CRM sa email platformom — bez ručnog prebacivanja podataka."
+          }
+        },
+        "faqTitle": "Česta pitanja",
+        "faq": {
+          "q1": {
+            "question": "Koliko traje razvoj poslovnog sistema?",
+            "answer": "MVP obično 1-3 nedelje, kompletniji sistem 4-8 nedelja. Za veće projekte sa mnogo integracija može biti i duže — pre početka dobijate jasan plan sa milestones i rokovima."
+          },
+          "q2": {
+            "question": "Da li može da se integriše sa našim postojećim alatima?",
+            "answer": "Da. Integrišemo se sa bilo kojim sistemom koji ima API — ERP, CRM, accounting softver, email platforme, baze podataka."
+          },
+          "q3": {
+            "question": "Šta se dešava kad sistem treba da se proširi?",
+            "answer": "Gradimo sa skalabilnošću na umu od prvog dana. Dodavanje novih funkcionalnosti je jednostavno jer je arhitektura čista i dokumentovana."
+          },
+          "q4": {
+            "question": "Ko održava sistem posle isporuke?",
+            "answer": "Vi imate kompletan kod i dokumentaciju. Nudimo opcionalnu podršku i održavanje, ali nikada niste zaključani."
+          }
+        },
+        "ctaText": "Zakažite besplatan razgovor"
       }
     },
     "ai": {
@@ -175,6 +259,48 @@
         "f3": "Baza znanja koja uči i poboljšava se vremenom",
         "f4": "24/7 podrška korisnicima bez zapošljavanja novih ljudi",
         "f5": "Merljiv rezultat već prvog meseca"
+      },
+      "detail": {
+        "extendedDescription": "AI nije budućnost — to je sadašnjost. Mi implementiramo konkretna AI rešenja koja vaš tim koristi od prvog dana: chatbot-ove koji znaju vaš posao, automatsku obradu dokumenata i inteligentnu pretragu.",
+        "examplesTitle": "Šta sve radimo",
+        "examples": {
+          "e1": {
+            "title": "RAG chatbot za korisničku podršku",
+            "description": "Chatbot obučen na vašoj dokumentaciji, FAQ-u i bazi znanja. Odgovara na pitanja klijenata 24/7, tačno i na vašem jeziku."
+          },
+          "e2": {
+            "title": "Interni AI asistent za zaposlene",
+            "description": "Vaš tim pita AI umesto da pretražuje dokumente. Politike firme, procedure, specifikacije — sve dostupno u sekundi."
+          },
+          "e3": {
+            "title": "Automatska obrada dokumenata",
+            "description": "Fakture, ugovori, prijave — AI čita, izvlači podatke i unosi ih u vaš sistem. Bez ručnog kucanja."
+          },
+          "e4": {
+            "title": "Inteligentna pretraga podataka",
+            "description": "Pretražujte hiljade dokumenata prirodnim jezikom. AI razume kontekst i vraća tačne rezultate, ne samo ključne reči."
+          }
+        },
+        "faqTitle": "Česta pitanja",
+        "faq": {
+          "q1": {
+            "question": "Da li su moji podaci bezbedni?",
+            "answer": "Apsolutno. Možemo hostovati AI na vašim serverima — vaši podaci nikada ne napuštaju vašu infrastrukturu. Ili koristimo enkriptovane cloud servise."
+          },
+          "q2": {
+            "question": "Koliko je chatbot tačan?",
+            "answer": "RAG chatbot-ovi odgovaraju na osnovu vaših dokumenata, ne izmišljaju. Tačnost je obično 90%+, a poboljšava se vremenom sa feedbackom."
+          },
+          "q3": {
+            "question": "Na kojim jezicima radi?",
+            "answer": "Srpski, engleski i svi veliki svetski jezici. AI razume kontekst i nijanse svakog jezika."
+          },
+          "q4": {
+            "question": "Koliko brzo mogu da počnem?",
+            "answer": "Prototip chatbota možemo imati za par dana. Kompletno rešenje sa integracijom obično 1-3 nedelje, zavisno od obima podataka i broja integracija."
+          }
+        },
+        "ctaText": "Zakažite besplatan razgovor"
       }
     },
     "automation": {
@@ -187,8 +313,52 @@
         "f3": "Automatska sinhronizacija podataka, izveštavanje i obaveštenja",
         "f4": "Zakazani zadaci koji rade 24/7 bez ljudske intervencije",
         "f5": "Self-hosted: vaši podaci ostaju na vašim serverima"
+      },
+      "detail": {
+        "extendedDescription": "Koliko sati nedeljno vaš tim troši na ponavljajuće zadatke? Prebacivanje podataka iz jednog sistema u drugi, slanje izveštaja, ažuriranje tabela. Mi to automatizujemo sa n8n — vaš tim radi pametnije, ne više.",
+        "examplesTitle": "Šta sve radimo",
+        "examples": {
+          "e1": {
+            "title": "Sinhronizacija podataka između sistema",
+            "description": "Nova porudžbina u e-shopu → automatski se kreira u ERP-u, šalje se email kupcu, ažurira se stanje zaliha. Bez ljudske intervencije."
+          },
+          "e2": {
+            "title": "Automatsko izveštavanje",
+            "description": "Dnevni, nedeljni ili mesečni izveštaji koji se sami generišu i šalju na email ili Slack. Uvek tačni, uvek na vreme."
+          },
+          "e3": {
+            "title": "Lead management workflow",
+            "description": "Novi kontakt sa sajta → automatski ulazi u CRM, tim dobija obaveštenje, šalje se welcome email. Nijedan lead ne prolazi neprimećen."
+          },
+          "e4": {
+            "title": "Automatizacija fakturisanja",
+            "description": "Generisanje faktura, slanje klijentima, praćenje plaćanja i automatski podsetnici za neplaćene račune."
+          }
+        },
+        "faqTitle": "Česta pitanja",
+        "faq": {
+          "q1": {
+            "question": "Šta je n8n?",
+            "answer": "n8n je open-source platforma za automatizaciju — zamislite je kao LEGO za poslovne procese. Povezuje vaše alate i automatizuje tokove rada vizuelno, bez kodiranja."
+          },
+          "q2": {
+            "question": "Koje aplikacije mogu da povežem?",
+            "answer": "Preko 400 integracija: Gmail, Slack, Google Sheets, Notion, HubSpot, Stripe, PostgreSQL, i bilo koji servis sa API-jem."
+          },
+          "q3": {
+            "question": "Gde se čuvaju moji podaci?",
+            "answer": "n8n je self-hosted — instaliramo ga na vašem serveru. Vaši podaci nikada ne prolaze kroz treće strane."
+          },
+          "q4": {
+            "question": "Koliko košta održavanje?",
+            "answer": "n8n je besplatan softver. Plaćate samo server (nekoliko evra mesečno) i opcionalnu podršku od nas. Bez mesečnih pretplata za softver."
+          }
+        },
+        "ctaText": "Zakažite besplatan razgovor"
       }
     },
+    "detailComingSoon": "Detaljnije informacije uskoro dolaze. U međuvremenu, javite nam se za besplatan razgovor.",
+    "learnMore": "Saznajte više",
     "process": {
       "title": "Kako radimo",
       "subtitle": "Jednostavan proces. Bez misterije. Bez iznenađenja.",
@@ -227,7 +397,7 @@
       "title": "U šta verujemo",
       "innovation": {
         "title": "Samo moderna tehnologija",
-        "description": "Nema recikliranih WordPress šablona iz 2015. Koristimo Next.js, AI, n8n — iste alate koje koristi Silicijumska dolina."
+        "description": "Koristimo Next.js, AI, n8n — iste alate koje koriste vrhunske tech kompanije. Moderan razvoj, brza isporuka."
       },
       "quality": {
         "title": "Kvalitet bez kompromisa",
