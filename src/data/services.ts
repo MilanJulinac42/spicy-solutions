@@ -13,7 +13,7 @@ export const services: Service[] = [
       "Services.websites.features.f4",
       "Services.websites.features.f5",
     ],
-    technologies: ["Next.js", "WordPress", "Tailwind CSS", "React"],
+    technologies: ["Next.js", "React", "TypeScript", "Tailwind CSS", "Vercel"],
   },
   {
     id: "enterprise",
@@ -27,7 +27,7 @@ export const services: Service[] = [
       "Services.enterprise.features.f4",
       "Services.enterprise.features.f5",
     ],
-    technologies: ["Node.js", "PostgreSQL", "Docker", "TypeScript"],
+    technologies: ["Node.js", ".NET", "PostgreSQL", "MongoDB", "Redis", "Docker", "AWS"],
   },
   {
     id: "ai",
@@ -41,7 +41,7 @@ export const services: Service[] = [
       "Services.ai.features.f4",
       "Services.ai.features.f5",
     ],
-    technologies: ["OpenAI", "LangChain", "Python", "Pinecone"],
+    technologies: ["OpenAI", "LangChain", "Python", "PostgreSQL"],
   },
   {
     id: "automation",
