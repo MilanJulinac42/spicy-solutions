@@ -1,6 +1,6 @@
 import { createClient } from "@supabase/supabase-js";
 import dotenv from "dotenv";
-dotenv.config({ path: ".env.locale" });
+dotenv.config({ path: ".env.local" });
 
 async function setupDatabase() {
   const supabase = createClient(
