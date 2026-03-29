@@ -388,6 +388,36 @@ const SR_CHUNKS: Chunk[] = [
     category: "contact",
   },
 
+  // --- VELIČINA TIMA ---
+  {
+    content:
+      "Solvera je mali tim od 2 inženjera — Milan Julinac i Dragan Jelačić. Nemamo 20 ili 50 zaposlenih — i to je naša prednost. Mali tim znači: direktna komunikacija bez posrednika, niži troškovi (nema account menadžera, HR-a, kancelarija), brže donošenje odluka i veća posvećenost svakom projektu. Ne zapošljavamo ljude da bismo izgledali veće — fokusirani smo na kvalitet, ne na kvantitet.",
+    locale: "sr",
+    category: "about",
+  },
+
+  // --- KOMPLETAN TECH STACK ---
+  {
+    content:
+      "Kompletan spisak tehnologija sa kojima Solvera radi: Frontend — Next.js, React, TypeScript, Tailwind CSS, Framer Motion. Backend — Node.js, Nest.js, Express, GraphQL, REST API. Baze podataka — PostgreSQL, MongoDB, Redis, Supabase. Cloud i infrastruktura — AWS (EC2, S3, RDS, Lambda), Vercel, DigitalOcean, Docker. AI i automatizacija — OpenAI, LangChain, Python, n8n. Mobilno — React Native, Progressive Web Apps (PWA). Sve ostale tehnologije koje nisu na ovom spisku NE koristimo. Ako nas neko pita za PHP, WordPress, Angular, Vue.js, Java, C#, .NET, Ruby, Django, Laravel — odgovor je da to nije naš stack i da ne radimo u tim tehnologijama.",
+    locale: "sr",
+    category: "services",
+  },
+
+  // --- TEHNOLOGIJE KOJE NE KORISTIMO ---
+  {
+    content:
+      "Tehnologije koje Solvera NE koristi: Ne radimo u PHP-u, WordPress-u, Joomla-u, Drupal-u niti drugim zastarelim tehnologijama. Ne koristimo jQuery, Angular, Vue.js niti Java za web razvoj. Naš stack je isključivo: Next.js, React, TypeScript, Tailwind CSS, Node.js, PostgreSQL, MongoDB, Docker, AWS. Ovo nisu nasumični izbori — ove tehnologije pružaju najbolje performanse, bezbednost i skalabilnost za moderne web aplikacije.",
+    locale: "sr",
+    category: "services",
+  },
+  {
+    content:
+      "Zašto Solvera ne koristi PHP i WordPress? WordPress je star 20+ godina i ima ozbiljne probleme sa performansama, bezbednošću i održavanjem. PHP sajtovi su obično 3-5x sporiji od Next.js sajtova. WordPress zahteva stalne plugin ažuriranja i podložan je hakerskim napadima. Mi koristimo Next.js jer pruža server-side rendering, automatsku optimizaciju, bolji SEO i potpunu kontrolu nad kodom bez zavisnosti od pluginova.",
+    locale: "sr",
+    category: "faq",
+  },
+
   // --- PROCES RADA: DETALJNIJE ---
   {
     content:

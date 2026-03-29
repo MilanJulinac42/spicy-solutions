@@ -75,6 +75,12 @@ export function ChatWidget() {
     setShowTooltip(false);
   }
 
+  function handleReset() {
+    nextId.current = 2;
+    const greeting = [{ id: 1, role: "assistant" as const, content: t("greeting") }];
+    saveMessages(greeting);
+  }
+
   if (!isVisible) return null;
 
   return (
@@ -83,6 +89,7 @@ export function ChatWidget() {
         {isOpen && (
           <ChatPanel
             onClose={() => setIsOpen(false)}
+            onReset={handleReset}
             messages={messages}
             setMessages={saveMessages}
             nextId={nextId}

@@ -2,7 +2,7 @@
 
 import { useState, useRef, useEffect, useCallback, type MutableRefObject } from "react";
 import { motion } from "framer-motion";
-import { X, Send } from "lucide-react";
+import { X, Send, RotateCcw } from "lucide-react";
 import { useTranslations, useLocale } from "next-intl";
 import { ChatMessage } from "./ChatMessage";
 import { TypingIndicator } from "./TypingIndicator";
@@ -15,12 +15,13 @@ type Message = {
 
 type ChatPanelProps = {
   onClose: () => void;
+  onReset: () => void;
   messages: Message[];
   setMessages: (msgs: Message[]) => void;
   nextId: MutableRefObject<number>;
 };
 
-export function ChatPanel({ onClose, messages, setMessages, nextId }: ChatPanelProps) {
+export function ChatPanel({ onClose, onReset, messages, setMessages, nextId }: ChatPanelProps) {
   const t = useTranslations("Chat");
   const locale = useLocale();
   const [input, setInput] = useState("");
@@ -28,6 +29,8 @@ export function ChatPanel({ onClose, messages, setMessages, nextId }: ChatPanelP
   const messagesEndRef = useRef<HTMLDivElement>(null);
   const inputRef = useRef<HTMLTextAreaElement>(null);
   const abortRef = useRef<AbortController | null>(null);
+
+  const showSuggestions = messages.length <= 1 && !isTyping;
 
   const scrollToBottom = useCallback(() => {
     messagesEndRef.current?.scrollIntoView({ behavior: "smooth" });
@@ -48,14 +51,14 @@ export function ChatPanel({ onClose, messages, setMessages, nextId }: ChatPanelP
     };
   }, []);
 
-  async function handleSend() {
-    const text = input.trim();
-    if (!text || isTyping) return;
+  async function handleSend(text?: string) {
+    const msgText = (text || input).trim();
+    if (!msgText || isTyping) return;
 
     const userMsg: Message = {
       id: nextId.current++,
       role: "user",
-      content: text,
+      content: msgText,
     };
     const updatedMessages = [...messages, userMsg];
     setMessages(updatedMessages);
@@ -191,13 +194,23 @@ export function ChatPanel({ onClose, messages, setMessages, nextId }: ChatPanelP
           <h3 className="text-white font-semibold text-sm">{t("title")}</h3>
           <p className="text-white/70 text-xs">{t("subtitle")}</p>
         </div>
-        <button
-          onClick={onClose}
-          className="w-8 h-8 flex items-center justify-center rounded-full hover:bg-white/20 transition-colors"
-          aria-label={t("close")}
-        >
-          <X className="w-4 h-4 text-white" />
-        </button>
+        <div className="flex items-center gap-1">
+          <button
+            onClick={onReset}
+            className="w-8 h-8 flex items-center justify-center rounded-full hover:bg-white/20 transition-colors"
+            aria-label={t("newChat")}
+            title={t("newChat")}
+          >
+            <RotateCcw className="w-3.5 h-3.5 text-white" />
+          </button>
+          <button
+            onClick={onClose}
+            className="w-8 h-8 flex items-center justify-center rounded-full hover:bg-white/20 transition-colors"
+            aria-label={t("close")}
+          >
+            <X className="w-4 h-4 text-white" />
+          </button>
+        </div>
       </div>
 
       {/* Messages */}
@@ -205,6 +218,22 @@ export function ChatPanel({ onClose, messages, setMessages, nextId }: ChatPanelP
         {messages.map((msg) => (
           <ChatMessage key={msg.id} role={msg.role} content={msg.content} />
         ))}
+
+        {/* Suggested questions */}
+        {showSuggestions && (
+          <div className="flex flex-col gap-2 mt-2">
+            {(["q1", "q2", "q3"] as const).map((key) => (
+              <button
+                key={key}
+                onClick={() => handleSend(t(key))}
+                className="text-left text-sm px-3 py-2 rounded-lg border border-border-default bg-surface-secondary hover:border-spicy-400/40 hover:bg-surface-tertiary transition-colors text-foreground-secondary"
+              >
+                {t(key)}
+              </button>
+            ))}
+          </div>
+        )}
+
         {isTyping && <TypingIndicator />}
         <div ref={messagesEndRef} />
       </div>
@@ -227,7 +256,7 @@ export function ChatPanel({ onClose, messages, setMessages, nextId }: ChatPanelP
             style={{ maxHeight: "120px" }}
           />
           <button
-            onClick={handleSend}
+            onClick={() => handleSend()}
             disabled={!input.trim() || isTyping}
             className="w-10 h-10 flex items-center justify-center rounded-lg bg-spicy-400 text-white hover:bg-spicy-500 disabled:opacity-40 disabled:cursor-not-allowed transition-colors shrink-0"
             aria-label={t("send")}

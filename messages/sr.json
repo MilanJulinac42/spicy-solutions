@@ -636,6 +636,10 @@
     "send": "Pošalji",
     "greeting": "Zdravo! 👋 Ja sam Solvera asistent. Kako vam mogu pomoći? Pitajte me o našim uslugama, cenama ili procesu rada.",
     "poweredBy": "Pokreće Solvera AI",
-    "close": "Zatvori"
+    "close": "Zatvori",
+    "newChat": "Nova konverzacija",
+    "q1": "Koliko košta izrada sajta?",
+    "q2": "Koje usluge nudite?",
+    "q3": "Koji je rok isporuke?"
   }
 }

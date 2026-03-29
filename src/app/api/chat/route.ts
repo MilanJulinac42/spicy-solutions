@@ -5,8 +5,42 @@ import { buildSystemPrompt } from "@/lib/chatSystemPrompt";
 
 const openai = new OpenAI({ apiKey: process.env.OPENAI_API_KEY });
 
+// --- Rate limiting (in-memory, per IP) ---
+const rateLimit = new Map<string, { count: number; resetAt: number }>();
+const RATE_LIMIT_WINDOW = 60_000; // 1 minute
+const RATE_LIMIT_MAX = 10; // max 10 requests per minute per IP
+
+function isRateLimited(ip: string): boolean {
+  const now = Date.now();
+  const entry = rateLimit.get(ip);
+
+  if (!entry || now > entry.resetAt) {
+    rateLimit.set(ip, { count: 1, resetAt: now + RATE_LIMIT_WINDOW });
+    return false;
+  }
+
+  entry.count++;
+  return entry.count > RATE_LIMIT_MAX;
+}
+
+// Cleanup stale entries every 5 minutes
+setInterval(() => {
+  const now = Date.now();
+  for (const [ip, entry] of rateLimit) {
+    if (now > entry.resetAt) rateLimit.delete(ip);
+  }
+}, 300_000);
+
 export async function POST(req: NextRequest) {
   try {
+    // Rate limit check
+    const ip = req.headers.get("x-forwarded-for")?.split(",")[0]?.trim() || "unknown";
+    if (isRateLimited(ip)) {
+      return new Response("Previše zahteva. Pokušajte ponovo za minut.", {
+        status: 429,
+      });
+    }
+
     const { messages, locale = "sr" } = await req.json();
 
     if (!messages || !Array.isArray(messages) || messages.length === 0) {

@@ -466,6 +466,10 @@
     "send": "Send",
     "greeting": "Hi there! 👋 I'm the Solvera assistant. How can I help you? Ask me about our services, pricing, or how we work.",
     "poweredBy": "Powered by Solvera AI",
-    "close": "Close"
+    "close": "Close",
+    "newChat": "New conversation",
+    "q1": "How much does a website cost?",
+    "q2": "What services do you offer?",
+    "q3": "What is the delivery timeline?"
   }
 }
