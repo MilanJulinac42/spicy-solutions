@@ -457,5 +457,15 @@
     "contactUs": "Get a Free Audit",
     "viewProject": "View Project",
     "readMore": "Read More"
+  },
+  "Chat": {
+    "tooltip": "Have a question? Ask us!",
+    "title": "Solvera AI",
+    "subtitle": "Your AI assistant",
+    "placeholder": "Type a message...",
+    "send": "Send",
+    "greeting": "Hi there! 👋 I'm the Solvera assistant. How can I help you? Ask me about our services, pricing, or how we work.",
+    "poweredBy": "Powered by Solvera AI",
+    "close": "Close"
   }
 }

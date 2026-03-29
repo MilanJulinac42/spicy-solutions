@@ -10,6 +10,7 @@ import { Footer } from "@/components/layout/Footer";
 import { ScrollProgress } from "@/components/ui/ScrollProgress";
 import { BackToTop } from "@/components/ui/BackToTop";
 import { WhatsAppButton } from "@/components/ui/WhatsAppButton";
+import { ChatWidget } from "@/components/chat/ChatWidget";
 import { PageLoaderProvider } from "@/components/ui/PageLoaderProvider";
 import "@/app/globals.css";
 
@@ -59,6 +60,7 @@ export default async function LocaleLayout({
               <Footer />
               <BackToTop />
               <WhatsAppButton />
+              <ChatWidget />
             </PageLoaderProvider>
             <Script
               src="https://www.googletagmanager.com/gtag/js?id=G-WDNDKK0PBT"

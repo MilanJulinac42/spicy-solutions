@@ -627,5 +627,15 @@
     "contactUs": "Besplatna konsultacija",
     "viewProject": "Pogledaj projekat",
     "readMore": "Pročitajte više"
+  },
+  "Chat": {
+    "tooltip": "Imate pitanje? Pitajte nas!",
+    "title": "Solvera AI",
+    "subtitle": "Vaš AI asistent",
+    "placeholder": "Napišite poruku...",
+    "send": "Pošalji",
+    "greeting": "Zdravo! 👋 Ja sam Solvera asistent. Kako vam mogu pomoći? Pitajte me o našim uslugama, cenama ili procesu rada.",
+    "poweredBy": "Pokreće Solvera AI",
+    "close": "Zatvori"
   }
 }
