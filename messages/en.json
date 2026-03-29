@@ -319,6 +319,7 @@
       "name": "Your Name",
       "email": "Email Address",
       "company": "Company",
+      "optional": "optional",
       "service": "What are you interested in?",
       "serviceOptions": {
         "select": "Choose one",

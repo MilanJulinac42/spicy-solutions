@@ -77,7 +77,7 @@ export function ContactForm() {
 
       <motion.div variants={fadeInUp}>
         <label className="block text-sm font-medium text-foreground mb-1.5">
-          {t("company")}
+          {t("company")} <span className="text-foreground-muted font-normal">({t("optional")})</span>
         </label>
         <input
           type="text"

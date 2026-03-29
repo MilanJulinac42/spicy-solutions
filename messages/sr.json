@@ -489,6 +489,7 @@
       "name": "Vaše ime",
       "email": "Email adresa",
       "company": "Kompanija",
+      "optional": "opciono",
       "service": "Šta vas zanima?",
       "serviceOptions": {
         "select": "Izaberite opciju",
