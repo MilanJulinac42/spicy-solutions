@@ -11,7 +11,7 @@ export const siteConfig = {
   name: "Solvera",
   description: "Vi vodite biznis, mi brinemo o tehnologiji",
   url: "https://solveradev.rs",
-  email: "milanjulinac996@gmail.com",
+  email: "info@solveradev.rs",
   phone: "+381 63 838 4196",
   address: "Novi Sad, Srbija",
   socials: {
