@@ -32,13 +32,13 @@ export function WhatsAppButton() {
   if (!isVisible) return null;
 
   return (
-    <div className="fixed bottom-6 left-6 z-40 flex items-end gap-3">
+    <div className="fixed bottom-6 left-6 z-40 flex flex-col items-start gap-2">
       <AnimatePresence>
         {showTooltip && (
           <motion.div
-            initial={{ opacity: 0, x: -10, scale: 0.9 }}
-            animate={{ opacity: 1, x: 0, scale: 1 }}
-            exit={{ opacity: 0, x: -10, scale: 0.9 }}
+            initial={{ opacity: 0, y: 10, scale: 0.9 }}
+            animate={{ opacity: 1, y: 0, scale: 1 }}
+            exit={{ opacity: 0, y: 10, scale: 0.9 }}
             className="relative bg-white text-gray-800 px-4 py-2.5 rounded-xl shadow-lg text-sm font-medium max-w-[200px]"
           >
             Pišite nam na WhatsApp!
@@ -48,8 +48,8 @@ export function WhatsAppButton() {
             >
               <X className="w-3 h-3 text-gray-600" />
             </button>
-            {/* Arrow */}
-            <div className="absolute right-[-6px] top-1/2 -translate-y-1/2 w-0 h-0 border-t-[6px] border-t-transparent border-b-[6px] border-b-transparent border-l-[6px] border-l-white" />
+            {/* Arrow pointing down */}
+            <div className="absolute bottom-[-6px] left-5 w-0 h-0 border-l-[6px] border-l-transparent border-r-[6px] border-r-transparent border-t-[6px] border-t-white" />
           </motion.div>
         )}
       </AnimatePresence>
