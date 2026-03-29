@@ -80,7 +80,7 @@ export default function ContactPage() {
                     <Mail className="w-5 h-5" />
                   </div>
                   <div>
-                    <p className="text-sm text-foreground-muted mb-1">Email</p>
+                    <p className="text-sm text-foreground-muted mb-1">{t("Contact.info.emailLabel")}</p>
                     <a
                       href={`mailto:${siteConfig.email}`}
                       className="text-foreground hover:text-spicy-400 transition-colors"
@@ -95,7 +95,7 @@ export default function ContactPage() {
                     <Phone className="w-5 h-5" />
                   </div>
                   <div>
-                    <p className="text-sm text-foreground-muted mb-1">Phone</p>
+                    <p className="text-sm text-foreground-muted mb-1">{t("Contact.info.phoneLabel")}</p>
                     <span className="text-foreground">
                       {t("Contact.info.phone")}
                     </span>
@@ -108,7 +108,7 @@ export default function ContactPage() {
                   </div>
                   <div>
                     <p className="text-sm text-foreground-muted mb-1">
-                      Address
+                      {t("Contact.info.addressLabel")}
                     </p>
                     <span className="text-foreground">
                       {t("Contact.info.address")}

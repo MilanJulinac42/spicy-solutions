@@ -507,8 +507,11 @@
     },
     "info": {
       "title": "Kontakt informacije",
+      "emailLabel": "Imejl",
       "email": "info@solveradev.rs",
+      "phoneLabel": "Telefon",
       "phone": "+381 63 838 4196",
+      "addressLabel": "Adresa",
       "address": "Novi Sad, Srbija",
       "social": "Pratite nas"
     }
