@@ -97,7 +97,7 @@ const SR_CHUNKS: Chunk[] = [
   // --- O NAMA ---
   {
     content:
-      "Solvera su dva inženjera iz Novog Sada, Srbija, koji veruju da srpski biznisi zaslužuju brži, kvalitetniji IT. Tim: Milan Julinac (suosnivač, 5+ godina iskustva, 20+ projekata, ekspert za React, Next.js, TypeScript, Node.js, PostgreSQL, MongoDB, AWS, Docker) i Dragan Jelačić (suosnivač, pravi moderne web platforme i automatizuje poslovne procese). Vrednosti: moderna tehnologija, kvalitet bez kompromisa, radikalna transparentnost, vaš kod i vaši podaci.",
+      "Solvera je tim iz Novog Sada, Srbija, koji veruje da srpski biznisi zaslužuju brži, kvalitetniji IT. Tim: Milan Julinac (suosnivač, 5+ godina iskustva, 20+ projekata, ekspert za React, Next.js, TypeScript, Node.js, PostgreSQL, MongoDB, AWS, Docker) i Dragan Jelačić (suosnivač, pravi moderne web platforme i automatizuje poslovne procese). Vrednosti: moderna tehnologija, kvalitet bez kompromisa, radikalna transparentnost, vaš kod i vaši podaci.",
     locale: "sr",
     category: "about",
   },
@@ -227,7 +227,7 @@ const SR_CHUNKS: Chunk[] = [
   },
   {
     content:
-      "Solvera vs. freelancer: Za razliku od pojedinačnih freelancera, Solvera je tim od dva inženjera koji se međusobno dopunjuju. Prednosti: backup ako je jedan nedostupan, code review za bolji kvalitet, širi spektar tehnologija, profesionalna dokumentacija i strukturisan proces. Nema rizika da projekat stane ako freelancer nestane.",
+      "Solvera vs. freelancer: Za razliku od pojedinačnih freelancera, Solvera je tim koji se međusobno dopunjuje. Prednosti: backup ako je jedan nedostupan, code review za bolji kvalitet, širi spektar tehnologija, profesionalna dokumentacija i strukturisan proces. Nema rizika da projekat stane ako freelancer nestane.",
     locale: "sr",
     category: "about",
   },
@@ -391,7 +391,7 @@ const SR_CHUNKS: Chunk[] = [
   // --- VELIČINA TIMA ---
   {
     content:
-      "Solvera je mali tim od 2 inženjera — Milan Julinac i Dragan Jelačić. Nemamo 20 ili 50 zaposlenih — i to je naša prednost. Mali tim znači: direktna komunikacija bez posrednika, niži troškovi (nema account menadžera, HR-a, kancelarija), brže donošenje odluka i veća posvećenost svakom projektu. Ne zapošljavamo ljude da bismo izgledali veće — fokusirani smo na kvalitet, ne na kvantitet.",
+      "Solvera je mali, fokusiran tim. Nemamo 20 ili 50 zaposlenih — i to je naša prednost. Mali tim znači: direktna komunikacija bez posrednika, niži troškovi (nema account menadžera, HR-a, kancelarija), brže donošenje odluka i veća posvećenost svakom projektu. Ne zapošljavamo ljude da bismo izgledali veće — fokusirani smo na kvalitet, ne na kvantitet.",
     locale: "sr",
     category: "about",
   },
