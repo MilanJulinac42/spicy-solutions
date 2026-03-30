@@ -63,7 +63,7 @@ export function Hero() {
           className="space-y-8"
         >
           {/* Badge with shimmer */}
-          <motion.div variants={fadeInUp}>
+          <motion.div variants={fadeInUp} className="hidden sm:block">
             <span className="relative inline-flex items-center gap-2 px-4 py-1.5 rounded-full text-sm font-medium bg-spicy-400/10 text-spicy-400 overflow-hidden">
               <span className="absolute inset-0 rounded-full border border-spicy-400/20" />
               <span className="absolute inset-0 rounded-full shimmer-border opacity-30" />
