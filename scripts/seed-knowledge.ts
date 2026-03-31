@@ -431,6 +431,112 @@ const SR_CHUNKS: Chunk[] = [
     locale: "sr",
     category: "process",
   },
+
+  // ============================================================
+  // SALES & KONVERZIJA — chunk-ovi za bolje ubеđivanje
+  // ============================================================
+
+  // --- OBJECTION HANDLING ---
+  {
+    content:
+      "Kada klijent kaže 'preskupo je': Razmislite koliko vas košta da NEMATE sajt. Istraživanja pokazuju da 80% kupaca u Srbiji pretražuje firmu online pre nego što pozove ili dođe. Bez sajta, gubite te ljude — oni odu kod konkurencije koja ima online prisustvo. Sajt od 250 EUR se isplati već sa 2-3 nova klijenta koje dobijete preko njega. Plus, sajt radi za vas 24/7 — to je najjeftiniji 'zaposleni' kojeg ćete ikada imati.",
+    locale: "sr",
+    category: "sales",
+  },
+  {
+    content:
+      "Kada klijent kaže 'imam već sajt': Ako vam sajt učitava duže od 3 sekunde, 53% posetilaca ga napušta pre nego što vidi sadržaj. Google aktivno penalizuje spore sajtove — gurate se na drugu ili treću stranu rezultata. Stari WordPress sajt sa 15 pluginova je bezbednosni rizik i troši vam novac na održavanje. Besplatna konsultacija uključuje analizu vašeg trenutnog sajta — pokazaćemo vam tačno šta gubite i kako da popravite.",
+    locale: "sr",
+    category: "sales",
+  },
+  {
+    content:
+      "Kada klijent kaže 'nemam vremena za to sad': Razumemo, posao je na prvom mestu. Zato smo napravili proces koji zahteva minimalno vašeg vremena — bukvalno 2-3 kratka poziva od po 30 minuta. Mi vodimo sve: dizajn, razvoj, sadržaj, lansiranje. Vi samo odobrite i dajete feedback. Većina klijenata je iznenađena koliko je lako kad tim preuzme sve.",
+    locale: "sr",
+    category: "sales",
+  },
+  {
+    content:
+      "Kada klijent kaže 'pokušaću sam sa Wix ili WordPress': Wix i WordPress izgledaju jeftino na početku, ali skriveni troškovi brzo rastu. Premium template: 50-100 EUR. Pluginovi za SEO, kontakt forme, backup: 100-300 EUR godišnje. Sporo učitavanje jer WordPress koristi PHP iz 2004. Bezbednosni rizici — WordPress je meta #1 za hakere (43% svih hakovanih sajtova su WordPress). Na kraju potrošite više vremena i novca nego da ste odmah uzeli profesionalan sajt.",
+    locale: "sr",
+    category: "sales",
+  },
+  {
+    content:
+      "Kada klijent kaže 'treba mi samo jednostavan sajt': Čak i najjednostavniji sajt treba da radi posao — da privuče posetioce, da ih ubedi i da ih pretvori u klijente. Sajt koji samo postoji ali ne konvertuje je bačen novac. Mi pravimo sajtove koji su optimizovani za konverziju: jasan poziv na akciju, brzo učitavanje, SEO od prvog dana, kontakt forma koja radi. Landing page od 250 EUR koji vam donese 5 novih klijenata mesečno — to je investicija, ne trošak.",
+    locale: "sr",
+    category: "sales",
+  },
+
+  // --- ROI I BUSINESS CASE ---
+  {
+    content:
+      "Koliko košta firma BEZ sajta ili sa lošim sajtom: 93% kupovnih odluka počinje pretragom na internetu. Firma bez sajta je nevidljiva za te ljude. U Srbiji, e-commerce raste 20-30% godišnje. Firme sa profesionalnim sajtom prijavljuju 40-60% više upita nego firme bez online prisustva. Svaka sekunda sporijeg učitavanja sajta smanjuje konverziju za 7%. Sajt od 250-400 EUR koji vam donese samo 3-4 nova klijenta mesečno se isplati višestruko.",
+    locale: "sr",
+    category: "sales",
+  },
+  {
+    content:
+      "ROI primeri iz prakse: Restoran sa online rezervacijom i digitalnim menijem — 30% više rezervacija u prvom mesecu. Advokatska kancelarija sa SEO optimizovanim sajtom — sa 2 upita nedeljno na 8-10. Fitnes centar sa online prijavom — smanjio administrativni rad za 15 sati mesečno. E-commerce prodavnica — klijent koji je prešao sa WordPress-a na Next.js video 2x brže učitavanje i 35% veću konverziju. Automatizacija fakturisanja sa n8n — ušteda 10-20 sati manualnog rada mesečno.",
+    locale: "sr",
+    category: "sales",
+  },
+  {
+    content:
+      "Besplatna konsultacija — šta dobijate: 30-60 minuta razgovora sa inženjerom (ne sa prodavcem). Analiza vašeg trenutnog IT setup-a. Konkretne preporuke šta možete poboljšati. Procena troškova i rokova za vaš projekat. Bez ikakvih obaveza — ako odlučite da ne radite sa nama, i dalje dobijate korisne savete. Zakažite poziv na info@solveradev.rs ili WhatsApp +381 63 838 4196.",
+    locale: "sr",
+    category: "sales",
+  },
+
+  // --- URGENCY ---
+  {
+    content:
+      "Zašto ne čekati sa izradom sajta: Svaki dan bez sajta je dan u kojem vaša konkurencija privlači klijente koje vi propuštate. Kapacitet našeg tima je ograničen — radimo sa ograničenim brojem klijenata istovremeno da bismo održali kvalitet. Trenutno možemo da primimo nove projekte, ali slobodni termini se popunjavaju brzo. Što pre počnemo, pre ćete imati sajt koji radi za vas. Prva konsultacija je besplatna i bez obaveza.",
+    locale: "sr",
+    category: "sales",
+  },
+
+  // --- CONVERSATION STARTERS ---
+  {
+    content:
+      "Kada posetilac pita 'šta radite' ili 'čime se bavite': Solvera je IT tim iz Novog Sada. Pravimo sajtove, web aplikacije, poslovne sisteme, AI chatbot-ove i automatizacije za firme u Srbiji. Ukratko — pomažemo firmama da koriste modernu tehnologiju za rast biznisa, po fer cenama. Šta vas konkretno zanima? Možda sajt, aplikacija, ili automatizacija nekog poslovnog procesa?",
+    locale: "sr",
+    category: "sales",
+  },
+  {
+    content:
+      "Kada posetilac pošalje pozdrav ('zdravo', 'ćao', 'hej', 'dobar dan'): Odgovori prijateljski i pitaj čime možeš da pomogneš. Primer odgovora: 'Zdravo! 👋 Dobrodošli na Solvera sajt. Kako vam mogu pomoći? Možete me pitati o našim uslugama, cenama, procesu rada — ili mi recite šta vam treba pa ću vam dati konkretnu preporuku.'",
+    locale: "sr",
+    category: "sales",
+  },
+
+  // --- SOCIAL PROOF DETALJI ---
+  {
+    content:
+      "Portfolio i rezultati Solvera: 20+ uspešno završenih projekata. Klijenti iz različitih industrija: e-commerce, ugostiteljstvo, zdravstvo, pravo, fitnes, edukacija, SaaS startapi. Prosečno vreme isporuke sajta: 7-10 dana. Prosečna ocena klijenata: 5/5. Nulti broj klijenata koji su bili nezadovoljni krajnjim rezultatom. Svi projekti isporučeni u dogovorenom roku ili ranije.",
+    locale: "sr",
+    category: "about",
+  },
+  {
+    content:
+      "Detaljnija iskustva klijenata: Vlasnik restorana iz Beograda — platio agenciji 3000 EUR za WordPress sajt koji se učitavao 8 sekundi. Solvera napravio novi sajt za 400 EUR, učitavanje ispod 1 sekunde, Google ocena performansi skočila sa 35 na 98. Startap iz Novog Sada — trebao im MVP za 2 nedelje, druge firme tražile 2 meseca. Solvera isporučio funkcionalan MVP za 10 dana. E-commerce vlasnica — automatizacija sa n8n joj uštedela 3 sata dnevno na ručnom unosu podataka.",
+    locale: "sr",
+    category: "about",
+  },
+
+  // --- UPSELL I CROSS-SELL ---
+  {
+    content:
+      "Bundle ponude i dodatne usluge: Sajt + AI chatbot paket — dobijte sajt sa ugrađenim AI asistentom koji odgovara posetiocima 24/7 i hvata lead-ove dok vi spavate. Sajt + automatizacija paket — sajt koji je povezan sa vašim CRM-om, emailom i fakturisanjem, sve automatski. Sajt + SEO + analitika — kompletno online prisustvo sa praćenjem rezultata. Pitajte nas za bundle cene — uvek je povoljnije nego pojedinačno.",
+    locale: "sr",
+    category: "sales",
+  },
+  {
+    content:
+      "Predlozi za upsell: Ako pravite sajt, razmislite i o chatbot-u — AI asistent može da odgovori na 80% pitanja vaših kupaca automatski, 24/7, i da vam donese nove lead-ove dok vi ne radite. Ako već imate sajt, razmislite o automatizaciji — koliko vremena trošite na ručni unos podataka, slanje emailova, ažuriranje tabela? n8n može da automatizuje sve to za jednokratnu cenu od 250 EUR.",
+    locale: "sr",
+    category: "sales",
+  },
 ];
 
 // English chunks removed — currently targeting Serbian market only
