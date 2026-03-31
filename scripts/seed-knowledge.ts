@@ -83,7 +83,7 @@ const SR_CHUNKS: Chunk[] = [
   // --- CENE ---
   {
     content:
-      "Cene Solvera usluga: Landing page sajt od 500 EUR, rok izrade 2-5 dana. E-commerce prodavnica i kompleksniji sajtovi od 1500 EUR, rok 1-2 nedelje. Web aplikacija sa dashboard-om od 2000 EUR, rok 2-4 nedelje. Poslovni sistemi po meri (SaaS, CRM, ERP) od 3000 EUR, MVP 1-3 nedelje, kompletniji sistem 4-8 nedelja. AI integracija i RAG chatbot od 1500 EUR, prototip za par dana, kompletno rešenje 1-3 nedelje. Automatizacija sa n8n od 500 EUR. Sve cene su u eurima i ne uključuju PDV.",
+      "Cene Solvera usluga: Landing page sajt od 250 EUR, rok izrade 2-5 dana. E-commerce prodavnica i kompleksniji sajtovi od 750 EUR, rok 1-2 nedelje. Web aplikacija sa dashboard-om od 1000 EUR, rok 2-4 nedelje. Poslovni sistemi po meri (SaaS, CRM, ERP) od 1500 EUR, MVP 1-3 nedelje, kompletniji sistem 4-8 nedelja. AI integracija i RAG chatbot od 750 EUR, prototip za par dana, kompletno rešenje 1-3 nedelje. Automatizacija sa n8n od 250 EUR. Sve cene su u eurima i ne uključuju PDV.",
     locale: "sr",
     category: "pricing",
   },
@@ -155,25 +155,25 @@ const SR_CHUNKS: Chunk[] = [
   // --- CENE: Detaljnije ---
   {
     content:
-      "Detaljne cene sajtova: Jednostavan landing page (1-3 strane, kontakt forma, responsivan dizajn) — od 500 EUR. Poslovni sajt sa više strana (5-10 strana, blog, galerija, SEO) — od 800 EUR. E-commerce prodavnica (katalog, korpa, plaćanje, korisničko iskustvo) — od 1500 EUR. Custom web aplikacija (korisnički nalozi, dashboard, admin panel, API) — od 2000 EUR. Cena zavisi od broja strana, funkcionalnosti i kompleksnosti dizajna. Svaki projekat dobija detaljnu ponudu pre početka rada.",
+      "Detaljne cene sajtova: Jednostavan landing page (1-3 strane, kontakt forma, responsivan dizajn) — od 250 EUR. Poslovni sajt sa više strana (5-10 strana, blog, galerija, SEO) — od 400 EUR. E-commerce prodavnica (katalog, korpa, plaćanje, korisničko iskustvo) — od 750 EUR. Custom web aplikacija (korisnički nalozi, dashboard, admin panel, API) — od 1000 EUR. Cena zavisi od broja strana, funkcionalnosti i kompleksnosti dizajna. Svaki projekat dobija detaljnu ponudu pre početka rada.",
     locale: "sr",
     category: "pricing",
   },
   {
     content:
-      "Detaljne cene poslovnih sistema: MVP (minimalni proizvod) za testiranje tržišta — od 3000 EUR, rok 1-3 nedelje. Kompletna SaaS platforma sa svim funkcionalnostima — od 5000 EUR, rok 4-8 nedelja. CRM ili ERP prilagođen vašem procesu — od 4000 EUR. Integracija sa postojećim sistemima (API povezivanje) — od 1000 EUR. Održavanje i podrška posle isporuke — opciono, od 200 EUR mesečno.",
+      "Detaljne cene poslovnih sistema: MVP (minimalni proizvod) za testiranje tržišta — od 1500 EUR, rok 1-3 nedelje. Kompletna SaaS platforma sa svim funkcionalnostima — od 2500 EUR, rok 4-8 nedelja. CRM ili ERP prilagođen vašem procesu — od 2000 EUR. Integracija sa postojećim sistemima (API povezivanje) — od 500 EUR. Održavanje i podrška posle isporuke — opciono, od 100 EUR mesečno.",
     locale: "sr",
     category: "pricing",
   },
   {
     content:
-      "Detaljne cene AI rešenja: Jednostavan chatbot za FAQ i korisničku podršku — od 1500 EUR. RAG chatbot obučen na vašoj dokumentaciji sa naprednom pretragom — od 2500 EUR. Interni AI asistent za zaposlene — od 2000 EUR. Automatska obrada dokumenata (fakture, ugovori, prijave) — od 3000 EUR. Mesečno održavanje AI sistema — od 150 EUR. OpenAI troškovi su odvojeni i zavise od količine upita (obično 10-50 EUR mesečno za manje firme).",
+      "Detaljne cene AI rešenja: Jednostavan chatbot za FAQ i korisničku podršku — od 750 EUR. RAG chatbot obučen na vašoj dokumentaciji sa naprednom pretragom — od 1250 EUR. Interni AI asistent za zaposlene — od 1000 EUR. Automatska obrada dokumenata (fakture, ugovori, prijave) — od 1500 EUR. Mesečno održavanje AI sistema — od 75 EUR. OpenAI troškovi su odvojeni i zavise od količine upita (obično 10-50 EUR mesečno za manje firme).",
     locale: "sr",
     category: "pricing",
   },
   {
     content:
-      "Detaljne cene automatizacije: Osnovni n8n workflow (1-2 automatizacije, npr. email + CRM) — od 500 EUR. Kompleksan sistem automatizacije (5+ workflow-a, više integracija) — od 1500 EUR. Setup n8n servera na vašoj infrastrukturi — od 300 EUR. Obuka vašeg tima za korišćenje n8n — od 200 EUR. Mesečna podrška i optimizacija — od 100 EUR mesečno.",
+      "Detaljne cene automatizacije: Osnovni n8n workflow (1-2 automatizacije, npr. email + CRM) — od 250 EUR. Kompleksan sistem automatizacije (5+ workflow-a, više integracija) — od 750 EUR. Setup n8n servera na vašoj infrastrukturi — od 150 EUR. Obuka vašeg tima za korišćenje n8n — od 100 EUR. Mesečna podrška i optimizacija — od 50 EUR mesečno.",
     locale: "sr",
     category: "pricing",
   },
@@ -221,7 +221,7 @@ const SR_CHUNKS: Chunk[] = [
   // --- UPOREDBE SA KONKURENCIJOM ---
   {
     content:
-      "Solvera vs. velika agencija: Velike agencije naplaćuju 5-10x više jer imaju skupe kancelarije, account menadžere, PM-ove i marketing timove. Kod nas radite direktno sa inženjerima — nema posrednika, nema nepotrebnih troškova. Isti kvalitet, brža isporuka, znatno niža cena. Primer: agencija naplaćuje 5000-15000 EUR za sajt, mi pravimo isti kvalitet od 500-2000 EUR.",
+      "Solvera vs. velika agencija: Velike agencije naplaćuju 5-10x više jer imaju skupe kancelarije, account menadžere, PM-ove i marketing timove. Kod nas radite direktno sa inženjerima — nema posrednika, nema nepotrebnih troškova. Isti kvalitet, brža isporuka, znatno niža cena. Primer: agencija naplaćuje 5000-15000 EUR za sajt, mi pravimo isti kvalitet od 250-1000 EUR.",
     locale: "sr",
     category: "about",
   },
@@ -255,37 +255,37 @@ const SR_CHUNKS: Chunk[] = [
   // --- SPECIFIČNI SCENARIJI ---
   {
     content:
-      "Rešenje za restorane i kafiće: Solvera pravi sajtove za ugostiteljske objekte sa online menijem, rezervacijom stolova, radnim vremenom, galerijom fotografija i integracijom sa Google Maps. Opciono: online naručivanje hrane, integracija sa servisima za dostavu, QR kod za digitalni meni. Cena od 700 EUR za kompletno rešenje.",
+      "Rešenje za restorane i kafiće: Solvera pravi sajtove za ugostiteljske objekte sa online menijem, rezervacijom stolova, radnim vremenom, galerijom fotografija i integracijom sa Google Maps. Opciono: online naručivanje hrane, integracija sa servisima za dostavu, QR kod za digitalni meni. Cena od 350 EUR za kompletno rešenje.",
     locale: "sr",
     category: "services",
   },
   {
     content:
-      "Rešenje za lekare, stomatologe i ordinacije: Profesionalan sajt sa opisom usluga, timom lekara, online zakazivanjem termina, kontakt formom i mapom lokacije. GDPR/ZZPL usklađen za zaštitu podataka pacijenata. Opciono: integracija sa kalendarom za automatsko zakazivanje, SMS/email podsetnci za pacijente. Cena od 800 EUR.",
+      "Rešenje za lekare, stomatologe i ordinacije: Profesionalan sajt sa opisom usluga, timom lekara, online zakazivanjem termina, kontakt formom i mapom lokacije. GDPR/ZZPL usklađen za zaštitu podataka pacijenata. Opciono: integracija sa kalendarom za automatsko zakazivanje, SMS/email podsetnci za pacijente. Cena od 400 EUR.",
     locale: "sr",
     category: "services",
   },
   {
     content:
-      "Rešenje za advokate i advokatske kancelarije: Profesionalan sajt sa oblastima prava, biografijama advokata, kontakt formom za konsultacije, blog za pravne savete i FAQ sekcijom. SEO optimizovan za lokalne pretrage (npr. 'advokat Novi Sad'). Cena od 700 EUR.",
+      "Rešenje za advokate i advokatske kancelarije: Profesionalan sajt sa oblastima prava, biografijama advokata, kontakt formom za konsultacije, blog za pravne savete i FAQ sekcijom. SEO optimizovan za lokalne pretrage (npr. 'advokat Novi Sad'). Cena od 350 EUR.",
     locale: "sr",
     category: "services",
   },
   {
     content:
-      "Rešenje za online kurseve i edukaciju: Platforma za e-learning sa video lekcijama, kvizovima, sertifikatima, korisničkim nalozima i praćenjem napretka. Integracija sa platnim sistemima za naplatu kurseva. Opciono: live streaming predavanja, forum za diskusije, affiliate program. Cena od 3000 EUR.",
+      "Rešenje za online kurseve i edukaciju: Platforma za e-learning sa video lekcijama, kvizovima, sertifikatima, korisničkim nalozima i praćenjem napretka. Integracija sa platnim sistemima za naplatu kurseva. Opciono: live streaming predavanja, forum za diskusije, affiliate program. Cena od 750 EUR.",
     locale: "sr",
     category: "services",
   },
   {
     content:
-      "Rešenje za nekretnine i agencije za nekretnine: Sajt sa katalogom nekretnina, naprednom pretragom (lokacija, cena, tip), galerijom fotografija, mapom i kontakt formom za svaku nekretninu. Admin panel za dodavanje i uređivanje nekretnina. Opciono: integracija sa portalima za nekretnine. Cena od 1500 EUR.",
+      "Rešenje za nekretnine i agencije za nekretnine: Sajt sa katalogom nekretnina, naprednom pretragom (lokacija, cena, tip), galerijom fotografija, mapom i kontakt formom za svaku nekretninu. Admin panel za dodavanje i uređivanje nekretnina. Opciono: integracija sa portalima za nekretnine. Cena od 750 EUR.",
     locale: "sr",
     category: "services",
   },
   {
     content:
-      "Rešenje za fitnes centre i teretane: Sajt sa rasporedom treninga, opisom programa, cenama članarina, online prijavom i integracijom sa društvenim mrežama. Opciono: sistem za rezervaciju termina, praćenje napretka članova, mobilna aplikacija. Cena od 800 EUR.",
+      "Rešenje za fitnes centre i teretane: Sajt sa rasporedom treninga, opisom programa, cenama članarina, online prijavom i integracijom sa društvenim mrežama. Opciono: sistem za rezervaciju termina, praćenje napretka članova, mobilna aplikacija. Cena od 400 EUR.",
     locale: "sr",
     category: "services",
   },

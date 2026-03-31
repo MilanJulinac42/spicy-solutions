@@ -64,6 +64,7 @@ export default function ServicesPage() {
         return (
           <section
             key={service.id}
+            id={service.id}
             className={`py-16 md:py-20 ${index % 2 === 0 ? "" : "bg-surface-secondary"}`}
           >
             <Container>
