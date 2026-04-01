@@ -480,7 +480,7 @@
       "title": "Šta dobijate (besplatno)",
       "description": "Naša konsultacija pokriva sve što treba da znate:",
       "bullets": {
-        "b1": "Analiza trenutnih procesa i identifikacija uskih grla",
+        "b1": "Pregled vašeg IT setup-a i konkretne preporuke za poboljšanje",
         "b2": "Preporuke za ubrzanje razvoja i modernizaciju tehnologije",
         "b3": "Konkretne preporuke za automatizaciju i optimizaciju (AI, n8n, moderan stack)"
       }
@@ -573,7 +573,7 @@
     "intro": "Korišćenjem sajta solveradev.rs i naših usluga, prihvatate sledeće uslove. Molimo vas da ih pažljivo pročitate.",
     "section1": {
       "title": "O nama",
-      "p1": "Solvera je IT kompanija sa sedištem u Beogradu, Srbija. Pružamo usluge razvoja softvera, web aplikacija, AI integracija i automatizacije poslovnih procesa."
+      "p1": "Solvera je IT kompanija sa sedištem u Novom Sadu, Srbija. Pružamo usluge razvoja softvera, web aplikacija, AI integracija i automatizacije poslovnih procesa."
     },
     "section2": {
       "title": "Usluge",
@@ -629,7 +629,7 @@
     "readMore": "Pročitajte više"
   },
   "Chat": {
-    "tooltip": "Imate pitanje? Pitajte nas!",
+    "tooltip": "Imate pitanje?",
     "title": "Solvera AI",
     "subtitle": "Vaš AI asistent",
     "placeholder": "Napišite poruku...",
