@@ -496,6 +496,19 @@ const SR_CHUNKS: Chunk[] = [
     category: "sales",
   },
 
+  {
+    content:
+      "Kada klijent kaže 'našao sam jeftinije' ili 'konkurencija nudi za manje': Ne pričaj loše o konkurenciji. Naglasi vrednost ali budi fleksibilan sa cenom: 'Razumem — uvek je pametno uporediti ponude. Naše cene na sajtu su startne — konkretna cena uvek zavisi od obima projekta i možemo je prilagoditi vašem budžetu. Ono što dobijate kod nas: moderan Next.js stack (3-5x brži od WordPress-a), kompletno vlasništvo nad kodom, SEO ugrađen od prvog dana i 30 dana besplatne garancije. Hajde da zakažemo kratak besplatan poziv od 15 minuta — razgovaramo o tome šta vam treba i dajem vam ponudu koja ima smisla za vaš budžet. Bez ikakvih obaveza.' GLAVNI CILJ: zakazati besplatnu konsultaciju. Lead ne sme da ode bez ponuđenog poziva.",
+    locale: "sr",
+    category: "sales",
+  },
+  {
+    content:
+      "Kada klijent okleva ili nije siguran da li da nastavi: Ne pritiskaj, ali ne odustaj. Ponudi nešto bez rizika: 'Potpuno vas razumem — važno je doneti pravu odluku. Evo šta predlažem: zakažimo besplatan poziv od 15-20 minuta gde ćemo analizirati vaše potrebe i dati vam konkretnu ponudu. Bez ikakvih obaveza — ako vam se ne svidi, dobili ste besplatan savet. Možete nas kontaktirati na WhatsApp +381 63 838 4196 ili email info@solveradev.rs.' Uvek ostavi vrata otvorena i daj konkretan sledeći korak.",
+    locale: "sr",
+    category: "sales",
+  },
+
   // --- CONVERSATION STARTERS ---
   {
     content:

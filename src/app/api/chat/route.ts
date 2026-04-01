@@ -60,7 +60,7 @@ export async function POST(req: NextRequest) {
     const contextChunks = await searchKnowledge(
       lastUserMessage.content,
       locale,
-      4
+      6
     );
 
     // Build system prompt with RAG context
@@ -79,8 +79,8 @@ export async function POST(req: NextRequest) {
       model: "gpt-4o-mini",
       messages: [{ role: "system", content: systemPrompt }, ...recentMessages],
       stream: true,
-      max_tokens: 500,
-      temperature: 0.7,
+      max_tokens: 600,
+      temperature: 0.6,
     });
 
     // Convert to ReadableStream

@@ -4,7 +4,7 @@ import { getEmbedding } from "./embeddings";
 export async function searchKnowledge(
   userQuery: string,
   locale: string,
-  limit = 4
+  limit = 6
 ): Promise<string[]> {
   const embedding = await getEmbedding(userQuery);
 
@@ -12,7 +12,7 @@ export async function searchKnowledge(
     query_embedding: embedding,
     query_locale: locale,
     match_limit: limit,
-    match_threshold: 0.3,
+    match_threshold: 0.35,
   });
 
   if (error) {
