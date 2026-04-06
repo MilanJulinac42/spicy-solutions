@@ -10,7 +10,6 @@ import { Footer } from "@/components/layout/Footer";
 import { ScrollProgress } from "@/components/ui/ScrollProgress";
 import { WhatsAppButton } from "@/components/ui/WhatsAppButton";
 import { ChatWidget } from "@/components/chat/ChatWidget";
-import { PageLoaderProvider } from "@/components/ui/PageLoaderProvider";
 import "@/app/globals.css";
 
 const geistSans = Geist({
@@ -52,14 +51,12 @@ export default async function LocaleLayout({
           disableTransitionOnChange
         >
           <NextIntlClientProvider locale={locale} messages={messages}>
-            <PageLoaderProvider>
               <ScrollProgress />
               <Navbar />
               <main className="min-h-screen">{children}</main>
               <Footer />
               <WhatsAppButton />
               <ChatWidget />
-            </PageLoaderProvider>
             <Script
               src="https://www.googletagmanager.com/gtag/js?id=G-WDNDKK0PBT"
               strategy="afterInteractive"
