@@ -1,5 +1,6 @@
 "use client";
 
+import { Suspense } from "react";
 import { useTranslations } from "next-intl";
 import { motion } from "framer-motion";
 import { Mail, Phone, MapPin, Github, Linkedin, Instagram, CheckCircle2, Shield } from "lucide-react";
@@ -59,7 +60,9 @@ export default function ContactPage() {
                 </ul>
               </div>
 
-              <ContactForm />
+              <Suspense>
+                <ContactForm />
+              </Suspense>
             </div>
 
             {/* Contact Info */}

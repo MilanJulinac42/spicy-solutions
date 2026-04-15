@@ -98,7 +98,7 @@ function multiplyRange(r: RangeConfig, m: number): RangeConfig {
 }
 
 function calcWebsites(scope: WebsiteScope): PriceRange {
-  let range = { ...PRICING.websites.base[scope.projectType] };
+  let range: RangeConfig = { ...PRICING.websites.base[scope.projectType] };
   const pagesMult = PRICING.websites.pages[scope.pages];
   range = multiplyRange(range, pagesMult);
   if (scope.cms) range = addRange(range, PRICING.websites.cms);
@@ -107,7 +107,7 @@ function calcWebsites(scope: WebsiteScope): PriceRange {
 }
 
 function calcEnterprise(scope: EnterpriseScope): PriceRange {
-  let range = { ...PRICING.enterprise.base[scope.projectType] };
+  let range: RangeConfig = { ...PRICING.enterprise.base[scope.projectType] };
   const compMult = PRICING.enterprise.complexity[scope.complexity];
   range = multiplyRange(range, compMult);
   if (scope.auth) range = addRange(range, PRICING.enterprise.auth);
@@ -116,7 +116,7 @@ function calcEnterprise(scope: EnterpriseScope): PriceRange {
 }
 
 function calcAi(scope: AiScope): PriceRange {
-  let range = { ...PRICING.ai.base[scope.projectType] };
+  let range: RangeConfig = { ...PRICING.ai.base[scope.projectType] };
   range = addRange(range, PRICING.ai.knowledgeSource[scope.knowledgeSource]);
   if (scope.multiLang) range = addRange(range, PRICING.ai.multiLang);
   if (scope.analytics) range = addRange(range, PRICING.ai.analytics);
@@ -124,7 +124,7 @@ function calcAi(scope: AiScope): PriceRange {
 }
 
 function calcAutomation(scope: AutomationScope): PriceRange {
-  let range = { ...PRICING.automation.base[scope.workflowCount] };
+  let range: RangeConfig = { ...PRICING.automation.base[scope.workflowCount] };
   const compMult = PRICING.automation.complexity[scope.complexity];
   range = multiplyRange(range, compMult);
   range = addRange(range, PRICING.automation.integrations[scope.integrations]);
