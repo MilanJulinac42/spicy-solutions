@@ -38,6 +38,7 @@ import {
   Bell,
   ExternalLink,
   TrendingUp,
+  Calculator,
 } from "lucide-react";
 import { Container } from "@/components/ui/Container";
 import { Badge } from "@/components/ui/Badge";
@@ -428,6 +429,13 @@ export default function ServicePage() {
               >
                 {t("Services.cta.button")}
                 <ArrowRight className="w-4 h-4" />
+              </Link>
+              <Link
+                href="/calculator"
+                className="inline-flex items-center gap-2 px-8 py-4 border-2 border-border-default text-foreground rounded-lg text-base font-semibold hover:border-spicy-400 hover:text-spicy-400 transition-all"
+              >
+                <Calculator className="w-4 h-4" />
+                {t("Navbar.calculator")}
               </Link>
             </div>
           </motion.div>

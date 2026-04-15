@@ -4,7 +4,8 @@
     "services": "Usluge",
     "about": "O nama",
     "contact": "Kontakt",
-    "getStarted": "Besplatna konsultacija"
+    "getStarted": "Besplatna konsultacija",
+    "calculator": "Izračunajte cenu"
   },
   "Hero": {
     "badge": "Brza isporuka. Direktna komunikacija. Kvalitet bez kompromisa.",
@@ -12,7 +13,8 @@
     "titleHighlight": "Mi brinemo o tehnologiji",
     "subtitle": "Dok druge agencije mesecima razvlače rokove, mi isporučujemo brzo i kvalitetno. Direktan pristup inženjerima koji grade vaš proizvod — bez posrednika, bez čekanja, bez kompromisa.",
     "cta": "Besplatna konsultacija",
-    "ctaSecondary": "Pogledajte naš proces"
+    "ctaSecondary": "Pogledajte naš proces",
+    "ctaCalculator": "Izračunajte cenu za 2 min"
   },
   "ProblemSection": {
     "title": "Zašto vas IT projekti frustriraju?",
@@ -136,7 +138,8 @@
   "CTA": {
     "title": "Spremni za brži razvoj?",
     "subtitle": "Dobijte besplatnu konsultaciju bez ikakvih obaveza. Pokazaćemo vam gde gubite vreme i kako da ubrzate digitalni razvoj.",
-    "button": "Zakažite besplatnu konsultaciju"
+    "button": "Zakažite besplatnu konsultaciju",
+    "calculatorButton": "Izračunajte cenu →"
   },
   "Services": {
     "title": "Naše usluge",
@@ -680,6 +683,135 @@
     "contactUs": "Besplatna konsultacija",
     "viewProject": "Pogledaj projekat",
     "readMore": "Pročitajte više"
+  },
+  "Calculator": {
+    "title": "Koliko košta vaš projekat?",
+    "subtitle": "Dobijte okvirnu procenu za 2 minuta. Bez obaveza.",
+    "steps": {
+      "service": "Usluga",
+      "scope": "Obim",
+      "timeline": "Rok",
+      "result": "Procena"
+    },
+    "back": "Nazad",
+    "next": "Dalje",
+    "serviceType": {
+      "title": "Koja usluga vas zanima?",
+      "websites": "Sajtovi i web aplikacije",
+      "websitesDesc": "Landing stranice, višestranični sajtovi, e-commerce, web aplikacije",
+      "enterprise": "Poslovni sistemi po meri",
+      "enterpriseDesc": "CRM, ERP, dashboard-ovi, interni alati, SaaS platforme",
+      "ai": "AI chatbot-ovi",
+      "aiDesc": "FAQ botovi, RAG chatbotovi, višekanalni AI asistenti",
+      "automation": "Automatizacija (n8n)",
+      "automationDesc": "Workflow automatizacija, integracije, eliminacija manuelnog rada"
+    },
+    "scope": {
+      "websites": {
+        "projectType": "Koji tip sajta vam treba?",
+        "landing": "Landing stranica",
+        "landingDesc": "Jedna stranica za proizvod, uslugu ili kampanju",
+        "multiPage": "Višestranični sajt",
+        "multiPageDesc": "Korporativni sajt sa više sekcija i stranica",
+        "ecommerce": "E-commerce",
+        "ecommerceDesc": "Online prodavnica sa plaćanjem i upravljanjem proizvodima",
+        "webapp": "Web aplikacija",
+        "webappDesc": "Kompleksna aplikacija sa korisničkim nalozima i dashboard-om",
+        "pages": "Koliko stranica očekujete?",
+        "pages1to5": "1–5 stranica",
+        "pages6to15": "6–15 stranica",
+        "pages15plus": "15+ stranica",
+        "cms": "Da li vam treba CMS za samostalno ažuriranje sadržaja?",
+        "customDesign": "Da li želite potpuno custom dizajn?"
+      },
+      "enterprise": {
+        "projectType": "Koji tip sistema vam treba?",
+        "internalTool": "Interni alat",
+        "internalToolDesc": "Alat za upravljanje procesima unutar firme",
+        "saas": "SaaS platforma",
+        "saasDesc": "Softver kao usluga sa pretplatama i korisničkim nalozima",
+        "dashboard": "Dashboard i analitika",
+        "dashboardDesc": "Vizualizacija podataka, izveštaji i KPI praćenje",
+        "apiIntegration": "API integracije",
+        "apiIntegrationDesc": "Povezivanje postojećih sistema i servisa",
+        "complexity": "Koliko je sistem složen?",
+        "simple": "Jednostavan (1–3 modula)",
+        "medium": "Srednji (4–7 modula)",
+        "complex": "Složen (8+ modula)",
+        "auth": "Da li treba autentifikacija i uloge korisnika?",
+        "integrations": "Koliko integracija sa trećim servisima?",
+        "int0": "Nema integracija",
+        "int1to3": "1–3 integracije",
+        "int4plus": "4+ integracija"
+      },
+      "ai": {
+        "projectType": "Koji tip chatbota vam treba?",
+        "faqBot": "FAQ chatbot",
+        "faqBotDesc": "Odgovara na česta pitanja iz unapred definisane baze",
+        "ragBot": "RAG chatbot",
+        "ragBotDesc": "Pretražuje vašu dokumentaciju i daje precizne odgovore",
+        "multiChannel": "Višekanalni bot",
+        "multiChannelDesc": "Chatbot na sajtu, WhatsApp-u, Viberu i drugim kanalima",
+        "knowledgeSource": "Odakle chatbot uzima znanje?",
+        "website": "Sa vašeg sajta",
+        "documents": "Iz dokumenata (PDF, Word...)",
+        "database": "Iz baze podataka",
+        "multiLang": "Da li treba višejezična podrška?",
+        "analytics": "Da li vam treba analitički dashboard?"
+      },
+      "automation": {
+        "workflowCount": "Koliko workflow-a vam treba?",
+        "wf1to3": "1–3 workflow-a",
+        "wf4to7": "4–7 workflow-a",
+        "wf8plus": "8+ workflow-a",
+        "complexity": "Koliko su workflow-i složeni?",
+        "simple": "Jednostavni triggeri",
+        "simpleDesc": "Kad se desi X, uradi Y",
+        "multiStep": "Višekoračni sa uslovima",
+        "multiStepDesc": "Grananje, filtriranje, transformacija podataka",
+        "errorHandling": "Složeni sa error handling-om",
+        "errorHandlingDesc": "Retry logika, fallback-ovi, monitoring i alerting",
+        "integrations": "Koliko servisa povezujete?",
+        "int1to3": "1–3 servisa",
+        "int4to7": "4–7 servisa",
+        "int8plus": "8+ servisa",
+        "monitoring": "Da li treba monitoring dashboard?"
+      },
+      "yes": "Da",
+      "no": "Ne"
+    },
+    "timeline": {
+      "title": "Koji rok vam odgovara?",
+      "standard": "Standardan",
+      "standardDesc": "Najbolja cena, uobičajeni rokovi",
+      "priority": "Prioritet",
+      "priorityDesc": "Brža isporuka (+20%)",
+      "urgent": "Hitno",
+      "urgentDesc": "Najbrža moguća isporuka (+40%)"
+    },
+    "result": {
+      "title": "Vaša okvirna procena",
+      "priceLabel": "Procenjena investicija",
+      "timelineLabel": "Procenjeni rok",
+      "weeks": "{min}–{max} nedelja",
+      "included": "Šta je uključeno",
+      "disclaimer": "Ovo je okvirna procena zasnovana na vašim odgovorima. Tačna cena zavisi od detaljne analize projekta.",
+      "ctaSchedule": "Zakaži besplatan razgovor",
+      "ctaEmail": "Pošalji mi procenu na email",
+      "formName": "Vaše ime",
+      "formEmail": "Email adresa",
+      "formCompany": "Kompanija (opciono)",
+      "formSubmit": "Pošalji procenu",
+      "formSuccess": "Procena je poslata na vaš email!",
+      "formError": "Greška pri slanju. Pokušajte ponovo.",
+      "startOver": "Ponovi kalkulaciju"
+    },
+    "exitIntent": {
+      "title": "Niste završili kalkulaciju!",
+      "subtitle": "Ostavite email i poslaćemo vam personalizovanu procenu na osnovu vaših odgovora.",
+      "placeholder": "vaš@email.com",
+      "success": "Poslaćemo vam procenu uskoro!"
+    }
   },
   "Chat": {
     "tooltip": "Imate pitanje?",

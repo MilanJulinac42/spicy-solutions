@@ -2,7 +2,7 @@ import { setRequestLocale } from "next-intl/server";
 import dynamic from "next/dynamic";
 import { Hero } from "@/components/sections/Hero";
 import { ProblemSection } from "@/components/sections/ProblemSection";
-import { ServicesOverview } from "@/components/sections/ServicesOverview";
+import { BentoServices } from "@/components/sections/BentoServices";
 
 const Stats = dynamic(() => import("@/components/sections/Stats").then(m => ({ default: m.Stats })), { ssr: true });
 const ProjectsShowcase = dynamic(() => import("@/components/sections/ProjectsShowcase").then(m => ({ default: m.ProjectsShowcase })), { ssr: true });
@@ -21,7 +21,7 @@ export default async function HomePage({
     <>
       <Hero />
       <ProblemSection />
-      <ServicesOverview />
+      <BentoServices />
       <Stats />
       <ProjectsShowcase />
       <WhyTrustUs />

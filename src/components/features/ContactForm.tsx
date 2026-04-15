@@ -2,6 +2,7 @@
 
 import { useState } from "react";
 import { useTranslations } from "next-intl";
+import { useSearchParams } from "next/navigation";
 import { motion } from "framer-motion";
 import { Send, CheckCircle, AlertCircle, ArrowRight, X } from "lucide-react";
 import { AnimatePresence } from "framer-motion";
@@ -10,6 +11,9 @@ import { fadeInUp, staggerContainer } from "@/lib/animations";
 
 export function ContactForm() {
   const t = useTranslations("Contact.form");
+  const searchParams = useSearchParams();
+  const preselectedService = searchParams.get("service") || "";
+  const budget = searchParams.get("budget") || "";
   const [status, setStatus] = useState<"idle" | "sending" | "success" | "error">("idle");
 
   const handleSubmit = async (e: React.FormEvent<HTMLFormElement>) => {
@@ -95,7 +99,7 @@ export function ContactForm() {
           name="service"
           required
           className="w-full px-4 py-3 rounded-lg bg-surface-secondary border border-border-default text-foreground focus:outline-none focus:ring-2 focus:ring-spicy-400/50 focus:border-spicy-400 focus:shadow-[0_0_15px_rgba(255,107,53,0.15)] transition-all"
-          defaultValue=""
+          defaultValue={preselectedService}
         >
           <option value="" disabled>
             {t("serviceOptions.select")}
@@ -119,6 +123,7 @@ export function ContactForm() {
           rows={5}
           className="w-full px-4 py-3 rounded-lg bg-surface-secondary border border-border-default text-foreground placeholder:text-foreground-muted focus:outline-none focus:ring-2 focus:ring-spicy-400/50 focus:border-spicy-400 focus:shadow-[0_0_15px_rgba(255,107,53,0.15)] transition-all resize-none"
           placeholder={t("message")}
+          defaultValue={budget ? `Okvirni budžet iz kalkulatora: ${budget} EUR\n` : ""}
         />
       </motion.div>
 

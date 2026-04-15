@@ -141,7 +141,14 @@ export function MobileMenu({ isOpen, onClose, pathname }: MobileMenuProps) {
               </ul>
             </nav>
 
-            <div className="p-4 border-t border-border-default flex items-center gap-3">
+            <div className="p-4 border-t border-border-default space-y-3">
+              <Link
+                href="/calculator"
+                onClick={onClose}
+                className="block w-full text-center px-4 py-3 bg-spicy-400/10 text-spicy-400 rounded-lg text-sm font-semibold hover:bg-spicy-400/20 transition-colors"
+              >
+                {t("Navbar.calculator")} →
+              </Link>
               <ThemeToggle />
             </div>
           </motion.div>

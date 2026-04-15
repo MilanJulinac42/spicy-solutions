@@ -102,6 +102,14 @@ export function Footer() {
                   {t("Navbar.contact")}
                 </Link>
               </li>
+              <li>
+                <Link
+                  href="/calculator"
+                  className="text-sm text-spicy-400 hover:text-spicy-300 transition-colors link-underline font-medium"
+                >
+                  {t("Navbar.calculator")}
+                </Link>
+              </li>
             </ul>
           </div>
 
