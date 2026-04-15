@@ -1,7 +1,7 @@
 "use client";
 
 import { useTranslations } from "next-intl";
-import { motion, useMotionValue, useSpring } from "framer-motion";
+import { motion } from "framer-motion";
 import { Link } from "@/i18n/navigation";
 import { ArrowRight, ChevronDown } from "lucide-react";
 import {
@@ -17,38 +17,23 @@ export function Hero() {
   const t = useTranslations("Hero");
   const heroRef = useRef<HTMLElement>(null);
 
-  /* ── 3D Tilt (reuses TiltCard pattern) ── */
-  const rotateX = useMotionValue(0);
-  const rotateY = useMotionValue(0);
-  const springX = useSpring(rotateX, { stiffness: 150, damping: 25 });
-  const springY = useSpring(rotateY, { stiffness: 150, damping: 25 });
-
   const handleMouseMove = useCallback(
     (e: React.MouseEvent<HTMLElement>) => {
       const el = heroRef.current;
       if (!el) return;
       const rect = el.getBoundingClientRect();
-      const mx = (e.clientX - rect.left) / rect.width; // 0–1
+      const mx = (e.clientX - rect.left) / rect.width;
       const my = (e.clientY - rect.top) / rect.height;
-      const cx = mx - 0.5; // -0.5–0.5
-      const cy = my - 0.5;
-
-      rotateX.set(cy * -10);
-      rotateY.set(cx * 10);
-
-      // Update CSS custom props for spotlight + glare (no rAF needed)
       el.style.setProperty("--spot-x", `${mx * 100}%`);
       el.style.setProperty("--spot-y", `${my * 100}%`);
     },
-    [rotateX, rotateY]
+    []
   );
 
   const handleMouseLeave = useCallback(() => {
-    rotateX.set(0);
-    rotateY.set(0);
     heroRef.current?.style.setProperty("--spot-x", "50%");
     heroRef.current?.style.setProperty("--spot-y", "50%");
-  }, [rotateX, rotateY]);
+  }, []);
 
   return (
     <section
@@ -127,26 +112,14 @@ export function Hero() {
             variants={staggerContainer}
             initial="hidden"
             animate="visible"
-            className="space-y-8 text-center lg:text-left"
+            className="space-y-10 text-center lg:text-left"
           >
-            {/* Badge */}
-            <motion.div variants={fadeInUp} className="hidden sm:block">
-              <span className="relative inline-flex items-center gap-2 px-4 py-1.5 rounded-full text-sm font-medium bg-spicy-400/10 text-spicy-400 overflow-hidden">
-                <span className="absolute inset-0 rounded-full border border-spicy-400/20" />
-                <span className="absolute inset-0 rounded-full shimmer-border opacity-30" />
-                <span className="relative flex items-center gap-2">
-                  <span className="w-1.5 h-1.5 rounded-full bg-spicy-400 animate-pulse" />
-                  {t("badge")}
-                </span>
-              </span>
-            </motion.div>
-
             {/* Headline */}
             <motion.h1
               variants={textRevealContainer}
               initial="hidden"
               animate="visible"
-              className="text-4xl sm:text-5xl md:text-6xl lg:text-[3.5rem] xl:text-7xl font-bold text-foreground leading-tight"
+              className="text-3xl sm:text-4xl md:text-5xl lg:text-[3rem] xl:text-6xl font-bold text-foreground leading-snug"
             >
               {t("title")
                 .split(" ")
@@ -166,7 +139,7 @@ export function Hero() {
                   <motion.span
                     key={`h-${i}`}
                     variants={textRevealWord}
-                    className="inline-block mr-[0.3em] headline-shimmer"
+                    className="inline-block mr-[0.3em] animated-gradient-text"
                   >
                     {word}
                   </motion.span>
@@ -219,28 +192,8 @@ export function Hero() {
               }}
             />
 
-            {/* 3D Tilt container */}
-            <div style={{ perspective: 1200 }}>
-              <motion.div
-                style={{
-                  rotateX: springX,
-                  rotateY: springY,
-                  transformStyle: "preserve-3d",
-                }}
-                className="will-change-transform relative"
-              >
-                {/* Mouse glare overlay */}
-                <div
-                  className="absolute inset-0 z-10 rounded-xl pointer-events-none"
-                  style={{
-                    background:
-                      "radial-gradient(circle at var(--spot-x) var(--spot-y), rgba(255,255,255,0.07) 0%, transparent 60%)",
-                  }}
-                />
-                <div className="holo-border rounded-xl">
-                  <TerminalAnimation />
-                </div>
-              </motion.div>
+            <div className="holo-border rounded-xl">
+              <TerminalAnimation />
             </div>
           </motion.div>
 
