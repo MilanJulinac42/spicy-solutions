@@ -32,6 +32,17 @@ export function ChatPanel({ onClose, onReset, messages, setMessages, nextId }: C
 
   const showSuggestions = messages.length <= 1 && !isTyping;
 
+  // Lock body scroll on mobile when chat is open
+  useEffect(() => {
+    const isMobile = window.innerWidth < 640;
+    if (isMobile) {
+      document.body.style.overflow = "hidden";
+      return () => {
+        document.body.style.overflow = "";
+      };
+    }
+  }, []);
+
   const scrollToBottom = useCallback(() => {
     messagesEndRef.current?.scrollIntoView({ behavior: "smooth" });
   }, []);
@@ -179,15 +190,8 @@ export function ChatPanel({ onClose, onReset, messages, setMessages, nextId }: C
     }
   }
 
-  return (
-    <motion.div
-      initial={{ opacity: 0, y: 20, scale: 0.95 }}
-      animate={{ opacity: 1, y: 0, scale: 1 }}
-      exit={{ opacity: 0, y: 20, scale: 0.95 }}
-      transition={{ type: "spring", stiffness: 300, damping: 25 }}
-      className="fixed bottom-24 right-6 z-50 w-[380px] max-sm:inset-4 max-sm:bottom-4 max-sm:w-auto flex flex-col rounded-2xl shadow-2xl overflow-hidden bg-surface border border-border-subtle"
-      style={{ height: "min(520px, calc(100vh - 120px))" }}
-    >
+  const panelContent = (
+    <>
       {/* Header */}
       <div className="bg-gradient-to-r from-spicy-400 to-spicy-500 px-4 py-3 flex items-center justify-between shrink-0">
         <div>
@@ -219,7 +223,6 @@ export function ChatPanel({ onClose, onReset, messages, setMessages, nextId }: C
           <ChatMessage key={msg.id} role={msg.role} content={msg.content} />
         ))}
 
-        {/* Suggested questions */}
         {showSuggestions && (
           <div className="flex flex-col gap-2 mt-2">
             {(["q1", "q2", "q3"] as const).map((key) => (
@@ -268,6 +271,33 @@ export function ChatPanel({ onClose, onReset, messages, setMessages, nextId }: C
           {t("poweredBy")}
         </p>
       </div>
-    </motion.div>
+    </>
+  );
+
+  return (
+    <>
+      {/* Desktop: floating panel */}
+      <motion.div
+        initial={{ y: 20, scale: 0.95, opacity: 0 }}
+        animate={{ y: 0, scale: 1, opacity: 1 }}
+        exit={{ y: 20, scale: 0.95, opacity: 0 }}
+        transition={{ type: "spring", stiffness: 300, damping: 25 }}
+        className="hidden sm:flex fixed z-50 flex-col shadow-2xl overflow-hidden bg-surface border border-border-subtle bottom-24 right-6 w-[380px] rounded-2xl"
+        style={{ height: "min(520px, calc(100vh - 120px))" }}
+      >
+        {panelContent}
+      </motion.div>
+
+      {/* Mobile: fullscreen overlay */}
+      <motion.div
+        initial={{ y: "100%" }}
+        animate={{ y: 0 }}
+        exit={{ y: "100%" }}
+        transition={{ type: "spring", stiffness: 300, damping: 30 }}
+        className="sm:hidden fixed inset-0 z-50 flex flex-col bg-surface"
+      >
+        {panelContent}
+      </motion.div>
+    </>
   );
 }

@@ -3,18 +3,26 @@
 import { useState, useEffect, useCallback, useRef } from "react";
 import { useTranslations } from "next-intl";
 import { Link, usePathname } from "@/i18n/navigation";
-import { Menu } from "lucide-react";
-import { motion } from "framer-motion";
+import { Menu, ChevronDown, Globe, Building2, Brain, Workflow } from "lucide-react";
+import { motion, AnimatePresence } from "framer-motion";
 import { navLinks } from "@/lib/constants";
 import Image from "next/image";
 import { ThemeToggle } from "@/components/shared/ThemeToggle";
 import { MobileMenu } from "./MobileMenu";
+
+const serviceSublinks = [
+  { id: "websites", icon: Globe, titleKey: "Services.websites.title" },
+  { id: "enterprise", icon: Building2, titleKey: "Services.enterprise.title" },
+  { id: "ai", icon: Brain, titleKey: "Services.ai.title" },
+  { id: "automation", icon: Workflow, titleKey: "Services.automation.title" },
+];
 
 export function Navbar() {
   const t = useTranslations();
   const pathname = usePathname();
   const [isScrolled, setIsScrolled] = useState(false);
   const [isMobileMenuOpen, setIsMobileMenuOpen] = useState(false);
+  const [servicesOpen, setServicesOpen] = useState(false);
 
   const ticking = useRef(false);
   const handleScroll = useCallback(() => {
@@ -58,7 +66,81 @@ export function Navbar() {
             {/* Desktop Navigation */}
             <nav className="hidden lg:flex items-center gap-1">
               {navLinks.map((link) => {
-                const isActive = pathname === link.href;
+                const isActive = pathname === link.href || (link.href === "/services" && pathname.startsWith("/services/"));
+                const isServices = link.href === "/services";
+
+                if (isServices) {
+                  return (
+                    <div
+                      key={link.href}
+                      className="relative"
+                      onMouseEnter={() => setServicesOpen(true)}
+                      onMouseLeave={() => setServicesOpen(false)}
+                    >
+                      <Link
+                        href={link.href}
+                        className={`relative flex items-center gap-1 px-4 py-2 rounded-lg text-sm font-medium transition-colors ${
+                          isActive
+                            ? "text-spicy-400"
+                            : "text-foreground-secondary hover:text-foreground hover:bg-surface-tertiary"
+                        }`}
+                      >
+                        {t(link.titleKey)}
+                        <ChevronDown className={`w-3.5 h-3.5 transition-transform duration-200 ${servicesOpen ? "rotate-180" : ""}`} />
+                        {isActive && (
+                          <motion.div
+                            layoutId="navbar-indicator"
+                            className="absolute bottom-0 left-2 right-2 h-0.5 bg-spicy-400 rounded-full"
+                            transition={{ type: "spring", stiffness: 300, damping: 30 }}
+                          />
+                        )}
+                      </Link>
+                      <AnimatePresence>
+                        {servicesOpen && (
+                          <motion.div
+                            initial={{ opacity: 0, y: 8 }}
+                            animate={{ opacity: 1, y: 0 }}
+                            exit={{ opacity: 0, y: 8 }}
+                            transition={{ duration: 0.15 }}
+                            className="absolute top-full left-1/2 -translate-x-1/2 pt-2 w-80"
+                          >
+                            <div className="bg-surface-elevated border border-border-default rounded-xl shadow-xl overflow-hidden">
+                              {serviceSublinks.map((sub) => {
+                                const SubIcon = sub.icon;
+                                const isSubActive = pathname === `/services/${sub.id}`;
+                                return (
+                                  <Link
+                                    key={sub.id}
+                                    href={`/services/${sub.id}`}
+                                    onClick={() => setServicesOpen(false)}
+                                    className={`flex items-center gap-3 px-4 py-3 text-sm transition-colors ${
+                                      isSubActive
+                                        ? "bg-spicy-400/10 text-spicy-400"
+                                        : "text-foreground-secondary hover:bg-surface-tertiary hover:text-foreground"
+                                    }`}
+                                  >
+                                    <SubIcon className="w-4 h-4 shrink-0" />
+                                    {t(sub.titleKey)}
+                                  </Link>
+                                );
+                              })}
+                              <div className="border-t border-border-default">
+                                <Link
+                                  href="/services"
+                                  onClick={() => setServicesOpen(false)}
+                                  className="flex items-center gap-3 px-4 py-3 text-sm text-foreground-muted hover:bg-surface-tertiary hover:text-foreground transition-colors"
+                                >
+                                  {t("Services.viewAll")}
+                                </Link>
+                              </div>
+                            </div>
+                          </motion.div>
+                        )}
+                      </AnimatePresence>
+                    </div>
+                  );
+                }
+
                 return (
                   <Link
                     key={link.href}

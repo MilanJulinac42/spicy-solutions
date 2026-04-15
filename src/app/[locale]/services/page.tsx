@@ -1,8 +1,7 @@
 "use client";
 
-import { useState } from "react";
 import { useTranslations } from "next-intl";
-import { AnimatePresence, motion } from "framer-motion";
+import { motion } from "framer-motion";
 import {
   Globe,
   Building2,
@@ -23,7 +22,6 @@ import { CTABanner } from "@/components/sections/CTABanner";
 import { fadeInUp, fadeInLeft, fadeInRight, staggerContainer } from "@/lib/animations";
 import { services } from "@/data/services";
 import { ServiceIllustration } from "@/components/features/ServiceIllustration";
-import { ServiceDetailPanel } from "@/components/features/ServiceDetailPanel";
 import { Link } from "@/i18n/navigation";
 
 const serviceIcons = {
@@ -42,7 +40,6 @@ const processSteps = [
 
 export default function ServicesPage() {
   const t = useTranslations();
-  const [selectedService, setSelectedService] = useState<string | null>(null);
 
   return (
     <>
@@ -117,13 +114,13 @@ export default function ServicesPage() {
                     ))}
                   </div>
 
-                  <button
-                    onClick={() => setSelectedService(service.id)}
+                  <Link
+                    href={`/services/${service.id}`}
                     className="inline-flex items-center gap-2 text-spicy-400 font-medium text-sm hover:text-spicy-300 transition-colors cursor-pointer group"
                   >
                     {t("Services.learnMore")}
                     <ArrowRight className="w-4 h-4 group-hover:translate-x-1 transition-transform" />
-                  </button>
+                  </Link>
                 </motion.div>
 
                 {/* Visual */}
@@ -213,15 +210,6 @@ export default function ServicesPage() {
         </Container>
       </section>
 
-      {/* Service Detail Panel */}
-      <AnimatePresence>
-        {selectedService && (
-          <ServiceDetailPanel
-            serviceId={selectedService}
-            onClose={() => setSelectedService(null)}
-          />
-        )}
-      </AnimatePresence>
     </>
   );
 }

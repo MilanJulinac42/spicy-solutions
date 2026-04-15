@@ -192,7 +192,20 @@
             "answer": "Javite nam se za besplatnu konsultaciju — analiziramo šta vam treba i dajemo jasan predlog sa rokovima i cenama."
           }
         },
-        "ctaText": "Zakažite besplatan razgovor"
+        "ctaText": "Zakažite besplatan razgovor",
+        "portfolioTitle": "Projekti koje smo realizovali",
+        "portfolio": {
+          "p1": {
+            "title": "Online prodavnica za lokalni brend",
+            "description": "E-commerce platforma sa katalogom od 500+ proizvoda, online plaćanjem i automatskim praćenjem porudžbina.",
+            "result": "3x više online porudžbina u prva 2 meseca"
+          },
+          "p2": {
+            "title": "Korporativni sajt za konsultantsku firmu",
+            "description": "Višejezični sajt sa blog sekcijom, kontakt formom i CMS-om za samostalno ažuriranje sadržaja.",
+            "result": "PageSpeed skor 98/100, 40% više upita sa sajta"
+          }
+        }
       }
     },
     "enterprise": {
@@ -246,7 +259,20 @@
             "answer": "Vi imate kompletan kod i dokumentaciju. Nudimo opcionalnu podršku i održavanje, ali nikada niste zaključani."
           }
         },
-        "ctaText": "Zakažite besplatan razgovor"
+        "ctaText": "Zakažite besplatan razgovor",
+        "portfolioTitle": "Projekti koje smo realizovali",
+        "portfolio": {
+          "p1": {
+            "title": "CRM sistem za prodajni tim",
+            "description": "Prilagođeni CRM sa pipeline upravljanjem, automatskim izveštajima i integracijom sa email platformom za tim od 25 prodavaca.",
+            "result": "30% brže zatvaranje dealova, puna vidljivost pipeline-a"
+          },
+          "p2": {
+            "title": "Dashboard za logističku kompaniju",
+            "description": "Real-time praćenje flote, optimizacija ruta i automatsko generisanje dnevnih izveštaja za menadžment.",
+            "result": "15% ušteda na gorivu, eliminisano 4h dnevnog ručnog izveštavanja"
+          }
+        }
       }
     },
     "ai": {
@@ -300,7 +326,20 @@
             "answer": "Prototip chatbota možemo imati za par dana. Kompletno rešenje sa integracijom obično 1-3 nedelje, zavisno od obima podataka i broja integracija."
           }
         },
-        "ctaText": "Zakažite besplatan razgovor"
+        "ctaText": "Zakažite besplatan razgovor",
+        "portfolioTitle": "Projekti koje smo realizovali",
+        "portfolio": {
+          "p1": {
+            "title": "AI chatbot za stomatološku ordinaciju",
+            "description": "RAG chatbot obučen na kompletnoj ponudi usluga, cenovniku i FAQ-u. Odgovara pacijentima 24/7 na srpskom jeziku i prikuplja kontakt podatke.",
+            "result": "45% manje telefonskih poziva, 3x više zakazanih termina van radnog vremena"
+          },
+          "p2": {
+            "title": "Interni AI asistent za IT kompaniju",
+            "description": "Chatbot koji poznaje internu dokumentaciju, HR politike i tehničke procedure. Zaposleni dobijaju odgovor za sekunde umesto da pretražuju Confluence.",
+            "result": "Ušteda od 8h nedeljno po timu, 92% tačnost odgovora"
+          }
+        }
       }
     },
     "automation": {
@@ -354,11 +393,25 @@
             "answer": "n8n je besplatan softver. Plaćate samo server (nekoliko evra mesečno) i opcionalnu podršku od nas. Bez mesečnih pretplata za softver."
           }
         },
-        "ctaText": "Zakažite besplatan razgovor"
+        "ctaText": "Zakažite besplatan razgovor",
+        "portfolioTitle": "Projekti koje smo realizovali",
+        "portfolio": {
+          "p1": {
+            "title": "Automatizacija za e-commerce biznis",
+            "description": "Kompletna automatizacija od porudžbine do isporuke: sinhronizacija sa ERP-om, automatsko fakturisanje, email notifikacije kupcu i ažuriranje zaliha.",
+            "result": "Eliminisano 20h nedeljno ručnog rada, 0 grešaka u fakturama"
+          },
+          "p2": {
+            "title": "Lead nurturing za marketinšku agenciju",
+            "description": "Automatski workflow: novi lead sa sajta → CRM unos → welcome email sekvenca → Slack obaveštenje prodajnom timu → follow-up podsetnik.",
+            "result": "2x brži odgovor na upite, 35% viša konverzija leadova"
+          }
+        }
       }
     },
     "detailComingSoon": "Detaljnije informacije uskoro dolaze. U međuvremenu, javite nam se za besplatan razgovor.",
     "learnMore": "Saznajte više",
+    "viewAll": "Sve usluge →",
     "process": {
       "title": "Kako radimo",
       "subtitle": "Jednostavan proces. Bez misterije. Bez iznenađenja.",

@@ -97,7 +97,7 @@ export function ChatWidget() {
         )}
       </AnimatePresence>
 
-      <div className="fixed bottom-6 right-6 z-40 flex flex-col items-end gap-2">
+      <div className={`fixed bottom-6 right-6 z-40 flex flex-col items-end gap-2 ${isOpen ? "max-sm:hidden" : ""}`}>
         <AnimatePresence>
           {showTooltip && !isOpen && (
             <motion.div
