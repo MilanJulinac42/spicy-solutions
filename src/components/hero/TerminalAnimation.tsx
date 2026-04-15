@@ -124,7 +124,7 @@ export function TerminalAnimation() {
   }, [charIndex, flatChars]);
 
   return (
-    <div className="w-full rounded-xl overflow-hidden border border-white/[0.08] bg-[#0d1117] shadow-2xl shadow-black/50">
+    <div className="w-full rounded-xl overflow-hidden bg-[#0d1117] shadow-2xl shadow-black/50">
       {/* Title bar */}
       <div className="flex items-center gap-2 px-4 py-2.5 bg-[#161b22] border-b border-white/[0.06]">
         <div className="flex gap-1.5">
