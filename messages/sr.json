@@ -27,7 +27,7 @@
       },
       "p2": {
         "title": "Komunikacija kroz 5 slojeva",
-        "description": "Account menadžer priča sa PM-om, PM priča sa developerom. Vaša poruka se izgubi usput. Nikada ne razgovarate direktno sa osobom koja piše kod."
+        "description": "Posrednik priča sa vođom projekta, vođa projekta priča sa programerom. Vaša poruka se izgubi usput. Nikada ne razgovarate direktno sa osobom koja piše kod."
       },
       "p3": {
         "title": "Zastarela tehnologija usporava sve",
@@ -42,7 +42,7 @@
       "title": "Postoji bolji način",
       "point1": "Brza isporuka — radimo efikasno sa modernim alatima i ne razvlačimo rokove",
       "point2": "Sve je vaše — kod, podaci, hosting. Bez zaključavanja, ikada",
-      "point3": "Moderan tech stack — Next.js, AI, automatizacija. Tehnologija koja ubrzava razvoj",
+      "point3": "Moderne tehnologije — Next.js, AI, automatizacija. Alati koji ubrzavaju razvoj",
       "point4": "Direktan pristup inženjerima koji prave vaš proizvod. Bez posrednika, bez čekanja"
     },
     "cta": "Zakažite besplatnu konsultaciju"
@@ -56,15 +56,15 @@
     },
     "enterprise": {
       "title": "Poslovni sistemi po meri",
-      "description": "Dashboard-ovi, SaaS platforme, interni alati. Skalabilna arhitektura, production-ready kvalitet i redovna komunikacija tokom celog razvoja."
+      "description": "Pregledne table, SaaS platforme, interni alati. Sistemi koji rastu sa vama, pouzdan kvalitet spreman za produkciju i redovna komunikacija tokom celog razvoja."
     },
     "ai": {
-      "title": "AI i RAG chatbot-ovi",
-      "description": "Pametni chatbot-ovi koji poznaju vaš biznis iznutra. Automatizuju korisničku podršku, obrađuju upite 24/7 i oslobađaju vaš tim za važnije zadatke."
+      "title": "AI i pametni asistenti",
+      "description": "Pametni asistenti koji poznaju vaš biznis iznutra. Automatizuju korisničku podršku, obrađuju upite u svako doba dana i oslobađaju vaš tim za važnije zadatke."
     },
     "automation": {
       "title": "Automatizacija (n8n)",
-      "description": "Povezujemo vaše alate, eliminišemo manuelni rad i automatizujemo ponavljajuće procese. Vaš tim se fokusira na strategiju, a softver radi sve ostalo."
+      "description": "Povezujemo vaše alate, uklanjamo ručni rad i automatizujemo ponavljajuće procese. Vaš tim se posvećuje strategiji, a softver radi sve ostalo."
     }
   },
   "Stats": {
@@ -78,16 +78,16 @@
     "subtitle": "Tipični scenariji u kojima pravimo razliku za vaš biznis",
     "viewProject": "Saznaj više",
     "project1": {
-      "title": "Online prodavnica koja zarađuje",
-      "description": "Treba vam e-commerce platforma? Ne morate da čekate mesecima niti da plaćate agencijsku cenu. Napravimo modernu prodavnicu sa plaćanjem, upravljanjem proizvodima i svime što vam treba da počnete da prodajete."
+      "title": "Internet prodavnica koja zarađuje",
+      "description": "Treba vam internet prodavnica? Ne morate da čekate mesecima niti da plaćate agencijsku cenu. Pravimo modernu prodavnicu sa plaćanjem, upravljanjem proizvodima i svime što vam treba da počnete da prodajete."
     },
     "project2": {
       "title": "AI podrška koja nikad ne spava",
-      "description": "Vaši klijenti čekaju na odgovor? Postavimo AI chatbot koji poznaje vaš biznis iznutra i odgovara na pitanja umesto vas — non-stop, bez pauze, bez bolovanja."
+      "description": "Vaši klijenti čekaju na odgovor? Postavljamo pametnog AI asistenta koji poznaje vaš biznis iznutra i odgovara na pitanja umesto vas — bez prestanka, bez pauze, bez bolovanja."
     },
     "project3": {
       "title": "Automatizacija umesto ručnog posla",
-      "description": "Gubite sate na copy-paste između alata? Povezujemo vaše sisteme i automatizujemo ponavljajuće procese tako da se vaš tim fokusira na ono što zaista donosi vrednost."
+      "description": "Gubite sate na ručno prebacivanje podataka između alata? Povezujemo vaše sisteme i automatizujemo ponavljajuće zadatke tako da se vaš tim posveti onom što zaista donosi vrednost."
     },
     "project4": {
       "title": "Oslobađanje od zastarelog sistema",
@@ -98,15 +98,15 @@
     "title": "Trenutak kad su shvatili",
     "subtitle": "Šta kažu naši klijenti kad saznaju koliko IT zaista treba da košta",
     "testimonial1": {
-      "quote": "Plaćali smo velikoj agenciji 400 EUR mesečno samo za hosting i sitne izmene. Solvera nas je prebacio na bolji setup za jednokratnu naknadu. Još uvek sam besan koliko dugo smo preplaćivali.",
+      "quote": "Plaćali smo velikoj agenciji 400 EUR mesečno samo za hosting i sitne izmene. Solvera nas je prebacila na bolje rešenje uz jednokratnu naknadu. Još uvek sam besan koliko dugo smo preplaćivali.",
       "name": "Marko Petrović",
-      "role": "CEO",
+      "role": "Direktor",
       "company": "TechVentures"
     },
     "testimonial2": {
-      "quote": "Tražili su nam 12.000 EUR za chatbot. Solvera je napravio nešto bolje za četvrtinu te cene. ROI je bio očigledan već prvog meseca.",
+      "quote": "Tražili su nam 12.000 EUR za pametnog asistenta. Solvera je napravila nešto bolje za četvrtinu te cene. Isplativost je bila očigledna već prvog meseca.",
       "name": "Ana Jovanović",
-      "role": "CTO",
+      "role": "Tehnički direktor",
       "company": "DataFlow Inc."
     },
     "testimonial3": {
@@ -121,15 +121,15 @@
     "subtitle": "Mali smo tim — ali upravo zato isporučujemo brže i efikasnije",
     "code": {
       "title": "Inženjeri, ne prodavci",
-      "description": "Radite direktno sa developerima koji pišu vaš kod. Bez account menadžera, bez posrednika, bez gluvih telefona. Brza komunikacija, bolji rezultati."
+      "description": "Radite direktno sa inženjerima koji pišu vaš kod. Bez posrednika, bez agencija između, bez gluvih telefona. Brza komunikacija, bolji rezultati."
     },
     "ownership": {
       "title": "Sve je vaše",
       "description": "Svaka linija koda, svaki dizajn fajl, svaki dokument — pripada vama. Bez zaključavanja kod provajdera, bez talačkih situacija. Možete otići kad god želite."
     },
     "speed": {
-      "title": "Moderan stack, brza isporuka",
-      "description": "Koristimo Next.js, AI, n8n i iste alate koje koriste vrhunske tech kompanije. Vaš projekat se gradi tehnologijom koja zaista radi."
+      "title": "Moderne tehnologije, brza isporuka",
+      "description": "Koristimo Next.js, AI, n8n i iste alate koje koriste vodeće tehnološke kompanije. Vaš projekat se gradi tehnologijom koja zaista radi."
     },
     "direct": {
       "title": "Direktna komunikacija",
@@ -148,40 +148,40 @@
     "websites": {
       "title": "Sajtovi i web aplikacije",
       "description": "Pravimo moderne, brze sajtove sa Next.js koji se učitavaju za manje od sekunde. Kompletno vlasništvo nad kodom, bez zavisnosti od provajdera, sa isporukom u kratkim rokovima.",
-      "comparison": "Brz razvoj sa modernim tech stackom i potpunim vlasništvom nad kodom.",
+      "comparison": "Brz razvoj sa modernim skupom tehnologija i potpunim vlasništvom nad kodom.",
       "features": {
-        "f1": "Responsivan dizajn, svi uređaji, sve veličine ekrana",
-        "f2": "SEO ugrađen od prvog dana",
-        "f3": "Učitavanje ispod sekunde sa Next.js",
-        "f4": "CMS uključen — ažurirajte sadržaj sami",
+        "f1": "Prilagođen svim uređajima — telefon, tablet, računar",
+        "f2": "Optimizacija za pretraživače (SEO) od prvog dana",
+        "f3": "Učitavanje ispod sekunde uz Next.js",
+        "f4": "Sistem za samostalan unos sadržaja — menjajte tekstove kad god",
         "f5": "Sve je vaše: kod, domen, hosting"
       },
       "detail": {
-        "extendedDescription": "Bilo da vam treba jednostavan sajt za prezentaciju firme ili kompleksna web aplikacija sa korisničkim nalozima i dashboardom — mi pravimo rešenja koja izgledaju profesionalno, rade munjevito brzo i potpuno su vaša.",
+        "extendedDescription": "Bilo da vam treba jednostavan sajt za prezentaciju firme ili složena web aplikacija sa korisničkim nalozima i preglednom tablom — mi pravimo rešenja koja izgledaju profesionalno, rade munjevito brzo i potpuno su vaša.",
         "examplesTitle": "Šta sve radimo",
         "examples": {
           "e1": {
-            "title": "Landing page za vaš biznis",
+            "title": "Prezentaciona stranica za vaš biznis",
             "description": "Profesionalna prezentacija firme sa kontakt formom, SEO optimizacijom i brzim učitavanjem. Idealno za privlačenje novih klijenata."
           },
           "e2": {
-            "title": "E-commerce prodavnica",
-            "description": "Online prodavnica sa katalogom proizvoda, korpom, plaćanjem i praćenjem porudžbina. Sve što vam treba da počnete da prodajete online."
+            "title": "Internet prodavnica",
+            "description": "Internet prodavnica sa katalogom proizvoda, korpom, plaćanjem i praćenjem porudžbina. Sve što vam treba da počnete da prodajete preko interneta."
           },
           "e3": {
-            "title": "Web aplikacija sa dashboard-om",
-            "description": "Korisnički nalozi, admin panel, analitika u realnom vremenu. Za firme kojima treba više od prostog sajta."
+            "title": "Web aplikacija sa preglednom tablom",
+            "description": "Korisnički nalozi, administratorski panel, analitika u realnom vremenu. Za firme kojima treba više od prostog sajta."
           },
           "e4": {
             "title": "Blog ili portfolio",
-            "description": "Sadržaj koji vi sami ažurirate bez programera. CMS ugrađen, SEO podešen, dizajn prilagođen vašem brendu."
+            "description": "Sadržaj koji vi sami menjate bez programera. Sistem za samostalan unos sadržaja, optimizacija za pretraživače (SEO), dizajn prilagođen vašem brendu."
           }
         },
         "faqTitle": "Česta pitanja",
         "faq": {
           "q1": {
             "question": "Koliko traje izrada sajta?",
-            "answer": "Brzo. Landing page 2-5 dana, e-commerce 1-2 nedelje, web aplikacija 2-4 nedelje. Kompleksnije aplikacije mogu trajati duže — dobijate jasan rok pre početka."
+            "answer": "Brzo. Prezentaciona stranica 2-5 dana, internet prodavnica 1-2 nedelje, web aplikacija 2-4 nedelje. Složenije aplikacije mogu trajati duže — dobijate jasan rok pre početka."
           },
           "q2": {
             "question": "Ko je vlasnik koda i sajta?",
@@ -189,7 +189,7 @@
           },
           "q3": {
             "question": "Da li mogu sam da menjam sadržaj?",
-            "answer": "Da! Svaki sajt dolazi sa CMS-om gde možete menjati tekstove, slike i stranice bez ikakvog tehničkog znanja."
+            "answer": "Da! Svaki sajt dolazi sa sistemom za samostalan unos sadržaja gde možete menjati tekstove, slike i stranice bez ikakvog tehničkog znanja."
           },
           "q4": {
             "question": "Šta ako mi treba nešto specifično?",
@@ -200,13 +200,13 @@
         "portfolioTitle": "Projekti koje smo realizovali",
         "portfolio": {
           "p1": {
-            "title": "Online prodavnica za lokalni brend",
-            "description": "E-commerce platforma sa katalogom od 500+ proizvoda, online plaćanjem i automatskim praćenjem porudžbina.",
-            "result": "3x više online porudžbina u prva 2 meseca"
+            "title": "Internet prodavnica za lokalni brend",
+            "description": "Internet prodavnica sa katalogom od 500+ proizvoda, onlajn plaćanjem i automatskim praćenjem porudžbina.",
+            "result": "Tri puta više porudžbina preko interneta u prva dva meseca"
           },
           "p2": {
             "title": "Korporativni sajt za konsultantsku firmu",
-            "description": "Višejezični sajt sa blog sekcijom, kontakt formom i CMS-om za samostalno ažuriranje sadržaja.",
+            "description": "Višejezični sajt sa blog sekcijom, kontakt formom i sistemom za samostalno menjanje sadržaja.",
             "result": "PageSpeed skor 98/100, 40% više upita sa sajta"
           }
         }
@@ -214,17 +214,17 @@
     },
     "enterprise": {
       "title": "Poslovni sistemi po meri",
-      "description": "Dashboard-ovi, SaaS platforme, interni alati, API integracije. Gradimo skalabilne, production-ready sisteme sa fokusom na kvalitet koda i redovnu komunikaciju tokom razvoja.",
-      "comparison": "Enterprise kvalitet sa agilnim razvojem i direktnim pristupom timu.",
+      "description": "Pregledne table, SaaS platforme, interni alati, API integracije. Gradimo sisteme koji rastu sa vama, spremne za produkciju, sa posvećenošću kvalitetu koda i redovnom komunikacijom tokom razvoja.",
+      "comparison": "Vrhunski poslovni kvalitet sa agilnim razvojem i direktnim pristupom timu.",
       "features": {
         "f1": "Skalabilna arhitektura koja raste sa vama",
-        "f2": "Dashboard-ovi i analitika u realnom vremenu",
+        "f2": "Pregledne table i analitika u realnom vremenu",
         "f3": "Kontrola pristupa i bezbednost zasnovana na ulogama",
-        "f4": "CI/CD pipeline-ovi i automatski deployment",
+        "f4": "Automatske provere i automatsko postavljanje koda na server",
         "f5": "Kompletna dokumentacija i predaja izvornog koda"
       },
       "detail": {
-        "extendedDescription": "Vaš biznis ima specifične potrebe koje gotova rešenja ne pokrivaju. Mi gradimo sisteme koji se savršeno uklapaju u vaš način rada — od internih alata i dashboard-ova do kompleksnih SaaS platformi.",
+        "extendedDescription": "Vaš biznis ima specifične potrebe koje gotova rešenja ne pokrivaju. Mi gradimo sisteme koji se savršeno uklapaju u vaš način rada — od internih alata i preglednih tabla do složenih SaaS platformi.",
         "examplesTitle": "Šta sve radimo",
         "examples": {
           "e1": {
@@ -233,26 +233,26 @@
           },
           "e2": {
             "title": "SaaS platforma",
-            "description": "Vaša ideja pretvorena u proizvod sa korisničkim nalozima, plaćanjem, admin panelom i svim što vam treba za lansiranje."
+            "description": "Vaša ideja pretvorena u proizvod sa korisničkim nalozima, plaćanjem, administratorskim panelom i svim što vam treba za pokretanje."
           },
           "e3": {
-            "title": "Dashboard i analitika",
-            "description": "Svi vaši podaci na jednom mestu. Grafici, izveštaji, KPI-jevi u realnom vremenu — donosite odluke na osnovu podataka, ne intuicije."
+            "title": "Pregledna tabla i analitika",
+            "description": "Svi vaši podaci na jednom mestu. Grafici, izveštaji i ključni pokazatelji uspeha u realnom vremenu — donosite odluke na osnovu podataka, ne na osećaj."
           },
           "e4": {
             "title": "API integracije",
-            "description": "Povezujemo vaše postojeće sisteme da komuniciraju jedni sa drugima. ERP sa e-commerce-om, CRM sa email platformom — bez ručnog prebacivanja podataka."
+            "description": "Povezujemo vaše postojeće sisteme da razmenjuju podatke međusobno. ERP sa internet prodavnicom, CRM sa sistemom za slanje imejlova — bez ručnog prebacivanja podataka."
           }
         },
         "faqTitle": "Česta pitanja",
         "faq": {
           "q1": {
             "question": "Koliko traje razvoj poslovnog sistema?",
-            "answer": "MVP obično 1-3 nedelje, kompletniji sistem 4-8 nedelja. Za veće projekte sa mnogo integracija može biti i duže — pre početka dobijate jasan plan sa milestones i rokovima."
+            "answer": "Prva radna verzija obično za 1-3 nedelje, kompletniji sistem 4-8 nedelja. Za veće projekte sa mnogo integracija može biti i duže — pre početka dobijate jasan plan sa etapama i rokovima."
           },
           "q2": {
             "question": "Da li može da se integriše sa našim postojećim alatima?",
-            "answer": "Da. Integrišemo se sa bilo kojim sistemom koji ima API — ERP, CRM, accounting softver, email platforme, baze podataka."
+            "answer": "Da. Povezujemo se sa bilo kojim sistemom koji ima API — ERP, CRM, računovodstveni softver, sistemi za slanje imejlova, baze podataka."
           },
           "q3": {
             "question": "Šta se dešava kad sistem treba da se proširi?",
@@ -268,35 +268,35 @@
         "portfolio": {
           "p1": {
             "title": "CRM sistem za prodajni tim",
-            "description": "Prilagođeni CRM sa pipeline upravljanjem, automatskim izveštajima i integracijom sa email platformom za tim od 25 prodavaca.",
-            "result": "30% brže zatvaranje dealova, puna vidljivost pipeline-a"
+            "description": "Prilagođeni CRM sistem sa upravljanjem prodajnim tokom, automatskim izveštajima i povezivanjem sa sistemom za slanje imejlova za tim od 25 prodavaca.",
+            "result": "30% brže zaključivanje poslova, puna preglednost prodajnog toka"
           },
           "p2": {
-            "title": "Dashboard za logističku kompaniju",
-            "description": "Real-time praćenje flote, optimizacija ruta i automatsko generisanje dnevnih izveštaja za menadžment.",
+            "title": "Pregledna tabla za logističku firmu",
+            "description": "Praćenje vozila u realnom vremenu, optimizacija ruta i automatsko generisanje dnevnih izveštaja za upravu.",
             "result": "15% ušteda na gorivu, eliminisano 4h dnevnog ručnog izveštavanja"
           }
         }
       }
     },
     "ai": {
-      "title": "AI integracija i RAG chatbot-ovi",
-      "description": "Vaša konkurencija već koristi AI. Gradimo inteligentne chatbot-ove, obradu dokumenata i AI pretragu koji transformišu korisničko iskustvo i oslobađaju vaš tim za strateške zadatke.",
-      "comparison": "Brza implementacija AI rešenja sa merljivim rezultatima od prvog meseca.",
+      "title": "AI integracija i pametni asistenti",
+      "description": "Vaša konkurencija već koristi AI. Gradimo pametne asistente, automatsku obradu dokumenata i inteligentnu pretragu koji menjaju korisničko iskustvo i oslobađaju vaš tim za važnije poslove.",
+      "comparison": "Brzo postavljanje AI rešenja sa merljivim rezultatima od prvog meseca.",
       "features": {
-        "f1": "RAG chatbot-ovi obučeni na VAŠIM poslovnim podacima",
-        "f2": "Integracija sa vašim postojećim alatima i sistemima",
+        "f1": "Pametni asistenti obučeni na VAŠIM poslovnim podacima",
+        "f2": "Povezivanje sa vašim postojećim alatima i sistemima",
         "f3": "Baza znanja koja uči i poboljšava se vremenom",
-        "f4": "24/7 podrška korisnicima bez zapošljavanja novih ljudi",
+        "f4": "Podrška korisnicima 24 sata, 7 dana u nedelji — bez zapošljavanja novih ljudi",
         "f5": "Merljiv rezultat već prvog meseca"
       },
       "detail": {
-        "extendedDescription": "AI nije budućnost — to je sadašnjost. Mi implementiramo konkretna AI rešenja koja vaš tim koristi od prvog dana: chatbot-ove koji znaju vaš posao, automatsku obradu dokumenata i inteligentnu pretragu.",
+        "extendedDescription": "AI nije budućnost — to je sadašnjost. Mi pravimo konkretna AI rešenja koja vaš tim koristi od prvog dana: pametne asistente koji znaju vaš posao, automatsku obradu dokumenata i inteligentnu pretragu.",
         "examplesTitle": "Šta sve radimo",
         "examples": {
           "e1": {
-            "title": "RAG chatbot za korisničku podršku",
-            "description": "Chatbot obučen na vašoj dokumentaciji, FAQ-u i bazi znanja. Odgovara na pitanja klijenata 24/7, tačno i na vašem jeziku."
+            "title": "Pametni asistent za korisničku podršku",
+            "description": "Asistent obučen na vašoj dokumentaciji, čestim pitanjima i bazi znanja. Odgovara klijentima u svako doba dana, tačno i na vašem jeziku."
           },
           "e2": {
             "title": "Interni AI asistent za zaposlene",
@@ -315,11 +315,11 @@
         "faq": {
           "q1": {
             "question": "Da li su moji podaci bezbedni?",
-            "answer": "Apsolutno. Možemo hostovati AI na vašim serverima — vaši podaci nikada ne napuštaju vašu infrastrukturu. Ili koristimo enkriptovane cloud servise."
+            "answer": "Apsolutno. Možemo postaviti AI na vaše servere — vaši podaci nikada ne napuštaju vašu infrastrukturu. Ili koristimo zaštićene usluge u oblaku."
           },
           "q2": {
-            "question": "Koliko je chatbot tačan?",
-            "answer": "RAG chatbot-ovi odgovaraju na osnovu vaših dokumenata, ne izmišljaju. Tačnost je obično 90%+, a poboljšava se vremenom sa feedbackom."
+            "question": "Koliko je asistent tačan?",
+            "answer": "Pametni asistenti odgovaraju na osnovu vaših dokumenata — ne izmišljaju. Tačnost je obično 90% ili više, a poboljšava se vremenom uz povratne informacije."
           },
           "q3": {
             "question": "Na kojim jezicima radi?",
@@ -327,35 +327,35 @@
           },
           "q4": {
             "question": "Koliko brzo mogu da počnem?",
-            "answer": "Prototip chatbota možemo imati za par dana. Kompletno rešenje sa integracijom obično 1-3 nedelje, zavisno od obima podataka i broja integracija."
+            "answer": "Prototip asistenta možemo imati za par dana. Kompletno rešenje sa povezivanjem obično 1-3 nedelje, zavisno od obima podataka i broja povezivanja."
           }
         },
         "ctaText": "Zakažite besplatan razgovor",
         "portfolioTitle": "Projekti koje smo realizovali",
         "portfolio": {
           "p1": {
-            "title": "AI chatbot za stomatološku ordinaciju",
-            "description": "RAG chatbot obučen na kompletnoj ponudi usluga, cenovniku i FAQ-u. Odgovara pacijentima 24/7 na srpskom jeziku i prikuplja kontakt podatke.",
-            "result": "45% manje telefonskih poziva, 3x više zakazanih termina van radnog vremena"
+            "title": "Pametni AI asistent za stomatološku ordinaciju",
+            "description": "Asistent obučen na kompletnoj ponudi usluga, cenovniku i čestim pitanjima. Odgovara pacijentima u svako doba dana na srpskom jeziku i prikuplja kontakt podatke.",
+            "result": "45% manje telefonskih poziva, tri puta više zakazanih termina van radnog vremena"
           },
           "p2": {
-            "title": "Interni AI asistent za IT kompaniju",
-            "description": "Chatbot koji poznaje internu dokumentaciju, HR politike i tehničke procedure. Zaposleni dobijaju odgovor za sekunde umesto da pretražuju Confluence.",
-            "result": "Ušteda od 8h nedeljno po timu, 92% tačnost odgovora"
+            "title": "Interni AI asistent za IT firmu",
+            "description": "Asistent koji poznaje internu dokumentaciju, kadrovske politike i tehničke procedure. Zaposleni dobijaju odgovor za sekunde umesto da pretražuju dokumentaciju.",
+            "result": "Ušteda od osam sati nedeljno po timu, 92% tačnost odgovora"
           }
         }
       }
     },
     "automation": {
       "title": "Automatizacija putem n8n",
-      "description": "n8n je open-source platforma za automatizaciju. Mi je podešavamo, povezujemo vaše alate i gradimo tokove koji eliminišu manuelni rad — vaš tim se fokusira na ono što zaista pravi razliku.",
+      "description": "n8n je besplatna platforma sa otvorenim kodom za automatizaciju. Mi je podešavamo, povezujemo vaše alate i gradimo tokove koji uklanjaju ručni rad — vaš tim se posvećuje onome što zaista pravi razliku.",
       "comparison": "Eliminišite ponavljajuće zadatke i oslobodite tim za strateški rad.",
       "features": {
-        "f1": "Vizuelni workflow builder — lako razumljiv i prilagodljiv",
-        "f2": "Povezuje 400+ aplikacija i bilo koji REST API",
+        "f1": "Vizuelni graditelj automatskih tokova — lako razumljiv i prilagodljiv",
+        "f2": "Povezuje preko 400 aplikacija i bilo koji sistem koji ima API",
         "f3": "Automatska sinhronizacija podataka, izveštavanje i obaveštenja",
-        "f4": "Zakazani zadaci koji rade 24/7 bez ljudske intervencije",
-        "f5": "Self-hosted: vaši podaci ostaju na vašim serverima"
+        "f4": "Zakazani zadaci koji rade neprekidno bez ljudske intervencije",
+        "f5": "Postavlja se kod vas: vaši podaci ostaju na vašim serverima"
       },
       "detail": {
         "extendedDescription": "Koliko sati nedeljno vaš tim troši na ponavljajuće zadatke? Prebacivanje podataka iz jednog sistema u drugi, slanje izveštaja, ažuriranje tabela. Mi to automatizujemo sa n8n — vaš tim radi pametnije, ne više.",
@@ -363,15 +363,15 @@
         "examples": {
           "e1": {
             "title": "Sinhronizacija podataka između sistema",
-            "description": "Nova porudžbina u e-shopu → automatski se kreira u ERP-u, šalje se email kupcu, ažurira se stanje zaliha. Bez ljudske intervencije."
+            "description": "Nova porudžbina u internet prodavnici → automatski se pravi unos u ERP, šalje se imejl kupcu, ažurira se stanje zaliha. Bez ljudske intervencije."
           },
           "e2": {
             "title": "Automatsko izveštavanje",
-            "description": "Dnevni, nedeljni ili mesečni izveštaji koji se sami generišu i šalju na email ili Slack. Uvek tačni, uvek na vreme."
+            "description": "Dnevni, nedeljni ili mesečni izveštaji koji se sami stvaraju i šalju na imejl ili Slack. Uvek tačni, uvek na vreme."
           },
           "e3": {
-            "title": "Lead management workflow",
-            "description": "Novi kontakt sa sajta → automatski ulazi u CRM, tim dobija obaveštenje, šalje se welcome email. Nijedan lead ne prolazi neprimećen."
+            "title": "Automatska obrada novih upita",
+            "description": "Novi kontakt sa sajta → automatski ulazi u CRM, tim dobija obaveštenje, šalje se uvodni imejl. Nijedan upit ne prolazi neprimećen."
           },
           "e4": {
             "title": "Automatizacija fakturisanja",
@@ -382,7 +382,7 @@
         "faq": {
           "q1": {
             "question": "Šta je n8n?",
-            "answer": "n8n je open-source platforma za automatizaciju — zamislite je kao LEGO za poslovne procese. Povezuje vaše alate i automatizuje tokove rada vizuelno, bez kodiranja."
+            "answer": "n8n je besplatna platforma za automatizaciju (otvorenog koda) — zamislite je kao LEGO za poslovne procese. Povezuje vaše alate i automatizuje tokove rada vizuelno, bez programiranja."
           },
           "q2": {
             "question": "Koje aplikacije mogu da povežem?",
@@ -390,7 +390,7 @@
           },
           "q3": {
             "question": "Gde se čuvaju moji podaci?",
-            "answer": "n8n je self-hosted — instaliramo ga na vašem serveru. Vaši podaci nikada ne prolaze kroz treće strane."
+            "answer": "n8n se postavlja kod vas — instaliramo ga na vaš server. Vaši podaci nikada ne prolaze kroz treće strane."
           },
           "q4": {
             "question": "Koliko košta održavanje?",
@@ -401,14 +401,14 @@
         "portfolioTitle": "Projekti koje smo realizovali",
         "portfolio": {
           "p1": {
-            "title": "Automatizacija za e-commerce biznis",
-            "description": "Kompletna automatizacija od porudžbine do isporuke: sinhronizacija sa ERP-om, automatsko fakturisanje, email notifikacije kupcu i ažuriranje zaliha.",
+            "title": "Automatizacija za internet prodavnicu",
+            "description": "Kompletna automatizacija od porudžbine do isporuke: sinhronizacija sa ERP sistemom, automatsko fakturisanje, obaveštenja kupcu na imejl i ažuriranje zaliha.",
             "result": "Eliminisano 20h nedeljno ručnog rada, 0 grešaka u fakturama"
           },
           "p2": {
-            "title": "Lead nurturing za marketinšku agenciju",
-            "description": "Automatski workflow: novi lead sa sajta → CRM unos → welcome email sekvenca → Slack obaveštenje prodajnom timu → follow-up podsetnik.",
-            "result": "2x brži odgovor na upite, 35% viša konverzija leadova"
+            "title": "Obrada potencijalnih kupaca za marketinšku agenciju",
+            "description": "Automatski tok: novi upit sa sajta → unos u CRM → serija uvodnih imejlova → obaveštenje prodajnom timu → naknadni podsetnik.",
+            "result": "Dvostruko brži odgovor na upite, 35% više upita pretvorenih u kupce"
           }
         }
       }
@@ -421,7 +421,7 @@
       "subtitle": "Jednostavan proces. Bez misterije. Bez iznenađenja.",
       "step1": {
         "title": "Besplatna konsultacija",
-        "description": "Analiziramo vaš trenutni IT setup i identifikujemo gde gubite vreme i efikasnost. Bez obaveza."
+        "description": "Analiziramo vašu trenutnu IT organizaciju i pokazujemo vam gde gubite vreme i efikasnost. Bez obaveza."
       },
       "step2": {
         "title": "Jasan plan",
@@ -429,7 +429,7 @@
       },
       "step3": {
         "title": "Razvoj i isporuka",
-        "description": "Gradimo brzo sa modernim alatima. Dobijate redovna ažuriranja i direktan pristup developerima."
+        "description": "Gradimo brzo sa modernim alatima. Dobijate redovna ažuriranja i direktan pristup inženjerima."
       },
       "step4": {
         "title": "Predaja i sloboda",
@@ -448,17 +448,17 @@
     "story": {
       "title": "Zašto smo počeli",
       "p1": "Gledali smo kako se to dešava svima oko nas. Prijatelji koji vode firme, članovi porodice sa startapima — svi čekaju mesecima na jednostavne stvari. Komunikacija ide kroz pet slojeva. Koriste se alati iz 2015. A na kraju dobijaju prosečan rezultat. To nas je frustriralo.",
-      "p2": "Mi smo tim koji radi sa modernim tehnologijama godinama. Znamo da se stvari mogu raditi brže, kvalitetnije i sa boljom komunikacijom. Zato smo pokrenuli Solvera — da pokažemo da IT razvoj ne mora da bude spor i frustrirajuć. Bez korporativnog overhead-a. Bez account menadžera. Samo inženjeri koji pišu kod i rešavaju probleme."
+      "p2": "Mi smo tim koji radi sa modernim tehnologijama godinama. Znamo da se stvari mogu raditi brže, kvalitetnije i sa boljom komunikacijom. Zato smo pokrenuli Solvera — da pokažemo da IT razvoj ne mora da bude spor i frustrirajuć. Bez nepotrebne birokratije. Bez posrednika. Samo inženjeri koji pišu kod i rešavaju probleme."
     },
     "values": {
       "title": "U šta verujemo",
       "innovation": {
         "title": "Samo moderna tehnologija",
-        "description": "Koristimo Next.js, AI, n8n — iste alate koje koriste vrhunske tech kompanije. Moderan razvoj, brza isporuka."
+        "description": "Koristimo Next.js, AI, n8n — iste alate koje koriste vrhunske tehnološke kompanije. Moderan razvoj, brza isporuka."
       },
       "quality": {
         "title": "Kvalitet bez kompromisa",
-        "description": "Brzo ne znači površno. Svaki projekat dobija isti inženjerski rigor koji bismo primenili na sopstvene proizvode."
+        "description": "Brzo ne znači površno. Svaki projekat dobija istu inženjersku pažnju koju bismo primenili na sopstvene proizvode."
       },
       "transparency": {
         "title": "Radikalna transparentnost",
@@ -479,7 +479,7 @@
       "skillCategories": {
         "frontend": "Web aplikacije",
         "backend": "Serveri i API-ji",
-        "cloud": "Cloud i infrastruktura",
+        "cloud": "Oblak i infrastruktura",
         "database": "Baze podataka"
       },
       "member1": {
@@ -495,15 +495,15 @@
         "capabilities": {
           "webapps": {
             "title": "Web aplikacije",
-            "description": "Kompletne aplikacije od nule — frontend, backend, baza. Brzo, responzivno, spremno za korisnike."
+            "description": "Kompletne aplikacije od nule — vidljivi deo, serverski deo, baza podataka. Brzo, prilagođeno svim ekranima, spremno za korisnike."
           },
           "ecommerce": {
-            "title": "Online prodavnice",
-            "description": "Plaćanja, korpe, korisničke naloge — sve što vam treba da počnete da prodajete online."
+            "title": "Internet prodavnice",
+            "description": "Plaćanja, korpe, korisnički nalozi — sve što vam treba da počnete da prodajete preko interneta."
           },
           "ai": {
             "title": "AI integracije",
-            "description": "Pametne preporuke, automatizacija, chatbotovi — AI koji realno pomaže vašem biznisu."
+            "description": "Pametne preporuke, automatizacija, pametni asistenti — AI koji realno pomaže vašem biznisu."
           },
           "leadership": {
             "title": "Vođenje tima",
@@ -515,7 +515,7 @@
           },
           "reliability": {
             "title": "Pouzdanost",
-            "description": "Automatizovano testiranje, CI/CD, migracije bez prekida — vaš softver radi 24/7."
+            "description": "Automatske provere, automatsko postavljanje novih verzija i migracije bez prekida — vaš softver radi 24 sata dnevno, svih sedam dana u nedelji."
           }
         }
       },
@@ -526,7 +526,7 @@
       }
     },
     "tech": {
-      "title": "Naš tech stack",
+      "title": "Naše tehnologije",
       "subtitle": "Tehnologije koje koristimo za izgradnju modernih digitalnih rešenja"
     }
   },
@@ -721,19 +721,19 @@
   },
   "Contact": {
     "title": "Besplatna konsultacija",
-    "subtitle": "Recite nam o vašem trenutnom IT setup-u i pokazaćemo vam gde gubite vreme i efikasnost. Bez ikakvih obaveza.",
+    "subtitle": "Recite nam o vašoj trenutnoj IT organizaciji i pokazaćemo vam gde gubite vreme i efikasnost. Bez ikakvih obaveza.",
     "audit": {
       "title": "Šta dobijate (besplatno)",
       "description": "Naša konsultacija pokriva sve što treba da znate:",
       "bullets": {
-        "b1": "Pregled vašeg IT setup-a i konkretne preporuke za poboljšanje",
+        "b1": "Pregled vaše IT organizacije i konkretne preporuke za poboljšanje",
         "b2": "Preporuke za ubrzanje razvoja i modernizaciju tehnologije",
-        "b3": "Konkretne preporuke za automatizaciju i optimizaciju (AI, n8n, moderan stack)"
+        "b3": "Konkretne preporuke za automatizaciju i optimizaciju (AI, n8n, savremene tehnologije)"
       }
     },
     "form": {
       "name": "Vaše ime",
-      "email": "Email adresa",
+      "email": "Imejl adresa",
       "company": "Kompanija",
       "optional": "opciono",
       "service": "Šta vas zanima?",
@@ -742,7 +742,7 @@
         "audit": "Besplatna konsultacija",
         "websites": "Sajt / Web aplikacija",
         "enterprise": "Poslovni sistem po meri",
-        "ai": "AI i chatbot integracija",
+        "ai": "AI i pametni asistent",
         "automation": "Automatizacija radnih tokova",
         "other": "Nešto drugo"
       },
@@ -773,7 +773,7 @@
       "p1": "Prikupljamo samo podatke koje nam vi dobrovoljno dostavite putem kontakt forme:",
       "items": {
         "i1": "Ime i prezime",
-        "i2": "Email adresa",
+        "i2": "Imejl adresa",
         "i3": "Naziv kompanije (opciono)",
         "i4": "Sadržaj vaše poruke"
       },
@@ -890,12 +890,12 @@
     "services": {
       "websites": {
         "title": "Web sajt",
-        "description": "Landing stranice, korporativni sajtovi, e-commerce",
+        "description": "Prezentacione stranice, korporativni sajtovi, internet prodavnice",
         "subtypeLabel": "Kakav sajt vam treba?",
         "subtypes": {
-          "landing": "Landing stranica",
+          "landing": "Prezentaciona stranica",
           "corporate": "Korporativni sajt",
-          "ecommerce": "E-commerce / Online prodavnica",
+          "ecommerce": "Internet prodavnica",
           "portfolio": "Portfolio",
           "blog": "Blog / Magazin"
         },
@@ -903,14 +903,14 @@
         "features": {
           "contactForm": "Kontakt forma",
           "blog": "Blog",
-          "shop": "Online shop",
+          "shop": "Internet prodaja",
           "booking": "Rezervacije / Termini",
-          "cms": "CMS (admin panel)",
-          "multilang": "Višejezičnost",
-          "newsletter": "Newsletter",
-          "livechat": "Live chat",
-          "seo": "SEO optimizacija",
-          "analytics": "Analytics / Tracking"
+          "cms": "Sistem za samostalan unos sadržaja",
+          "multilang": "Više jezika",
+          "newsletter": "Bilten za pretplatnike",
+          "livechat": "Dopisivanje uživo",
+          "seo": "Optimizacija za pretraživače (SEO)",
+          "analytics": "Praćenje posetilaca"
         },
         "scopeLabel": "Okvirni broj stranica",
         "scopeOptions": {
@@ -932,27 +932,27 @@
         }
       },
       "enterprise": {
-        "title": "Enterprise aplikacija",
-        "description": "SaaS platforme, interni alati, dashboardovi",
+        "title": "Poslovna aplikacija",
+        "description": "SaaS platforme, interni alati, pregledne table",
         "subtypeLabel": "Kakva aplikacija?",
         "subtypes": {
           "internal": "Interni alat",
-          "dashboard": "Dashboard / Analitika",
+          "dashboard": "Pregledna tabla / Analitika",
           "saas": "SaaS platforma",
           "crm": "CRM / ERP sistem",
           "b2b": "B2B portal"
         },
         "featuresLabel": "Funkcionalnosti",
         "features": {
-          "auth": "Autentifikacija / Korisnici",
-          "rbac": "Role-based pristup",
-          "reporting": "Reporting / Dashboardi",
-          "realtime": "Real-time updates",
+          "auth": "Prijava i upravljanje korisnicima",
+          "rbac": "Pristup po ulogama",
+          "reporting": "Izveštaji / Pregledne table",
+          "realtime": "Ažuriranje u realnom vremenu",
           "api": "API integracije",
-          "payment": "Payment / Subscriptions",
-          "multitenant": "Multi-tenant",
-          "audit": "Audit log",
-          "notifications": "Notifikacije (email/push)"
+          "payment": "Plaćanja i pretplate",
+          "multitenant": "Više firmi na istom sistemu",
+          "audit": "Zapisnik izmena",
+          "notifications": "Obaveštenja (imejl ili na telefon)"
         },
         "scopeLabel": "Okvirni broj korisnika",
         "scopeOptions": {
@@ -975,26 +975,26 @@
       },
       "ai": {
         "title": "AI rešenje",
-        "description": "Chatbotovi, RAG sistemi, AI automatizacija",
+        "description": "Pametni asistenti, sistemi za pretragu dokumenata, AI automatizacija",
         "subtypeLabel": "Koja vrsta AI rešenja?",
         "subtypes": {
-          "chatbot": "Chatbot (customer support)",
-          "rag": "RAG sistem (pretraga dokumenata)",
-          "content": "Content generator",
-          "agent": "AI agent / automatizacija",
-          "voice": "Voice AI / IVR",
-          "ocr": "OCR / Document processing"
+          "chatbot": "Pametni asistent (korisnička podrška)",
+          "rag": "Pretraga vaših dokumenata (RAG)",
+          "content": "Generator sadržaja i tekstova",
+          "agent": "AI agent / automatizacija zadataka",
+          "voice": "Glasovni asistent (telefonski sistem)",
+          "ocr": "Automatsko čitanje dokumenata"
         },
         "featuresLabel": "Funkcionalnosti",
         "features": {
-          "knowledgeBase": "Knowledge base integracija",
-          "leadCapture": "Lead capture",
-          "crmIntegration": "CRM integracija",
-          "multilang": "Višejezičnost",
-          "analytics": "Analytics",
-          "apiAccess": "API pristup",
-          "handoff": "Prosleđivanje operateru",
-          "fineTuning": "Fine-tuning / Custom model"
+          "knowledgeBase": "Povezivanje sa bazom znanja",
+          "leadCapture": "Prikupljanje upita",
+          "crmIntegration": "Povezivanje sa CRM sistemom",
+          "multilang": "Više jezika",
+          "analytics": "Analitika korišćenja",
+          "apiAccess": "Pristup preko API-ja",
+          "handoff": "Prosleđivanje živom operateru",
+          "fineTuning": "Doterivanje modela / Prilagođen model"
         },
         "scopeLabel": "Količina podataka / dokumenata",
         "scopeOptions": {
@@ -1017,25 +1017,25 @@
       },
       "automation": {
         "title": "Automatizacija",
-        "description": "Workflow automatizacija, integracije, API-jevi",
+        "description": "Automatski tokovi, povezivanje sistema, API-jevi",
         "subtypeLabel": "Šta treba automatizovati?",
         "subtypes": {
-          "marketing": "Marketing automation",
-          "crmSync": "CRM sync / Lead handling",
-          "apiIntegration": "API integracije",
-          "scraping": "Data scraping / Obrada",
-          "workflow": "Workflow (n8n / Make)",
-          "reporting": "Reporting automation"
+          "marketing": "Marketinška automatizacija",
+          "crmSync": "Povezivanje sa CRM sistemom / Obrada upita",
+          "apiIntegration": "Povezivanje sistema (API integracije)",
+          "scraping": "Preuzimanje podataka sa sajtova",
+          "workflow": "Automatski tokovi (n8n / Make)",
+          "reporting": "Automatsko slanje izveštaja"
         },
         "featuresLabel": "Platforme i funkcionalnosti",
         "features": {
           "n8n": "n8n / Make",
           "zapier": "Zapier",
-          "customApi": "Custom API",
-          "dbSync": "Database sync",
-          "errorHandling": "Error handling / alerts",
-          "notifications": "Notifikacije",
-          "scheduling": "Scheduling / cron"
+          "customApi": "Prilagođen API / Posebne poveznice",
+          "dbSync": "Sinhronizacija baze podataka",
+          "errorHandling": "Obrada grešaka i obaveštenja",
+          "notifications": "Obaveštenja",
+          "scheduling": "Zakazano izvršavanje"
         },
         "scopeLabel": "Broj sistema za integraciju",
         "scopeOptions": {
@@ -1065,12 +1065,12 @@
     },
     "contact": {
       "nameLabel": "Ime i prezime",
-      "emailLabel": "Email adresa",
-      "companyLabel": "Kompanija (opciono)",
-      "phoneLabel": "Telefon (opciono)",
-      "preferredChannelLabel": "Preferirani način kontakta",
+      "emailLabel": "Imejl adresa",
+      "companyLabel": "Firma (po želji)",
+      "phoneLabel": "Telefon (po želji)",
+      "preferredChannelLabel": "Željeni način kontakta",
       "channels": {
-        "email": "Email",
+        "email": "Imejl",
         "phone": "Telefon",
         "whatsapp": "WhatsApp"
       }
@@ -1095,7 +1095,7 @@
     "greeting": "Zdravo! 👋 Ja sam Solvera asistent. Kako vam mogu pomoći? Pitajte me o našim uslugama, cenama ili procesu rada.",
     "poweredBy": "Pokreće Solvera AI",
     "close": "Zatvori",
-    "newChat": "Nova konverzacija",
+    "newChat": "Novi razgovor",
     "q1": "Koliko košta izrada sajta?",
     "q2": "Koje usluge nudite?",
     "q3": "Koji je rok isporuke?"
