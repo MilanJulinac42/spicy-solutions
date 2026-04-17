@@ -3,7 +3,7 @@ import type { MetadataRoute } from "next";
 export default function sitemap(): MetadataRoute.Sitemap {
   const baseUrl = "https://www.solveradev.rs";
 
-  const routes = ["", "/usluge", "/o-nama", "/kontakt", "/politika-privatnosti", "/uslovi-koriscenja"];
+  const routes = ["", "/usluge", "/proces", "/o-nama", "/kontakt", "/politika-privatnosti", "/uslovi-koriscenja"];
 
   return routes.map((route) => ({
     url: `${baseUrl}${route}`,
