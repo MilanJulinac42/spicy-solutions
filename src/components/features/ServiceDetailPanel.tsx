@@ -27,7 +27,7 @@ import {
   scaleSpring,
 } from "@/lib/animations";
 import { services } from "@/data/services";
-import { Link } from "@/i18n/navigation";
+import Link from "next/link";
 import { useState } from "react";
 
 interface ServiceDetailPanelProps {
@@ -266,7 +266,7 @@ function PanelContent({
           {/* CTA */}
           <motion.div variants={fadeInUp} initial="hidden" animate="visible">
             <Link
-              href="/contact"
+              href="/kontakt"
               onClick={onClose}
               className="inline-flex items-center gap-2 px-8 py-4 bg-spicy-400 text-white rounded-lg text-base font-semibold hover:bg-spicy-500 transition-colors shadow-lg shadow-spicy-400/25 w-full sm:w-auto justify-center"
             >
@@ -286,7 +286,7 @@ function PanelContent({
               {t("Services.detailComingSoon")}
             </p>
             <Link
-              href="/contact"
+              href="/kontakt"
               onClick={onClose}
               className="inline-flex items-center gap-2 px-6 py-3 bg-spicy-400 text-white rounded-lg text-sm font-semibold hover:bg-spicy-500 transition-colors"
             >

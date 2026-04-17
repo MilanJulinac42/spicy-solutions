@@ -2,7 +2,8 @@
 
 import { useState, useEffect, useCallback, useRef } from "react";
 import { useTranslations } from "next-intl";
-import { Link, usePathname } from "@/i18n/navigation";
+import Link from "next/link";
+import { usePathname } from "next/navigation";
 import { Menu, ChevronDown, Globe, Building2, Brain, Workflow } from "lucide-react";
 import { motion, AnimatePresence } from "framer-motion";
 import { navLinks } from "@/lib/constants";
@@ -66,8 +67,8 @@ export function Navbar() {
             {/* Desktop Navigation */}
             <nav className="hidden lg:flex items-center gap-1">
               {navLinks.map((link) => {
-                const isActive = pathname === link.href || (link.href === "/services" && pathname.startsWith("/services/"));
-                const isServices = link.href === "/services";
+                const isActive = pathname === link.href || (link.href === "/usluge" && pathname.startsWith("/usluge/"));
+                const isServices = link.href === "/usluge";
 
                 if (isServices) {
                   return (
@@ -107,11 +108,11 @@ export function Navbar() {
                             <div className="bg-surface-elevated border border-border-default rounded-xl shadow-xl overflow-hidden">
                               {serviceSublinks.map((sub) => {
                                 const SubIcon = sub.icon;
-                                const isSubActive = pathname === `/services/${sub.id}`;
+                                const isSubActive = pathname === `/usluge/${sub.id}`;
                                 return (
                                   <Link
                                     key={sub.id}
-                                    href={`/services/${sub.id}`}
+                                    href={`/usluge/${sub.id}`}
                                     onClick={() => setServicesOpen(false)}
                                     className={`flex items-center gap-3 px-4 py-3 text-sm transition-colors ${
                                       isSubActive
@@ -126,14 +127,14 @@ export function Navbar() {
                               })}
                               <div className="border-t border-border-default">
                                 <Link
-                                  href="/services"
+                                  href="/usluge"
                                   onClick={() => setServicesOpen(false)}
                                   className="flex items-center gap-3 px-4 py-2.5 text-sm text-foreground-muted hover:bg-surface-tertiary hover:text-foreground transition-colors"
                                 >
                                   {t("Services.viewAll")}
                                 </Link>
                                 <Link
-                                  href="/calculator"
+                                  href="/zapocni-projekat"
                                   onClick={() => setServicesOpen(false)}
                                   className="flex items-center gap-3 px-4 py-2.5 text-sm font-medium text-spicy-400 hover:bg-spicy-400/10 transition-colors"
                                 >
@@ -179,7 +180,7 @@ export function Navbar() {
             <div className="hidden lg:flex items-center gap-3">
               <ThemeToggle />
               <Link
-                href="/contact"
+                href="/kontakt"
                 className="px-5 py-2 bg-spicy-400 text-white rounded-lg text-sm font-medium hover:bg-spicy-500 transition-colors shadow-lg shadow-spicy-400/25 hover:shadow-xl hover:shadow-spicy-400/40"
               >
                 {t("Navbar.getStarted")}

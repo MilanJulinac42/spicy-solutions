@@ -22,7 +22,7 @@ import { CTABanner } from "@/components/sections/CTABanner";
 import { fadeInUp, fadeInLeft, fadeInRight, staggerContainer } from "@/lib/animations";
 import { services } from "@/data/services";
 import { ServiceIllustration } from "@/components/features/ServiceIllustration";
-import { Link } from "@/i18n/navigation";
+import Link from "next/link";
 
 const serviceIcons = {
   websites: Globe,
@@ -115,7 +115,7 @@ export default function ServicesPage() {
                   </div>
 
                   <Link
-                    href={`/services/${service.id}`}
+                    href={`/usluge/${service.id}`}
                     className="inline-flex items-center gap-2 text-spicy-400 font-medium text-sm hover:text-spicy-300 transition-colors cursor-pointer group"
                   >
                     {t("Services.learnMore")}
@@ -200,7 +200,7 @@ export default function ServicesPage() {
               {t("Services.cta.subtitle")}
             </p>
             <Link
-              href="/contact"
+              href="/kontakt"
               className="inline-flex items-center gap-2 px-8 py-4 bg-spicy-400 text-white rounded-lg text-base font-semibold hover:bg-spicy-500 transition-colors shadow-lg shadow-spicy-400/25"
             >
               {t("Services.cta.button")}

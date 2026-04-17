@@ -53,7 +53,7 @@ import {
 } from "@/lib/animations";
 import { services } from "@/data/services";
 import { ServiceIllustration } from "@/components/features/ServiceIllustration";
-import { Link } from "@/i18n/navigation";
+import Link from "next/link";
 import { notFound } from "next/navigation";
 
 const serviceIcons: Record<string, React.ElementType> = {
@@ -107,7 +107,7 @@ export default function ServicePage() {
                   <Icon className="w-6 h-6" />
                 </div>
                 <Link
-                  href="/services"
+                  href="/usluge"
                   className="text-sm text-foreground-muted hover:text-spicy-400 transition-colors"
                 >
                   ← {t("Services.title")}
@@ -121,7 +121,7 @@ export default function ServicePage() {
               </p>
               <div className="flex flex-wrap gap-4">
                 <Link
-                  href="/contact"
+                  href="/kontakt"
                   className="inline-flex items-center gap-2 px-8 py-4 bg-spicy-400 text-white rounded-lg text-base font-semibold hover:bg-spicy-500 transition-colors shadow-lg shadow-spicy-400/25"
                 >
                   {t(`Services.${slug}.detail.ctaText`)}
@@ -424,14 +424,14 @@ export default function ServicePage() {
             </p>
             <div className="flex flex-wrap justify-center gap-4">
               <Link
-                href="/contact"
+                href="/kontakt"
                 className="inline-flex items-center gap-2 px-8 py-4 bg-spicy-400 text-white rounded-lg text-base font-semibold hover:bg-spicy-500 transition-colors shadow-lg shadow-spicy-400/25"
               >
                 {t("Services.cta.button")}
                 <ArrowRight className="w-4 h-4" />
               </Link>
               <Link
-                href="/calculator"
+                href="/zapocni-projekat"
                 className="inline-flex items-center gap-2 px-8 py-4 border-2 border-border-default text-foreground rounded-lg text-base font-semibold hover:border-spicy-400 hover:text-spicy-400 transition-all"
               >
                 <Calculator className="w-4 h-4" />

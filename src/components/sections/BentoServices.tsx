@@ -3,7 +3,7 @@
 import { useTranslations } from "next-intl";
 import { useRef } from "react";
 import { motion, useInView } from "framer-motion";
-import { Link } from "@/i18n/navigation";
+import Link from "next/link";
 import { Container } from "@/components/ui/Container";
 import { SectionHeading } from "@/components/ui/SectionHeading";
 import {
@@ -383,7 +383,7 @@ export function BentoServices() {
           {/* Websites — large */}
           <BentoCard
             className="lg:col-span-7"
-            href="/services/websites"
+            href="/usluge/websites"
             icon={<Globe className="w-4 h-4" />}
             title={t("ServicesOverview.websites.title")}
             description={t("ServicesOverview.websites.description")}
@@ -395,7 +395,7 @@ export function BentoServices() {
           {/* Enterprise */}
           <BentoCard
             className="lg:col-span-5"
-            href="/services/enterprise"
+            href="/usluge/enterprise"
             icon={<Building2 className="w-4 h-4" />}
             title={t("ServicesOverview.enterprise.title")}
             description={t("ServicesOverview.enterprise.description")}
@@ -407,7 +407,7 @@ export function BentoServices() {
           {/* AI */}
           <BentoCard
             className="lg:col-span-5"
-            href="/services/ai"
+            href="/usluge/ai"
             icon={<Brain className="w-4 h-4" />}
             title={t("ServicesOverview.ai.title")}
             description={t("ServicesOverview.ai.description")}
@@ -419,7 +419,7 @@ export function BentoServices() {
           {/* Automation — large */}
           <BentoCard
             className="lg:col-span-7"
-            href="/services/automation"
+            href="/usluge/automation"
             icon={<Workflow className="w-4 h-4" />}
             title={t("ServicesOverview.automation.title")}
             description={t("ServicesOverview.automation.description")}

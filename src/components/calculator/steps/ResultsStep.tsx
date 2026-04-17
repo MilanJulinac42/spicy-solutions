@@ -4,7 +4,7 @@ import { useState, useEffect, useRef } from "react";
 import { useTranslations, useLocale } from "next-intl";
 import { motion } from "framer-motion";
 import { Calendar, ArrowRight, RotateCcw, CheckCircle2, Send } from "lucide-react";
-import { Link } from "@/i18n/navigation";
+import Link from "next/link";
 import type { PriceRange, ServiceType, TimelineOption } from "@/types/calculator";
 import { estimateTimeline } from "@/data/calculatorPricing";
 
@@ -143,7 +143,7 @@ export function ResultsStep({ priceRange, serviceType, timeline, scope, onStartO
         className="space-y-3"
       >
         <Link
-          href={`/contact?service=${serviceType}&budget=${priceRange.min}-${priceRange.max}`}
+          href={`/kontakt?service=${serviceType}&budget=${priceRange.min}-${priceRange.max}`}
           className="w-full inline-flex items-center justify-center gap-2 px-6 py-3.5 bg-spicy-400 text-white rounded-lg font-semibold hover:bg-spicy-500 transition-colors shadow-lg shadow-spicy-400/25"
         >
           {t("ctaSchedule")}

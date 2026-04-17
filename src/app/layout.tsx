@@ -1,4 +1,25 @@
 import type { Metadata } from "next";
+import { NextIntlClientProvider } from "next-intl";
+import { getMessages } from "next-intl/server";
+import Script from "next/script";
+import { Geist, Geist_Mono } from "next/font/google";
+import { ThemeProvider } from "next-themes";
+import { Navbar } from "@/components/layout/Navbar";
+import { Footer } from "@/components/layout/Footer";
+import { ScrollProgress } from "@/components/ui/ScrollProgress";
+import { WhatsAppButton } from "@/components/ui/WhatsAppButton";
+import { ChatWidget } from "@/components/chat/ChatWidget";
+import "@/app/globals.css";
+
+const geistSans = Geist({
+  variable: "--font-geist-sans",
+  subsets: ["latin"],
+});
+
+const geistMono = Geist_Mono({
+  variable: "--font-geist-mono",
+  subsets: ["latin"],
+});
 
 export const metadata: Metadata = {
   title: {
@@ -40,17 +61,51 @@ export const metadata: Metadata = {
     },
   },
   alternates: {
-    canonical: "https://www.solveradev.rs/sr",
-    languages: {
-      sr: "https://www.solveradev.rs/sr",
-    },
+    canonical: "https://www.solveradev.rs",
   },
 };
 
-export default function RootLayout({
+export default async function RootLayout({
   children,
 }: {
   children: React.ReactNode;
 }) {
-  return children;
+  const messages = await getMessages();
+
+  return (
+    <html lang="sr" suppressHydrationWarning>
+      <head />
+      <body
+        className={`${geistSans.variable} ${geistMono.variable} antialiased bg-surface text-foreground`}
+      >
+        <ThemeProvider
+          attribute="class"
+          defaultTheme="dark"
+          enableSystem
+          disableTransitionOnChange
+        >
+          <NextIntlClientProvider locale="sr" messages={messages}>
+            <ScrollProgress />
+            <Navbar />
+            <main className="min-h-screen">{children}</main>
+            <Footer />
+            <WhatsAppButton />
+            <ChatWidget />
+            <Script
+              src="https://www.googletagmanager.com/gtag/js?id=G-WDNDKK0PBT"
+              strategy="afterInteractive"
+            />
+            <Script id="google-analytics" strategy="afterInteractive">
+              {`
+                window.dataLayer = window.dataLayer || [];
+                function gtag(){dataLayer.push(arguments);}
+                gtag('js', new Date());
+                gtag('config', 'G-WDNDKK0PBT');
+              `}
+            </Script>
+          </NextIntlClientProvider>
+        </ThemeProvider>
+      </body>
+    </html>
+  );
 }

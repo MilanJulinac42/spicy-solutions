@@ -2,7 +2,7 @@
 
 import { useTranslations } from "next-intl";
 import { motion } from "framer-motion";
-import { Link } from "@/i18n/navigation";
+import Link from "next/link";
 import { ArrowRight } from "lucide-react";
 import { fadeInUp, staggerContainer } from "@/lib/animations";
 
@@ -77,7 +77,7 @@ export function CTABanner() {
           </motion.p>
           <motion.div variants={fadeInUp} className="flex flex-col sm:flex-row items-center justify-center gap-4">
             <Link
-              href="/contact"
+              href="/kontakt"
               className="inline-flex items-center gap-2 px-8 py-4 bg-white text-spicy-500 rounded-lg text-base font-semibold hover:bg-white/90 transition-colors shadow-xl shadow-black/20 hover:shadow-2xl hover:shadow-black/30"
               style={{
                 boxShadow:
@@ -88,7 +88,7 @@ export function CTABanner() {
               <ArrowRight className="w-4 h-4" />
             </Link>
             <Link
-              href="/calculator"
+              href="/zapocni-projekat"
               className="inline-flex items-center gap-2 px-8 py-4 border-2 border-white/30 text-white rounded-lg text-base font-semibold hover:bg-white/10 hover:border-white/50 transition-colors"
             >
               {t("calculatorButton")}

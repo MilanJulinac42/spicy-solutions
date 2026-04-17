@@ -2,9 +2,9 @@ import type { NavLink } from "@/types";
 
 export const navLinks: NavLink[] = [
   { titleKey: "Navbar.home", href: "/" },
-  { titleKey: "Navbar.services", href: "/services" },
-  { titleKey: "Navbar.about", href: "/about" },
-  { titleKey: "Navbar.contact", href: "/contact" },
+  { titleKey: "Navbar.services", href: "/usluge" },
+  { titleKey: "Navbar.about", href: "/o-nama" },
+  { titleKey: "Navbar.contact", href: "/kontakt" },
 ];
 
 export const siteConfig = {

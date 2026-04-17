@@ -1,7 +1,7 @@
 "use client";
 
 import { useTranslations } from "next-intl";
-import { Link } from "@/i18n/navigation";
+import Link from "next/link";
 import { Github, Linkedin, Instagram, Mail, MapPin, Phone } from "lucide-react";
 import Image from "next/image";
 import { siteConfig } from "@/lib/constants";
@@ -80,7 +80,7 @@ export function Footer() {
               </li>
               <li>
                 <Link
-                  href="/services"
+                  href="/usluge"
                   className="text-sm text-gray-400 hover:text-spicy-400 transition-colors link-underline"
                 >
                   {t("Navbar.services")}
@@ -88,7 +88,7 @@ export function Footer() {
               </li>
               <li>
                 <Link
-                  href="/about"
+                  href="/o-nama"
                   className="text-sm text-gray-400 hover:text-spicy-400 transition-colors link-underline"
                 >
                   {t("Navbar.about")}
@@ -96,7 +96,7 @@ export function Footer() {
               </li>
               <li>
                 <Link
-                  href="/contact"
+                  href="/kontakt"
                   className="text-sm text-gray-400 hover:text-spicy-400 transition-colors link-underline"
                 >
                   {t("Navbar.contact")}
@@ -104,7 +104,7 @@ export function Footer() {
               </li>
               <li>
                 <Link
-                  href="/calculator"
+                  href="/zapocni-projekat"
                   className="text-sm text-spicy-400 hover:text-spicy-300 transition-colors link-underline font-medium"
                 >
                   {t("Navbar.calculator")}
@@ -121,7 +121,7 @@ export function Footer() {
             <ul className="space-y-3">
               <li>
                 <Link
-                  href="/services#websites"
+                  href="/usluge#websites"
                   className="text-sm text-gray-400 hover:text-spicy-400 transition-colors link-underline"
                 >
                   {t("ServicesOverview.websites.title")}
@@ -129,7 +129,7 @@ export function Footer() {
               </li>
               <li>
                 <Link
-                  href="/services#enterprise"
+                  href="/usluge#enterprise"
                   className="text-sm text-gray-400 hover:text-spicy-400 transition-colors link-underline"
                 >
                   {t("ServicesOverview.enterprise.title")}
@@ -137,7 +137,7 @@ export function Footer() {
               </li>
               <li>
                 <Link
-                  href="/services#ai"
+                  href="/usluge#ai"
                   className="text-sm text-gray-400 hover:text-spicy-400 transition-colors link-underline"
                 >
                   {t("ServicesOverview.ai.title")}
@@ -145,7 +145,7 @@ export function Footer() {
               </li>
               <li>
                 <Link
-                  href="/services#automation"
+                  href="/usluge#automation"
                   className="text-sm text-gray-400 hover:text-spicy-400 transition-colors link-underline"
                 >
                   {t("ServicesOverview.automation.title")}
@@ -162,7 +162,7 @@ export function Footer() {
             <ul className="space-y-3">
               <li>
                 <Link
-                  href="/privacy"
+                  href="/politika-privatnosti"
                   className="text-sm text-gray-400 hover:text-spicy-400 transition-colors link-underline"
                 >
                   {t("Footer.privacy")}
@@ -170,7 +170,7 @@ export function Footer() {
               </li>
               <li>
                 <Link
-                  href="/terms"
+                  href="/uslovi-koriscenja"
                   className="text-sm text-gray-400 hover:text-spicy-400 transition-colors link-underline"
                 >
                   {t("Footer.terms")}

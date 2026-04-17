@@ -4,7 +4,7 @@ import { useState } from "react";
 import { motion, AnimatePresence } from "framer-motion";
 import { X, ChevronDown, Globe, Building2, Brain, Workflow } from "lucide-react";
 import { useTranslations } from "next-intl";
-import { Link } from "@/i18n/navigation";
+import Link from "next/link";
 import { navLinks } from "@/lib/constants";
 import { ThemeToggle } from "@/components/shared/ThemeToggle";
 
@@ -57,7 +57,7 @@ export function MobileMenu({ isOpen, onClose, pathname }: MobileMenuProps) {
               <ul className="space-y-1">
                 {navLinks.map((link) => {
                   const isActive = pathname === link.href;
-                  const isServices = link.href === "/services";
+                  const isServices = link.href === "/usluge";
 
                   if (isServices) {
                     return (
@@ -65,7 +65,7 @@ export function MobileMenu({ isOpen, onClose, pathname }: MobileMenuProps) {
                         <button
                           onClick={() => setServicesExpanded(!servicesExpanded)}
                           className={`w-full flex items-center justify-between px-4 py-3 rounded-lg text-base font-medium transition-colors cursor-pointer ${
-                            isActive || pathname.startsWith("/services/")
+                            isActive || pathname.startsWith("/usluge/")
                               ? "bg-spicy-400/10 text-spicy-400"
                               : "text-foreground-secondary hover:bg-surface-tertiary hover:text-foreground"
                           }`}
@@ -84,10 +84,10 @@ export function MobileMenu({ isOpen, onClose, pathname }: MobileMenuProps) {
                             >
                               <li>
                                 <Link
-                                  href="/services"
+                                  href="/usluge"
                                   onClick={onClose}
                                   className={`block pl-8 pr-4 py-2.5 text-sm transition-colors ${
-                                    pathname === "/services"
+                                    pathname === "/usluge"
                                       ? "text-spicy-400"
                                       : "text-foreground-muted hover:text-foreground"
                                   }`}
@@ -97,11 +97,11 @@ export function MobileMenu({ isOpen, onClose, pathname }: MobileMenuProps) {
                               </li>
                               {serviceSublinks.map((sub) => {
                                 const SubIcon = sub.icon;
-                                const isSubActive = pathname === `/services/${sub.id}`;
+                                const isSubActive = pathname === `/usluge/${sub.id}`;
                                 return (
                                   <li key={sub.id}>
                                     <Link
-                                      href={`/services/${sub.id}`}
+                                      href={`/usluge/${sub.id}`}
                                       onClick={onClose}
                                       className={`flex items-center gap-2.5 pl-8 pr-4 py-2.5 text-sm transition-colors ${
                                         isSubActive
@@ -143,7 +143,7 @@ export function MobileMenu({ isOpen, onClose, pathname }: MobileMenuProps) {
 
             <div className="p-4 border-t border-border-default space-y-3">
               <Link
-                href="/calculator"
+                href="/zapocni-projekat"
                 onClick={onClose}
                 className="block w-full text-center px-4 py-3 bg-spicy-400/10 text-spicy-400 rounded-lg text-sm font-semibold hover:bg-spicy-400/20 transition-colors"
               >
