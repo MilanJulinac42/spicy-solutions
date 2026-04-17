@@ -246,7 +246,9 @@ export default function ProcessPage() {
                     <div className="w-10 h-10 flex items-center justify-center rounded-xl bg-spicy-400/10 text-spicy-400">
                       <MessageCircle className="w-5 h-5" />
                     </div>
-                    <h4 className="text-base font-semibold text-foreground">Komunikacija</h4>
+                    <h4 className="text-base font-semibold text-foreground">
+                      {t("Process.labels.communication")}
+                    </h4>
                   </div>
                   <p className="text-sm text-foreground-muted leading-relaxed">
                     {t(`Process.tracks.${activeTrack}.communication`)}
@@ -263,7 +265,9 @@ export default function ProcessPage() {
                     <div className="w-10 h-10 flex items-center justify-center rounded-xl bg-spicy-400/10 text-spicy-400">
                       <LifeBuoy className="w-5 h-5" />
                     </div>
-                    <h4 className="text-base font-semibold text-foreground">Posle launch-a</h4>
+                    <h4 className="text-base font-semibold text-foreground">
+                      {t("Process.labels.postLaunch")}
+                    </h4>
                   </div>
                   <p className="text-sm text-foreground-muted leading-relaxed">
                     {t(`Process.tracks.${activeTrack}.postLaunch`)}

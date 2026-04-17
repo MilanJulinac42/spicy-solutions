@@ -532,186 +532,190 @@
   },
   "Process": {
     "title": "Kako radimo",
-    "subtitle": "Transparentan proces, nedeljni deliverables, direktna komunikacija. Bez account menadžera, bez iznenađenja.",
+    "subtitle": "Jasan proces, nedeljni rezultati i direktna komunikacija. Bez posrednika i bez iznenađenja.",
+    "labels": {
+      "communication": "Komunikacija",
+      "postLaunch": "Nakon puštanja u rad"
+    },
     "principles": {
       "title": "Principi koji važe za svaki projekat",
       "items": {
         "transparency": {
-          "title": "Pun pristup u realnom vremenu",
-          "description": "Od prvog dana dobijate staging URL, Figma fajl i pristup repozitorijumu. Gledate kako projekat raste, ne čekate 'veliko otkrivenje' na kraju."
+          "title": "Sve vam je dostupno od prvog dana",
+          "description": "Od starta dobijate probni sajt, vizuelni predlog i pristup kodu. Gledate kako projekat napreduje iz dana u dan — ne čekate „veliko otkrivanje“ na kraju."
         },
         "direct": {
           "title": "Bez posrednika",
-          "description": "Pišete direktno osobi koja gradi vaš proizvod. Bez account menadžera, bez PM-ova, bez ticket sistema. Pitanje ujutru — odgovor istog dana."
+          "description": "Razgovarate direktno sa osobom koja radi vaš projekat. Bez agenata i menadžera između. Pitanje ujutru — odgovor istog dana."
         },
         "fixed": {
-          "title": "Fiksna cena, fiksan scope",
-          "description": "Pre početka potpisujemo scope dokument sa listom funkcionalnosti i cenom. Promene se rade kroz change request — jasno i uz vaš pristanak."
+          "title": "Fiksna cena i jasan obim posla",
+          "description": "Pre početka potpisujemo dokument sa listom poslova i cenom. Sve izmene idu kroz zahtev za izmenu — pregledno i uz vašu saglasnost."
         },
         "ownership": {
-          "title": "Vaš kod, vaša infrastruktura",
-          "description": "GitHub repozitorijum, Vercel/AWS nalog, baza podataka — sve je na vaše ime. Možete da odete kad god — ali nećete hteti."
+          "title": "Sve je na vaše ime",
+          "description": "Kod, server i baza podataka — sve je vaše. U bilo kom trenutku možete nastaviti sami ili sa drugim timom, bez uslovljavanja."
         }
       }
     },
     "tracksTitle": "Proces po tipu projekta",
-    "tracksSubtitle": "Svaki projekat ima drugačiji tok. Izaberite tip da vidite konkretne faze, rokove i šta dobijate.",
+    "tracksSubtitle": "Svaki projekat ima svoj tok. Izaberite tip da vidite konkretne faze, rokove i šta dobijate.",
     "tracks": {
       "websites": {
-        "label": "Web sajt",
-        "overview": "Landing, korporativni, e-commerce ili portfolio sajt. Tipično 3–5 nedelja od kickoff-a do live-a.",
+        "label": "Sajt",
+        "overview": "Jednostavan sajt, korporativna stranica, internet prodavnica ili portfolio. Obično 3–5 nedelja od početka do puštanja u rad.",
         "phases": {
           "discovery": {
-            "name": "Discovery & wireframe",
+            "name": "Upoznavanje i skica",
             "week": "Nedelja 1",
-            "description": "Brief call (60 min), analiza konkurencije, mapiranje stranica i sekcija.",
-            "deliverables": ["Notion dokument sa strukturom sajta", "Wireframe u Figmi (desktop + mobile)", "Finalni spisak funkcionalnosti"]
+            "description": "Uvodni razgovor (oko sat vremena), pregled konkurencije i planiranje stranica i sekcija sajta.",
+            "deliverables": ["Pisani dokument sa strukturom sajta", "Skica rasporeda svih stranica (za računar i telefon)", "Konačan spisak funkcionalnosti"]
           },
           "design": {
             "name": "Dizajn",
             "week": "Nedelja 2",
-            "description": "Vizuelni dizajn na osnovu wireframe-a. 1 runda većih izmena uključena.",
-            "deliverables": ["Figma mockup (sve ključne stranice)", "Moodboard sa tipografijom i bojama", "Interaktivni klik-prototip"]
+            "description": "Izgled sajta na osnovu skica. Jedna runda većih izmena je uključena u cenu.",
+            "deliverables": ["Vizuelni predlog svih glavnih stranica", "Predlog boja i slova", "Interaktivan prikaz kroz koji možete da kliknete"]
           },
           "development": {
-            "name": "Razvoj",
+            "name": "Izrada",
             "week": "Nedelje 3–4",
-            "description": "Implementacija u Next.js + Tailwind. Svakodnevni commit-ovi, staging sajt dostupan od dana 1.",
-            "deliverables": ["Staging URL ažuriran u realnom vremenu", "CMS setup (ako je potrebno)", "Responzivno na svim uređajima"]
+            "description": "Pravljenje sajta prema odobrenom dizajnu. Svakodnevni napredak, probni sajt vam je dostupan od prvog dana.",
+            "deliverables": ["Probni sajt koji se ažurira u realnom vremenu", "Sistem za samostalan unos sadržaja (ako je potreban)", "Prilagođeno svim uređajima — telefon, tablet, računar"]
           },
           "launch": {
-            "name": "QA + launch",
+            "name": "Provera i puštanje u rad",
             "week": "Nedelja 5",
-            "description": "Cross-browser testing, performanse (Lighthouse 90+), SEO osnove, domen setup.",
-            "deliverables": ["Live sajt na vašem domenu", "Google Analytics + Search Console", "Video dokumentacija (kako uređivati sadržaj)"]
+            "description": "Provera u svim pretraživačima, merenje brzine, osnovna priprema za Google pretragu i prebacivanje na vaš domen.",
+            "deliverables": ["Sajt uživo na vašem domenu", "Praćenje posetilaca kroz Google Analytics", "Video uputstvo — kako sami da menjate sadržaj"]
           }
         },
-        "communication": "WhatsApp grupa za brze poruke, Loom video update svakog petka.",
-        "postLaunch": "30 dana besplatnog ispravljanja bagova. Paketi održavanja od 50€/mesec (hosting + backup + sitne izmene)."
+        "communication": "WhatsApp grupa za brza pitanja i kratak video pregled napretka svakog petka.",
+        "postLaunch": "Trideset dana besplatnog ispravljanja grešaka. Mesečno održavanje od 50€ pokriva server, rezervne kopije i sitne izmene."
       },
       "enterprise": {
-        "label": "SaaS / Enterprise",
-        "overview": "Interni alat, dashboard, CRM, SaaS ili B2B portal. Tipično 8–12 nedelja do MVP-a, iterativno posle.",
+        "label": "Poslovni sistem",
+        "overview": "Interni alat, pregledna tabla, sistem za upravljanje klijentima (CRM), softver koji se prodaje kao usluga ili portal za partnere. Obično 8–12 nedelja do prve radne verzije, a zatim se dograđuje u etapama.",
         "phases": {
           "discovery": {
-            "name": "Discovery & arhitektura",
+            "name": "Upoznavanje i planiranje",
             "week": "Nedelje 1–2",
-            "description": "Workshop sa stakeholder-ima, mapiranje user stories, izbor tech stack-a.",
-            "deliverables": ["Lista user stories sa prioritetima", "ERD dijagram baze", "Figma prototip ključnih ekrana", "Tech stack i infrastruktura dokument"]
+            "description": "Radionica sa ljudima iz vaše firme, popis konkretnih situacija za koje se pravi sistem i izbor tehnologija.",
+            "deliverables": ["Spisak scenarija korišćenja po prioritetu", "Plan baze podataka u vidu dijagrama", "Vizuelni prikaz ključnih ekrana", "Dokument o tehnologijama i serverima"]
           },
           "mvp": {
-            "name": "MVP jezgro",
+            "name": "Prva radna verzija",
             "week": "Nedelje 3–4",
-            "description": "Autentifikacija, role, prvi main flow. Staging dostupan — demo petkom.",
-            "deliverables": ["Login + role-based access", "Prvi kompletan user flow (npr. CRUD entiteta)", "Staging okruženje sa seed podacima"]
+            "description": "Prijavljivanje u sistem, različite uloge korisnika i prvi glavni tok posla. Probna verzija je dostupna — kratak prikaz napretka svakog petka.",
+            "deliverables": ["Prijavljivanje u sistem sa pravima po ulogama", "Prvi kompletan tok (npr. unos, pregled i izmena podataka)", "Probno okruženje sa test podacima"]
           },
           "iteration": {
-            "name": "Iteracije",
+            "name": "Dodavanje funkcionalnosti",
             "week": "Nedelje 5–8",
-            "description": "1–2 user story po sprintu. Demo svakog petka, vi testirate tokom vikenda, feedback u ponedeljak.",
-            "deliverables": ["Nova funkcionalnost svake nedelje na staging-u", "Automatski testovi za kritične tokove", "Sprint retro dokument"]
+            "description": "Jedan do dva nova scenarija nedeljno. Prikaz petkom, vi testirate tokom vikenda, povratne informacije u ponedeljak.",
+            "deliverables": ["Nova funkcionalnost svake nedelje na probnom okruženju", "Automatske provere za najvažnije tokove", "Kratak osvrt na protekle dve nedelje"]
           },
           "launch": {
-            "name": "Hardening + launch",
+            "name": "Završna priprema i puštanje u rad",
             "week": "Nedelje 9–10",
-            "description": "Load testing, security audit, migracija podataka, monitoring setup.",
-            "deliverables": ["Production deploy", "Sentry + logovanje", "Admin panel + runbook", "Trening za vaš tim (2h session)"]
+            "description": "Testiranje pri velikom opterećenju, provera bezbednosti, prebacivanje postojećih podataka i uključivanje sistema za praćenje grešaka.",
+            "deliverables": ["Puštanje u pravo okruženje", "Automatsko praćenje grešaka i zapisnici rada", "Administratorski panel i priručnik za rad", "Obuka vašeg tima (2 sata)"]
           }
         },
-        "communication": "Deljeni Slack kanal, nedeljni 30-min call, GitHub pristup sa pregledom PR-ova.",
-        "postLaunch": "Bug SLA 48h. Nove funkcionalnosti po fiksnoj ceni po feature-u ili retainer paket (10h/20h/40h mesečno)."
+        "communication": "Deljena grupa za razmenu poruka, kratak sastanak jednom nedeljno (oko 30 minuta) i pristup kodu sa pregledom svih izmena.",
+        "postLaunch": "Garantovan odgovor na prijavljene greške u roku od 48 sati. Nove funkcionalnosti po fiksnoj ceni ili mesečni paket od 10, 20 ili 40 sati."
       },
       "ai": {
-        "label": "AI rešenja",
-        "overview": "Chatbot, RAG sistem, content generator, AI agent, voice ili OCR. Tipično 3–5 nedelja.",
+        "label": "Veštačka inteligencija",
+        "overview": "Pametni asistent za kupce, sistem za odgovaranje na osnovu vaših dokumenata, alat za pisanje tekstova, automatsko čitanje dokumenata i slično. Obično 3–5 nedelja.",
         "phases": {
           "audit": {
-            "name": "Data audit & PoC plan",
+            "name": "Pregled podataka i plan",
             "week": "Nedelja 1",
-            "description": "Pregled vaših izvora podataka, izbor modela, definisanje uspešnih metrika (accuracy, latency, trošak).",
-            "deliverables": ["Dokument sa data izvorima i čišćenjem", "Izbor modela (GPT-4o, Claude, Llama…) sa obrazloženjem", "Procena mesečnog troška tokena"]
+            "description": "Pregled vaših izvora podataka, izbor odgovarajućeg AI modela i postavljanje merila uspeha (tačnost odgovora, brzina i mesečni trošak).",
+            "deliverables": ["Dokument o izvorima podataka i njihovoj pripremi", "Izbor AI modela uz obrazloženje", "Procena mesečnog troška korišćenja"]
           },
           "prototype": {
-            "name": "Prototip + evaluacija",
+            "name": "Proba i merenje kvaliteta",
             "week": "Nedelja 2",
-            "description": "Prvi working demo, merenja na realnim upitima, iteracija prompta.",
-            "deliverables": ["Radni prototip (CLI ili minimal UI)", "Evaluation spreadsheet sa 50+ test pitanja", "Prompt library (verzionisana)"]
+            "description": "Prva radna verzija na kojoj se proverava kvalitet odgovora kroz stvarna pitanja iz vašeg poslovanja.",
+            "deliverables": ["Radna proba (jednostavan prikaz)", "Tabela sa 50+ test pitanja i ocenama odgovora", "Spisak uputstava za AI sa istorijom izmena"]
           },
           "integration": {
-            "name": "Integracija + UI",
+            "name": "Povezivanje i korisnički izgled",
             "week": "Nedelje 3–4",
-            "description": "Embed na sajt (chatbot widget), API endpoint, ili custom dashboard — zavisno od scope-a.",
-            "deliverables": ["Production-ready UI", "Rate limiting + spam zaštita", "Streaming odgovora (za bolji UX)"]
+            "description": "Ugrađivanje u vaš sajt kao asistent u uglu, povezivanje sa vašim sistemom ili poseban alat — u zavisnosti od potrebe.",
+            "deliverables": ["Korisnički deo spreman za rad", "Zaštita od zloupotrebe i prekomernog korišćenja", "Postepeno prikazivanje odgovora za bolji utisak korisnika"]
           },
           "monitoring": {
-            "name": "Monitoring + handoff",
+            "name": "Praćenje i predaja",
             "week": "Nedelja 5",
-            "description": "Setup logovanja, cost dashboard, fallback rules za edge case-ove.",
-            "deliverables": ["Admin dashboard (konverzacije, trošak, success rate)", "Fallback na ljudski agent (ako je relevantno)", "Runbook za prompt update-e"]
+            "description": "Uključivanje sistema za praćenje razgovora, troškova i rezervnih odgovora za slučajeve kada AI ne zna odgovor.",
+            "deliverables": ["Pregledna tabla (razgovori, trošak, uspešnost odgovora)", "Prebacivanje na živog operatera kada je potrebno", "Pisano uputstvo za izmene u AI odgovorima"]
           }
         },
-        "communication": "Deljeni evaluation spreadsheet sa pravim primerima, nedeljni demo call (Loom ili uživo).",
-        "postLaunch": "Mesečna prompt revizija (uključeno prva 3 meseca). Model upgrade kada izađe bolji/jeftiniji — po fiksnoj ceni."
+        "communication": "Deljena tabela sa pravim primerima odgovora i nedeljni prikaz napretka (video ili uživo).",
+        "postLaunch": "Mesečno doterivanje AI uputstava (uključeno prva tri meseca). Prelazak na bolji ili jeftiniji model kada se pojavi — po fiksnoj ceni."
       },
       "automation": {
         "label": "Automatizacija",
-        "overview": "Marketing automation, CRM sync, API integracije, scraping, workflow automation. Tipično 2–4 nedelje.",
+        "overview": "Automatsko slanje poruka, povezivanje različitih sistema koje koristite, povezivanje sa sistemom za upravljanje klijentima (CRM), automatsko prikupljanje podataka sa sajtova i slično. Obično 2–4 nedelje.",
         "phases": {
           "mapping": {
-            "name": "Mapiranje tokova",
+            "name": "Popis poslova",
             "week": "Nedelja 1",
-            "description": "Workshop — koji manuelni procesi, koji sistemi, koji trigeri. Izbor alata (n8n self-hosted vs Zapier vs custom).",
-            "deliverables": ["Workflow dijagram (BPMN-style)", "Lista integracija sa credential-ima", "Procena mesečnog troška alata"]
+            "description": "Radionica — koji se poslovi danas rade ručno, koje sisteme koristite i kada treba da se pokrene svaki automatski tok. Izbor odgovarajućeg alata.",
+            "deliverables": ["Dijagram toka poslova", "Spisak sistema koje treba povezati sa pristupnim podacima", "Procena mesečnog troška alata"]
           },
           "first": {
-            "name": "Prvi workflow",
+            "name": "Prvi automatski tok",
             "week": "Nedelja 2",
-            "description": "Jedan end-to-end tok na staging-u, test sa pravim podacima.",
-            "deliverables": ["Radni n8n/Zapier workflow", "Deljeni workspace sa vašim pristupom", "Logovi prvih 50 izvršavanja"]
+            "description": "Jedan kompletan automatski posao — od početka do kraja — postavljen na probnom okruženju i isproban sa stvarnim podacima.",
+            "deliverables": ["Prvi automatski tok koji radi", "Deljen nalog u sistemu sa vašim pristupom", "Zapisnik prvih 50 izvršenih poslova"]
           },
           "expansion": {
-            "name": "Proširenje + error handling",
+            "name": "Proširenje i zaštita od grešaka",
             "week": "Nedelja 3",
-            "description": "Ostali tokovi, retry logika, alert na Slack/email ako nešto padne.",
-            "deliverables": ["Svi definisani tokovi aktivni", "Error handling + automatski retry", "Alert na failure sa context-om"]
+            "description": "Dodavanje ostalih automatskih tokova, automatski ponovni pokušaj u slučaju greške i obaveštenje ako nešto ne uspe.",
+            "deliverables": ["Svi dogovoreni tokovi aktivni", "Automatski ponovni pokušaj kod greške", "Obaveštenje o grešci sa opisom problema"]
           },
           "handoff": {
-            "name": "Launch + dokumentacija",
+            "name": "Puštanje u rad i predaja",
             "week": "Nedelja 4",
-            "description": "Prebacivanje na produkciju, video walkthrough, runbook za vaš tim.",
-            "deliverables": ["Produkcijski run-ovi", "Video dokumentacija (Loom)", "Runbook: šta kada nešto padne"]
+            "description": "Prebacivanje u pravo okruženje, video prikaz rada i priručnik za vaš tim.",
+            "deliverables": ["Automatski tokovi rade u pravom okruženju", "Video uputstvo za korišćenje", "Priručnik — šta raditi ako se pojavi greška"]
           }
         },
-        "communication": "Deljeni n8n workspace ili Zapier account, nedeljni status update preko email-a.",
-        "postLaunch": "Monitoring alerting-a (besplatno prvih 30 dana). Dopune i novi tokovi po fiksnoj ceni po workflow-u."
+        "communication": "Deljen nalog u sistemu za automatizaciju i nedeljni izveštaj o radu preko imejla.",
+        "postLaunch": "Praćenje grešaka (besplatno prvih 30 dana). Novi tokovi i dopune po fiksnoj ceni."
       }
     },
-    "faqTitle": "Često postavljana pitanja",
+    "faqTitle": "Česta pitanja",
     "faq": {
       "start": {
         "question": "Kako počinje saradnja?",
-        "answer": "Pošaljete zahtev kroz 'Započnite projekat' ili kontakt formu. U roku od 24h dobijate odgovor sa terminom za besplatni 30-min discovery call. Posle calla dobijate ponudu sa fiksnom cenom i timeline-om."
+        "answer": "Pošaljete zahtev preko dugmeta „Započnite projekat“ ili kontakt forme. U roku od 24 sata javljamo se sa terminom za besplatan uvodni razgovor (oko 30 minuta). Posle razgovora dobijate pisanu ponudu sa fiksnom cenom i rokom."
       },
       "payment": {
         "question": "Kako se plaća?",
-        "answer": "50% na početku (kickoff), 50% pre launch-a. Za projekte preko 5000€ delimo na 3 milestone-a. Plaćanje preko računa (firma na firmu) ili kartice."
+        "answer": "Pola cene na početku, pola pre puštanja u rad. Za projekte veće od 5000€ plaćanje se deli na tri dela. Može preko računa (firma na firmu) ili karticom."
       },
       "changes": {
-        "question": "Šta ako želim izmene tokom projekta?",
-        "answer": "Manje izmene (tekst, boje, raspored) su uključene u procenu. Veće izmene (nova funkcionalnost) idu kroz change request — daćemo vam procenu vremena i cene, vi odlučujete da li idete dalje."
+        "question": "Šta ako poželim izmene tokom rada?",
+        "answer": "Manje izmene (tekst, boje, raspored elemenata) su uključene u cenu. Za veće izmene (nove funkcionalnosti) dajemo procenu dodatnog vremena i cene — vi odlučujete da li se radi ili ne."
       },
       "delay": {
-        "question": "Šta ako se projekat kasni?",
-        "answer": "Ako kasnimo zbog nas — deadline-ovi su fiksni, preuzimamo trošak. Ako se kasni zbog čekanja na sadržaj/odobrenja od vas — dogovaramo novi termin. Uvek znate gde smo i zašto."
+        "question": "Šta ako dođe do kašnjenja?",
+        "answer": "Ako kasnimo mi — rokovi su fiksni i dodatni trošak ide na naš račun. Ako kasnimo zbog čekanja na vaš sadržaj ili odobrenje, dogovaramo novi termin. U svakom trenutku tačno znate gde smo i zašto."
       },
       "afterLaunch": {
-        "question": "Šta se dešava posle launch-a?",
-        "answer": "Prvih 30 dana — besplatno ispravljanje bagova. Posle toga birate: paket održavanja (fiksna mesečna cena) ili ad-hoc rad (po satu ili po feature-u). Kod i infrastruktura su vaši — možete da nastavite sami ili sa drugim timom."
+        "question": "Šta se dešava nakon puštanja u rad?",
+        "answer": "Prvih 30 dana — besplatno ispravljanje grešaka. Posle toga birate: mesečni paket održavanja (fiksna cena) ili rad po potrebi (po satu ili po zadatku). Kod i serveri su vaši — možete da nastavite sami ili sa drugim timom kad god poželite."
       }
     },
     "cta": {
-      "title": "Spremni da krenemo?",
-      "subtitle": "Popunite kratku formu — dobijate ponudu sa fiksnom cenom u roku od 48 sati.",
+      "title": "Spremni da počnemo?",
+      "subtitle": "Popunite kratku formu — ponudu sa fiksnom cenom dobijate u roku od 48 sati.",
       "button": "Započnite projekat"
     }
   },
