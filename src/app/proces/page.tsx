@@ -207,7 +207,7 @@ export default function ProcessPage() {
                           <div className="bg-surface border border-border-default rounded-2xl p-6 hover:border-spicy-400/30 transition-colors">
                             <div className="flex items-center gap-3 mb-3">
                               <span className="text-xs font-mono font-semibold text-spicy-400 uppercase tracking-wider">
-                                {t(`Process.tracks.${activeTrack}.phases.${phase}.week`)}
+                                {t("Process.labels.step", { number: idx + 1 })}
                               </span>
                             </div>
                             <h4 className="text-xl font-bold text-foreground mb-2">

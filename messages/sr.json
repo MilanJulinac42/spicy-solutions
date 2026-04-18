@@ -535,7 +535,8 @@
     "subtitle": "Jasan proces, nedeljni rezultati i direktna komunikacija. Bez posrednika i bez iznenađenja.",
     "labels": {
       "communication": "Komunikacija",
-      "postLaunch": "Nakon puštanja u rad"
+      "postLaunch": "Nakon puštanja u rad",
+      "step": "Korak {number}"
     },
     "principles": {
       "title": "Principi koji važe za svaki projekat",
@@ -559,33 +560,29 @@
       }
     },
     "tracksTitle": "Proces po tipu projekta",
-    "tracksSubtitle": "Svaki projekat ima svoj tok. Izaberite tip da vidite konkretne faze, rokove i šta dobijate.",
+    "tracksSubtitle": "Svaki projekat ima svoj tok. Izaberite tip da vidite korake i šta dobijate u svakom od njih.",
     "tracks": {
       "websites": {
         "label": "Sajt",
-        "overview": "Jednostavan sajt, korporativna stranica, internet prodavnica ili portfolio. Obično 3–5 nedelja od početka do puštanja u rad.",
+        "overview": "Jednostavan sajt, korporativna stranica, internet prodavnica ili portfolio — od skice do živog sajta.",
         "phases": {
           "discovery": {
             "name": "Upoznavanje i skica",
-            "week": "Nedelja 1",
             "description": "Uvodni razgovor (oko sat vremena), pregled konkurencije i planiranje stranica i sekcija sajta.",
             "deliverables": ["Pisani dokument sa strukturom sajta", "Skica rasporeda svih stranica (za računar i telefon)", "Konačan spisak funkcionalnosti"]
           },
           "design": {
             "name": "Dizajn",
-            "week": "Nedelja 2",
             "description": "Izgled sajta na osnovu skica. Jedna runda većih izmena je uključena u cenu.",
             "deliverables": ["Vizuelni predlog svih glavnih stranica", "Predlog boja i slova", "Interaktivan prikaz kroz koji možete da kliknete"]
           },
           "development": {
             "name": "Izrada",
-            "week": "Nedelje 3–4",
             "description": "Pravljenje sajta prema odobrenom dizajnu. Svakodnevni napredak, probni sajt vam je dostupan od prvog dana.",
             "deliverables": ["Probni sajt koji se ažurira u realnom vremenu", "Sistem za samostalan unos sadržaja (ako je potreban)", "Prilagođeno svim uređajima — telefon, tablet, računar"]
           },
           "launch": {
             "name": "Provera i puštanje u rad",
-            "week": "Nedelja 5",
             "description": "Provera u svim pretraživačima, merenje brzine, osnovna priprema za Google pretragu i prebacivanje na vaš domen.",
             "deliverables": ["Sajt uživo na vašem domenu", "Praćenje posetilaca kroz Google Analytics", "Video uputstvo — kako sami da menjate sadržaj"]
           }
@@ -595,31 +592,27 @@
       },
       "enterprise": {
         "label": "Poslovni sistem",
-        "overview": "Interni alat, pregledna tabla, sistem za upravljanje klijentima (CRM), softver koji se prodaje kao usluga ili portal za partnere. Obično 8–12 nedelja do prve radne verzije, a zatim se dograđuje u etapama.",
+        "overview": "Interni alat, pregledna tabla, sistem za upravljanje klijentima (CRM), softver koji se prodaje kao usluga ili portal za partnere. Gradimo prvu radnu verziju, pa se sistem dograđuje u etapama.",
         "phases": {
           "discovery": {
             "name": "Upoznavanje i planiranje",
-            "week": "Nedelje 1–2",
             "description": "Radionica sa ljudima iz vaše firme, popis konkretnih situacija za koje se pravi sistem i izbor tehnologija.",
             "deliverables": ["Spisak scenarija korišćenja po prioritetu", "Plan baze podataka u vidu dijagrama", "Vizuelni prikaz ključnih ekrana", "Dokument o tehnologijama i serverima"]
           },
           "mvp": {
             "name": "Prva radna verzija",
-            "week": "Nedelje 3–4",
             "description": "Prijavljivanje u sistem, različite uloge korisnika i prvi glavni tok posla. Probna verzija je dostupna — kratak prikaz napretka svakog petka.",
             "deliverables": ["Prijavljivanje u sistem sa pravima po ulogama", "Prvi kompletan tok (npr. unos, pregled i izmena podataka)", "Probno okruženje sa test podacima"]
           },
           "iteration": {
             "name": "Dodavanje funkcionalnosti",
-            "week": "Nedelje 5–8",
-            "description": "Jedan do dva nova scenarija nedeljno. Prikaz petkom, vi testirate tokom vikenda, povratne informacije u ponedeljak.",
-            "deliverables": ["Nova funkcionalnost svake nedelje na probnom okruženju", "Automatske provere za najvažnije tokove", "Kratak osvrt na protekle dve nedelje"]
+            "description": "Nove scenarije gradimo u kratkim ciklusima. Vi testirate čim je spremno, mi ugrađujemo povratne informacije pre nego što krenemo dalje.",
+            "deliverables": ["Nova funkcionalnost na probnom okruženju čim je spremna", "Automatske provere za najvažnije tokove", "Kratak osvrt na svaki ciklus"]
           },
           "launch": {
             "name": "Završna priprema i puštanje u rad",
-            "week": "Nedelje 9–10",
             "description": "Testiranje pri velikom opterećenju, provera bezbednosti, prebacivanje postojećih podataka i uključivanje sistema za praćenje grešaka.",
-            "deliverables": ["Puštanje u pravo okruženje", "Automatsko praćenje grešaka i zapisnici rada", "Administratorski panel i priručnik za rad", "Obuka vašeg tima (2 sata)"]
+            "deliverables": ["Puštanje u pravo okruženje", "Automatsko praćenje grešaka i zapisnici rada", "Administratorski panel i priručnik za rad", "Obuka vašeg tima"]
           }
         },
         "communication": "Deljena grupa za razmenu poruka, kratak sastanak jednom nedeljno (oko 30 minuta) i pristup kodu sa pregledom svih izmena.",
@@ -627,29 +620,25 @@
       },
       "ai": {
         "label": "Veštačka inteligencija",
-        "overview": "Pametni asistent za kupce, sistem za odgovaranje na osnovu vaših dokumenata, alat za pisanje tekstova, automatsko čitanje dokumenata i slično. Obično 3–5 nedelja.",
+        "overview": "Pametni asistent za kupce, sistem za odgovaranje na osnovu vaših dokumenata, alat za pisanje tekstova ili automatsko čitanje dokumenata.",
         "phases": {
           "audit": {
             "name": "Pregled podataka i plan",
-            "week": "Nedelja 1",
             "description": "Pregled vaših izvora podataka, izbor odgovarajućeg AI modela i postavljanje merila uspeha (tačnost odgovora, brzina i mesečni trošak).",
             "deliverables": ["Dokument o izvorima podataka i njihovoj pripremi", "Izbor AI modela uz obrazloženje", "Procena mesečnog troška korišćenja"]
           },
           "prototype": {
             "name": "Proba i merenje kvaliteta",
-            "week": "Nedelja 2",
             "description": "Prva radna verzija na kojoj se proverava kvalitet odgovora kroz stvarna pitanja iz vašeg poslovanja.",
-            "deliverables": ["Radna proba (jednostavan prikaz)", "Tabela sa 50+ test pitanja i ocenama odgovora", "Spisak uputstava za AI sa istorijom izmena"]
+            "deliverables": ["Radna proba (jednostavan prikaz)", "Tabela sa test pitanjima i ocenama odgovora", "Spisak uputstava za AI sa istorijom izmena"]
           },
           "integration": {
             "name": "Povezivanje i korisnički izgled",
-            "week": "Nedelje 3–4",
             "description": "Ugrađivanje u vaš sajt kao asistent u uglu, povezivanje sa vašim sistemom ili poseban alat — u zavisnosti od potrebe.",
             "deliverables": ["Korisnički deo spreman za rad", "Zaštita od zloupotrebe i prekomernog korišćenja", "Postepeno prikazivanje odgovora za bolji utisak korisnika"]
           },
           "monitoring": {
             "name": "Praćenje i predaja",
-            "week": "Nedelja 5",
             "description": "Uključivanje sistema za praćenje razgovora, troškova i rezervnih odgovora za slučajeve kada AI ne zna odgovor.",
             "deliverables": ["Pregledna tabla (razgovori, trošak, uspešnost odgovora)", "Prebacivanje na živog operatera kada je potrebno", "Pisano uputstvo za izmene u AI odgovorima"]
           }
@@ -659,29 +648,25 @@
       },
       "automation": {
         "label": "Automatizacija",
-        "overview": "Automatsko slanje poruka, povezivanje različitih sistema koje koristite, povezivanje sa sistemom za upravljanje klijentima (CRM), automatsko prikupljanje podataka sa sajtova i slično. Obično 2–4 nedelje.",
+        "overview": "Automatsko slanje poruka, povezivanje različitih sistema koje koristite, povezivanje sa sistemom za upravljanje klijentima (CRM) ili automatsko prikupljanje podataka sa sajtova.",
         "phases": {
           "mapping": {
             "name": "Popis poslova",
-            "week": "Nedelja 1",
             "description": "Radionica — koji se poslovi danas rade ručno, koje sisteme koristite i kada treba da se pokrene svaki automatski tok. Izbor odgovarajućeg alata.",
             "deliverables": ["Dijagram toka poslova", "Spisak sistema koje treba povezati sa pristupnim podacima", "Procena mesečnog troška alata"]
           },
           "first": {
             "name": "Prvi automatski tok",
-            "week": "Nedelja 2",
             "description": "Jedan kompletan automatski posao — od početka do kraja — postavljen na probnom okruženju i isproban sa stvarnim podacima.",
-            "deliverables": ["Prvi automatski tok koji radi", "Deljen nalog u sistemu sa vašim pristupom", "Zapisnik prvih 50 izvršenih poslova"]
+            "deliverables": ["Prvi automatski tok koji radi", "Deljen nalog u sistemu sa vašim pristupom", "Zapisnik prvih izvršenih poslova"]
           },
           "expansion": {
             "name": "Proširenje i zaštita od grešaka",
-            "week": "Nedelja 3",
             "description": "Dodavanje ostalih automatskih tokova, automatski ponovni pokušaj u slučaju greške i obaveštenje ako nešto ne uspe.",
             "deliverables": ["Svi dogovoreni tokovi aktivni", "Automatski ponovni pokušaj kod greške", "Obaveštenje o grešci sa opisom problema"]
           },
           "handoff": {
             "name": "Puštanje u rad i predaja",
-            "week": "Nedelja 4",
             "description": "Prebacivanje u pravo okruženje, video prikaz rada i priručnik za vaš tim.",
             "deliverables": ["Automatski tokovi rade u pravom okruženju", "Video uputstvo za korišćenje", "Priručnik — šta raditi ako se pojavi greška"]
           }
