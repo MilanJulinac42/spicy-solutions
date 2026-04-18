@@ -19,6 +19,10 @@ import {
   MessageCircle,
   LifeBuoy,
   ArrowRight,
+  Search,
+  Palette,
+  Code2,
+  Rocket,
   type LucideIcon,
 } from "lucide-react";
 import { Container } from "@/components/ui/Container";
@@ -64,6 +68,173 @@ const TRACKS: TrackMeta[] = [
 ];
 
 const FAQ_KEYS = ["start", "payment", "changes", "delay", "afterLaunch"] as const;
+
+// Animated illustration per step index (cycles 0-3)
+function PhaseVisual({ index }: { index: number }) {
+  const slot = index % 4;
+
+  if (slot === 0) {
+    // Discovery — scanning magnifier with orbiting dots
+    return (
+      <div className="relative w-full h-48 md:h-56 flex items-center justify-center">
+        <motion.div
+          animate={{ rotate: 360 }}
+          transition={{ duration: 18, repeat: Infinity, ease: "linear" }}
+          className="absolute w-40 h-40 md:w-48 md:h-48 rounded-full border-2 border-spicy-400/40"
+        >
+          <div className="absolute -top-1.5 left-1/2 -translate-x-1/2 w-3 h-3 rounded-full bg-spicy-400 shadow-[0_0_12px_rgba(255,90,31,0.8)]" />
+          <div className="absolute top-1/2 -right-1.5 -translate-y-1/2 w-2.5 h-2.5 rounded-full bg-spicy-400/80 shadow-[0_0_8px_rgba(255,90,31,0.6)]" />
+        </motion.div>
+        <motion.div
+          animate={{ scale: [1, 1.2, 1], opacity: [0.5, 1, 0.5] }}
+          transition={{ duration: 2, repeat: Infinity, ease: "easeInOut" }}
+          className="absolute w-44 h-44 rounded-full bg-spicy-400/30 blur-2xl"
+        />
+        <motion.div
+          animate={{ scale: [1, 1.06, 1] }}
+          transition={{ duration: 2.5, repeat: Infinity, ease: "easeInOut" }}
+          className="relative w-16 h-16 rounded-2xl bg-spicy-400/20 border-2 border-spicy-400/60 flex items-center justify-center shadow-[0_0_20px_rgba(255,90,31,0.3)]"
+        >
+          <Search className="w-8 h-8 text-spicy-400" />
+        </motion.div>
+      </div>
+    );
+  }
+
+  if (slot === 1) {
+    // Design — stacked floating layers
+    return (
+      <div className="relative w-full h-48 md:h-56 flex items-center justify-center">
+        <motion.div
+          animate={{ y: [0, -12, 0], rotate: [-5, -3, -5] }}
+          transition={{ duration: 3.5, repeat: Infinity, ease: "easeInOut" }}
+          className="absolute w-28 h-20 rounded-xl bg-surface border-2 border-spicy-400/50 -translate-x-12 translate-y-5 shadow-lg shadow-spicy-400/20"
+        />
+        <motion.div
+          animate={{ y: [0, -14, 0], scale: [1, 1.04, 1] }}
+          transition={{ duration: 3, repeat: Infinity, ease: "easeInOut", delay: 0.3 }}
+          className="absolute w-32 h-24 rounded-xl bg-surface-secondary border-2 border-spicy-400/70 shadow-2xl shadow-spicy-400/30 flex items-center justify-center"
+        >
+          <Palette className="w-8 h-8 text-spicy-400" />
+        </motion.div>
+        <motion.div
+          animate={{ y: [0, -8, 0], rotate: [6, 4, 6] }}
+          transition={{ duration: 4, repeat: Infinity, ease: "easeInOut", delay: 0.6 }}
+          className="absolute w-20 h-14 rounded-xl bg-spicy-400/25 border-2 border-spicy-400/40 translate-x-16 -translate-y-7"
+        />
+      </div>
+    );
+  }
+
+  if (slot === 2) {
+    // Development — code brackets with typing dots
+    return (
+      <div className="relative w-full h-48 md:h-56 flex items-center justify-center">
+        <motion.div
+          animate={{ scale: [1, 1.15, 1], opacity: [0.5, 0.9, 0.5] }}
+          transition={{ duration: 2.5, repeat: Infinity, ease: "easeInOut" }}
+          className="absolute w-48 h-48 rounded-full bg-spicy-400/20 blur-2xl"
+        />
+        <div className="relative flex items-center gap-3">
+          <motion.span
+            animate={{ x: [0, -6, 0], opacity: [0.6, 1, 0.6] }}
+            transition={{ duration: 1.8, repeat: Infinity, ease: "easeInOut" }}
+            className="text-5xl font-mono font-bold text-spicy-400/80"
+          >
+            {"<"}
+          </motion.span>
+          <motion.div
+            animate={{ scale: [1, 1.08, 1] }}
+            transition={{ duration: 2, repeat: Infinity, ease: "easeInOut" }}
+            className="w-14 h-14 rounded-2xl bg-spicy-400/20 border-2 border-spicy-400/60 flex items-center justify-center shadow-[0_0_24px_rgba(255,90,31,0.35)]"
+          >
+            <Code2 className="w-7 h-7 text-spicy-400" />
+          </motion.div>
+          <motion.span
+            animate={{ x: [0, 6, 0], opacity: [0.6, 1, 0.6] }}
+            transition={{ duration: 1.8, repeat: Infinity, ease: "easeInOut" }}
+            className="text-5xl font-mono font-bold text-spicy-400/80"
+          >
+            {"/>"}
+          </motion.span>
+        </div>
+        <div className="absolute bottom-6 flex gap-2">
+          {[0, 1, 2].map((i) => (
+            <motion.span
+              key={i}
+              animate={{ opacity: [0.3, 1, 0.3], scale: [0.8, 1.2, 0.8] }}
+              transition={{ duration: 1, repeat: Infinity, delay: i * 0.18 }}
+              className="w-2 h-2 rounded-full bg-spicy-400 shadow-[0_0_8px_rgba(255,90,31,0.6)]"
+            />
+          ))}
+        </div>
+        {/* Floating code particles */}
+        {["{}", "[]", "()", "=>"].map((sym, i) => (
+          <motion.span
+            key={sym}
+            animate={{
+              y: [0, -10, 0],
+              opacity: [0.2, 0.5, 0.2],
+            }}
+            transition={{
+              duration: 3 + i * 0.4,
+              repeat: Infinity,
+              delay: i * 0.5,
+              ease: "easeInOut",
+            }}
+            className="absolute font-mono text-sm font-bold text-spicy-400/40"
+            style={{
+              left: `${10 + i * 25}%`,
+              top: `${15 + (i % 2) * 60}%`,
+            }}
+          >
+            {sym}
+          </motion.span>
+        ))}
+      </div>
+    );
+  }
+
+  // slot === 3 — Launch — rocket with rising trails
+  return (
+    <div className="relative w-full h-48 md:h-56 flex items-center justify-center overflow-hidden">
+      <motion.div
+        animate={{ y: [0, -14, 0], rotate: [-2, 2, -2] }}
+        transition={{ duration: 2.2, repeat: Infinity, ease: "easeInOut" }}
+        className="relative w-16 h-16 rounded-2xl bg-spicy-400/20 border-2 border-spicy-400/60 flex items-center justify-center z-10 shadow-[0_0_24px_rgba(255,90,31,0.4)]"
+      >
+        <Rocket className="w-8 h-8 text-spicy-400" />
+      </motion.div>
+      {[0, 1, 2, 3, 4, 5, 6, 7].map((i) => (
+        <motion.div
+          key={i}
+          animate={{
+            y: [60, -110],
+            opacity: [0, 1, 0],
+          }}
+          transition={{
+            duration: 1.4,
+            repeat: Infinity,
+            delay: i * 0.18,
+            ease: "easeOut",
+          }}
+          className="absolute w-1 h-14 bg-gradient-to-t from-spicy-400/0 via-spicy-400/90 to-spicy-400 rounded-full shadow-[0_0_12px_rgba(255,90,31,0.8)]"
+          style={{ left: `${28 + i * 6}%` }}
+        />
+      ))}
+      <motion.div
+        animate={{ scale: [1, 1.8, 1], opacity: [0.7, 0.35, 0.7] }}
+        transition={{ duration: 2.2, repeat: Infinity }}
+        className="absolute w-44 h-44 rounded-full bg-spicy-400/30 blur-2xl"
+      />
+      <motion.div
+        animate={{ scale: [1.2, 1, 1.2], opacity: [0.3, 0.6, 0.3] }}
+        transition={{ duration: 3, repeat: Infinity, ease: "easeInOut" }}
+        className="absolute w-32 h-32 rounded-full border-2 border-spicy-400/30"
+      />
+    </div>
+  );
+}
 
 export default function ProcessPage() {
   const t = useTranslations();
@@ -141,22 +312,22 @@ export default function ProcessPage() {
             subtitle={t("Process.tracksSubtitle")}
           />
 
-          {/* Tabs */}
-          <div className="flex flex-wrap justify-center gap-2 sm:gap-3 mb-10">
+          {/* Tabs — 2x2 grid on mobile, flex on desktop */}
+          <div className="grid grid-cols-2 sm:flex sm:flex-wrap sm:justify-center gap-2 sm:gap-3 mb-10 max-w-md sm:max-w-none mx-auto">
             {TRACKS.map(({ id, icon: Icon }) => {
               const isActive = id === activeTrack;
               return (
                 <button
                   key={id}
                   onClick={() => setActiveTrack(id)}
-                  className={`relative flex items-center gap-2 px-4 sm:px-5 py-2.5 rounded-xl text-sm font-medium transition-all cursor-pointer ${
+                  className={`relative flex items-center justify-center gap-2 px-3 sm:px-5 py-2.5 rounded-xl text-sm font-medium transition-all cursor-pointer ${
                     isActive
                       ? "bg-spicy-400 text-white shadow-lg shadow-spicy-400/25"
                       : "bg-surface border border-border-default text-foreground-secondary hover:text-foreground hover:border-spicy-400/30"
                   }`}
                 >
-                  <Icon className="w-4 h-4" />
-                  <span>{t(`Process.tracks.${id}.label`)}</span>
+                  <Icon className="w-4 h-4 shrink-0" />
+                  <span className="truncate">{t(`Process.tracks.${id}.label`)}</span>
                 </button>
               );
             })}
@@ -170,7 +341,7 @@ export default function ProcessPage() {
               animate={{ opacity: 1, y: 0 }}
               exit={{ opacity: 0, y: -16 }}
               transition={{ duration: 0.3 }}
-              className="max-w-5xl mx-auto"
+              className="max-w-6xl mx-auto"
             >
               {/* Overview */}
               <div className="text-center mb-10">
@@ -179,12 +350,12 @@ export default function ProcessPage() {
                 </p>
               </div>
 
-              {/* Phases timeline */}
+              {/* Phases timeline — alternating with illustration on opposite side */}
               <div className="relative pb-16 md:pb-20">
-                {/* Vertical line — fades in at top, fades out at bottom */}
-                <div className="absolute left-6 md:left-1/2 top-0 bottom-0 w-px md:-translate-x-1/2 bg-gradient-to-b from-transparent via-border-default to-transparent" />
+                {/* Vertical line */}
+                <div className="absolute left-6 md:left-1/2 top-0 bottom-0 w-[2px] md:-translate-x-1/2 bg-gradient-to-b from-transparent via-spicy-400/40 to-transparent" />
 
-                <div className="space-y-8 md:space-y-12">
+                <div className="space-y-4 md:space-y-2">
                   {activeMeta.phases.map((phase, idx) => {
                     const isRight = idx % 2 === 1;
                     return (
@@ -193,25 +364,25 @@ export default function ProcessPage() {
                         initial={{ opacity: 0, y: 20 }}
                         animate={{ opacity: 1, y: 0 }}
                         transition={{ delay: idx * 0.1, duration: 0.4 }}
-                        className={`relative flex flex-col md:flex-row gap-4 md:gap-8 ${
+                        className={`relative flex flex-col md:flex-row gap-4 md:gap-8 items-center ${
                           isRight ? "md:flex-row-reverse" : ""
                         }`}
                       >
                         {/* Dot */}
-                        <div className="absolute left-6 md:left-1/2 top-6 w-4 h-4 rounded-full bg-spicy-400 ring-4 ring-surface-secondary md:-translate-x-1/2 z-10" />
+                        <div className="absolute left-6 md:left-1/2 top-6 md:top-1/2 w-4 h-4 rounded-full bg-spicy-400 ring-4 ring-surface-secondary md:-translate-x-1/2 md:-translate-y-1/2 z-10" />
 
-                        {/* Spacer for desktop */}
-                        <div className="hidden md:block md:flex-1" />
+                        {/* Illustration side (desktop only) */}
+                        <div className="hidden md:flex md:flex-1 items-center justify-center">
+                          <PhaseVisual index={idx} />
+                        </div>
 
                         {/* Content card */}
-                        <div className="md:flex-1 pl-16 md:pl-0">
+                        <div className="md:flex-1 pl-16 md:pl-0 w-full">
                           <div className="bg-surface border border-border-default rounded-2xl p-6 hover:border-spicy-400/30 transition-colors">
-                            <div className="flex items-center gap-3 mb-3">
-                              <span className="text-xs font-mono font-semibold text-spicy-400 uppercase tracking-wider">
-                                {t("Process.labels.step", { number: idx + 1 })}
-                              </span>
-                            </div>
-                            <h4 className="text-xl font-bold text-foreground mb-2">
+                            <span className="text-xs font-mono font-semibold text-spicy-400 uppercase tracking-wider">
+                              {t("Process.labels.step", { number: idx + 1 })}
+                            </span>
+                            <h4 className="text-xl font-bold text-foreground mt-2 mb-2">
                               {t(`Process.tracks.${activeTrack}.phases.${phase}.name`)}
                             </h4>
                             <p className="text-sm text-foreground-muted leading-relaxed mb-4">
@@ -234,7 +405,7 @@ export default function ProcessPage() {
                   })}
                 </div>
 
-                {/* Finish node — closes the timeline */}
+                {/* Finish node */}
                 <motion.div
                   initial={{ opacity: 0, scale: 0.8 }}
                   animate={{ opacity: 1, scale: 1 }}

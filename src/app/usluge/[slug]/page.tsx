@@ -17,7 +17,6 @@ import {
   ShoppingCart,
   LayoutDashboard,
   FileText,
-  Phone,
   Smartphone,
   Search,
   Zap,
@@ -37,7 +36,6 @@ import {
   Clock,
   Bell,
   ExternalLink,
-  TrendingUp,
   Calculator,
 } from "lucide-react";
 import { Container } from "@/components/ui/Container";
@@ -127,13 +125,13 @@ export default function ServicePage() {
                   {t(`Services.${slug}.detail.ctaText`)}
                   <ArrowRight className="w-4 h-4" />
                 </Link>
-                <a
-                  href="tel:+381655108888"
-                  className="inline-flex items-center gap-2 px-8 py-4 border border-border-default rounded-lg text-base font-semibold text-foreground hover:border-spicy-400/30 hover:bg-spicy-400/5 transition-colors"
+                <Link
+                  href="/zapocni-projekat"
+                  className="inline-flex items-center gap-2 px-8 py-4 border border-border-default rounded-lg text-base font-semibold text-foreground hover:border-spicy-400/30 hover:bg-spicy-400/5 hover:text-spicy-400 transition-colors"
                 >
-                  <Phone className="w-4 h-4" />
-                  Pozovite nas
-                </a>
+                  {t("Navbar.calculator")}
+                  <ArrowRight className="w-4 h-4" />
+                </Link>
               </div>
             </motion.div>
 
@@ -156,17 +154,20 @@ export default function ServicePage() {
             whileInView="visible"
             viewport={{ once: true, margin: "-100px" }}
             variants={fadeInUp}
-            className="text-center mb-12 md:mb-16"
+            className="text-center mb-12 md:mb-16 max-w-3xl mx-auto"
           >
-            <h2 className="text-3xl md:text-4xl font-bold text-foreground mb-4">
-              {t(`Services.${slug}.description`)}
+            <h2 className="text-2xl md:text-3xl font-bold text-foreground mb-3">
+              {t("Services.featuresHeading")}
             </h2>
+            <p className="text-base md:text-lg text-foreground-muted leading-relaxed">
+              {t(`Services.${slug}.description`)}
+            </p>
             <motion.div
               initial={{ width: 0 }}
-              whileInView={{ width: "4rem" }}
+              whileInView={{ width: "3rem" }}
               viewport={{ once: true }}
               transition={{ duration: 0.8, ease: "easeOut", delay: 0.3 }}
-              className="mt-4 h-1 bg-spicy-400 rounded-full mx-auto"
+              className="mt-5 h-0.5 bg-spicy-400 rounded-full mx-auto"
             />
           </motion.div>
 
@@ -265,60 +266,6 @@ export default function ServicePage() {
                 </motion.div>
               );
             })}
-          </motion.div>
-        </Container>
-      </section>
-
-      {/* Portfolio */}
-      <section className="py-20 md:py-28">
-        <Container>
-          <motion.div
-            initial="hidden"
-            whileInView="visible"
-            viewport={{ once: true, margin: "-100px" }}
-            variants={fadeInUp}
-            className="text-center mb-12 md:mb-16"
-          >
-            <h2 className="text-3xl md:text-4xl font-bold text-foreground mb-4">
-              {t(`Services.${slug}.detail.portfolioTitle`)}
-            </h2>
-            <motion.div
-              initial={{ width: 0 }}
-              whileInView={{ width: "4rem" }}
-              viewport={{ once: true }}
-              transition={{ duration: 0.8, ease: "easeOut", delay: 0.3 }}
-              className="mt-4 h-1 bg-spicy-400 rounded-full mx-auto"
-            />
-          </motion.div>
-
-          <motion.div
-            variants={staggerContainer}
-            initial="hidden"
-            whileInView="visible"
-            viewport={{ once: true, margin: "-100px" }}
-            className="grid grid-cols-1 md:grid-cols-2 gap-8"
-          >
-            {["p1", "p2"].map((key) => (
-              <motion.div
-                key={key}
-                variants={fadeInUp}
-                className="relative p-8 rounded-2xl bg-surface-secondary border border-border-default hover:border-spicy-400/20 transition-all group overflow-hidden"
-              >
-                <div className="absolute top-0 left-0 w-full h-1 bg-gradient-to-r from-spicy-400 to-spicy-400/40 transform scale-x-0 group-hover:scale-x-100 transition-transform origin-left" />
-                <h3 className="text-xl font-bold text-foreground mb-3">
-                  {t(`Services.${slug}.detail.portfolio.${key}.title`)}
-                </h3>
-                <p className="text-foreground-muted leading-relaxed mb-5">
-                  {t(`Services.${slug}.detail.portfolio.${key}.description`)}
-                </p>
-                <div className="flex items-center gap-2 px-4 py-2.5 rounded-lg bg-spicy-400/5 border border-spicy-400/20 w-fit">
-                  <TrendingUp className="w-4 h-4 text-spicy-400 shrink-0" />
-                  <span className="text-sm font-medium text-spicy-400">
-                    {t(`Services.${slug}.detail.portfolio.${key}.result`)}
-                  </span>
-                </div>
-              </motion.div>
-            ))}
           </motion.div>
         </Container>
       </section>

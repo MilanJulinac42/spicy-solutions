@@ -20,11 +20,15 @@ function useCounter(target: number, duration: number = 2000) {
       if (!startTime) startTime = timestamp;
       const rawProgress = Math.min((timestamp - startTime) / duration, 1);
       const eased = 1 - Math.pow(1 - rawProgress, 3);
-      setCount(Math.floor(eased * target));
-      setProgress(eased);
-      if (rawProgress < 1) {
-        rafId = requestAnimationFrame(animate);
+      if (rawProgress >= 1) {
+        // Snap to final values to avoid floating-point rounding gap
+        setCount(target);
+        setProgress(1);
+        return;
       }
+      setCount(Math.round(eased * target));
+      setProgress(eased);
+      rafId = requestAnimationFrame(animate);
     };
 
     rafId = requestAnimationFrame(animate);
@@ -55,7 +59,7 @@ function StatItem({ value, suffix, label }: StatItemProps) {
 
   return (
     <motion.div ref={ref} variants={fadeInUp} className="text-center">
-      <div className="relative inline-flex items-center justify-center w-32 h-32 md:w-36 md:h-36">
+      <div className="relative inline-flex items-center justify-center w-40 h-40 md:w-44 md:h-44">
         {/* Circular progress ring SVG */}
         <svg
           className="absolute inset-0 w-full h-full -rotate-90"
@@ -80,7 +84,7 @@ function StatItem({ value, suffix, label }: StatItemProps) {
             stroke="currentColor"
             strokeWidth="4"
             strokeLinecap="round"
-            className="text-spicy-400 transition-[stroke-dashoffset] duration-75"
+            className="text-spicy-400"
             style={{
               strokeDasharray: circumference,
               strokeDashoffset: isInView ? strokeDashoffset : circumference,

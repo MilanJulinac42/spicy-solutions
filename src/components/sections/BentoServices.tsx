@@ -78,9 +78,9 @@ function MiniDashboard({ inView }: { inView: boolean }) {
       {/* Stats */}
       <div className="flex gap-2 mb-3">
         {[
-          { label: "Users", value: "2.4k", cls: "text-blue-400" },
-          { label: "Revenue", value: "\u20AC12k", cls: "text-emerald-400" },
-          { label: "Growth", value: "+18%", cls: "text-amber-400" },
+          { label: "Korisnici", value: "2.4k", cls: "text-blue-400" },
+          { label: "Prihod", value: "\u20AC12k", cls: "text-emerald-400" },
+          { label: "Rast", value: "+18%", cls: "text-amber-400" },
         ].map((s, i) => (
           <motion.div
             key={s.label}
@@ -154,8 +154,23 @@ function MiniChat({ inView }: { inView: boolean }) {
         transition={{ delay: 1.8, duration: 0.4 }}
         className="self-start max-w-[80%] px-3 py-2 rounded-2xl rounded-bl-sm bg-violet-500/10 border border-violet-500/15"
       >
-        <span className="text-[10px] text-gray-300 leading-tight">
-          {"Na osnovu vaših podataka, preporučujem 3 strategije..."}
+        <span className="text-[10px] text-gray-300 leading-tight inline-flex items-baseline gap-1">
+          {"Na osnovu vaših podataka, preporučujem 3 strategije"}
+          <span className="inline-flex gap-0.5 items-end pb-0.5">
+            {[0, 1, 2].map((i) => (
+              <motion.span
+                key={i}
+                animate={{ opacity: [0.2, 1, 0.2] }}
+                transition={{
+                  duration: 1.2,
+                  repeat: Infinity,
+                  delay: i * 0.2,
+                  ease: "easeInOut",
+                }}
+                className="w-[3px] h-[3px] rounded-full bg-violet-300"
+              />
+            ))}
+          </span>
         </span>
       </motion.div>
     </div>
@@ -283,26 +298,41 @@ interface BentoCardProps {
   delay?: number;
 }
 
-const accentMap: Record<string, { hover: string; iconBg: string; iconText: string }> = {
+const accentMap: Record<
+  string,
+  { hover: string; iconBg: string; iconText: string; ctaBg: string; ctaHover: string; ctaRing: string }
+> = {
   spicy: {
     hover: "hover:border-spicy-400/30",
     iconBg: "bg-spicy-400/10",
     iconText: "text-spicy-400",
+    ctaBg: "bg-spicy-400/10 text-spicy-400 border-spicy-400/30",
+    ctaHover: "hover:bg-spicy-400 hover:text-white hover:border-spicy-400 hover:shadow-lg hover:shadow-spicy-400/30",
+    ctaRing: "group-hover:bg-spicy-400/15",
   },
   blue: {
     hover: "hover:border-blue-400/30",
     iconBg: "bg-blue-400/10",
     iconText: "text-blue-400",
+    ctaBg: "bg-blue-400/10 text-blue-400 border-blue-400/30",
+    ctaHover: "hover:bg-blue-400 hover:text-white hover:border-blue-400 hover:shadow-lg hover:shadow-blue-400/30",
+    ctaRing: "group-hover:bg-blue-400/15",
   },
   violet: {
     hover: "hover:border-violet-400/30",
     iconBg: "bg-violet-400/10",
     iconText: "text-violet-400",
+    ctaBg: "bg-violet-400/10 text-violet-400 border-violet-400/30",
+    ctaHover: "hover:bg-violet-400 hover:text-white hover:border-violet-400 hover:shadow-lg hover:shadow-violet-400/30",
+    ctaRing: "group-hover:bg-violet-400/15",
   },
   emerald: {
     hover: "hover:border-emerald-400/30",
     iconBg: "bg-emerald-400/10",
     iconText: "text-emerald-400",
+    ctaBg: "bg-emerald-400/10 text-emerald-400 border-emerald-400/30",
+    ctaHover: "hover:bg-emerald-400 hover:text-white hover:border-emerald-400 hover:shadow-lg hover:shadow-emerald-400/30",
+    ctaRing: "group-hover:bg-emerald-400/15",
   },
 };
 
@@ -319,6 +349,7 @@ function BentoCard({
   const ref = useRef(null);
   const inView = useInView(ref, { once: true, margin: "-60px" });
   const a = accentMap[accent] ?? accentMap.spicy;
+  const t = useTranslations();
 
   return (
     <motion.div
@@ -332,27 +363,26 @@ function BentoCard({
       <div className="p-5 pb-0">{animation}</div>
 
       {/* Content */}
-      <div className="p-5 flex items-start justify-between gap-3">
-        <div className="min-w-0">
-          <div className="flex items-center gap-2.5 mb-1.5">
-            <div
-              className={`w-7 h-7 rounded-lg ${a.iconBg} flex items-center justify-center shrink-0`}
-            >
-              <span className={a.iconText}>{icon}</span>
-            </div>
-            <h3 className="text-base font-semibold text-foreground truncate">
-              {title}
-            </h3>
+      <div className="p-5">
+        <div className="flex items-center gap-2.5 mb-1.5">
+          <div
+            className={`w-7 h-7 rounded-lg ${a.iconBg} flex items-center justify-center shrink-0`}
+          >
+            <span className={a.iconText}>{icon}</span>
           </div>
-          <p className="text-sm text-foreground-muted leading-relaxed line-clamp-2">
-            {description}
-          </p>
+          <h3 className="text-base font-semibold text-foreground truncate">
+            {title}
+          </h3>
         </div>
+        <p className="text-sm text-foreground-muted leading-relaxed line-clamp-2 mb-4">
+          {description}
+        </p>
         <Link
           href={href}
-          className="shrink-0 mt-0.5 w-7 h-7 rounded-lg bg-surface-tertiary flex items-center justify-center text-foreground-muted hover:text-foreground transition-colors group-hover:bg-surface-elevated"
+          className={`inline-flex items-center gap-1.5 px-4 py-2 rounded-lg text-sm font-semibold border ${a.ctaBg} ${a.ctaHover} transition-all`}
         >
-          <ArrowUpRight className="w-3.5 h-3.5" />
+          <span>{t("Common.learnMore")}</span>
+          <ArrowUpRight className="w-4 h-4 transition-transform group-hover:translate-x-0.5 group-hover:-translate-y-0.5" />
         </Link>
       </div>
     </motion.div>

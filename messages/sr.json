@@ -22,22 +22,27 @@
     "subtitle": "Većina agencija radi sporo, komunicira loše i isporučuje ispod očekivanja.",
     "problems": {
       "p1": {
+        "stat": "Prosek: 4+ meseca",
         "title": "Mesecima čekate na rezultate",
         "description": "Jednostavan sajt se razvija mesecima. Svaka izmena zahteva nedelje čekanja. Vaš biznis ne može da čeka — a agencije ne žure."
       },
       "p2": {
+        "stat": "5 ljudi između vas i koda",
         "title": "Komunikacija kroz 5 slojeva",
         "description": "Posrednik priča sa vođom projekta, vođa projekta priča sa programerom. Vaša poruka se izgubi usput. Nikada ne razgovarate direktno sa osobom koja piše kod."
       },
       "p3": {
+        "stat": "Alati stariji od 9 godina",
         "title": "Zastarela tehnologija usporava sve",
         "description": "Rade sa alatima iz 2015. dok vaša konkurencija koristi AI i automatizaciju. Rezultat? Sporiji razvoj, lošije performanse, teže održavanje."
       },
       "p4": {
+        "stat": "50%+ ne dobije izvorni kod",
         "title": "Nemate kontrolu nad sopstvenim kodom",
         "description": "Ne možete da premestite sajt? Nemate pristup izvornom kodu? To nije partnerstvo — to je zavisnost koja vas sputava."
       }
     },
+    "soundsFamiliar": "Zvuči poznato? Već smo ovo videli — i znamo kako da bude drugačije.",
     "solution": {
       "title": "Postoji bolji način",
       "point1": "Brza isporuka — radimo efikasno sa modernim alatima i ne razvlačimo rokove",
@@ -45,7 +50,8 @@
       "point3": "Moderne tehnologije — Next.js, AI, automatizacija. Alati koji ubrzavaju razvoj",
       "point4": "Direktan pristup inženjerima koji prave vaš proizvod. Bez posrednika, bez čekanja"
     },
-    "cta": "Zakažite besplatnu konsultaciju"
+    "cta": "Zakažite besplatnu konsultaciju",
+    "ctaSecondary": "Započnite projekat"
   },
   "ServicesOverview": {
     "title": "Šta vam zaista treba",
@@ -145,6 +151,7 @@
   "Services": {
     "title": "Naše usluge",
     "subtitle": "Moderan razvoj, brza isporuka i direktna komunikacija od početka do kraja projekta.",
+    "featuresHeading": "Šta dobijate",
     "websites": {
       "title": "Sajtovi i web aplikacije",
       "description": "Pravimo moderne, brze sajtove sa Next.js koji se učitavaju za manje od sekunde. Kompletno vlasništvo nad kodom, bez zavisnosti od provajdera, sa isporukom u kratkim rokovima.",
@@ -196,20 +203,7 @@
             "answer": "Javite nam se za besplatnu konsultaciju — analiziramo šta vam treba i dajemo jasan predlog sa rokovima i cenama."
           }
         },
-        "ctaText": "Zakažite besplatan razgovor",
-        "portfolioTitle": "Projekti koje smo realizovali",
-        "portfolio": {
-          "p1": {
-            "title": "Internet prodavnica za lokalni brend",
-            "description": "Internet prodavnica sa katalogom od 500+ proizvoda, onlajn plaćanjem i automatskim praćenjem porudžbina.",
-            "result": "Tri puta više porudžbina preko interneta u prva dva meseca"
-          },
-          "p2": {
-            "title": "Korporativni sajt za konsultantsku firmu",
-            "description": "Višejezični sajt sa blog sekcijom, kontakt formom i sistemom za samostalno menjanje sadržaja.",
-            "result": "PageSpeed skor 98/100, 40% više upita sa sajta"
-          }
-        }
+        "ctaText": "Zakažite besplatan razgovor"
       }
     },
     "enterprise": {
@@ -263,20 +257,7 @@
             "answer": "Vi imate kompletan kod i dokumentaciju. Nudimo opcionalnu podršku i održavanje, ali nikada niste zaključani."
           }
         },
-        "ctaText": "Zakažite besplatan razgovor",
-        "portfolioTitle": "Projekti koje smo realizovali",
-        "portfolio": {
-          "p1": {
-            "title": "CRM sistem za prodajni tim",
-            "description": "Prilagođeni CRM sistem sa upravljanjem prodajnim tokom, automatskim izveštajima i povezivanjem sa sistemom za slanje imejlova za tim od 25 prodavaca.",
-            "result": "30% brže zaključivanje poslova, puna preglednost prodajnog toka"
-          },
-          "p2": {
-            "title": "Pregledna tabla za logističku firmu",
-            "description": "Praćenje vozila u realnom vremenu, optimizacija ruta i automatsko generisanje dnevnih izveštaja za upravu.",
-            "result": "15% ušteda na gorivu, eliminisano 4h dnevnog ručnog izveštavanja"
-          }
-        }
+        "ctaText": "Zakažite besplatan razgovor"
       }
     },
     "ai": {
@@ -330,20 +311,7 @@
             "answer": "Prototip asistenta možemo imati za par dana. Kompletno rešenje sa povezivanjem obično 1-3 nedelje, zavisno od obima podataka i broja povezivanja."
           }
         },
-        "ctaText": "Zakažite besplatan razgovor",
-        "portfolioTitle": "Projekti koje smo realizovali",
-        "portfolio": {
-          "p1": {
-            "title": "Pametni AI asistent za stomatološku ordinaciju",
-            "description": "Asistent obučen na kompletnoj ponudi usluga, cenovniku i čestim pitanjima. Odgovara pacijentima u svako doba dana na srpskom jeziku i prikuplja kontakt podatke.",
-            "result": "45% manje telefonskih poziva, tri puta više zakazanih termina van radnog vremena"
-          },
-          "p2": {
-            "title": "Interni AI asistent za IT firmu",
-            "description": "Asistent koji poznaje internu dokumentaciju, kadrovske politike i tehničke procedure. Zaposleni dobijaju odgovor za sekunde umesto da pretražuju dokumentaciju.",
-            "result": "Ušteda od osam sati nedeljno po timu, 92% tačnost odgovora"
-          }
-        }
+        "ctaText": "Zakažite besplatan razgovor"
       }
     },
     "automation": {
@@ -397,20 +365,7 @@
             "answer": "n8n je besplatan softver. Plaćate samo server (nekoliko evra mesečno) i opcionalnu podršku od nas. Bez mesečnih pretplata za softver."
           }
         },
-        "ctaText": "Zakažite besplatan razgovor",
-        "portfolioTitle": "Projekti koje smo realizovali",
-        "portfolio": {
-          "p1": {
-            "title": "Automatizacija za internet prodavnicu",
-            "description": "Kompletna automatizacija od porudžbine do isporuke: sinhronizacija sa ERP sistemom, automatsko fakturisanje, obaveštenja kupcu na imejl i ažuriranje zaliha.",
-            "result": "Eliminisano 20h nedeljno ručnog rada, 0 grešaka u fakturama"
-          },
-          "p2": {
-            "title": "Obrada potencijalnih kupaca za marketinšku agenciju",
-            "description": "Automatski tok: novi upit sa sajta → unos u CRM → serija uvodnih imejlova → obaveštenje prodajnom timu → naknadni podsetnik.",
-            "result": "Dvostruko brži odgovor na upite, 35% više upita pretvorenih u kupce"
-          }
-        }
+        "ctaText": "Zakažite besplatan razgovor"
       }
     },
     "detailComingSoon": "Detaljnije informacije uskoro dolaze. U međuvremenu, javite nam se za besplatan razgovor.",
@@ -487,10 +442,22 @@
         "role": "Suosnivač i inženjer",
         "bio": "Gradim web aplikacije koje rade brzo, izgledaju profesionalno i donose rezultate. Od ideje do produkcije — bez nepotrebnog čekanja.",
         "stats": {
-          "years": { "value": "5+", "label": "Godina iskustva" },
-          "projects": { "value": "20+", "label": "Isporučenih projekata" },
-          "clients": { "value": "100%", "label": "Klijenata koji se vraćaju" },
-          "response": { "value": "<24h", "label": "Vreme odgovora" }
+          "years": {
+            "value": "5+",
+            "label": "Godina iskustva"
+          },
+          "projects": {
+            "value": "20+",
+            "label": "Isporučenih projekata"
+          },
+          "clients": {
+            "value": "100%",
+            "label": "Klijenata koji se vraćaju"
+          },
+          "response": {
+            "value": "<24h",
+            "label": "Vreme odgovora"
+          }
         },
         "capabilities": {
           "webapps": {
@@ -571,22 +538,38 @@
           "discovery": {
             "name": "Upoznavanje i skica",
             "description": "Uvodni razgovor (oko sat vremena), pregled konkurencije i planiranje stranica i sekcija sajta.",
-            "deliverables": ["Pisani dokument sa strukturom sajta", "Skica rasporeda svih stranica (za računar i telefon)", "Konačan spisak funkcionalnosti"]
+            "deliverables": [
+              "Pisani dokument sa strukturom sajta",
+              "Skica rasporeda svih stranica (za računar i telefon)",
+              "Konačan spisak funkcionalnosti"
+            ]
           },
           "design": {
             "name": "Dizajn",
             "description": "Izgled sajta na osnovu skica. Jedna runda većih izmena je uključena u cenu.",
-            "deliverables": ["Vizuelni predlog svih glavnih stranica", "Predlog boja i slova", "Interaktivan prikaz kroz koji možete da kliknete"]
+            "deliverables": [
+              "Vizuelni predlog svih glavnih stranica",
+              "Predlog boja i slova",
+              "Interaktivan prikaz kroz koji možete da kliknete"
+            ]
           },
           "development": {
             "name": "Izrada",
             "description": "Pravljenje sajta prema odobrenom dizajnu. Svakodnevni napredak, probni sajt vam je dostupan od prvog dana.",
-            "deliverables": ["Probni sajt koji se ažurira u realnom vremenu", "Sistem za samostalan unos sadržaja (ako je potreban)", "Prilagođeno svim uređajima — telefon, tablet, računar"]
+            "deliverables": [
+              "Probni sajt koji se ažurira u realnom vremenu",
+              "Sistem za samostalan unos sadržaja (ako je potreban)",
+              "Prilagođeno svim uređajima — telefon, tablet, računar"
+            ]
           },
           "launch": {
             "name": "Provera i puštanje u rad",
             "description": "Provera u svim pretraživačima, merenje brzine, osnovna priprema za Google pretragu i prebacivanje na vaš domen.",
-            "deliverables": ["Sajt uživo na vašem domenu", "Praćenje posetilaca kroz Google Analytics", "Video uputstvo — kako sami da menjate sadržaj"]
+            "deliverables": [
+              "Sajt uživo na vašem domenu",
+              "Praćenje posetilaca kroz Google Analytics",
+              "Video uputstvo — kako sami da menjate sadržaj"
+            ]
           }
         },
         "communication": "WhatsApp grupa za brza pitanja i kratak video pregled napretka svakog petka.",
@@ -599,22 +582,40 @@
           "discovery": {
             "name": "Upoznavanje i planiranje",
             "description": "Radionica sa ljudima iz vaše firme, popis konkretnih situacija za koje se pravi sistem i izbor tehnologija.",
-            "deliverables": ["Spisak scenarija korišćenja po prioritetu", "Plan baze podataka u vidu dijagrama", "Vizuelni prikaz ključnih ekrana", "Dokument o tehnologijama i serverima"]
+            "deliverables": [
+              "Spisak scenarija korišćenja po prioritetu",
+              "Plan baze podataka u vidu dijagrama",
+              "Vizuelni prikaz ključnih ekrana",
+              "Dokument o tehnologijama i serverima"
+            ]
           },
           "mvp": {
             "name": "Prva radna verzija",
             "description": "Prijavljivanje u sistem, različite uloge korisnika i prvi glavni tok posla. Probna verzija je dostupna — kratak prikaz napretka svakog petka.",
-            "deliverables": ["Prijavljivanje u sistem sa pravima po ulogama", "Prvi kompletan tok (npr. unos, pregled i izmena podataka)", "Probno okruženje sa test podacima"]
+            "deliverables": [
+              "Prijavljivanje u sistem sa pravima po ulogama",
+              "Prvi kompletan tok (npr. unos, pregled i izmena podataka)",
+              "Probno okruženje sa test podacima"
+            ]
           },
           "iteration": {
             "name": "Dodavanje funkcionalnosti",
             "description": "Nove scenarije gradimo u kratkim ciklusima. Vi testirate čim je spremno, mi ugrađujemo povratne informacije pre nego što krenemo dalje.",
-            "deliverables": ["Nova funkcionalnost na probnom okruženju čim je spremna", "Automatske provere za najvažnije tokove", "Kratak osvrt na svaki ciklus"]
+            "deliverables": [
+              "Nova funkcionalnost na probnom okruženju čim je spremna",
+              "Automatske provere za najvažnije tokove",
+              "Kratak osvrt na svaki ciklus"
+            ]
           },
           "launch": {
             "name": "Završna priprema i puštanje u rad",
             "description": "Testiranje pri velikom opterećenju, provera bezbednosti, prebacivanje postojećih podataka i uključivanje sistema za praćenje grešaka.",
-            "deliverables": ["Puštanje u pravo okruženje", "Automatsko praćenje grešaka i zapisnici rada", "Administratorski panel i priručnik za rad", "Obuka vašeg tima"]
+            "deliverables": [
+              "Puštanje u pravo okruženje",
+              "Automatsko praćenje grešaka i zapisnici rada",
+              "Administratorski panel i priručnik za rad",
+              "Obuka vašeg tima"
+            ]
           }
         },
         "communication": "Deljena grupa za razmenu poruka, kratak sastanak jednom nedeljno (oko 30 minuta) i pristup kodu sa pregledom svih izmena.",
@@ -627,22 +628,38 @@
           "audit": {
             "name": "Pregled podataka i plan",
             "description": "Pregled vaših izvora podataka, izbor odgovarajućeg AI modela i postavljanje merila uspeha (tačnost odgovora, brzina i mesečni trošak).",
-            "deliverables": ["Dokument o izvorima podataka i njihovoj pripremi", "Izbor AI modela uz obrazloženje", "Procena mesečnog troška korišćenja"]
+            "deliverables": [
+              "Dokument o izvorima podataka i njihovoj pripremi",
+              "Izbor AI modela uz obrazloženje",
+              "Procena mesečnog troška korišćenja"
+            ]
           },
           "prototype": {
             "name": "Proba i merenje kvaliteta",
             "description": "Prva radna verzija na kojoj se proverava kvalitet odgovora kroz stvarna pitanja iz vašeg poslovanja.",
-            "deliverables": ["Radna proba (jednostavan prikaz)", "Tabela sa test pitanjima i ocenama odgovora", "Spisak uputstava za AI sa istorijom izmena"]
+            "deliverables": [
+              "Radna proba (jednostavan prikaz)",
+              "Tabela sa test pitanjima i ocenama odgovora",
+              "Spisak uputstava za AI sa istorijom izmena"
+            ]
           },
           "integration": {
             "name": "Povezivanje i korisnički izgled",
             "description": "Ugrađivanje u vaš sajt kao asistent u uglu, povezivanje sa vašim sistemom ili poseban alat — u zavisnosti od potrebe.",
-            "deliverables": ["Korisnički deo spreman za rad", "Zaštita od zloupotrebe i prekomernog korišćenja", "Postepeno prikazivanje odgovora za bolji utisak korisnika"]
+            "deliverables": [
+              "Korisnički deo spreman za rad",
+              "Zaštita od zloupotrebe i prekomernog korišćenja",
+              "Postepeno prikazivanje odgovora za bolji utisak korisnika"
+            ]
           },
           "monitoring": {
             "name": "Praćenje i predaja",
             "description": "Uključivanje sistema za praćenje razgovora, troškova i rezervnih odgovora za slučajeve kada AI ne zna odgovor.",
-            "deliverables": ["Pregledna tabla (razgovori, trošak, uspešnost odgovora)", "Prebacivanje na živog operatera kada je potrebno", "Pisano uputstvo za izmene u AI odgovorima"]
+            "deliverables": [
+              "Pregledna tabla (razgovori, trošak, uspešnost odgovora)",
+              "Prebacivanje na živog operatera kada je potrebno",
+              "Pisano uputstvo za izmene u AI odgovorima"
+            ]
           }
         },
         "communication": "Deljena tabela sa pravim primerima odgovora i nedeljni prikaz napretka (video ili uživo).",
@@ -655,22 +672,38 @@
           "mapping": {
             "name": "Popis poslova",
             "description": "Radionica — koji se poslovi danas rade ručno, koje sisteme koristite i kada treba da se pokrene svaki automatski tok. Izbor odgovarajućeg alata.",
-            "deliverables": ["Dijagram toka poslova", "Spisak sistema koje treba povezati sa pristupnim podacima", "Procena mesečnog troška alata"]
+            "deliverables": [
+              "Dijagram toka poslova",
+              "Spisak sistema koje treba povezati sa pristupnim podacima",
+              "Procena mesečnog troška alata"
+            ]
           },
           "first": {
             "name": "Prvi automatski tok",
             "description": "Jedan kompletan automatski posao — od početka do kraja — postavljen na probnom okruženju i isproban sa stvarnim podacima.",
-            "deliverables": ["Prvi automatski tok koji radi", "Deljen nalog u sistemu sa vašim pristupom", "Zapisnik prvih izvršenih poslova"]
+            "deliverables": [
+              "Prvi automatski tok koji radi",
+              "Deljen nalog u sistemu sa vašim pristupom",
+              "Zapisnik prvih izvršenih poslova"
+            ]
           },
           "expansion": {
             "name": "Proširenje i zaštita od grešaka",
             "description": "Dodavanje ostalih automatskih tokova, automatski ponovni pokušaj u slučaju greške i obaveštenje ako nešto ne uspe.",
-            "deliverables": ["Svi dogovoreni tokovi aktivni", "Automatski ponovni pokušaj kod greške", "Obaveštenje o grešci sa opisom problema"]
+            "deliverables": [
+              "Svi dogovoreni tokovi aktivni",
+              "Automatski ponovni pokušaj kod greške",
+              "Obaveštenje o grešci sa opisom problema"
+            ]
           },
           "handoff": {
             "name": "Puštanje u rad i predaja",
             "description": "Prebacivanje u pravo okruženje, video prikaz rada i priručnik za vaš tim.",
-            "deliverables": ["Automatski tokovi rade u pravom okruženju", "Video uputstvo za korišćenje", "Priručnik — šta raditi ako se pojavi greška"]
+            "deliverables": [
+              "Automatski tokovi rade u pravom okruženju",
+              "Video uputstvo za korišćenje",
+              "Priručnik — šta raditi ako se pojavi greška"
+            ]
           }
         },
         "communication": "Deljen nalog u sistemu za automatizaciju i nedeljni izveštaj o radu preko imejla.",
