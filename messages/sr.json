@@ -536,7 +536,9 @@
     "labels": {
       "communication": "Komunikacija",
       "postLaunch": "Nakon puštanja u rad",
-      "step": "Korak {number}"
+      "step": "Korak {number}",
+      "done": "Gotovo",
+      "throughout": "Tokom celog projekta i nakon njega"
     },
     "principles": {
       "title": "Principi koji važe za svaki projekat",

@@ -14,6 +14,7 @@ import {
   Brain,
   Workflow,
   Check,
+  CheckCircle2,
   ChevronDown,
   MessageCircle,
   LifeBuoy,
@@ -179,9 +180,9 @@ export default function ProcessPage() {
               </div>
 
               {/* Phases timeline */}
-              <div className="relative">
-                {/* Vertical line (mobile + desktop) */}
-                <div className="absolute left-6 md:left-1/2 top-0 bottom-0 w-px bg-border-default md:-translate-x-1/2" />
+              <div className="relative pb-16 md:pb-20">
+                {/* Vertical line — fades in at top, fades out at bottom */}
+                <div className="absolute left-6 md:left-1/2 top-0 bottom-0 w-px md:-translate-x-1/2 bg-gradient-to-b from-transparent via-border-default to-transparent" />
 
                 <div className="space-y-8 md:space-y-12">
                   {activeMeta.phases.map((phase, idx) => {
@@ -232,10 +233,34 @@ export default function ProcessPage() {
                     );
                   })}
                 </div>
+
+                {/* Finish node — closes the timeline */}
+                <motion.div
+                  initial={{ opacity: 0, scale: 0.8 }}
+                  animate={{ opacity: 1, scale: 1 }}
+                  transition={{ delay: activeMeta.phases.length * 0.1 + 0.1, duration: 0.4 }}
+                  className="absolute left-6 md:left-1/2 -bottom-2 md:-translate-x-1/2 flex items-center gap-2"
+                >
+                  <div className="w-8 h-8 -ml-2 md:-ml-4 rounded-full bg-emerald-500/15 ring-4 ring-surface-secondary flex items-center justify-center">
+                    <CheckCircle2 className="w-5 h-5 text-emerald-400" />
+                  </div>
+                  <span className="text-xs font-mono font-semibold text-emerald-400 uppercase tracking-wider md:hidden">
+                    {t("Process.labels.done")}
+                  </span>
+                </motion.div>
               </div>
 
-              {/* Communication + Post-launch */}
-              <div className="grid grid-cols-1 md:grid-cols-2 gap-4 mt-12">
+              {/* Throughout the project */}
+              <div className="mt-16 md:mt-20">
+                <motion.h4
+                  initial={{ opacity: 0, y: 10 }}
+                  animate={{ opacity: 1, y: 0 }}
+                  transition={{ delay: 0.3 }}
+                  className="text-sm font-semibold text-foreground-muted uppercase tracking-wider text-center mb-6"
+                >
+                  {t("Process.labels.throughout")}
+                </motion.h4>
+                <div className="grid grid-cols-1 md:grid-cols-2 gap-4">
                 <motion.div
                   initial={{ opacity: 0, x: -20 }}
                   animate={{ opacity: 1, x: 0 }}
@@ -273,6 +298,7 @@ export default function ProcessPage() {
                     {t(`Process.tracks.${activeTrack}.postLaunch`)}
                   </p>
                 </motion.div>
+                </div>
               </div>
             </motion.div>
           </AnimatePresence>
