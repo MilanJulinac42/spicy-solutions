@@ -190,9 +190,10 @@ export function Navbar() {
             {/* Mobile Menu Button */}
             <button
               onClick={() => setIsMobileMenuOpen(true)}
+              aria-label="Otvori meni"
               className="lg:hidden p-2 rounded-lg hover:bg-surface-tertiary transition-colors cursor-pointer"
             >
-              <Menu className="w-6 h-6" />
+              <Menu className="w-6 h-6" aria-hidden="true" />
             </button>
           </div>
         </div>

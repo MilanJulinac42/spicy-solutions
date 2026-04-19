@@ -41,34 +41,37 @@ export function Footer() {
                 href={siteConfig.socials.github}
                 target="_blank"
                 rel="noopener noreferrer"
+                aria-label="GitHub"
                 className="p-2 rounded-lg bg-white/5 hover:bg-spicy-400/10 hover:text-spicy-400 hover:scale-110 hover:shadow-lg hover:shadow-spicy-400/25 transition-all"
               >
-                <Github className="w-4 h-4" />
+                <Github className="w-4 h-4" aria-hidden="true" />
               </a>
               <a
                 href={siteConfig.socials.linkedin}
                 target="_blank"
                 rel="noopener noreferrer"
+                aria-label="LinkedIn"
                 className="p-2 rounded-lg bg-white/5 hover:bg-spicy-400/10 hover:text-spicy-400 hover:scale-110 hover:shadow-lg hover:shadow-spicy-400/25 transition-all"
               >
-                <Linkedin className="w-4 h-4" />
+                <Linkedin className="w-4 h-4" aria-hidden="true" />
               </a>
               <a
                 href={siteConfig.socials.instagram}
                 target="_blank"
                 rel="noopener noreferrer"
+                aria-label="Instagram"
                 className="p-2 rounded-lg bg-white/5 hover:bg-spicy-400/10 hover:text-spicy-400 hover:scale-110 hover:shadow-lg hover:shadow-spicy-400/25 transition-all"
               >
-                <Instagram className="w-4 h-4" />
+                <Instagram className="w-4 h-4" aria-hidden="true" />
               </a>
             </div>
           </div>
 
           {/* Quick Links */}
           <div>
-            <h4 className="text-sm font-semibold text-white uppercase tracking-wider mb-4">
+            <h3 className="text-sm font-semibold text-white uppercase tracking-wider mb-4">
               {t("Footer.quickLinks")}
-            </h4>
+            </h3>
             <ul className="space-y-3">
               <li>
                 <Link
@@ -123,9 +126,9 @@ export function Footer() {
 
           {/* Services */}
           <div>
-            <h4 className="text-sm font-semibold text-white uppercase tracking-wider mb-4">
+            <h3 className="text-sm font-semibold text-white uppercase tracking-wider mb-4">
               {t("Footer.services")}
-            </h4>
+            </h3>
             <ul className="space-y-3">
               <li>
                 <Link
@@ -164,9 +167,9 @@ export function Footer() {
 
           {/* Legal */}
           <div>
-            <h4 className="text-sm font-semibold text-white uppercase tracking-wider mb-4">
+            <h3 className="text-sm font-semibold text-white uppercase tracking-wider mb-4">
               {t("Footer.legal")}
-            </h4>
+            </h3>
             <ul className="space-y-3">
               <li>
                 <Link
@@ -189,9 +192,9 @@ export function Footer() {
 
           {/* Contact */}
           <div>
-            <h4 className="text-sm font-semibold text-white uppercase tracking-wider mb-4">
+            <h3 className="text-sm font-semibold text-white uppercase tracking-wider mb-4">
               {t("Footer.connect")}
-            </h4>
+            </h3>
             <ul className="space-y-3">
               <li className="flex items-center gap-2">
                 <Mail className="w-4 h-4 text-spicy-400 shrink-0" />
@@ -216,7 +219,7 @@ export function Footer() {
 
         {/* Copyright */}
         <div className="mt-12 pt-8 border-t border-white/5 text-center">
-          <p className="text-sm text-gray-500">{t("Footer.copyright")}</p>
+          <p className="text-sm text-gray-400">{t("Footer.copyright")}</p>
         </div>
       </div>
     </footer>

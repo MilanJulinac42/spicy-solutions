@@ -109,9 +109,10 @@ export function ChatWidget() {
               {t("tooltip")}
               <button
                 onClick={() => setShowTooltip(false)}
+                aria-label="Zatvori obaveštenje"
                 className="absolute -top-1.5 -left-1.5 w-5 h-5 bg-gray-200 rounded-full flex items-center justify-center hover:bg-gray-300 transition-colors"
               >
-                <X className="w-3 h-3 text-gray-600" />
+                <X className="w-3 h-3 text-gray-600" aria-hidden="true" />
               </button>
               {/* Arrow pointing down */}
               <div className="absolute bottom-[-6px] right-5 w-0 h-0 border-l-[6px] border-l-transparent border-r-[6px] border-r-transparent border-t-[6px] border-t-white" />
