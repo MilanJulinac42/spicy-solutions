@@ -6,11 +6,17 @@ const withNextIntl = createNextIntlPlugin("./src/i18n/request.ts");
 
 const nextConfig: NextConfig = {
   images: {
-    formats: ["image/webp"],
+    // Prefer AVIF (smaller than WebP) with WebP fallback. Both are widely supported now.
+    formats: ["image/avif", "image/webp"],
     minimumCacheTTL: 60 * 60 * 24 * 365,
   },
   compress: true,
   poweredByHeader: false,
+  // Auto tree-shake icons / animation libs more aggressively.
+  // Visually 0 impact — same imports, just smaller chunks.
+  experimental: {
+    optimizePackageImports: ["lucide-react", "framer-motion"],
+  },
 };
 
 export default withSentryConfig(withNextIntl(nextConfig), {
