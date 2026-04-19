@@ -12,7 +12,7 @@ export async function searchKnowledge(
     query_embedding: embedding,
     query_locale: locale,
     match_limit: limit,
-    match_threshold: 0.35,
+    match_threshold: 0.28,
   });
 
   if (error) {
