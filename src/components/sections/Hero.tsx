@@ -10,8 +10,35 @@ import {
   textRevealContainer,
   textRevealWord,
 } from "@/lib/animations";
-import { useRef, useCallback } from "react";
+import { useRef, useCallback, useEffect, useState } from "react";
 import { TerminalAnimation } from "@/components/hero/TerminalAnimation";
+
+// Mobile-only deferred mount: render skeleton on initial paint, mount the heavy
+// terminal animation after the browser is idle. Desktop branch is untouched.
+function MobileTerminal() {
+  const [ready, setReady] = useState(false);
+  useEffect(() => {
+    // Only run on actual mobile viewport (matches lg:hidden = below 1024px).
+    // On desktop this component is hidden by parent CSS, so we skip the heavy
+    // mount entirely to avoid double-rendering the terminal.
+    if (window.matchMedia("(min-width: 1024px)").matches) return;
+    type IdleWindow = Window & {
+      requestIdleCallback?: (cb: () => void, opts?: { timeout: number }) => number;
+    };
+    const w = window as IdleWindow;
+    if (typeof w.requestIdleCallback === "function") {
+      w.requestIdleCallback(() => setReady(true), { timeout: 1500 });
+    } else {
+      const id = setTimeout(() => setReady(true), 600);
+      return () => clearTimeout(id);
+    }
+  }, []);
+  if (!ready) {
+    // Skeleton with same aspect to keep CLS at 0
+    return <div className="w-full aspect-[4/3] rounded-xl bg-surface-secondary/40" />;
+  }
+  return <TerminalAnimation />;
+}
 
 export function Hero() {
   const t = useTranslations("Hero");
@@ -197,7 +224,7 @@ export function Hero() {
             </div>
           </motion.div>
 
-          {/* Terminal — Mobile */}
+          {/* Terminal — Mobile (lazy-loaded to free up main thread on phones) */}
           <motion.div
             initial={{ opacity: 0, y: 20 }}
             animate={{ opacity: 1, y: 0 }}
@@ -205,7 +232,7 @@ export function Hero() {
             className="lg:hidden mx-auto max-w-md w-full"
           >
             <div className="holo-border rounded-xl">
-              <TerminalAnimation />
+              <MobileTerminal />
             </div>
           </motion.div>
         </div>
