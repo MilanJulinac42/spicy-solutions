@@ -27,6 +27,7 @@ export function ChatPanel({ onClose, onReset, messages, setMessages, nextId }: C
   const [input, setInput] = useState("");
   const [isTyping, setIsTyping] = useState(false);
   const messagesEndRef = useRef<HTMLDivElement>(null);
+  const messagesContainerRef = useRef<HTMLDivElement>(null);
   const inputRef = useRef<HTMLTextAreaElement>(null);
   const abortRef = useRef<AbortController | null>(null);
 
@@ -43,13 +44,31 @@ export function ChatPanel({ onClose, onReset, messages, setMessages, nextId }: C
     }
   }, []);
 
-  const scrollToBottom = useCallback(() => {
-    messagesEndRef.current?.scrollIntoView({ behavior: "smooth" });
+  const scrollToBottom = useCallback((smooth = true) => {
+    const container = messagesContainerRef.current;
+    if (!container) return;
+    container.scrollTo({
+      top: container.scrollHeight,
+      behavior: smooth ? "smooth" : "auto",
+    });
   }, []);
 
+  // Scroll on new messages or typing indicator change
   useEffect(() => {
     scrollToBottom();
-  }, [messages, isTyping, scrollToBottom]);
+  }, [messages.length, isTyping, scrollToBottom]);
+
+  // During streaming: keep pinned to bottom on every content update (instant, no smooth queue lag)
+  useEffect(() => {
+    const container = messagesContainerRef.current;
+    if (!container) return;
+    // Only auto-scroll if user is near the bottom (don't yank if they scrolled up to read)
+    const distanceFromBottom =
+      container.scrollHeight - container.scrollTop - container.clientHeight;
+    if (distanceFromBottom < 120) {
+      container.scrollTop = container.scrollHeight;
+    }
+  }, [messages]);
 
   useEffect(() => {
     inputRef.current?.focus();
@@ -218,7 +237,7 @@ export function ChatPanel({ onClose, onReset, messages, setMessages, nextId }: C
       </div>
 
       {/* Messages */}
-      <div className="flex-1 overflow-y-auto p-4 space-y-3">
+      <div ref={messagesContainerRef} className="flex-1 overflow-y-auto p-4 space-y-3">
         {messages.map((msg) => (
           <ChatMessage key={msg.id} role={msg.role} content={msg.content} />
         ))}
