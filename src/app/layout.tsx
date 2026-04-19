@@ -7,8 +7,7 @@ import { ThemeProvider } from "next-themes";
 import { Navbar } from "@/components/layout/Navbar";
 import { Footer } from "@/components/layout/Footer";
 import { ScrollProgress } from "@/components/ui/ScrollProgress";
-import { WhatsAppButton } from "@/components/ui/WhatsAppButton";
-import { ChatWidget } from "@/components/chat/ChatWidget";
+import { FloatingWidgets } from "@/components/layout/FloatingWidgets";
 import "@/app/globals.css";
 
 const geistSans = Geist({
@@ -89,13 +88,12 @@ export default async function RootLayout({
             <Navbar />
             <main className="min-h-screen">{children}</main>
             <Footer />
-            <WhatsAppButton />
-            <ChatWidget />
+            <FloatingWidgets />
             <Script
               src="https://www.googletagmanager.com/gtag/js?id=G-WDNDKK0PBT"
-              strategy="afterInteractive"
+              strategy="lazyOnload"
             />
-            <Script id="google-analytics" strategy="afterInteractive">
+            <Script id="google-analytics" strategy="lazyOnload">
               {`
                 window.dataLayer = window.dataLayer || [];
                 function gtag(){dataLayer.push(arguments);}
