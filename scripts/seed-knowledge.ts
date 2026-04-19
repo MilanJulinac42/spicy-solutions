@@ -90,21 +90,21 @@ const SR_CHUNKS: Chunk[] = [
   // --- PROCES RADA ---
   {
     content:
-      "Proces rada Solvera: 1) Besplatna konsultacija — analiziramo vaš IT setup i identifikujemo gde gubite vreme. Bez obaveza. 2) Jasan plan — detaljan obim posla, jasni rokovi i cene. Tačno znate šta dobijate. 3) Razvoj i isporuka — gradimo brzo sa modernim alatima, redovna ažuriranja, direktan pristup developerima. 4) Predaja i sloboda — sve je vaše: kod, podaci, hosting. Nudimo opcionalnu podršku, ali nikada niste zaključani.",
+      "Proces rada Solvera ima 4 koraka, ali konkretni rokovi zavise od projekta — ne dajemo unapred standardizovane nedelje. Koraci: 1) Upoznavanje i skica — uvodni razgovor (oko sat vremena), pregled potreba, plan stranica/funkcionalnosti. Dobijate pisani dokument sa strukturom i konačan spisak funkcionalnosti. 2) Dizajn — vizuelni predlog svih glavnih ekrana, predlog boja i slova, interaktivan klik-prototip. Jedna runda većih izmena uključena u cenu. 3) Izrada — pravljenje po odobrenom dizajnu, probni sajt vam je dostupan od prvog dana sa svakodnevnim napretkom. 4) Provera i puštanje u rad — testiranje u svim pretraživačima, merenje brzine, SEO osnove, prebacivanje na vaš domen. Tokom celog projekta i nakon: WhatsApp grupa za brza pitanja, kratak video pregled napretka, 30 dana besplatnog ispravljanja grešaka.",
     locale: "sr",
     category: "process",
   },
   // --- O NAMA ---
   {
     content:
-      "Solvera je tim iz Novog Sada, Srbija, koji veruje da srpski biznisi zaslužuju brži, kvalitetniji IT. Tim: Milan Julinac (suosnivač, 5+ godina iskustva, 20+ projekata, ekspert za React, Next.js, TypeScript, Node.js, PostgreSQL, MongoDB, AWS, Docker) i Dragan Jelačić (suosnivač, pravi moderne web platforme i automatizuje poslovne procese). Vrednosti: moderna tehnologija, kvalitet bez kompromisa, radikalna transparentnost, vaš kod i vaši podaci.",
+      "Solvera je tim iz Novog Sada, Srbija, koji veruje da srpski biznisi zaslužuju brži, kvalitetniji IT. Tim broji 2 inženjera (suosnivači): Milan Julinac (5+ godina iskustva, ekspert za React, Next.js, TypeScript, Node.js, PostgreSQL, MongoDB, AWS, Docker) i Dragan Jelačić (pravi moderne web platforme i automatizuje poslovne procese). Vrednosti: moderna tehnologija, kvalitet bez kompromisa, radikalna transparentnost, vaš kod i vaši podaci. Mali fokusiran tim — radite direktno sa inženjerima, bez posrednika.",
     locale: "sr",
     category: "about",
   },
   // --- KONTAKT ---
   {
     content:
-      "Kontakt informacije Solvera: Email info@solveradev.rs, telefon +381 63 838 4196, adresa Novi Sad, Srbija. WhatsApp: +381 63 838 4196. Besplatna konsultacija — recite nam o vašem IT setup-u i pokazaćemo vam gde gubite vreme i efikasnost. Bez ikakvih obaveza. Odgovaramo u roku od 24 sata.",
+      "Kontakt informacije Solvera: Primarni način kontakta je email info@solveradev.rs i WhatsApp +381 63 838 4196. Adresa: Novi Sad, Srbija. Ne primamo telefonske pozive — preferiramo pisanu komunikaciju (email/WhatsApp) i video pozive (Google Meet, Zoom) za sastanke. Razlog: pisana komunikacija ostaje zapisana, lakša je za praćenje i ne prekida fokusiran rad. Besplatna konsultacija se zakazuje preko emaila ili WhatsApp-a, traje 30-60 minuta i obavlja se kao video poziv. Odgovaramo u roku od 24 sata, obično isti dan.",
     locale: "sr",
     category: "contact",
   },
@@ -133,10 +133,10 @@ const SR_CHUNKS: Chunk[] = [
     locale: "sr",
     category: "faq",
   },
-  // --- TESTIMONIALI ---
+  // --- TRANSPARENTNOST: novi tim ---
   {
     content:
-      "Iskustva klijenata Solvera: Marko Petrović (CEO, TechVentures) — plaćali su velikoj agenciji 400 EUR mesečno samo za hosting, Solvera ih prebacio na bolji setup za jednokratnu naknadu. Ana Jovanović (CTO, DataFlow Inc.) — tražili im 12.000 EUR za chatbot, Solvera napravio bolje za četvrtinu te cene, ROI očigledan prvog meseca. Stefan Nikolić (Menadžer operacija, LogiPro) — Solvera podesio n8n automatizaciju za nedelju dana i uštedeo 1.500 EUR mesečno.",
+      "Solvera je novi, fokusiran tim — još uvek ne objavljujemo javno portfolio jer je većina projekata pod NDA-om ili u fazi razvoja. Ne izmišljamo studije slučaja niti lažne testimonijale. Transparentni smo: ako pitate šta smo konkretno radili, iskreno ćemo reći. Tim su inženjeri sa godinama iskustva u modernim tehnologijama (Next.js, Node.js, AI, automatizacija) — Solvera je njihov fokusiran konsalting brand. Bot ne sme da izmišlja imena klijenata, kompanija niti specifične brojke o projektima.",
     locale: "sr",
     category: "about",
   },
@@ -418,16 +418,28 @@ const SR_CHUNKS: Chunk[] = [
     category: "faq",
   },
 
-  // --- PROCES RADA: DETALJNIJE ---
+  // --- PROCES PO TIPU PROJEKTA: DETALJNIJE (sa /proces stranice) ---
   {
     content:
-      "Detaljan proces rada za sajt: Dan 1-2: besplatna konsultacija, analiza potreba, ponuda sa tačnom cenom i rokom. Dan 3-5: dizajn — šaljemo wireframe i vizuelni koncept na odobrenje. Dan 6-14: razvoj — kodiranje, integracije, sadržaj. Dan 15: testiranje na svim uređajima, popravke, lansiranje. Dan 16-45: 30 dana besplatne garancije. Tokom celog procesa imate pristup preview verziji sajta.",
+      "Proces za SAJT (4 koraka): 1) Upoznavanje i skica — sat vremena razgovora, pregled konkurencije, planiranje stranica. Isporuka: pisani dokument sa strukturom sajta, skica rasporeda za računar i telefon, konačan spisak funkcionalnosti. 2) Dizajn — izgled na osnovu skica, jedna runda većih izmena uključena. Isporuka: vizuelni predlog svih glavnih stranica, predlog boja/slova, interaktivan klik-prototip. 3) Izrada — pravljenje prema odobrenom dizajnu, svakodnevni napredak, probni sajt dostupan od prvog dana. Isporuka: probni sajt koji se ažurira u realnom vremenu, sistem za samostalan unos sadržaja (CMS) ako je potreban, prilagođeno svim uređajima. 4) Provera i puštanje u rad — provera u svim pretraživačima, merenje brzine, SEO osnove, prebacivanje na vaš domen. Isporuka: sajt uživo, Google Analytics, video uputstvo za samostalno menjanje sadržaja. Komunikacija: WhatsApp grupa + kratak video pregled napretka svakog petka. Posle puštanja: 30 dana besplatnog ispravljanja grešaka. Mesečno održavanje 50€ pokriva server, rezervne kopije i sitne izmene.",
     locale: "sr",
     category: "process",
   },
   {
     content:
-      "Detaljan proces rada za poslovne sisteme: Nedelja 1: discovery — razumevanje poslovnih procesa, mapiranje zahteva, tehnička specifikacija. Nedelja 2-3: MVP — osnovna funkcionalnost za testiranje. Nedelja 4-8: iterativni razvoj — dodavanje funkcionalnosti sprint po sprint, nedeljni demo sa feedbackom. Finalno: testiranje, deploy, obuka tima, dokumentacija, predaja koda.",
+      "Proces za POSLOVNI SISTEM (CRM, SaaS, interni alat, portal — 4 koraka): 1) Upoznavanje i planiranje — radionica sa ljudima iz vaše firme, popis konkretnih scenarija, izbor tehnologija. Isporuka: spisak scenarija po prioritetu, plan baze podataka u dijagramu, vizuelni prikaz ključnih ekrana, dokument o tehnologijama. 2) Prva radna verzija (MVP) — prijavljivanje sa različitim ulogama, prvi glavni tok posla, probna verzija dostupna sa nedeljnim petkovskim prikazom. Isporuka: prijavljivanje sa pravima po ulogama, prvi kompletan tok, probno okruženje sa test podacima. 3) Dodavanje funkcionalnosti — kratki ciklusi, vi testirate čim je spremno, mi ugrađujemo povratne informacije. Isporuka: nove funkcionalnosti na probnom okruženju, automatske provere, kratak osvrt na svaki ciklus. 4) Završna priprema i puštanje u rad — testiranje pri opterećenju, provera bezbednosti, prebacivanje postojećih podataka, sistem za praćenje grešaka. Isporuka: produkcija, automatsko praćenje grešaka, admin panel + priručnik, obuka tima. Komunikacija: deljena grupa za poruke, kratak nedeljni sastanak (~30min), pristup kodu sa pregledom svih izmena. Posle puštanja: garantovan odgovor na prijavljene greške u roku od 48h. Nove funkcionalnosti po fiksnoj ceni ili mesečni paket od 10/20/40 sati.",
+    locale: "sr",
+    category: "process",
+  },
+  {
+    content:
+      "Proces za AI / VEŠTAČKU INTELIGENCIJU (chatbot, RAG, AI alat — 4 koraka): 1) Pregled podataka i plan — pregled vaših izvora podataka, izbor AI modela, postavljanje merila uspeha (tačnost, brzina, mesečni trošak). Isporuka: dokument o izvorima podataka i njihovoj pripremi, izbor AI modela uz obrazloženje, procena mesečnog troška. 2) Proba i merenje kvaliteta — prva radna verzija sa proverom kroz stvarna pitanja iz vašeg poslovanja. Isporuka: radna proba (jednostavan prikaz), tabela sa test pitanjima i ocenama, spisak uputstava za AI sa istorijom izmena. 3) Povezivanje i korisnički izgled — ugrađivanje u sajt kao asistent u uglu, povezivanje sa vašim sistemom ili poseban alat. Isporuka: korisnički deo spreman za rad, zaštita od zloupotrebe, postepeno prikazivanje odgovora. 4) Praćenje i predaja — sistem za praćenje razgovora, troškova i rezervnih odgovora kad AI ne zna. Isporuka: pregledna tabla (razgovori, trošak, uspešnost), prebacivanje na živog operatera kad treba, pisano uputstvo za izmene u AI odgovorima. Komunikacija: deljena tabela sa pravim primerima odgovora + nedeljni prikaz napretka. Posle puštanja: mesečno doterivanje AI uputstava (uključeno prva tri meseca), prelazak na bolji ili jeftiniji model po fiksnoj ceni kad se pojavi.",
+    locale: "sr",
+    category: "process",
+  },
+  {
+    content:
+      "Proces za AUTOMATIZACIJU (n8n — 4 koraka): 1) Popis poslova — radionica koji se poslovi rade ručno, koje sisteme koristite, kada svaki tok treba da se pokrene. Izbor odgovarajućeg alata. Isporuka: dijagram toka poslova, spisak sistema za povezivanje sa pristupnim podacima, procena mesečnog troška alata. 2) Prvi automatski tok — jedan kompletan automatski posao od početka do kraja, postavljen na probnom okruženju i isproban sa stvarnim podacima. Isporuka: prvi tok koji radi, deljen nalog u sistemu sa vašim pristupom, zapisnik prvih izvršenih poslova. 3) Proširivanje — dodavanje novih tokova, integracija sa više alata, optimizacija postojećih. 4) Predaja — obuka vašeg tima za korišćenje, dokumentacija, predaja pristupnih podataka. Komunikacija: WhatsApp grupa + redovne demo verzije čim su spremne.",
     locale: "sr",
     category: "process",
   },
@@ -451,7 +463,7 @@ const SR_CHUNKS: Chunk[] = [
   },
   {
     content:
-      "Kada klijent kaže 'nemam vremena za to sad': Razumemo, posao je na prvom mestu. Zato smo napravili proces koji zahteva minimalno vašeg vremena — bukvalno 2-3 kratka poziva od po 30 minuta. Mi vodimo sve: dizajn, razvoj, sadržaj, lansiranje. Vi samo odobrite i dajete feedback. Većina klijenata je iznenađena koliko je lako kad tim preuzme sve.",
+      "Kada klijent kaže 'nemam vremena za to sad': Razumemo, posao je na prvom mestu. Zato smo napravili proces koji zahteva minimalno vašeg vremena — bukvalno 2-3 kratka video poziva od po 30 minuta plus poruke u WhatsApp grupi. Mi vodimo sve: dizajn, razvoj, sadržaj, lansiranje. Vi samo odobrite i dajete feedback. Većina klijenata je iznenađena koliko je lako kad tim preuzme sve.",
     locale: "sr",
     category: "sales",
   },
@@ -523,16 +535,10 @@ const SR_CHUNKS: Chunk[] = [
     category: "sales",
   },
 
-  // --- SOCIAL PROOF DETALJI ---
+  // --- SOCIAL PROOF: pošteno bez izmišljotina ---
   {
     content:
-      "Portfolio i rezultati Solvera: 20+ uspešno završenih projekata. Klijenti iz različitih industrija: e-commerce, ugostiteljstvo, zdravstvo, pravo, fitnes, edukacija, SaaS startapi. Prosečno vreme isporuke sajta: 7-10 dana. Prosečna ocena klijenata: 5/5. Nulti broj klijenata koji su bili nezadovoljni krajnjim rezultatom. Svi projekti isporučeni u dogovorenom roku ili ranije.",
-    locale: "sr",
-    category: "about",
-  },
-  {
-    content:
-      "Detaljnija iskustva klijenata: Vlasnik restorana iz Beograda — platio agenciji 3000 EUR za WordPress sajt koji se učitavao 8 sekundi. Solvera napravio novi sajt za 300 EUR, učitavanje ispod 1 sekunde, Google ocena performansi skočila sa 35 na 98. Startap iz Novog Sada — trebao im MVP za 2 nedelje, druge firme tražile 2 meseca. Solvera isporučio funkcionalan MVP za 10 dana. E-commerce vlasnica — automatizacija sa n8n joj uštedela 3 sata dnevno na ručnom unosu podataka.",
+      "Solvera je nov tim koji izlazi na tržište. Nemamo javan portfolio sa logotipima klijenata jer su projekti ili pod NDA-om ili u razvoju. Ne pričamo izmišljene priče o klijentima koji su uštedeli 'X evra mesečno' — to rade druge firme koje pune sajt lažima. Naša priča: dva inženjera koji su radili u različitim okruženjima i odlučili da naprave fer ponudu za srpsko tržište. Fer cene, jasan obim posla, kompletno vlasništvo nad kodom — to su stvari za koje garantujemo, jer ih kontrolišemo. Specifične brojke o klijentima ne izmišljamo.",
     locale: "sr",
     category: "about",
   },
@@ -549,6 +555,90 @@ const SR_CHUNKS: Chunk[] = [
       "Predlozi za upsell: Ako pravite sajt, razmislite i o chatbot-u — AI asistent može da odgovori na 80% pitanja vaših kupaca automatski, 24/7, i da vam donese nove lead-ove dok vi ne radite. Ako već imate sajt, razmislite o automatizaciji — koliko vremena trošite na ručni unos podataka, slanje emailova, ažuriranje tabela? n8n može da automatizuje sve to za jednokratnu cenu od 150 EUR.",
     locale: "sr",
     category: "sales",
+  },
+
+  // ============================================================
+  // NOVO — sa redizajniranog sajta (proces, problemi, kalkulator)
+  // ============================================================
+
+  // --- KALKULATOR / FORMULAR ZA POČETAK PROJEKTA ---
+  {
+    content:
+      "Kako započeti projekat sa Solverom: Na sajtu postoji formular 'Započnite projekat' (kalkulator) gde u 5 koraka opisujete svoj projekat — tip projekta, obim, rok i kontakt. Na osnovu unetih informacija vam stiže okvirna procena cene i rok, plus zakazujemo besplatnu konsultaciju. Link na sajtu: dugme 'Započnite projekat' u glavnom meniju i u CTA sekcijama. Alternativno, možete direktno poslati email na info@solveradev.rs ili WhatsApp poruku na +381 63 838 4196 sa kratkim opisom šta vam treba.",
+    locale: "sr",
+    category: "contact",
+  },
+
+  // --- PROBLEMI KOJE REŠAVAMO (sa ProblemSection) ---
+  {
+    content:
+      "Problemi koje srpske firme imaju sa standardnim IT agencijama (i kako Solvera rešava svaki): 1) Mesecima čekate na rezultate — prosečan IT projekat traje 4+ meseca. Solvera radi efikasno sa modernim alatima, ne razvlači rokove. 2) Komunikacija kroz 5 slojeva — vaša poruka prolazi od account menadžera do vođe projekta do programera. Solvera: razgovarate direktno sa inženjerom koji piše kod. 3) Zastarela tehnologija — agencije koriste alate iz 2015. dok konkurencija koristi AI i automatizaciju. Solvera koristi Next.js, AI, n8n. 4) Nemate kontrolu nad kodom — preko 50% klijenata nikad ne dobije izvorni kod. Solvera: kod, podaci, hosting su vaši od prvog dana, bez zaključavanja.",
+    locale: "sr",
+    category: "about",
+  },
+
+  // --- PRINCIPI KOJI VAŽE ZA SVAKI PROJEKAT ---
+  {
+    content:
+      "4 principa koji važe za svaki Solvera projekat: 1) Sve vam je dostupno od prvog dana — od starta dobijate probni sajt, vizuelni predlog i pristup kodu. Gledate kako projekat napreduje iz dana u dan, ne čekate veliko otkrivanje na kraju. 2) Bez posrednika — razgovarate direktno sa osobom koja radi vaš projekat. Pitanje ujutru, odgovor istog dana. 3) Fiksna cena i jasan obim posla — pre početka potpisujemo dokument sa listom poslova i cenom. Sve izmene idu kroz zahtev za izmenu, pregledno i uz vašu saglasnost. 4) Sve je na vaše ime — kod, server i baza podataka, sve je vaše. U bilo kom trenutku možete nastaviti sami ili sa drugim timom, bez uslovljavanja.",
+    locale: "sr",
+    category: "process",
+  },
+
+  // --- FIKSNA CENA + CHANGE REQUEST ---
+  {
+    content:
+      "Kako funkcioniše fiksna cena u Solveri: Pre početka rada potpisujemo dokument sa tačnom listom poslova i fiksnom cenom — nema iznenađenja u toku projekta. Ako se u toku projekta ispostavi da vam treba nešto van prvobitnog dogovora, ide kroz formalan 'zahtev za izmenu' (change request) — procenjujemo dodatne sate i cenu, vi odobravate ili odbijate, pa nastavljamo. Ovo štiti i nas i vas: vi znate tačno šta plaćate, mi znamo tačno šta isporučujemo. Bez 'oh, to nismo računali pa je sad duplo skuplje' iznenađenja na kraju.",
+    locale: "sr",
+    category: "process",
+  },
+
+  // --- VLASNIŠTVO NAD KODOM (detaljnije) ---
+  {
+    content:
+      "Šta tačno znači 'sve je na vaše ime' u Solveri: Od prvog dana kod ide u GitHub repozitorijum koji je registrovan na vaše ime (ili na ime vaše firme). Server (Vercel, AWS, DigitalOcean) je takođe na vaš nalog, plaćanje ide direktno sa vaše kartice. Domen je registrovan na vaše ime. Baza podataka je vaša. Mi imamo pristup samo dok radimo, posle predaje pristup nam možete oduzeti u 5 sekundi. Možete u bilo kom trenutku angažovati drugog developera da nastavi rad — bez 'ali oni koriste neki specijalan framework koji niko drugi ne razume' priče. Stack je standardan industry-grade.",
+    locale: "sr",
+    category: "process",
+  },
+
+  // --- COMMUNICATION & WHATSAPP GRUPA ---
+  {
+    content:
+      "Kako izgleda komunikacija tokom projekta u Solveri: Za svaki projekat se otvara WhatsApp grupa u kojoj ste vi, inženjer koji radi i opciono članovi vašeg tima. Tu idu brza pitanja, deljenje screenshota, kratke odluke. Za veće stvari (demo, pregled napretka, planiranje sledećih koraka) zakazujemo kratak video poziv jednom nedeljno, obično petkom — traje 15-30 minuta. Probno okruženje (preview link) imate od prvog dana, vidite kako sajt/sistem napreduje u realnom vremenu. Email koristimo za formalne stvari (ponuda, faktura, change request).",
+    locale: "sr",
+    category: "process",
+  },
+
+  // --- ODRŽAVANJE PO TIPU PROJEKTA ---
+  {
+    content:
+      "Mesečno održavanje po tipu projekta u Solveri: Sajtovi — 50€/mesec pokriva server, rezervne kopije, sitne tekstualne i sadržajne izmene, tehnički monitoring. 30 dana posle puštanja u rad bilo koje ispravljanje grešaka je besplatno. Poslovni sistemi — garantovan odgovor na prijavljene greške u roku od 48h. Nove funkcionalnosti naplaćuju se po fiksnoj ceni ili kroz mesečni paket sati: 10 sati, 20 sati ili 40 sati mesečno (po dogovorenoj satnici). AI rešenja — prva tri meseca uključuju mesečno doterivanje AI uputstava (prompts) bez dodatne naknade. Kasnije po fiksnoj ceni. Automatizacija — manje održavanje obično, optimizacija po potrebi.",
+    locale: "sr",
+    category: "pricing",
+  },
+
+  // --- HERO PORUKA / POZICIONIRANJE ---
+  {
+    content:
+      "Glavna poruka i pozicioniranje Solvere: 'Vi vodite biznis, mi brinemo o tehnologiji.' Ideja: vlasnik biznisa ne treba da uči Next.js, dizajn ili automatizaciju — treba da se bavi onim što ga čini boljim u svom poslu. Naš zadatak je da uklonimo IT trenje. Dok druge agencije mesecima razvlače rokove, mi isporučujemo brzo i kvalitetno. Direktan pristup inženjerima koji grade vaš proizvod — bez posrednika, bez čekanja, bez kompromisa. Brza isporuka, direktna komunikacija, kvalitet bez kompromisa.",
+    locale: "sr",
+    category: "about",
+  },
+
+  // --- ŠTA NUDIMO (sažetak za quick reference) ---
+  {
+    content:
+      "Šta Solvera nudi (kratak pregled 4 vrste projekata): SAJT — landing, korporativni sajt, internet prodavnica, portfolio. Next.js, brzo učitavanje, SEO, CMS. Od 150€. POSLOVNI SISTEM — interni alat, pregledna tabla (dashboard), CRM, SaaS platforma, portal za partnere. Skalabilna arhitektura, kontrola pristupa, dokumentacija. Od 1200€. AI / VEŠTAČKA INTELIGENCIJA — pametni asistent (chatbot) za sajt ili podršku, RAG sistem koji odgovara na osnovu vaših dokumenata, alat za pisanje tekstova, automatsko čitanje dokumenata. Od 500€. AUTOMATIZACIJA — n8n tokovi koji povezuju vaše alate, sinhronizacija podataka, automatska obaveštenja, izveštaji. Od 150€. Sve cene su startne i u eurima, bez PDV-a.",
+    locale: "sr",
+    category: "services",
+  },
+
+  // --- BOT GUARDRAILS — šta NE sme da kaže ---
+  {
+    content:
+      "Stroga pravila za AI asistenta na Solvera sajtu: NIKAD ne izmišlji imena klijenata, kompanija ili specifične brojke o uspehu. NIKAD ne tvrdi 'imamo X+ projekata' ako nisi siguran — Solvera je nov tim. NIKAD ne daj ime osobe koja nije Milan Julinac ili Dragan Jelačić kao Solvera zaposlenog. NIKAD ne reci da klijenti mogu da nas pozovu telefonom — preferiramo email i WhatsApp. NIKAD ne tvrdi tehnologiju koju Solvera ne koristi (npr. PHP, WordPress, Java, .NET) kao da je deo stack-a. Ako ne znaš odgovor, iskreno reci 'to morate da pitate inženjera direktno — javite se na info@solveradev.rs ili WhatsApp +381 63 838 4196.'",
+    locale: "sr",
+    category: "faq",
   },
 ];
 
