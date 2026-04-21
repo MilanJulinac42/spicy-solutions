@@ -23,6 +23,13 @@ import {
   Palette,
   Code2,
   Rocket,
+  Ruler,
+  Database,
+  Layers,
+  RefreshCw,
+  Activity,
+  MessageSquareText,
+  Zap,
   type LucideIcon,
 } from "lucide-react";
 import { Container } from "@/components/ui/Container";
@@ -31,10 +38,28 @@ import { fadeInUp, staggerContainer } from "@/lib/animations";
 
 type TrackId = "websites" | "enterprise" | "ai" | "automation";
 
+type PhaseAnimKey =
+  | "investigation"
+  | "creative"
+  | "building"
+  | "launch"
+  | "scoping"
+  | "dataPrep"
+  | "mvp"
+  | "iteration"
+  | "monitoring"
+  | "testing"
+  | "flow";
+
+interface PhaseMeta {
+  key: string;
+  anim: PhaseAnimKey;
+}
+
 interface TrackMeta {
   id: TrackId;
   icon: LucideIcon;
-  phases: readonly string[];
+  phases: readonly PhaseMeta[];
 }
 
 const PRINCIPLES: { key: string; icon: LucideIcon }[] = [
@@ -48,33 +73,54 @@ const TRACKS: TrackMeta[] = [
   {
     id: "websites",
     icon: Globe,
-    phases: ["discovery", "design", "development", "launch"],
+    phases: [
+      { key: "discovery", anim: "investigation" },
+      { key: "design", anim: "creative" },
+      { key: "development", anim: "building" },
+      { key: "launch", anim: "launch" },
+    ],
   },
   {
     id: "enterprise",
     icon: Building2,
-    phases: ["discovery", "mvp", "iteration", "launch"],
+    phases: [
+      { key: "discovery", anim: "investigation" },
+      { key: "scoping", anim: "scoping" },
+      { key: "mvp", anim: "mvp" },
+      { key: "iteration", anim: "iteration" },
+      { key: "launch", anim: "launch" },
+    ],
   },
   {
     id: "ai",
     icon: Brain,
-    phases: ["audit", "prototype", "integration", "monitoring"],
+    phases: [
+      { key: "audit", anim: "investigation" },
+      { key: "data", anim: "dataPrep" },
+      { key: "prototype", anim: "testing" },
+      { key: "integration", anim: "building" },
+      { key: "monitoring", anim: "monitoring" },
+    ],
   },
   {
     id: "automation",
     icon: Workflow,
-    phases: ["mapping", "first", "expansion", "handoff"],
+    phases: [
+      { key: "mapping", anim: "investigation" },
+      { key: "first", anim: "flow" },
+      { key: "expansion", anim: "building" },
+    ],
   },
 ];
 
 const FAQ_KEYS = ["start", "payment", "changes", "delay", "afterLaunch"] as const;
 
-// Animated illustration per step index (cycles 0-3)
-function PhaseVisual({ index }: { index: number }) {
-  const slot = index % 4;
-
-  if (slot === 0) {
-    // Discovery — scanning magnifier with orbiting dots
+// Animated illustration per phase type — semantic mapping, not index-based.
+// Each phase kind gets its own distinct visual so the same animation never
+// shows up twice in a single track.
+function PhaseVisual({ anim }: { anim: PhaseAnimKey }) {
+  if (anim === "investigation") {
+    // Discovery / audit / mapping — orbiting ring with magnifier
     return (
       <div className="relative w-full h-48 md:h-56 flex items-center justify-center">
         <motion.div
@@ -101,8 +147,8 @@ function PhaseVisual({ index }: { index: number }) {
     );
   }
 
-  if (slot === 1) {
-    // Design — stacked floating layers
+  if (anim === "creative") {
+    // Design / prototype — stacked floating layers
     return (
       <div className="relative w-full h-48 md:h-56 flex items-center justify-center">
         <motion.div
@@ -126,8 +172,8 @@ function PhaseVisual({ index }: { index: number }) {
     );
   }
 
-  if (slot === 2) {
-    // Development — code brackets with typing dots
+  if (anim === "building") {
+    // Development / integration — code brackets with typing dots
     return (
       <div className="relative w-full h-48 md:h-56 flex items-center justify-center">
         <motion.div
@@ -168,25 +214,13 @@ function PhaseVisual({ index }: { index: number }) {
             />
           ))}
         </div>
-        {/* Floating code particles */}
         {["{}", "[]", "()", "=>"].map((sym, i) => (
           <motion.span
             key={sym}
-            animate={{
-              y: [0, -10, 0],
-              opacity: [0.2, 0.5, 0.2],
-            }}
-            transition={{
-              duration: 3 + i * 0.4,
-              repeat: Infinity,
-              delay: i * 0.5,
-              ease: "easeInOut",
-            }}
+            animate={{ y: [0, -10, 0], opacity: [0.2, 0.5, 0.2] }}
+            transition={{ duration: 3 + i * 0.4, repeat: Infinity, delay: i * 0.5, ease: "easeInOut" }}
             className="absolute font-mono text-sm font-bold text-spicy-400/40"
-            style={{
-              left: `${10 + i * 25}%`,
-              top: `${15 + (i % 2) * 60}%`,
-            }}
+            style={{ left: `${10 + i * 25}%`, top: `${15 + (i % 2) * 60}%` }}
           >
             {sym}
           </motion.span>
@@ -195,43 +229,345 @@ function PhaseVisual({ index }: { index: number }) {
     );
   }
 
-  // slot === 3 — Launch — rocket with rising trails
+  if (anim === "launch") {
+    // Launch / handoff — rocket with rising trails
+    return (
+      <div className="relative w-full h-48 md:h-56 flex items-center justify-center overflow-hidden">
+        <motion.div
+          animate={{ y: [0, -14, 0], rotate: [-2, 2, -2] }}
+          transition={{ duration: 2.2, repeat: Infinity, ease: "easeInOut" }}
+          className="relative w-16 h-16 rounded-2xl bg-spicy-400/20 border-2 border-spicy-400/60 flex items-center justify-center z-10 shadow-[0_0_24px_rgba(255,90,31,0.4)]"
+        >
+          <Rocket className="w-8 h-8 text-spicy-400" />
+        </motion.div>
+        {[0, 1, 2, 3, 4, 5, 6, 7].map((i) => (
+          <motion.div
+            key={i}
+            animate={{ y: [60, -110], opacity: [0, 1, 0] }}
+            transition={{ duration: 1.4, repeat: Infinity, delay: i * 0.18, ease: "easeOut" }}
+            className="absolute w-1 h-14 bg-gradient-to-t from-spicy-400/0 via-spicy-400/90 to-spicy-400 rounded-full shadow-[0_0_12px_rgba(255,90,31,0.8)]"
+            style={{ left: `${28 + i * 6}%` }}
+          />
+        ))}
+        <motion.div
+          animate={{ scale: [1, 1.8, 1], opacity: [0.7, 0.35, 0.7] }}
+          transition={{ duration: 2.2, repeat: Infinity }}
+          className="absolute w-44 h-44 rounded-full bg-spicy-400/30 blur-2xl"
+        />
+        <motion.div
+          animate={{ scale: [1.2, 1, 1.2], opacity: [0.3, 0.6, 0.3] }}
+          transition={{ duration: 3, repeat: Infinity, ease: "easeInOut" }}
+          className="absolute w-32 h-32 rounded-full border-2 border-spicy-400/30"
+        />
+      </div>
+    );
+  }
+
+  if (anim === "scoping") {
+    // Detailed spec — ruler icon with expanding measurement lines + grid pulse
+    return (
+      <div className="relative w-full h-48 md:h-56 flex items-center justify-center overflow-hidden">
+        {/* Grid pattern pulsing */}
+        <motion.div
+          animate={{ opacity: [0.1, 0.3, 0.1] }}
+          transition={{ duration: 3, repeat: Infinity, ease: "easeInOut" }}
+          className="absolute inset-0"
+          style={{
+            backgroundImage:
+              "linear-gradient(rgba(255,107,53,0.25) 1px, transparent 1px), linear-gradient(90deg, rgba(255,107,53,0.25) 1px, transparent 1px)",
+            backgroundSize: "24px 24px",
+          }}
+        />
+        {/* Horizontal measurement lines sweeping */}
+        {[0, 1, 2].map((i) => (
+          <motion.div
+            key={`h-${i}`}
+            animate={{ scaleX: [0, 1, 0], opacity: [0, 0.8, 0] }}
+            transition={{ duration: 2.4, repeat: Infinity, delay: i * 0.6, ease: "easeInOut" }}
+            className="absolute h-[2px] bg-gradient-to-r from-transparent via-spicy-400 to-transparent origin-left"
+            style={{ width: "55%", left: "22%", top: `${30 + i * 18}%` }}
+          />
+        ))}
+        {/* Central ruler box */}
+        <motion.div
+          animate={{ scale: [1, 1.05, 1] }}
+          transition={{ duration: 2.5, repeat: Infinity, ease: "easeInOut" }}
+          className="relative w-16 h-16 rounded-2xl bg-spicy-400/20 border-2 border-spicy-400/60 flex items-center justify-center shadow-[0_0_20px_rgba(255,90,31,0.35)] z-10"
+        >
+          <Ruler className="w-8 h-8 text-spicy-400" />
+        </motion.div>
+        {/* Tick marks around */}
+        {[0, 1, 2, 3].map((i) => (
+          <motion.div
+            key={`t-${i}`}
+            animate={{ opacity: [0.3, 1, 0.3] }}
+            transition={{ duration: 1.6, repeat: Infinity, delay: i * 0.2 }}
+            className="absolute w-1 h-3 bg-spicy-400 rounded-full"
+            style={{
+              left: i < 2 ? "20%" : "78%",
+              top: i % 2 === 0 ? "25%" : "70%",
+            }}
+          />
+        ))}
+      </div>
+    );
+  }
+
+  if (anim === "dataPrep") {
+    // Data ingestion — dots flowing into a database icon
+    return (
+      <div className="relative w-full h-48 md:h-56 flex items-center justify-center overflow-hidden">
+        <motion.div
+          animate={{ scale: [1, 1.25, 1], opacity: [0.4, 0.8, 0.4] }}
+          transition={{ duration: 2.8, repeat: Infinity, ease: "easeInOut" }}
+          className="absolute w-40 h-40 rounded-full bg-spicy-400/25 blur-2xl"
+        />
+        {/* Central database */}
+        <motion.div
+          animate={{ scale: [1, 1.05, 1] }}
+          transition={{ duration: 2.2, repeat: Infinity, ease: "easeInOut" }}
+          className="relative w-16 h-16 rounded-2xl bg-spicy-400/20 border-2 border-spicy-400/60 flex items-center justify-center shadow-[0_0_24px_rgba(255,90,31,0.4)] z-10"
+        >
+          <Database className="w-8 h-8 text-spicy-400" />
+        </motion.div>
+        {/* Falling data dots */}
+        {[0, 1, 2, 3, 4, 5, 6].map((i) => (
+          <motion.div
+            key={i}
+            animate={{
+              y: [-60, 30],
+              opacity: [0, 1, 0],
+            }}
+            transition={{
+              duration: 1.8,
+              repeat: Infinity,
+              delay: i * 0.25,
+              ease: "easeIn",
+            }}
+            className="absolute w-2 h-2 rounded-full bg-spicy-400 shadow-[0_0_8px_rgba(255,90,31,0.7)]"
+            style={{ left: `${32 + i * 6}%`, top: "15%" }}
+          />
+        ))}
+        {/* Bottom support line */}
+        <div className="absolute bottom-[28%] w-24 h-[2px] bg-spicy-400/40" />
+      </div>
+    );
+  }
+
+  if (anim === "mvp") {
+    // Building up — blocks stacking sequentially
+    return (
+      <div className="relative w-full h-48 md:h-56 flex items-center justify-center overflow-hidden">
+        <motion.div
+          animate={{ scale: [1, 1.15, 1], opacity: [0.3, 0.6, 0.3] }}
+          transition={{ duration: 3, repeat: Infinity, ease: "easeInOut" }}
+          className="absolute w-40 h-40 rounded-full bg-spicy-400/20 blur-2xl"
+        />
+        {/* Stacking blocks — each appears with a delay then stays, loops */}
+        <div className="relative flex flex-col gap-1.5 items-center z-10">
+          {[0, 1, 2].map((i) => (
+            <motion.div
+              key={i}
+              animate={{
+                opacity: [0, 1, 1, 0],
+                scale: [0.7, 1, 1, 0.7],
+                y: [-8, 0, 0, 0],
+              }}
+              transition={{
+                duration: 3.6,
+                repeat: Infinity,
+                delay: i * 0.45,
+                times: [0, 0.25, 0.9, 1],
+                ease: "easeOut",
+              }}
+              className={`rounded-lg border-2 border-spicy-400/60 bg-spicy-400/15 shadow-[0_0_12px_rgba(255,90,31,0.25)] ${
+                i === 2
+                  ? "w-14 h-7 flex items-center justify-center"
+                  : i === 1
+                    ? "w-24 h-7"
+                    : "w-32 h-7"
+              }`}
+            >
+              {i === 2 && <Layers className="w-4 h-4 text-spicy-400" />}
+            </motion.div>
+          ))}
+        </div>
+      </div>
+    );
+  }
+
+  if (anim === "iteration") {
+    // Refine loop — rotating refresh with orbiting sparkles
+    return (
+      <div className="relative w-full h-48 md:h-56 flex items-center justify-center overflow-hidden">
+        <motion.div
+          animate={{ scale: [1, 1.2, 1], opacity: [0.4, 0.8, 0.4] }}
+          transition={{ duration: 2.4, repeat: Infinity, ease: "easeInOut" }}
+          className="absolute w-40 h-40 rounded-full bg-spicy-400/25 blur-2xl"
+        />
+        {/* Central rotating refresh */}
+        <motion.div
+          animate={{ rotate: 360 }}
+          transition={{ duration: 4, repeat: Infinity, ease: "linear" }}
+          className="relative w-16 h-16 rounded-2xl bg-spicy-400/20 border-2 border-spicy-400/60 flex items-center justify-center shadow-[0_0_24px_rgba(255,90,31,0.4)] z-10"
+        >
+          <RefreshCw className="w-8 h-8 text-spicy-400" />
+        </motion.div>
+        {/* Orbiting sparkle dots */}
+        {[0, 1, 2, 3, 4].map((i) => {
+          const angle = (i * 72 * Math.PI) / 180;
+          const r = 70;
+          return (
+            <motion.div
+              key={i}
+              animate={{
+                scale: [0.6, 1.2, 0.6],
+                opacity: [0.3, 1, 0.3],
+              }}
+              transition={{
+                duration: 1.6,
+                repeat: Infinity,
+                delay: i * 0.25,
+                ease: "easeInOut",
+              }}
+              className="absolute w-2 h-2 rounded-full bg-spicy-400 shadow-[0_0_8px_rgba(255,90,31,0.7)]"
+              style={{
+                left: `calc(50% + ${Math.cos(angle) * r}px - 4px)`,
+                top: `calc(50% + ${Math.sin(angle) * r}px - 4px)`,
+              }}
+            />
+          );
+        })}
+      </div>
+    );
+  }
+
+  if (anim === "testing") {
+    // Prototype testing — chat bubbles (question → answer) with quality checkmark
+    return (
+      <div className="relative w-full h-48 md:h-56 flex items-center justify-center overflow-hidden">
+        <motion.div
+          animate={{ scale: [1, 1.2, 1], opacity: [0.3, 0.6, 0.3] }}
+          transition={{ duration: 3, repeat: Infinity, ease: "easeInOut" }}
+          className="absolute w-40 h-40 rounded-full bg-spicy-400/20 blur-2xl"
+        />
+        {/* User question bubble (top-left) */}
+        <motion.div
+          animate={{ opacity: [0, 1, 1, 0], y: [8, 0, 0, -4] }}
+          transition={{ duration: 3.6, repeat: Infinity, times: [0, 0.2, 0.85, 1], ease: "easeOut" }}
+          className="absolute top-5 left-[18%] w-28 h-10 rounded-2xl rounded-bl-sm bg-surface border-2 border-spicy-400/40 flex items-center justify-center shadow-lg shadow-spicy-400/10"
+        >
+          <div className="flex gap-1">
+            {[0, 1, 2].map((i) => (
+              <motion.span
+                key={i}
+                animate={{ opacity: [0.3, 1, 0.3] }}
+                transition={{ duration: 1, repeat: Infinity, delay: i * 0.15 }}
+                className="w-1.5 h-1.5 rounded-full bg-spicy-400/70"
+              />
+            ))}
+          </div>
+        </motion.div>
+        {/* AI answer bubble (bottom-right) with check */}
+        <motion.div
+          animate={{ opacity: [0, 0, 1, 1, 0], y: [8, 8, 0, 0, -4], scale: [0.9, 0.9, 1, 1, 0.95] }}
+          transition={{ duration: 3.6, repeat: Infinity, times: [0, 0.35, 0.5, 0.85, 1], ease: "easeOut" }}
+          className="absolute bottom-6 right-[14%] w-32 h-12 rounded-2xl rounded-br-sm bg-spicy-400/20 border-2 border-spicy-400/60 flex items-center justify-center gap-2 shadow-[0_0_16px_rgba(255,90,31,0.3)]"
+        >
+          <MessageSquareText className="w-5 h-5 text-spicy-400" />
+          <motion.div
+            animate={{ scale: [0, 0, 1.2, 1, 1] }}
+            transition={{ duration: 3.6, repeat: Infinity, times: [0, 0.5, 0.6, 0.7, 1], ease: "backOut" }}
+            className="w-5 h-5 rounded-full bg-emerald-500/20 border border-emerald-400/70 flex items-center justify-center"
+          >
+            <Check className="w-3 h-3 text-emerald-400" strokeWidth={3} />
+          </motion.div>
+        </motion.div>
+      </div>
+    );
+  }
+
+  if (anim === "flow") {
+    // First automation flow — nodes connected with animated data packet traveling
+    return (
+      <div className="relative w-full h-48 md:h-56 flex items-center justify-center overflow-hidden">
+        <motion.div
+          animate={{ scale: [1, 1.2, 1], opacity: [0.3, 0.6, 0.3] }}
+          transition={{ duration: 3, repeat: Infinity, ease: "easeInOut" }}
+          className="absolute w-40 h-40 rounded-full bg-spicy-400/20 blur-2xl"
+        />
+        {/* SVG connector line */}
+        <svg className="absolute inset-0 w-full h-full" viewBox="0 0 400 200" preserveAspectRatio="none">
+          <path
+            d="M 80 100 L 200 100 L 320 100"
+            fill="none"
+            stroke="rgba(255,107,53,0.35)"
+            strokeWidth="2"
+            strokeDasharray="4 4"
+          />
+        </svg>
+        {/* Three nodes */}
+        <div className="relative w-full flex items-center justify-between px-[18%] z-10">
+          {[0, 1, 2].map((i) => (
+            <motion.div
+              key={i}
+              animate={{ scale: [1, 1.15, 1], boxShadow: [
+                "0 0 0px rgba(255,90,31,0.3)",
+                "0 0 20px rgba(255,90,31,0.6)",
+                "0 0 0px rgba(255,90,31,0.3)",
+              ] }}
+              transition={{ duration: 2.4, repeat: Infinity, delay: i * 0.8, ease: "easeInOut" }}
+              className="w-12 h-12 rounded-xl bg-spicy-400/20 border-2 border-spicy-400/60 flex items-center justify-center"
+            >
+              <Zap className="w-5 h-5 text-spicy-400" />
+            </motion.div>
+          ))}
+        </div>
+        {/* Traveling data packet */}
+        <motion.div
+          animate={{ left: ["18%", "50%", "82%"], opacity: [0, 1, 1, 0] }}
+          transition={{ duration: 2.4, repeat: Infinity, times: [0, 0.1, 0.9, 1], ease: "easeInOut" }}
+          className="absolute top-1/2 -translate-y-1/2 w-3 h-3 rounded-full bg-spicy-400 shadow-[0_0_14px_rgba(255,90,31,0.9)]"
+        />
+      </div>
+    );
+  }
+
+  // anim === "monitoring" — ECG heartbeat line + pulsing Activity icon
   return (
     <div className="relative w-full h-48 md:h-56 flex items-center justify-center overflow-hidden">
       <motion.div
-        animate={{ y: [0, -14, 0], rotate: [-2, 2, -2] }}
-        transition={{ duration: 2.2, repeat: Infinity, ease: "easeInOut" }}
-        className="relative w-16 h-16 rounded-2xl bg-spicy-400/20 border-2 border-spicy-400/60 flex items-center justify-center z-10 shadow-[0_0_24px_rgba(255,90,31,0.4)]"
+        animate={{ scale: [1, 1.25, 1], opacity: [0.35, 0.7, 0.35] }}
+        transition={{ duration: 1.4, repeat: Infinity, ease: "easeInOut" }}
+        className="absolute w-40 h-40 rounded-full bg-spicy-400/25 blur-2xl"
+      />
+      {/* SVG ECG line */}
+      <svg
+        className="absolute inset-0 w-full h-full"
+        viewBox="0 0 400 200"
+        preserveAspectRatio="none"
       >
-        <Rocket className="w-8 h-8 text-spicy-400" />
-      </motion.div>
-      {[0, 1, 2, 3, 4, 5, 6, 7].map((i) => (
-        <motion.div
-          key={i}
-          animate={{
-            y: [60, -110],
-            opacity: [0, 1, 0],
-          }}
-          transition={{
-            duration: 1.4,
-            repeat: Infinity,
-            delay: i * 0.18,
-            ease: "easeOut",
-          }}
-          className="absolute w-1 h-14 bg-gradient-to-t from-spicy-400/0 via-spicy-400/90 to-spicy-400 rounded-full shadow-[0_0_12px_rgba(255,90,31,0.8)]"
-          style={{ left: `${28 + i * 6}%` }}
+        <motion.path
+          d="M 0 100 L 80 100 L 100 60 L 120 140 L 140 80 L 160 100 L 240 100 L 260 60 L 280 140 L 300 80 L 320 100 L 400 100"
+          fill="none"
+          stroke="rgba(255,107,53,0.9)"
+          strokeWidth="2.5"
+          strokeLinecap="round"
+          strokeLinejoin="round"
+          initial={{ pathLength: 0, opacity: 0 }}
+          animate={{ pathLength: [0, 1, 1], opacity: [0, 1, 0] }}
+          transition={{ duration: 2.4, repeat: Infinity, ease: "easeInOut" }}
+          style={{ filter: "drop-shadow(0 0 6px rgba(255,90,31,0.6))" }}
         />
-      ))}
+      </svg>
+      {/* Central activity badge */}
       <motion.div
-        animate={{ scale: [1, 1.8, 1], opacity: [0.7, 0.35, 0.7] }}
-        transition={{ duration: 2.2, repeat: Infinity }}
-        className="absolute w-44 h-44 rounded-full bg-spicy-400/30 blur-2xl"
-      />
-      <motion.div
-        animate={{ scale: [1.2, 1, 1.2], opacity: [0.3, 0.6, 0.3] }}
-        transition={{ duration: 3, repeat: Infinity, ease: "easeInOut" }}
-        className="absolute w-32 h-32 rounded-full border-2 border-spicy-400/30"
-      />
+        animate={{ scale: [1, 1.12, 1] }}
+        transition={{ duration: 1.2, repeat: Infinity, ease: "easeInOut" }}
+        className="relative w-16 h-16 rounded-2xl bg-spicy-400/20 border-2 border-spicy-400/60 flex items-center justify-center shadow-[0_0_24px_rgba(255,90,31,0.4)] z-10"
+      >
+        <Activity className="w-8 h-8 text-spicy-400" />
+      </motion.div>
     </div>
   );
 }
@@ -360,7 +696,7 @@ export default function ProcessPage() {
                     const isRight = idx % 2 === 1;
                     return (
                       <motion.div
-                        key={phase}
+                        key={phase.key}
                         initial={{ opacity: 0, y: 20 }}
                         animate={{ opacity: 1, y: 0 }}
                         transition={{ delay: idx * 0.1, duration: 0.4 }}
@@ -373,7 +709,7 @@ export default function ProcessPage() {
 
                         {/* Illustration side (desktop only) */}
                         <div className="hidden md:flex md:flex-1 items-center justify-center">
-                          <PhaseVisual index={idx} />
+                          <PhaseVisual anim={phase.anim} />
                         </div>
 
                         {/* Content card */}
@@ -383,14 +719,14 @@ export default function ProcessPage() {
                               {t("Process.labels.step", { number: idx + 1 })}
                             </span>
                             <h4 className="text-xl font-bold text-foreground mt-2 mb-2">
-                              {t(`Process.tracks.${activeTrack}.phases.${phase}.name`)}
+                              {t(`Process.tracks.${activeTrack}.phases.${phase.key}.name`)}
                             </h4>
                             <p className="text-sm text-foreground-muted leading-relaxed mb-4">
-                              {t(`Process.tracks.${activeTrack}.phases.${phase}.description`)}
+                              {t(`Process.tracks.${activeTrack}.phases.${phase.key}.description`)}
                             </p>
                             <ul className="space-y-2">
                               {(t.raw(
-                                `Process.tracks.${activeTrack}.phases.${phase}.deliverables`
+                                `Process.tracks.${activeTrack}.phases.${phase.key}.deliverables`
                               ) as string[]).map((d, i) => (
                                 <li key={i} className="flex items-start gap-2 text-sm text-foreground-secondary">
                                   <Check className="w-4 h-4 text-emerald-400 shrink-0 mt-0.5" />

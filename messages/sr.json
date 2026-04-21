@@ -589,6 +589,16 @@
               "Dokument o tehnologijama i serverima"
             ]
           },
+          "scoping": {
+            "name": "Detaljan opseg i arhitektura",
+            "description": "Pre pisanja koda pravimo detaljan tehnički dokument — uloge korisnika, tok podataka, povezivanje sa drugim sistemima, bezbednost i granice rada. Ovaj korak vas štiti od iznenađenja u sredini projekta.",
+            "deliverables": [
+              "Tehnička specifikacija (PDF i online)",
+              "Dijagram arhitekture sistema",
+              "Plan povezivanja sa drugim sistemima",
+              "Procena rizika i njihovo ublažavanje"
+            ]
+          },
           "mvp": {
             "name": "Prva radna verzija",
             "description": "Prijavljivanje u sistem, različite uloge korisnika i prvi glavni tok posla. Probna verzija je dostupna — kratak prikaz napretka svakog petka.",
@@ -632,6 +642,16 @@
               "Dokument o izvorima podataka i njihovoj pripremi",
               "Izbor AI modela uz obrazloženje",
               "Procena mesečnog troška korišćenja"
+            ]
+          },
+          "data": {
+            "name": "Priprema baze znanja",
+            "description": "Sakupljamo i čistimo vaše izvore podataka (pitanja i odgovori, sajt, interni dokumenti, prethodne poruke podrške) i pretvaramo ih u bazu znanja spremnu za AI. Ovaj korak često čini 40% posla kod pametnih asistenata.",
+            "deliverables": [
+              "Očišćena i strukturirana baza znanja",
+              "Indeksirani delovi teksta za brzu pretragu",
+              "Strategija pronalaženja odgovora",
+              "Merenje kvaliteta odgovora pre puštanja"
             ]
           },
           "prototype": {
@@ -694,15 +714,6 @@
               "Svi dogovoreni tokovi aktivni",
               "Automatski ponovni pokušaj kod greške",
               "Obaveštenje o grešci sa opisom problema"
-            ]
-          },
-          "handoff": {
-            "name": "Puštanje u rad i predaja",
-            "description": "Prebacivanje u pravo okruženje, video prikaz rada i priručnik za vaš tim.",
-            "deliverables": [
-              "Automatski tokovi rade u pravom okruženju",
-              "Video uputstvo za korišćenje",
-              "Priručnik — šta raditi ako se pojavi greška"
             ]
           }
         },
