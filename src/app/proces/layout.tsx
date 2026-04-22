@@ -1,4 +1,5 @@
 import type { Metadata } from "next";
+import { faqPageSchema, jsonLdString } from "@/lib/jsonld";
 
 export const metadata: Metadata = {
   title: "Proces rada",
@@ -8,5 +9,13 @@ export const metadata: Metadata = {
 };
 
 export default function ProcessLayout({ children }: { children: React.ReactNode }) {
-  return children;
+  return (
+    <>
+      <script
+        type="application/ld+json"
+        dangerouslySetInnerHTML={{ __html: jsonLdString(faqPageSchema) }}
+      />
+      {children}
+    </>
+  );
 }

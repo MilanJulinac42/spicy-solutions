@@ -8,6 +8,13 @@ import { Navbar } from "@/components/layout/Navbar";
 import { Footer } from "@/components/layout/Footer";
 import { ScrollProgress } from "@/components/ui/ScrollProgress";
 import { FloatingWidgets } from "@/components/layout/FloatingWidgets";
+import { PageviewTracker } from "@/components/analytics/PageviewTracker";
+import { Suspense } from "react";
+import {
+  organizationSchema,
+  websiteSchema,
+  jsonLdString,
+} from "@/lib/jsonld";
 import "@/app/globals.css";
 
 const geistSans = Geist({
@@ -79,7 +86,16 @@ export default async function RootLayout({
 
   return (
     <html lang="sr" suppressHydrationWarning>
-      <head />
+      <head>
+        <script
+          type="application/ld+json"
+          dangerouslySetInnerHTML={{ __html: jsonLdString(organizationSchema) }}
+        />
+        <script
+          type="application/ld+json"
+          dangerouslySetInnerHTML={{ __html: jsonLdString(websiteSchema) }}
+        />
+      </head>
       <body
         className={`${geistSans.variable} ${geistMono.variable} antialiased bg-surface text-foreground`}
       >
@@ -103,10 +119,14 @@ export default async function RootLayout({
               {`
                 window.dataLayer = window.dataLayer || [];
                 function gtag(){dataLayer.push(arguments);}
+                window.gtag = gtag;
                 gtag('js', new Date());
-                gtag('config', 'G-WDNDKK0PBT');
+                gtag('config', 'G-WDNDKK0PBT', { send_page_view: false });
               `}
             </Script>
+            <Suspense fallback={null}>
+              <PageviewTracker />
+            </Suspense>
           </NextIntlClientProvider>
         </ThemeProvider>
       </body>

@@ -9,6 +9,7 @@ import { SectionHeading } from "@/components/ui/SectionHeading";
 import { ContactForm } from "@/components/features/ContactForm";
 import { fadeInRight } from "@/lib/animations";
 import { siteConfig } from "@/lib/constants";
+import { trackEvent } from "@/lib/analytics";
 
 export default function ContactPage() {
   const t = useTranslations();
@@ -86,6 +87,12 @@ export default function ContactPage() {
                     <p className="text-sm text-foreground-muted mb-1">{t("Contact.info.emailLabel")}</p>
                     <a
                       href={`mailto:${siteConfig.email}`}
+                      onClick={() =>
+                        trackEvent("contact_click", {
+                          channel: "email",
+                          cta_location: "kontakt_page",
+                        })
+                      }
                       className="text-foreground hover:text-spicy-400 transition-colors"
                     >
                       {t("Contact.info.email")}

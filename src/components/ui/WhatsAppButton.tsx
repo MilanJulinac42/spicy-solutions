@@ -3,6 +3,7 @@
 import { useState, useEffect } from "react";
 import { motion } from "framer-motion";
 import { SiWhatsapp } from "react-icons/si";
+import { trackEvent } from "@/lib/analytics";
 
 const PHONE = "381638384196";
 const MESSAGE = "Zdravo! Interesuje me besplatna konsultacija.";
@@ -25,6 +26,12 @@ export function WhatsAppButton() {
         href={whatsappUrl}
         target="_blank"
         rel="noopener noreferrer"
+        onClick={() =>
+          trackEvent("contact_click", {
+            channel: "whatsapp",
+            cta_location: "floating",
+          })
+        }
         initial={{ scale: 0, opacity: 0 }}
         animate={{ scale: 1, opacity: 1 }}
         transition={{ type: "spring", stiffness: 300, damping: 20 }}

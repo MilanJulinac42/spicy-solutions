@@ -35,6 +35,7 @@ import {
 import { Container } from "@/components/ui/Container";
 import { SectionHeading } from "@/components/ui/SectionHeading";
 import { fadeInUp, staggerContainer } from "@/lib/animations";
+import { trackEvent } from "@/lib/analytics";
 
 type TrackId = "websites" | "enterprise" | "ai" | "automation";
 
@@ -881,6 +882,13 @@ export default function ProcessPage() {
             </p>
             <Link
               href="/zapocni-projekat"
+              onClick={() =>
+                trackEvent("cta_click", {
+                  cta_location: "process_page_bottom",
+                  cta_label: "start_project",
+                  destination: "/zapocni-projekat",
+                })
+              }
               className="inline-flex items-center gap-2 px-8 py-4 bg-spicy-400 text-white rounded-xl font-semibold hover:bg-spicy-500 transition-colors shadow-lg shadow-spicy-400/25 hover:shadow-xl hover:shadow-spicy-400/40"
             >
               {t("Process.cta.button")}

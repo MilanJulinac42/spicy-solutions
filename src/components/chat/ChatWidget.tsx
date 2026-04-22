@@ -5,6 +5,7 @@ import { motion, AnimatePresence } from "framer-motion";
 import { MessageCircle, X } from "lucide-react";
 import { useTranslations } from "next-intl";
 import { ChatPanel } from "./ChatPanel";
+import { trackEvent } from "@/lib/analytics";
 
 type Message = {
   id: number;
@@ -71,7 +72,13 @@ export function ChatWidget() {
   }, [isVisible, isOpen]);
 
   function handleToggle() {
-    setIsOpen((prev) => !prev);
+    setIsOpen((prev) => {
+      const next = !prev;
+      trackEvent(next ? "chat_open" : "chat_close", {
+        channel: "ai_chatbot",
+      });
+      return next;
+    });
     setShowTooltip(false);
   }
 

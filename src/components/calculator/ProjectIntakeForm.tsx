@@ -1,6 +1,6 @@
 "use client";
 
-import { useState } from "react";
+import { useState, useRef } from "react";
 import { AnimatePresence, motion } from "framer-motion";
 import { useTranslations } from "next-intl";
 import Link from "next/link";
@@ -12,6 +12,7 @@ import {
   type ServiceType,
   type ContactChannel,
 } from "@/lib/projectIntakeConfig";
+import { trackEvent } from "@/lib/analytics";
 
 interface FormData {
   service: ServiceType | null;
@@ -51,6 +52,14 @@ export function ProjectIntakeForm() {
   const [submitting, setSubmitting] = useState(false);
   const [submitted, setSubmitted] = useState(false);
   const [error, setError] = useState(false);
+  const startFired = useRef(false);
+
+  // GA4: fire form_start once on first interaction (service select)
+  function markStarted() {
+    if (startFired.current) return;
+    startFired.current = true;
+    trackEvent("form_start", { form_id: "project_intake" });
+  }
 
   const cfg = data.service ? SERVICE_CONFIG[data.service] : null;
   const serviceBase = data.service ? `services.${data.service}` : "";
@@ -113,7 +122,15 @@ export function ProjectIntakeForm() {
   function goNext() {
     if (!canProceed()) return;
     setDirection(1);
-    setStep((s) => s + 1);
+    setStep((s) => {
+      const next = s + 1;
+      trackEvent("form_step", {
+        form_id: "project_intake",
+        step: next,
+        service: data.service ?? undefined,
+      });
+      return next;
+    });
   }
 
   function goBack() {
@@ -166,8 +183,20 @@ export function ProjectIntakeForm() {
 
       if (!res.ok) throw new Error();
       setSubmitted(true);
+      trackEvent("generate_lead", {
+        form_id: "project_intake",
+        service: data.service ?? undefined,
+        subtype: data.subtype || undefined,
+        budget: data.budget || undefined,
+        timeline: data.timeline || undefined,
+        channel: data.channel,
+      });
     } catch {
       setError(true);
+      trackEvent("form_error", {
+        form_id: "project_intake",
+        service: data.service ?? undefined,
+      });
     } finally {
       setSubmitting(false);
     }
@@ -268,6 +297,7 @@ export function ProjectIntakeForm() {
                         key={key}
                         type="button"
                         onClick={() => {
+                          markStarted();
                           // Reset scope/features/timeline/budget if service changes
                           if (data.service !== key) {
                             setData((d) => ({

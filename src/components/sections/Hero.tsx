@@ -12,6 +12,7 @@ import {
 } from "@/lib/animations";
 import { useRef, useCallback, useEffect, useState } from "react";
 import { TerminalAnimation } from "@/components/hero/TerminalAnimation";
+import { trackEvent } from "@/lib/analytics";
 
 // Mobile-only deferred mount: render skeleton on initial paint, mount the heavy
 // terminal animation after the browser is idle. Desktop branch is untouched.
@@ -188,6 +189,13 @@ export function Hero() {
             >
               <Link
                 href="/kontakt"
+                onClick={() =>
+                  trackEvent("cta_click", {
+                    cta_location: "hero",
+                    cta_label: "kontakt_primary",
+                    destination: "/kontakt",
+                  })
+                }
                 className="group inline-flex items-center gap-2 px-8 py-4 bg-spicy-400 text-white rounded-lg text-base font-semibold hover:bg-spicy-500 transition-all shadow-lg shadow-spicy-400/25 hover:shadow-xl hover:shadow-spicy-400/40"
               >
                 {t("cta")}
@@ -195,6 +203,13 @@ export function Hero() {
               </Link>
               <Link
                 href="/zapocni-projekat"
+                onClick={() =>
+                  trackEvent("cta_click", {
+                    cta_location: "hero",
+                    cta_label: "start_project_secondary",
+                    destination: "/zapocni-projekat",
+                  })
+                }
                 className="inline-flex items-center gap-2 px-8 py-4 border-2 border-border-default text-foreground rounded-lg text-base font-semibold hover:border-spicy-400 hover:text-spicy-400 transition-all"
               >
                 {t("ctaCalculator")}

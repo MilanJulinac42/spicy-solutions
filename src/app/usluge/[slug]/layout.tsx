@@ -1,4 +1,5 @@
 import type { Metadata } from "next";
+import { serviceSchema, jsonLdString } from "@/lib/jsonld";
 
 const META: Record<string, { title: string; description: string }> = {
   websites: {
@@ -38,6 +39,24 @@ export async function generateMetadata({
   };
 }
 
-export default function ServiceDetailLayout({ children }: { children: React.ReactNode }) {
-  return children;
+export default async function ServiceDetailLayout({
+  children,
+  params,
+}: {
+  children: React.ReactNode;
+  params: Promise<{ slug: string }>;
+}) {
+  const { slug } = await params;
+  const schema = serviceSchema(slug);
+  return (
+    <>
+      {schema && (
+        <script
+          type="application/ld+json"
+          dangerouslySetInnerHTML={{ __html: jsonLdString(schema) }}
+        />
+      )}
+      {children}
+    </>
+  );
 }

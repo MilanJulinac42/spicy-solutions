@@ -8,6 +8,7 @@ import { Send, CheckCircle, AlertCircle, ArrowRight, X } from "lucide-react";
 import { AnimatePresence } from "framer-motion";
 import { createPortal } from "react-dom";
 import { fadeInUp, staggerContainer } from "@/lib/animations";
+import { trackEvent } from "@/lib/analytics";
 
 export function ContactForm() {
   const t = useTranslations("Contact.form");
@@ -33,13 +34,20 @@ export function ContactForm() {
       if (response.ok) {
         setStatus("success");
         form.reset();
+        trackEvent("generate_lead", {
+          form_id: "contact_form",
+          service: preselectedService || undefined,
+          budget: budget || undefined,
+        });
         setTimeout(() => setStatus("idle"), 3000);
       } else {
         setStatus("error");
+        trackEvent("form_error", { form_id: "contact_form" });
         setTimeout(() => setStatus("idle"), 3000);
       }
     } catch {
       setStatus("error");
+      trackEvent("form_error", { form_id: "contact_form" });
       setTimeout(() => setStatus("idle"), 3000);
     }
   };
