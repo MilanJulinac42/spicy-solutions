@@ -11,10 +11,10 @@
   "Hero": {
     "badge": "Brza isporuka. Direktna komunikacija. Kvalitet bez kompromisa.",
     "title": "Vi vodite biznis",
-    "titleHighlight": "Mi brinemo o tehnologiji",
-    "subtitle": "Dok druge agencije mesecima razvlače rokove, mi isporučujemo brzo i kvalitetno. Direktan pristup inženjerima koji grade vaš proizvod — bez posrednika, bez čekanja, bez kompromisa.",
+    "titleHighlight": "Ja brinem o tehnologiji",
+    "subtitle": "Dok druge agencije mesecima razvlače rokove, ja isporučujem brzo i kvalitetno. Direktan pristup inženjeru koji gradi vaš proizvod — bez posrednika, bez čekanja, bez kompromisa.",
     "cta": "Besplatna konsultacija",
-    "ctaSecondary": "Pogledajte naš proces",
+    "ctaSecondary": "Pogledajte proces",
     "ctaCalculator": "Započnite projekat"
   },
   "ProblemSection": {
@@ -838,7 +838,7 @@
     "title": "Politika privatnosti",
     "subtitle": "Kako prikupljam, koristim i štitim vaše podatke",
     "lastUpdated": "Poslednje ažuriranje: mart 2026.",
-    "intro": "Solvera (u daljem tekstu: \"ja\", \"meni\") posvećena je zaštiti vaše privatnosti. Ova politika objašnjava kako postupamo sa vašim podacima u skladu sa Zakonom o zaštiti podataka o ličnosti Republike Srbije.",
+    "intro": "Solvera, brand pod kojim posluje Milan Julinac, posvećena je zaštiti vaše privatnosti. Ova politika objašnjava kako postupam sa vašim podacima u skladu sa Zakonom o zaštiti podataka o ličnosti Republike Srbije.",
     "section1": {
       "title": "Koji podaci se prikupljaju",
       "p1": "Prikupljam samo podatke koje mi vi dobrovoljno dostavite putem kontakt forme:",

@@ -620,7 +620,7 @@ const SR_CHUNKS: Chunk[] = [
   // --- HERO PORUKA / POZICIONIRANJE ---
   {
     content:
-      "Glavna poruka i pozicioniranje Solvere: 'Vi vodite biznis, mi brinemo o tehnologiji.' Ideja: vlasnik biznisa ne treba da uči Next.js, dizajn ili automatizaciju — treba da se bavi onim što ga čini boljim u svom poslu. Naš zadatak je da uklonimo IT trenje. Dok druge agencije mesecima razvlače rokove, mi isporučujemo brzo i kvalitetno. Direktan pristup inženjerima koji grade vaš proizvod — bez posrednika, bez čekanja, bez kompromisa. Brza isporuka, direktna komunikacija, kvalitet bez kompromisa.",
+      "Glavna poruka i pozicioniranje Solvere: 'Vi vodite biznis, ja brinem o tehnologiji.' Ideja: vlasnik biznisa ne treba da uči Next.js, dizajn ili automatizaciju — treba da se bavi onim što ga čini boljim u svom poslu. Moj zadatak je da uklonim IT trenje. Dok druge agencije mesecima razvlače rokove, ja isporučujem brzo i kvalitetno. Direktan pristup inženjeru koji gradi vaš proizvod — bez posrednika, bez čekanja, bez kompromisa. Brza isporuka, direktna komunikacija, kvalitet bez kompromisa.",
     locale: "sr",
     category: "about",
   },
