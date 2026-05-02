@@ -97,14 +97,14 @@ const SR_CHUNKS: Chunk[] = [
   // --- O NAMA ---
   {
     content:
-      "Solvera je iz Novog Sada, Srbija, i veruje da srpski biznisi zaslužuju brži, kvalitetniji IT. Trenutno Solveru vodi 1 inženjer-osnivač: Milan Julinac (full-stack inženjer, 5+ godina iskustva — React, Next.js, TypeScript, Node.js, PostgreSQL, MongoDB, AWS, Docker, OpenAI, n8n). Po potrebi se za specifične delove projekta uključuju proverene spoljne saradnice/i. Vrednosti: moderna tehnologija, kvalitet bez kompromisa, radikalna transparentnost, vaš kod i vaši podaci. Radite direktno sa inženjerom — bez posrednika, account menadžera i nepotrebnih troškova.",
+      "Solvera je iz Novog Sada, Srbija, i veruje da srpski biznisi zaslužuju brži, kvalitetniji IT. Trenutno Solveru vodi 1 inženjer-osnivač: Milan Julinac (full-stack inženjer, 7+ godina iskustva — React, Next.js, TypeScript, Node.js, PostgreSQL, MongoDB, AWS, Docker, OpenAI, n8n). Po potrebi se za specifične delove projekta uključuju proverene spoljne saradnike. Vrednosti: moderna tehnologija, kvalitet bez kompromisa, radikalna transparentnost, vaš kod i vaši podaci. Radite direktno sa inženjerom — bez posrednika, account menadžera i nepotrebnih troškova.",
     locale: "sr",
     category: "about",
   },
   // --- KONTAKT ---
   {
     content:
-      "Kontakt informacije Solvera: Primarni način kontakta je email info@solveradev.rs i WhatsApp +381 63 838 4196. Adresa: Novi Sad, Srbija. Ne primamo telefonske pozive — preferiramo pisanu komunikaciju (email/WhatsApp) i video pozive (Google Meet, Zoom) za sastanke. Razlog: pisana komunikacija ostaje zapisana, lakša je za praćenje i ne prekida fokusiran rad. Besplatna konsultacija se zakazuje preko emaila ili WhatsApp-a, traje 30-60 minuta i obavlja se kao video poziv. Odgovaramo u roku od 24 sata, obično isti dan.",
+      "Kontakt informacije Solvera: Primarni način kontakta je email info@solveradev.rs i WhatsApp +381 63 838 4196. Adresa: Novi Sad, Srbija. Ne primam telefonske pozive — preferiram pisanu komunikaciju (email/WhatsApp) i video pozive (Google Meet, Zoom) za sastanke. Razlog: pisana komunikacija ostaje zapisana, lakša je za praćenje i ne prekida fokusiran rad. Besplatna konsultacija se zakazuje preko emaila ili WhatsApp-a, traje 30-60 minuta i obavlja se kao video poziv. Odgovaram u roku od 24 sata, obično isti dan.",
     locale: "sr",
     category: "contact",
   },
@@ -117,7 +117,7 @@ const SR_CHUNKS: Chunk[] = [
   },
   {
     content:
-      "Česta pitanja — Poslovni sistemi: Koliko traje razvoj? MVP 1-3 nedelje, kompletniji sistem 4-8 nedelja. Da li može integracija sa postojećim alatima? Da, integrišemo se sa bilo kojim sistemom koji ima API. Šta kad sistem treba proširiti? Arhitektura je čista i dokumentovana, proširivanje je jednostavno. Ko održava posle isporuke? Imate kompletan kod i dokumentaciju, nudimo opcionalnu podršku.",
+      "Česta pitanja — Poslovni sistemi: Koliko traje razvoj? MVP 1-3 nedelje, kompletniji sistem 4-8 nedelja. Da li može integracija sa postojećim alatima? Da, integriše se sa bilo kojim sistemom koji ima API. Šta kad sistem treba proširiti? Arhitektura je čista i dokumentovana, proširivanje je jednostavno. Ko održava posle isporuke? Imate kompletan kod i dokumentaciju, nudim opcionalnu podršku.",
     locale: "sr",
     category: "faq",
   },
@@ -221,7 +221,7 @@ const SR_CHUNKS: Chunk[] = [
   // --- UPOREDBE SA KONKURENCIJOM ---
   {
     content:
-      "Solvera vs. velika agencija: Velike agencije naplaćuju 5-10x više jer imaju skupe kancelarije, account menadžere, PM-ove i marketing timove. Kod nas radite direktno sa inženjerima — nema posrednika, nema nepotrebnih troškova. Isti kvalitet, brža isporuka, znatno niža cena. Primer: agencija naplaćuje 5000-15000 EUR za sajt, mi pravimo isti kvalitet od 150-800 EUR.",
+      "Solvera vs. velika agencija: Velike agencije naplaćuju 5-10x više jer imaju skupe kancelarije, account menadžere, PM-ove i marketing timove. Kod Solvere radite direktno sa inženjerom — nema posrednika, nema nepotrebnih troškova. Isti kvalitet, brža isporuka, znatno niža cena. Primer: agencija naplaćuje 5000-15000 EUR za sajt, pravim isti kvalitet od 150-800 EUR.",
     locale: "sr",
     category: "about",
   },
@@ -309,7 +309,7 @@ const SR_CHUNKS: Chunk[] = [
   // --- MOBILNE APLIKACIJE ---
   {
     content:
-      "Mobilne aplikacije: Solvera primarno pravi web aplikacije koje izgledaju i rade kao native mobilne aplikacije (PWA — Progressive Web App). PWA se instalira direktno sa sajta, radi offline, šalje push notifikacije i koristi sve mogućnosti telefona. Prednost: jedan kod za web i mobilni, bez troškova objavljivanja na App Store/Google Play, brže ažuriranje. Za projekte koji zahtevaju native funkcionalnosti (kamera, GPS, senzori), radimo sa React Native.",
+      "Mobilne aplikacije: Solvera primarno pravi web aplikacije koje izgledaju i rade kao native mobilne aplikacije (PWA — Progressive Web App). PWA se instalira direktno sa sajta, radi offline, šalje push notifikacije i koristi sve mogućnosti telefona. Prednost: jedan kod za web i mobilni, bez troškova objavljivanja na App Store/Google Play, brže ažuriranje. Za projekte koji zahtevaju native funkcionalnosti (kamera, GPS, senzori), radim sa React Native.",
     locale: "sr",
     category: "services",
   },
@@ -325,13 +325,13 @@ const SR_CHUNKS: Chunk[] = [
   // --- ČESTA PITANJA: DODATNA ---
   {
     content:
-      "Da li radite redizajn postojećih sajtova? Da, radimo kompletne redizajne. Analiziramo vaš postojeći sajt, identifikujemo probleme (sporo učitavanje, loš SEO, zastareo dizajn) i pravimo potpuno nov sajt sa modernim dizajnom i tehnologijom. Sav postojeći sadržaj se prebacuje. Cena redizajna je ista kao izrada novog sajta.",
+      "Da li radite redizajn postojećih sajtova? Da, radim kompletne redizajne. Analiziram vaš postojeći sajt, identifikujem probleme (sporo učitavanje, loš SEO, zastareo dizajn) i pravim potpuno nov sajt sa modernim dizajnom i tehnologijom. Sav postojeći sadržaj se prebacuje. Cena redizajna je ista kao izrada novog sajta.",
     locale: "sr",
     category: "faq",
   },
   {
     content:
-      "Da li radite samo sa firmama iz Srbije? Primarno radimo sa firmama iz Srbije i regiona (Bosna, Crna Gora, Hrvatska), ali prihvatamo i klijente iz inostranstva. Komunikacija je na srpskom ili engleskom. Svi sastanci su online (Google Meet ili Zoom), tako da lokacija nije bitna.",
+      "Da li radite samo sa firmama iz Srbije? Primarno radim sa firmama iz Srbije i regiona (Bosna, Crna Gora, Hrvatska), ali prihvatam i klijente iz inostranstva. Komunikacija je na srpskom ili engleskom. Svi sastanci su online (Google Meet ili Zoom), tako da lokacija nije bitna.",
     locale: "sr",
     category: "faq",
   },
@@ -361,13 +361,13 @@ const SR_CHUNKS: Chunk[] = [
   },
   {
     content:
-      "Koliko košta domen i hosting? Domen (.rs, .com, .co.rs) košta 10-15 EUR godišnje. Hosting na Vercel-u je besplatan za manje sajtove (do 100GB bandwidth mesečno). Za veće projekte, hosting na AWS-u ili DigitalOcean-u košta 5-20 EUR mesečno. Ukupni mesečni troškovi za standardan poslovni sajt: 0-5 EUR. Mi vam pomažemo sa registracijom domena i postavljanjem hostinga.",
+      "Koliko košta domen i hosting? Domen (.rs, .com, .co.rs) košta 10-15 EUR godišnje. Hosting na Vercel-u je besplatan za manje sajtove (do 100GB bandwidth mesečno). Za veće projekte, hosting na AWS-u ili DigitalOcean-u košta 5-20 EUR mesečno. Ukupni mesečni troškovi za standardan poslovni sajt: 0-5 EUR. Pomažem vam sa registracijom domena i postavljanjem hostinga.",
     locale: "sr",
     category: "faq",
   },
   {
     content:
-      "Da li mogu da koristim svoj postojeći domen? Da, apsolutno. Ako već imate registrovan domen, samo ga preusmerimo na novi sajt. Proces traje 5-15 minuta i potpuno je besplatan. Ako nemate domen, pomažemo vam da izaberete i registrujete odgovarajući domen.",
+      "Da li mogu da koristim svoj postojeći domen? Da, apsolutno. Ako već imate registrovan domen, samo ga preusmerimo na novi sajt. Proces traje 5-15 minuta i potpuno je besplatan. Ako nemate domen, pomažem vam da izaberete i registrujete odgovarajući domen.",
     locale: "sr",
     category: "faq",
   },
@@ -391,7 +391,7 @@ const SR_CHUNKS: Chunk[] = [
   // --- VELIČINA TIMA ---
   {
     content:
-      "Solvera je mali, fokusiran tim. Nemamo 20 ili 50 zaposlenih — i to je naša prednost. Mali tim znači: direktna komunikacija bez posrednika, niži troškovi (nema account menadžera, HR-a, kancelarija), brže donošenje odluka i veća posvećenost svakom projektu. Ne zapošljavamo ljude da bismo izgledali veće — fokusirani smo na kvalitet, ne na kvantitet.",
+      "Solvera je solo founder operacija. Bez 20 ili 50 zaposlenih — i to je prednost. Direktna komunikacija bez posrednika, niži troškovi (nema account menadžera, HR-a, kancelarija), brže donošenje odluka i veća posvećenost svakom projektu. Bez zapošljavanja radi imitacije veličine — fokus je na kvalitetu, ne na kvantitetu.",
     locale: "sr",
     category: "about",
   },
@@ -399,7 +399,7 @@ const SR_CHUNKS: Chunk[] = [
   // --- KOMPLETAN TECH STACK ---
   {
     content:
-      "Kompletan spisak tehnologija sa kojima Solvera radi: Frontend — Next.js, React, TypeScript, Tailwind CSS, Framer Motion. Backend — Node.js, Nest.js, Express, GraphQL, REST API. Baze podataka — PostgreSQL, MongoDB, Redis, Supabase. Cloud i infrastruktura — AWS (EC2, S3, RDS, Lambda), Vercel, DigitalOcean, Docker. AI i automatizacija — OpenAI, LangChain, Python, n8n. Mobilno — React Native, Progressive Web Apps (PWA). Sve ostale tehnologije koje nisu na ovom spisku NE koristimo. Ako nas neko pita za PHP, WordPress, Angular, Vue.js, Java, C#, .NET, Ruby, Django, Laravel — odgovor je da to nije naš stack i da ne radimo u tim tehnologijama.",
+      "Kompletan spisak tehnologija sa kojima Solvera radi: Frontend — Next.js, React, TypeScript, Tailwind CSS, Framer Motion. Backend — Node.js, Nest.js, Express, GraphQL, REST API. Baze podataka — PostgreSQL, MongoDB, Redis, Supabase. Cloud i infrastruktura — AWS (EC2, S3, RDS, Lambda), Vercel, DigitalOcean, Docker. AI i automatizacija — OpenAI, LangChain, Python, n8n. Mobilno — React Native, Progressive Web Apps (PWA). Sve ostale tehnologije koje nisu na ovom spisku NE koristim. Ako neko pita za PHP, WordPress, Angular, Vue.js, Java, C#, .NET, Ruby, Django, Laravel — odgovor je da to nije moj stack i da ne radim u tim tehnologijama.",
     locale: "sr",
     category: "services",
   },
@@ -407,7 +407,7 @@ const SR_CHUNKS: Chunk[] = [
   // --- TEHNOLOGIJE KOJE NE KORISTIMO ---
   {
     content:
-      "Tehnologije koje Solvera NE koristi: Ne radimo u PHP-u, WordPress-u, Joomla-u, Drupal-u niti drugim zastarelim tehnologijama. Ne koristimo jQuery, Angular, Vue.js niti Java za web razvoj. Naš stack je isključivo: Next.js, React, TypeScript, Tailwind CSS, Node.js, PostgreSQL, MongoDB, Docker, AWS. Ovo nisu nasumični izbori — ove tehnologije pružaju najbolje performanse, bezbednost i skalabilnost za moderne web aplikacije.",
+      "Tehnologije koje Solvera NE koristi: Ne radim u PHP-u, WordPress-u, Joomla-u, Drupal-u niti drugim zastarelim tehnologijama. Ne koristim jQuery, Angular, Vue.js niti Java za web razvoj. Stack je isključivo: Next.js, React, TypeScript, Tailwind CSS, Node.js, PostgreSQL, MongoDB, Docker, AWS. Ovo nisu nasumični izbori — ove tehnologije pružaju najbolje performanse, bezbednost i skalabilnost za moderne web aplikacije.",
     locale: "sr",
     category: "services",
   },
@@ -475,7 +475,7 @@ const SR_CHUNKS: Chunk[] = [
   },
   {
     content:
-      "Kada klijent kaže 'treba mi samo jednostavan sajt': Čak i najjednostavniji sajt treba da radi posao — da privuče posetioce, da ih ubedi i da ih pretvori u klijente. Sajt koji samo postoji ali ne konvertuje je bačen novac. Mi pravimo sajtove koji su optimizovani za konverziju: jasan poziv na akciju, brzo učitavanje, SEO od prvog dana, kontakt forma koja radi. Landing page od 150 EUR koji vam donese 5 novih klijenata mesečno — to je investicija, ne trošak.",
+      "Kada klijent kaže 'treba mi samo jednostavan sajt': Čak i najjednostavniji sajt treba da radi posao — da privuče posetioce, da ih ubedi i da ih pretvori u klijente. Sajt koji samo postoji ali ne konvertuje je bačen novac. Pravim sajtove koji su optimizovani za konverziju: jasan poziv na akciju, brzo učitavanje, SEO od prvog dana, kontakt forma koja radi. Landing page od 150 EUR koji vam donese 5 novih klijenata mesečno — to je investicija, ne trošak.",
     locale: "sr",
     category: "sales",
   },
@@ -503,7 +503,7 @@ const SR_CHUNKS: Chunk[] = [
   // --- URGENCY ---
   {
     content:
-      "Zašto ne čekati sa izradom sajta: Svaki dan bez sajta je dan u kojem vaša konkurencija privlači klijente koje vi propuštate. Kapacitet našeg tima je ograničen — radimo sa ograničenim brojem klijenata istovremeno da bismo održali kvalitet. Trenutno možemo da primimo nove projekte, ali slobodni termini se popunjavaju brzo. Što pre počnemo, pre ćete imati sajt koji radi za vas. Prva konsultacija je besplatna i bez obaveza.",
+      "Zašto ne čekati sa izradom sajta: Svaki dan bez sajta je dan u kojem vaša konkurencija privlači klijente koje vi propuštate. Kapacitet je ograničen — radim sa ograničenim brojem klijenata istovremeno da bih održao kvalitet. Trenutno mogu da primim nove projekte, ali slobodni termini se popunjavaju brzo. Što pre počnemo, pre ćete imati sajt koji radi za vas. Prva konsultacija je besplatna i bez obaveza.",
     locale: "sr",
     category: "sales",
   },
@@ -524,7 +524,7 @@ const SR_CHUNKS: Chunk[] = [
   // --- CONVERSATION STARTERS ---
   {
     content:
-      "Kada posetilac pita 'šta radite' ili 'čime se bavite': Solvera je IT tim iz Novog Sada. Pravimo sajtove, web aplikacije, poslovne sisteme, AI chatbot-ove i automatizacije za firme u Srbiji. Ukratko — pomažemo firmama da koriste modernu tehnologiju za rast biznisa, po fer cenama. Šta vas konkretno zanima? Možda sajt, aplikacija, ili automatizacija nekog poslovnog procesa?",
+      "Kada posetilac pita 'šta radite' ili 'čime se bavite': Solvera je IT tim iz Novog Sada. Pravim sajtove, web aplikacije, poslovne sisteme, AI chatbot-ove i automatizacije za firme u Srbiji. Ukratko — pomažem firmama da koriste modernu tehnologiju za rast biznisa, po fer cenama. Šta vas konkretno zanima? Možda sajt, aplikacija, ili automatizacija nekog poslovnog procesa?",
     locale: "sr",
     category: "sales",
   },
@@ -588,7 +588,7 @@ const SR_CHUNKS: Chunk[] = [
   // --- FIKSNA CENA + CHANGE REQUEST ---
   {
     content:
-      "Kako funkcioniše fiksna cena u Solveri: Pre početka rada potpisujemo dokument sa tačnom listom poslova i fiksnom cenom — nema iznenađenja u toku projekta. Ako se u toku projekta ispostavi da vam treba nešto van prvobitnog dogovora, ide kroz formalan 'zahtev za izmenu' (change request) — procenjujemo dodatne sate i cenu, vi odobravate ili odbijate, pa nastavljamo. Ovo štiti i nas i vas: vi znate tačno šta plaćate, mi znamo tačno šta isporučujemo. Bez 'oh, to nismo računali pa je sad duplo skuplje' iznenađenja na kraju.",
+      "Kako funkcioniše fiksna cena u Solveri: Pre početka rada potpisujem dokument sa tačnom listom poslova i fiksnom cenom — nema iznenađenja u toku projekta. Ako se u toku projekta ispostavi da vam treba nešto van prvobitnog dogovora, ide kroz formalan 'zahtev za izmenu' (change request) — procenjujem dodatne sate i cenu, vi odobravate ili odbijate, pa nastavljamo. Ovo štiti i mene i vas: vi znate tačno šta plaćate, ja znam tačno šta isporučujem. Bez 'oh, to nismo računali pa je sad duplo skuplje' iznenađenja na kraju.",
     locale: "sr",
     category: "process",
   },
@@ -596,7 +596,7 @@ const SR_CHUNKS: Chunk[] = [
   // --- VLASNIŠTVO NAD KODOM (detaljnije) ---
   {
     content:
-      "Šta tačno znači 'sve je na vaše ime' u Solveri: Od prvog dana kod ide u GitHub repozitorijum koji je registrovan na vaše ime (ili na ime vaše firme). Server (Vercel, AWS, DigitalOcean) je takođe na vaš nalog, plaćanje ide direktno sa vaše kartice. Domen je registrovan na vaše ime. Baza podataka je vaša. Mi imamo pristup samo dok radimo, posle predaje pristup nam možete oduzeti u 5 sekundi. Možete u bilo kom trenutku angažovati drugog developera da nastavi rad — bez 'ali oni koriste neki specijalan framework koji niko drugi ne razume' priče. Stack je standardan industry-grade.",
+      "Šta tačno znači 'sve je na vaše ime' u Solveri: Od prvog dana kod ide u GitHub repozitorijum koji je registrovan na vaše ime (ili na ime vaše firme). Server (Vercel, AWS, DigitalOcean) je takođe na vaš nalog, plaćanje ide direktno sa vaše kartice. Domen je registrovan na vaše ime. Baza podataka je vaša. Imam pristup samo dok radim, posle predaje pristup mi možete oduzeti u 5 sekundi. Možete u bilo kom trenutku angažovati drugog developera da nastavi rad — bez 'ali oni koriste neki specijalan framework koji niko drugi ne razume' priče. Stack je standardan industry-grade.",
     locale: "sr",
     category: "process",
   },

@@ -39,7 +39,7 @@ export const metadata: Metadata = {
     template: "%s | Solvera",
   },
   description:
-    "Od sajtova do poslovnih sistema, AI chatbot-ova do automatizacije — isporučujemo tehnologiju koja pokreće vaš biznis napred. Brza isporuka, direktna komunikacija, bez kompromisa.",
+    "Od sajtova do poslovnih sistema, AI chatbot-ova do automatizacije — isporučujem tehnologiju koja pokreće vaš biznis napred. Brza isporuka, direktna komunikacija, bez kompromisa.",
   metadataBase: new URL("https://www.solveradev.rs"),
   openGraph: {
     type: "website",
@@ -48,13 +48,13 @@ export const metadata: Metadata = {
     siteName: "Solvera",
     title: "Solvera | Vi vodite biznis, mi brinemo o tehnologiji",
     description:
-      "Od sajtova do poslovnih sistema, AI chatbot-ova do automatizacije — isporučujemo tehnologiju koja pokreće vaš biznis napred.",
+      "Od sajtova do poslovnih sistema, AI chatbot-ova do automatizacije — isporučujem tehnologiju koja pokreće vaš biznis napred.",
   },
   twitter: {
     card: "summary_large_image",
     title: "Solvera | Vi vodite biznis, mi brinemo o tehnologiji",
     description:
-      "Od sajtova do poslovnih sistema, AI chatbot-ova do automatizacije — isporučujemo tehnologiju koja pokreće vaš biznis napred.",
+      "Od sajtova do poslovnih sistema, AI chatbot-ova do automatizacije — isporučujem tehnologiju koja pokreće vaš biznis napred.",
   },
   icons: {
     icon: [

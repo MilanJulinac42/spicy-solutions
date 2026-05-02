@@ -144,7 +144,7 @@ function DashboardIllustration() {
 function ChatbotIllustration() {
   const messages = [
     { bot: false, text: "Koji su vaši rokovi isporuke?", delay: 0.2 },
-    { bot: true, text: "Standardna isporuka je 3-5 radnih dana. Za hitne porudžbine nudimo express opciju sa isporukom u roku od 24h.", delay: 0.6 },
+    { bot: true, text: "Standardna isporuka je 3-5 radnih dana. Za hitne porudžbine nudim express opciju sa isporukom u roku od 24h.", delay: 0.6 },
     { bot: false, text: "Koliko košta express?", delay: 1.0 },
     { bot: true, text: "Express isporuka je 500 RSD. Želite li da vam zakazem?", delay: 1.4 },
   ];

@@ -42,10 +42,10 @@
         "description": "Ne možete da premestite sajt? Nemate pristup izvornom kodu? To nije partnerstvo — to je zavisnost koja vas sputava."
       }
     },
-    "soundsFamiliar": "Zvuči poznato? Već smo ovo videli — i znamo kako da bude drugačije.",
+    "soundsFamiliar": "Zvuči poznato? Već sam ovo video — i znam kako da bude drugačije.",
     "solution": {
       "title": "Postoji bolji način",
-      "point1": "Brza isporuka — radimo efikasno sa modernim alatima i ne razvlačimo rokove",
+      "point1": "Brza isporuka — radim efikasno sa modernim alatima i ne razvlačim rokove",
       "point2": "Sve je vaše — kod, podaci, hosting. Bez zaključavanja, ikada",
       "point3": "Moderne tehnologije — Next.js, AI, automatizacija. Alati koji ubrzavaju razvoj",
       "point4": "Direktan pristup inženjerima koji prave vaš proizvod. Bez posrednika, bez čekanja"
@@ -58,7 +58,7 @@
     "subtitle": "Moderan razvoj, brza isporuka i direktna komunikacija sa inženjerima koji grade vaš proizvod",
     "websites": {
       "title": "Sajtovi i web aplikacije",
-      "description": "Brzi, moderni, SEO-optimizovani sajtovi izgrađeni sa Next.js. Isporučujemo u kratkim rokovima, sa punim vlasništvom nad kodom i bez zavisnosti od provajdera."
+      "description": "Brzi, moderni, SEO-optimizovani sajtovi izgrađeni sa Next.js. Isporuka u kratkim rokovima, sa punim vlasništvom nad kodom i bez zavisnosti od provajdera."
     },
     "enterprise": {
       "title": "Poslovni sistemi po meri",
@@ -70,7 +70,7 @@
     },
     "automation": {
       "title": "Automatizacija (n8n)",
-      "description": "Povezujemo vaše alate, uklanjamo ručni rad i automatizujemo ponavljajuće procese. Vaš tim se posvećuje strategiji, a softver radi sve ostalo."
+      "description": "Povezujem vaše alate, uklanjam ručni rad i automatizujem ponavljajuće procese. Vaš tim se posvećuje strategiji, a softver radi sve ostalo."
     }
   },
   "Stats": {
@@ -80,29 +80,29 @@
     "satisfaction": "Zadovoljstvo klijenata"
   },
   "Projects": {
-    "title": "Kako pomažemo",
-    "subtitle": "Tipični scenariji u kojima pravimo razliku za vaš biznis",
+    "title": "Kako pomažem",
+    "subtitle": "Tipični scenariji u kojima pravim razliku za vaš biznis",
     "viewProject": "Saznaj više",
     "project1": {
       "title": "Internet prodavnica koja zarađuje",
-      "description": "Treba vam internet prodavnica? Ne morate da čekate mesecima niti da plaćate agencijsku cenu. Pravimo modernu prodavnicu sa plaćanjem, upravljanjem proizvodima i svime što vam treba da počnete da prodajete."
+      "description": "Treba vam internet prodavnica? Ne morate da čekate mesecima niti da plaćate agencijsku cenu. Pravim modernu prodavnicu sa plaćanjem, upravljanjem proizvodima i svime što vam treba da počnete da prodajete."
     },
     "project2": {
       "title": "AI podrška koja nikad ne spava",
-      "description": "Vaši klijenti čekaju na odgovor? Postavljamo pametnog AI asistenta koji poznaje vaš biznis iznutra i odgovara na pitanja umesto vas — bez prestanka, bez pauze, bez bolovanja."
+      "description": "Vaši klijenti čekaju na odgovor? Postavljam pametnog AI asistenta koji poznaje vaš biznis iznutra i odgovara na pitanja umesto vas — bez prestanka, bez pauze, bez bolovanja."
     },
     "project3": {
       "title": "Automatizacija umesto ručnog posla",
-      "description": "Gubite sate na ručno prebacivanje podataka između alata? Povezujemo vaše sisteme i automatizujemo ponavljajuće zadatke tako da se vaš tim posveti onom što zaista donosi vrednost."
+      "description": "Gubite sate na ručno prebacivanje podataka između alata? Povezujem vaše sisteme i automatizujem ponavljajuće zadatke tako da se vaš tim posveti onom što zaista donosi vrednost."
     },
     "project4": {
       "title": "Oslobađanje od zastarelog sistema",
-      "description": "Zarobljeni ste u sistemu koji ne možete da menjate bez da platite nekome ko vas drži kao taoca? Mi ga ponovo gradimo, dajemo vam potpuno vlasništvo nad kodom i slobodu da birate."
+      "description": "Zarobljeni ste u sistemu koji ne možete da menjate bez da platite nekome ko vas drži kao taoca? Ponovo ga gradim, dajem vam potpuno vlasništvo nad kodom i slobodu da birate."
     }
   },
   "Testimonials": {
     "title": "Trenutak kad su shvatili",
-    "subtitle": "Šta kažu naši klijenti kad saznaju koliko IT zaista treba da košta",
+    "subtitle": "Šta kažu klijenti kad saznaju koliko IT zaista treba da košta",
     "testimonial1": {
       "quote": "Plaćali smo velikoj agenciji 400 EUR mesečno samo za hosting i sitne izmene. Solvera nas je prebacila na bolje rešenje uz jednokratnu naknadu. Još uvek sam besan koliko dugo smo preplaćivali.",
       "name": "Marko Petrović",
@@ -123,8 +123,8 @@
     }
   },
   "WhyTrustUs": {
-    "title": "Zašto da nam verujete?",
-    "subtitle": "Mali smo tim — ali upravo zato isporučujemo brže i efikasnije",
+    "title": "Zašto da mi verujete?",
+    "subtitle": "Solo founder, fokusiran — upravo zato je isporuka brža i efikasnija",
     "code": {
       "title": "Inženjeri, ne prodavci",
       "description": "Radite direktno sa inženjerima koji pišu vaš kod. Bez posrednika, bez agencija između, bez gluvih telefona. Brza komunikacija, bolji rezultati."
@@ -135,11 +135,11 @@
     },
     "speed": {
       "title": "Moderne tehnologije, brza isporuka",
-      "description": "Koristimo Next.js, AI, n8n i iste alate koje koriste vodeće tehnološke kompanije. Vaš projekat se gradi tehnologijom koja zaista radi."
+      "description": "Koristim Next.js, AI, n8n i iste alate koje koriste vodeće tehnološke kompanije. Vaš projekat se gradi tehnologijom koja zaista radi."
     },
     "direct": {
       "title": "Direktna komunikacija",
-      "description": "Odgovaramo u roku od 24h. Redovna ažuriranja o napretku projekta. Uvek znate šta se dešava — bez iznenađenja, bez čekanja na odgovor danima."
+      "description": "Odgovaram u roku od 24h. Redovna ažuriranja o napretku projekta. Uvek znate šta se dešava — bez iznenađenja, bez čekanja na odgovor danima."
     }
   },
   "CTA": {
@@ -149,7 +149,7 @@
     "calculatorButton": "Započnite projekat →"
   },
   "Services": {
-    "title": "Naše usluge",
+    "title": "Usluge",
     "subtitle": "Moderan razvoj, brza isporuka i direktna komunikacija od početka do kraja projekta.",
     "featuresHeading": "Šta dobijate",
     "websites": {
@@ -164,8 +164,8 @@
         "f5": "Sve je vaše: kod, domen, hosting"
       },
       "detail": {
-        "extendedDescription": "Bilo da vam treba jednostavan sajt za prezentaciju firme ili složena web aplikacija sa korisničkim nalozima i preglednom tablom — mi pravimo rešenja koja izgledaju profesionalno, rade munjevito brzo i potpuno su vaša.",
-        "examplesTitle": "Šta sve radimo",
+        "extendedDescription": "Bilo da vam treba jednostavan sajt za prezentaciju firme ili složena web aplikacija sa korisničkim nalozima i preglednom tablom — pravim rešenja koja izgledaju profesionalno, rade munjevito brzo i potpuno su vaša.",
+        "examplesTitle": "Šta sve gradim",
         "examples": {
           "e1": {
             "title": "Prezentaciona stranica za vaš biznis",
@@ -208,7 +208,7 @@
     },
     "enterprise": {
       "title": "Poslovni sistemi po meri",
-      "description": "Pregledne table, SaaS platforme, interni alati, API integracije. Gradimo sisteme koji rastu sa vama, spremne za produkciju, sa posvećenošću kvalitetu koda i redovnom komunikacijom tokom razvoja.",
+      "description": "Pregledne table, SaaS platforme, interni alati, API integracije. Gradim sisteme koji rastu sa vama, spremne za produkciju, sa posvećenošću kvalitetu koda i redovnom komunikacijom tokom razvoja.",
       "comparison": "Vrhunski poslovni kvalitet sa agilnim razvojem i direktnim pristupom timu.",
       "features": {
         "f1": "Skalabilna arhitektura koja raste sa vama",
@@ -218,8 +218,8 @@
         "f5": "Kompletna dokumentacija i predaja izvornog koda"
       },
       "detail": {
-        "extendedDescription": "Vaš biznis ima specifične potrebe koje gotova rešenja ne pokrivaju. Mi gradimo sisteme koji se savršeno uklapaju u vaš način rada — od internih alata i preglednih tabla do složenih SaaS platformi.",
-        "examplesTitle": "Šta sve radimo",
+        "extendedDescription": "Vaš biznis ima specifične potrebe koje gotova rešenja ne pokrivaju. Gradim sisteme koji se savršeno uklapaju u vaš način rada — od internih alata i preglednih tabla do složenih SaaS platformi.",
+        "examplesTitle": "Šta sve gradim",
         "examples": {
           "e1": {
             "title": "Interni poslovni alati",
@@ -250,7 +250,7 @@
           },
           "q3": {
             "question": "Šta se dešava kad sistem treba da se proširi?",
-            "answer": "Gradimo sa skalabilnošću na umu od prvog dana. Dodavanje novih funkcionalnosti je jednostavno jer je arhitektura čista i dokumentovana."
+            "answer": "Gradim sa skalabilnošću na umu od prvog dana. Dodavanje novih funkcionalnosti je jednostavno jer je arhitektura čista i dokumentovana."
           },
           "q4": {
             "question": "Ko održava sistem posle isporuke?",
@@ -262,7 +262,7 @@
     },
     "ai": {
       "title": "AI integracija i pametni asistenti",
-      "description": "Vaša konkurencija već koristi AI. Gradimo pametne asistente, automatsku obradu dokumenata i inteligentnu pretragu koji menjaju korisničko iskustvo i oslobađaju vaš tim za važnije poslove.",
+      "description": "Vaša konkurencija već koristi AI. Gradim pametne asistente, automatsku obradu dokumenata i inteligentnu pretragu koji menjaju korisničko iskustvo i oslobađaju vaš tim za važnije poslove.",
       "comparison": "Brzo postavljanje AI rešenja sa merljivim rezultatima od prvog meseca.",
       "features": {
         "f1": "Pametni asistenti obučeni na VAŠIM poslovnim podacima",
@@ -272,8 +272,8 @@
         "f5": "Merljiv rezultat već prvog meseca"
       },
       "detail": {
-        "extendedDescription": "AI nije budućnost — to je sadašnjost. Mi pravimo konkretna AI rešenja koja vaš tim koristi od prvog dana: pametne asistente koji znaju vaš posao, automatsku obradu dokumenata i inteligentnu pretragu.",
-        "examplesTitle": "Šta sve radimo",
+        "extendedDescription": "AI nije budućnost — to je sadašnjost. Pravim konkretna AI rešenja koja vaš tim koristi od prvog dana: pametne asistente koji znaju vaš posao, automatsku obradu dokumenata i inteligentnu pretragu.",
+        "examplesTitle": "Šta sve gradim",
         "examples": {
           "e1": {
             "title": "Pametni asistent za korisničku podršku",
@@ -308,7 +308,7 @@
           },
           "q4": {
             "question": "Koliko brzo mogu da počnem?",
-            "answer": "Prototip asistenta možemo imati za par dana. Kompletno rešenje sa povezivanjem obično 1-3 nedelje, zavisno od obima podataka i broja povezivanja."
+            "answer": "Prototip asistenta mogu imati za par dana. Kompletno rešenje sa povezivanjem obično 1-3 nedelje, zavisno od obima podataka i broja povezivanja."
           }
         },
         "ctaText": "Zakažite besplatan razgovor"
@@ -316,7 +316,7 @@
     },
     "automation": {
       "title": "Automatizacija putem n8n",
-      "description": "n8n je besplatna platforma sa otvorenim kodom za automatizaciju. Mi je podešavamo, povezujemo vaše alate i gradimo tokove koji uklanjaju ručni rad — vaš tim se posvećuje onome što zaista pravi razliku.",
+      "description": "n8n je besplatna platforma sa otvorenim kodom za automatizaciju. Podešavam je, povezujem vaše alate i gradim tokove koji uklanjaju ručni rad — vaš tim se posvećuje onome što zaista pravi razliku.",
       "comparison": "Eliminišite ponavljajuće zadatke i oslobodite tim za strateški rad.",
       "features": {
         "f1": "Vizuelni graditelj automatskih tokova — lako razumljiv i prilagodljiv",
@@ -326,8 +326,8 @@
         "f5": "Postavlja se kod vas: vaši podaci ostaju na vašim serverima"
       },
       "detail": {
-        "extendedDescription": "Koliko sati nedeljno vaš tim troši na ponavljajuće zadatke? Prebacivanje podataka iz jednog sistema u drugi, slanje izveštaja, ažuriranje tabela. Mi to automatizujemo sa n8n — vaš tim radi pametnije, ne više.",
-        "examplesTitle": "Šta sve radimo",
+        "extendedDescription": "Koliko sati nedeljno vaš tim troši na ponavljajuće zadatke? Prebacivanje podataka iz jednog sistema u drugi, slanje izveštaja, ažuriranje tabela. To automatizujem sa n8n — vaš tim radi pametnije, ne više.",
+        "examplesTitle": "Šta sve gradim",
         "examples": {
           "e1": {
             "title": "Sinhronizacija podataka između sistema",
@@ -372,7 +372,7 @@
     "learnMore": "Saznajte više",
     "viewAll": "Sve usluge →",
     "process": {
-      "title": "Kako radimo",
+      "title": "Kako radim",
       "subtitle": "Jednostavan proces. Bez misterije. Bez iznenađenja.",
       "step1": {
         "title": "Besplatna konsultacija",
@@ -384,7 +384,7 @@
       },
       "step3": {
         "title": "Razvoj i isporuka",
-        "description": "Gradimo brzo sa modernim alatima. Dobijate redovna ažuriranja i direktan pristup inženjerima."
+        "description": "Gradim brzo sa modernim alatima. Dobijate redovna ažuriranja i direktan pristup inženjerima."
       },
       "step4": {
         "title": "Predaja i sloboda",
@@ -446,14 +446,14 @@
       "secondary": "Ili pišite na WhatsApp"
     },
     "values": {
-      "title": "U šta verujemo",
+      "title": "U šta verujem",
       "innovation": {
         "title": "Samo moderna tehnologija",
-        "description": "Koristimo Next.js, AI, n8n — iste alate koje koriste vrhunske tehnološke kompanije. Moderan razvoj, brza isporuka."
+        "description": "Koristim Next.js, AI, n8n — iste alate koje koriste vrhunske tehnološke kompanije. Moderan razvoj, brza isporuka."
       },
       "quality": {
         "title": "Kvalitet bez kompromisa",
-        "description": "Brzo ne znači površno. Svaki projekat dobija istu inženjersku pažnju koju bismo primenili na sopstvene proizvode."
+        "description": "Brzo ne znači površno. Svaki projekat dobija istu inženjersku pažnju koju bih primenio na svoje proizvode."
       },
       "transparency": {
         "title": "Radikalna transparentnost",
@@ -461,7 +461,7 @@
       },
       "partnership": {
         "title": "Vaš kod, vaši podaci",
-        "description": "Sve što napravimo pripada vama. Bez zaključavanja, bez talačkih situacija. Možete otići kad god hoćete — ali nećete hteti."
+        "description": "Sve što napravim pripada vama. Bez zaključavanja, bez talačkih situacija. Možete otići kad god hoćete — ali nećete hteti."
       }
     },
     "team": {
@@ -533,12 +533,12 @@
       }
     },
     "tech": {
-      "title": "Naše tehnologije",
-      "subtitle": "Tehnologije koje koristimo za izgradnju modernih digitalnih rešenja"
+      "title": "Tehnologije koje koristim",
+      "subtitle": "Stack koji koristim za izgradnju modernih digitalnih rešenja"
     }
   },
   "Process": {
-    "title": "Kako radimo",
+    "title": "Kako radim",
     "subtitle": "Jasan proces, nedeljni rezultati i direktna komunikacija. Bez posrednika i bez iznenađenja.",
     "labels": {
       "communication": "Komunikacija",
@@ -617,7 +617,7 @@
       },
       "enterprise": {
         "label": "Poslovni sistem",
-        "overview": "Interni alat, pregledna tabla, sistem za upravljanje klijentima (CRM), softver koji se prodaje kao usluga ili portal za partnere. Gradimo prvu radnu verziju, pa se sistem dograđuje u etapama.",
+        "overview": "Interni alat, pregledna tabla, sistem za upravljanje klijentima (CRM), softver koji se prodaje kao usluga ili portal za partnere. Gradim prvu radnu verziju, pa se sistem dograđuje u etapama.",
         "phases": {
           "discovery": {
             "name": "Upoznavanje i planiranje",
@@ -631,7 +631,7 @@
           },
           "scoping": {
             "name": "Detaljan opseg i arhitektura",
-            "description": "Pre pisanja koda pravimo detaljan tehnički dokument — uloge korisnika, tok podataka, povezivanje sa drugim sistemima, bezbednost i granice rada. Ovaj korak vas štiti od iznenađenja u sredini projekta.",
+            "description": "Pre pisanja koda pravim detaljan tehnički dokument — uloge korisnika, tok podataka, povezivanje sa drugim sistemima, bezbednost i granice rada. Ovaj korak vas štiti od iznenađenja u sredini projekta.",
             "deliverables": [
               "Tehnička specifikacija (PDF i online)",
               "Dijagram arhitekture sistema",
@@ -650,7 +650,7 @@
           },
           "iteration": {
             "name": "Dodavanje funkcionalnosti",
-            "description": "Nove scenarije gradimo u kratkim ciklusima. Vi testirate čim je spremno, mi ugrađujemo povratne informacije pre nego što krenemo dalje.",
+            "description": "Nove scenarije gradim u kratkim ciklusima. Vi testirate čim je spremno, ja ugrađujem povratne informacije pre nego što krenemo dalje.",
             "deliverables": [
               "Nova funkcionalnost na probnom okruženju čim je spremna",
               "Automatske provere za najvažnije tokove",
@@ -765,7 +765,7 @@
     "faq": {
       "start": {
         "question": "Kako počinje saradnja?",
-        "answer": "Pošaljete zahtev preko dugmeta „Započnite projekat“ ili kontakt forme. U roku od 24 sata javljamo se sa terminom za besplatan uvodni razgovor (oko 30 minuta). Posle razgovora dobijate pisanu ponudu sa fiksnom cenom i rokom."
+        "answer": "Pošaljete zahtev preko dugmeta „Započnite projekat“ ili kontakt forme. U roku od 24 sata javljam se sa terminom za besplatan uvodni razgovor (oko 30 minuta). Posle razgovora dobijate pisanu ponudu sa fiksnom cenom i rokom."
       },
       "payment": {
         "question": "Kako se plaća?",
@@ -777,7 +777,7 @@
       },
       "delay": {
         "question": "Šta ako dođe do kašnjenja?",
-        "answer": "Ako kasnimo mi — rokovi su fiksni i dodatni trošak ide na naš račun. Ako kasnimo zbog čekanja na vaš sadržaj ili odobrenje, dogovaramo novi termin. U svakom trenutku tačno znate gde smo i zašto."
+        "answer": "Ako kasnim ja — rokovi su fiksni i dodatni trošak ide na moj račun. Ako kasnimo zbog čekanja na vaš sadržaj ili odobrenje, dogovaramo novi termin. U svakom trenutku tačno znate gde smo i zašto."
       },
       "afterLaunch": {
         "question": "Šta se dešava nakon puštanja u rad?",
@@ -831,49 +831,49 @@
       "phone": "+381 63 838 4196",
       "addressLabel": "Adresa",
       "address": "Novi Sad, Srbija",
-      "social": "Pratite nas"
+      "social": "Pratite Solveru"
     }
   },
   "Privacy": {
     "title": "Politika privatnosti",
-    "subtitle": "Kako prikupljamo, koristimo i štitimo vaše podatke",
+    "subtitle": "Kako prikupljam, koristim i štitim vaše podatke",
     "lastUpdated": "Poslednje ažuriranje: mart 2026.",
-    "intro": "Solvera (u daljem tekstu: \"mi\", \"nas\") posvećen je zaštiti vaše privatnosti. Ova politika objašnjava kako postupamo sa vašim podacima u skladu sa Zakonom o zaštiti podataka o ličnosti Republike Srbije.",
+    "intro": "Solvera (u daljem tekstu: \"ja\", \"meni\") posvećena je zaštiti vaše privatnosti. Ova politika objašnjava kako postupamo sa vašim podacima u skladu sa Zakonom o zaštiti podataka o ličnosti Republike Srbije.",
     "section1": {
       "title": "Koji podaci se prikupljaju",
-      "p1": "Prikupljamo samo podatke koje nam vi dobrovoljno dostavite putem kontakt forme:",
+      "p1": "Prikupljam samo podatke koje mi vi dobrovoljno dostavite putem kontakt forme:",
       "items": {
         "i1": "Ime i prezime",
         "i2": "Imejl adresa",
         "i3": "Naziv kompanije (opciono)",
         "i4": "Sadržaj vaše poruke"
       },
-      "p2": "Ne koristimo kolačiće za praćenje niti analitičke alate trećih strana."
+      "p2": "Ne koristim kolačiće za praćenje niti analitičke alate trećih strana."
     },
     "section2": {
       "title": "Kako koristimo vaše podatke",
       "items": {
-        "i1": "Da odgovorimo na vaš upit ili zahtev za konsultaciju",
-        "i2": "Da vas kontaktiramo u vezi sa uslugama koje ste zatražili",
-        "i3": "Da poboljšamo našu komunikaciju sa klijentima"
+        "i1": "Da odgovorim na vaš upit ili zahtev za konsultaciju",
+        "i2": "Da vas kontaktiram u vezi sa uslugama koje ste zatražili",
+        "i3": "Da poboljšam komunikaciju sa klijentima"
       },
-      "p1": "Vaše podatke nikada ne prodajemo, ne iznajmljujemo i ne delimo sa trećim stranama u marketinške svrhe."
+      "p1": "Vaše podatke nikada ne prodajem, ne iznajmljujem i ne delim sa trećim stranama u marketinške svrhe."
     },
     "section3": {
       "title": "Čuvanje i zaštita podataka",
-      "p1": "Vaši podaci se čuvaju na sigurnim serverima i pristup imaju samo ovlašćeni članovi našeg tima. Podatke čuvamo samo onoliko dugo koliko je potrebno za ispunjenje svrhe za koju su prikupljeni.",
-      "p2": "Primenjujemo tehničke i organizacione mere zaštite kako bismo sprečili neovlašćen pristup, gubitak ili zloupotrebu vaših podataka."
+      "p1": "Vaši podaci se čuvaju na sigurnim serverima i pristup imam samo ja. Podatke čuvam samo onoliko dugo koliko je potrebno za ispunjenje svrhe za koju su prikupljeni.",
+      "p2": "Primenjujem tehničke i organizacione mere zaštite kako bih sprečio neovlašćen pristup, gubitak ili zloupotrebu vaših podataka."
     },
     "section4": {
       "title": "Vaša prava",
       "p1": "U skladu sa Zakonom o zaštiti podataka o ličnosti, imate pravo da:",
       "items": {
-        "i1": "Zatražite uvid u podatke koje imamo o vama",
+        "i1": "Zatražite uvid u podatke koje imam o vama",
         "i2": "Zatražite ispravku netačnih podataka",
         "i3": "Zatražite brisanje vaših podataka",
         "i4": "Povučete saglasnost za obradu podataka u bilo kom trenutku"
       },
-      "p2": "Za ostvarivanje bilo kog od ovih prava, kontaktirajte nas na info@solveradev.rs."
+      "p2": "Za ostvarivanje bilo kog od ovih prava, javite mi se na info@solveradev.rs."
     },
     "section5": {
       "title": "Kontakt",
@@ -885,17 +885,17 @@
   },
   "Terms": {
     "title": "Uslovi korišćenja",
-    "subtitle": "Pravila i uslovi za korišćenje naših usluga",
+    "subtitle": "Pravila i uslovi za korišćenje Solvera usluga",
     "lastUpdated": "Poslednje ažuriranje: mart 2026.",
-    "intro": "Korišćenjem sajta solveradev.rs i naših usluga, prihvatate sledeće uslove. Molimo vas da ih pažljivo pročitate.",
+    "intro": "Korišćenjem sajta solveradev.rs i Solvera usluga, prihvatate sledeće uslove. Molimo vas da ih pažljivo pročitate.",
     "section1": {
       "title": "O nama",
-      "p1": "Solvera je IT kompanija sa sedištem u Novom Sadu, Srbija. Pružamo usluge razvoja softvera, web aplikacija, AI integracija i automatizacije poslovnih procesa."
+      "p1": "Solvera je IT kompanija sa sedištem u Novom Sadu, Srbija. Pružam usluge razvoja softvera, web aplikacija, AI integracija i automatizacije poslovnih procesa."
     },
     "section2": {
       "title": "Usluge",
       "p1": "Sve usluge se pružaju na osnovu pojedinačnih ugovora ili ponuda sa fiksnom cenom. Obim posla, rokovi i cene se precizno definišu pre početka projekta.",
-      "p2": "Besplatna konsultacija ne obavezuje vas na korišćenje naših usluga."
+      "p2": "Besplatna konsultacija ne obavezuje vas na korišćenje Solvera usluga."
     },
     "section3": {
       "title": "Vlasništvo nad kodom",
@@ -904,13 +904,13 @@
     },
     "section4": {
       "title": "Plaćanje",
-      "p1": "Uslovi plaćanja se definišu u svakom pojedinačnom ugovoru ili ponudi. Standardno, zahtevamo depozit pre početka rada, a ostatak po isporuci.",
+      "p1": "Uslovi plaćanja se definišu u svakom pojedinačnom ugovoru ili ponudi. Standardno, zahtevam depozit pre početka rada, a ostatak po isporuci.",
       "p2": "Sve cene su u eurima (EUR) i ne uključuju PDV osim ako nije drugačije naznačeno."
     },
     "section5": {
       "title": "Ograničenje odgovornosti",
-      "p1": "Solvera se obavezuje da će pružiti usluge profesionalno i u skladu sa dogovorenim specifikacijama. Međutim, ne garantujemo specifične poslovne rezultate (povećanje prodaje, prometa, itd.).",
-      "p2": "Naša ukupna odgovornost je ograničena na iznos koji je klijent platio za konkretnu uslugu."
+      "p1": "Solvera se obavezuje da će pružiti usluge profesionalno i u skladu sa dogovorenim specifikacijama. Međutim, ne garantujem specifične poslovne rezultate (povećanje prodaje, prometa, itd.).",
+      "p2": "Ukupna odgovornost je ograničena na iznos koji je klijent platio za konkretnu uslugu."
     },
     "section6": {
       "title": "Intelektualna svojina",
@@ -1163,7 +1163,7 @@
     "subtitle": "Vaš AI asistent",
     "placeholder": "Napišite poruku...",
     "send": "Pošalji",
-    "greeting": "Zdravo! 👋 Ja sam Solvera asistent. Kako vam mogu pomoći? Pitajte me o našim uslugama, cenama ili procesu rada.",
+    "greeting": "Zdravo! 👋 Ja sam Solvera asistent. Kako vam mogu pomoći? Pitajte me o uslugama, cenama ili procesu rada.",
     "poweredBy": "Pokreće Solvera AI",
     "close": "Zatvori",
     "newChat": "Novi razgovor",
