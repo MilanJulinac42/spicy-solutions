@@ -12,7 +12,6 @@ import {
   Wallet,
   Zap,
   Key,
-  MapPin,
   Clock,
   ArrowRight,
 } from "lucide-react";
@@ -205,7 +204,7 @@ export default function AboutPage() {
 
               <div className="flex flex-wrap gap-3 text-sm">
                 <span className="inline-flex items-center gap-2 px-3 py-1.5 rounded-full bg-surface-secondary border border-border-default text-foreground-muted">
-                  <MapPin className="w-3.5 h-3.5 text-spicy-400" />
+                  <Handshake className="w-3.5 h-3.5 text-spicy-400" />
                   {t("About.intro.locationLabel")}
                 </span>
                 <span className="inline-flex items-center gap-2 px-3 py-1.5 rounded-full bg-surface-secondary border border-border-default text-foreground-muted">
