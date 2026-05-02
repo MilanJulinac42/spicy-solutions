@@ -398,12 +398,52 @@
     }
   },
   "About": {
-    "title": "O Solvera",
-    "subtitle": "Tim koji veruje da srpski biznisi zaslužuju brži, kvalitetniji IT",
+    "title": "Lice iza Solvere",
+    "subtitle": "Solvera nije agencija sa 30 zaposlenih. Solvera sam ja — Milan Julinac, full-stack inženjer iz Novog Sada koji veruje da srpski biznisi zaslužuju brži, kvalitetniji IT.",
+    "intro": {
+      "name": "Milan Julinac",
+      "role": "Osnivač i full-stack inženjer",
+      "bio1": "Pravim moderne web aplikacije, AI integracije i automatizacije za firme koje hoće da rastu — bez agencijskih troškova i bez čekanja mesecima na jednostavne stvari.",
+      "bio2": "5+ godina iskustva sa React-om, Next.js-om, TypeScript-om, Node.js-om i cloud infrastrukturom. Radio sam i kao lead na većim timovima i kao solo inženjer na proizvodnim sistemima — znam šta funkcioniše, šta ne, i gde se gube novac i vreme.",
+      "locationLabel": "Novi Sad, Srbija",
+      "experienceLabel": "5+ godina iskustva",
+      "stackLabel": "Next.js · TypeScript · AI"
+    },
     "story": {
-      "title": "Zašto smo počeli",
-      "p1": "Gledali smo kako se to dešava svima oko nas. Prijatelji koji vode firme, članovi porodice sa startapima — svi čekaju mesecima na jednostavne stvari. Komunikacija ide kroz pet slojeva. Koriste se alati iz 2015. A na kraju dobijaju prosečan rezultat. To nas je frustriralo.",
-      "p2": "Mi smo tim koji radi sa modernim tehnologijama godinama. Znamo da se stvari mogu raditi brže, kvalitetnije i sa boljom komunikacijom. Zato smo pokrenuli Solvera — da pokažemo da IT razvoj ne mora da bude spor i frustrirajuć. Bez nepotrebne birokratije. Bez posrednika. Samo inženjeri koji pišu kod i rešavaju probleme."
+      "title": "Zašto sam pokrenuo Solveru",
+      "p1": "Gledao sam kako se isti problem dešava svima oko mene. Prijatelji koji vode firme, članovi porodice sa idejama, lokalni biznisi u Vojvodini — svi čekaju mesecima na jednostavne stvari. Komunikacija ide kroz pet slojeva account menadžera. Koriste se alati iz 2015. A na kraju dobijaju prosečan rezultat za premium cenu.",
+      "p2": "Solvera je moj pokušaj da to promenim. Bez agencijske birokratije. Bez posrednika koji prosleđuju poruke. Samo inženjer koji piše vaš kod, razgovara sa vama direktno i isporučuje brzo. Kad projekat zahteva više ruku — dovodim proverene saradnice/i. Klijent uvek zna ko radi šta."
+    },
+    "whySolo": {
+      "title": "Zašto solo, a ne agencija",
+      "subtitle": "Manji tim nije slabost — to je prednost koju veće agencije ne mogu da repliciraju.",
+      "direct": {
+        "title": "Direktna komunikacija",
+        "description": "Pričate sa inženjerom koji piše vaš kod. Bez account menadžera, bez 'preneo sam timu, javim vam'. Odluke za sat, ne za nedelju."
+      },
+      "price": {
+        "title": "Bez agencijskih troškova",
+        "description": "Nema kancelarije u centru, HR-a, sales tima ni 5 menadžera koji moraju da se plate. Vi plaćate rad, ne strukturu. Realno 3–5x niža cena za isti kvalitet."
+      },
+      "speed": {
+        "title": "Brže odluke, brža isporuka",
+        "description": "Nema sastanaka radi sastanaka. Kad je potrebno menjati pravac, menjamo ga isti dan. Tipičan sajt 1–2 nedelje, MVP aplikacije 3–4 nedelje."
+      },
+      "ownership": {
+        "title": "Vlasništvo nad kodom od starta",
+        "description": "Kod, repo, domen, hosting — sve je vaše od prvog commit-a. Bez vendor lock-in-a. Možete me zameniti bilo kada — ali nećete hteti."
+      }
+    },
+    "collaboration": {
+      "title": "Kad treba više ruku",
+      "p1": "Za projekte koji zahtevaju paralelni rad (npr. dizajn + razvoj istovremeno, ili velika integracija na više sistema), uključujem proverene spoljne saradnice/i — UX dizajnere, mobilne developere, DevOps inženjere.",
+      "p2": "Vi uvek znate ko radi šta i koliko košta. Nema 'mračnih' troškova ni nepoznatih ljudi sa pristupom vašem kodu. Sve ide kroz mene kao tehnički vlasnik projekta."
+    },
+    "cta": {
+      "title": "Da li odgovaramo jedno drugom?",
+      "subtitle": "Zakažite besplatan video poziv od 30 minuta. Pogledamo vaš problem, ja kažem iskreno da li mogu da pomognem (i koliko bi koštalo) — bez obaveza.",
+      "button": "Zakažite poziv",
+      "secondary": "Ili pišite na WhatsApp"
     },
     "values": {
       "title": "U šta verujemo",
