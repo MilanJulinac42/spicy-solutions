@@ -14,7 +14,7 @@ import {
   Zap,
   Key,
   MapPin,
-  Code2,
+  Clock,
   ArrowRight,
 } from "lucide-react";
 import { Container } from "@/components/ui/Container";
@@ -122,7 +122,7 @@ export default function AboutPage() {
                   {t("About.intro.experienceLabel")}
                 </span>
                 <span className="inline-flex items-center gap-2 px-3 py-1.5 rounded-full bg-surface-secondary border border-border-default text-foreground-muted">
-                  <Code2 className="w-3.5 h-3.5 text-spicy-400" />
+                  <Clock className="w-3.5 h-3.5 text-spicy-400" />
                   {t("About.intro.stackLabel")}
                 </span>
               </div>

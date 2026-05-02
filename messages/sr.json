@@ -404,15 +404,15 @@
       "name": "Milan Julinac",
       "role": "Osnivač i full-stack inženjer",
       "bio1": "Pravim moderne web aplikacije, AI integracije i automatizacije za firme koje hoće da rastu — bez agencijskih troškova i bez čekanja mesecima na jednostavne stvari.",
-      "bio2": "5+ godina iskustva sa React-om, Next.js-om, TypeScript-om, Node.js-om i cloud infrastrukturom. Radio sam i kao lead na većim timovima i kao solo inženjer na proizvodnim sistemima — znam šta funkcioniše, šta ne, i gde se gube novac i vreme.",
+      "bio2": "7+ godina iskustva sa React-om, Next.js-om, TypeScript-om, Node.js-om i cloud infrastrukturom. Radio sam i kao lead na većim timovima i kao solo inženjer na proizvodnim sistemima — znam šta funkcioniše, šta ne, i gde se gube novac i vreme.",
       "locationLabel": "Novi Sad, Srbija",
-      "experienceLabel": "5+ godina iskustva",
-      "stackLabel": "Next.js · TypeScript · AI"
+      "experienceLabel": "7+ godina iskustva",
+      "stackLabel": "Odgovor u roku 24h"
     },
     "story": {
       "title": "Zašto sam pokrenuo Solveru",
-      "p1": "Gledao sam kako se isti problem dešava svima oko mene. Prijatelji koji vode firme, članovi porodice sa idejama, lokalni biznisi u Vojvodini — svi čekaju mesecima na jednostavne stvari. Komunikacija ide kroz pet slojeva account menadžera. Koriste se alati iz 2015. A na kraju dobijaju prosečan rezultat za premium cenu.",
-      "p2": "Solvera je moj pokušaj da to promenim. Bez agencijske birokratije. Bez posrednika koji prosleđuju poruke. Samo inženjer koji piše vaš kod, razgovara sa vama direktno i isporučuje brzo. Kad projekat zahteva više ruku — dovodim proverene saradnice/i. Klijent uvek zna ko radi šta."
+      "p1": "Gledao sam kako se isti problem dešava svima oko mene. Prijatelji koji vode firme, članovi porodice sa idejama, lokalni biznisi u Srbiji — svi čekaju mesecima na jednostavne stvari. Komunikacija ide kroz pet slojeva menadžera. Koriste se alati iz 2015. A na kraju dobijaju prosečan rezultat za premium cenu.",
+      "p2": "Solvera je moj pokušaj da to promenim. Bez agencijske birokratije. Bez posrednika koji prosleđuju poruke. Samo inženjer koji piše vaš kod, razgovara sa vama direktno i isporučuje brzo. Kad projekat zahteva više ruku — dovodim proverene saradnike. Klijent uvek zna ko radi šta."
     },
     "whySolo": {
       "title": "Zašto solo, a ne agencija",
@@ -436,7 +436,7 @@
     },
     "collaboration": {
       "title": "Kad treba više ruku",
-      "p1": "Za projekte koji zahtevaju paralelni rad (npr. dizajn + razvoj istovremeno, ili velika integracija na više sistema), uključujem proverene spoljne saradnice/i — UX dizajnere, mobilne developere, DevOps inženjere.",
+      "p1": "Za projekte koji zahtevaju paralelni rad (npr. dizajn + razvoj istovremeno, ili velika integracija na više sistema), uključujem proverene spoljne saradnike — UX dizajnere, mobilne developere, DevOps inženjere.",
       "p2": "Vi uvek znate ko radi šta i koliko košta. Nema 'mračnih' troškova ni nepoznatih ljudi sa pristupom vašem kodu. Sve ide kroz mene kao tehnički vlasnik projekta."
     },
     "cta": {
