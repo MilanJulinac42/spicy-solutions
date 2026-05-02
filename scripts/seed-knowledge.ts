@@ -97,7 +97,7 @@ const SR_CHUNKS: Chunk[] = [
   // --- O NAMA ---
   {
     content:
-      "Solvera je tim iz Novog Sada, Srbija, koji veruje da srpski biznisi zaslužuju brži, kvalitetniji IT. Tim broji 2 inženjera (suosnivači): Milan Julinac (5+ godina iskustva, ekspert za React, Next.js, TypeScript, Node.js, PostgreSQL, MongoDB, AWS, Docker) i Dragan Jelačić (pravi moderne web platforme i automatizuje poslovne procese). Vrednosti: moderna tehnologija, kvalitet bez kompromisa, radikalna transparentnost, vaš kod i vaši podaci. Mali fokusiran tim — radite direktno sa inženjerima, bez posrednika.",
+      "Solvera je iz Novog Sada, Srbija, i veruje da srpski biznisi zaslužuju brži, kvalitetniji IT. Trenutno Solveru vodi 1 inženjer-osnivač: Milan Julinac (full-stack inženjer, 5+ godina iskustva — React, Next.js, TypeScript, Node.js, PostgreSQL, MongoDB, AWS, Docker, OpenAI, n8n). Po potrebi se za specifične delove projekta uključuju proverene spoljne saradnice/i. Vrednosti: moderna tehnologija, kvalitet bez kompromisa, radikalna transparentnost, vaš kod i vaši podaci. Radite direktno sa inženjerom — bez posrednika, account menadžera i nepotrebnih troškova.",
     locale: "sr",
     category: "about",
   },
@@ -227,7 +227,7 @@ const SR_CHUNKS: Chunk[] = [
   },
   {
     content:
-      "Solvera vs. freelancer: Za razliku od pojedinačnih freelancera, Solvera je tim koji se međusobno dopunjuje. Prednosti: backup ako je jedan nedostupan, code review za bolji kvalitet, širi spektar tehnologija, profesionalna dokumentacija i strukturisan proces. Nema rizika da projekat stane ako freelancer nestane.",
+      "Solvera vs. freelancer: Za razliku od ad-hoc freelancera, Solvera radi po strukturisanom procesu — pisana specifikacija, fiksna cena unapred, code review pre puštanja u rad, profesionalna dokumentacija, vlasništvo nad kodom od prvog dana. Komunikacija ide kroz jasan kanal (WhatsApp grupa + nedeljni demo), a ne 'kad stigne'. Nema rizika da nestanete bez koda i pristupa — sve je vaše od starta. Cilj: kvalitet i poverenje agencije, brzina i cena freelancera.",
     locale: "sr",
     category: "about",
   },

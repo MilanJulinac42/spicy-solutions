@@ -3,7 +3,7 @@ import type { Metadata } from "next";
 export const metadata: Metadata = {
   title: "O nama",
   description:
-    "Solvera je dvočlani inženjerski tim iz Novog Sada — Milan i Dragan. Bez posrednika, direktna komunikacija i tehnologija koja pokreće biznis.",
+    "Solvera — Milan Julinac, full-stack inženjer iz Novog Sada. Bez posrednika, direktna komunikacija i tehnologija koja pokreće biznis.",
   alternates: { canonical: "https://www.solveradev.rs/o-nama" },
 };
 
