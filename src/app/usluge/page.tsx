@@ -72,7 +72,7 @@ export default function ServicesPage() {
                 <motion.div
                   initial="hidden"
                   whileInView="visible"
-                  viewport={{ once: true, margin: "-100px" }}
+                  viewport={{ once: true, amount: 0.15 }}
                   variants={isReversed ? fadeInRight : fadeInLeft}
                   className={isReversed ? "lg:order-2" : ""}
                 >
@@ -127,7 +127,7 @@ export default function ServicesPage() {
                 <motion.div
                   initial="hidden"
                   whileInView="visible"
-                  viewport={{ once: true, margin: "-100px" }}
+                  viewport={{ once: true, amount: 0.15 }}
                   variants={isReversed ? fadeInLeft : fadeInRight}
                   className={isReversed ? "lg:order-1" : ""}
                 >
@@ -151,7 +151,7 @@ export default function ServicesPage() {
             variants={staggerContainer}
             initial="hidden"
             whileInView="visible"
-            viewport={{ once: true, margin: "-100px" }}
+            viewport={{ once: true, amount: 0.15 }}
             className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-8"
           >
             {processSteps.map((step, index) => (

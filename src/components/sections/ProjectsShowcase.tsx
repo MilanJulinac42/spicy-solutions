@@ -23,7 +23,7 @@ export function ProjectsShowcase() {
           variants={staggerContainer}
           initial="hidden"
           whileInView="visible"
-          viewport={{ once: true, margin: "-100px" }}
+          viewport={{ once: true, amount: 0.15 }}
           className="grid grid-cols-1 md:grid-cols-2 gap-6"
         >
           {projects.map((project) => (

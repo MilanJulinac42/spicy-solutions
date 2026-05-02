@@ -152,7 +152,7 @@ export default function ServicePage() {
           <motion.div
             initial="hidden"
             whileInView="visible"
-            viewport={{ once: true, margin: "-100px" }}
+            viewport={{ once: true, amount: 0.15 }}
             variants={fadeInUp}
             className="text-center mb-12 md:mb-16 max-w-3xl mx-auto"
           >
@@ -175,7 +175,7 @@ export default function ServicePage() {
             variants={staggerContainer}
             initial="hidden"
             whileInView="visible"
-            viewport={{ once: true, margin: "-100px" }}
+            viewport={{ once: true, amount: 0.15 }}
             className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6"
           >
             {service.features.map((featureKey, index) => {
@@ -218,7 +218,7 @@ export default function ServicePage() {
           <motion.div
             initial="hidden"
             whileInView="visible"
-            viewport={{ once: true, margin: "-100px" }}
+            viewport={{ once: true, amount: 0.15 }}
             variants={fadeInUp}
             className="text-center mb-12 md:mb-16"
           >
@@ -238,7 +238,7 @@ export default function ServicePage() {
             variants={staggerContainer}
             initial="hidden"
             whileInView="visible"
-            viewport={{ once: true, margin: "-100px" }}
+            viewport={{ once: true, amount: 0.15 }}
             className="grid grid-cols-1 md:grid-cols-2 gap-6"
           >
             {["e1", "e2", "e3", "e4"].map((key, index) => {
@@ -276,7 +276,7 @@ export default function ServicePage() {
           <motion.div
             initial="hidden"
             whileInView="visible"
-            viewport={{ once: true, margin: "-100px" }}
+            viewport={{ once: true, amount: 0.15 }}
             variants={fadeInUp}
             className="text-center mb-12"
           >
@@ -316,7 +316,7 @@ export default function ServicePage() {
           <motion.div
             initial="hidden"
             whileInView="visible"
-            viewport={{ once: true, margin: "-100px" }}
+            viewport={{ once: true, amount: 0.15 }}
             variants={fadeInUp}
             className="text-center mb-12 md:mb-16"
           >
@@ -339,7 +339,7 @@ export default function ServicePage() {
             variants={staggerContainerFast}
             initial="hidden"
             whileInView="visible"
-            viewport={{ once: true, margin: "-100px" }}
+            viewport={{ once: true, amount: 0.15 }}
             className="space-y-4"
           >
             {["q1", "q2", "q3", "q4"].map((key) => (

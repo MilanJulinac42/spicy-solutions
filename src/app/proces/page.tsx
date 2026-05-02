@@ -602,7 +602,7 @@ export default function ProcessPage() {
           <motion.h3
             initial="hidden"
             whileInView="visible"
-            viewport={{ once: true, margin: "-100px" }}
+            viewport={{ once: true, amount: 0.15 }}
             variants={fadeInUp}
             className="text-2xl md:text-3xl font-bold text-foreground mb-10 text-center"
           >
@@ -613,7 +613,7 @@ export default function ProcessPage() {
             variants={staggerContainer}
             initial="hidden"
             whileInView="visible"
-            viewport={{ once: true, margin: "-100px" }}
+            viewport={{ once: true, amount: 0.15 }}
             className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-6"
           >
             {PRINCIPLES.map(({ key, icon: Icon }) => (
@@ -826,7 +826,7 @@ export default function ProcessPage() {
                   key={key}
                   initial={{ opacity: 0, y: 10 }}
                   whileInView={{ opacity: 1, y: 0 }}
-                  viewport={{ once: true, margin: "-50px" }}
+                  viewport={{ once: true, amount: 0.2 }}
                   className="border border-border-default rounded-xl bg-surface overflow-hidden"
                 >
                   <button
@@ -870,7 +870,7 @@ export default function ProcessPage() {
           <motion.div
             initial="hidden"
             whileInView="visible"
-            viewport={{ once: true, margin: "-100px" }}
+            viewport={{ once: true, amount: 0.15 }}
             variants={fadeInUp}
             className="max-w-3xl mx-auto text-center"
           >

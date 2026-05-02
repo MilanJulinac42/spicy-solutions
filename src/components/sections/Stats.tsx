@@ -46,7 +46,7 @@ interface StatItemProps {
 
 function StatItem({ value, suffix, label }: StatItemProps) {
   const ref = useRef(null);
-  const isInView = useInView(ref, { once: true, margin: "-100px" });
+  const isInView = useInView(ref, { once: true, amount: 0.15 });
   const { count, progress, start } = useCounter(value);
 
   useEffect(() => {
@@ -122,7 +122,7 @@ export function Stats() {
           variants={staggerContainer}
           initial="hidden"
           whileInView="visible"
-          viewport={{ once: true, margin: "-100px" }}
+          viewport={{ once: true, amount: 0.15 }}
           className="grid grid-cols-2 md:grid-cols-4 gap-8"
         >
           {stats.map((stat) => (

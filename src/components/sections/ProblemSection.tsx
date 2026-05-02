@@ -37,7 +37,7 @@ export function ProblemSection() {
           variants={staggerContainer}
           initial="hidden"
           whileInView="visible"
-          viewport={{ once: true, margin: "-100px" }}
+          viewport={{ once: true, amount: 0.15 }}
           className="grid grid-cols-1 sm:grid-cols-2 gap-6 mb-10"
         >
           {problems.map((problem) => {
@@ -81,7 +81,7 @@ export function ProblemSection() {
         <motion.p
           initial={{ opacity: 0, y: 10 }}
           whileInView={{ opacity: 1, y: 0 }}
-          viewport={{ once: true, margin: "-50px" }}
+          viewport={{ once: true, amount: 0.2 }}
           transition={{ duration: 0.5 }}
           className="text-center text-base md:text-lg text-foreground-muted italic mb-10"
         >
@@ -92,7 +92,7 @@ export function ProblemSection() {
         <motion.div
           initial="hidden"
           whileInView="visible"
-          viewport={{ once: true, margin: "-100px" }}
+          viewport={{ once: true, amount: 0.15 }}
           variants={fadeInUp}
           className="relative p-8 md:p-10 rounded-2xl glass border-spicy-400/20"
         >

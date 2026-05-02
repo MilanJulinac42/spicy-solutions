@@ -70,7 +70,7 @@ export default function ContactPage() {
             <motion.div
               initial="hidden"
               whileInView="visible"
-              viewport={{ once: true, margin: "-100px" }}
+              viewport={{ once: true, amount: 0.15 }}
               variants={fadeInRight}
               className="lg:pl-8"
             >

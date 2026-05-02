@@ -20,7 +20,7 @@ export function SectionHeading({
     <motion.div
       initial="hidden"
       whileInView="visible"
-      viewport={{ once: true, margin: "-100px" }}
+      viewport={{ once: true, amount: 0.15 }}
       variants={fadeInUp}
       className={`mb-12 md:mb-16 ${centered ? "text-center" : ""} ${className}`}
     >

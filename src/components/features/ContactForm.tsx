@@ -57,7 +57,7 @@ export function ContactForm() {
       onSubmit={handleSubmit}
       initial="hidden"
       whileInView="visible"
-      viewport={{ once: true, margin: "-100px" }}
+      viewport={{ once: true, amount: 0.15 }}
       variants={staggerContainer}
       className="space-y-5"
     >

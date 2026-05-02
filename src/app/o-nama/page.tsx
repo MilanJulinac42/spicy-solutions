@@ -46,7 +46,7 @@ export default function AboutPage() {
             <motion.div
               initial="hidden"
               whileInView="visible"
-              viewport={{ once: true, margin: "-100px" }}
+              viewport={{ once: true, amount: 0.15 }}
               variants={fadeInLeft}
             >
               <h3 className="text-2xl md:text-3xl font-bold text-foreground mb-6">
@@ -63,7 +63,7 @@ export default function AboutPage() {
             <motion.div
               initial="hidden"
               whileInView="visible"
-              viewport={{ once: true, margin: "-100px" }}
+              viewport={{ once: true, amount: 0.15 }}
               variants={fadeInRight}
             >
               <div className="aspect-square max-w-md mx-auto rounded-2xl bg-surface-secondary border border-border-default overflow-hidden">
@@ -102,7 +102,7 @@ export default function AboutPage() {
             variants={staggerContainer}
             initial="hidden"
             whileInView="visible"
-            viewport={{ once: true, margin: "-100px" }}
+            viewport={{ once: true, amount: 0.15 }}
             className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-6"
           >
             {valueKeys.map((key) => {

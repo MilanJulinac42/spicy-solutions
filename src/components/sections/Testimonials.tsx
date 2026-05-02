@@ -71,7 +71,7 @@ export function Testimonials() {
           variants={staggerContainer}
           initial="hidden"
           whileInView="visible"
-          viewport={{ once: true, margin: "-100px" }}
+          viewport={{ once: true, amount: 0.15 }}
           className="hidden lg:grid grid-cols-3 gap-6"
         >
           {testimonials.map((testimonial) => (
