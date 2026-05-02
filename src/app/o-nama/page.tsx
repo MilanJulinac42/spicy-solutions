@@ -15,7 +15,6 @@ import {
   MapPin,
   Clock,
   ArrowRight,
-  Camera,
 } from "lucide-react";
 import { Container } from "@/components/ui/Container";
 import { SectionHeading } from "@/components/ui/SectionHeading";
@@ -67,7 +66,7 @@ export default function AboutPage() {
       <section className="pb-20 md:pb-28">
         <Container>
           <div className="grid grid-cols-1 lg:grid-cols-5 gap-10 lg:gap-16 items-center max-w-5xl mx-auto">
-            {/* Monogram placeholder (real photo coming soon) */}
+            {/* Terminal-style intro card */}
             <motion.div
               initial="hidden"
               whileInView="visible"
@@ -75,82 +74,109 @@ export default function AboutPage() {
               variants={fadeInLeft}
               className="lg:col-span-2"
             >
-              <div className="relative aspect-square max-w-sm mx-auto">
-                {/* Outer glow */}
-                <div className="absolute -inset-3 rounded-3xl bg-spicy-400/20 blur-2xl opacity-60" />
+              <div className="relative max-w-md mx-auto">
+                {/* Glow */}
+                <div className="absolute -inset-3 rounded-3xl bg-spicy-400/15 blur-2xl opacity-60" />
 
-                {/* Card */}
-                <div className="relative aspect-square rounded-2xl overflow-hidden border border-border-default bg-surface-secondary">
-                  {/* Animated gradient background */}
-                  <div
-                    className="absolute inset-0 opacity-40"
-                    style={{
-                      background:
-                        "radial-gradient(ellipse at 30% 20%, rgba(255,107,53,0.35), transparent 55%), radial-gradient(ellipse at 80% 90%, rgba(139,92,246,0.25), transparent 50%)",
-                    }}
-                  />
-
-                  {/* Grid pattern */}
-                  <div
-                    className="absolute inset-0 opacity-[0.07]"
-                    style={{
-                      backgroundImage:
-                        "linear-gradient(rgba(255,255,255,1) 1px, transparent 1px), linear-gradient(90deg, rgba(255,255,255,1) 1px, transparent 1px)",
-                      backgroundSize: "32px 32px",
-                    }}
-                  />
-
-                  {/* Floating tech labels */}
-                  <motion.div
-                    animate={{ y: [0, -8, 0] }}
-                    transition={{ duration: 4, repeat: Infinity, ease: "easeInOut" }}
-                    className="absolute top-6 left-6 px-2.5 py-1 rounded-md bg-surface/80 backdrop-blur-sm border border-border-default text-[10px] font-mono text-foreground-muted"
-                  >
-                    Next.js
-                  </motion.div>
-                  <motion.div
-                    animate={{ y: [0, 8, 0] }}
-                    transition={{ duration: 5, repeat: Infinity, ease: "easeInOut", delay: 0.5 }}
-                    className="absolute top-12 right-6 px-2.5 py-1 rounded-md bg-surface/80 backdrop-blur-sm border border-border-default text-[10px] font-mono text-foreground-muted"
-                  >
-                    TypeScript
-                  </motion.div>
-                  <motion.div
-                    animate={{ y: [0, -6, 0] }}
-                    transition={{ duration: 4.5, repeat: Infinity, ease: "easeInOut", delay: 1 }}
-                    className="absolute bottom-16 left-8 px-2.5 py-1 rounded-md bg-surface/80 backdrop-blur-sm border border-border-default text-[10px] font-mono text-foreground-muted"
-                  >
-                    Node.js
-                  </motion.div>
-                  <motion.div
-                    animate={{ y: [0, 6, 0] }}
-                    transition={{ duration: 5.5, repeat: Infinity, ease: "easeInOut", delay: 1.5 }}
-                    className="absolute bottom-24 right-10 px-2.5 py-1 rounded-md bg-surface/80 backdrop-blur-sm border border-border-default text-[10px] font-mono text-foreground-muted"
-                  >
-                    AI
-                  </motion.div>
-
-                  {/* Center monogram */}
-                  <div className="absolute inset-0 flex flex-col items-center justify-center">
-                    <div className="relative">
-                      {/* Pulse ring */}
-                      <motion.div
-                        animate={{ scale: [1, 1.15, 1], opacity: [0.4, 0.1, 0.4] }}
-                        transition={{ duration: 3, repeat: Infinity, ease: "easeInOut" }}
-                        className="absolute inset-0 rounded-full bg-spicy-400/30 blur-md"
-                      />
-                      <div className="relative w-32 h-32 md:w-36 md:h-36 rounded-full bg-gradient-to-br from-spicy-400 to-spicy-500 flex items-center justify-center shadow-xl shadow-spicy-400/30">
-                        <span className="text-5xl md:text-6xl font-bold text-white tracking-tight">
-                          MJ
-                        </span>
-                      </div>
-                    </div>
+                {/* Terminal window */}
+                <div className="relative rounded-xl overflow-hidden border border-border-default bg-surface-secondary shadow-xl">
+                  {/* Title bar */}
+                  <div className="flex items-center gap-2 px-4 py-3 bg-surface-tertiary border-b border-border-default">
+                    <div className="w-3 h-3 rounded-full bg-red-400" />
+                    <div className="w-3 h-3 rounded-full bg-yellow-400" />
+                    <div className="w-3 h-3 rounded-full bg-green-400" />
+                    <span className="ml-2 text-xs text-foreground-muted font-mono">
+                      milan@solvera ~ zsh
+                    </span>
                   </div>
 
-                  {/* "Foto uskoro" badge */}
-                  <div className="absolute bottom-4 left-1/2 -translate-x-1/2 inline-flex items-center gap-1.5 px-3 py-1.5 rounded-full bg-surface/90 backdrop-blur-sm border border-border-default text-[11px] text-foreground-muted">
-                    <Camera className="w-3 h-3 text-spicy-400" />
-                    Profesionalna fotografija uskoro
+                  {/* Terminal body */}
+                  <div className="p-5 md:p-6 font-mono text-[13px] md:text-sm space-y-4 leading-relaxed">
+                    {/* whoami */}
+                    <div>
+                      <div>
+                        <span className="text-spicy-400">~/solvera</span>
+                        <span className="text-foreground-muted"> $ </span>
+                        <span className="text-foreground">whoami</span>
+                      </div>
+                      <div className="pl-2 mt-1 text-foreground-secondary">
+                        Milan Julinac
+                      </div>
+                      <div className="pl-2 text-foreground-muted text-xs">
+                        full-stack inženjer · Novi Sad
+                      </div>
+                    </div>
+
+                    {/* cat stack.txt */}
+                    <div>
+                      <div>
+                        <span className="text-spicy-400">~/solvera</span>
+                        <span className="text-foreground-muted"> $ </span>
+                        <span className="text-foreground">cat stack.txt</span>
+                      </div>
+                      <div className="pl-2 mt-1 space-y-0.5 text-xs text-foreground-secondary">
+                        <div>
+                          <span className="text-purple-400">frontend</span>
+                          <span className="text-foreground-muted"> → </span>
+                          Next.js · React · TypeScript
+                        </div>
+                        <div>
+                          <span className="text-purple-400">backend </span>
+                          <span className="text-foreground-muted"> → </span>
+                          Node.js · PostgreSQL
+                        </div>
+                        <div>
+                          <span className="text-purple-400">cloud   </span>
+                          <span className="text-foreground-muted"> → </span>
+                          AWS · Vercel · Docker
+                        </div>
+                        <div>
+                          <span className="text-purple-400">ai      </span>
+                          <span className="text-foreground-muted"> → </span>
+                          OpenAI · n8n · LangChain
+                        </div>
+                      </div>
+                    </div>
+
+                    {/* status */}
+                    <div>
+                      <div>
+                        <span className="text-spicy-400">~/solvera</span>
+                        <span className="text-foreground-muted"> $ </span>
+                        <span className="text-foreground">status</span>
+                      </div>
+                      <div className="pl-2 mt-1 space-y-0.5 text-xs">
+                        <div className="flex items-center gap-2">
+                          <motion.span
+                            animate={{ opacity: [1, 0.4, 1] }}
+                            transition={{ duration: 2, repeat: Infinity, ease: "easeInOut" }}
+                            className="inline-block w-1.5 h-1.5 rounded-full bg-emerald-400"
+                          />
+                          <span className="text-emerald-400">
+                            Dostupan za nove projekte
+                          </span>
+                        </div>
+                        <div className="flex items-center gap-2 text-foreground-secondary">
+                          <span className="inline-block w-1.5 h-1.5 rounded-full bg-spicy-400" />
+                          Odgovor &lt; 24h
+                        </div>
+                        <div className="flex items-center gap-2 text-foreground-secondary">
+                          <span className="inline-block w-1.5 h-1.5 rounded-full bg-spicy-400" />
+                          Fiksna cena, fiksan rok
+                        </div>
+                      </div>
+                    </div>
+
+                    {/* Cursor */}
+                    <div className="flex items-center pt-1">
+                      <span className="text-spicy-400">~/solvera</span>
+                      <span className="text-foreground-muted"> $ </span>
+                      <motion.span
+                        animate={{ opacity: [1, 0, 1] }}
+                        transition={{ duration: 1, repeat: Infinity, ease: "linear" }}
+                        className="inline-block w-2 h-4 ml-0.5 bg-spicy-400"
+                      />
+                    </div>
                   </div>
                 </div>
               </div>
