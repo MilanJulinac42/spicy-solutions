@@ -20,7 +20,7 @@ export const organizationSchema = {
   },
   image: LOGO_URL,
   description:
-    "Solvera gradi sajtove, poslovne sisteme, AI chatbot-ove i automatizacije za kompanije u Srbiji i regionu. Fiksne cene, direktna komunikacija sa inženjerima.",
+    "Solvera gradi AI rešenja — chatbot-ove, voice agente, interne asistente i AI integracije po meri. Web razvoj sekundarno. Direktan rad sa inženjerom.",
   email: "info@solveradev.rs",
   telephone: "+381638384196",
   address: {
@@ -39,17 +39,23 @@ export const organizationSchema = {
     name: "Milan Julinac",
   },
   knowsAbout: [
-    "Web development",
+    "AI chatbot development",
+    "RAG",
+    "OpenAI",
+    "Anthropic Claude",
+    "Voice AI agents",
+    "Twilio",
+    "LiveKit",
+    "ElevenLabs",
+    "OpenAI Realtime",
+    "Internal AI assistants",
+    "AI integrations",
+    "LangChain",
     "Next.js",
     "React",
     "TypeScript",
     "Node.js",
     "Python",
-    "AI chatbot development",
-    "RAG",
-    "OpenAI",
-    "Process automation",
-    "n8n",
     "Custom business software",
   ],
 };
@@ -67,35 +73,53 @@ export const websiteSchema = {
 
 // --- Service schemas (one per /usluge/[slug] page) ---------------------------
 
-type ServiceSlug = "websites" | "enterprise" | "ai" | "automation";
+type ServiceSlug =
+  | "chatbot"
+  | "voice"
+  | "assistant"
+  | "aiIntegrations"
+  | "websites"
+  | "enterprise";
 
 const SERVICE_DATA: Record<
   ServiceSlug,
   { name: string; description: string; serviceType: string }
 > = {
-  websites: {
-    name: "Izrada sajtova",
+  chatbot: {
+    name: "AI Chatbot za sajt",
     description:
-      "Brzi, moderni sajtovi u Next.js i React-u. Fiksna cena, lansiranje za 1-3 nedelje, kod ostaje vaš. SEO, performanse i pristupačnost uključeni.",
+      "RAG chatbot integrisan sa vašom bazom znanja — odgovara 24/7 na osnovu vaših dokumenata, kvalifikuje upite i hvata leadove. Srpski i engleski.",
+    serviceType: "AI chatbot development",
+  },
+  voice: {
+    name: "AI Voice agent — prima pozive",
+    description:
+      "AI agent na vašem telefonskom broju koji prima pozive, vodi razgovor, rezerviše termine i prebacuje vama. Twilio, LiveKit, ElevenLabs, OpenAI Realtime.",
+    serviceType: "Voice AI agent development",
+  },
+  assistant: {
+    name: "Interni AI Asistent",
+    description:
+      "Privatan AI asistent obučen na vašoj internoj dokumentaciji. Self-hosted ili enterprise cloud — vaši zaposleni pitaju umesto da pretražuju.",
+    serviceType: "Internal AI assistant development",
+  },
+  aiIntegrations: {
+    name: "AI integracije po meri",
+    description:
+      "Konkretne AI automatizacije za vaš proces — obrada dokumenata, klasifikacija mejlova, sumarizacija, agentski tokovi sa tool use.",
+    serviceType: "Custom AI integration",
+  },
+  websites: {
+    name: "Sajtovi i web aplikacije",
+    description:
+      "Brzi, moderni sajtovi u Next.js i React-u. Fiksna cena, lansiranje za 1-3 nedelje, kod ostaje vaš. Sekundarna usluga.",
     serviceType: "Web development",
   },
   enterprise: {
-    name: "Izrada poslovnih sistema",
+    name: "Poslovni sistemi",
     description:
-      "Custom poslovni softver — interni sistemi, dashboard-i, CRM, portali za partnere i integracije sa postojećim alatima. Skalabilna arhitektura, sigurnost i podrška.",
+      "Custom poslovni softver — interni sistemi, dashboard-i, integracije. Često se gradi oko AI sloja kao temelja procesa.",
     serviceType: "Custom business software development",
-  },
-  ai: {
-    name: "AI chatbot-ovi i pametni asistenti",
-    description:
-      "AI chatbot-ovi i asistenti integrisani sa vašim podacima. RAG arhitektura, OpenAI modeli, prilagođeni vašem domenu — od korisničke podrške do automatizacije prodaje.",
-    serviceType: "AI chatbot development",
-  },
-  automation: {
-    name: "Automatizacija poslovnih procesa",
-    description:
-      "n8n, custom skripte i integracije koje povezuju vaše alate i eliminišu ručni rad. Manje grešaka, više vremena za biznis.",
-    serviceType: "Business process automation",
   },
 };
 

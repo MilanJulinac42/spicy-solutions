@@ -1,6 +1,6 @@
 "use client";
 
-import { Globe, Building2, Brain, Workflow } from "lucide-react";
+import { Globe, Building2 } from "lucide-react";
 import { useTranslations } from "next-intl";
 import { motion } from "framer-motion";
 import { OptionCard } from "../OptionCard";
@@ -9,8 +9,6 @@ import type { ServiceType } from "@/types/calculator";
 const services: { id: ServiceType; icon: typeof Globe }[] = [
   { id: "websites", icon: Globe },
   { id: "enterprise", icon: Building2 },
-  { id: "ai", icon: Brain },
-  { id: "automation", icon: Workflow },
 ];
 
 type Props = {
@@ -23,7 +21,10 @@ export function ServiceTypeStep({ value, onChange }: Props) {
 
   return (
     <div>
-      <h2 className="text-xl font-bold text-foreground mb-6 text-center">{t("title")}</h2>
+      <h2 className="text-xl font-bold text-foreground mb-2 text-center">{t("title")}</h2>
+      <p className="text-sm text-foreground-muted text-center mb-6 max-w-md mx-auto">
+        {t("aiNote")}
+      </p>
       <div className="grid sm:grid-cols-2 gap-4 max-w-2xl mx-auto">
         {services.map((s, i) => (
           <motion.div

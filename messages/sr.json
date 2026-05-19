@@ -54,23 +54,33 @@
     "ctaSecondary": "Započnite projekat"
   },
   "ServicesOverview": {
-    "title": "Šta vam zaista treba",
-    "subtitle": "Moderan razvoj, brza isporuka i direktna komunikacija sa inženjerima koji grade vaš proizvod",
+    "title": "AI rešenja koja pokreću biznis",
+    "subtitle": "Pravim AI sisteme koji odgovaraju umesto vas — na sajtu, na telefonu, interno u firmi. Web i ostale tehnologije ostaju u ponudi, ali AI je ono na šta sam fokusiran.",
+    "primaryLabel": "Primarno — AI",
+    "secondaryLabel": "Sekundarno — Web i custom razvoj",
+    "chatbot": {
+      "title": "AI Chatbot na sajtu",
+      "description": "Pametan asistent na vašem sajtu koji odgovara 24/7 — poznaje vaše usluge, cene i procese, kvalifikuje upite i hvata leadove dok spavate."
+    },
+    "voice": {
+      "title": "AI Voice — prima pozive",
+      "description": "AI agent koji se javlja na telefon umesto vas. Rezervacije, FAQ, kvalifikacija lidova, prebacivanje vama kad treba — prirodan glas, srpski jezik."
+    },
+    "assistant": {
+      "title": "AI Asistent za interni tim",
+      "description": "Privatan asistent koji čita vašu dokumentaciju, procedure, ponude i ugovore. Vaši ljudi pitaju umesto da pretražuju Drive — odgovori u sekundi."
+    },
+    "aiIntegrations": {
+      "title": "AI integracije po meri",
+      "description": "Konkretni AI tokovi za vaš proces — obrada faktura i ugovora, klasifikacija upita, sumarizacija sastanaka, agentski sistemi za ponavljajuće zadatke."
+    },
     "websites": {
       "title": "Sajtovi i web aplikacije",
-      "description": "Brzi, moderni, SEO-optimizovani sajtovi izgrađeni sa Next.js. Isporuka u kratkim rokovima, sa punim vlasništvom nad kodom i bez zavisnosti od provajdera."
+      "description": "Moderni Next.js sajtovi sa SEO-om, brzom isporukom i punim vlasništvom nad kodom. Sekundarni fokus — radim i dalje za klijente kojima treba."
     },
     "enterprise": {
       "title": "Poslovni sistemi po meri",
-      "description": "Pregledne table, SaaS platforme, interni alati. Sistemi koji rastu sa vama, pouzdan kvalitet spreman za produkciju i redovna komunikacija tokom celog razvoja."
-    },
-    "ai": {
-      "title": "AI i pametni asistenti",
-      "description": "Pametni asistenti koji poznaju vaš biznis iznutra. Automatizuju korisničku podršku, obrađuju upite u svako doba dana i oslobađaju vaš tim za važnije zadatke."
-    },
-    "automation": {
-      "title": "Automatizacija (n8n)",
-      "description": "Povezujem vaše alate, uklanjam ručni rad i automatizujem ponavljajuće procese. Vaš tim se posvećuje strategiji, a softver radi sve ostalo."
+      "description": "Interni alati, dashboardi, SaaS platforme. Ako vam je AI deo većeg sistema — gradim i taj sistem oko njega."
     }
   },
   "Stats": {
@@ -80,24 +90,24 @@
     "satisfaction": "Zadovoljstvo klijenata"
   },
   "Projects": {
-    "title": "Kako pomažem",
-    "subtitle": "Tipični scenariji u kojima pravim razliku za vaš biznis",
+    "title": "Šta gradim",
+    "subtitle": "Tipični AI scenariji u kojima pravim razliku",
     "viewProject": "Saznaj više",
     "project1": {
-      "title": "Internet prodavnica koja zarađuje",
-      "description": "Treba vam internet prodavnica? Ne morate da čekate mesecima niti da plaćate agencijsku cenu. Pravim modernu prodavnicu sa plaćanjem, upravljanjem proizvodima i svime što vam treba da počnete da prodajete."
+      "title": "AI Chatbot koji nikad ne spava",
+      "description": "Vaši klijenti pitaju u svako doba — bot trenutno odgovara na osnovu vaše baze znanja, kvalifikuje upite i hvata leadove. Bez čekanja, bez bolovanja."
     },
     "project2": {
-      "title": "AI podrška koja nikad ne spava",
-      "description": "Vaši klijenti čekaju na odgovor? Postavljam pametnog AI asistenta koji poznaje vaš biznis iznutra i odgovara na pitanja umesto vas — bez prestanka, bez pauze, bez bolovanja."
+      "title": "AI Voice agent na vašem broju",
+      "description": "Telefon zvoni — AI se javlja, razume šta gostu/klijentu treba, rezerviše termin ili prebacuje vama. Prirodan srpski glas, niska latencija."
     },
     "project3": {
-      "title": "Automatizacija umesto ručnog posla",
-      "description": "Gubite sate na ručno prebacivanje podataka između alata? Povezujem vaše sisteme i automatizujem ponavljajuće zadatke tako da se vaš tim posveti onom što zaista donosi vrednost."
+      "title": "Interni AI asistent za vaš tim",
+      "description": "Privatan asistent obučen na vašim dokumentima, procedurama i ugovorima. Vaši ljudi pitaju umesto da satima pretražuju Drive."
     },
     "project4": {
-      "title": "Oslobađanje od zastarelog sistema",
-      "description": "Zarobljeni ste u sistemu koji ne možete da menjate bez da platite nekome ko vas drži kao taoca? Ponovo ga gradim, dajem vam potpuno vlasništvo nad kodom i slobodu da birate."
+      "title": "AI integracija u vaš poslovni proces",
+      "description": "Konkretan AI tok ugrađen tačno tamo gde gubite vreme — obrada dokumenata, klasifikacija mejlova, sumarizacija razgovora, agentski sistemi."
     }
   },
   "Testimonials": {
@@ -260,109 +270,217 @@
         "ctaText": "Zakažite besplatan razgovor"
       }
     },
-    "ai": {
-      "title": "AI integracija i pametni asistenti",
-      "description": "Vaša konkurencija već koristi AI. Gradim pametne asistente, automatsku obradu dokumenata i inteligentnu pretragu koji menjaju korisničko iskustvo i oslobađaju vaš tim za važnije poslove.",
-      "comparison": "Brzo postavljanje AI rešenja sa merljivim rezultatima od prvog meseca.",
+    "chatbot": {
+      "title": "AI Chatbot na sajtu",
+      "description": "Pametan asistent na vašem sajtu koji odgovara 24/7 na osnovu vaše baze znanja — usluga, cena, procedura. Kvalifikuje upite, prikuplja kontakte i prebacuje vama kad treba ljudski odgovor.",
+      "comparison": "Postavka za 5–10 dana. Pošten odgovor (ne izmišlja) jer je vezan za vaše dokumente.",
       "features": {
-        "f1": "Pametni asistenti obučeni na VAŠIM poslovnim podacima",
-        "f2": "Povezivanje sa vašim postojećim alatima i sistemima",
-        "f3": "Baza znanja koja uči i poboljšava se vremenom",
-        "f4": "Podrška korisnicima 24 sata, 7 dana u nedelji — bez zapošljavanja novih ljudi",
-        "f5": "Merljiv rezultat već prvog meseca"
+        "f1": "RAG nad vašim dokumentima — bot odgovara samo na ono što zna",
+        "f2": "Lead capture — automatski hvata ime, email, opis upita",
+        "f3": "Srpski + engleski (i drugi jezici po potrebi)",
+        "f4": "Streaming odgovori, prirodan ton, vaš brand voice",
+        "f5": "Analitika razgovora, troška i tema o kojima posetioci pitaju"
       },
       "detail": {
-        "extendedDescription": "AI nije budućnost — to je sadašnjost. Pravim konkretna AI rešenja koja vaš tim koristi od prvog dana: pametne asistente koji znaju vaš posao, automatsku obradu dokumenata i inteligentnu pretragu.",
-        "examplesTitle": "Šta sve gradim",
+        "extendedDescription": "Tipičan setup: skenira vaš sajt + dokumente, indeksira u vektorsku bazu, postavlja se kao widget u uglu. Bot zna gde su mu granice i kad da pita za kontakt umesto da izmišlja.",
+        "examplesTitle": "Tipični scenariji",
         "examples": {
           "e1": {
-            "title": "Pametni asistent za korisničku podršku",
-            "description": "Asistent obučen na vašoj dokumentaciji, čestim pitanjima i bazi znanja. Odgovara klijentima u svako doba dana, tačno i na vašem jeziku."
+            "title": "Sales chatbot za uslužnu firmu",
+            "description": "Posetilac pita o cenama, terminima, načinu rada — bot odgovara konkretno i traži kontakt kad vidi ozbiljan upit."
           },
           "e2": {
-            "title": "Interni AI asistent za zaposlene",
-            "description": "Vaš tim pita AI umesto da pretražuje dokumente. Politike firme, procedure, specifikacije — sve dostupno u sekundi."
+            "title": "Support za SaaS proizvod",
+            "description": "FAQ + dokumentacija u bazi — bot rešava prvi nivo podrške, ostalo prebacuje na ljudski tim sa kontekstom razgovora."
           },
           "e3": {
-            "title": "Automatska obrada dokumenata",
-            "description": "Fakture, ugovori, prijave — AI čita, izvlači podatke i unosi ih u vaš sistem. Bez ručnog kucanja."
+            "title": "E-commerce asistent",
+            "description": "Preporuka proizvoda, status porudžbine, politika vraćanja — sve iz jedne konverzacije."
           },
           "e4": {
-            "title": "Inteligentna pretraga podataka",
-            "description": "Pretražujte hiljade dokumenata prirodnim jezikom. AI razume kontekst i vraća tačne rezultate, ne samo ključne reči."
+            "title": "Knowledge bot za internu wiki",
+            "description": "Bot integrisan u Notion/Confluence — zaposleni pitaju umesto da pretražuju."
           }
         },
         "faqTitle": "Česta pitanja",
         "faq": {
           "q1": {
-            "question": "Da li su moji podaci bezbedni?",
-            "answer": "Apsolutno. Možemo postaviti AI na vaše servere — vaši podaci nikada ne napuštaju vašu infrastrukturu. Ili koristimo zaštićene usluge u oblaku."
+            "question": "Šta ako bot ne zna odgovor?",
+            "answer": "Eksplicitno kaže da nema podatak i nudi kontakt (mail/telefon/lead forma). Bolje pošteno 'ne znam' nego izmišljen odgovor koji vas košta klijenta."
           },
           "q2": {
-            "question": "Koliko je asistent tačan?",
-            "answer": "Pametni asistenti odgovaraju na osnovu vaših dokumenata — ne izmišljaju. Tačnost je obično 90% ili više, a poboljšava se vremenom uz povratne informacije."
+            "question": "Da li moji podaci idu na OpenAI?",
+            "answer": "Mogu koristiti OpenAI, Anthropic ili lokalni model (open-source) — vi birate. Za osetljive podatke koristim Azure OpenAI ili Bedrock sa enterprise privatnošću."
           },
           "q3": {
-            "question": "Na kojim jezicima radi?",
-            "answer": "Srpski, engleski i svi veliki svetski jezici. AI razume kontekst i nijanse svakog jezika."
+            "question": "Koliko košta?",
+            "answer": "Setup od ~600€ (mali bot, FAQ tip) do ~3000€ (full RAG sa integracijama). Mesečno: trošak modela (najčešće 10–50€) + opcioni paket podrške."
           },
           "q4": {
-            "question": "Koliko brzo mogu da počnem?",
-            "answer": "Prototip asistenta mogu imati za par dana. Kompletno rešenje sa povezivanjem obično 1-3 nedelje, zavisno od obima podataka i broja povezivanja."
+            "question": "Koliko traje setup?",
+            "answer": "Prvi prototip 3–5 dana. Production-ready sa testiranim odgovorima i integracijama: 1–2 nedelje."
           }
         },
         "ctaText": "Zakažite besplatan razgovor"
       }
     },
-    "automation": {
-      "title": "Automatizacija putem n8n",
-      "description": "n8n je besplatna platforma sa otvorenim kodom za automatizaciju. Podešavam je, povezujem vaše alate i gradim tokove koji uklanjaju ručni rad — vaš tim se posvećuje onome što zaista pravi razliku.",
-      "comparison": "Eliminišite ponavljajuće zadatke i oslobodite tim za strateški rad.",
+    "voice": {
+      "title": "AI Voice — prima pozive umesto vas",
+      "description": "AI agent na vašem telefonskom broju. Javlja se, razume šta gostu/klijentu treba, rezerviše termin, daje informacije ili prebacuje vama. Prirodan glas, srpski jezik, niska latencija.",
+      "comparison": "Bot odgovara dok ste na sastanku ili posle radnog vremena. Nijedan poziv ne ostaje neodgovoren.",
       "features": {
-        "f1": "Vizuelni graditelj automatskih tokova — lako razumljiv i prilagodljiv",
-        "f2": "Povezuje preko 400 aplikacija i bilo koji sistem koji ima API",
-        "f3": "Automatska sinhronizacija podataka, izveštavanje i obaveštenja",
-        "f4": "Zakazani zadaci koji rade neprekidno bez ljudske intervencije",
-        "f5": "Postavlja se kod vas: vaši podaci ostaju na vašim serverima"
+        "f1": "Prirodan AI glas (srpski) — ne robotski, ne dosadan",
+        "f2": "Twilio/LiveKit telefonija — vaš broj ostaje, samo dobija AI sloj",
+        "f3": "Rezervacije, FAQ, kvalifikacija — definišemo skripta po vašem procesu",
+        "f4": "Prebacivanje na vas/tim u realnom vremenu kad treba",
+        "f5": "Transkripti svih poziva u dashboardu — znate šta klijenti pitaju"
       },
       "detail": {
-        "extendedDescription": "Koliko sati nedeljno vaš tim troši na ponavljajuće zadatke? Prebacivanje podataka iz jednog sistema u drugi, slanje izveštaja, ažuriranje tabela. To automatizujem sa n8n — vaš tim radi pametnije, ne više.",
-        "examplesTitle": "Šta sve gradim",
+        "extendedDescription": "Kako radi: poziv stiže → AI se javlja u vaš ime → vodi razgovor po dogovorenom toku → akcija (rezervacija u kalendaru, slanje SMS-a, prosleđivanje vama). Sve zabeleženo, transkriptovano i merljivo.",
+        "examplesTitle": "Tipični scenariji",
         "examples": {
           "e1": {
-            "title": "Sinhronizacija podataka između sistema",
-            "description": "Nova porudžbina u internet prodavnici → automatski se pravi unos u ERP, šalje se imejl kupcu, ažurira se stanje zaliha. Bez ljudske intervencije."
+            "title": "Recepcija za salon/kliniku",
+            "description": "AI prima poziv, pita šta klijent želi, proverava slobodne termine u kalendaru i rezerviše. Vi vidite samo zauzet termin."
           },
           "e2": {
-            "title": "Automatsko izveštavanje",
-            "description": "Dnevni, nedeljni ili mesečni izveštaji koji se sami stvaraju i šalju na imejl ili Slack. Uvek tačni, uvek na vreme."
+            "title": "Posle radnog vremena za uslužnu firmu",
+            "description": "Klijent zove u 22h — AI zabeleži problem, prioritet i kontakt, sutra ujutro imate sve sumarizovano."
           },
           "e3": {
-            "title": "Automatska obrada novih upita",
-            "description": "Novi kontakt sa sajta → automatski ulazi u CRM, tim dobija obaveštenje, šalje se uvodni imejl. Nijedan upit ne prolazi neprimećen."
+            "title": "Outbound — potvrde i podsećanja",
+            "description": "AI zove klijente da potvrdi termin, obavesti o promenama ili prikupi povratnu informaciju nakon usluge."
           },
           "e4": {
-            "title": "Automatizacija fakturisanja",
-            "description": "Generisanje faktura, slanje klijentima, praćenje plaćanja i automatski podsetnici za neplaćene račune."
+            "title": "Kvalifikacija leadova",
+            "description": "AI razgovara sa potencijalnim klijentom, kvalifikuje budžet/potrebu, šalje vam već pripremljen lead."
           }
         },
         "faqTitle": "Česta pitanja",
         "faq": {
           "q1": {
-            "question": "Šta je n8n?",
-            "answer": "n8n je besplatna platforma za automatizaciju (otvorenog koda) — zamislite je kao LEGO za poslovne procese. Povezuje vaše alate i automatizuje tokove rada vizuelno, bez programiranja."
+            "question": "Zvuči li robotski?",
+            "answer": "Ne. Koristim ElevenLabs ili OpenAI Realtime glasove — prirodno, sa pauzama i intonacijom. Klonirati mogu i vaš glas ako želite."
           },
           "q2": {
-            "question": "Koje aplikacije mogu da povežem?",
-            "answer": "Preko 400 integracija: Gmail, Slack, Google Sheets, Notion, HubSpot, Stripe, PostgreSQL, i bilo koji servis sa API-jem."
+            "question": "Šta ako AI ne razume?",
+            "answer": "Ima fallback: 'Da prebacim kolegi koji vam može pomoći detaljnije?' Poziv ide vama sa kontekstom već zabeleženim."
           },
           "q3": {
-            "question": "Gde se čuvaju moji podaci?",
-            "answer": "n8n se postavlja kod vas — instaliramo ga na vaš server. Vaši podaci nikada ne prolaze kroz treće strane."
+            "question": "Koliko košta?",
+            "answer": "Setup od ~1500€ (jednostavan recepcionar bot) do ~5000€ (kompleksni outbound + CRM integracija). Po pozivu ~0.10–0.30€ minut (Twilio + AI model)."
           },
           "q4": {
-            "question": "Koliko košta održavanje?",
-            "answer": "n8n je besplatan softver. Plaćate samo server (nekoliko evra mesečno) i opcionalnu podršku od nas. Bez mesečnih pretplata za softver."
+            "question": "Koliko traje setup?",
+            "answer": "2–4 nedelje za production. Prva nedelja: snimanje toka, definisanje skripta. Druga: tehnička integracija sa kalendarom/CRM-om. Treća: testiranje i fine-tuning glasa."
+          }
+        },
+        "ctaText": "Zakažite demo poziv"
+      }
+    },
+    "assistant": {
+      "title": "AI Asistent za interni tim",
+      "description": "Privatan AI obučen na vašoj dokumentaciji, procedurama, ugovorima i istoriji odluka. Vaši ljudi pitaju umesto da satima pretražuju Drive i Notion.",
+      "comparison": "Vaš tim štedi 3–10 sati nedeljno po osobi. Knowledge bot koji ne odlazi na bolovanje.",
+      "features": {
+        "f1": "Trening na VAŠIM internim podacima — ne curi van",
+        "f2": "Self-hosted ili enterprise cloud (Azure/Bedrock) opcija",
+        "f3": "Slack/Teams/Web integracija — pita se gde već radite",
+        "f4": "Permission-aware — svako vidi samo ono što sme da vidi",
+        "f5": "Citira izvor — uvek znate odakle je odgovor"
+      },
+      "detail": {
+        "extendedDescription": "Ne 'opšti chatbot', već asistent koji zna vašu firmu: kako vi pravite ponude, šta piše u ugovorima, koje su procedure za reklamaciju, koji klijent je pisao šta pre dve godine.",
+        "examplesTitle": "Tipični scenariji",
+        "examples": {
+          "e1": {
+            "title": "Onboarding novih zaposlenih",
+            "description": "Novi kolega pita asistenta umesto da gnjavi seniore. Procedure, alati, ko je za šta zadužen — sve dostupno."
+          },
+          "e2": {
+            "title": "Sales asistent za ponude",
+            "description": "Sales tim pita 'kako smo cenili sličan projekat lane?' — asistent vraća konkretne primere iz vaše istorije."
+          },
+          "e3": {
+            "title": "Legal/HR pomoćnik",
+            "description": "'Kako glasi naša politika za bolovanje?' 'Šta tačno kaže ugovor sa klijentom X?' — trenutan odgovor sa citatom."
+          },
+          "e4": {
+            "title": "Pretraga prošlih projekata",
+            "description": "'Kako smo rešili problem X u projektu Y?' — asistent vraća odgovor iz vaših internih dokumenata i wiki-ja."
+          }
+        },
+        "faqTitle": "Česta pitanja",
+        "faq": {
+          "q1": {
+            "question": "Da li podaci napuštaju našu firmu?",
+            "answer": "Možete birati: self-hosted (potpuno kod vas, Llama/Mistral modeli), Azure OpenAI ili AWS Bedrock (enterprise privatnost, nema trening na vašim podacima)."
+          },
+          "q2": {
+            "question": "Kako sa pravima pristupa?",
+            "answer": "Asistent poštuje role-based access — finansije vidi samo finansijski tim, HR samo HR, itd. Integriše se sa Google Workspace / Microsoft 365."
+          },
+          "q3": {
+            "question": "Koliko košta?",
+            "answer": "Setup od ~2000€ (mali tim, ograničen broj izvora) do ~8000€ (više integracija, RBAC, custom UI). Mesečno: trošak modela + opcioni održavanje."
+          },
+          "q4": {
+            "question": "Šta sa starim/skeniranim dokumentima?",
+            "answer": "OCR pipeline za skenirane PDF-ove i slike. Stari ugovori, fakture, izveštaji — sve postaje pretraživo."
+          }
+        },
+        "ctaText": "Zakažite besplatan razgovor"
+      }
+    },
+    "aiIntegrations": {
+      "title": "AI integracije po meri",
+      "description": "Konkretan AI tok ugrađen tačno tamo gde gubite vreme. Ne 'general purpose' rešenje — već specifična automatizacija koja radi jedan posao odlično.",
+      "comparison": "Ne plaćate SaaS pretplatu vekovima — gradi se jednom, vaše je, radi koliko vama treba.",
+      "features": {
+        "f1": "Obrada dokumenata — fakture, ugovori, formulari → strukturirani podaci",
+        "f2": "Klasifikacija i triage — automatsko razvrstavanje mejlova, tiketa, upita",
+        "f3": "Sumarizacija — sastanci, izveštaji, duge konverzacije → kratak rezime",
+        "f4": "AI agenti — autonomni tokovi sa tool use (čitanje API-ja, pisanje u baze)",
+        "f5": "Direktna integracija u vaš postojeći sistem (ERP, CRM, custom)"
+      },
+      "detail": {
+        "extendedDescription": "Pristup: prvo razgovor — gde tačno trošite ručno vreme? Onda gradimo konkretan AI deo koji rešava taj problem i ugrađuje se u vaš postojeći alat. Bez podizanja parallelnih sistema.",
+        "examplesTitle": "Tipični scenariji",
+        "examples": {
+          "e1": {
+            "title": "Automatska obrada faktura",
+            "description": "Faktura stiže mailom → AI čita, validira, unosi u računovodstveni sistem, šalje notifikaciju. Bez ručnog kucanja."
+          },
+          "e2": {
+            "title": "Triage dolaznih mejlova",
+            "description": "Svi mailovi se klasifikuju (prodaja/podrška/reklamacija/spam), prioritetizuju i routeuju pravoj osobi."
+          },
+          "e3": {
+            "title": "Sumarizacija sastanaka",
+            "description": "Snimak sastanka → transkript → kratak rezime sa action items, ubačen u vaš PM alat."
+          },
+          "e4": {
+            "title": "AI agent za ponavljajući research",
+            "description": "Agent koji svako jutro proveri nekoliko izvora, sumiranje pošalje vama — bez ručnog rada."
+          }
+        },
+        "faqTitle": "Česta pitanja",
+        "faq": {
+          "q1": {
+            "question": "Kako da znam da li je moj problem rešiv AI-jem?",
+            "answer": "Zakažite besplatan razgovor — opišete tok, pa vam iskreno kažem da li AI tu pomaže, koliko košta i koliko bi trebalo da donese."
+          },
+          "q2": {
+            "question": "Da li se integriše sa našim trenutnim sistemom?",
+            "answer": "Da, ako ima API ili neki način da se priča sa njim (webhook, email, CSV). Pravim integraciju kao deo projekta."
+          },
+          "q3": {
+            "question": "Koliko košta?",
+            "answer": "Vrlo varijabilno. Mali alat (npr. klasifikacija mejlova) ~800–1500€. Kompleksniji agent sa više integracija 3000–8000€+. Cenu dajem posle prvog razgovora."
+          },
+          "q4": {
+            "question": "Šta ako AI pogreši?",
+            "answer": "Gradim sa human-in-the-loop tamo gde greška skupo košta — AI predlaže, čovek potvrđuje. Tamo gde su greške jeftine, AI radi sam i loguje sve."
           }
         },
         "ctaText": "Zakažite besplatan razgovor"
@@ -672,8 +790,8 @@
         "postLaunch": "Garantovan odgovor na prijavljene greške u roku od 48 sati. Nove funkcionalnosti po fiksnoj ceni ili mesečni paket od 10, 20 ili 40 sati."
       },
       "ai": {
-        "label": "Veštačka inteligencija",
-        "overview": "Pametni asistent za kupce, sistem za odgovaranje na osnovu vaših dokumenata, alat za pisanje tekstova ili automatsko čitanje dokumenata.",
+        "label": "AI rešenja",
+        "overview": "AI chatbot na sajtu, voice agent na telefonu, interni asistent ili AI integracija u vaš poslovni proces. Pristup je isti — razgovor, prototip, produkcija.",
         "phases": {
           "audit": {
             "name": "Pregled podataka i plan",
@@ -725,40 +843,49 @@
         "communication": "Deljena tabela sa pravim primerima odgovora i nedeljni prikaz napretka (video ili uživo).",
         "postLaunch": "Mesečno doterivanje AI uputstava (uključeno prva tri meseca). Prelazak na bolji ili jeftiniji model kada se pojavi — po fiksnoj ceni."
       },
-      "automation": {
-        "label": "Automatizacija",
-        "overview": "Automatsko slanje poruka, povezivanje različitih sistema koje koristite, povezivanje sa sistemom za upravljanje klijentima (CRM) ili automatsko prikupljanje podataka sa sajtova.",
+      "voice": {
+        "label": "AI Voice",
+        "overview": "AI agent na vašem telefonskom broju — prima pozive, vodi razgovor, rezerviše termine ili prebacuje vama. Prirodan srpski glas, niska latencija.",
         "phases": {
-          "mapping": {
-            "name": "Popis poslova",
-            "description": "Radionica — koji se poslovi danas rade ručno, koje sisteme koristite i kada treba da se pokrene svaki automatski tok. Izbor odgovarajućeg alata.",
+          "scripting": {
+            "name": "Skript i tok poziva",
+            "description": "Sastanak — definišemo tipove poziva, šta AI sme da uradi sam, kad prebacuje na vas, koje informacije mora da prikupi.",
             "deliverables": [
-              "Dijagram toka poslova",
-              "Spisak sistema koje treba povezati sa pristupnim podacima",
-              "Procena mesečnog troška alata"
+              "Dijagram toka poziva",
+              "Tabela sa primerima dijaloga",
+              "Lista akcija (rezervacija, prebacivanje, slanje SMS-a)"
             ]
           },
-          "first": {
-            "name": "Prvi automatski tok",
-            "description": "Jedan kompletan automatski posao — od početka do kraja — postavljen na probnom okruženju i isproban sa stvarnim podacima.",
+          "voice": {
+            "name": "Izbor glasa i tehnička postavka",
+            "description": "Testiranje glasova (ElevenLabs/OpenAI Realtime), povezivanje Twilio broja, integracija sa kalendarom/CRM-om.",
             "deliverables": [
-              "Prvi automatski tok koji radi",
-              "Deljen nalog u sistemu sa vašim pristupom",
-              "Zapisnik prvih izvršenih poslova"
+              "Izabran glas (test snimci)",
+              "Aktivan AI broj u test okruženju",
+              "Integracija sa vašim alatima (Google Calendar, CRM)"
             ]
           },
-          "expansion": {
-            "name": "Proširenje i zaštita od grešaka",
-            "description": "Dodavanje ostalih automatskih tokova, automatski ponovni pokušaj u slučaju greške i obaveštenje ako nešto ne uspe.",
+          "pilot": {
+            "name": "Pilot i fine-tuning",
+            "description": "AI prima realne pozive u kontrolisanom režimu. Slušamo transkripte, doteramo skript i ponašanje pre punog lansiranja.",
             "deliverables": [
-              "Svi dogovoreni tokovi aktivni",
-              "Automatski ponovni pokušaj kod greške",
-              "Obaveštenje o grešci sa opisom problema"
+              "Dashboard sa transkriptima",
+              "Doteran skript posle prvih 50–100 poziva",
+              "Testirani edge case-ovi (žargon, nerazumevanje, prekid)"
+            ]
+          },
+          "launch": {
+            "name": "Puštanje i predaja",
+            "description": "Prebacivanje pravog broja na AI (ili dodatak postojećem), monitoring i obuka vašeg tima da menja skript po potrebi.",
+            "deliverables": [
+              "Production telefonski broj sa AI agentom",
+              "Admin panel za pregled i izmenu skripta",
+              "Alarmi za probleme (pad latencije, greške)"
             ]
           }
         },
-        "communication": "Deljen nalog u sistemu za automatizaciju i nedeljni izveštaj o radu preko imejla.",
-        "postLaunch": "Praćenje grešaka (besplatno prvih 30 dana). Novi tokovi i dopune po fiksnoj ceni."
+        "communication": "Deljen dashboard sa transkriptima i nedeljni pregled metrika (broj poziva, prosečna dužina, % prebačeno na čoveka).",
+        "postLaunch": "Prvih 30 dana — uključen fine-tuning glasa i skripta. Posle: mesečni paket optimizacije ili rad po potrebi."
       }
     },
     "faqTitle": "Česta pitanja",
@@ -799,7 +926,7 @@
       "bullets": {
         "b1": "Pregled vaše IT organizacije i konkretne preporuke za poboljšanje",
         "b2": "Preporuke za ubrzanje razvoja i modernizaciju tehnologije",
-        "b3": "Konkretne preporuke za automatizaciju i optimizaciju (AI, n8n, savremene tehnologije)"
+        "b3": "Konkretne preporuke gde AI (chatbot, voice, asistent) može da uštedi vreme i poveća konverziju"
       }
     },
     "form": {
@@ -811,10 +938,12 @@
       "serviceOptions": {
         "select": "Izaberite opciju",
         "audit": "Besplatna konsultacija",
+        "chatbot": "AI Chatbot na sajtu",
+        "voice": "AI Voice — prima pozive",
+        "assistant": "AI Asistent za interni tim",
+        "aiIntegrations": "AI integracija po meri",
         "websites": "Sajt / Web aplikacija",
         "enterprise": "Poslovni sistem po meri",
-        "ai": "AI i pametni asistent",
-        "automation": "Automatizacija radnih tokova",
         "other": "Nešto drugo"
       },
       "message": "Opišite nam vašu trenutnu IT situaciju",

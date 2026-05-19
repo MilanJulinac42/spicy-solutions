@@ -7,12 +7,19 @@ import {
   X,
   Globe,
   Building2,
-  Brain,
-  Workflow,
+  MessageSquare,
+  Phone,
+  Bot,
+  Sparkles,
   ShoppingCart,
   LayoutDashboard,
   FileText,
   Monitor,
+  Users,
+  Database,
+  BarChart3,
+  Clock,
+  Cpu,
   ChevronDown,
   ArrowRight,
   MessageCircleQuestion,
@@ -36,20 +43,31 @@ interface ServiceDetailPanelProps {
 }
 
 const serviceIcons: Record<string, React.ElementType> = {
+  chatbot: MessageSquare,
+  voice: Phone,
+  assistant: Bot,
+  aiIntegrations: Sparkles,
   websites: Globe,
   enterprise: Building2,
-  ai: Brain,
-  automation: Workflow,
 };
 
 const exampleIconsMap: Record<string, React.ElementType[]> = {
+  chatbot: [MessageSquare, Bot, ShoppingCart, FileText],
+  voice: [Phone, Clock, Users, MessageSquare],
+  assistant: [Users, FileText, Database, BarChart3],
+  aiIntegrations: [FileText, MessageSquare, Clock, Cpu],
   websites: [Monitor, ShoppingCart, LayoutDashboard, FileText],
-  enterprise: [Building2, Workflow, LayoutDashboard, Globe],
-  ai: [Brain, Monitor, FileText, Globe],
-  automation: [Workflow, FileText, Monitor, ShoppingCart],
+  enterprise: [Building2, LayoutDashboard, BarChart3, Globe],
 };
 
-const detailAvailable = ["websites", "enterprise", "ai", "automation"];
+const detailAvailable = [
+  "chatbot",
+  "voice",
+  "assistant",
+  "aiIntegrations",
+  "websites",
+  "enterprise",
+];
 
 export function ServiceDetailPanel({
   serviceId,

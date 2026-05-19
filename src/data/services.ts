@@ -2,6 +2,66 @@ import type { Service } from "@/types";
 
 export const services: Service[] = [
   {
+    id: "chatbot",
+    icon: "MessageSquare",
+    titleKey: "ServicesOverview.chatbot.title",
+    descriptionKey: "ServicesOverview.chatbot.description",
+    features: [
+      "Services.chatbot.features.f1",
+      "Services.chatbot.features.f2",
+      "Services.chatbot.features.f3",
+      "Services.chatbot.features.f4",
+      "Services.chatbot.features.f5",
+    ],
+    technologies: ["OpenAI", "Anthropic", "pgvector", "Next.js", "Supabase"],
+    category: "ai",
+  },
+  {
+    id: "voice",
+    icon: "Phone",
+    titleKey: "ServicesOverview.voice.title",
+    descriptionKey: "ServicesOverview.voice.description",
+    features: [
+      "Services.voice.features.f1",
+      "Services.voice.features.f2",
+      "Services.voice.features.f3",
+      "Services.voice.features.f4",
+      "Services.voice.features.f5",
+    ],
+    technologies: ["Twilio", "LiveKit", "ElevenLabs", "Whisper", "OpenAI Realtime"],
+    category: "ai",
+  },
+  {
+    id: "assistant",
+    icon: "Bot",
+    titleKey: "ServicesOverview.assistant.title",
+    descriptionKey: "ServicesOverview.assistant.description",
+    features: [
+      "Services.assistant.features.f1",
+      "Services.assistant.features.f2",
+      "Services.assistant.features.f3",
+      "Services.assistant.features.f4",
+      "Services.assistant.features.f5",
+    ],
+    technologies: ["OpenAI", "Claude", "LangChain", "pgvector", "Tool use"],
+    category: "ai",
+  },
+  {
+    id: "aiIntegrations",
+    icon: "Sparkles",
+    titleKey: "ServicesOverview.aiIntegrations.title",
+    descriptionKey: "ServicesOverview.aiIntegrations.description",
+    features: [
+      "Services.aiIntegrations.features.f1",
+      "Services.aiIntegrations.features.f2",
+      "Services.aiIntegrations.features.f3",
+      "Services.aiIntegrations.features.f4",
+      "Services.aiIntegrations.features.f5",
+    ],
+    technologies: ["OpenAI", "Claude", "LangChain", "Vector DB", "REST APIs"],
+    category: "ai",
+  },
+  {
     id: "websites",
     icon: "Globe",
     titleKey: "ServicesOverview.websites.title",
@@ -14,6 +74,7 @@ export const services: Service[] = [
       "Services.websites.features.f5",
     ],
     technologies: ["Next.js", "React", "TypeScript", "Tailwind CSS", "Vercel"],
+    category: "web",
   },
   {
     id: "enterprise",
@@ -28,33 +89,9 @@ export const services: Service[] = [
       "Services.enterprise.features.f5",
     ],
     technologies: ["Node.js", ".NET", "PostgreSQL", "MongoDB", "Redis", "Docker", "AWS"],
-  },
-  {
-    id: "ai",
-    icon: "Brain",
-    titleKey: "ServicesOverview.ai.title",
-    descriptionKey: "ServicesOverview.ai.description",
-    features: [
-      "Services.ai.features.f1",
-      "Services.ai.features.f2",
-      "Services.ai.features.f3",
-      "Services.ai.features.f4",
-      "Services.ai.features.f5",
-    ],
-    technologies: ["OpenAI", "LangChain", "Python", "PostgreSQL"],
-  },
-  {
-    id: "automation",
-    icon: "Workflow",
-    titleKey: "ServicesOverview.automation.title",
-    descriptionKey: "ServicesOverview.automation.description",
-    features: [
-      "Services.automation.features.f1",
-      "Services.automation.features.f2",
-      "Services.automation.features.f3",
-      "Services.automation.features.f4",
-      "Services.automation.features.f5",
-    ],
-    technologies: ["n8n", "REST APIs", "Webhooks", "Node.js"],
+    category: "web",
   },
 ];
+
+export const primaryServices = services.filter((s) => s.category === "ai");
+export const secondaryServices = services.filter((s) => s.category === "web");

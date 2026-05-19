@@ -7,8 +7,8 @@ import { motion } from "framer-motion";
 import {
   Globe,
   Building2,
-  Brain,
-  Workflow,
+  Phone,
+  Sparkles,
   TrendingDown,
   ArrowRight,
   ChevronDown,
@@ -55,24 +55,30 @@ import Link from "next/link";
 import { notFound } from "next/navigation";
 
 const serviceIcons: Record<string, React.ElementType> = {
+  chatbot: MessageSquare,
+  voice: Phone,
+  assistant: Bot,
+  aiIntegrations: Sparkles,
   websites: Globe,
   enterprise: Building2,
-  ai: Brain,
-  automation: Workflow,
 };
 
 const featureIconsMap: Record<string, React.ElementType[]> = {
+  chatbot: [Database, Users, Globe, Zap, BarChart3],
+  voice: [Bot, Phone, MessageSquare, Link2, FileText],
+  assistant: [Shield, Database, MessageSquare, Users, BookOpen],
+  aiIntegrations: [FileText, GitBranch, Clock, Cpu, Link2],
   websites: [Smartphone, Search, Zap, PenTool, Code2],
   enterprise: [GitBranch, BarChart3, Shield, RefreshCw, BookOpen],
-  ai: [Bot, Link2, Database, Clock, Cpu],
-  automation: [LayoutDashboard, Link2, RefreshCw, Clock, Bell],
 };
 
 const exampleIconsMap: Record<string, React.ElementType[]> = {
+  chatbot: [MessageSquare, Bot, ShoppingCart, BookOpen],
+  voice: [Phone, Clock, Bell, Users],
+  assistant: [Users, FileText, Shield, Database],
+  aiIntegrations: [FileText, MessageSquare, Clock, Cpu],
   websites: [Monitor, ShoppingCart, LayoutDashboard, FileText],
-  enterprise: [Building2, Workflow, LayoutDashboard, Globe],
-  ai: [Brain, Monitor, FileText, Globe],
-  automation: [Workflow, FileText, Monitor, ShoppingCart],
+  enterprise: [Building2, LayoutDashboard, BarChart3, Globe],
 };
 
 export default function ServicePage() {

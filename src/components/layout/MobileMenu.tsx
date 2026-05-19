@@ -2,17 +2,28 @@
 
 import { useState } from "react";
 import { motion, AnimatePresence } from "framer-motion";
-import { X, ChevronDown, Globe, Building2, Brain, Workflow } from "lucide-react";
+import {
+  X,
+  ChevronDown,
+  Globe,
+  Building2,
+  MessageSquare,
+  Phone,
+  Bot,
+  Sparkles,
+} from "lucide-react";
 import { useTranslations } from "next-intl";
 import Link from "next/link";
 import { navLinks } from "@/lib/constants";
 import { ThemeToggle } from "@/components/shared/ThemeToggle";
 
 const serviceSublinks = [
+  { id: "chatbot", icon: MessageSquare, titleKey: "Services.chatbot.title" },
+  { id: "voice", icon: Phone, titleKey: "Services.voice.title" },
+  { id: "assistant", icon: Bot, titleKey: "Services.assistant.title" },
+  { id: "aiIntegrations", icon: Sparkles, titleKey: "Services.aiIntegrations.title" },
   { id: "websites", icon: Globe, titleKey: "Services.websites.title" },
   { id: "enterprise", icon: Building2, titleKey: "Services.enterprise.title" },
-  { id: "ai", icon: Brain, titleKey: "Services.ai.title" },
-  { id: "automation", icon: Workflow, titleKey: "Services.automation.title" },
 ];
 
 interface MobileMenuProps {

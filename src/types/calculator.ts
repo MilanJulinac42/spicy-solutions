@@ -1,9 +1,7 @@
-export type ServiceType = "websites" | "enterprise" | "ai" | "automation";
+export type ServiceType = "websites" | "enterprise";
 
 export type WebsiteProjectType = "landing" | "multiPage" | "ecommerce" | "webapp";
 export type EnterpriseProjectType = "internalTool" | "saas" | "dashboard" | "apiIntegration";
-export type AiProjectType = "faqBot" | "ragBot" | "multiChannel";
-export type AutomationWorkflowCount = "1to3" | "4to7" | "8plus";
 
 export type TimelineOption = "standard" | "priority" | "urgent";
 
@@ -21,21 +19,7 @@ export type EnterpriseScope = {
   integrations: "0" | "1to3" | "4plus";
 };
 
-export type AiScope = {
-  projectType: AiProjectType;
-  knowledgeSource: "website" | "documents" | "database";
-  multiLang: boolean;
-  analytics: boolean;
-};
-
-export type AutomationScope = {
-  workflowCount: AutomationWorkflowCount;
-  complexity: "simple" | "multiStep" | "errorHandling";
-  integrations: "1to3" | "4to7" | "8plus";
-  monitoring: boolean;
-};
-
-export type ProjectScope = WebsiteScope | EnterpriseScope | AiScope | AutomationScope;
+export type ProjectScope = WebsiteScope | EnterpriseScope;
 
 export type PriceRange = {
   min: number;

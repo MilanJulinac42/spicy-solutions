@@ -148,102 +148,6 @@ function EnterpriseScope({ scope, onChange, t }: { scope: Record<string, unknown
   );
 }
 
-function AiScope({ scope, onChange, t }: { scope: Record<string, unknown>; onChange: Props["onChange"]; t: (k: string) => string }) {
-  return (
-    <div className="space-y-6">
-      <ScopeQuestion label={t("projectType")}>
-        <div className="grid sm:grid-cols-3 gap-3">
-          {(["faqBot", "ragBot", "multiChannel"] as const).map((v) => (
-            <OptionCard
-              key={v}
-              title={t(v)}
-              description={t(`${v}Desc`)}
-              selected={scope.projectType === v}
-              onClick={() => onChange("projectType", v)}
-              compact
-            />
-          ))}
-        </div>
-      </ScopeQuestion>
-
-      <ScopeQuestion label={t("knowledgeSource")} delay={0.05}>
-        <div className="grid grid-cols-3 gap-3">
-          {(["website", "documents", "database"] as const).map((v) => (
-            <OptionCard
-              key={v}
-              title={t(v)}
-              selected={scope.knowledgeSource === v}
-              onClick={() => onChange("knowledgeSource", v)}
-              compact
-            />
-          ))}
-        </div>
-      </ScopeQuestion>
-
-      <ScopeQuestion label={t("multiLang")} delay={0.1}>
-        <YesNo value={scope.multiLang as boolean | undefined} onChange={(v) => onChange("multiLang", v)} tYes={t("../yes")} tNo={t("../no")} />
-      </ScopeQuestion>
-
-      <ScopeQuestion label={t("analytics")} delay={0.15}>
-        <YesNo value={scope.analytics as boolean | undefined} onChange={(v) => onChange("analytics", v)} tYes={t("../yes")} tNo={t("../no")} />
-      </ScopeQuestion>
-    </div>
-  );
-}
-
-function AutomationScope({ scope, onChange, t }: { scope: Record<string, unknown>; onChange: Props["onChange"]; t: (k: string) => string }) {
-  return (
-    <div className="space-y-6">
-      <ScopeQuestion label={t("workflowCount")}>
-        <div className="grid grid-cols-3 gap-3">
-          {(["1to3", "4to7", "8plus"] as const).map((v) => (
-            <OptionCard
-              key={v}
-              title={t(`wf${v}`)}
-              selected={scope.workflowCount === v}
-              onClick={() => onChange("workflowCount", v)}
-              compact
-            />
-          ))}
-        </div>
-      </ScopeQuestion>
-
-      <ScopeQuestion label={t("complexity")} delay={0.05}>
-        <div className="grid gap-3">
-          {(["simple", "multiStep", "errorHandling"] as const).map((v) => (
-            <OptionCard
-              key={v}
-              title={t(v)}
-              description={t(`${v}Desc`)}
-              selected={scope.complexity === v}
-              onClick={() => onChange("complexity", v)}
-              compact
-            />
-          ))}
-        </div>
-      </ScopeQuestion>
-
-      <ScopeQuestion label={t("integrations")} delay={0.1}>
-        <div className="grid grid-cols-3 gap-3">
-          {(["1to3", "4to7", "8plus"] as const).map((v) => (
-            <OptionCard
-              key={v}
-              title={t(`int${v}`)}
-              selected={scope.integrations === v}
-              onClick={() => onChange("integrations", v)}
-              compact
-            />
-          ))}
-        </div>
-      </ScopeQuestion>
-
-      <ScopeQuestion label={t("monitoring")} delay={0.15}>
-        <YesNo value={scope.monitoring as boolean | undefined} onChange={(v) => onChange("monitoring", v)} tYes={t("../yes")} tNo={t("../no")} />
-      </ScopeQuestion>
-    </div>
-  );
-}
-
 export function ProjectScopeStep({ serviceType, scope, onChange }: Props) {
   const tScope = useTranslations(`Calculator.scope.${serviceType}`);
   const tCommon = useTranslations("Calculator.scope");
@@ -259,9 +163,5 @@ export function ProjectScopeStep({ serviceType, scope, onChange }: Props) {
       return <WebsiteScope scope={scope} onChange={onChange} t={t} />;
     case "enterprise":
       return <EnterpriseScope scope={scope} onChange={onChange} t={t} />;
-    case "ai":
-      return <AiScope scope={scope} onChange={onChange} t={t} />;
-    case "automation":
-      return <AutomationScope scope={scope} onChange={onChange} t={t} />;
   }
 }

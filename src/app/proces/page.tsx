@@ -12,7 +12,7 @@ import {
   Globe,
   Building2,
   Brain,
-  Workflow,
+  Phone,
   Check,
   CheckCircle2,
   ChevronDown,
@@ -37,7 +37,7 @@ import { SectionHeading } from "@/components/ui/SectionHeading";
 import { fadeInUp, staggerContainer } from "@/lib/animations";
 import { trackEvent } from "@/lib/analytics";
 
-type TrackId = "websites" | "enterprise" | "ai" | "automation";
+type TrackId = "websites" | "enterprise" | "ai" | "voice";
 
 type PhaseAnimKey =
   | "investigation"
@@ -104,12 +104,13 @@ const TRACKS: TrackMeta[] = [
     ],
   },
   {
-    id: "automation",
-    icon: Workflow,
+    id: "voice",
+    icon: Phone,
     phases: [
-      { key: "mapping", anim: "investigation" },
-      { key: "first", anim: "flow" },
-      { key: "expansion", anim: "building" },
+      { key: "scripting", anim: "investigation" },
+      { key: "voice", anim: "flow" },
+      { key: "pilot", anim: "testing" },
+      { key: "launch", anim: "launch" },
     ],
   },
 ];

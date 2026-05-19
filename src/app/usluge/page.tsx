@@ -5,8 +5,10 @@ import { motion } from "framer-motion";
 import {
   Globe,
   Building2,
-  Brain,
-  Workflow,
+  MessageSquare,
+  Phone,
+  Bot,
+  Sparkles,
   Search,
   Palette,
   Code2,
@@ -24,11 +26,13 @@ import { services } from "@/data/services";
 import { ServiceIllustration } from "@/components/features/ServiceIllustration";
 import Link from "next/link";
 
-const serviceIcons = {
+const serviceIcons: Record<string, typeof Globe> = {
+  chatbot: MessageSquare,
+  voice: Phone,
+  assistant: Bot,
+  aiIntegrations: Sparkles,
   websites: Globe,
   enterprise: Building2,
-  ai: Brain,
-  automation: Workflow,
 };
 
 const processSteps = [

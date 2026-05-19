@@ -4,7 +4,16 @@ import { useState, useEffect, useCallback, useRef } from "react";
 import { useTranslations } from "next-intl";
 import Link from "next/link";
 import { usePathname } from "next/navigation";
-import { Menu, ChevronDown, Globe, Building2, Brain, Workflow } from "lucide-react";
+import {
+  Menu,
+  ChevronDown,
+  Globe,
+  Building2,
+  MessageSquare,
+  Phone,
+  Bot,
+  Sparkles,
+} from "lucide-react";
 import { motion, AnimatePresence } from "framer-motion";
 import { navLinks } from "@/lib/constants";
 import Image from "next/image";
@@ -12,10 +21,12 @@ import { ThemeToggle } from "@/components/shared/ThemeToggle";
 import { MobileMenu } from "./MobileMenu";
 
 const serviceSublinks = [
+  { id: "chatbot", icon: MessageSquare, titleKey: "Services.chatbot.title" },
+  { id: "voice", icon: Phone, titleKey: "Services.voice.title" },
+  { id: "assistant", icon: Bot, titleKey: "Services.assistant.title" },
+  { id: "aiIntegrations", icon: Sparkles, titleKey: "Services.aiIntegrations.title" },
   { id: "websites", icon: Globe, titleKey: "Services.websites.title" },
   { id: "enterprise", icon: Building2, titleKey: "Services.enterprise.title" },
-  { id: "ai", icon: Brain, titleKey: "Services.ai.title" },
-  { id: "automation", icon: Workflow, titleKey: "Services.automation.title" },
 ];
 
 export function Navbar() {

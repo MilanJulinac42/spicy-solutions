@@ -54,36 +54,69 @@ const SR_CHUNKS: Chunk[] = [
     locale: "sr",
     category: "services",
   },
-  // --- USLUGE: AI ---
+  // --- USLUGE: AI Chatbot (primarno) ---
   {
     content:
-      "Solvera gradi AI integracije i RAG chatbot-ove. Pametni chatbot-ovi koji poznaju vaš biznis iznutra, automatizuju korisničku podršku i obrađuju upite 24/7. Tehnologije: OpenAI, LangChain, Python, PostgreSQL. Funkcionalnosti: RAG chatbot obučen na VAŠIM podacima, integracija sa postojećim alatima, baza znanja koja uči, 24/7 podrška, merljiv ROI prvog meseca.",
+      "Solvera primarno gradi AI Chatbot-ove za sajtove klijenata. RAG chatbot povezan sa vašom bazom znanja (dokumenti, FAQ, sajt) odgovara 24/7 na osnovu vaših pravih podataka — bez halucinacija. Tehnologije: OpenAI, Anthropic Claude, LangChain, pgvector, Next.js, Supabase. Funkcionalnosti: RAG nad vašim dokumentima, lead capture (hvata ime/email kad vidi ozbiljan upit), prebacivanje na čoveka, streaming odgovori, analitika razgovora.",
     locale: "sr",
     category: "services",
   },
   {
     content:
-      "Primeri AI rešenja: RAG chatbot za korisničku podršku obučen na dokumentaciji i FAQ-u. Interni AI asistent za zaposlene — pita AI umesto pretrage dokumenata. Automatska obrada dokumenata (fakture, ugovori). Inteligentna pretraga podataka prirodnim jezikom. Tačnost RAG chatbot-ova je obično 90%+. Podržani jezici: srpski, engleski i svi veliki jezici.",
+      "Primeri AI Chatbot rešenja: Sales chatbot za uslužnu firmu — odgovara o cenama, terminima, načinu rada i traži kontakt kad vidi ozbiljan upit. Support za SaaS — FAQ + dokumentacija u bazi, bot rešava prvi nivo podrške. E-commerce asistent — preporuka proizvoda, status porudžbine, politika vraćanja. Internal knowledge bot integrisan sa Notion/Confluence wiki-jem. Tačnost 90%+, jezici: srpski, engleski i drugi.",
     locale: "sr",
     category: "services",
   },
-  // --- USLUGE: Automatizacija ---
+  // --- USLUGE: AI Voice (primarno) ---
   {
     content:
-      "Solvera koristi n8n za automatizaciju poslovnih procesa. n8n je open-source platforma koja povezuje vaše alate i automatizuje ponavljajuće zadatke. Tehnologije: n8n, REST APIs, Webhooks, Node.js. Funkcionalnosti: vizuelni workflow builder, 400+ integracija, automatska sinhronizacija podataka, zakazani zadaci 24/7, self-hosted (podaci ostaju na vašim serverima).",
+      "Solvera gradi AI Voice agente — AI koji se javlja na vašem telefonskom broju i vodi razgovor sa klijentima. Prirodan glas (srpski jezik), niska latencija. Tehnologije: Twilio (telefonija), LiveKit (realtime), ElevenLabs ili OpenAI Realtime (glas), Whisper (transkripcija). Funkcionalnosti: prima dolazne pozive, rezerviše termine u kalendaru, daje informacije, kvalifikuje leadove, prebacuje vama kad treba, sve transkriptovano u dashboardu.",
     locale: "sr",
     category: "services",
   },
   {
     content:
-      "Primeri automatizacije: sinhronizacija podataka (nova porudžbina → ERP → email kupcu → ažuriranje zaliha). Automatsko izveštavanje (dnevni/nedeljni izveštaji na email ili Slack). Lead management (novi kontakt → CRM → obaveštenje timu → welcome email). Automatizacija fakturisanja i praćenje plaćanja. n8n je besplatan softver, plaćate samo server (nekoliko evra mesečno).",
+      "Primeri AI Voice scenarija: AI recepcionar za salon ili kliniku — prima poziv, proverava kalendar, rezerviše termin. AI posle radnog vremena — beleži upit i prioritet kad klijent zove uveče. Outbound — AI zove klijente da potvrdi termin ili prikupi povratnu informaciju. Kvalifikacija leadova — AI razgovara, kvalifikuje budžet/potrebu, šalje pripremljen lead. Po pozivu ~0.10–0.30€ minut (Twilio + AI model).",
+    locale: "sr",
+    category: "services",
+  },
+  // --- USLUGE: AI Asistent za interni tim (primarno) ---
+  {
+    content:
+      "Solvera gradi interne AI asistente za firme — privatan AI obučen na vašoj internoj dokumentaciji, procedurama, ugovorima i istoriji odluka. Vaši zaposleni pitaju umesto da pretražuju Drive i Notion. Opcije hostinga: self-hosted (Llama/Mistral, podaci ne napuštaju firmu), Azure OpenAI ili AWS Bedrock (enterprise privatnost). Integracija u Slack, Teams ili web. Permission-aware — svako vidi samo ono što sme.",
+    locale: "sr",
+    category: "services",
+  },
+  {
+    content:
+      "Primeri internih AI asistenata: Onboarding novih zaposlenih (procedure, alati, ko je za šta zadužen). Sales asistent za ponude (pretraga prošlih sličnih projekata). Legal/HR pomoćnik (politike, ugovori, citira izvor). Pretraga prošlih projekata i odluka. OCR pipeline za skenirane dokumente — stari ugovori i fakture postaju pretraživi. Štedi 3–10 sati nedeljno po osobi.",
+    locale: "sr",
+    category: "services",
+  },
+  // --- USLUGE: AI integracije po meri (primarno) ---
+  {
+    content:
+      "Solvera gradi AI integracije po meri — konkretne automatizacije ugrađene tačno tamo gde firme gube vreme. NE radim n8n ili Zapier opšte automatizacije; gradim AI-native rešenja: obrada dokumenata (fakture → strukturirani podaci), klasifikacija i triage mejlova, sumarizacija sastanaka i izveštaja, AI agenti sa tool use (autonomni tokovi koji čitaju API-je i pišu u baze). Integriše se direktno u postojeći sistem (ERP, CRM, custom).",
+    locale: "sr",
+    category: "services",
+  },
+  {
+    content:
+      "Primeri AI integracija: Automatska obrada faktura — AI čita PDF, validira, unosi u računovodstveni sistem. Triage mejlova — klasifikuje (sales/support/spam) i routeuje pravoj osobi. Sumarizacija sastanaka — snimak → transkript → action items u PM alatu. AI agent za research — svako jutro proveri izvore i pošalje sumirano. Pristup: gradi se sa human-in-the-loop gde greška skupo košta, autonomno gde su greške jeftine.",
+    locale: "sr",
+    category: "services",
+  },
+  // --- USLUGE: Web razvoj (sekundarno) ---
+  {
+    content:
+      "Solvera i dalje radi sajtove kao SEKUNDARNU uslugu — moderne Next.js sajtove, e-commerce, web aplikacije. Fokus firme je AI, ali web razvoj ostaje u ponudi za klijente kojima treba. Tehnologije: Next.js, React, TypeScript, Tailwind. Često se sajt i AI chatbot prave kao bundle. Pun pristup: kompletno vlasništvo nad kodom, SEO ugrađen, ispod sekunde učitavanje.",
     locale: "sr",
     category: "services",
   },
   // --- CENE ---
   {
     content:
-      "Cene Solvera usluga: Landing page sajt od 150 EUR, rok izrade 2-5 dana. E-commerce prodavnica i kompleksniji sajtovi od 600 EUR, rok 1-2 nedelje. Web aplikacija sa dashboard-om od 800 EUR, rok 2-4 nedelje. Poslovni sistemi po meri (SaaS, CRM, ERP) od 1200 EUR, MVP 1-3 nedelje, kompletniji sistem 4-8 nedelja. AI integracija i RAG chatbot od 500 EUR, prototip za par dana, kompletno rešenje 1-3 nedelje. Automatizacija sa n8n od 150 EUR. Sve cene su u eurima i ne uključuju PDV.",
+      "Cene Solvera usluga (AI primarno): AI Chatbot za sajt od 600 EUR (mali FAQ bot) do 3000 EUR (full RAG sa integracijama), mesečno trošak modela 10–50 EUR. AI Voice agent od 1500 EUR (recepcionar) do 5000 EUR (outbound + CRM), po pozivu 0.10–0.30 EUR/min. Interni AI asistent od 2000 EUR do 8000 EUR (sa RBAC, više integracija). AI integracija po meri od 800 EUR (mali alat) do 8000 EUR+ (kompleksni agent). Web (sekundarno): landing od 300 EUR, e-commerce od 1000 EUR, web aplikacija od 1500 EUR. Poslovni sistemi od 2000 EUR. Sve cene u eurima, bez PDV.",
     locale: "sr",
     category: "pricing",
   },
@@ -97,7 +130,7 @@ const SR_CHUNKS: Chunk[] = [
   // --- O NAMA ---
   {
     content:
-      "Solvera je iz Novog Sada, Srbija, i veruje da srpski biznisi zaslužuju brži, kvalitetniji IT. Trenutno Solveru vodi 1 inženjer-osnivač: Milan Julinac (full-stack inženjer, 7+ godina iskustva — React, Next.js, TypeScript, Node.js, PostgreSQL, MongoDB, AWS, Docker, OpenAI, n8n). Po potrebi se za specifične delove projekta uključuju proverene spoljne saradnike. Vrednosti: moderna tehnologija, kvalitet bez kompromisa, radikalna transparentnost, vaš kod i vaši podaci. Radite direktno sa inženjerom — bez posrednika, account menadžera i nepotrebnih troškova.",
+      "Solvera je AI-first studio iz Novog Sada, Srbija. Fokusirana na AI rešenja: chatbot-ovi, voice agenti, interni asistenti, AI integracije po meri. Web razvoj je sekundarna usluga. Trenutno Solveru vodi 1 inženjer-osnivač: Milan Julinac (full-stack + AI inženjer, 7+ godina iskustva — OpenAI, Claude, LangChain, pgvector, ElevenLabs, Twilio/LiveKit, Next.js, React, TypeScript, Node.js, PostgreSQL, Supabase, AWS, Docker). Po potrebi se uključuju proverene spoljne saradnike. Vrednosti: moderna tehnologija, transparentnost, vaš kod i vaši podaci.",
     locale: "sr",
     category: "about",
   },
@@ -129,21 +162,21 @@ const SR_CHUNKS: Chunk[] = [
   },
   {
     content:
-      "Česta pitanja — Automatizacija: Šta je n8n? Open-source platforma za automatizaciju — kao LEGO za poslovne procese, vizuelno, bez kodiranja. Koje aplikacije mogu povezati? 400+ integracija: Gmail, Slack, Google Sheets, Notion, HubSpot, Stripe, PostgreSQL. Gde se čuvaju podaci? n8n je self-hosted, podaci nikada ne prolaze kroz treće strane. Koliko košta održavanje? n8n je besplatan, plaćate samo server (nekoliko evra mesečno).",
+      "Česta pitanja — AI Voice: Zvuči li robotski? Ne, koristim ElevenLabs ili OpenAI Realtime — prirodno, sa pauzama i intonacijom. Mogu klonirati i vaš glas. Šta ako AI ne razume? Ima fallback 'prebacujem kolegi' i poziv ide vama sa kontekstom. Koliko košta? Setup 1500–5000 EUR + 0.10–0.30 EUR/min Twilio + AI model. Koliko traje setup? 2–4 nedelje (skript, glas, integracija sa kalendarom/CRM, testiranje).",
     locale: "sr",
     category: "faq",
   },
   // --- TRANSPARENTNOST: novi tim ---
   {
     content:
-      "Solvera je novi, fokusiran tim — još uvek ne objavljujemo javno portfolio jer je većina projekata pod NDA-om ili u fazi razvoja. Ne izmišljamo studije slučaja niti lažne testimonijale. Transparentni smo: ako pitate šta smo konkretno radili, iskreno ćemo reći. Tim su inženjeri sa godinama iskustva u modernim tehnologijama (Next.js, Node.js, AI, automatizacija) — Solvera je njihov fokusiran konsalting brand. Bot ne sme da izmišlja imena klijenata, kompanija niti specifične brojke o projektima.",
+      "Solvera je nov, fokusiran AI studio — još uvek ne objavljujem javno portfolio jer je većina projekata pod NDA-om ili u fazi razvoja. Ne izmišljam studije slučaja niti lažne testimonijale. Transparentan sam: ako pitate šta smo konkretno radili, iskreno ću reći. Iskustvo: 7+ godina u modernim tehnologijama (Next.js, AI/LLM, voice AI) — Solvera je moj fokusiran konsalting brand. Bot ne sme da izmišlja imena klijenata, kompanija niti specifične brojke o projektima.",
     locale: "sr",
     category: "about",
   },
   // --- ZAŠTO SOLVERA ---
   {
     content:
-      "Zašto izabrati Solvera: 1) Inženjeri, ne prodavci — radite direktno sa developerima, bez posrednika. 2) Sve je vaše — kod, dizajn, dokumentacija, bez zaključavanja. 3) Moderan stack i brza isporuka — Next.js, AI, n8n. 4) Direktna komunikacija — odgovaramo u roku od 24h, redovna ažuriranja. Brža isporuka, 100% vlasništvo nad kodom, 100% zadovoljstvo klijenata.",
+      "Zašto izabrati Solvera: 1) AI-first fokus — gradim chatbot-ove, voice agente i interne asistente, ne opšti web shop. 2) Inženjeri, ne prodavci — radite direktno sa developerom. 3) Sve je vaše — kod, dizajn, dokumentacija, bez zaključavanja. 4) Moderan stack — OpenAI, Claude, LangChain, Next.js, Supabase. 5) Direktna komunikacija — odgovor u roku 24h.",
     locale: "sr",
     category: "about",
   },
@@ -173,7 +206,7 @@ const SR_CHUNKS: Chunk[] = [
   },
   {
     content:
-      "Detaljne cene automatizacije: Osnovni n8n workflow (1-2 automatizacije, npr. email + CRM) — od 150 EUR. Kompleksan sistem automatizacije (5+ workflow-a, više integracija) — od 500 EUR. Setup n8n servera na vašoj infrastrukturi — od 100 EUR. Obuka vašeg tima za korišćenje n8n — od 80 EUR. Mesečna podrška i optimizacija — od 40 EUR mesečno.",
+      "Detaljne cene AI Voice usluga: AI recepcionar (jednostavan, kalendar + FAQ) — od 1500 EUR setup. AI agent sa CRM integracijom i kvalifikacijom leadova — od 3000 EUR. Outbound agent (zove klijente za potvrde/povratne informacije) — od 4000 EUR. Po pozivu: 0.10–0.30 EUR/minut (Twilio + AI). Setup mesečnog monitoring i fine-tuninga skripta — od 80 EUR/mes. Setup traje 2–4 nedelje.",
     locale: "sr",
     category: "pricing",
   },
@@ -399,7 +432,7 @@ const SR_CHUNKS: Chunk[] = [
   // --- KOMPLETAN TECH STACK ---
   {
     content:
-      "Kompletan spisak tehnologija sa kojima Solvera radi: Frontend — Next.js, React, TypeScript, Tailwind CSS, Framer Motion. Backend — Node.js, Nest.js, Express, GraphQL, REST API. Baze podataka — PostgreSQL, MongoDB, Redis, Supabase. Cloud i infrastruktura — AWS (EC2, S3, RDS, Lambda), Vercel, DigitalOcean, Docker. AI i automatizacija — OpenAI, LangChain, Python, n8n. Mobilno — React Native, Progressive Web Apps (PWA). Sve ostale tehnologije koje nisu na ovom spisku NE koristim. Ako neko pita za PHP, WordPress, Angular, Vue.js, Java, C#, .NET, Ruby, Django, Laravel — odgovor je da to nije moj stack i da ne radim u tim tehnologijama.",
+      "Kompletan spisak tehnologija sa kojima Solvera radi: AI / LLM — OpenAI (GPT-4/5), Anthropic Claude, LangChain, pgvector, Whisper, ElevenLabs, OpenAI Realtime. Voice / telefonija — Twilio, LiveKit. Frontend — Next.js, React, TypeScript, Tailwind CSS, Framer Motion. Backend — Node.js, Express, REST API. Baze podataka — PostgreSQL, Supabase, pgvector, Redis. Cloud i infrastruktura — AWS (EC2, S3, RDS, Lambda, Bedrock), Vercel, Docker. Sve ostale tehnologije koje nisu na ovom spisku NE koristim. NE radim u: PHP, WordPress, Angular, Vue.js, Java, C#, .NET, Ruby, Django, Laravel, n8n, Zapier.",
     locale: "sr",
     category: "services",
   },
@@ -439,7 +472,7 @@ const SR_CHUNKS: Chunk[] = [
   },
   {
     content:
-      "Proces za AUTOMATIZACIJU (n8n — 4 koraka): 1) Popis poslova — radionica koji se poslovi rade ručno, koje sisteme koristite, kada svaki tok treba da se pokrene. Izbor odgovarajućeg alata. Isporuka: dijagram toka poslova, spisak sistema za povezivanje sa pristupnim podacima, procena mesečnog troška alata. 2) Prvi automatski tok — jedan kompletan automatski posao od početka do kraja, postavljen na probnom okruženju i isproban sa stvarnim podacima. Isporuka: prvi tok koji radi, deljen nalog u sistemu sa vašim pristupom, zapisnik prvih izvršenih poslova. 3) Proširivanje — dodavanje novih tokova, integracija sa više alata, optimizacija postojećih. 4) Predaja — obuka vašeg tima za korišćenje, dokumentacija, predaja pristupnih podataka. Komunikacija: WhatsApp grupa + redovne demo verzije čim su spremne.",
+      "Proces za AI VOICE (4 koraka): 1) Skript i tok poziva — definišemo tipove poziva, šta AI sme sam, kad prebacuje vama. Isporuka: dijagram toka, primeri dijaloga, lista akcija (rezervacija/prebacivanje/SMS). 2) Izbor glasa i tehnička postavka — testiranje glasova (ElevenLabs/OpenAI Realtime), Twilio broj, integracija sa kalendarom/CRM. Isporuka: izabran glas, aktivan AI broj u test okruženju. 3) Pilot i fine-tuning — AI prima realne pozive u kontrolisanom režimu, slušamo transkripte, doteramo skript. Isporuka: dashboard sa transkriptima, doteran skript posle 50–100 poziva. 4) Puštanje — prebacivanje pravog broja na AI, monitoring, obuka tima. Komunikacija: deljen dashboard + nedeljni pregled metrika.",
     locale: "sr",
     category: "process",
   },
@@ -489,7 +522,7 @@ const SR_CHUNKS: Chunk[] = [
   },
   {
     content:
-      "ROI primeri iz prakse: Restoran sa online rezervacijom i digitalnim menijem — 30% više rezervacija u prvom mesecu. Advokatska kancelarija sa SEO optimizovanim sajtom — sa 2 upita nedeljno na 8-10. Fitnes centar sa online prijavom — smanjio administrativni rad za 15 sati mesečno. E-commerce prodavnica — klijent koji je prešao sa WordPress-a na Next.js video 2x brže učitavanje i 35% veću konverziju. Automatizacija fakturisanja sa n8n — ušteda 10-20 sati manualnog rada mesečno.",
+      "Tipični ROI scenariji (orijentaciono — nisu garancija): AI chatbot na sajtu uslužne firme — automatizuje 60–80% inicijalnih upita, lead capture noću dok ekipa spava. AI Voice recepcionar za salon/kliniku — nijedan poziv ne ostane neodgovoren, manje 'no-show' termina zbog automatskih podsetnika. Interni AI asistent — tim štedi 3–10 sati nedeljno po osobi (manje pretrage Drive-a). AI obrada faktura — 5–15 sati ručnog rada nedeljno se eliminiše. Konkretne brojke zavise od projekta i klijenta.",
     locale: "sr",
     category: "sales",
   },
@@ -524,7 +557,7 @@ const SR_CHUNKS: Chunk[] = [
   // --- CONVERSATION STARTERS ---
   {
     content:
-      "Kada posetilac pita 'šta radite' ili 'čime se bavite': Solvera je IT tim iz Novog Sada. Pravim sajtove, web aplikacije, poslovne sisteme, AI chatbot-ove i automatizacije za firme u Srbiji. Ukratko — pomažem firmama da koriste modernu tehnologiju za rast biznisa, po fer cenama. Šta vas konkretno zanima? Možda sajt, aplikacija, ili automatizacija nekog poslovnog procesa?",
+      "Kada posetilac pita 'šta radite' ili 'čime se bavite': Solvera je AI-first studio iz Novog Sada. Primarno gradim 4 AI proizvoda — chatbot za sajt, voice agent koji prima pozive, interni AI asistent za vaš tim, i AI integracije po meri. Web razvoj i poslovni sistemi rade se sekundarno. Šta vas konkretno zanima — chatbot, voice agent, interni asistent ili nešto drugo?",
     locale: "sr",
     category: "sales",
   },
@@ -546,13 +579,13 @@ const SR_CHUNKS: Chunk[] = [
   // --- UPSELL I CROSS-SELL ---
   {
     content:
-      "Bundle ponude i dodatne usluge: Sajt + AI chatbot paket — dobijte sajt sa ugrađenim AI asistentom koji odgovara posetiocima 24/7 i hvata lead-ove dok vi spavate. Sajt + automatizacija paket — sajt koji je povezan sa vašim CRM-om, emailom i fakturisanjem, sve automatski. Sajt + SEO + analitika — kompletno online prisustvo sa praćenjem rezultata. Pitajte nas za bundle cene — uvek je povoljnije nego pojedinačno.",
+      "Bundle ponude: Sajt + AI Chatbot paket — sajt sa ugrađenim RAG botom koji odgovara 24/7 i hvata leadove. Chatbot + Voice paket — pokrivate i web posetioce i pozivaoce sa istim brand-om i tonom. AI Chatbot + Interni Asistent — isti AI sloj radi za klijente (eksterno) i za vaš tim (interno) iz iste baze znanja. Bundle cene su uvek povoljnije nego pojedinačno.",
     locale: "sr",
     category: "sales",
   },
   {
     content:
-      "Predlozi za upsell: Ako pravite sajt, razmislite i o chatbot-u — AI asistent može da odgovori na 80% pitanja vaših kupaca automatski, 24/7, i da vam donese nove lead-ove dok vi ne radite. Ako već imate sajt, razmislite o automatizaciji — koliko vremena trošite na ručni unos podataka, slanje emailova, ažuriranje tabela? n8n može da automatizuje sve to za jednokratnu cenu od 150 EUR.",
+      "Predlozi za upsell: Ako pravite sajt — dodajte AI Chatbot koji hvata leadove dok ne radite. Ako imate chatbot — dodajte AI Voice agent na telefonu (isti brand, isti ton, ista baza znanja). Ako vam tim gubi vreme tražeći info — interni AI asistent štedi 3–10 sati nedeljno po osobi. Ako imate konkretan ručni tok koji se ponavlja — AI integracija po meri može da ga automatizuje.",
     locale: "sr",
     category: "sales",
   },
@@ -572,7 +605,7 @@ const SR_CHUNKS: Chunk[] = [
   // --- PROBLEMI KOJE REŠAVAMO (sa ProblemSection) ---
   {
     content:
-      "Problemi koje srpske firme imaju sa standardnim IT agencijama (i kako Solvera rešava svaki): 1) Mesecima čekate na rezultate — prosečan IT projekat traje 4+ meseca. Solvera radi efikasno sa modernim alatima, ne razvlači rokove. 2) Komunikacija kroz 5 slojeva — vaša poruka prolazi od account menadžera do vođe projekta do programera. Solvera: razgovarate direktno sa inženjerom koji piše kod. 3) Zastarela tehnologija — agencije koriste alate iz 2015. dok konkurencija koristi AI i automatizaciju. Solvera koristi Next.js, AI, n8n. 4) Nemate kontrolu nad kodom — preko 50% klijenata nikad ne dobije izvorni kod. Solvera: kod, podaci, hosting su vaši od prvog dana, bez zaključavanja.",
+      "Problemi koje srpske firme imaju sa standardnim IT agencijama (i kako Solvera rešava): 1) Mesecima čekate — prosečan projekat 4+ meseca. Solvera radi efikasno, AI prototip za par dana. 2) Komunikacija kroz 5 slojeva. Solvera: direktan razgovor sa inženjerom. 3) Zastarela tehnologija — agencije nude WordPress dok konkurencija već koristi AI agente. Solvera je AI-first: OpenAI, Claude, LangChain, Voice AI. 4) Nemate kod — 50%+ klijenata ne dobije source. Solvera: kod i podaci su vaši od prvog dana.",
     locale: "sr",
     category: "about",
   },
@@ -628,7 +661,7 @@ const SR_CHUNKS: Chunk[] = [
   // --- ŠTA NUDIMO (sažetak za quick reference) ---
   {
     content:
-      "Šta Solvera nudi (kratak pregled 4 vrste projekata): SAJT — landing, korporativni sajt, internet prodavnica, portfolio. Next.js, brzo učitavanje, SEO, CMS. Od 150€. POSLOVNI SISTEM — interni alat, pregledna tabla (dashboard), CRM, SaaS platforma, portal za partnere. Skalabilna arhitektura, kontrola pristupa, dokumentacija. Od 1200€. AI / VEŠTAČKA INTELIGENCIJA — pametni asistent (chatbot) za sajt ili podršku, RAG sistem koji odgovara na osnovu vaših dokumenata, alat za pisanje tekstova, automatsko čitanje dokumenata. Od 500€. AUTOMATIZACIJA — n8n tokovi koji povezuju vaše alate, sinhronizacija podataka, automatska obaveštenja, izveštaji. Od 150€. Sve cene su startne i u eurima, bez PDV-a.",
+      "Šta Solvera nudi — PRIMARNO 4 AI PROIZVODA: 1) AI CHATBOT za sajt — RAG asistent obučen na vašoj bazi znanja, 24/7, lead capture. Od 600€. 2) AI VOICE — agent koji prima pozive umesto vas, srpski glas, rezervacije, kvalifikacija. Setup od 1500€. 3) AI ASISTENT za interni tim — privatan asistent za vaše zaposlene, pretražuje vašu dokumentaciju. Od 2000€. 4) AI INTEGRACIJE po meri — obrada dokumenata, triage mejlova, sumarizacija, agentski tokovi. Od 800€. SEKUNDARNO: web razvoj (sajt od 300€) i poslovni sistemi (od 2000€). Solvera NE radi n8n / Zapier opštu automatizaciju — samo AI-native rešenja.",
     locale: "sr",
     category: "services",
   },
@@ -636,7 +669,7 @@ const SR_CHUNKS: Chunk[] = [
   // --- BOT GUARDRAILS — šta NE sme da kaže ---
   {
     content:
-      "Stroga pravila za AI asistenta na Solvera sajtu: NIKAD ne izmišlji imena klijenata, kompanija ili specifične brojke o uspehu. NIKAD ne tvrdi 'imamo X+ projekata' ako nisi siguran — Solvera je nov tim. NIKAD ne daj ime osobe koja nije Milan Julinac ili Dragan Jelačić kao Solvera zaposlenog. NIKAD ne reci da klijenti mogu da nas pozovu telefonom — preferiramo email i WhatsApp. NIKAD ne tvrdi tehnologiju koju Solvera ne koristi (npr. PHP, WordPress, Java, .NET) kao da je deo stack-a. Ako ne znaš odgovor, iskreno reci 'to morate da pitate inženjera direktno — javite se na info@solveradev.rs ili WhatsApp +381 63 838 4196.'",
+      "Stroga pravila za AI asistenta na Solvera sajtu: NIKAD ne izmišlji imena klijenata, kompanija ili specifične brojke o uspehu. NIKAD ne tvrdi 'imamo X+ projekata' ako nisi siguran — Solvera je nov tim. Solvera ima JEDNOG osnivača: Milan Julinac. NIKAD ne pominji druge osobe po imenu kao Solvera zaposlene. NIKAD ne reci da klijenti mogu da nas pozovu telefonom — preferiramo email i WhatsApp. NIKAD ne tvrdi tehnologiju koju Solvera ne koristi (npr. PHP, WordPress, Java, .NET, n8n, Zapier) kao da je deo stack-a. Ako ne znaš odgovor, iskreno reci 'to morate da pitate inženjera direktno — javite se na info@solveradev.rs ili WhatsApp +381 63 838 4196.'",
     locale: "sr",
     category: "faq",
   },

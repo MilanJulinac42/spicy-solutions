@@ -3,6 +3,8 @@ export interface NavLink {
   href: string;
 }
 
+export type ServiceCategory = "ai" | "web";
+
 export interface Service {
   id: string;
   icon: string;
@@ -10,6 +12,7 @@ export interface Service {
   descriptionKey: string;
   features: string[];
   technologies: string[];
+  category: ServiceCategory;
 }
 
 export interface Project {
@@ -17,7 +20,7 @@ export interface Project {
   titleKey: string;
   descriptionKey: string;
   technologies: string[];
-  category: "website" | "enterprise" | "ai" | "automation";
+  category: "chatbot" | "voice" | "assistant" | "aiIntegrations" | "websites" | "enterprise";
 }
 
 export interface Testimonial {

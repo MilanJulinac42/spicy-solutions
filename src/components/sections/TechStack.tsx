@@ -11,21 +11,30 @@ import {
   SiPython,
   SiDotnet,
   SiPostgresql,
-  SiMongodb,
   SiRedis,
   SiDocker,
   SiVercel,
   SiOpenai,
   SiLangchain,
-  SiN8N,
+  SiSupabase,
+  SiTwilio,
+  SiAnthropic,
 } from "react-icons/si";
-import { FaAws } from "react-icons/fa";
+import { FaAws, FaMicrophone, FaPhone } from "react-icons/fa";
 import { useTranslations } from "next-intl";
 import { SectionHeading } from "@/components/ui/SectionHeading";
 import { staggerContainerFast, scaleSpring } from "@/lib/animations";
 import { technologies } from "@/lib/constants";
 
 const techIcons: Record<string, IconType> = {
+  OpenAI: SiOpenai,
+  Claude: SiAnthropic,
+  LangChain: SiLangchain,
+  pgvector: SiPostgresql,
+  Whisper: FaMicrophone,
+  ElevenLabs: FaMicrophone,
+  LiveKit: FaPhone,
+  Twilio: SiTwilio,
   "Next.js": SiNextdotjs,
   React: SiReact,
   TypeScript: SiTypescript,
@@ -34,17 +43,22 @@ const techIcons: Record<string, IconType> = {
   Python: SiPython,
   ".NET": SiDotnet,
   PostgreSQL: SiPostgresql,
-  MongoDB: SiMongodb,
+  Supabase: SiSupabase,
   Redis: SiRedis,
   Docker: SiDocker,
   Vercel: SiVercel,
   AWS: FaAws,
-  n8n: SiN8N,
-  OpenAI: SiOpenai,
-  LangChain: SiLangchain,
 };
 
 const techColors: Record<string, string> = {
+  OpenAI: "group-hover:text-emerald-400 group-hover:bg-emerald-400/10",
+  Claude: "group-hover:text-amber-400 group-hover:bg-amber-400/10",
+  LangChain: "group-hover:text-purple-400 group-hover:bg-purple-400/10",
+  pgvector: "group-hover:text-blue-400 group-hover:bg-blue-400/10",
+  Whisper: "group-hover:text-violet-400 group-hover:bg-violet-400/10",
+  ElevenLabs: "group-hover:text-pink-400 group-hover:bg-pink-400/10",
+  LiveKit: "group-hover:text-cyan-400 group-hover:bg-cyan-400/10",
+  Twilio: "group-hover:text-red-400 group-hover:bg-red-400/10",
   "Next.js": "group-hover:text-white group-hover:bg-white/10",
   React: "group-hover:text-sky-400 group-hover:bg-sky-400/10",
   TypeScript: "group-hover:text-blue-400 group-hover:bg-blue-400/10",
@@ -53,14 +67,11 @@ const techColors: Record<string, string> = {
   Python: "group-hover:text-yellow-400 group-hover:bg-yellow-400/10",
   ".NET": "group-hover:text-violet-400 group-hover:bg-violet-400/10",
   PostgreSQL: "group-hover:text-blue-300 group-hover:bg-blue-300/10",
-  MongoDB: "group-hover:text-green-400 group-hover:bg-green-400/10",
+  Supabase: "group-hover:text-emerald-400 group-hover:bg-emerald-400/10",
   Redis: "group-hover:text-red-400 group-hover:bg-red-400/10",
   Docker: "group-hover:text-sky-400 group-hover:bg-sky-400/10",
   Vercel: "group-hover:text-white group-hover:bg-white/10",
   AWS: "group-hover:text-amber-400 group-hover:bg-amber-400/10",
-  n8n: "group-hover:text-orange-400 group-hover:bg-orange-400/10",
-  OpenAI: "group-hover:text-emerald-400 group-hover:bg-emerald-400/10",
-  LangChain: "group-hover:text-purple-400 group-hover:bg-purple-400/10",
 };
 
 export function TechStack() {

@@ -132,6 +132,38 @@ export function Footer() {
             <ul className="space-y-3">
               <li>
                 <Link
+                  href="/usluge/chatbot"
+                  className="text-sm text-gray-400 hover:text-spicy-400 transition-colors link-underline"
+                >
+                  {t("ServicesOverview.chatbot.title")}
+                </Link>
+              </li>
+              <li>
+                <Link
+                  href="/usluge/voice"
+                  className="text-sm text-gray-400 hover:text-spicy-400 transition-colors link-underline"
+                >
+                  {t("ServicesOverview.voice.title")}
+                </Link>
+              </li>
+              <li>
+                <Link
+                  href="/usluge/assistant"
+                  className="text-sm text-gray-400 hover:text-spicy-400 transition-colors link-underline"
+                >
+                  {t("ServicesOverview.assistant.title")}
+                </Link>
+              </li>
+              <li>
+                <Link
+                  href="/usluge/aiIntegrations"
+                  className="text-sm text-gray-400 hover:text-spicy-400 transition-colors link-underline"
+                >
+                  {t("ServicesOverview.aiIntegrations.title")}
+                </Link>
+              </li>
+              <li>
+                <Link
                   href="/usluge#websites"
                   className="text-sm text-gray-400 hover:text-spicy-400 transition-colors link-underline"
                 >
@@ -144,22 +176,6 @@ export function Footer() {
                   className="text-sm text-gray-400 hover:text-spicy-400 transition-colors link-underline"
                 >
                   {t("ServicesOverview.enterprise.title")}
-                </Link>
-              </li>
-              <li>
-                <Link
-                  href="/usluge#ai"
-                  className="text-sm text-gray-400 hover:text-spicy-400 transition-colors link-underline"
-                >
-                  {t("ServicesOverview.ai.title")}
-                </Link>
-              </li>
-              <li>
-                <Link
-                  href="/usluge#automation"
-                  className="text-sm text-gray-400 hover:text-spicy-400 transition-colors link-underline"
-                >
-                  {t("ServicesOverview.automation.title")}
                 </Link>
               </li>
             </ul>

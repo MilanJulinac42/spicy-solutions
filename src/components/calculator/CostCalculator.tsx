@@ -33,10 +33,6 @@ export function CostCalculator() {
         return !!(scope.projectType && scope.pages && scope.cms !== undefined && scope.customDesign !== undefined);
       case "enterprise":
         return !!(scope.projectType && scope.complexity && scope.auth !== undefined && scope.integrations);
-      case "ai":
-        return !!(scope.projectType && scope.knowledgeSource && scope.multiLang !== undefined && scope.analytics !== undefined);
-      case "automation":
-        return !!(scope.workflowCount && scope.complexity && scope.integrations && scope.monitoring !== undefined);
     }
   }
 

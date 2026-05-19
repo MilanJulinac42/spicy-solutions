@@ -4,8 +4,6 @@ import type {
   PriceRange,
   WebsiteScope,
   EnterpriseScope,
-  AiScope,
-  AutomationScope,
   ProjectScope,
 } from "@/types/calculator";
 
@@ -46,38 +44,6 @@ const PRICING = {
       "4plus": { min: 800, max: 2000 },
     },
   },
-  ai: {
-    base: {
-      faqBot: { min: 800, max: 2000 },
-      ragBot: { min: 1500, max: 4000 },
-      multiChannel: { min: 2500, max: 6000 },
-    },
-    knowledgeSource: {
-      website: { min: 0, max: 0 },
-      documents: { min: 300, max: 600 },
-      database: { min: 500, max: 1200 },
-    },
-    multiLang: { min: 200, max: 500 },
-    analytics: { min: 400, max: 800 },
-  },
-  automation: {
-    base: {
-      "1to3": { min: 400, max: 1000 },
-      "4to7": { min: 800, max: 2000 },
-      "8plus": { min: 1500, max: 4000 },
-    },
-    complexity: {
-      simple: 1.0,
-      multiStep: 1.4,
-      errorHandling: 1.8,
-    },
-    integrations: {
-      "1to3": { min: 0, max: 0 },
-      "4to7": { min: 300, max: 600 },
-      "8plus": { min: 600, max: 1500 },
-    },
-    monitoring: { min: 300, max: 700 },
-  },
   timeline: {
     standard: 1.0,
     priority: 1.2,
@@ -115,23 +81,6 @@ function calcEnterprise(scope: EnterpriseScope): PriceRange {
   return range;
 }
 
-function calcAi(scope: AiScope): PriceRange {
-  let range: RangeConfig = { ...PRICING.ai.base[scope.projectType] };
-  range = addRange(range, PRICING.ai.knowledgeSource[scope.knowledgeSource]);
-  if (scope.multiLang) range = addRange(range, PRICING.ai.multiLang);
-  if (scope.analytics) range = addRange(range, PRICING.ai.analytics);
-  return range;
-}
-
-function calcAutomation(scope: AutomationScope): PriceRange {
-  let range: RangeConfig = { ...PRICING.automation.base[scope.workflowCount] };
-  const compMult = PRICING.automation.complexity[scope.complexity];
-  range = multiplyRange(range, compMult);
-  range = addRange(range, PRICING.automation.integrations[scope.integrations]);
-  if (scope.monitoring) range = addRange(range, PRICING.automation.monitoring);
-  return range;
-}
-
 export function calculatePriceRange(
   serviceType: ServiceType,
   scope: ProjectScope,
@@ -146,12 +95,6 @@ export function calculatePriceRange(
     case "enterprise":
       range = calcEnterprise(scope as EnterpriseScope);
       break;
-    case "ai":
-      range = calcAi(scope as AiScope);
-      break;
-    case "automation":
-      range = calcAutomation(scope as AutomationScope);
-      break;
   }
 
   const timelineMult = PRICING.timeline[timeline];
@@ -162,12 +105,10 @@ export function calculatePriceRange(
 
 // Estimated timeline in weeks based on price range
 export function estimateTimeline(
-  serviceType: ServiceType,
+  _serviceType: ServiceType,
   priceRange: PriceRange,
   timeline: TimelineOption
 ): { min: number; max: number } {
-  const avgPrice = (priceRange.min + priceRange.max) / 2;
-  // Rough estimate: ~500 EUR per week of work
   const baseWeeksMin = Math.max(1, Math.round(priceRange.min / 500));
   const baseWeeksMax = Math.max(2, Math.round(priceRange.max / 400));
 
