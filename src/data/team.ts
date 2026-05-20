@@ -63,11 +63,4 @@ export const teamMembers: TeamMember[] = [
       },
     ],
   },
-  {
-    id: "member2",
-    photo: "/team/dragan.jpg",
-    stats: [],
-    capabilities: [],
-    skillCategories: [],
-  },
 ];

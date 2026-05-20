@@ -287,7 +287,7 @@ export default function ServicePage() {
             className="text-center mb-12"
           >
             <h2 className="text-2xl md:text-3xl font-bold text-foreground mb-4">
-              Tehnologije koje koristimo
+              Tehnologije koje koristim
             </h2>
             <motion.div
               initial={{ width: 0 }}

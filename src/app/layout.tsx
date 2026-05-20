@@ -35,7 +35,7 @@ const geistMono = Geist_Mono({
 
 export const metadata: Metadata = {
   title: {
-    default: "Solvera | Vi vodite biznis, mi brinemo o tehnologiji",
+    default: "Solvera | Vi vodite biznis, ja brinem o tehnologiji",
     template: "%s | Solvera",
   },
   description:
@@ -46,13 +46,13 @@ export const metadata: Metadata = {
     locale: "sr_RS",
     url: "https://www.solveradev.rs",
     siteName: "Solvera",
-    title: "Solvera | Vi vodite biznis, mi brinemo o tehnologiji",
+    title: "Solvera | Vi vodite biznis, ja brinem o tehnologiji",
     description:
       "Od sajtova do poslovnih sistema, AI chatbot-ova do automatizacije — isporučujem tehnologiju koja pokreće vaš biznis napred.",
   },
   twitter: {
     card: "summary_large_image",
-    title: "Solvera | Vi vodite biznis, mi brinemo o tehnologiji",
+    title: "Solvera | Vi vodite biznis, ja brinem o tehnologiji",
     description:
       "Od sajtova do poslovnih sistema, AI chatbot-ova do automatizacije — isporučujem tehnologiju koja pokreće vaš biznis napred.",
   },

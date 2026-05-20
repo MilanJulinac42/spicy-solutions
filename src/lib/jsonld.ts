@@ -66,7 +66,7 @@ export const websiteSchema = {
   "@id": `${SITE_URL}#website`,
   url: SITE_URL,
   name: "Solvera",
-  description: "Vi vodite biznis, mi brinemo o tehnologiji",
+  description: "Vi vodite biznis, ja brinem o tehnologiji",
   inLanguage: "sr-RS",
   publisher: { "@id": `${SITE_URL}#organization` },
 };
@@ -155,7 +155,7 @@ export const faqPageSchema = {
       name: "Kako počinje saradnja?",
       acceptedAnswer: {
         "@type": "Answer",
-        text: "Pošaljete zahtev preko dugmeta „Započnite projekat“ ili kontakt forme. U roku od 24 sata javljamo se sa terminom za besplatan uvodni razgovor (oko 30 minuta). Posle razgovora dobijate pisanu ponudu sa fiksnom cenom i rokom.",
+        text: "Pošaljete zahtev preko dugmeta „Započnite projekat“ ili kontakt forme. U roku od 24 sata javljam se sa terminom za besplatan uvodni razgovor (oko 30 minuta). Posle razgovora dobijate pisanu ponudu sa fiksnom cenom i rokom.",
       },
     },
     {
@@ -171,7 +171,7 @@ export const faqPageSchema = {
       name: "Šta ako poželim izmene tokom rada?",
       acceptedAnswer: {
         "@type": "Answer",
-        text: "Manje izmene (tekst, boje, raspored elemenata) su uključene u cenu. Za veće izmene (nove funkcionalnosti) dajemo procenu dodatnog vremena i cene — vi odlučujete da li se radi ili ne.",
+        text: "Manje izmene (tekst, boje, raspored elemenata) su uključene u cenu. Za veće izmene (nove funkcionalnosti) dajem procenu dodatnog vremena i cene — vi odlučujete da li se radi ili ne.",
       },
     },
     {
@@ -179,7 +179,7 @@ export const faqPageSchema = {
       name: "Šta ako dođe do kašnjenja?",
       acceptedAnswer: {
         "@type": "Answer",
-        text: "Ako kasnimo mi — rokovi su fiksni i dodatni trošak ide na naš račun. Ako kasnimo zbog čekanja na vaš sadržaj ili odobrenje, dogovaramo novi termin. U svakom trenutku tačno znate gde smo i zašto.",
+        text: "Ako kasnim ja — rokovi su fiksni i dodatni trošak ide na moj račun. Ako kasnimo zbog čekanja na vaš sadržaj ili odobrenje, dogovaramo novi termin. U svakom trenutku tačno znate gde smo i zašto.",
       },
     },
     {

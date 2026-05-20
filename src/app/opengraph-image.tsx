@@ -1,7 +1,7 @@
 import { ImageResponse } from "next/og";
 
 export const runtime = "edge";
-export const alt = "Solvera - Vi vodite biznis, mi brinemo o tehnologiji";
+export const alt = "Solvera - Vi vodite biznis, ja brinem o tehnologiji";
 export const size = { width: 1200, height: 630 };
 export const contentType = "image/png";
 
@@ -104,7 +104,7 @@ export default async function Image() {
                 color: "#FF6B35",
               }}
             >
-              Mi brinemo o tehnologiji
+              Ja brinem o tehnologiji
             </div>
           </div>
 
