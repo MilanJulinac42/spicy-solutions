@@ -30,25 +30,15 @@
         "stat": "5 ljudi između vas i koda",
         "title": "Komunikacija kroz 5 slojeva",
         "description": "Posrednik priča sa vođom projekta, vođa projekta priča sa programerom. Vaša poruka se izgubi usput. Nikada ne razgovarate direktno sa osobom koja piše kod."
-      },
-      "p3": {
-        "stat": "Alati stariji od 9 godina",
-        "title": "Zastarela tehnologija usporava sve",
-        "description": "Rade sa alatima iz 2015. dok vaša konkurencija koristi AI i automatizaciju. Rezultat? Sporiji razvoj, lošije performanse, teže održavanje."
-      },
-      "p4": {
-        "stat": "50%+ ne dobije izvorni kod",
-        "title": "Nemate kontrolu nad sopstvenim kodom",
-        "description": "Ne možete da premestite sajt? Nemate pristup izvornom kodu? To nije partnerstvo — to je zavisnost koja vas sputava."
       }
     },
     "soundsFamiliar": "Zvuči poznato? Već sam ovo video — i znam kako da bude drugačije.",
     "solution": {
       "title": "Postoji bolji način",
       "point1": "Brza isporuka — radim efikasno sa modernim alatima i ne razvlačim rokove",
-      "point2": "Sve je vaše — kod, podaci, hosting. Bez zaključavanja, ikada",
+      "point2": "Sve je vaše — kod, podaci, hosting. Imate punu kontrolu, bez zaključavanja kod provajdera",
       "point3": "Moderne tehnologije — Next.js, AI, automatizacija. Alati koji ubrzavaju razvoj",
-      "point4": "Direktan pristup inženjerima koji prave vaš proizvod. Bez posrednika, bez čekanja"
+      "point4": "Direktan pristup meni — inženjeru koji pravi vaš proizvod. Bez posrednika, bez čekanja"
     },
     "cta": "Zakažite besplatnu konsultaciju",
     "ctaSecondary": "Započnite projekat"
@@ -60,19 +50,23 @@
     "secondaryLabel": "Sekundarno — Web i custom razvoj",
     "chatbot": {
       "title": "AI Chatbot na sajtu",
-      "description": "Pametan asistent na vašem sajtu koji odgovara 24/7 — poznaje vaše usluge, cene i procese, kvalifikuje upite i hvata leadove dok spavate."
+      "description": "Posetilac sajta ima pitanje u 23h. Bot odgovara trenutno, na osnovu vaše baze znanja — cene, usluge, procedure. Kvalifikuje upit, hvata lead u CRM, šalje vam email. Ujutru dobijate listu kvalifikovanih klijenata umesto liste propuštenih pitanja.",
+      "price": "Setup 600–2000€ · mesečno 20–50€"
     },
     "voice": {
       "title": "AI Voice — prima pozive",
-      "description": "AI agent koji se javlja na telefon umesto vas. Rezervacije, FAQ, kvalifikacija lidova, prebacivanje vama kad treba — prirodan glas, srpski jezik."
+      "description": "Frizerski salon, ordinacija, turistička agencija — klijenti zovu kad ne radite ili kad ste zauzeti. Izgubljeni pozivi = izgubljeni klijenti. AI voice agent prima poziv, razume zahtev na srpskom, zakazuje termin ili prebacuje vama kad je potrebno.",
+      "price": "Od 1000€ · mesečno 30–80€ + Twilio troškovi"
     },
     "assistant": {
       "title": "AI Asistent za interni tim",
-      "description": "Privatan asistent koji čita vašu dokumentaciju, procedure, ponude i ugovore. Vaši ljudi pitaju umesto da pretražuju Drive — odgovori u sekundi."
+      "description": "Vaš tim gubi sate pretražujući Drive za procedure, ugovore, politike. Privatan AI asistent obučen na vašoj dokumentaciji daje odgovor u sekundi — ne mora da napušta vašu firmu, ne deli podatke sa OpenAI.",
+      "price": "Setup od ~2000€ · mesečno: trošak modela"
     },
     "aiIntegrations": {
       "title": "AI integracije po meri",
-      "description": "Konkretni AI tokovi za vaš proces — obrada faktura i ugovora, klasifikacija upita, sumarizacija sastanaka, agentski sistemi za ponavljajuće zadatke."
+      "description": "Email upit dolazi — AI klasifikuje hitnost, izvlači ključne podatke, predlaže odgovor. Faktura stiže — AI parsira, validira, ubacuje u sistem. Sastanak završen — AI generiše sažetak i akcione stavke. Konkretni tokovi za vaš proces.",
+      "price": "Od 500€ · kompleksniji projekti po dogovoru"
     },
     "websites": {
       "title": "Sajtovi i web aplikacije",
@@ -136,8 +130,8 @@
     "title": "Zašto da mi verujete?",
     "subtitle": "Solo founder, fokusiran — upravo zato je isporuka brža i efikasnija",
     "code": {
-      "title": "Inženjeri, ne prodavci",
-      "description": "Radite direktno sa inženjerima koji pišu vaš kod. Bez posrednika, bez agencija između, bez gluvih telefona. Brza komunikacija, bolji rezultati."
+      "title": "Inženjer, ne prodavac",
+      "description": "Radite direktno sa mnom — inženjerom koji piše vaš kod. Bez posrednika, bez agencija između, bez gluvih telefona. Brza komunikacija, bolji rezultati."
     },
     "ownership": {
       "title": "Sve je vaše",
@@ -154,7 +148,7 @@
   },
   "CTA": {
     "title": "Spremni za brži razvoj?",
-    "subtitle": "Dobijte besplatnu konsultaciju bez ikakvih obaveza. Pokazaćemo vam gde gubite vreme i kako da ubrzate digitalni razvoj.",
+    "subtitle": "Dobijte besplatnu konsultaciju bez ikakvih obaveza. Pokazaću vam gde gubite vreme i kako da ubrzate digitalni razvoj.",
     "button": "Zakažite besplatnu konsultaciju",
     "calculatorButton": "Započnite projekat →"
   },
@@ -164,7 +158,7 @@
     "featuresHeading": "Šta dobijate",
     "websites": {
       "title": "Sajtovi i web aplikacije",
-      "description": "Pravimo moderne, brze sajtove sa Next.js koji se učitavaju za manje od sekunde. Kompletno vlasništvo nad kodom, bez zavisnosti od provajdera, sa isporukom u kratkim rokovima.",
+      "description": "Pravim moderne, brze sajtove sa Next.js koji se učitavaju za manje od sekunde. Kompletno vlasništvo nad kodom, bez zavisnosti od provajdera, sa isporukom u kratkim rokovima.",
       "comparison": "Brz razvoj sa modernim skupom tehnologija i potpunim vlasništvom nad kodom.",
       "features": {
         "f1": "Prilagođen svim uređajima — telefon, tablet, računar",
@@ -210,7 +204,7 @@
           },
           "q4": {
             "question": "Šta ako mi treba nešto specifično?",
-            "answer": "Javite nam se za besplatnu konsultaciju — analiziramo šta vam treba i dajemo jasan predlog sa rokovima i cenama."
+            "answer": "Javite mi se za besplatan razgovor — analiziram šta vam treba i dajem jasan predlog sa rokovima i cenama."
           }
         },
         "ctaText": "Zakažite besplatan razgovor"
@@ -245,7 +239,7 @@
           },
           "e4": {
             "title": "API integracije",
-            "description": "Povezujemo vaše postojeće sisteme da razmenjuju podatke međusobno. ERP sa internet prodavnicom, CRM sa sistemom za slanje imejlova — bez ručnog prebacivanja podataka."
+            "description": "Povezujem vaše postojeće sisteme da razmenjuju podatke međusobno. ERP sa internet prodavnicom, CRM sa sistemom za slanje imejlova — bez ručnog prebacivanja podataka."
           }
         },
         "faqTitle": "Česta pitanja",
@@ -256,7 +250,7 @@
           },
           "q2": {
             "question": "Da li može da se integriše sa našim postojećim alatima?",
-            "answer": "Da. Povezujemo se sa bilo kojim sistemom koji ima API — ERP, CRM, računovodstveni softver, sistemi za slanje imejlova, baze podataka."
+            "answer": "Da. Povezujem se sa bilo kojim sistemom koji ima API — ERP, CRM, računovodstveni softver, sistemi za slanje imejlova, baze podataka."
           },
           "q3": {
             "question": "Šta se dešava kad sistem treba da se proširi?",
@@ -264,7 +258,7 @@
           },
           "q4": {
             "question": "Ko održava sistem posle isporuke?",
-            "answer": "Vi imate kompletan kod i dokumentaciju. Nudimo opcionalnu podršku i održavanje, ali nikada niste zaključani."
+            "answer": "Vi imate kompletan kod i dokumentaciju. Nudim opcionalnu podršku i održavanje, ali nikada niste zaključani."
           }
         },
         "ctaText": "Zakažite besplatan razgovor"
@@ -314,7 +308,7 @@
           },
           "q3": {
             "question": "Koliko košta?",
-            "answer": "Setup od ~600€ (mali bot, FAQ tip) do ~3000€ (full RAG sa integracijama). Mesečno: trošak modela (najčešće 10–50€) + opcioni paket podrške."
+            "answer": "Setup 600–2000€ (od malog FAQ bota do full RAG sa integracijama). Mesečno: trošak modela (najčešće 20–50€) + opcioni paket podrške."
           },
           "q4": {
             "question": "Koliko traje setup?",
@@ -486,7 +480,7 @@
         "ctaText": "Zakažite besplatan razgovor"
       }
     },
-    "detailComingSoon": "Detaljnije informacije uskoro dolaze. U međuvremenu, javite nam se za besplatan razgovor.",
+    "detailComingSoon": "Detaljnije informacije uskoro dolaze. U međuvremenu, javite mi se za besplatan razgovor.",
     "learnMore": "Saznajte više",
     "viewAll": "Sve usluge →",
     "process": {
@@ -494,7 +488,7 @@
       "subtitle": "Jednostavan proces. Bez misterije. Bez iznenađenja.",
       "step1": {
         "title": "Besplatna konsultacija",
-        "description": "Analiziramo vašu trenutnu IT organizaciju i pokazujemo vam gde gubite vreme i efikasnost. Bez obaveza."
+        "description": "Analiziram vašu trenutnu IT organizaciju i pokazujem vam gde gubite vreme i efikasnost. Bez obaveza."
       },
       "step2": {
         "title": "Jasan plan",
@@ -506,7 +500,7 @@
       },
       "step4": {
         "title": "Predaja i sloboda",
-        "description": "Sve je vaše: kod, podaci, hosting. Nudimo opcionalnu podršku, ali nikada niste zaključani."
+        "description": "Sve je vaše: kod, podaci, hosting. Nudim opcionalnu podršku, ali nikada niste zaključani."
       }
     },
     "cta": {
@@ -545,7 +539,7 @@
       },
       "speed": {
         "title": "Brže odluke, brža isporuka",
-        "description": "Nema sastanaka radi sastanaka. Kad je potrebno menjati pravac, menjamo ga isti dan. Tipičan sajt 1–2 nedelje, MVP aplikacije 3–4 nedelje."
+        "description": "Nema sastanaka radi sastanaka. Kad je potrebno menjati pravac, menjam ga isti dan. Tipičan sajt 1–2 nedelje, MVP aplikacije 3–4 nedelje."
       },
       "ownership": {
         "title": "Vlasništvo nad kodom od starta",
@@ -597,7 +591,7 @@
       },
       "member1": {
         "name": "Milan Julinac",
-        "role": "Suosnivač i inženjer",
+        "role": "Osnivač i inženjer",
         "bio": "Gradim web aplikacije koje rade brzo, izgledaju profesionalno i donose rezultate. Od ideje do produkcije — bez nepotrebnog čekanja.",
         "stats": {
           "years": {
@@ -643,11 +637,6 @@
             "description": "Automatske provere, automatsko postavljanje novih verzija i migracije bez prekida — vaš softver radi 24 sata dnevno, svih sedam dana u nedelji."
           }
         }
-      },
-      "member2": {
-        "name": "Dragan Jelačić",
-        "role": "Suosnivač i inženjer",
-        "bio": "Pravi moderne web platforme i automatizuje poslovne procese. Fokusiran na to da vaš softver radi pouzdano — dan za danom."
       }
     },
     "tech": {
@@ -900,7 +889,7 @@
       },
       "changes": {
         "question": "Šta ako poželim izmene tokom rada?",
-        "answer": "Manje izmene (tekst, boje, raspored elemenata) su uključene u cenu. Za veće izmene (nove funkcionalnosti) dajemo procenu dodatnog vremena i cene — vi odlučujete da li se radi ili ne."
+        "answer": "Manje izmene (tekst, boje, raspored elemenata) su uključene u cenu. Za veće izmene (nove funkcionalnosti) dajem procenu dodatnog vremena i cene — vi odlučujete da li se radi ili ne."
       },
       "delay": {
         "question": "Šta ako dođe do kašnjenja?",
@@ -919,10 +908,10 @@
   },
   "Contact": {
     "title": "Besplatna konsultacija",
-    "subtitle": "Recite nam o vašoj trenutnoj IT organizaciji i pokazaćemo vam gde gubite vreme i efikasnost. Bez ikakvih obaveza.",
+    "subtitle": "Recite mi o vašoj trenutnoj IT organizaciji i pokazaću vam gde gubite vreme i efikasnost. Bez ikakvih obaveza.",
     "audit": {
       "title": "Šta dobijate (besplatno)",
-      "description": "Naša konsultacija pokriva sve što treba da znate:",
+      "description": "Konsultacija pokriva sve što treba da znate:",
       "bullets": {
         "b1": "Pregled vaše IT organizacije i konkretne preporuke za poboljšanje",
         "b2": "Preporuke za ubrzanje razvoja i modernizaciju tehnologije",
@@ -949,7 +938,7 @@
       "message": "Opišite nam vašu trenutnu IT situaciju",
       "submit": "Zakažite besplatnu konsultaciju",
       "sending": "Slanje...",
-      "success": "Zahtev primljen! Analiziraćemo vašu situaciju i javiti vam se u roku od 24 sata.",
+      "success": "Zahtev primljen! Analiziraću vašu situaciju i javiti vam se u roku od 24 sata.",
       "error": "Nešto je pošlo po zlu. Pokušajte ponovo."
     },
     "info": {
@@ -980,7 +969,7 @@
       "p2": "Ne koristim kolačiće za praćenje niti analitičke alate trećih strana."
     },
     "section2": {
-      "title": "Kako koristimo vaše podatke",
+      "title": "Kako koristim vaše podatke",
       "items": {
         "i1": "Da odgovorim na vaš upit ili zahtev za konsultaciju",
         "i2": "Da vas kontaktiram u vezi sa uslugama koje ste zatražili",
@@ -1058,6 +1047,39 @@
       "email": "info@solveradev.rs"
     }
   },
+  "TopBanner": {
+    "highlight": "Maj/jun",
+    "text": "Trenutno mogu da prihvatim 2 nova klijenta. Zakažite besplatnu konsultaciju da rezervišete mesto.",
+    "cta": "Zakažite poziv",
+    "dismissAria": "Zatvori banner"
+  },
+  "HomeFaq": {
+    "title": "Pitanja koja klijenti najčešće postavljaju",
+    "subtitle": "Iskrene odgovore na ono što obično zanima vlasnike SMB-a pre nego što potpišu.",
+    "items": {
+      "security": {
+        "question": "Kako se podaci čuvaju i da li je sigurno?",
+        "answer": "Podaci se čuvaju na serverima u EU (Vercel/Supabase/AWS Frankfurt) ili na vašoj infrastrukturi — vi birate. Za osetljive podatke koristim Azure OpenAI ili AWS Bedrock sa enterprise privatnošću — modeli ne treniraju na vašim podacima. Sve je u skladu sa GDPR-om i ZZPL-om."
+      },
+      "switch": {
+        "question": "Da li mogu da pređem na drugog provajdera ako se predomislim?",
+        "answer": "Da. Kod, dokumentacija, kredencijali i sva infrastruktura su na vaše ime od prvog dana. Bez vendor lock-in-a, bez tajnih ključeva, bez „dođite po izvorni kod kad platite još 2000€\". Predaja drugom timu traje par sati — predam šta postoji i to je to."
+      },
+      "timeline": {
+        "question": "Koliko dugo traje implementacija?",
+        "answer": "Chatbot 1–2 nedelje, voice agent 2–4 nedelje, interni asistent 2–6 nedelja, AI integracija 1–4 nedelje. Tačan rok dobijate u pisanoj ponudi pre potpisa — ne klizi posle."
+      },
+      "changes": {
+        "question": "Šta ako mi treba izmena posle 6 meseci?",
+        "answer": "Dve opcije: mesečni paket održavanja (fiksna cena) ili rad po potrebi (po satu/zadatku). Pošto kod ostaje vaš, možete me angažovati, drugog inženjera ili sami nastaviti — kako god vam odgovara."
+      },
+      "contract": {
+        "question": "Da li radimo ugovor ili je sve usmeno?",
+        "answer": "Ugovor uvek — Ugovor o pružanju usluga (firma na firmu, dvojezičan po potrebi) sa jasno definisanim obimom, rokovima, cenom, garancijom i klauzulom o vlasništvu nad kodom. Predračun za depozit, faktura po isporuci. Sve transparentno."
+      }
+    },
+    "cta": "Imate drugo pitanje? Pišite mi"
+  },
   "Footer": {
     "description": "Brz i kvalitetan IT za srpske biznise. Moderna tehnologija, direktna komunikacija, nula čekanja.",
     "quickLinks": "Brzi linkovi",
@@ -1076,7 +1098,7 @@
   },
   "StartProject": {
     "title": "Započnite projekat",
-    "subtitle": "Recite nam šta vam treba — javićemo se u roku od 24h.",
+    "subtitle": "Recite mi šta vam treba — javiću vam se u roku od 24h.",
     "steps": {
       "service": "Tip",
       "scope": "Obim",
@@ -1259,7 +1281,7 @@
     },
     "details": {
       "descriptionLabel": "Kratak opis",
-      "descriptionPlaceholder": "Recite nam ukratko šta vam treba, koji problem rešavate i šta očekujete...",
+      "descriptionPlaceholder": "Recite mi ukratko šta vam treba, koji problem rešavate i šta očekujete...",
       "timelineLabel": "Okvirni rok",
       "budgetLabel": "Okvirni budžet"
     },
@@ -1282,7 +1304,7 @@
     "error": "Greška pri slanju. Pokušajte ponovo.",
     "success": {
       "title": "Upit je uspešno poslat!",
-      "subtitle": "Javićemo vam se u roku od 24 sata. Hvala na poverenju!",
+      "subtitle": "Javiću vam se u roku od 24 sata. Hvala na poverenju!",
       "backHome": "Nazad na početnu"
     }
   },

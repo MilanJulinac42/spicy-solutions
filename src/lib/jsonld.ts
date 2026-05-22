@@ -60,13 +60,81 @@ export const organizationSchema = {
   ],
 };
 
+export const localBusinessSchema = {
+  "@context": "https://schema.org",
+  "@type": "ProfessionalService",
+  "@id": `${SITE_URL}#localbusiness`,
+  name: "Solvera",
+  image: LOGO_URL,
+  url: SITE_URL,
+  email: "info@solveradev.rs",
+  telephone: "+381638384196",
+  priceRange: "€€",
+  address: {
+    "@type": "PostalAddress",
+    addressLocality: "Novi Sad",
+    addressRegion: "Vojvodina",
+    postalCode: "21000",
+    addressCountry: "RS",
+  },
+  geo: {
+    "@type": "GeoCoordinates",
+    latitude: 45.2671,
+    longitude: 19.8335,
+  },
+  areaServed: [
+    { "@type": "Country", name: "Srbija" },
+    { "@type": "Country", name: "Crna Gora" },
+    { "@type": "Country", name: "Bosna i Hercegovina" },
+    { "@type": "Country", name: "Hrvatska" },
+    { "@type": "Country", name: "Slovenija" },
+    { "@type": "Country", name: "Severna Makedonija" },
+  ],
+  openingHoursSpecification: [
+    {
+      "@type": "OpeningHoursSpecification",
+      dayOfWeek: ["Monday", "Tuesday", "Wednesday", "Thursday", "Friday"],
+      opens: "09:00",
+      closes: "18:00",
+    },
+  ],
+  founder: { "@id": `${SITE_URL}#organization` },
+  hasOfferCatalog: {
+    "@type": "OfferCatalog",
+    name: "AI usluge za srpske firme",
+    itemListElement: [
+      {
+        "@type": "Offer",
+        itemOffered: { "@type": "Service", name: "AI Chatbot za sajt" },
+      },
+      {
+        "@type": "Offer",
+        itemOffered: { "@type": "Service", name: "AI Voice agent na srpskom" },
+      },
+      {
+        "@type": "Offer",
+        itemOffered: { "@type": "Service", name: "Interni AI asistent za tim" },
+      },
+      {
+        "@type": "Offer",
+        itemOffered: { "@type": "Service", name: "AI integracije po meri" },
+      },
+    ],
+  },
+  sameAs: [
+    "https://github.com/MilanJulinac42",
+    "https://www.linkedin.com/in/milanjulinac/",
+    "https://www.instagram.com/solveradev.rs/",
+  ],
+};
+
 export const websiteSchema = {
   "@context": "https://schema.org",
   "@type": "WebSite",
   "@id": `${SITE_URL}#website`,
   url: SITE_URL,
   name: "Solvera",
-  description: "Vi vodite biznis, mi brinemo o tehnologiji",
+  description: "Vi vodite biznis, ja brinem o tehnologiji",
   inLanguage: "sr-RS",
   publisher: { "@id": `${SITE_URL}#organization` },
 };
@@ -155,7 +223,7 @@ export const faqPageSchema = {
       name: "Kako počinje saradnja?",
       acceptedAnswer: {
         "@type": "Answer",
-        text: "Pošaljete zahtev preko dugmeta „Započnite projekat“ ili kontakt forme. U roku od 24 sata javljamo se sa terminom za besplatan uvodni razgovor (oko 30 minuta). Posle razgovora dobijate pisanu ponudu sa fiksnom cenom i rokom.",
+        text: "Pošaljete zahtev preko dugmeta „Započnite projekat“ ili kontakt forme. U roku od 24 sata javljam se sa terminom za besplatan uvodni razgovor (oko 30 minuta). Posle razgovora dobijate pisanu ponudu sa fiksnom cenom i rokom.",
       },
     },
     {
@@ -171,7 +239,7 @@ export const faqPageSchema = {
       name: "Šta ako poželim izmene tokom rada?",
       acceptedAnswer: {
         "@type": "Answer",
-        text: "Manje izmene (tekst, boje, raspored elemenata) su uključene u cenu. Za veće izmene (nove funkcionalnosti) dajemo procenu dodatnog vremena i cene — vi odlučujete da li se radi ili ne.",
+        text: "Manje izmene (tekst, boje, raspored elemenata) su uključene u cenu. Za veće izmene (nove funkcionalnosti) dajem procenu dodatnog vremena i cene — vi odlučujete da li se radi ili ne.",
       },
     },
     {
@@ -179,7 +247,7 @@ export const faqPageSchema = {
       name: "Šta ako dođe do kašnjenja?",
       acceptedAnswer: {
         "@type": "Answer",
-        text: "Ako kasnimo mi — rokovi su fiksni i dodatni trošak ide na naš račun. Ako kasnimo zbog čekanja na vaš sadržaj ili odobrenje, dogovaramo novi termin. U svakom trenutku tačno znate gde smo i zašto.",
+        text: "Ako kasnim ja — rokovi su fiksni i dodatni trošak ide na moj račun. Ako kasnimo zbog čekanja na vaš sadržaj ili odobrenje, dogovaramo novi termin. U svakom trenutku tačno znate gde smo i zašto.",
       },
     },
     {

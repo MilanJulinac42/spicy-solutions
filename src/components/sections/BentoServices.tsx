@@ -54,7 +54,7 @@ function MiniChat({ inView }: { inView: boolean }) {
         className="self-start max-w-[80%] px-3 py-2 rounded-2xl rounded-bl-sm bg-violet-500/10 border border-violet-500/15"
       >
         <span className="text-[10px] text-gray-300 leading-tight">
-          {"Setup od 600€, mesečno 10–50€ za model."}
+          {"Setup 600–2000€, mesečno 20–50€ za model."}
         </span>
       </motion.div>
     </div>
@@ -284,6 +284,7 @@ interface BentoCardProps {
   animation: React.ReactNode;
   className?: string;
   delay?: number;
+  price?: string;
 }
 
 const accentMap: Record<
@@ -333,6 +334,7 @@ function BentoCard({
   animation,
   className = "",
   delay = 0,
+  price,
 }: BentoCardProps) {
   const ref = useRef(null);
   const inView = useInView(ref, { once: true, margin: "-60px" });
@@ -355,9 +357,15 @@ function BentoCard({
           </div>
           <h3 className="text-base font-semibold text-foreground truncate">{title}</h3>
         </div>
-        <p className="text-sm text-foreground-muted leading-relaxed line-clamp-2 mb-4">
+        <p className="text-sm text-foreground-muted leading-relaxed line-clamp-2 mb-3">
           {description}
         </p>
+        {price && (
+          <div className={`inline-flex items-center gap-1.5 mb-4 px-2.5 py-1 rounded-md text-[11px] font-mono ${a.iconBg} ${a.iconText}`}>
+            <span className="opacity-70">€</span>
+            <span>{price}</span>
+          </div>
+        )}
         <Link
           href={href}
           className={`inline-flex items-center gap-1.5 px-4 py-2 rounded-lg text-sm font-semibold border ${a.ctaBg} ${a.ctaHover} transition-all`}
@@ -405,6 +413,7 @@ export function BentoServices() {
             icon={<MessageSquare className="w-4 h-4" />}
             title={t("ServicesOverview.chatbot.title")}
             description={t("ServicesOverview.chatbot.description")}
+            price={t("ServicesOverview.chatbot.price")}
             accent="violet"
             delay={0}
             animation={<MiniChat inView={inView} />}
@@ -417,6 +426,7 @@ export function BentoServices() {
             icon={<Phone className="w-4 h-4" />}
             title={t("ServicesOverview.voice.title")}
             description={t("ServicesOverview.voice.description")}
+            price={t("ServicesOverview.voice.price")}
             accent="emerald"
             delay={0.1}
             animation={<MiniVoice inView={inView} />}
@@ -429,6 +439,7 @@ export function BentoServices() {
             icon={<Bot className="w-4 h-4" />}
             title={t("ServicesOverview.assistant.title")}
             description={t("ServicesOverview.assistant.description")}
+            price={t("ServicesOverview.assistant.price")}
             accent="blue"
             delay={0.2}
             animation={<MiniAssistant inView={inView} />}
@@ -441,6 +452,7 @@ export function BentoServices() {
             icon={<Sparkles className="w-4 h-4" />}
             title={t("ServicesOverview.aiIntegrations.title")}
             description={t("ServicesOverview.aiIntegrations.description")}
+            price={t("ServicesOverview.aiIntegrations.price")}
             accent="spicy"
             delay={0.3}
             animation={<MiniIntegrations inView={inView} />}

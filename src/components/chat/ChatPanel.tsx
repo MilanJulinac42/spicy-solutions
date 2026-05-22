@@ -179,7 +179,7 @@ export function ChatPanel({ onClose, onReset, messages, setMessages, nextId }: C
           role: "assistant",
           content:
             locale === "sr"
-              ? "Izvinite, došlo je do greške. Pokušajte ponovo ili nas kontaktirajte na info@solveradev.rs."
+              ? "Izvinite, došlo je do greške. Pokušajte ponovo ili me kontaktirajte na info@solveradev.rs."
               : "Sorry, an error occurred. Please try again or contact us at info@solveradev.rs.",
         },
       ]);

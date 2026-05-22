@@ -4,10 +4,8 @@ import { useTranslations } from "next-intl";
 import { motion } from "framer-motion";
 import Link from "next/link";
 import {
-  AlertTriangle,
   TrendingDown,
   Clock,
-  Lock,
   CheckCircle2,
   ArrowRight,
 } from "lucide-react";
@@ -18,8 +16,6 @@ import { fadeInUp, staggerContainer } from "@/lib/animations";
 const problems = [
   { key: "p1", icon: Clock, hover: { rotate: -25 } },
   { key: "p2", icon: TrendingDown, hover: { x: [-2, 2, -2, 2, 0] } },
-  { key: "p3", icon: AlertTriangle, hover: { rotate: [0, -8, 8, -6, 6, 0] } },
-  { key: "p4", icon: Lock, hover: { y: [0, -2, 0, -2, 0] } },
 ];
 
 const solutionPoints = ["point1", "point2", "point3", "point4"];

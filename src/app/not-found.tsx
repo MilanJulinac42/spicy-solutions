@@ -54,7 +54,7 @@ export default function NotFound() {
               className="inline-flex items-center justify-center gap-2 px-6 py-3 bg-surface-secondary border border-border-default text-foreground rounded-xl font-semibold hover:border-spicy-400/30 transition-colors"
             >
               <MessageCircle className="w-4 h-4" />
-              Kontaktirajte nas
+              Kontaktirajte me
             </Link>
           </div>
         </motion.div>

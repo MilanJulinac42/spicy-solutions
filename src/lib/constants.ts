@@ -10,7 +10,7 @@ export const navLinks: NavLink[] = [
 
 export const siteConfig = {
   name: "Solvera",
-  description: "Vi vodite biznis, mi brinemo o tehnologiji",
+  description: "Vi vodite biznis, ja brinem o tehnologiji",
   url: "https://solveradev.rs",
   email: "info@solveradev.rs",
   phone: "+381 63 838 4196",
