@@ -5,7 +5,6 @@ import Script from "next/script";
 import { Geist, Geist_Mono } from "next/font/google";
 import { ThemeProvider } from "next-themes";
 import { Navbar } from "@/components/layout/Navbar";
-import { TopBanner } from "@/components/layout/TopBanner";
 import { Footer } from "@/components/layout/Footer";
 import { ScrollProgress } from "@/components/ui/ScrollProgress";
 import { FloatingWidgets } from "@/components/layout/FloatingWidgets";
@@ -50,7 +49,6 @@ export const metadata: Metadata = {
     "AI integracije Srbija",
     "razvoj sajtova Novi Sad",
     "Next.js developer Srbija",
-    "n8n automatizacija",
     "freelance inženjer Srbija",
   ],
   metadataBase: new URL("https://www.solveradev.rs"),
@@ -125,7 +123,6 @@ export default async function RootLayout({
         >
           <NextIntlClientProvider locale="sr" messages={messages}>
             <ScrollProgress />
-            <TopBanner />
             <Navbar />
             <main className="min-h-screen">{children}</main>
             <Footer />

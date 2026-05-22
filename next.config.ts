@@ -17,6 +17,15 @@ const nextConfig: NextConfig = {
   experimental: {
     optimizePackageImports: ["lucide-react", "framer-motion"],
   },
+  async redirects() {
+    return [
+      {
+        source: "/o-nama",
+        destination: "/o-solveri",
+        permanent: true,
+      },
+    ];
+  },
 };
 
 export default withSentryConfig(withNextIntl(nextConfig), {

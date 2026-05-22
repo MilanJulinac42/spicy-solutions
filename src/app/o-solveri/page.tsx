@@ -132,7 +132,7 @@ export default function AboutPage() {
                         <div>
                           <span className="text-purple-400">ai      </span>
                           <span className="text-foreground-muted"> → </span>
-                          OpenAI · n8n · LangChain
+                          OpenAI · Claude · LangChain
                         </div>
                       </div>
                     </div>

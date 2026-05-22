@@ -96,7 +96,7 @@ const SR_CHUNKS: Chunk[] = [
   // --- USLUGE: AI integracije po meri (primarno) ---
   {
     content:
-      "Solvera gradi AI integracije po meri — konkretne automatizacije ugrađene tačno tamo gde firme gube vreme. NE radim n8n ili Zapier opšte automatizacije; gradim AI-native rešenja: obrada dokumenata (fakture → strukturirani podaci), klasifikacija i triage mejlova, sumarizacija sastanaka i izveštaja, AI agenti sa tool use (autonomni tokovi koji čitaju API-je i pišu u baze). Integriše se direktno u postojeći sistem (ERP, CRM, custom).",
+      "Solvera gradi AI integracije po meri — konkretne automatizacije ugrađene tačno tamo gde firme gube vreme. NE radim Zapier-tip opštih workflow automatizacija; gradim AI-native rešenja: obrada dokumenata (fakture → strukturirani podaci), klasifikacija i triage mejlova, sumarizacija sastanaka i izveštaja, AI agenti sa tool use (autonomni tokovi koji čitaju API-je i pišu u baze). Integriše se direktno u postojeći sistem (ERP, CRM, custom).",
     locale: "sr",
     category: "services",
   },
@@ -432,7 +432,7 @@ const SR_CHUNKS: Chunk[] = [
   // --- KOMPLETAN TECH STACK ---
   {
     content:
-      "Kompletan spisak tehnologija sa kojima Solvera radi: AI / LLM — OpenAI (GPT-4/5), Anthropic Claude, LangChain, pgvector, Whisper, ElevenLabs, OpenAI Realtime. Voice / telefonija — Twilio, LiveKit. Frontend — Next.js, React, TypeScript, Tailwind CSS, Framer Motion. Backend — Node.js, Express, REST API. Baze podataka — PostgreSQL, Supabase, pgvector, Redis. Cloud i infrastruktura — AWS (EC2, S3, RDS, Lambda, Bedrock), Vercel, Docker. Sve ostale tehnologije koje nisu na ovom spisku NE koristim. NE radim u: PHP, WordPress, Angular, Vue.js, Java, C#, .NET, Ruby, Django, Laravel, n8n, Zapier.",
+      "Kompletan spisak tehnologija sa kojima Solvera radi: AI / LLM — OpenAI (GPT-4/5), Anthropic Claude, LangChain, pgvector, Whisper, ElevenLabs, OpenAI Realtime. Voice / telefonija — Twilio, LiveKit. Frontend — Next.js, React, TypeScript, Tailwind CSS, Framer Motion. Backend — Node.js, Express, REST API. Baze podataka — PostgreSQL, Supabase, pgvector, Redis. Cloud i infrastruktura — AWS (EC2, S3, RDS, Lambda, Bedrock), Vercel, Docker. Sve ostale tehnologije koje nisu na ovom spisku NE koristim. NE radim u: PHP, WordPress, Angular, Vue.js, Java, C#, .NET, Ruby, Django, Laravel, Zapier.",
     locale: "sr",
     category: "services",
   },
@@ -661,7 +661,7 @@ const SR_CHUNKS: Chunk[] = [
   // --- ŠTA NUDIMO (sažetak za quick reference) ---
   {
     content:
-      "Šta Solvera nudi — PRIMARNO 4 AI PROIZVODA: 1) AI CHATBOT za sajt — RAG asistent obučen na vašoj bazi znanja, 24/7, lead capture. Od 600€. 2) AI VOICE — agent koji prima pozive umesto vas, srpski glas, rezervacije, kvalifikacija. Setup od 1500€. 3) AI ASISTENT za interni tim — privatan asistent za vaše zaposlene, pretražuje vašu dokumentaciju. Od 2000€. 4) AI INTEGRACIJE po meri — obrada dokumenata, triage mejlova, sumarizacija, agentski tokovi. Od 800€. SEKUNDARNO: web razvoj (sajt od 300€) i poslovni sistemi (od 2000€). Solvera NE radi n8n / Zapier opštu automatizaciju — samo AI-native rešenja.",
+      "Šta Solvera nudi — PRIMARNO 4 AI PROIZVODA: 1) AI CHATBOT za sajt — RAG asistent obučen na vašoj bazi znanja, 24/7, lead capture. Od 600€. 2) AI VOICE — agent koji prima pozive umesto vas, srpski glas, rezervacije, kvalifikacija. Setup od 1500€. 3) AI ASISTENT za interni tim — privatan asistent za vaše zaposlene, pretražuje vašu dokumentaciju. Od 2000€. 4) AI INTEGRACIJE po meri — obrada dokumenata, triage mejlova, sumarizacija, agentski tokovi. Od 800€. SEKUNDARNO: web razvoj (sajt od 300€) i poslovni sistemi (od 2000€). Solvera NE radi Zapier-tip opšte workflow automatizacije — samo AI-native rešenja.",
     locale: "sr",
     category: "services",
   },
@@ -669,7 +669,7 @@ const SR_CHUNKS: Chunk[] = [
   // --- BOT GUARDRAILS — šta NE sme da kaže ---
   {
     content:
-      "Stroga pravila za AI asistenta na Solvera sajtu: NIKAD ne izmišlji imena klijenata, kompanija ili specifične brojke o uspehu. NIKAD ne tvrdi 'imamo X+ projekata' ako nisi siguran — Solvera je nov tim. Solvera ima JEDNOG osnivača: Milan Julinac. NIKAD ne pominji druge osobe po imenu kao Solvera zaposlene. NIKAD ne reci da klijenti mogu da nas pozovu telefonom — preferiramo email i WhatsApp. NIKAD ne tvrdi tehnologiju koju Solvera ne koristi (npr. PHP, WordPress, Java, .NET, n8n, Zapier) kao da je deo stack-a. Ako ne znaš odgovor, iskreno reci 'to morate da pitate inženjera direktno — javite se na info@solveradev.rs ili WhatsApp +381 63 838 4196.'",
+      "Stroga pravila za AI asistenta na Solvera sajtu: NIKAD ne izmišlji imena klijenata, kompanija ili specifične brojke o uspehu. NIKAD ne tvrdi 'imamo X+ projekata' ako nisi siguran — Solvera je nov tim. Solvera ima JEDNOG osnivača: Milan Julinac. NIKAD ne pominji druge osobe po imenu kao Solvera zaposlene. NIKAD ne reci da klijenti mogu da nas pozovu telefonom — preferiramo email i WhatsApp. NIKAD ne tvrdi tehnologiju koju Solvera ne koristi (npr. PHP, WordPress, Java, .NET, Zapier) kao da je deo stack-a. Ako ne znaš odgovor, iskreno reci 'to morate da pitate inženjera direktno — javite se na info@solveradev.rs ili WhatsApp +381 63 838 4196.'",
     locale: "sr",
     category: "faq",
   },

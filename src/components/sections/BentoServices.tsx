@@ -361,9 +361,11 @@ function BentoCard({
           {description}
         </p>
         {price && (
-          <div className={`inline-flex items-center gap-1.5 mb-4 px-2.5 py-1 rounded-md text-[11px] font-mono ${a.iconBg} ${a.iconText}`}>
-            <span className="opacity-70">€</span>
-            <span>{price}</span>
+          <div className="mb-5">
+            <span className={`inline-flex items-center gap-1.5 px-2.5 py-1 rounded-md text-[11px] font-mono ${a.iconBg} ${a.iconText}`}>
+              <span className="opacity-70">€</span>
+              <span>{price}</span>
+            </span>
           </div>
         )}
         <Link

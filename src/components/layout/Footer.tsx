@@ -99,7 +99,7 @@ export function Footer() {
               </li>
               <li>
                 <Link
-                  href="/o-nama"
+                  href="/o-solveri"
                   className="text-sm text-gray-400 hover:text-spicy-400 transition-colors link-underline"
                 >
                   {t("Navbar.about")}

@@ -3,7 +3,7 @@
     "home": "Početna",
     "services": "Usluge",
     "process": "Proces",
-    "about": "O nama",
+    "about": "O Solveri",
     "contact": "Kontakt",
     "getStarted": "Besplatna konsultacija",
     "calculator": "Započnite projekat"
@@ -77,55 +77,6 @@
       "description": "Interni alati, dashboardi, SaaS platforme. Ako vam je AI deo većeg sistema — gradim i taj sistem oko njega."
     }
   },
-  "Stats": {
-    "savings": "Brža isporuka",
-    "cheaper": "Vlasništvo nad kodom",
-    "hours": "Automatizovanih procesa",
-    "satisfaction": "Zadovoljstvo klijenata"
-  },
-  "Projects": {
-    "title": "Šta gradim",
-    "subtitle": "Tipični AI scenariji u kojima pravim razliku",
-    "viewProject": "Saznaj više",
-    "project1": {
-      "title": "AI Chatbot koji nikad ne spava",
-      "description": "Vaši klijenti pitaju u svako doba — bot trenutno odgovara na osnovu vaše baze znanja, kvalifikuje upite i hvata leadove. Bez čekanja, bez bolovanja."
-    },
-    "project2": {
-      "title": "AI Voice agent na vašem broju",
-      "description": "Telefon zvoni — AI se javlja, razume šta gostu/klijentu treba, rezerviše termin ili prebacuje vama. Prirodan srpski glas, niska latencija."
-    },
-    "project3": {
-      "title": "Interni AI asistent za vaš tim",
-      "description": "Privatan asistent obučen na vašim dokumentima, procedurama i ugovorima. Vaši ljudi pitaju umesto da satima pretražuju Drive."
-    },
-    "project4": {
-      "title": "AI integracija u vaš poslovni proces",
-      "description": "Konkretan AI tok ugrađen tačno tamo gde gubite vreme — obrada dokumenata, klasifikacija mejlova, sumarizacija razgovora, agentski sistemi."
-    }
-  },
-  "Testimonials": {
-    "title": "Trenutak kad su shvatili",
-    "subtitle": "Šta kažu klijenti kad saznaju koliko IT zaista treba da košta",
-    "testimonial1": {
-      "quote": "Plaćali smo velikoj agenciji 400 EUR mesečno samo za hosting i sitne izmene. Solvera nas je prebacila na bolje rešenje uz jednokratnu naknadu. Još uvek sam besan koliko dugo smo preplaćivali.",
-      "name": "Marko Petrović",
-      "role": "Direktor",
-      "company": "TechVentures"
-    },
-    "testimonial2": {
-      "quote": "Tražili su nam 12.000 EUR za pametnog asistenta. Solvera je napravila nešto bolje za četvrtinu te cene. Isplativost je bila očigledna već prvog meseca.",
-      "name": "Ana Jovanović",
-      "role": "Tehnički direktor",
-      "company": "DataFlow Inc."
-    },
-    "testimonial3": {
-      "quote": "Nisam ni znao da n8n postoji. Imali smo dvoje ljudi koji su radili unos podataka koji besplatan alat može da automatizuje. Solvera je to podesio za nedelju dana i uštedeo nam 1.500 EUR mesečno.",
-      "name": "Stefan Nikolić",
-      "role": "Menadžer operacija",
-      "company": "LogiPro"
-    }
-  },
   "WhyTrustUs": {
     "title": "Zašto da mi verujete?",
     "subtitle": "Solo founder, fokusiran — upravo zato je isporuka brža i efikasnija",
@@ -139,7 +90,7 @@
     },
     "speed": {
       "title": "Moderne tehnologije, brza isporuka",
-      "description": "Koristim Next.js, AI, n8n i iste alate koje koriste vodeće tehnološke kompanije. Vaš projekat se gradi tehnologijom koja zaista radi."
+      "description": "Koristim Next.js, OpenAI, LangChain i iste alate koje koriste vodeće tehnološke kompanije. Vaš projekat se gradi tehnologijom koja zaista radi."
     },
     "direct": {
       "title": "Direktna komunikacija",
@@ -511,7 +462,7 @@
   },
   "About": {
     "title": "Solvera ≠ agencija",
-    "subtitle": "Solvera je fokusiran inženjerski proces vođen jednim full-stack inženjerom iz Novog Sada. Bez account menadžera, bez 30 zaposlenih, bez nepotrebnih troškova — samo direktan rad i kod koji je vaš od prvog dana.",
+    "subtitle": "Iza Solvere sam ja — jedan full-stack inženjer iz Novog Sada. Bez account menadžera, bez 30 zaposlenih, bez nepotrebnih troškova — samo direktan rad i kod koji je vaš od prvog dana.",
     "intro": {
       "name": "Milan Julinac",
       "role": "Osnivač i full-stack inženjer",
@@ -561,7 +512,7 @@
       "title": "U šta verujem",
       "innovation": {
         "title": "Samo moderna tehnologija",
-        "description": "Koristim Next.js, AI, n8n — iste alate koje koriste vrhunske tehnološke kompanije. Moderan razvoj, brza isporuka."
+        "description": "Koristim Next.js, OpenAI, LangChain — iste alate koje koriste vrhunske tehnološke kompanije. Moderan razvoj, brza isporuka."
       },
       "quality": {
         "title": "Kvalitet bez kompromisa",
@@ -1007,7 +958,7 @@
     "lastUpdated": "Poslednje ažuriranje: mart 2026.",
     "intro": "Korišćenjem sajta solveradev.rs i Solvera usluga, prihvatate sledeće uslove. Molimo vas da ih pažljivo pročitate.",
     "section1": {
-      "title": "O nama",
+      "title": "O Solveri",
       "p1": "Solvera je IT kompanija sa sedištem u Novom Sadu, Srbija. Pružam usluge razvoja softvera, web aplikacija, AI integracija i automatizacije poslovnih procesa."
     },
     "section2": {
@@ -1246,13 +1197,13 @@
           "crmSync": "Povezivanje sa CRM sistemom / Obrada upita",
           "apiIntegration": "Povezivanje sistema (API integracije)",
           "scraping": "Preuzimanje podataka sa sajtova",
-          "workflow": "Automatski tokovi (n8n / Make)",
+          "workflow": "Automatski radni tokovi",
           "reporting": "Automatsko slanje izveštaja"
         },
         "featuresLabel": "Platforme i funkcionalnosti",
         "features": {
-          "n8n": "n8n / Make",
-          "zapier": "Zapier",
+          "workflow": "Automatski radni tokovi",
+          "zapier": "Zapier / Make",
           "customApi": "Prilagođen API / Posebne poveznice",
           "dbSync": "Sinhronizacija baze podataka",
           "errorHandling": "Obrada grešaka i obaveštenja",
