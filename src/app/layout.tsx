@@ -5,6 +5,7 @@ import Script from "next/script";
 import { Geist, Geist_Mono } from "next/font/google";
 import { ThemeProvider } from "next-themes";
 import { Navbar } from "@/components/layout/Navbar";
+import { TopBanner } from "@/components/layout/TopBanner";
 import { Footer } from "@/components/layout/Footer";
 import { ScrollProgress } from "@/components/ui/ScrollProgress";
 import { FloatingWidgets } from "@/components/layout/FloatingWidgets";
@@ -13,6 +14,7 @@ import { Suspense } from "react";
 import {
   organizationSchema,
   websiteSchema,
+  localBusinessSchema,
   jsonLdString,
 } from "@/lib/jsonld";
 import "@/app/globals.css";
@@ -39,7 +41,18 @@ export const metadata: Metadata = {
     template: "%s | Solvera",
   },
   description:
-    "Od sajtova do poslovnih sistema, AI chatbot-ova do automatizacije — isporučujem tehnologiju koja pokreće vaš biznis napred. Brza isporuka, direktna komunikacija, bez kompromisa.",
+    "AI automatizacija za srpske firme — AI chatbot za sajt, voice agent na srpskom, interni AI asistent i AI integracije po meri. Brza isporuka, fiksna cena, kod ostaje vaš. Direktan rad sa inženjerom iz Novog Sada.",
+  keywords: [
+    "AI automatizacija Srbija",
+    "AI chatbot za srpske firme",
+    "AI voice agent srpski",
+    "AI asistent za firme",
+    "AI integracije Srbija",
+    "razvoj sajtova Novi Sad",
+    "Next.js developer Srbija",
+    "n8n automatizacija",
+    "freelance inženjer Srbija",
+  ],
   metadataBase: new URL("https://www.solveradev.rs"),
   openGraph: {
     type: "website",
@@ -48,13 +61,13 @@ export const metadata: Metadata = {
     siteName: "Solvera",
     title: "Solvera | Vi vodite biznis, ja brinem o tehnologiji",
     description:
-      "Od sajtova do poslovnih sistema, AI chatbot-ova do automatizacije — isporučujem tehnologiju koja pokreće vaš biznis napred.",
+      "AI chatbot, voice agent na srpskom, interni AI asistent i AI integracije za srpske firme. Brza isporuka, fiksna cena, kod ostaje vaš.",
   },
   twitter: {
     card: "summary_large_image",
     title: "Solvera | Vi vodite biznis, ja brinem o tehnologiji",
     description:
-      "Od sajtova do poslovnih sistema, AI chatbot-ova do automatizacije — isporučujem tehnologiju koja pokreće vaš biznis napred.",
+      "AI chatbot, voice agent na srpskom, interni AI asistent i AI integracije za srpske firme. Brza isporuka, fiksna cena, kod ostaje vaš.",
   },
   icons: {
     icon: [
@@ -95,6 +108,10 @@ export default async function RootLayout({
           type="application/ld+json"
           dangerouslySetInnerHTML={{ __html: jsonLdString(websiteSchema) }}
         />
+        <script
+          type="application/ld+json"
+          dangerouslySetInnerHTML={{ __html: jsonLdString(localBusinessSchema) }}
+        />
       </head>
       <body
         className={`${geistSans.variable} ${geistMono.variable} antialiased bg-surface text-foreground`}
@@ -108,6 +125,7 @@ export default async function RootLayout({
         >
           <NextIntlClientProvider locale="sr" messages={messages}>
             <ScrollProgress />
+            <TopBanner />
             <Navbar />
             <main className="min-h-screen">{children}</main>
             <Footer />

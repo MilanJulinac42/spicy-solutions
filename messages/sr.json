@@ -50,19 +50,23 @@
     "secondaryLabel": "Sekundarno — Web i custom razvoj",
     "chatbot": {
       "title": "AI Chatbot na sajtu",
-      "description": "Posetilac sajta ima pitanje u 23h. Bot odgovara trenutno, na osnovu vaše baze znanja — cene, usluge, procedure. Kvalifikuje upit, hvata lead u CRM, šalje vam email. Ujutru dobijate listu kvalifikovanih klijenata umesto liste propuštenih pitanja."
+      "description": "Posetilac sajta ima pitanje u 23h. Bot odgovara trenutno, na osnovu vaše baze znanja — cene, usluge, procedure. Kvalifikuje upit, hvata lead u CRM, šalje vam email. Ujutru dobijate listu kvalifikovanih klijenata umesto liste propuštenih pitanja.",
+      "price": "Setup 600–2000€ · mesečno 20–50€"
     },
     "voice": {
       "title": "AI Voice — prima pozive",
-      "description": "Frizerski salon, ordinacija, turistička agencija — klijenti zovu kad ne radite ili kad ste zauzeti. Izgubljeni pozivi = izgubljeni klijenti. AI voice agent prima poziv, razume zahtev na srpskom, zakazuje termin ili prebacuje vama kad je potrebno."
+      "description": "Frizerski salon, ordinacija, turistička agencija — klijenti zovu kad ne radite ili kad ste zauzeti. Izgubljeni pozivi = izgubljeni klijenti. AI voice agent prima poziv, razume zahtev na srpskom, zakazuje termin ili prebacuje vama kad je potrebno.",
+      "price": "Od 1000€ · mesečno 30–80€ + Twilio troškovi"
     },
     "assistant": {
       "title": "AI Asistent za interni tim",
-      "description": "Vaš tim gubi sate pretražujući Drive za procedure, ugovore, politike. Privatan AI asistent obučen na vašoj dokumentaciji daje odgovor u sekundi — ne mora da napušta vašu firmu, ne deli podatke sa OpenAI."
+      "description": "Vaš tim gubi sate pretražujući Drive za procedure, ugovore, politike. Privatan AI asistent obučen na vašoj dokumentaciji daje odgovor u sekundi — ne mora da napušta vašu firmu, ne deli podatke sa OpenAI.",
+      "price": "Setup od ~2000€ · mesečno: trošak modela"
     },
     "aiIntegrations": {
       "title": "AI integracije po meri",
-      "description": "Email upit dolazi — AI klasifikuje hitnost, izvlači ključne podatke, predlaže odgovor. Faktura stiže — AI parsira, validira, ubacuje u sistem. Sastanak završen — AI generiše sažetak i akcione stavke. Konkretni tokovi za vaš proces."
+      "description": "Email upit dolazi — AI klasifikuje hitnost, izvlači ključne podatke, predlaže odgovor. Faktura stiže — AI parsira, validira, ubacuje u sistem. Sastanak završen — AI generiše sažetak i akcione stavke. Konkretni tokovi za vaš proces.",
+      "price": "Od 500€ · kompleksniji projekti po dogovoru"
     },
     "websites": {
       "title": "Sajtovi i web aplikacije",
@@ -304,7 +308,7 @@
           },
           "q3": {
             "question": "Koliko košta?",
-            "answer": "Setup od ~600€ (mali bot, FAQ tip) do ~3000€ (full RAG sa integracijama). Mesečno: trošak modela (najčešće 10–50€) + opcioni paket podrške."
+            "answer": "Setup 600–2000€ (od malog FAQ bota do full RAG sa integracijama). Mesečno: trošak modela (najčešće 20–50€) + opcioni paket podrške."
           },
           "q4": {
             "question": "Koliko traje setup?",
@@ -1042,6 +1046,39 @@
       "address": "Novi Sad, Srbija",
       "email": "info@solveradev.rs"
     }
+  },
+  "TopBanner": {
+    "highlight": "Maj/jun",
+    "text": "Trenutno mogu da prihvatim 2 nova klijenta. Zakažite besplatnu konsultaciju da rezervišete mesto.",
+    "cta": "Zakažite poziv",
+    "dismissAria": "Zatvori banner"
+  },
+  "HomeFaq": {
+    "title": "Pitanja koja klijenti najčešće postavljaju",
+    "subtitle": "Iskrene odgovore na ono što obično zanima vlasnike SMB-a pre nego što potpišu.",
+    "items": {
+      "security": {
+        "question": "Kako se podaci čuvaju i da li je sigurno?",
+        "answer": "Podaci se čuvaju na serverima u EU (Vercel/Supabase/AWS Frankfurt) ili na vašoj infrastrukturi — vi birate. Za osetljive podatke koristim Azure OpenAI ili AWS Bedrock sa enterprise privatnošću — modeli ne treniraju na vašim podacima. Sve je u skladu sa GDPR-om i ZZPL-om."
+      },
+      "switch": {
+        "question": "Da li mogu da pređem na drugog provajdera ako se predomislim?",
+        "answer": "Da. Kod, dokumentacija, kredencijali i sva infrastruktura su na vaše ime od prvog dana. Bez vendor lock-in-a, bez tajnih ključeva, bez „dođite po izvorni kod kad platite još 2000€\". Predaja drugom timu traje par sati — predam šta postoji i to je to."
+      },
+      "timeline": {
+        "question": "Koliko dugo traje implementacija?",
+        "answer": "Chatbot 1–2 nedelje, voice agent 2–4 nedelje, interni asistent 2–6 nedelja, AI integracija 1–4 nedelje. Tačan rok dobijate u pisanoj ponudi pre potpisa — ne klizi posle."
+      },
+      "changes": {
+        "question": "Šta ako mi treba izmena posle 6 meseci?",
+        "answer": "Dve opcije: mesečni paket održavanja (fiksna cena) ili rad po potrebi (po satu/zadatku). Pošto kod ostaje vaš, možete me angažovati, drugog inženjera ili sami nastaviti — kako god vam odgovara."
+      },
+      "contract": {
+        "question": "Da li radimo ugovor ili je sve usmeno?",
+        "answer": "Ugovor uvek — Ugovor o pružanju usluga (firma na firmu, dvojezičan po potrebi) sa jasno definisanim obimom, rokovima, cenom, garancijom i klauzulom o vlasništvu nad kodom. Predračun za depozit, faktura po isporuci. Sve transparentno."
+      }
+    },
+    "cta": "Imate drugo pitanje? Pišite mi"
   },
   "Footer": {
     "description": "Brz i kvalitetan IT za srpske biznise. Moderna tehnologija, direktna komunikacija, nula čekanja.",
