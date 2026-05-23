@@ -950,6 +950,73 @@
       "company": "Solvera",
       "address": "Novi Sad, Srbija",
       "email": "info@solveradev.rs"
+    },
+    "section6": {
+      "title": "Instagram i Messenger AI chatbot",
+      "p1": "Solvera nudi uslugu AI chatbot-a za biznise koji koriste Instagram Direct i Facebook Messenger. Ako pišete biznisu (škola, salon, ordinacija, restoran itd.) koji koristi Solvera chatbot, vaše poruke obrađuje naš sistem u ime tog biznisa.",
+      "p2": "Šta prikupljamo kada pišete biznisu sa Solvera botom:",
+      "items": {
+        "i1": "Sadržaj poruka koje šaljete u Direct/Messenger razgovoru",
+        "i2": "Vaš Instagram ili Messenger ID (koji Meta dodeljuje vašem nalogu)",
+        "i3": "Vreme slanja poruke",
+        "i4": "Kontakt podatke koje sami delite u razgovoru (telefon, imejl, ime)"
+      },
+      "p3": "Ne pristupamo vašem profilu, ne čitamo druge razgovore, i ne koristimo vaše podatke u marketinške svrhe — niti svoje, niti tuđe."
+    },
+    "section7": {
+      "title": "Obrada veštačkom inteligencijom (OpenAI)",
+      "p1": "Za generisanje odgovora chatbot-a koristimo OpenAI (modeli iz GPT porodice) kao spoljnjeg obrađivača. Sadržaj vaših poruka se šalje OpenAI API-ju isključivo radi generisanja odgovora i ne koristi se ni za jedno drugo svrhu.",
+      "p2": "OpenAI ima zero-retention politiku za API pozive: vaše poruke se ne koriste za treniranje modela i ne čuvaju se na njihovoj strani nakon obrade.",
+      "p3": "Detaljnije: openai.com/policies/api-data-usage-policies"
+    },
+    "section8": {
+      "title": "Čuvanje podataka i pravo na brisanje",
+      "p1": "Konverzacije sa chatbot-om čuvamo do 12 meseci radi kontinuiteta razgovora i izveštavanja vlasniku biznisa. Lead kontakti (telefon, imejl koje delite) čuvaju se dok ih vlasnik biznisa ne obriše ili dok vi ne zatražite brisanje.",
+      "p2": "U bilo kom trenutku možete zatražiti brisanje svih svojih podataka iz našeg sistema.",
+      "p3": "Da podnesete zahtev za brisanje:",
+      "items": {
+        "i1": "Posetite stranicu za brisanje podataka: solveradev.rs/data-deletion",
+        "i2": "Ili pošaljite imejl na info@solveradev.rs sa naslovom \"Zahtev za brisanje podataka\"",
+        "i3": "Vaši podaci će biti obrisani u roku od 30 dana"
+      }
+    }
+  },
+  "DataDeletion": {
+    "title": "Zahtev za brisanje podataka",
+    "subtitle": "Zatražite trajno brisanje vaših podataka iz Solvera sistema",
+    "intro": "Ako ste komunicirali sa nekim biznisom koji koristi Solvera AI chatbot na Instagram-u ili Messenger-u, vaše poruke i kontakt podaci se čuvaju u našem sistemu. Možete u bilo kom trenutku zatražiti trajno brisanje svih podataka koje imamo o vama.",
+    "whatHappens": {
+      "title": "Šta se događa nakon zahteva",
+      "items": {
+        "i1": "Pregledamo vaš zahtev u roku od 5 radnih dana",
+        "i2": "Brišemo sve poruke, konverzacije i lead kontakte vezane za vaš nalog",
+        "i3": "Šaljemo potvrdu na imejl koji ste naveli",
+        "i4": "Kompletno brisanje se završava u roku od 30 dana"
+      }
+    },
+    "form": {
+      "title": "Podnesite zahtev",
+      "emailLabel": "Vaš imejl",
+      "emailPlaceholder": "vaš@email.com",
+      "emailHelp": "Imejl na kojem želite da dobijete potvrdu brisanja",
+      "igHandleLabel": "Instagram ili Messenger korisničko ime (po želji)",
+      "igHandlePlaceholder": "@vase_korisnicko_ime",
+      "igHandleHelp": "Ako znate, navedite — pomaže nam da brže pronađemo vaše podatke",
+      "businessLabel": "Sa kojim biznisom ste komunicirali? (po želji)",
+      "businessPlaceholder": "npr. Škola jezika Ema, Salon Vule",
+      "reasonLabel": "Razlog brisanja (po želji)",
+      "reasonPlaceholder": "Slobodno napišite, nije obavezno...",
+      "submit": "Pošaljite zahtev",
+      "submitting": "Slanje...",
+      "error": "Greška pri slanju. Pokušajte ponovo ili nas direktno kontaktirajte.",
+      "success": {
+        "title": "Zahtev je primljen",
+        "subtitle": "Javiću vam se u roku od 5 radnih dana sa potvrdom brisanja. Hvala što ste podneli zahtev."
+      }
+    },
+    "alternative": {
+      "title": "Drugi način",
+      "body": "Možete poslati i direktno imejl na info@solveradev.rs sa naslovom \"Zahtev za brisanje podataka\"."
     }
   },
   "Terms": {

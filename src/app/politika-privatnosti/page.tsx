@@ -2,17 +2,18 @@
 
 import { useTranslations } from "next-intl";
 import { motion } from "framer-motion";
+import Link from "next/link";
 import { Shield, CheckCircle2, Mail, MapPin } from "lucide-react";
 import { Container } from "@/components/ui/Container";
 import { SectionHeading } from "@/components/ui/SectionHeading";
 import { fadeInUp, staggerContainer } from "@/lib/animations";
 
-const sections = ["section1", "section2", "section3", "section4", "section5"] as const;
-
 const sectionItemCounts: Record<string, string[]> = {
   section1: ["i1", "i2", "i3", "i4"],
   section2: ["i1", "i2", "i3"],
   section4: ["i1", "i2", "i3", "i4"],
+  section6: ["i1", "i2", "i3", "i4"],
+  section8: ["i1", "i2", "i3"],
 };
 
 export default function PrivacyPage() {
@@ -141,11 +142,96 @@ export default function PrivacyPage() {
               </p>
             </motion.div>
 
-            {/* Section 5: Contact */}
-            <motion.div variants={fadeInUp}>
+            {/* Section 5: Instagram & Messenger AI chatbot */}
+            <motion.div variants={fadeInUp} className="mb-10">
               <h3 className="text-xl font-bold text-foreground mb-4 flex items-center gap-2">
                 <span className="w-8 h-8 flex items-center justify-center rounded-lg bg-spicy-400/10 text-spicy-400 text-sm font-bold">
                   5
+                </span>
+                {t("section6.title")}
+              </h3>
+              <p className="text-foreground-muted leading-relaxed mb-3">
+                {t("section6.p1")}
+              </p>
+              <p className="text-foreground-muted leading-relaxed mb-3">
+                {t("section6.p2")}
+              </p>
+              <ul className="space-y-2 mb-4">
+                {sectionItemCounts.section6.map((key) => (
+                  <li
+                    key={key}
+                    className="flex items-start gap-2 text-foreground-secondary"
+                  >
+                    <CheckCircle2 className="w-4 h-4 text-spicy-400 shrink-0 mt-1" />
+                    <span className="text-sm">{t(`section6.items.${key}`)}</span>
+                  </li>
+                ))}
+              </ul>
+              <p className="text-foreground-muted leading-relaxed">
+                {t("section6.p3")}
+              </p>
+            </motion.div>
+
+            {/* Section 6: AI processing (OpenAI) */}
+            <motion.div variants={fadeInUp} className="mb-10">
+              <h3 className="text-xl font-bold text-foreground mb-4 flex items-center gap-2">
+                <span className="w-8 h-8 flex items-center justify-center rounded-lg bg-spicy-400/10 text-spicy-400 text-sm font-bold">
+                  6
+                </span>
+                {t("section7.title")}
+              </h3>
+              <p className="text-foreground-muted leading-relaxed mb-3">
+                {t("section7.p1")}
+              </p>
+              <p className="text-foreground-muted leading-relaxed mb-3">
+                {t("section7.p2")}
+              </p>
+              <p className="text-foreground-muted leading-relaxed text-sm">
+                {t("section7.p3")}
+              </p>
+            </motion.div>
+
+            {/* Section 7: Data retention & deletion */}
+            <motion.div variants={fadeInUp} className="mb-10">
+              <h3 className="text-xl font-bold text-foreground mb-4 flex items-center gap-2">
+                <span className="w-8 h-8 flex items-center justify-center rounded-lg bg-spicy-400/10 text-spicy-400 text-sm font-bold">
+                  7
+                </span>
+                {t("section8.title")}
+              </h3>
+              <p className="text-foreground-muted leading-relaxed mb-3">
+                {t("section8.p1")}
+              </p>
+              <p className="text-foreground-muted leading-relaxed mb-3">
+                {t("section8.p2")}
+              </p>
+              <p className="text-foreground-muted leading-relaxed mb-3">
+                {t("section8.p3")}
+              </p>
+              <ul className="space-y-2 mb-4">
+                {sectionItemCounts.section8.map((key) => (
+                  <li
+                    key={key}
+                    className="flex items-start gap-2 text-foreground-secondary"
+                  >
+                    <CheckCircle2 className="w-4 h-4 text-spicy-400 shrink-0 mt-1" />
+                    <span className="text-sm">{t(`section8.items.${key}`)}</span>
+                  </li>
+                ))}
+              </ul>
+              <Link
+                href="/data-deletion"
+                className="inline-flex items-center gap-2 text-sm font-medium text-spicy-400 hover:text-spicy-300 transition-colors"
+              >
+                Zatražite brisanje podataka →
+              </Link>
+            </motion.div>
+
+            {/* Section 8: Contact */}
+            <motion.div variants={fadeInUp}>
+              <h3 className="text-xl font-bold text-foreground mb-4 flex items-center gap-2">
+                <span className="w-8 h-8 flex items-center justify-center rounded-lg bg-spicy-400/10 text-spicy-400 text-sm font-bold">
+                  8
                 </span>
                 {t("section5.title")}
               </h3>
