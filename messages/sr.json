@@ -1148,43 +1148,45 @@
       },
       "ai": {
         "title": "AI rešenje",
-        "description": "Pametni asistenti, sistemi za pretragu dokumenata, AI automatizacija",
-        "subtypeLabel": "Koja vrsta AI rešenja?",
+        "description": "Chatbot, voice agent, interni asistent, AI integracija u proces",
+        "subtypeLabel": "Koji tip AI rešenja vas zanima?",
         "subtypes": {
-          "chatbot": "Pametni asistent (korisnička podrška)",
-          "rag": "Pretraga vaših dokumenata (RAG)",
-          "content": "Generator sadržaja i tekstova",
-          "agent": "AI agent / automatizacija zadataka",
-          "voice": "Glasovni asistent (telefonski sistem)",
-          "ocr": "Automatsko čitanje dokumenata"
+          "chatbot": "AI Chatbot (sajt / Instagram / Messenger)",
+          "voice": "AI Voice agent (prima pozive)",
+          "assistant": "Interni AI asistent (tim, dokumenti)",
+          "integration": "AI integracija u proces (email, fakture, izveštaji)",
+          "other": "Nešto drugo / nisam siguran"
         },
         "featuresLabel": "Funkcionalnosti",
         "features": {
-          "knowledgeBase": "Povezivanje sa bazom znanja",
-          "leadCapture": "Prikupljanje upita",
-          "crmIntegration": "Povezivanje sa CRM sistemom",
-          "multilang": "Više jezika",
+          "leadCapture": "Hvatanje upita i kontakta (lead capture)",
+          "knowledgeBase": "Baza znanja iz vaših dokumenata",
+          "calendarBooking": "Automatsko zakazivanje u kalendaru",
+          "smsNotify": "SMS / Email obaveštenje vlasniku za nove leadove",
+          "crmIntegration": "Povezivanje sa CRM-om",
+          "handoff": "Eskalacija živom operateru (prebacivanje)",
+          "multilang": "Više jezika (srpski + EN/DE itd.)",
+          "dashboard": "Pregledna tabla sa razgovorima i leadovima",
           "analytics": "Analitika korišćenja",
-          "apiAccess": "Pristup preko API-ja",
-          "handoff": "Prosleđivanje živom operateru",
-          "fineTuning": "Doterivanje modela / Prilagođen model"
+          "apiAccess": "Pristup preko API-ja / custom integracija"
         },
-        "scopeLabel": "Količina podataka / dokumenata",
+        "scopeLabel": "Obim rešenja",
         "scopeOptions": {
-          "small": "Do 100 dokumenata",
-          "medium": "100 – 1.000 dokumenata",
-          "large": "1.000+ dokumenata"
+          "pilot": "Pilot (1 kanal, mesec dana proba)",
+          "small": "Mali biznis (1 kanal — sajt ILI IG ILI telefon)",
+          "medium": "Srednji obim (2–3 kanala povezana)",
+          "large": "Veći sistem (više lokacija / custom integracije)"
         },
         "timelineOptions": {
-          "urgent": "2–3 nedelje",
-          "normal": "1–2 meseca",
-          "flexible": "2+ meseca"
+          "urgent": "1–2 nedelje",
+          "normal": "2–4 nedelje",
+          "flexible": "1–2 meseca"
         },
         "budgetOptions": {
           "tier1": "Do 500€",
-          "tier2": "500€ – 2.000€",
-          "tier3": "2.000€ – 5.000€",
-          "tier4": "5.000€+",
+          "tier2": "500€ – 1.500€",
+          "tier3": "1.500€ – 4.000€",
+          "tier4": "4.000€+",
           "unsure": "Nisam siguran/na"
         }
       },

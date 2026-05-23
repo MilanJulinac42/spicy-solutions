@@ -1,6 +1,6 @@
-import { Globe, Building2, type LucideIcon } from "lucide-react";
+import { Globe, Building2, Sparkles, Workflow, type LucideIcon } from "lucide-react";
 
-export type ServiceType = "websites" | "enterprise";
+export type ServiceType = "ai" | "automation" | "websites" | "enterprise";
 
 export interface ServiceConfig {
   icon: LucideIcon;
@@ -18,6 +18,56 @@ export interface ServiceConfig {
 }
 
 export const SERVICE_CONFIG: Record<ServiceType, ServiceConfig> = {
+  ai: {
+    icon: Sparkles,
+    subtypes: ["chatbot", "voice", "assistant", "integration", "other"],
+    features: [
+      "leadCapture",
+      "knowledgeBase",
+      "calendarBooking",
+      "smsNotify",
+      "crmIntegration",
+      "handoff",
+      "multilang",
+      "dashboard",
+      "analytics",
+      "apiAccess",
+    ],
+    featuresBySubtype: {
+      chatbot: ["leadCapture", "knowledgeBase", "calendarBooking", "smsNotify", "crmIntegration", "handoff", "multilang", "dashboard"],
+      voice: ["calendarBooking", "smsNotify", "crmIntegration", "handoff", "multilang", "dashboard", "analytics"],
+      assistant: ["knowledgeBase", "multilang", "dashboard", "apiAccess"],
+      integration: ["crmIntegration", "smsNotify", "apiAccess", "dashboard", "analytics"],
+      other: ["leadCapture", "knowledgeBase", "crmIntegration", "multilang", "apiAccess", "dashboard", "analytics"],
+    },
+    scopeOptions: ["pilot", "small", "medium", "large"],
+    timelineOptions: ["urgent", "normal", "flexible"],
+    budgetOptions: ["tier1", "tier2", "tier3", "tier4", "unsure"],
+  },
+  automation: {
+    icon: Workflow,
+    subtypes: ["crmSync", "apiIntegration", "scraping", "workflow", "reporting", "marketing"],
+    features: [
+      "workflow",
+      "zapier",
+      "customApi",
+      "dbSync",
+      "errorHandling",
+      "notifications",
+      "scheduling",
+    ],
+    featuresBySubtype: {
+      crmSync: ["workflow", "customApi", "dbSync", "errorHandling", "notifications"],
+      apiIntegration: ["customApi", "dbSync", "errorHandling", "notifications", "scheduling"],
+      scraping: ["workflow", "scheduling", "errorHandling", "notifications"],
+      workflow: ["workflow", "zapier", "errorHandling", "notifications", "scheduling"],
+      reporting: ["scheduling", "notifications", "dbSync", "customApi"],
+      marketing: ["workflow", "zapier", "notifications", "scheduling"],
+    },
+    scopeOptions: ["small", "medium", "large"],
+    timelineOptions: ["urgent", "normal", "flexible"],
+    budgetOptions: ["tier1", "tier2", "tier3", "tier4", "unsure"],
+  },
   websites: {
     icon: Globe,
     subtypes: ["landing", "corporate", "ecommerce", "portfolio", "blog"],
@@ -96,7 +146,7 @@ export const SERVICE_CONFIG: Record<ServiceType, ServiceConfig> = {
   },
 };
 
-export const SERVICE_TYPES: ServiceType[] = ["websites", "enterprise"];
+export const SERVICE_TYPES: ServiceType[] = ["ai", "automation", "websites", "enterprise"];
 
 export const CONTACT_CHANNELS = ["email", "phone", "whatsapp"] as const;
 export type ContactChannel = (typeof CONTACT_CHANNELS)[number];
