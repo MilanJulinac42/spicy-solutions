@@ -19,9 +19,19 @@ type ChatPanelProps = {
   messages: Message[];
   setMessages: (msgs: Message[]) => void;
   nextId: MutableRefObject<number>;
+  initialQuestion?: string | null;
+  onInitialQuestionConsumed?: () => void;
 };
 
-export function ChatPanel({ onClose, onReset, messages, setMessages, nextId }: ChatPanelProps) {
+export function ChatPanel({
+  onClose,
+  onReset,
+  messages,
+  setMessages,
+  nextId,
+  initialQuestion = null,
+  onInitialQuestionConsumed,
+}: ChatPanelProps) {
   const t = useTranslations("Chat");
   const locale = useLocale();
   const [input, setInput] = useState("");
@@ -73,6 +83,21 @@ export function ChatPanel({ onClose, onReset, messages, setMessages, nextId }: C
   useEffect(() => {
     inputRef.current?.focus();
   }, []);
+
+  // When opened from a demo CTA with a preset question, send it to the bot
+  // automatically. Deferring via setTimeout makes this strict-mode-safe: the
+  // throwaway dev mount schedules then cancels the send in its cleanup, so only
+  // the stable mount actually fires it (and its fetch isn't aborted mid-flight).
+  useEffect(() => {
+    if (!initialQuestion) return;
+    const id = setTimeout(() => {
+      handleSend(initialQuestion);
+      onInitialQuestionConsumed?.();
+    }, 0);
+    return () => clearTimeout(id);
+    // handleSend is stable enough for this one-shot trigger; keep deps minimal.
+    // eslint-disable-next-line react-hooks/exhaustive-deps
+  }, [initialQuestion]);
 
   // Cleanup on unmount
   useEffect(() => {

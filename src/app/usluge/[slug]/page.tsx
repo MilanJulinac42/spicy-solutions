@@ -51,6 +51,8 @@ import {
 } from "@/lib/animations";
 import { services } from "@/data/services";
 import { ServiceIllustration } from "@/components/features/ServiceIllustration";
+import { ChatDemoCTA } from "@/components/sections/ChatDemoCTA";
+import { ChatbotPricing } from "@/components/sections/ChatbotPricing";
 import Link from "next/link";
 import { notFound } from "next/navigation";
 
@@ -151,6 +153,15 @@ export default function ServicePage() {
           </div>
         </Container>
       </section>
+
+      {/* Live chatbot demo — only on the chatbot service page */}
+      {slug === "chatbot" && (
+        <section className="pt-12 md:pt-16">
+          <Container>
+            <ChatDemoCTA />
+          </Container>
+        </section>
+      )}
 
       {/* Features */}
       <section className="py-20 md:py-28">
@@ -275,6 +286,9 @@ export default function ServicePage() {
           </motion.div>
         </Container>
       </section>
+
+      {/* Pricing — only on the chatbot service page */}
+      {slug === "chatbot" && <ChatbotPricing />}
 
       {/* Technologies */}
       <section className="py-20 md:py-28 bg-surface-secondary">

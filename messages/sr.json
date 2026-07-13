@@ -4,9 +4,22 @@
     "services": "Usluge",
     "process": "Proces",
     "about": "O Solveri",
+    "blog": "Blog",
     "contact": "Kontakt",
     "getStarted": "Besplatna konsultacija",
     "calculator": "Započnite projekat"
+  },
+  "Blog": {
+    "title": "Blog",
+    "subtitle": "AI, automatizacija i praktični saveti za srpske firme — konkretno, bez marketinškog blabla.",
+    "readingTime": "{minutes} min čitanja",
+    "backToBlog": "Nazad na blog",
+    "empty": "Uskoro stižu prvi tekstovi.",
+    "readPost": "Pročitaj tekst",
+    "relatedServiceLabel": "Povezana usluga",
+    "ctaTitle": "Hoćeš ovakvo rešenje za svoju firmu?",
+    "ctaText": "Zakaži besplatnu konsultaciju — pogledamo tvoj slučaj i iskreno ti kažem da li se isplati i koliko bi koštalo.",
+    "ctaButton": "Besplatna konsultacija"
   },
   "Hero": {
     "badge": "Brza isporuka. Direktna komunikacija. Kvalitet bez kompromisa.",
@@ -76,6 +89,16 @@
       "title": "Poslovni sistemi po meri",
       "description": "Interni alati, dashboardi, SaaS platforme. Ako vam je AI deo većeg sistema — gradim i taj sistem oko njega."
     }
+  },
+  "ChatDemo": {
+    "badge": "Uživo na ovom sajtu",
+    "title": "Probaj Solvera bota — radi upravo sad",
+    "description": "Ovo je isti RAG chatbot koji gradim za klijente, samo obučen o Solveri. Pitaj ga za cene, proces ili tech stack — odgovara iz naše baze znanja, ne izmišlja.",
+    "cta": "Otvori chatbot",
+    "tryLabel": "Probaj odmah:",
+    "q1": "Koliko košta AI chatbot?",
+    "q2": "Koji tech stack koristite?",
+    "q3": "Kako izgleda saradnja?"
   },
   "WhyTrustUs": {
     "title": "Zašto da mi verujete?",
@@ -1112,7 +1135,8 @@
     "learnMore": "Saznajte više",
     "contactUs": "Besplatna konsultacija",
     "viewProject": "Pogledaj projekat",
-    "readMore": "Pročitajte više"
+    "readMore": "Pročitajte više",
+    "tryLive": "Probaj uživo"
   },
   "StartProject": {
     "title": "Započnite projekat",

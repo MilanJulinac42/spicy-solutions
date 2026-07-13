@@ -6,11 +6,13 @@ import { motion, useInView } from "framer-motion";
 import Link from "next/link";
 import { Container } from "@/components/ui/Container";
 import { SectionHeading } from "@/components/ui/SectionHeading";
+import { openSolveraChat } from "@/lib/openChat";
 import {
   ArrowUpRight,
   Globe,
   Building2,
   MessageSquare,
+  MessageCircle,
   Phone,
   Bot,
   Sparkles,
@@ -285,11 +287,19 @@ interface BentoCardProps {
   className?: string;
   delay?: number;
   price?: string;
+  showChatDemo?: boolean;
 }
 
 const accentMap: Record<
   string,
-  { hover: string; iconBg: string; iconText: string; ctaBg: string; ctaHover: string }
+  {
+    hover: string;
+    iconBg: string;
+    iconText: string;
+    ctaBg: string;
+    ctaHover: string;
+    filled: string;
+  }
 > = {
   spicy: {
     hover: "hover:border-spicy-400/30",
@@ -298,6 +308,7 @@ const accentMap: Record<
     ctaBg: "bg-spicy-400/10 text-spicy-400 border-spicy-400/30",
     ctaHover:
       "hover:bg-spicy-400 hover:text-white hover:border-spicy-400 hover:shadow-lg hover:shadow-spicy-400/30",
+    filled: "bg-spicy-400 hover:bg-spicy-500 shadow-lg shadow-spicy-400/30",
   },
   blue: {
     hover: "hover:border-blue-400/30",
@@ -306,6 +317,7 @@ const accentMap: Record<
     ctaBg: "bg-blue-400/10 text-blue-400 border-blue-400/30",
     ctaHover:
       "hover:bg-blue-400 hover:text-white hover:border-blue-400 hover:shadow-lg hover:shadow-blue-400/30",
+    filled: "bg-blue-400 hover:bg-blue-500 shadow-lg shadow-blue-400/30",
   },
   violet: {
     hover: "hover:border-violet-400/30",
@@ -314,6 +326,7 @@ const accentMap: Record<
     ctaBg: "bg-violet-400/10 text-violet-400 border-violet-400/30",
     ctaHover:
       "hover:bg-violet-400 hover:text-white hover:border-violet-400 hover:shadow-lg hover:shadow-violet-400/30",
+    filled: "bg-violet-400 hover:bg-violet-500 shadow-lg shadow-violet-400/30",
   },
   emerald: {
     hover: "hover:border-emerald-400/30",
@@ -322,6 +335,7 @@ const accentMap: Record<
     ctaBg: "bg-emerald-400/10 text-emerald-400 border-emerald-400/30",
     ctaHover:
       "hover:bg-emerald-400 hover:text-white hover:border-emerald-400 hover:shadow-lg hover:shadow-emerald-400/30",
+    filled: "bg-emerald-400 hover:bg-emerald-500 shadow-lg shadow-emerald-400/30",
   },
 };
 
@@ -335,6 +349,7 @@ function BentoCard({
   className = "",
   delay = 0,
   price,
+  showChatDemo = false,
 }: BentoCardProps) {
   const ref = useRef(null);
   const inView = useInView(ref, { once: true, margin: "-60px" });
@@ -368,13 +383,24 @@ function BentoCard({
             </span>
           </div>
         )}
-        <Link
-          href={href}
-          className={`inline-flex items-center gap-1.5 px-4 py-2 rounded-lg text-sm font-semibold border ${a.ctaBg} ${a.ctaHover} transition-all`}
-        >
-          <span>{t("Common.learnMore")}</span>
-          <ArrowUpRight className="w-4 h-4 transition-transform group-hover:translate-x-0.5 group-hover:-translate-y-0.5" />
-        </Link>
+        <div className="flex flex-wrap items-center gap-2.5">
+          {showChatDemo && (
+            <button
+              onClick={() => openSolveraChat(undefined, "home_chatbot_card")}
+              className={`inline-flex items-center gap-1.5 px-4 py-2 rounded-lg text-sm font-semibold text-white transition-all ${a.filled}`}
+            >
+              <MessageCircle className="w-4 h-4" />
+              <span>{t("Common.tryLive")}</span>
+            </button>
+          )}
+          <Link
+            href={href}
+            className={`inline-flex items-center gap-1.5 px-4 py-2 rounded-lg text-sm font-semibold border ${a.ctaBg} ${a.ctaHover} transition-all`}
+          >
+            <span>{t("Common.learnMore")}</span>
+            <ArrowUpRight className="w-4 h-4 transition-transform group-hover:translate-x-0.5 group-hover:-translate-y-0.5" />
+          </Link>
+        </div>
       </div>
     </motion.div>
   );
@@ -419,6 +445,7 @@ export function BentoServices() {
             accent="violet"
             delay={0}
             animation={<MiniChat inView={inView} />}
+            showChatDemo
           />
 
           {/* Voice */}

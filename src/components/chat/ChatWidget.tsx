@@ -22,6 +22,7 @@ export function ChatWidget() {
   const [isOpen, setIsOpen] = useState(false);
   const [showTooltip, setShowTooltip] = useState(false);
   const [messages, setMessages] = useState<Message[]>([]);
+  const [pendingQuestion, setPendingQuestion] = useState<string | null>(null);
   const initialized = useRef(false);
   const nextId = useRef(2);
 
@@ -60,6 +61,29 @@ export function ChatWidget() {
     const timer = setTimeout(() => setIsVisible(true), 3000);
     return () => clearTimeout(timer);
   }, []);
+
+  // Allow other parts of the page (e.g. the AI-section demo CTA) to open the
+  // chat — optionally with a question that gets sent to the bot automatically.
+  useEffect(() => {
+    function handleOpenRequest(e: Event) {
+      const detail = (e as CustomEvent).detail as
+        | { question?: string }
+        | undefined;
+      setIsVisible(true);
+      setShowTooltip(false);
+      setIsOpen(true);
+      setPendingQuestion(detail?.question ?? null);
+      trackEvent("chat_open", {
+        channel: "ai_chatbot",
+        source: "ai_section_cta",
+      });
+    }
+    window.addEventListener("solvera:open-chat", handleOpenRequest);
+    return () =>
+      window.removeEventListener("solvera:open-chat", handleOpenRequest);
+  }, []);
+
+  const handleQuestionConsumed = useCallback(() => setPendingQuestion(null), []);
 
   useEffect(() => {
     if (!isVisible || isOpen) return;
@@ -100,6 +124,8 @@ export function ChatWidget() {
             messages={messages}
             setMessages={saveMessages}
             nextId={nextId}
+            initialQuestion={pendingQuestion}
+            onInitialQuestionConsumed={handleQuestionConsumed}
           />
         )}
       </AnimatePresence>

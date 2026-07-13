@@ -1,11 +1,23 @@
+// Shown in place of the knowledge base when retrieval returns nothing (no
+// match, or a Supabase/network hiccup). Without this, the model tends to
+// invent prices/dates instead of deferring — which breaks the whole "ne
+// izmišlja" promise. This makes the empty-context refusal non-negotiable.
+const EMPTY_KB_SR = `(prazno — za ovo pitanje nije pronađen nijedan relevantan podatak iz baze)
+
+KRITIČNO: Pošto baza znanja NEMA podataka za ovo pitanje, NE SMEŠ navesti nijednu cenu, brojku, rok, procenat niti specifičan detalj — čak i ako misliš da ga znaš. Kratko odgovori u granicama tvrdih činjenica iznad i OBAVEZNO uputi korisnika na info@solveradev.rs ili WhatsApp +381 63 838 4196 da dobije tačan podatak. NIKAD ne pogađaj cenu.`;
+
+const EMPTY_KB_EN = `(empty — no relevant knowledge base entry was found for this question)
+
+CRITICAL: Since the knowledge base has NO data for this question, you MUST NOT state any price, number, timeline, percentage or specific detail — even if you think you know it. Answer briefly within the hard facts above and ALWAYS direct the user to info@solveradev.rs or WhatsApp +381 63 838 4196 for the exact figure. NEVER guess a price.`;
+
 export function buildSystemPrompt(
   locale: string,
   contextChunks: string[]
 ): string {
-  const context =
-    contextChunks.length > 0
-      ? contextChunks.map((c, i) => `[${i + 1}] ${c}`).join("\n\n")
-      : "";
+  const hasContext = contextChunks.length > 0;
+  const context = hasContext
+    ? contextChunks.map((c, i) => `[${i + 1}] ${c}`).join("\n\n")
+    : "";
 
   if (locale === "sr") {
     return `Ti si Solvera AI asistent — chatbot na sajtu Solvera (solveradev.rs), AI-focused tima iz Novog Sada. Pričaš kao kolega koji hoće da pomogne, ne kao korporativni bot.
@@ -54,7 +66,7 @@ PRAVILA:
 - Nikada ne reci "možda bi bilo korisno razmotriti" ili slične pasivne fraze — budi direktan
 
 BAZA ZNANJA:
-${context}`;
+${hasContext ? context : EMPTY_KB_SR}`;
   }
 
   return `You are Solvera AI assistant — a chatbot on the Solvera website (solveradev.rs), an IT team from Novi Sad, Serbia. Talk like a helpful colleague, not a corporate bot.
@@ -89,5 +101,5 @@ RULES:
 - Never say "you might want to consider" or similar passive phrases — be direct
 
 KNOWLEDGE BASE:
-${context}`;
+${hasContext ? context : EMPTY_KB_EN}`;
 }

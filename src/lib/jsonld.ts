@@ -261,6 +261,37 @@ export const faqPageSchema = {
   ],
 };
 
+// --- BlogPosting (one per /blog/[slug]) --------------------------------------
+
+export function articleSchema(post: {
+  slug: string;
+  title: string;
+  description: string;
+  date: string;
+  author: string;
+  cover?: string;
+}) {
+  const url = `${SITE_URL}/blog/${post.slug}`;
+  return {
+    "@context": "https://schema.org",
+    "@type": "BlogPosting",
+    headline: post.title,
+    description: post.description,
+    datePublished: post.date,
+    dateModified: post.date,
+    inLanguage: "sr-RS",
+    url,
+    mainEntityOfPage: { "@type": "WebPage", "@id": url },
+    image: post.cover ? `${SITE_URL}${post.cover}` : LOGO_URL,
+    author: {
+      "@type": "Person",
+      name: post.author,
+      url: `${SITE_URL}/o-solveri`,
+    },
+    publisher: { "@id": `${SITE_URL}#organization` },
+  };
+}
+
 /**
  * Helper to render a JSON-LD object as a string suitable for
  * `dangerouslySetInnerHTML`. Strips </script> safely (defense in depth).

@@ -116,7 +116,7 @@ const SR_CHUNKS: Chunk[] = [
   // --- CENE ---
   {
     content:
-      "Cene Solvera usluga (AI primarno): AI Chatbot za sajt od 600 EUR (mali FAQ bot) do 3000 EUR (full RAG sa integracijama), mesečno trošak modela 10–50 EUR. AI Voice agent od 1500 EUR (recepcionar) do 5000 EUR (outbound + CRM), po pozivu 0.10–0.30 EUR/min. Interni AI asistent od 2000 EUR do 8000 EUR (sa RBAC, više integracija). AI integracija po meri od 800 EUR (mali alat) do 8000 EUR+ (kompleksni agent). Web (sekundarno): landing od 300 EUR, e-commerce od 1000 EUR, web aplikacija od 1500 EUR. Poslovni sistemi od 2000 EUR. Sve cene u eurima, bez PDV.",
+      "Cene Solvera usluga (AI primarno): AI Chatbot za sajt: FAQ bot od 600 EUR, RAG standard od 1200 EUR, napredan (sa integracijama) od 2000 EUR; mesečno trošak modela 20–50 EUR + opciono održavanje od 60 EUR (prva 3 meseca doterivanja uključena). AI Voice agent od 1500 EUR (recepcionar) do 5000 EUR (outbound + CRM), po pozivu 0.10–0.30 EUR/min. Interni AI asistent od 2000 EUR do 8000 EUR (sa RBAC, više integracija). AI integracija po meri od 800 EUR (mali alat) do 8000 EUR+ (kompleksni agent). Web (sekundarno): landing od 300 EUR, e-commerce od 1000 EUR, web aplikacija od 1500 EUR. Poslovni sistemi od 2000 EUR. Sve cene u eurima, bez PDV.",
     locale: "sr",
     category: "pricing",
   },
@@ -200,7 +200,7 @@ const SR_CHUNKS: Chunk[] = [
   },
   {
     content:
-      "Detaljne cene AI rešenja: Jednostavan chatbot za FAQ i korisničku podršku — od 500 EUR. RAG chatbot obučen na vašoj dokumentaciji sa naprednom pretragom — od 1000 EUR. Interni AI asistent za zaposlene — od 800 EUR. Automatska obrada dokumenata (fakture, ugovori, prijave) — od 1200 EUR. Mesečno održavanje AI sistema — od 60 EUR. OpenAI troškovi su odvojeni i zavise od količine upita (obično 10-50 EUR mesečno za manje firme).",
+      "Detaljne cene AI rešenja: AI Chatbot za sajt — FAQ bot od 600 EUR, RAG standard od 1200 EUR, napredan sa integracijama od 2000 EUR. Interni AI asistent za zaposlene — od 800 EUR. Automatska obrada dokumenata (fakture, ugovori, prijave) — od 1200 EUR. Mesečno održavanje AI sistema — od 60 EUR (prva 3 meseca doterivanja odgovora uključena). Trošak AI modela je odvojen i zavisi od količine upita (obično 20-50 EUR mesečno za manje firme).",
     locale: "sr",
     category: "pricing",
   },
