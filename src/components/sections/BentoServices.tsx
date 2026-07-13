@@ -14,7 +14,6 @@ import {
   MessageSquare,
   MessageCircle,
   Phone,
-  Bot,
   Sparkles,
 } from "lucide-react";
 
@@ -99,49 +98,6 @@ function MiniVoice({ inView }: { inView: boolean }) {
         ))}
       </div>
       <span className="text-[9px] text-gray-500 font-mono">srpski · niska latencija</span>
-    </div>
-  );
-}
-
-function MiniAssistant({ inView }: { inView: boolean }) {
-  const docs = ["Procedure.pdf", "Ugovor 2025", "Politika HR", "Onboarding"];
-  return (
-    <div className="w-full h-[170px] rounded-lg overflow-hidden bg-[#0d1117] border border-white/[0.06] p-3 relative">
-      <div className="flex items-center gap-2 mb-2">
-        <Bot className="w-3.5 h-3.5 text-blue-400" />
-        <span className="text-[10px] text-gray-400 font-mono">Interni asistent</span>
-      </div>
-      <div className="space-y-1.5">
-        {docs.map((d, i) => (
-          <motion.div
-            key={d}
-            initial={{ opacity: 0, x: -8 }}
-            animate={inView ? { opacity: 1, x: 0 } : {}}
-            transition={{ delay: 0.3 + i * 0.12, duration: 0.35 }}
-            className="flex items-center gap-2 px-2 py-1 rounded bg-white/[0.03] border border-white/[0.05]"
-          >
-            <div className="w-1 h-1 rounded-full bg-blue-400" />
-            <span className="text-[9px] text-gray-400">{d}</span>
-            <motion.div
-              className="ml-auto h-0.5 bg-blue-400/40 rounded-full origin-left"
-              initial={{ scaleX: 0 }}
-              animate={inView ? { scaleX: 1 } : {}}
-              transition={{ delay: 0.5 + i * 0.12, duration: 0.5 }}
-              style={{ width: "40%" }}
-            />
-          </motion.div>
-        ))}
-      </div>
-      <motion.div
-        initial={{ opacity: 0, y: 6 }}
-        animate={inView ? { opacity: 1, y: 0 } : {}}
-        transition={{ delay: 1.0, duration: 0.4 }}
-        className="absolute bottom-3 left-3 right-3 px-2 py-1.5 rounded bg-blue-500/10 border border-blue-400/20"
-      >
-        <span className="text-[9px] text-gray-300">
-          Indeksirano · spremno za pitanja
-        </span>
-      </motion.div>
     </div>
   );
 }
@@ -434,9 +390,9 @@ export function BentoServices() {
           ref={ref}
           className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-12 gap-4 mb-10"
         >
-          {/* Chatbot — large */}
+          {/* Chatbot */}
           <BentoCard
-            className="lg:col-span-7"
+            className="lg:col-span-4"
             href="/usluge/chatbot"
             icon={<MessageSquare className="w-4 h-4" />}
             title={t("ServicesOverview.chatbot.title")}
@@ -450,7 +406,7 @@ export function BentoServices() {
 
           {/* Voice */}
           <BentoCard
-            className="lg:col-span-5"
+            className="lg:col-span-4"
             href="/usluge/voice"
             icon={<Phone className="w-4 h-4" />}
             title={t("ServicesOverview.voice.title")}
@@ -461,22 +417,9 @@ export function BentoServices() {
             animation={<MiniVoice inView={inView} />}
           />
 
-          {/* Assistant */}
+          {/* AI Integrations */}
           <BentoCard
-            className="lg:col-span-5"
-            href="/usluge/assistant"
-            icon={<Bot className="w-4 h-4" />}
-            title={t("ServicesOverview.assistant.title")}
-            description={t("ServicesOverview.assistant.description")}
-            price={t("ServicesOverview.assistant.price")}
-            accent="blue"
-            delay={0.2}
-            animation={<MiniAssistant inView={inView} />}
-          />
-
-          {/* AI Integrations — large */}
-          <BentoCard
-            className="lg:col-span-7"
+            className="lg:col-span-4"
             href="/usluge/aiIntegrations"
             icon={<Sparkles className="w-4 h-4" />}
             title={t("ServicesOverview.aiIntegrations.title")}

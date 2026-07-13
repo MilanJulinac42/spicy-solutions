@@ -9,7 +9,6 @@ import {
   Building2,
   MessageSquare,
   Phone,
-  Bot,
   Sparkles,
 } from "lucide-react";
 import { useTranslations } from "next-intl";
@@ -20,7 +19,6 @@ import { ThemeToggle } from "@/components/shared/ThemeToggle";
 const serviceSublinks = [
   { id: "chatbot", icon: MessageSquare, titleKey: "Services.chatbot.title" },
   { id: "voice", icon: Phone, titleKey: "Services.voice.title" },
-  { id: "assistant", icon: Bot, titleKey: "Services.assistant.title" },
   { id: "aiIntegrations", icon: Sparkles, titleKey: "Services.aiIntegrations.title" },
   { id: "websites", icon: Globe, titleKey: "Services.websites.title" },
   { id: "enterprise", icon: Building2, titleKey: "Services.enterprise.title" },

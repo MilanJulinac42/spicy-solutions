@@ -115,7 +115,6 @@ export function ContactForm() {
           <option value="audit">{t("serviceOptions.audit")}</option>
           <option value="chatbot">{t("serviceOptions.chatbot")}</option>
           <option value="voice">{t("serviceOptions.voice")}</option>
-          <option value="assistant">{t("serviceOptions.assistant")}</option>
           <option value="aiIntegrations">{t("serviceOptions.aiIntegrations")}</option>
           <option value="websites">{t("serviceOptions.websites")}</option>
           <option value="enterprise">{t("serviceOptions.enterprise")}</option>

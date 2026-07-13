@@ -148,14 +148,6 @@ export function Footer() {
               </li>
               <li>
                 <Link
-                  href="/usluge/assistant"
-                  className="text-sm text-gray-400 hover:text-spicy-400 transition-colors link-underline"
-                >
-                  {t("ServicesOverview.assistant.title")}
-                </Link>
-              </li>
-              <li>
-                <Link
                   href="/usluge/aiIntegrations"
                   className="text-sm text-gray-400 hover:text-spicy-400 transition-colors link-underline"
                 >

@@ -59,7 +59,6 @@ import { notFound } from "next/navigation";
 const serviceIcons: Record<string, React.ElementType> = {
   chatbot: MessageSquare,
   voice: Phone,
-  assistant: Bot,
   aiIntegrations: Sparkles,
   websites: Globe,
   enterprise: Building2,
@@ -68,7 +67,6 @@ const serviceIcons: Record<string, React.ElementType> = {
 const featureIconsMap: Record<string, React.ElementType[]> = {
   chatbot: [Database, Users, Globe, Zap, BarChart3],
   voice: [Bot, Phone, MessageSquare, Link2, FileText],
-  assistant: [Shield, Database, MessageSquare, Users, BookOpen],
   aiIntegrations: [FileText, GitBranch, Clock, Cpu, Link2],
   websites: [Smartphone, Search, Zap, PenTool, Code2],
   enterprise: [GitBranch, BarChart3, Shield, RefreshCw, BookOpen],
@@ -77,7 +75,6 @@ const featureIconsMap: Record<string, React.ElementType[]> = {
 const exampleIconsMap: Record<string, React.ElementType[]> = {
   chatbot: [MessageSquare, Bot, ShoppingCart, BookOpen],
   voice: [Phone, Clock, Bell, Users],
-  assistant: [Users, FileText, Shield, Database],
   aiIntegrations: [FileText, MessageSquare, Clock, Cpu],
   websites: [Monitor, ShoppingCart, LayoutDashboard, FileText],
   enterprise: [Building2, LayoutDashboard, BarChart3, Globe],

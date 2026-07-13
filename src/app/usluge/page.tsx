@@ -7,7 +7,6 @@ import {
   Building2,
   MessageSquare,
   Phone,
-  Bot,
   Sparkles,
   Search,
   Palette,
@@ -29,7 +28,6 @@ import Link from "next/link";
 const serviceIcons: Record<string, typeof Globe> = {
   chatbot: MessageSquare,
   voice: Phone,
-  assistant: Bot,
   aiIntegrations: Sparkles,
   websites: Globe,
   enterprise: Building2,

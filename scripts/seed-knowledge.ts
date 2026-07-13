@@ -80,19 +80,6 @@ const SR_CHUNKS: Chunk[] = [
     locale: "sr",
     category: "services",
   },
-  // --- USLUGE: AI Asistent za interni tim (primarno) ---
-  {
-    content:
-      "Solvera gradi interne AI asistente za firme — privatan AI obučen na vašoj internoj dokumentaciji, procedurama, ugovorima i istoriji odluka. Vaši zaposleni pitaju umesto da pretražuju Drive i Notion. Opcije hostinga: self-hosted (Llama/Mistral, podaci ne napuštaju firmu), Azure OpenAI ili AWS Bedrock (enterprise privatnost). Integracija u Slack, Teams ili web. Permission-aware — svako vidi samo ono što sme.",
-    locale: "sr",
-    category: "services",
-  },
-  {
-    content:
-      "Primeri internih AI asistenata: Onboarding novih zaposlenih (procedure, alati, ko je za šta zadužen). Sales asistent za ponude (pretraga prošlih sličnih projekata). Legal/HR pomoćnik (politike, ugovori, citira izvor). Pretraga prošlih projekata i odluka. OCR pipeline za skenirane dokumente — stari ugovori i fakture postaju pretraživi. Štedi 3–10 sati nedeljno po osobi.",
-    locale: "sr",
-    category: "services",
-  },
   // --- USLUGE: AI integracije po meri (primarno) ---
   {
     content:
@@ -116,7 +103,7 @@ const SR_CHUNKS: Chunk[] = [
   // --- CENE ---
   {
     content:
-      "Cene Solvera usluga (AI primarno): AI Chatbot za sajt: FAQ bot od 600 EUR, RAG standard od 1200 EUR, napredan (sa integracijama) od 2000 EUR; mesečno trošak modela 20–50 EUR + opciono održavanje od 60 EUR (prva 3 meseca doterivanja uključena). AI Voice agent od 1500 EUR (recepcionar) do 5000 EUR (outbound + CRM), po pozivu 0.10–0.30 EUR/min. Interni AI asistent od 2000 EUR do 8000 EUR (sa RBAC, više integracija). AI integracija po meri od 800 EUR (mali alat) do 8000 EUR+ (kompleksni agent). Web (sekundarno): landing od 300 EUR, e-commerce od 1000 EUR, web aplikacija od 1500 EUR. Poslovni sistemi od 2000 EUR. Sve cene u eurima, bez PDV.",
+      "Cene Solvera usluga (AI primarno): AI Chatbot za sajt: FAQ bot od 600 EUR, RAG standard od 1200 EUR, napredan (sa integracijama) od 2000 EUR; mesečno trošak modela 20–50 EUR + opciono održavanje od 60 EUR (prva 3 meseca doterivanja uključena). AI Voice agent od 1500 EUR (recepcionar) do 5000 EUR (outbound + CRM), po pozivu 0.10–0.30 EUR/min. AI integracija po meri od 800 EUR (mali alat) do 8000 EUR+ (kompleksni agent). Web (sekundarno): landing od 300 EUR, e-commerce od 1000 EUR, web aplikacija od 1500 EUR. Poslovni sistemi od 2000 EUR. Sve cene u eurima, bez PDV.",
     locale: "sr",
     category: "pricing",
   },
@@ -130,7 +117,7 @@ const SR_CHUNKS: Chunk[] = [
   // --- O NAMA ---
   {
     content:
-      "Solvera je AI-first studio iz Novog Sada, Srbija. Fokusirana na AI rešenja: chatbot-ovi, voice agenti, interni asistenti, AI integracije po meri. Web razvoj je sekundarna usluga. Trenutno Solveru vodi 1 inženjer-osnivač: Milan Julinac (full-stack + AI inženjer, 7+ godina iskustva — OpenAI, Claude, LangChain, pgvector, ElevenLabs, Twilio/LiveKit, Next.js, React, TypeScript, Node.js, PostgreSQL, Supabase, AWS, Docker). Po potrebi se uključuju proverene spoljne saradnike. Vrednosti: moderna tehnologija, transparentnost, vaš kod i vaši podaci.",
+      "Solvera je AI-first studio iz Novog Sada, Srbija. Fokusirana na AI rešenja: chatbot-ovi, voice agenti, AI integracije po meri. Web razvoj je sekundarna usluga. Trenutno Solveru vodi 1 inženjer-osnivač: Milan Julinac (full-stack + AI inženjer, 7+ godina iskustva — OpenAI, Claude, LangChain, pgvector, ElevenLabs, Twilio/LiveKit, Next.js, React, TypeScript, Node.js, PostgreSQL, Supabase, AWS, Docker). Po potrebi se uključuju proverene spoljne saradnike. Vrednosti: moderna tehnologija, transparentnost, vaš kod i vaši podaci.",
     locale: "sr",
     category: "about",
   },
@@ -176,7 +163,7 @@ const SR_CHUNKS: Chunk[] = [
   // --- ZAŠTO SOLVERA ---
   {
     content:
-      "Zašto izabrati Solvera: 1) AI-first fokus — gradim chatbot-ove, voice agente i interne asistente, ne opšti web shop. 2) Inženjeri, ne prodavci — radite direktno sa developerom. 3) Sve je vaše — kod, dizajn, dokumentacija, bez zaključavanja. 4) Moderan stack — OpenAI, Claude, LangChain, Next.js, Supabase. 5) Direktna komunikacija — odgovor u roku 24h.",
+      "Zašto izabrati Solvera: 1) AI-first fokus — gradim chatbot-ove, voice agente i AI integracije po meri, ne opšti web shop. 2) Inženjeri, ne prodavci — radite direktno sa developerom. 3) Sve je vaše — kod, dizajn, dokumentacija, bez zaključavanja. 4) Moderan stack — OpenAI, Claude, LangChain, Next.js, Supabase. 5) Direktna komunikacija — odgovor u roku 24h.",
     locale: "sr",
     category: "about",
   },
@@ -200,7 +187,7 @@ const SR_CHUNKS: Chunk[] = [
   },
   {
     content:
-      "Detaljne cene AI rešenja: AI Chatbot za sajt — FAQ bot od 600 EUR, RAG standard od 1200 EUR, napredan sa integracijama od 2000 EUR. Interni AI asistent za zaposlene — od 800 EUR. Automatska obrada dokumenata (fakture, ugovori, prijave) — od 1200 EUR. Mesečno održavanje AI sistema — od 60 EUR (prva 3 meseca doterivanja odgovora uključena). Trošak AI modela je odvojen i zavisi od količine upita (obično 20-50 EUR mesečno za manje firme).",
+      "Detaljne cene AI rešenja: AI Chatbot za sajt — FAQ bot od 600 EUR, RAG standard od 1200 EUR, napredan sa integracijama od 2000 EUR. Automatska obrada dokumenata (fakture, ugovori, prijave) — od 1200 EUR. Mesečno održavanje AI sistema — od 60 EUR (prva 3 meseca doterivanja odgovora uključena). Trošak AI modela je odvojen i zavisi od količine upita (obično 20-50 EUR mesečno za manje firme).",
     locale: "sr",
     category: "pricing",
   },
@@ -522,7 +509,7 @@ const SR_CHUNKS: Chunk[] = [
   },
   {
     content:
-      "Tipični ROI scenariji (orijentaciono — nisu garancija): AI chatbot na sajtu uslužne firme — automatizuje 60–80% inicijalnih upita, lead capture noću dok ekipa spava. AI Voice recepcionar za salon/kliniku — nijedan poziv ne ostane neodgovoren, manje 'no-show' termina zbog automatskih podsetnika. Interni AI asistent — tim štedi 3–10 sati nedeljno po osobi (manje pretrage Drive-a). AI obrada faktura — 5–15 sati ručnog rada nedeljno se eliminiše. Konkretne brojke zavise od projekta i klijenta.",
+      "Tipični ROI scenariji (orijentaciono — nisu garancija): AI chatbot na sajtu uslužne firme — automatizuje 60–80% inicijalnih upita, lead capture noću dok ekipa spava. AI Voice recepcionar za salon/kliniku — nijedan poziv ne ostane neodgovoren, manje 'no-show' termina zbog automatskih podsetnika. AI obrada faktura — 5–15 sati ručnog rada nedeljno se eliminiše. Konkretne brojke zavise od projekta i klijenta.",
     locale: "sr",
     category: "sales",
   },
@@ -557,7 +544,7 @@ const SR_CHUNKS: Chunk[] = [
   // --- CONVERSATION STARTERS ---
   {
     content:
-      "Kada posetilac pita 'šta radite' ili 'čime se bavite': Solvera je AI-first studio iz Novog Sada. Primarno gradim 4 AI proizvoda — chatbot za sajt, voice agent koji prima pozive, interni AI asistent za vaš tim, i AI integracije po meri. Web razvoj i poslovni sistemi rade se sekundarno. Šta vas konkretno zanima — chatbot, voice agent, interni asistent ili nešto drugo?",
+      "Kada posetilac pita 'šta radite' ili 'čime se bavite': Solvera je AI-first studio iz Novog Sada. Primarno gradim 3 AI proizvoda — chatbot za sajt, voice agent koji prima pozive, i AI integracije po meri. Web razvoj i poslovni sistemi rade se sekundarno. Šta vas konkretno zanima — chatbot, voice agent, AI integracija ili nešto drugo?",
     locale: "sr",
     category: "sales",
   },
@@ -579,13 +566,13 @@ const SR_CHUNKS: Chunk[] = [
   // --- UPSELL I CROSS-SELL ---
   {
     content:
-      "Bundle ponude: Sajt + AI Chatbot paket — sajt sa ugrađenim RAG botom koji odgovara 24/7 i hvata leadove. Chatbot + Voice paket — pokrivate i web posetioce i pozivaoce sa istim brand-om i tonom. AI Chatbot + Interni Asistent — isti AI sloj radi za klijente (eksterno) i za vaš tim (interno) iz iste baze znanja. Bundle cene su uvek povoljnije nego pojedinačno.",
+      "Bundle ponude: Sajt + AI Chatbot paket — sajt sa ugrađenim RAG botom koji odgovara 24/7 i hvata leadove. Chatbot + Voice paket — pokrivate i web posetioce i pozivaoce sa istim brand-om i tonom. Bundle cene su uvek povoljnije nego pojedinačno.",
     locale: "sr",
     category: "sales",
   },
   {
     content:
-      "Predlozi za upsell: Ako pravite sajt — dodajte AI Chatbot koji hvata leadove dok ne radite. Ako imate chatbot — dodajte AI Voice agent na telefonu (isti brand, isti ton, ista baza znanja). Ako vam tim gubi vreme tražeći info — interni AI asistent štedi 3–10 sati nedeljno po osobi. Ako imate konkretan ručni tok koji se ponavlja — AI integracija po meri može da ga automatizuje.",
+      "Predlozi za upsell: Ako pravite sajt — dodajte AI Chatbot koji hvata leadove dok ne radite. Ako imate chatbot — dodajte AI Voice agent na telefonu (isti brand, isti ton, ista baza znanja). Ako imate konkretan ručni tok koji se ponavlja — AI integracija po meri može da ga automatizuje.",
     locale: "sr",
     category: "sales",
   },
@@ -661,7 +648,7 @@ const SR_CHUNKS: Chunk[] = [
   // --- ŠTA NUDIMO (sažetak za quick reference) ---
   {
     content:
-      "Šta Solvera nudi — PRIMARNO 4 AI PROIZVODA: 1) AI CHATBOT za sajt — RAG asistent obučen na vašoj bazi znanja, 24/7, lead capture. Od 600€. 2) AI VOICE — agent koji prima pozive umesto vas, srpski glas, rezervacije, kvalifikacija. Setup od 1500€. 3) AI ASISTENT za interni tim — privatan asistent za vaše zaposlene, pretražuje vašu dokumentaciju. Od 2000€. 4) AI INTEGRACIJE po meri — obrada dokumenata, triage mejlova, sumarizacija, agentski tokovi. Od 800€. SEKUNDARNO: web razvoj (sajt od 300€) i poslovni sistemi (od 2000€). Solvera NE radi Zapier-tip opšte workflow automatizacije — samo AI-native rešenja.",
+      "Šta Solvera nudi — PRIMARNO 3 AI PROIZVODA: 1) AI CHATBOT za sajt — RAG asistent obučen na vašoj bazi znanja, 24/7, lead capture. Od 600€. 2) AI VOICE — agent koji prima pozive umesto vas, srpski glas, rezervacije, kvalifikacija. Setup od 1500€. 3) AI INTEGRACIJE po meri — obrada dokumenata, triage mejlova, sumarizacija, agentski tokovi. Od 800€. SEKUNDARNO: web razvoj (sajt od 300€) i poslovni sistemi (od 2000€). Solvera NE radi Zapier-tip opšte workflow automatizacije — samo AI-native rešenja.",
     locale: "sr",
     category: "services",
   },

@@ -48,7 +48,6 @@ export const organizationSchema = {
     "LiveKit",
     "ElevenLabs",
     "OpenAI Realtime",
-    "Internal AI assistants",
     "AI integrations",
     "LangChain",
     "Next.js",
@@ -113,10 +112,6 @@ export const localBusinessSchema = {
       },
       {
         "@type": "Offer",
-        itemOffered: { "@type": "Service", name: "Interni AI asistent za tim" },
-      },
-      {
-        "@type": "Offer",
         itemOffered: { "@type": "Service", name: "AI integracije po meri" },
       },
     ],
@@ -144,7 +139,6 @@ export const websiteSchema = {
 type ServiceSlug =
   | "chatbot"
   | "voice"
-  | "assistant"
   | "aiIntegrations"
   | "websites"
   | "enterprise";
@@ -164,12 +158,6 @@ const SERVICE_DATA: Record<
     description:
       "AI agent na vašem telefonskom broju koji prima pozive, vodi razgovor, rezerviše termine i prebacuje vama. Twilio, LiveKit, ElevenLabs, OpenAI Realtime.",
     serviceType: "Voice AI agent development",
-  },
-  assistant: {
-    name: "Interni AI Asistent",
-    description:
-      "Privatan AI asistent obučen na vašoj internoj dokumentaciji. Self-hosted ili enterprise cloud — vaši zaposleni pitaju umesto da pretražuju.",
-    serviceType: "Internal AI assistant development",
   },
   aiIntegrations: {
     name: "AI integracije po meri",

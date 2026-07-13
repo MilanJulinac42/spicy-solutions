@@ -71,11 +71,6 @@
       "description": "Frizerski salon, ordinacija, turistička agencija — klijenti zovu kad ne radite ili kad ste zauzeti. Izgubljeni pozivi = izgubljeni klijenti. AI voice agent prima poziv, razume zahtev na srpskom, zakazuje termin ili prebacuje vama kad je potrebno.",
       "price": "Od 1000€ · mesečno 30–80€ + Twilio troškovi"
     },
-    "assistant": {
-      "title": "AI Asistent za interni tim",
-      "description": "Vaš tim gubi sate pretražujući Drive za procedure, ugovore, politike. Privatan AI asistent obučen na vašoj dokumentaciji daje odgovor u sekundi — ne mora da napušta vašu firmu, ne deli podatke sa OpenAI.",
-      "price": "Setup od ~2000€ · mesečno: trošak modela"
-    },
     "aiIntegrations": {
       "title": "AI integracije po meri",
       "description": "Email upit dolazi — AI klasifikuje hitnost, izvlači ključne podatke, predlaže odgovor. Faktura stiže — AI parsira, validira, ubacuje u sistem. Sastanak završen — AI generiše sažetak i akcione stavke. Konkretni tokovi za vaš proces.",
@@ -344,60 +339,6 @@
           }
         },
         "ctaText": "Zakažite demo poziv"
-      }
-    },
-    "assistant": {
-      "title": "AI Asistent za interni tim",
-      "description": "Privatan AI obučen na vašoj dokumentaciji, procedurama, ugovorima i istoriji odluka. Vaši ljudi pitaju umesto da satima pretražuju Drive i Notion.",
-      "comparison": "Vaš tim štedi 3–10 sati nedeljno po osobi. Knowledge bot koji ne odlazi na bolovanje.",
-      "features": {
-        "f1": "Trening na VAŠIM internim podacima — ne curi van",
-        "f2": "Self-hosted ili enterprise cloud (Azure/Bedrock) opcija",
-        "f3": "Slack/Teams/Web integracija — pita se gde već radite",
-        "f4": "Permission-aware — svako vidi samo ono što sme da vidi",
-        "f5": "Citira izvor — uvek znate odakle je odgovor"
-      },
-      "detail": {
-        "extendedDescription": "Ne 'opšti chatbot', već asistent koji zna vašu firmu: kako vi pravite ponude, šta piše u ugovorima, koje su procedure za reklamaciju, koji klijent je pisao šta pre dve godine.",
-        "examplesTitle": "Tipični scenariji",
-        "examples": {
-          "e1": {
-            "title": "Onboarding novih zaposlenih",
-            "description": "Novi kolega pita asistenta umesto da gnjavi seniore. Procedure, alati, ko je za šta zadužen — sve dostupno."
-          },
-          "e2": {
-            "title": "Sales asistent za ponude",
-            "description": "Sales tim pita 'kako smo cenili sličan projekat lane?' — asistent vraća konkretne primere iz vaše istorije."
-          },
-          "e3": {
-            "title": "Legal/HR pomoćnik",
-            "description": "'Kako glasi naša politika za bolovanje?' 'Šta tačno kaže ugovor sa klijentom X?' — trenutan odgovor sa citatom."
-          },
-          "e4": {
-            "title": "Pretraga prošlih projekata",
-            "description": "'Kako smo rešili problem X u projektu Y?' — asistent vraća odgovor iz vaših internih dokumenata i wiki-ja."
-          }
-        },
-        "faqTitle": "Česta pitanja",
-        "faq": {
-          "q1": {
-            "question": "Da li podaci napuštaju našu firmu?",
-            "answer": "Možete birati: self-hosted (potpuno kod vas, Llama/Mistral modeli), Azure OpenAI ili AWS Bedrock (enterprise privatnost, nema trening na vašim podacima)."
-          },
-          "q2": {
-            "question": "Kako sa pravima pristupa?",
-            "answer": "Asistent poštuje role-based access — finansije vidi samo finansijski tim, HR samo HR, itd. Integriše se sa Google Workspace / Microsoft 365."
-          },
-          "q3": {
-            "question": "Koliko košta?",
-            "answer": "Setup od ~2000€ (mali tim, ograničen broj izvora) do ~8000€ (više integracija, RBAC, custom UI). Mesečno: trošak modela + opcioni održavanje."
-          },
-          "q4": {
-            "question": "Šta sa starim/skeniranim dokumentima?",
-            "answer": "OCR pipeline za skenirane PDF-ove i slike. Stari ugovori, fakture, izveštaji — sve postaje pretraživo."
-          }
-        },
-        "ctaText": "Zakažite besplatan razgovor"
       }
     },
     "aiIntegrations": {
@@ -903,7 +844,6 @@
         "audit": "Besplatna konsultacija",
         "chatbot": "AI Chatbot na sajtu",
         "voice": "AI Voice — prima pozive",
-        "assistant": "AI Asistent za interni tim",
         "aiIntegrations": "AI integracija po meri",
         "websites": "Sajt / Web aplikacija",
         "enterprise": "Poslovni sistem po meri",

@@ -32,21 +32,6 @@ export const services: Service[] = [
     category: "ai",
   },
   {
-    id: "assistant",
-    icon: "Bot",
-    titleKey: "ServicesOverview.assistant.title",
-    descriptionKey: "ServicesOverview.assistant.description",
-    features: [
-      "Services.assistant.features.f1",
-      "Services.assistant.features.f2",
-      "Services.assistant.features.f3",
-      "Services.assistant.features.f4",
-      "Services.assistant.features.f5",
-    ],
-    technologies: ["OpenAI", "Claude", "LangChain", "pgvector", "Tool use"],
-    category: "ai",
-  },
-  {
     id: "aiIntegrations",
     icon: "Sparkles",
     titleKey: "ServicesOverview.aiIntegrations.title",

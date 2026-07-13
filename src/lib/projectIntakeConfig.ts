@@ -20,7 +20,7 @@ export interface ServiceConfig {
 export const SERVICE_CONFIG: Record<ServiceType, ServiceConfig> = {
   ai: {
     icon: Sparkles,
-    subtypes: ["chatbot", "voice", "assistant", "integration", "other"],
+    subtypes: ["chatbot", "voice", "integration", "other"],
     features: [
       "leadCapture",
       "knowledgeBase",
@@ -36,7 +36,6 @@ export const SERVICE_CONFIG: Record<ServiceType, ServiceConfig> = {
     featuresBySubtype: {
       chatbot: ["leadCapture", "knowledgeBase", "calendarBooking", "smsNotify", "crmIntegration", "handoff", "multilang", "dashboard"],
       voice: ["calendarBooking", "smsNotify", "crmIntegration", "handoff", "multilang", "dashboard", "analytics"],
-      assistant: ["knowledgeBase", "multilang", "dashboard", "apiAccess"],
       integration: ["crmIntegration", "smsNotify", "apiAccess", "dashboard", "analytics"],
       other: ["leadCapture", "knowledgeBase", "crmIntegration", "multilang", "apiAccess", "dashboard", "analytics"],
     },
