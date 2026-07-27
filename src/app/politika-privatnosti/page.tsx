@@ -70,8 +70,11 @@ export default function PrivacyPage() {
                   </li>
                 ))}
               </ul>
-              <p className="text-foreground-muted leading-relaxed">
+              <p className="text-foreground-muted leading-relaxed mb-4">
                 {t("section1.p2")}
+              </p>
+              <p className="text-foreground-muted leading-relaxed">
+                {t("section1.p3")}
               </p>
             </motion.div>
 

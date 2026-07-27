@@ -883,7 +883,8 @@
         "i4": "Sadržaj vaše poruke",
         "i5": "Broj telefona i delatnost — isključivo ako sami zatražite demo poziv AI voice agenta. Broj se koristi samo za taj dogovoreni poziv, ne prosleđuje se trećim licima i briše se na vaš zahtev."
       },
-      "p2": "Ne koristim kolačiće za praćenje niti analitičke alate trećih strana."
+      "p2": "Pored toga, sajt koristi Google Analytics 4 za merenje posećenosti. On postavlja kolačiće i beleži podatke o korišćenju sajta — koje stranice posećujete, koliko se zadržavate, sa kog uređaja i iz koje zemlje dolazite, i osnovne radnje (na primer otvaranje chata ili slanje forme). IP adresa se anonimizuje, a ti podaci se ne povezuju sa vašim imenom ni imejlom. Obradu vrši Google kao pružalac usluge. Merenje možete isključiti blokiranjem kolačića u pregledaču ili zvaničnim Google dodatkom za onemogućavanje Analytics-a.",
+      "p3": "Chat na sajtu čuva istoriju razgovora samo u vašem pregledaču, tokom te posete. Ako u razgovoru ostavite imejl, poruka se čuva kao upit kako bih mogao da vam odgovorim."
     },
     "section2": {
       "title": "Kako koristim vaše podatke",

@@ -10,9 +10,10 @@ export const navLinks: NavLink[] = [
 ];
 
 /**
- * Formspree form IDs — these deliver submissions to email. Voice demo requests
- * use their own form so they don't get buried among general contact messages.
- * Replace `voiceDemo` once the dedicated form exists (formspree.io → New form).
+ * Formspree form IDs — these deliver submissions to email. Contact and voice
+ * demo deliberately share one form: the submissions are easy to tell apart by
+ * content (voice requests carry a phone, industry and time slot) and each one
+ * sets its own `_subject`, so a second form would only split the inbox.
  */
 export const FORMSPREE_FORMS = {
   contact: "mzdkekob",

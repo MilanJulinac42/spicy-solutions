@@ -185,6 +185,9 @@ export function VoiceDemoBooking() {
             </div>
           ) : (
             <form onSubmit={handleSubmit} className="space-y-5">
+              {/* Names the email in the shared Formspree inbox */}
+              <input type="hidden" name="_subject" value="🎙️ Voice demo — zahtev za poziv" />
+
               {/* Honeypot — hidden from users, catches bots */}
               <input
                 type="text"
