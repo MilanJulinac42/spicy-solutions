@@ -1,0 +1,85 @@
+---
+title: "Zašto AI chatbot izmišlja odgovore — i kako to sprečavam"
+description: "Halucinacije su najveći razlog zašto firme ne veruju AI botovima. Zašto se dešavaju, zašto su skupe, i kako ih rešavam kroz RAG i tvrdo pravilo da bot pre prizna „ne znam\" nego što izmisli cifru."
+date: "2026-07-27"
+author: "Milan Julinac"
+service: "chatbot"
+keywords:
+  - "AI halucinacije"
+  - "chatbot koji ne izmišlja"
+  - "RAG chatbot"
+  - "tačnost AI chatbota"
+  - "AI chatbot za sajt"
+faq:
+  - question: "Šta su halucinacije kod AI chatbota?"
+    answer: "Halucinacija je odgovor koji zvuči tačno i samouvereno, ali nije istinit. Jezički model predviđa sledeću najverovatniju reč, a ne proverava činjenice — pa kad nema podatak, popuni prazninu nečim što zvuči uverljivo."
+  - question: "Kako RAG sprečava izmišljanje?"
+    answer: "RAG (retrieval-augmented generation) pretraži tvoju bazu znanja pre nego što model odgovori i prosledi mu pronađene delove kao kontekst. Model tada prepričava tvoje podatke umesto da izmišlja iz opšteg znanja. Ključno je da mu je izričito zabranjeno da izlazi van tog konteksta."
+  - question: "Šta bot treba da uradi kad ne zna odgovor?"
+    answer: "Da to jasno kaže i ponudi kontakt — mejl, telefon ili formu. Pošteno „nemam taj podatak, javite se na…\" je uvek jeftinije od izmišljene cene ili roka koji te kasnije košta poverenja, a ponekad i pravno."
+  - question: "Kako da testiram da li bot izmišlja?"
+    answer: "Pitaj ga nešto čega sigurno nema u bazi znanja — cenu usluge koju ne nudiš, rok za nepostojeći proizvod, detalj o poslovnici koju nemaš. Dobar bot će reći da nema podatak. Loš će smisliti broj. Pitaj i istu stvar na tri načina i uporedi da li se odgovori razilaze."
+---
+
+Najčešća primedba koju čujem kad predložim chatbot glasi otprilike ovako: *„A šta ako izmisli cenu i klijent dođe da traži tu cenu?"*
+
+Potpuno opravdan strah. Upravo je to razlog zašto mnoge firme odustanu od AI-ja pre nego što probaju. Dobra vest — to je rešiv inženjerski problem, a ne osobina AI-ja sa kojom moraš da živiš.
+
+## Zašto se izmišljanje uopšte dešava
+
+Jezički model ne „zna" činjenice na način na koji ih zna baza podataka. On predviđa **sledeću najverovatniju reč** na osnovu ogromne količine teksta na kome je treniran. Kad ga pitaš nešto o tvojoj firmi, a on nema te podatke, ne postoji ugrađeni mehanizam koji kaže „stani, ovo ne znam". Umesto toga proizvede odgovor koji **statistički najbolje zvuči** — a to često znači izmišljenu, ali sasvim uverljivu cifru.
+
+Zato halucinacije nisu bag koji se „popravi boljim modelom". One su posledica toga kako model radi. Rešenje je da mu se oduzme prostor za nagađanje.
+
+## Zašto je to skupo baš u biznisu
+
+Kad AI pogreši u eseju, to je neprijatno. Kad pogreši na tvom sajtu, plaćaš:
+
+- **Pogrešna cena** — klijent dolazi sa screenshot-om i očekuje tu cifru
+- **Pogrešan rok** — obećano „za tri dana", a realno je tri nedelje
+- **Izmišljena usluga** — bot ponudi nešto što uopšte ne radiš
+- **Izgubljeno poverenje** — jednom kad primete da bot laže, ne veruju ni sajtu
+
+Zato bot bez kontrole nije „bolji nego ništa" — ume da bude gori nego ništa.
+
+## Kako to rešavam: prvo pronađi, pa odgovori
+
+Svaki bot koji pravim postavljen je po istom principu — RAG (*retrieval-augmented generation*) obrne redosled: **prvo pronađi, pa tek onda odgovori**.
+
+<RagFlowDiagram />
+
+Umesto da model odgovara iz opšteg znanja, sistem prvo pretraži tvoju bazu znanja (sajt, cenovnik, dokumenta, FAQ), izvuče delove koji se stvarno odnose na pitanje i prosledi ih modelu kao kontekst. Model tada **prepričava tvoje podatke** umesto da izmišlja.
+
+Ali sam RAG nije dovoljan — bitno je šta se dešava kad pretraga ne nađe ništa.
+
+## Najvažniji deo: šta bot radi kad ne zna
+
+Ovde se razdvajaju ozbiljna rešenja od igračaka. Ako se botu prosledi prazan kontekst, a prompt mu ne zabrani izričito da nagađa, on će opet izmisliti. Zato u svaki bot ugrađujem **tvrdo pravilo**: kad u bazi nema podatka, bot ne sme da navede nijednu cifru, rok ni detalj — mora da kaže da nema informaciju i da uputi na kontakt.
+
+To zvuči kao sitnica, ali je razlika između bota kojem veruješ i bota koji ti pravi štetu dok spavaš. Bota na ovom sajtu sam namerno tako postavio — čak i ako baza znanja privremeno padne, neće izmisliti cenu, nego će te uputiti na mejl. To sam i testirao gašenjem baze, jer pravilo koje nije provereno i ne postoji.
+
+## Probaj sam — pitaj ga nešto što ne zna
+
+Ne veruj mi na reč. Otvori bota i pitaj ga nešto što sigurno nije u njegovoj bazi — recimo cenu usluge koju Solvera ne radi, ili detalj o nekoj poslovnici:
+
+<ChatDemoCTA />
+
+Trebalo bi da ti pošteno kaže da nema taj podatak i ponudi kontakt, umesto da smisli broj.
+
+## Kako da testiraš bilo kog bota pre kupovine
+
+Bez obzira od koga uzimaš rešenje, ovo su provere koje traju pet minuta:
+
+1. **Pitaj nešto čega nema** — izmišljena usluga, nepostojeći proizvod, poslovnica u gradu u kom nisi. Da li priznaje da ne zna?
+2. **Pitaj istu stvar na tri načina** — ako se odgovori razilaze u brojkama, bot nagađa.
+3. **Traži izvor** — može li da kaže odakle mu podatak? Kod internih rešenja odgovor treba da citira dokument.
+4. **Pitaj o konkurenciji** — dobar bot ostaje u svom domenu umesto da improvizuje.
+5. **Proveri granične slučajeve** — popusti, reklamacije, rokovi. Tu izmišljanje najviše boli.
+
+## Šta je realno očekivati
+
+Nijedan sistem nije 100%. Ali razlika između „bota koji ponekad izmisli cenu" i „bota koji kaže *nemam podatak, javite se*" nije u modelu — nego u tome koliko pažljivo je postavljena baza znanja i koliko su stroga pravila kad podatka nema.
+
+Priprema baze znanja je zato često **najveći deo posla** kod ozbiljnog chatbota — i glavni razlog zašto se cene razlikuju. O tome detaljnije u tekstu [koliko košta AI chatbot za sajt](/blog/koliko-kosta-ai-chatbot-za-sajt), a o samoj usluzi na stranici [AI Chatbot za sajt](/usluge/chatbot).
+
+Ako razmišljaš o botu, ali te baš ovo brine — [javi se na besplatnu konsultaciju](/kontakt). Pogledamo tvoje podatke i iskreno ti kažem koliko pouzdano se to može postaviti u tvom slučaju.

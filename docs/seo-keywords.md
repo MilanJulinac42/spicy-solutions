@@ -23,7 +23,15 @@ Voice se traži kao `glasovni agent` / `telefonski asistent` / `AI sekretarica`,
 - **Long-tail:** `AI chatbot za korisničku podršku`, `AI chatbot vs AI agent`, `RAG chatbot`, `AI chatbot za sajt Srbija`
 - **Namera:** komercijalna (visoka konverzija)
 - **FAQ koje pokriti (PAA):** Koliko košta osnovni? · Šta utiče na cenu? · Ima li besplatnih? · Koliko uštedim? · AI chatbot vs AI agent?
-- **Post:** `/blog/koliko-kosta-ai-chatbot-za-sajt`
+- **Postovi u clusteru** (svaki druga namera, bez kanibalizacije):
+  - `cena` → `/blog/koliko-kosta-ai-chatbot-za-sajt` — komercijalna
+  - `halucinacije / tačnost` → `/blog/zasto-ai-chatbot-izmislja-odgovore` — poverenje;
+    **rupa na tržištu**: u srpskom SERP-u samo opšte novinarstvo (bug.hr, tportal,
+    web-mind.rs), nijedan vendor ne pokriva „kako da bot ne izmišlja"
+  - `e-commerce` → `/blog/ai-chatbot-za-online-prodavnicu` — vertikala, dobra konverzija
+- **Još neiskorišćeno:** `AI chatbot za korisničku podršku` (visoka namera, gusto:
+  agentstep/aichatbot.rs/ITNetwork/bolutions), `kako napraviti chatbot za sajt` (how-to,
+  delom se preklapa sa cena postom)
 
 ### 2. Interni AI asistent
 - **Primarni:** `interni AI asistent za firme`
