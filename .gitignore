@@ -46,3 +46,6 @@ lh-*.json
 
 # Scheduled tasks runtime state
 .claude/scheduled_tasks.lock
+
+# Generated voice test samples (regenerate: npx tsx scripts/test-voice-sr.ts)
+scripts/voice-samples/
