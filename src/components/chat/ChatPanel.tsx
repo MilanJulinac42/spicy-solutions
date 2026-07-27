@@ -1,6 +1,12 @@
 "use client";
 
-import { useState, useRef, useEffect, useCallback, type MutableRefObject } from "react";
+import {
+  useState,
+  useRef,
+  useEffect,
+  useLayoutEffect,
+  type MutableRefObject,
+} from "react";
 import { motion } from "framer-motion";
 import { X, Send, RotateCcw } from "lucide-react";
 import { useTranslations, useLocale } from "next-intl";
@@ -36,8 +42,8 @@ export function ChatPanel({
   const locale = useLocale();
   const [input, setInput] = useState("");
   const [isTyping, setIsTyping] = useState(false);
-  const messagesEndRef = useRef<HTMLDivElement>(null);
-  const messagesContainerRef = useRef<HTMLDivElement>(null);
+  const desktopMessagesRef = useRef<HTMLDivElement>(null);
+  const mobileMessagesRef = useRef<HTMLDivElement>(null);
   const inputRef = useRef<HTMLTextAreaElement>(null);
   const abortRef = useRef<AbortController | null>(null);
 
@@ -54,31 +60,46 @@ export function ChatPanel({
     }
   }, []);
 
-  const scrollToBottom = useCallback((smooth = true) => {
-    const container = messagesContainerRef.current;
-    if (!container) return;
-    container.scrollTo({
-      top: container.scrollHeight,
-      behavior: smooth ? "smooth" : "auto",
-    });
+  // The panel is rendered twice — a desktop popover and a mobile sheet — and
+  // only one is visible at a time. Each needs its own ref: a single shared ref
+  // would end up pointing at whichever mounted last (the hidden one), and
+  // scrolling a `display:none` element does nothing.
+  function visibleMessagesContainer(): HTMLDivElement | null {
+    for (const ref of [desktopMessagesRef, mobileMessagesRef]) {
+      const node = ref.current;
+      if (node && node.offsetParent !== null) return node;
+    }
+    return null;
+  }
+
+  // Whether the view should keep following new content. Only a deliberate
+  // scroll away from the bottom turns this off — measuring distance at render
+  // time instead would misread a mid-flight scroll animation and stop
+  // following while the answer is still streaming in.
+  const stickToBottom = useRef(true);
+
+  useEffect(() => {
+    const nodes = [desktopMessagesRef.current, mobileMessagesRef.current].filter(
+      (n): n is HTMLDivElement => n !== null
+    );
+    function handleScroll(e: Event) {
+      const node = e.currentTarget as HTMLDivElement;
+      const distanceFromBottom =
+        node.scrollHeight - node.scrollTop - node.clientHeight;
+      stickToBottom.current = distanceFromBottom < 80;
+    }
+    nodes.forEach((n) => n.addEventListener("scroll", handleScroll, { passive: true }));
+    return () => nodes.forEach((n) => n.removeEventListener("scroll", handleScroll));
   }, []);
 
-  // Scroll on new messages or typing indicator change
-  useEffect(() => {
-    scrollToBottom();
-  }, [messages.length, isTyping, scrollToBottom]);
-
-  // During streaming: keep pinned to bottom on every content update (instant, no smooth queue lag)
-  useEffect(() => {
-    const container = messagesContainerRef.current;
+  // Follow the answer as it streams. Instant (not smooth) so it keeps pace with
+  // every chunk, and in a layout effect so it lands before the browser paints.
+  useLayoutEffect(() => {
+    if (!stickToBottom.current) return;
+    const container = visibleMessagesContainer();
     if (!container) return;
-    // Only auto-scroll if user is near the bottom (don't yank if they scrolled up to read)
-    const distanceFromBottom =
-      container.scrollHeight - container.scrollTop - container.clientHeight;
-    if (distanceFromBottom < 120) {
-      container.scrollTop = container.scrollHeight;
-    }
-  }, [messages]);
+    container.scrollTop = container.scrollHeight;
+  });
 
   useEffect(() => {
     inputRef.current?.focus();
@@ -109,6 +130,10 @@ export function ChatPanel({
   async function handleSend(text?: string) {
     const msgText = (text || input).trim();
     if (!msgText || isTyping) return;
+
+    // Sending is an intent to see the reply — resume following even if the
+    // user had scrolled up to re-read something earlier.
+    stickToBottom.current = true;
 
     const userMsg: Message = {
       id: nextId.current++,
@@ -234,7 +259,7 @@ export function ChatPanel({
     }
   }
 
-  const panelContent = (
+  const renderPanel = (messagesRef: React.RefObject<HTMLDivElement | null>) => (
     <>
       {/* Header */}
       <div className="bg-gradient-to-r from-spicy-400 to-spicy-500 px-4 py-3 flex items-center justify-between shrink-0">
@@ -262,7 +287,7 @@ export function ChatPanel({
       </div>
 
       {/* Messages */}
-      <div ref={messagesContainerRef} className="flex-1 overflow-y-auto p-4 space-y-3">
+      <div ref={messagesRef} className="flex-1 overflow-y-auto p-4 space-y-3">
         {messages.map((msg) => (
           <ChatMessage key={msg.id} role={msg.role} content={msg.content} />
         ))}
@@ -282,7 +307,6 @@ export function ChatPanel({
         )}
 
         {isTyping && <TypingIndicator />}
-        <div ref={messagesEndRef} />
       </div>
 
       {/* Input */}
@@ -329,7 +353,7 @@ export function ChatPanel({
         className="hidden sm:flex fixed z-50 flex-col shadow-2xl overflow-hidden bg-surface border border-border-subtle bottom-24 right-6 w-[380px] rounded-2xl"
         style={{ height: "min(520px, calc(100vh - 120px))" }}
       >
-        {panelContent}
+        {renderPanel(desktopMessagesRef)}
       </motion.div>
 
       {/* Mobile: fullscreen overlay */}
@@ -340,7 +364,7 @@ export function ChatPanel({
         transition={{ type: "spring", stiffness: 300, damping: 30 }}
         className="sm:hidden fixed inset-0 z-50 flex flex-col bg-surface"
       >
-        {panelContent}
+        {renderPanel(mobileMessagesRef)}
       </motion.div>
     </>
   );
