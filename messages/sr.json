@@ -880,7 +880,8 @@
         "i1": "Ime i prezime",
         "i2": "Imejl adresa",
         "i3": "Naziv kompanije (opciono)",
-        "i4": "Sadržaj vaše poruke"
+        "i4": "Sadržaj vaše poruke",
+        "i5": "Broj telefona i delatnost — isključivo ako sami zatražite demo poziv AI voice agenta. Broj se koristi samo za taj dogovoreni poziv, ne prosleđuje se trećim licima i briše se na vaš zahtev."
       },
       "p2": "Ne koristim kolačiće za praćenje niti analitičke alate trećih strana."
     },

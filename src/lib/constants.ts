@@ -9,6 +9,16 @@ export const navLinks: NavLink[] = [
   { titleKey: "Navbar.contact", href: "/kontakt" },
 ];
 
+/**
+ * Formspree form IDs — these deliver submissions to email. Voice demo requests
+ * use their own form so they don't get buried among general contact messages.
+ * Replace `voiceDemo` once the dedicated form exists (formspree.io → New form).
+ */
+export const FORMSPREE_FORMS = {
+  contact: "mzdkekob",
+  voiceDemo: "mzdkekob",
+} as const;
+
 export const siteConfig = {
   name: "Solvera",
   description: "Vi vodite biznis, ja brinem o tehnologiji",

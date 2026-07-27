@@ -53,6 +53,7 @@ import { services } from "@/data/services";
 import { ServiceIllustration } from "@/components/features/ServiceIllustration";
 import { ChatDemoCTA } from "@/components/sections/ChatDemoCTA";
 import { ChatbotPricing } from "@/components/sections/ChatbotPricing";
+import { VoiceDemoBooking } from "@/components/sections/VoiceDemoBooking";
 import Link from "next/link";
 import { notFound } from "next/navigation";
 
@@ -286,6 +287,9 @@ export default function ServicePage() {
 
       {/* Pricing — only on the chatbot service page */}
       {slug === "chatbot" && <ChatbotPricing />}
+
+      {/* Gated demo booking — only on the voice service page */}
+      {slug === "voice" && <VoiceDemoBooking />}
 
       {/* Technologies */}
       <section className="py-20 md:py-28 bg-surface-secondary">

@@ -9,7 +9,7 @@ import { SectionHeading } from "@/components/ui/SectionHeading";
 import { fadeInUp, staggerContainer } from "@/lib/animations";
 
 const sectionItemCounts: Record<string, string[]> = {
-  section1: ["i1", "i2", "i3", "i4"],
+  section1: ["i1", "i2", "i3", "i4", "i5"],
   section2: ["i1", "i2", "i3"],
   section4: ["i1", "i2", "i3", "i4"],
   section6: ["i1", "i2", "i3", "i4"],

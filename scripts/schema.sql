@@ -20,7 +20,7 @@ CREATE INDEX IF NOT EXISTS knowledge_chunks_embedding_idx
 ON knowledge_chunks
 USING hnsw (embedding vector_cosine_ops);
 
--- 4. Leads table (chatbot lead capture)
+-- 4. Leads table (chatbot lead capture + voice demo requests)
 CREATE TABLE IF NOT EXISTS leads (
   id SERIAL PRIMARY KEY,
   name VARCHAR(255),
@@ -30,8 +30,17 @@ CREATE TABLE IF NOT EXISTS leads (
   locale VARCHAR(5),
   source VARCHAR(50) DEFAULT 'chatbot',
   conversation JSONB,
+  phone VARCHAR(50),
+  industry VARCHAR(100),
+  preferred_time VARCHAR(100),
   created_at TIMESTAMPTZ DEFAULT NOW()
 );
+
+-- 4b. Voice demo columns for databases created before this feature.
+-- Safe to run repeatedly; no-ops once the columns exist.
+ALTER TABLE leads ADD COLUMN IF NOT EXISTS phone VARCHAR(50);
+ALTER TABLE leads ADD COLUMN IF NOT EXISTS industry VARCHAR(100);
+ALTER TABLE leads ADD COLUMN IF NOT EXISTS preferred_time VARCHAR(100);
 
 -- 5. Similarity search RPC used by src/lib/rag.ts
 CREATE OR REPLACE FUNCTION match_knowledge(
