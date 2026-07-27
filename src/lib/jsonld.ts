@@ -280,6 +280,39 @@ export function articleSchema(post: {
   };
 }
 
+// --- BreadcrumbList ----------------------------------------------------------
+
+/**
+ * Breadcrumb trail for a page. Pass items in order, root first, each with a
+ * path relative to the site root (e.g. "/blog").
+ */
+export function breadcrumbSchema(items: { name: string; path: string }[]) {
+  return {
+    "@context": "https://schema.org",
+    "@type": "BreadcrumbList",
+    itemListElement: items.map((item, i) => ({
+      "@type": "ListItem",
+      position: i + 1,
+      name: item.name,
+      item: `${SITE_URL}${item.path}`,
+    })),
+  };
+}
+
+// --- FAQPage (generic builder for any page with Q&A content) -----------------
+
+export function faqSchema(faqs: { question: string; answer: string }[]) {
+  return {
+    "@context": "https://schema.org",
+    "@type": "FAQPage",
+    mainEntity: faqs.map((f) => ({
+      "@type": "Question",
+      name: f.question,
+      acceptedAnswer: { "@type": "Answer", text: f.answer },
+    })),
+  };
+}
+
 /**
  * Helper to render a JSON-LD object as a string suitable for
  * `dangerouslySetInnerHTML`. Strips </script> safely (defense in depth).

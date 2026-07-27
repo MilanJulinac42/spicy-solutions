@@ -3,11 +3,16 @@ import Link from "next/link";
 import { notFound } from "next/navigation";
 import { getTranslations } from "next-intl/server";
 import { MDXRemote } from "next-mdx-remote/rsc";
-import { ArrowLeft, ArrowRight, Clock } from "lucide-react";
+import { ArrowRight, ChevronDown, ChevronRight, Clock } from "lucide-react";
 import { Container } from "@/components/ui/Container";
 import { getAllPosts, getPostBySlug, formatDateSr } from "@/lib/blog";
 import { mdxComponents } from "@/components/blog/mdxComponents";
-import { articleSchema, jsonLdString } from "@/lib/jsonld";
+import {
+  articleSchema,
+  breadcrumbSchema,
+  faqSchema,
+  jsonLdString,
+} from "@/lib/jsonld";
 
 type Params = { params: Promise<{ slug: string }> };
 
@@ -55,14 +60,49 @@ export default async function BlogPostPage({ params }: Params) {
         type="application/ld+json"
         dangerouslySetInnerHTML={{ __html: jsonLdString(articleSchema(post)) }}
       />
+      <script
+        type="application/ld+json"
+        dangerouslySetInnerHTML={{
+          __html: jsonLdString(
+            breadcrumbSchema([
+              { name: "Početna", path: "/" },
+              { name: "Blog", path: "/blog" },
+              { name: post.title, path: `/blog/${post.slug}` },
+            ])
+          ),
+        }}
+      />
+      {post.faq.length > 0 && (
+        <script
+          type="application/ld+json"
+          dangerouslySetInnerHTML={{ __html: jsonLdString(faqSchema(post.faq)) }}
+        />
+      )}
       <Container className="max-w-3xl">
-        <Link
-          href="/blog"
-          className="inline-flex items-center gap-1.5 text-sm text-foreground-muted transition-colors hover:text-spicy-400"
-        >
-          <ArrowLeft className="h-4 w-4" />
-          {t("backToBlog")}
-        </Link>
+        {/* Visible breadcrumbs — mirrors the BreadcrumbList structured data */}
+        <nav aria-label="Breadcrumb">
+          <ol className="flex flex-wrap items-center gap-1.5 text-sm text-foreground-muted">
+            <li>
+              <Link href="/" className="transition-colors hover:text-spicy-400">
+                {t("breadcrumbHome")}
+              </Link>
+            </li>
+            <li aria-hidden className="text-foreground-muted/50">
+              <ChevronRight className="h-3.5 w-3.5" />
+            </li>
+            <li>
+              <Link href="/blog" className="transition-colors hover:text-spicy-400">
+                {t("title")}
+              </Link>
+            </li>
+            <li aria-hidden className="text-foreground-muted/50">
+              <ChevronRight className="h-3.5 w-3.5" />
+            </li>
+            <li className="max-w-full truncate text-foreground-secondary" aria-current="page">
+              {post.title}
+            </li>
+          </ol>
+        </nav>
 
         <header className="mt-6 mb-10">
           <div className="flex items-center gap-2 text-sm text-foreground-muted">
@@ -84,6 +124,32 @@ export default async function BlogPostPage({ params }: Params) {
         <div className="max-w-none">
           <MDXRemote source={post.content} components={mdxComponents} />
         </div>
+
+        {/* Visible FAQ — same source as the FAQPage structured data, so the two
+            can never drift apart (Google requires the Q&A to be on the page). */}
+        {post.faq.length > 0 && (
+          <section className="mt-14">
+            <h2 className="mb-5 text-2xl md:text-3xl font-bold text-foreground">
+              {t("faqTitle")}
+            </h2>
+            <div className="space-y-3">
+              {post.faq.map((item) => (
+                <details
+                  key={item.question}
+                  className="group rounded-2xl border border-border-default bg-surface-secondary p-5 [&_summary::-webkit-details-marker]:hidden"
+                >
+                  <summary className="flex cursor-pointer items-center justify-between gap-4 font-medium text-foreground">
+                    {item.question}
+                    <ChevronDown className="h-5 w-5 shrink-0 text-foreground-muted transition-transform group-open:rotate-180" />
+                  </summary>
+                  <p className="mt-3 leading-relaxed text-foreground-muted">
+                    {item.answer}
+                  </p>
+                </details>
+              ))}
+            </div>
+          </section>
+        )}
 
         {/* End-of-post CTA */}
         <div className="mt-14 rounded-2xl border border-spicy-400/20 bg-gradient-to-br from-spicy-400/10 to-spicy-400/5 p-6 md:p-8">

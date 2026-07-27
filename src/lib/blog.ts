@@ -7,6 +7,8 @@ import matter from "gray-matter";
  * YAML frontmatter. No CMS, no DB — write markdown, commit, deploy.
  */
 
+export type Faq = { question: string; answer: string };
+
 export type PostMeta = {
   slug: string;
   title: string;
@@ -17,6 +19,8 @@ export type PostMeta = {
   cover?: string;
   /** Related service slug (e.g. "chatbot") → links the post to /usluge/[service]. */
   service?: string;
+  /** Q&A pairs mirrored from the post body — emitted as FAQPage structured data. */
+  faq: Faq[];
   readingMinutes: number;
 };
 
@@ -53,6 +57,9 @@ export function getPostBySlug(slug: string): Post | null {
     author: data.author ?? "Milan Julinac",
     cover: data.cover,
     service: data.service,
+    faq: Array.isArray(data.faq)
+      ? data.faq.filter((f: Faq) => f?.question && f?.answer)
+      : [],
     readingMinutes: readingMinutes(content),
     content,
   };
@@ -72,6 +79,7 @@ export function getAllPosts(): PostMeta[] {
       author: p.author,
       cover: p.cover,
       service: p.service,
+      faq: p.faq,
       readingMinutes: p.readingMinutes,
     }));
 }
