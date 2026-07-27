@@ -86,6 +86,11 @@ export const metadata: Metadata = {
   alternates: {
     canonical: "https://www.solveradev.rs",
   },
+  // Google Search Console ownership check. Must sit in <head> — the GA snippet
+  // loads lazily for performance, so it can't serve as the verification signal.
+  verification: {
+    google: "Ibx4LOWXOqLsKamIieyCnG2rKci6D_zPaP7ZcLIvyuk",
+  },
 };
 
 export default async function RootLayout({
