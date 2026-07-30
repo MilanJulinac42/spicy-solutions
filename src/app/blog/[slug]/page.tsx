@@ -5,7 +5,8 @@ import { getTranslations } from "next-intl/server";
 import { MDXRemote } from "next-mdx-remote/rsc";
 import { ArrowRight, ChevronDown, ChevronRight, Clock } from "lucide-react";
 import { Container } from "@/components/ui/Container";
-import { getAllPosts, getPostBySlug, formatDateSr } from "@/lib/blog";
+import { getAllPosts, getPostBySlug } from "@/lib/blog";
+import { formatDateSr } from "@/lib/formatDate";
 import { mdxComponents } from "@/components/blog/mdxComponents";
 import {
   articleSchema,
