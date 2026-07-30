@@ -61,9 +61,11 @@ export function SaasVsCustom() {
       </div>
 
       <p className="mt-3 text-center text-[13px] text-foreground-muted">
-        Gruba računica: na ~€100/mes, SaaS te za 2 godine košta{" "}
-        <strong className="text-foreground">~€2.400</strong>. Custom bot ~€1.200 setup — i ostaje{" "}
-        <strong className="text-foreground">tvoj</strong>.
+        Gruba računica: na ~100€ mesečno, pretplata te za dve godine košta{" "}
+        <strong className="text-foreground">oko 2.400€</strong>. Sopstveni asistent — izrada
+        od 450€ i 20€ mesečno — ispod{" "}
+        <strong className="text-foreground">1.000€</strong> za isti period, i ostaje{" "}
+        <strong className="text-foreground">vaš</strong>.
       </p>
     </div>
   );

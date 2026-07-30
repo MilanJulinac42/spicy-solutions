@@ -6,50 +6,24 @@ import { Check, ArrowRight } from "lucide-react";
 import { Container } from "@/components/ui/Container";
 import { fadeInUp, staggerContainer } from "@/lib/animations";
 
-type Tier = {
-  name: string;
-  price: string;
-  tagline: string;
-  features: string[];
-  highlight?: boolean;
-};
+/**
+ * Single price rather than tiers: packages invited the reader to guess which
+ * box they fall into, when the honest answer is that the price depends on their
+ * documents and integrations. So we show the entry price and what moves it.
+ */
 
-const TIERS: Tier[] = [
-  {
-    name: "FAQ bot",
-    price: "od 600€",
-    tagline: "Brz start za sajt sa jasnim pitanjima",
-    features: [
-      "Bot nad tvojim FAQ-om i sajtom",
-      "Lead capture (ime, email)",
-      "Srpski + engleski",
-      "Widget u uglu sajta",
-    ],
-  },
-  {
-    name: "RAG standard",
-    price: "od 1200€",
-    tagline: "Najčešći izbor — odgovara iz tvojih dokumenata",
-    highlight: true,
-    features: [
-      "Sve iz FAQ bota +",
-      "RAG nad tvojim dokumentima (ne izmišlja)",
-      "Lead capture u CRM",
-      "Analitika razgovora",
-      "Prilagođen brand voice",
-    ],
-  },
-  {
-    name: "Napredan",
-    price: "od 2000€",
-    tagline: "Integracije i akcije, ne samo odgovori",
-    features: [
-      "Sve iz RAG standard +",
-      "Integracije (CRM, WhatsApp, Viber)",
-      "Custom tokovi i akcije (agent)",
-      "Prioritetna podrška",
-    ],
-  },
+const INCLUDED = [
+  "Asistent u uglu vašeg sajta, na srpskom",
+  "Odgovara iz vaših podataka — cene, usluge, radno vreme",
+  "Uzima ime i mejl kada vidi zainteresovanog klijenta",
+  "Kaže „ne znam“ umesto da izmišlja",
+  "Pregled razgovora — vidite šta posetioci pitaju",
+];
+
+const PRICE_FACTORS = [
+  "Koliko toga treba da zna — nekoliko čestih pitanja ili cela dokumentacija",
+  "Da li se povezuje sa programima koje već koristite",
+  "Da li samo odgovara ili i zakazuje i upisuje podatke",
 ];
 
 export function ChatbotPricing() {
@@ -61,14 +35,14 @@ export function ChatbotPricing() {
           whileInView="visible"
           viewport={{ once: true, amount: 0.15 }}
           variants={fadeInUp}
-          className="mb-12 md:mb-16 text-center max-w-2xl mx-auto"
+          className="mb-12 text-center max-w-2xl mx-auto"
         >
           <h2 className="text-3xl md:text-4xl font-bold text-foreground mb-3">
-            Procena cene
+            Koliko košta
           </h2>
           <p className="text-base md:text-lg text-foreground-muted leading-relaxed">
-            Fiksna cena, dogovorena unapred — bez skrivenih troškova. Rasponi su
-            okvirni; tačnu cenu dam posle kratkog razgovora.
+            Fiksna cena, dogovorena unapred — bez skrivenih troškova. Tačan iznos
+            dajem posle kratkog razgovora, kada vidim šta vam treba.
           </p>
         </motion.div>
 
@@ -77,51 +51,59 @@ export function ChatbotPricing() {
           initial="hidden"
           whileInView="visible"
           viewport={{ once: true, amount: 0.15 }}
-          className="grid grid-cols-1 md:grid-cols-3 gap-6 items-stretch"
+          className="mx-auto grid max-w-4xl gap-5 md:grid-cols-2"
         >
-          {TIERS.map((tier) => (
-            <motion.div
-              key={tier.name}
-              variants={fadeInUp}
-              className={`relative flex flex-col rounded-2xl border p-6 ${
-                tier.highlight
-                  ? "border-spicy-400/40 bg-spicy-400/[0.05]"
-                  : "border-border-default bg-surface-secondary"
-              }`}
-            >
-              {tier.highlight && (
-                <span className="absolute -top-3 left-6 rounded-full bg-spicy-400 px-3 py-1 text-[11px] font-semibold text-white">
-                  Najčešće
-                </span>
-              )}
+          {/* One-off */}
+          <motion.div
+            variants={fadeInUp}
+            className="rounded-2xl border border-spicy-400/30 bg-spicy-400/[0.05] p-6 md:p-8"
+          >
+            <div className="text-sm font-medium text-foreground-secondary">Izrada</div>
+            <div className="mt-1 text-4xl font-bold text-foreground">od 450€</div>
+            <div className="mt-1 text-xs text-foreground-muted">jednokratno, plaća se jednom</div>
 
-              <div className="mb-1 text-sm font-medium text-foreground-secondary">
-                {tier.name}
+            <ul className="mt-6 space-y-2.5">
+              {INCLUDED.map((item) => (
+                <li
+                  key={item}
+                  className="flex items-start gap-2.5 text-sm text-foreground-secondary"
+                >
+                  <Check className="mt-0.5 h-4 w-4 shrink-0 text-spicy-400" />
+                  {item}
+                </li>
+              ))}
+            </ul>
+          </motion.div>
+
+          {/* Monthly */}
+          <motion.div
+            variants={fadeInUp}
+            className="flex flex-col rounded-2xl border border-border-default bg-surface-secondary p-6 md:p-8"
+          >
+            <div className="text-sm font-medium text-foreground-secondary">Održavanje</div>
+            <div className="mt-1 text-4xl font-bold text-foreground">od 20€</div>
+            <div className="mt-1 text-xs text-foreground-muted">mesečno, opciono</div>
+
+            <p className="mt-6 text-sm leading-relaxed text-foreground-muted">
+              Sve uključeno u jedan iznos — rad asistenta, praćenje, dopune baze znanja
+              i sitne izmene. Nema odvojenog računa za korišćenje.
+            </p>
+
+            <div className="mt-5 rounded-xl border border-border-subtle bg-surface p-4">
+              <div className="mb-2 text-xs font-mono uppercase tracking-wider text-foreground-muted">
+                Šta pomera cenu
               </div>
-              <div className="mb-1 text-3xl font-bold text-foreground">{tier.price}</div>
-              <div className="mb-5 text-xs text-foreground-muted">jednokratni setup</div>
-
-              <p className="mb-5 text-sm text-foreground-muted leading-relaxed">
-                {tier.tagline}
-              </p>
-
-              <ul className="space-y-2.5">
-                {tier.features.map((f) => (
-                  <li key={f} className="flex items-start gap-2.5 text-sm text-foreground-secondary">
-                    <Check
-                      className={`mt-0.5 h-4 w-4 shrink-0 ${
-                        tier.highlight ? "text-spicy-400" : "text-emerald-400"
-                      }`}
-                    />
-                    {f}
+              <ul className="space-y-2">
+                {PRICE_FACTORS.map((f) => (
+                  <li key={f} className="text-sm leading-relaxed text-foreground-muted">
+                    · {f}
                   </li>
                 ))}
               </ul>
-            </motion.div>
-          ))}
+            </div>
+          </motion.div>
         </motion.div>
 
-        {/* Monthly note + CTA */}
         <motion.div
           initial="hidden"
           whileInView="visible"
@@ -129,33 +111,10 @@ export function ChatbotPricing() {
           variants={fadeInUp}
           className="mt-8 flex flex-col items-center gap-4 text-center"
         >
-          <div className="w-full max-w-md rounded-xl border border-border-default bg-surface-secondary p-4 text-left">
-            <div className="mb-3 text-xs font-mono uppercase tracking-wider text-foreground-muted">
-              Mesečno (opciono)
-            </div>
-            <ul className="space-y-3">
-              <li className="flex items-start justify-between gap-4">
-                <span className="text-sm text-foreground-secondary">
-                  Trošak AI modela
-                  <span className="block text-xs text-foreground-muted">plaća se po korišćenju</span>
-                </span>
-                <span className="whitespace-nowrap font-mono text-sm text-foreground">~20–50€</span>
-              </li>
-              <li className="flex items-start justify-between gap-4">
-                <span className="text-sm text-foreground-secondary">
-                  Održavanje i podrška
-                  <span className="block text-xs text-foreground-muted">
-                    monitoring, doterivanje odgovora, izmene baze znanja, prioritet
-                  </span>
-                </span>
-                <span className="whitespace-nowrap font-mono text-sm text-foreground">od 60€</span>
-              </li>
-            </ul>
-            <p className="mt-3 border-t border-border-subtle pt-3 text-xs text-foreground-muted">
-              Prva 3 meseca doterivanja odgovora su uključena. Održavanje je opciono — bot i podaci
-              ostaju tvoji, bez zaključavanja.
-            </p>
-          </div>
+          <p className="max-w-xl text-sm text-foreground-muted">
+            Prva tri meseca doterivanja odgovora su uključena. Asistent i podaci ostaju
+            vaši — održavanje je opciono, bez njega i dalje radi.
+          </p>
           <div className="flex flex-wrap justify-center gap-3">
             <Link
               href="/kontakt"

@@ -66,25 +66,27 @@
     "chatbot": {
       "title": "AI Chatbot na sajtu",
       "description": "Posetilac sajta ima pitanje u 23h. Asistent odgovara odmah, na osnovu vaših podataka — cene, usluge, procedure. Prepozna ozbiljan upit, uzme kontakt i pošalje vam ga na mejl. Ujutru dobijate spisak zainteresovanih umesto spiska propuštenih pitanja.",
-      "price": "Od 600€ · mesečno 20–50€"
+      "price": "Od 450€ · održavanje od 20€ mesečno"
     },
     "voice": {
       "title": "AI Voice — prima pozive",
       "description": "Frizerski salon, ordinacija, turistička agencija — klijenti zovu kad ne radite ili kad ste zauzeti. Izgubljeni pozivi = izgubljeni klijenti. AI voice agent prima poziv, razume zahtev na srpskom, zakazuje termin ili prebacuje vama kad je potrebno.",
-      "price": "Od 1.500€ · po pozivu 0,10–0,30€ po minutu"
+      "price": "Od 600€ · održavanje od 40€ mesečno"
     },
     "aiIntegrations": {
       "title": "AI integracije po meri",
       "description": "Email upit dolazi — AI klasifikuje hitnost, izvlači ključne podatke, predlaže odgovor. Faktura stiže — AI parsira, validira, ubacuje u sistem. Sastanak završen — AI generiše sažetak i akcione stavke. Konkretni tokovi za vaš proces.",
-      "price": "Od 500€ · kompleksniji projekti po dogovoru"
+      "price": "Od 800€ · održavanje od 30€ mesečno"
     },
     "websites": {
       "title": "Sajtovi i web aplikacije",
-      "description": "Moderni Next.js sajtovi sa SEO-om, brzom isporukom i punim vlasništvom nad kodom. Sekundarni fokus — radim i dalje za klijente kojima treba."
+      "description": "Moderni Next.js sajtovi sa SEO-om, brzom isporukom i punim vlasništvom nad kodom. Sekundarni fokus — radim i dalje za klijente kojima treba.",
+      "price": "Od 300€ · održavanje od 30€ mesečno"
     },
     "enterprise": {
       "title": "Poslovni sistemi po meri",
-      "description": "Interni alati, pregledne table, programi koji se prodaju kao usluga. Ako vam je AI deo većeg sistema — gradim i taj sistem oko njega."
+      "description": "Interni alati, pregledne table, programi koji se prodaju kao usluga. Ako vam je AI deo većeg sistema — gradim i taj sistem oko njega.",
+      "price": "Od 800€ · održavanje od 80€ mesečno"
     }
   },
   "ChatDemo": {
@@ -238,7 +240,7 @@
     "chatbot": {
       "title": "AI Chatbot na sajtu",
       "description": "Pametan asistent na vašem sajtu koji odgovara 24/7 na osnovu vaše baze znanja — usluga, cena, procedura. Kvalifikuje upite, prikuplja kontakte i prebacuje vama kad treba ljudski odgovor.",
-      "comparison": "Postavka za 5–10 dana. Pošten odgovor (ne izmišlja) jer je vezan za vaše dokumente.",
+      "comparison": "Radi za nedelju do dve. Pošten odgovor (ne izmišlja) jer je vezan za vaše dokumente.",
       "features": {
         "f1": "Odgovara iz vaših dokumenata — samo ono što zaista piše, bez izmišljanja",
         "f2": "Sam uzima ime, mejl i opis upita kada vidi zainteresovanog klijenta",
@@ -279,7 +281,7 @@
           },
           "q3": {
             "question": "Koliko košta?",
-            "answer": "Od 600 evra za jednostavnog asistenta koji odgovara na česta pitanja. Do 2.000 evra kada treba da poznaje celu vašu dokumentaciju i da bude povezan sa programima koje koristite. Mesečno ide 20 do 50 evra za sam rad, plus održavanje ako ga želite (od 60 evra)."
+            "answer": "Izrada kreće od 450 evra. Tačan iznos zavisi od toga koliko toga asistent treba da zna i da li se povezuje sa programima koje već koristite. Održavanje je od 20 evra mesečno i u to je sve uključeno — nema odvojenog računa za korišćenje."
           },
           "q4": {
             "question": "Koliko traje dok ne proradi?",
@@ -333,7 +335,7 @@
           },
           "q3": {
             "question": "Koliko košta?",
-            "answer": "Od oko 1.500 evra za asistenta koji se javlja na pozive, daje informacije i zakazuje termine. Do oko 5.000 evra kada treba i sam da zove klijente i da upisuje podatke u vašu evidenciju. Uz to se plaća i sam telefonski poziv — otprilike 0,10 do 0,30 evra po minutu."
+            "answer": "Izrada kreće od 600 evra, a tačan iznos zavisi od toga šta asistent treba da radi — samo da se javlja i daje informacije, ili i da zakazuje i upisuje podatke. Održavanje je od 40 evra mesečno i u to je uključeno do 200 minuta razgovora; preko toga se plaća 0,20 evra po minutu."
           },
           "q4": {
             "question": "Koliko traje dok ne proradi?",
@@ -387,7 +389,7 @@
           },
           "q3": {
             "question": "Koliko košta?",
-            "answer": "Zavisi od toga koliko je posao složen. Manja stvar, na primer automatsko razvrstavanje mejlova, oko 800 do 1.500 evra. Složenije rešenje koje radi sa više programa 3.000 do 8.000 evra. Tačnu cenu dajem posle prvog razgovora."
+            "answer": "Izrada kreće od 800 evra i zavisi od toga koliko je posao složen i sa koliko programa se povezuje. Održavanje je od 30 evra mesečno — pokriva praćenje i doterivanje kada se nešto promeni kod vas, na primer novi izgled faktura ili drugi program."
           },
           "q4": {
             "question": "Šta ako pogreši?",
@@ -637,7 +639,7 @@
           }
         },
         "communication": "WhatsApp grupa za brza pitanja i kratak video pregled napretka svakog petka.",
-        "postLaunch": "Trideset dana besplatnog ispravljanja grešaka. Mesečno održavanje od 50€ pokriva server, rezervne kopije i sitne izmene."
+        "postLaunch": "Trideset dana besplatnog ispravljanja grešaka. Mesečno održavanje od 30€ pokriva server, rezervne kopije i sitne izmene."
       },
       "enterprise": {
         "label": "Poslovni sistem",
@@ -802,7 +804,7 @@
       },
       "payment": {
         "question": "Kako se plaća?",
-        "answer": "Pola na početku, pola pre puštanja u rad. Za veće poslove, preko 5.000 evra, plaćanje se deli na tri dela. Može preko računa, firma firmi, ili karticom."
+        "answer": "Pola na početku, pola pre puštanja u rad. Za veće poslove, preko 2.000 evra, plaćanje se deli na tri dela. Može preko računa, firma firmi, ili karticom."
       },
       "changes": {
         "question": "Šta ako poželim izmene tokom rada?",

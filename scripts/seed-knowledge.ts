@@ -76,7 +76,7 @@ const SR_CHUNKS: Chunk[] = [
   },
   {
     content:
-      "Primeri AI Voice scenarija: AI recepcionar za salon ili kliniku — prima poziv, proverava kalendar, rezerviše termin. AI posle radnog vremena — beleži upit i prioritet kad klijent zove uveče. Outbound — AI zove klijente da potvrdi termin ili prikupi povratnu informaciju. Kvalifikacija leadova — AI razgovara, kvalifikuje budžet/potrebu, šalje pripremljen lead. Po pozivu ~0.10–0.30€ minut (Twilio + AI model).",
+      "Primeri AI Voice scenarija: AI recepcionar za salon ili kliniku — prima poziv, proverava kalendar, rezerviše termin. AI posle radnog vremena — beleži upit i prioritet kad klijent zove uveče. Outbound — AI zove klijente da potvrdi termin ili prikupi povratnu informaciju. Kvalifikacija zainteresovanih — AI razgovara, proveri šta klijentu treba i koliki je budžet, pa vam prosledi pripremljen upit. Razgovori su uključeni u mesečno održavanje (do 200 minuta).",
     locale: "sr",
     category: "services",
   },
@@ -103,7 +103,7 @@ const SR_CHUNKS: Chunk[] = [
   // --- CENE ---
   {
     content:
-      "Cene Solvera usluga (AI primarno): AI Chatbot za sajt: FAQ bot od 600 EUR, RAG standard od 1200 EUR, napredan (sa integracijama) od 2000 EUR; mesečno trošak modela 20–50 EUR + opciono održavanje od 60 EUR (prva 3 meseca doterivanja uključena). AI Voice agent od 1500 EUR (recepcionar) do 5000 EUR (outbound + CRM), po pozivu 0.10–0.30 EUR/min. AI integracija po meri od 800 EUR (mali alat) do 8000 EUR+ (kompleksni agent). Web (sekundarno): landing od 300 EUR, e-commerce od 1000 EUR, web aplikacija od 1500 EUR. Poslovni sistemi od 2000 EUR. Sve cene u eurima, bez PDV.",
+      "Cene Solvera usluga (AI primarno): AI Chatbot za sajt — izrada od 450 EUR, održavanje od 20 EUR mesečno (sve uključeno: rad asistenta, praćenje, dopune baze znanja i sitne izmene; nema odvojenog računa za korišćenje). AI Voice agent — izrada od 600 EUR, održavanje od 40 EUR mesečno (uključeno do 200 minuta razgovora, preko toga 0,20 EUR po minutu). AI integracija po meri — izrada od 800 EUR, održavanje od 30 EUR mesečno. Web (sekundarno): sajtovi od 300 EUR, održavanje od 30 EUR mesečno. Poslovni sistemi od 800 EUR, održavanje od 80 EUR mesečno. Nema fiksnih paketa — tačna cena zavisi od obima posla i daje se posle besplatnog razgovora. Sve cene u eurima, bez PDV.",
     locale: "sr",
     category: "pricing",
   },
@@ -149,7 +149,7 @@ const SR_CHUNKS: Chunk[] = [
   },
   {
     content:
-      "Česta pitanja — AI Voice: Zvuči li robotski? Ne, koristim ElevenLabs ili OpenAI Realtime — prirodno, sa pauzama i intonacijom. Mogu klonirati i vaš glas. Šta ako AI ne razume? Ima fallback 'prebacujem kolegi' i poziv ide vama sa kontekstom. Koliko košta? Setup 1500–5000 EUR + 0.10–0.30 EUR/min Twilio + AI model. Koliko traje setup? 2–4 nedelje (skript, glas, integracija sa kalendarom/CRM, testiranje).",
+      "Česta pitanja — AI Voice: Da li zvuči kao robot? Ne — glas je prirodan, sa pauzama i naglaskom kao kod čoveka, a može se napraviti i da zvuči kao vaš glas. Šta ako ne razume klijenta? Kaže 'da vas prebacim kolegi' i poziv prosledi vama, sa već zabeleženim šta je klijent tražio. Koliko košta? Izrada od 600 EUR, održavanje od 40 EUR mesečno sa uključenih 200 minuta razgovora (preko toga 0,20 EUR po minutu). Koliko traje dok ne proradi? Dve do četiri nedelje — dogovor šta priča, povezivanje sa kalendarom i brojem, pa probni razgovori i doterivanje.",
     locale: "sr",
     category: "faq",
   },
@@ -175,25 +175,25 @@ const SR_CHUNKS: Chunk[] = [
   // --- CENE: Detaljnije ---
   {
     content:
-      "Detaljne cene sajtova: Jednostavan landing page (1-3 strane, kontakt forma, responsivan dizajn) — od 150 EUR. Poslovni sajt sa više strana (5-10 strana, blog, galerija, SEO) — od 300 EUR. E-commerce prodavnica (katalog, korpa, plaćanje, korisničko iskustvo) — od 600 EUR. Custom web aplikacija (korisnički nalozi, dashboard, admin panel, API) — od 800 EUR. Cena zavisi od broja strana, funkcionalnosti i kompleksnosti dizajna. Svaki projekat dobija detaljnu ponudu pre početka rada.",
+      "Detaljne cene sajtova: Izrada sajta kreće od 300 EUR. U to ulazi prilagođavanje telefonu i računaru, priprema za Google pretragu i sistem za samostalnu izmenu teksta i slika. Cena zavisi od broja stranica, potrebnih funkcija (internet prodavnica, korisnički nalozi) i složenosti izgleda. Održavanje je od 30 EUR mesečno i pokriva server, rezervne kopije i sitne izmene. Svaki projekat dobija tačnu ponudu pre početka rada.",
     locale: "sr",
     category: "pricing",
   },
   {
     content:
-      "Detaljne cene poslovnih sistema: MVP (minimalni proizvod) za testiranje tržišta — od 1200 EUR, rok 1-3 nedelje. Kompletna SaaS platforma sa svim funkcionalnostima — od 2000 EUR, rok 4-8 nedelja. CRM ili ERP prilagođen vašem procesu — od 1500 EUR. Integracija sa postojećim sistemima (API povezivanje) — od 400 EUR. Održavanje i podrška posle isporuke — opciono, od 80 EUR mesečno.",
+      "Detaljne cene poslovnih sistema: Izrada kreće od 800 EUR za prvu radnu verziju, a puni sistem zavisi od broja tokova posla i povezivanja sa programima koje već koristite. Održavanje je od 80 EUR mesečno — u to ulazi server, praćenje grešaka i garantovan odgovor na prijavljenu grešku u roku od 48 sati. Nove funkcije se dogovaraju posebno, po fiksnoj ceni ili kroz mesečni paket sati.",
     locale: "sr",
     category: "pricing",
   },
   {
     content:
-      "Detaljne cene AI rešenja: AI Chatbot za sajt — FAQ bot od 600 EUR, RAG standard od 1200 EUR, napredan sa integracijama od 2000 EUR. Automatska obrada dokumenata (fakture, ugovori, prijave) — od 1200 EUR. Mesečno održavanje AI sistema — od 60 EUR (prva 3 meseca doterivanja odgovora uključena). Trošak AI modela je odvojen i zavisi od količine upita (obično 20-50 EUR mesečno za manje firme).",
+      "Detaljne cene AI rešenja: AI Chatbot za sajt — izrada od 450 EUR. Cena zavisi od toga koliko toga asistent treba da zna, da li se povezuje sa postojećim programima i da li samo odgovara ili i zakazuje. Održavanje od 20 EUR mesečno — u to je uključen i rad asistenta i praćenje i dopune baze znanja, nema odvojenog računa za korišćenje. Prva tri meseca doterivanja odgovora su uključena. Automatska obrada dokumenata (fakture, ugovori, prijave) — od 800 EUR.",
     locale: "sr",
     category: "pricing",
   },
   {
     content:
-      "Detaljne cene AI Voice usluga: AI recepcionar (jednostavan, kalendar + FAQ) — od 1500 EUR setup. AI agent sa CRM integracijom i kvalifikacijom leadova — od 3000 EUR. Outbound agent (zove klijente za potvrde/povratne informacije) — od 4000 EUR. Po pozivu: 0.10–0.30 EUR/minut (Twilio + AI). Setup mesečnog monitoring i fine-tuninga skripta — od 80 EUR/mes. Setup traje 2–4 nedelje.",
+      "Detaljne cene AI Voice usluga: Izrada kreće od 600 EUR za asistenta koji se javlja, daje informacije i zakazuje termine. Više je kada treba i sam da zove klijente ili da upisuje podatke u vašu evidenciju. Održavanje je od 40 EUR mesečno i u to je uključeno do 200 minuta razgovora; preko toga se plaća 0,20 EUR po minutu. Vaš broj telefona ostaje isti. Puštanje u rad traje dve do četiri nedelje.",
     locale: "sr",
     category: "pricing",
   },
@@ -275,7 +275,7 @@ const SR_CHUNKS: Chunk[] = [
   // --- SPECIFIČNI SCENARIJI ---
   {
     content:
-      "Rešenje za restorane i kafiće: Solvera pravi sajtove za ugostiteljske objekte sa online menijem, rezervacijom stolova, radnim vremenom, galerijom fotografija i integracijom sa Google Maps. Opciono: online naručivanje hrane, integracija sa servisima za dostavu, QR kod za digitalni meni. Cena IZRADE SAJTA od 250 EUR za kompletno rešenje (ovo je cena web sajta, ne AI usluge).",
+      "Rešenje za restorane i kafiće: Solvera pravi sajtove za ugostiteljske objekte sa online menijem, rezervacijom stolova, radnim vremenom, galerijom fotografija i integracijom sa Google Maps. Opciono: online naručivanje hrane, integracija sa servisima za dostavu, QR kod za digitalni meni. Cena izrade sajta od 300 EUR za kompletno rešenje (ovo je cena web sajta, ne AI usluge).",
     locale: "sr",
     category: "services",
   },
@@ -287,19 +287,19 @@ const SR_CHUNKS: Chunk[] = [
   },
   {
     content:
-      "Rešenje za advokate i advokatske kancelarije: Profesionalan sajt sa oblastima prava, biografijama advokata, kontakt formom za konsultacije, blog za pravne savete i FAQ sekcijom. SEO optimizovan za lokalne pretrage (npr. 'advokat Novi Sad'). Cena IZRADE SAJTA od 250 EUR (ovo je cena web sajta, ne AI usluge).",
+      "Rešenje za advokate i advokatske kancelarije: Profesionalan sajt sa oblastima prava, biografijama advokata, kontakt formom za konsultacije, blog za pravne savete i FAQ sekcijom. SEO optimizovan za lokalne pretrage (npr. 'advokat Novi Sad'). Cena izrade sajta od 300 EUR (ovo je cena web sajta, ne AI usluge).",
     locale: "sr",
     category: "services",
   },
   {
     content:
-      "Rešenje za online kurseve i edukaciju: Platforma za e-learning sa video lekcijama, kvizovima, sertifikatima, korisničkim nalozima i praćenjem napretka. Integracija sa platnim sistemima za naplatu kurseva. Opciono: live streaming predavanja, forum za diskusije, affiliate program. Cena IZRADE PLATFORME od 500 EUR (ovo je cena web platforme, ne AI usluge).",
+      "Rešenje za online kurseve i edukaciju: Platforma za e-learning sa video lekcijama, kvizovima, sertifikatima, korisničkim nalozima i praćenjem napretka. Integracija sa platnim sistemima za naplatu kurseva. Opciono: live streaming predavanja, forum za diskusije, affiliate program. Cena izrade platforme od 500 EUR (ovo je cena web platforme, ne AI usluge).",
     locale: "sr",
     category: "services",
   },
   {
     content:
-      "Rešenje za nekretnine i agencije za nekretnine: Sajt sa katalogom nekretnina, naprednom pretragom (lokacija, cena, tip), galerijom fotografija, mapom i kontakt formom za svaku nekretninu. Admin panel za dodavanje i uređivanje nekretnina. Opciono: integracija sa portalima za nekretnine. Cena IZRADE SAJTA od 500 EUR (ovo je cena web sajta, ne AI usluge).",
+      "Rešenje za nekretnine i agencije za nekretnine: Sajt sa katalogom nekretnina, naprednom pretragom (lokacija, cena, tip), galerijom fotografija, mapom i kontakt formom za svaku nekretninu. Admin panel za dodavanje i uređivanje nekretnina. Opciono: integracija sa portalima za nekretnine. Cena izrade sajta od 500 EUR (ovo je cena web sajta, ne AI usluge).",
     locale: "sr",
     category: "services",
   },
@@ -471,7 +471,7 @@ const SR_CHUNKS: Chunk[] = [
   // --- OBJECTION HANDLING ---
   {
     content:
-      "Kada klijent kaže 'preskupo je': Razmislite koliko vas košta da NEMATE sajt. Istraživanja pokazuju da 80% kupaca u Srbiji pretražuje firmu online pre nego što pozove ili dođe. Bez sajta, gubite te ljude — oni odu kod konkurencije koja ima online prisustvo. Sajt od 150 EUR se isplati već sa 2-3 nova klijenta koje dobijete preko njega. Plus, sajt radi za vas 24/7 — to je najjeftiniji 'zaposleni' kojeg ćete ikada imati.",
+      "Kada klijent kaže 'preskupo je': Razmislite koliko vas košta da NEMATE sajt. Istraživanja pokazuju da 80% kupaca u Srbiji pretražuje firmu online pre nego što pozove ili dođe. Bez sajta, gubite te ljude — oni odu kod konkurencije koja ima online prisustvo. Sajt od 300 EUR se isplati već sa 2-3 nova klijenta koje dobijete preko njega. Plus, sajt radi za vas 24/7 — to je najjeftiniji 'zaposleni' kojeg ćete ikada imati.",
     locale: "sr",
     category: "sales",
   },
@@ -495,7 +495,7 @@ const SR_CHUNKS: Chunk[] = [
   },
   {
     content:
-      "Kada klijent kaže 'treba mi samo jednostavan sajt': Čak i najjednostavniji sajt treba da radi posao — da privuče posetioce, da ih ubedi i da ih pretvori u klijente. Sajt koji samo postoji ali ne konvertuje je bačen novac. Pravim sajtove koji su optimizovani za konverziju: jasan poziv na akciju, brzo učitavanje, SEO od prvog dana, kontakt forma koja radi. Landing page od 150 EUR koji vam donese 5 novih klijenata mesečno — to je investicija, ne trošak.",
+      "Kada klijent kaže 'treba mi samo jednostavan sajt': Čak i najjednostavniji sajt treba da radi posao — da privuče posetioce, da ih ubedi i da ih pretvori u klijente. Sajt koji samo postoji ali ne konvertuje je bačen novac. Pravim sajtove koji su optimizovani za konverziju: jasan poziv na akciju, brzo učitavanje, SEO od prvog dana, kontakt forma koja radi. Sajt od 300 EUR koji vam donese 5 novih klijenata mesečno — to je investicija, ne trošak.",
     locale: "sr",
     category: "sales",
   },
@@ -503,7 +503,7 @@ const SR_CHUNKS: Chunk[] = [
   // --- ROI I BUSINESS CASE ---
   {
     content:
-      "Koliko košta firma BEZ sajta ili sa lošim sajtom: 93% kupovnih odluka počinje pretragom na internetu. Firma bez sajta je nevidljiva za te ljude. U Srbiji, e-commerce raste 20-30% godišnje. Firme sa profesionalnim sajtom prijavljuju 40-60% više upita nego firme bez online prisustva. Svaka sekunda sporijeg učitavanja sajta smanjuje konverziju za 7%. Sajt od 150-300 EUR koji vam donese samo 3-4 nova klijenta mesečno se isplati višestruko.",
+      "Koliko košta firma BEZ sajta ili sa lošim sajtom: 93% kupovnih odluka počinje pretragom na internetu. Firma bez sajta je nevidljiva za te ljude. U Srbiji, e-commerce raste 20-30% godišnje. Firme sa profesionalnim sajtom prijavljuju 40-60% više upita nego firme bez online prisustva. Svaka sekunda sporijeg učitavanja sajta smanjuje konverziju za 7%. Sajt od 300 EUR koji vam donese samo 3-4 nova klijenta mesečno se isplati višestruko.",
     locale: "sr",
     category: "sales",
   },
@@ -632,7 +632,7 @@ const SR_CHUNKS: Chunk[] = [
   // --- ODRŽAVANJE PO TIPU PROJEKTA ---
   {
     content:
-      "Mesečno održavanje po tipu projekta u Solveri: Sajtovi — 50€/mesec pokriva server, rezervne kopije, sitne tekstualne i sadržajne izmene, tehnički monitoring. 30 dana posle puštanja u rad bilo koje ispravljanje grešaka je besplatno. Poslovni sistemi — garantovan odgovor na prijavljene greške u roku od 48h. Nove funkcionalnosti naplaćuju se po fiksnoj ceni ili kroz mesečni paket sati: 10 sati, 20 sati ili 40 sati mesečno (po dogovorenoj satnici). AI rešenja — prva tri meseca uključuju mesečno doterivanje AI uputstava (prompts) bez dodatne naknade. Kasnije po fiksnoj ceni. Automatizacija — manje održavanje obično, optimizacija po potrebi.",
+      "Mesečno održavanje po tipu projekta u Solveri: Sajtovi — od 30€/mesec pokriva server, rezervne kopije, sitne tekstualne i sadržajne izmene, tehnički monitoring. AI chatbot — od 20€/mesec. AI Voice — od 40€/mesec (uključeno do 200 minuta). AI integracije — od 30€/mesec. Poslovni sistemi — od 80€/mesec. 30 dana posle puštanja u rad bilo koje ispravljanje grešaka je besplatno. Poslovni sistemi — garantovan odgovor na prijavljene greške u roku od 48h. Nove funkcionalnosti naplaćuju se po fiksnoj ceni ili kroz mesečni paket sati: 10 sati, 20 sati ili 40 sati mesečno (po dogovorenoj satnici). AI rešenja — prva tri meseca uključuju mesečno doterivanje AI uputstava (prompts) bez dodatne naknade. Kasnije po fiksnoj ceni. Automatizacija — manje održavanje obično, optimizacija po potrebi.",
     locale: "sr",
     category: "pricing",
   },
