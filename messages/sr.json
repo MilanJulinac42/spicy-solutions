@@ -163,19 +163,19 @@
         "faq": {
           "q1": {
             "question": "Koliko traje izrada sajta?",
-            "answer": "Brzo. Prezentaciona stranica 2-5 dana, internet prodavnica 1-2 nedelje, web aplikacija 2-4 nedelje. Složenije aplikacije mogu trajati duže — dobijate jasan rok pre početka."
+            "answer": "Jednostavan sajt za prezentaciju firme 2 do 5 dana. Internet prodavnica 1 do 2 nedelje. Složeniji sajt sa korisničkim nalozima 2 do 4 nedelje. Jasan rok dobijate pre početka rada."
           },
           "q2": {
-            "question": "Ko je vlasnik koda i sajta?",
-            "answer": "Vi. Kompletno. Kod, domen, hosting — sve je vaše od prvog dana. Nikada niste zaključani kod nas."
+            "question": "Ko je vlasnik sajta?",
+            "answer": "Vi, u potpunosti. Sajt, adresa sajta i server glase na vaše ime od prvog dana. Niste vezani za mene ni na koji način."
           },
           "q3": {
-            "question": "Da li mogu sam da menjam sadržaj?",
-            "answer": "Da! Svaki sajt dolazi sa sistemom za samostalan unos sadržaja gde možete menjati tekstove, slike i stranice bez ikakvog tehničkog znanja."
+            "question": "Da li mogu sam da menjam tekst i slike?",
+            "answer": "Da. Svaki sajt dobija jednostavan sistem gde se prijavite i menjate tekstove, slike i stranice — bez ikakvog tehničkog znanja. Uz to dobijate i video uputstvo."
           },
           "q4": {
-            "question": "Šta ako mi treba nešto specifično?",
-            "answer": "Javite mi se za besplatan razgovor — analiziram šta vam treba i dajem jasan predlog sa rokovima i cenama."
+            "question": "Šta ako mi treba nešto posebno?",
+            "answer": "Javite se za besplatan razgovor. Pogledamo šta vam treba i dajem jasan predlog sa rokom i cenom, bez obaveze."
           }
         },
         "ctaText": "Zakažite besplatan razgovor"
@@ -216,20 +216,20 @@
         "faqTitle": "Česta pitanja",
         "faq": {
           "q1": {
-            "question": "Koliko traje razvoj poslovnog sistema?",
-            "answer": "Prva radna verzija obično za 1-3 nedelje, kompletniji sistem 4-8 nedelja. Za veće projekte sa mnogo integracija može biti i duže — pre početka dobijate jasan plan sa etapama i rokovima."
+            "question": "Koliko traje izrada?",
+            "answer": "Prva radna verzija obično 1 do 3 nedelje, kompletniji sistem 4 do 8 nedelja. Za veće sisteme može i duže — pre početka dobijate plan sa fazama i rokovima."
           },
           "q2": {
-            "question": "Da li može da se integriše sa našim postojećim alatima?",
-            "answer": "Da. Povezujem se sa bilo kojim sistemom koji ima API — ERP, CRM, računovodstveni softver, sistemi za slanje imejlova, baze podataka."
+            "question": "Da li se povezuje sa programima koje već koristimo?",
+            "answer": "Da. Povezujem se sa programima za fakturisanje, evidenciju klijenata, slanje mejlova i sličnim — sve što ima način da razmenjuje podatke."
           },
           "q3": {
-            "question": "Šta se dešava kad sistem treba da se proširi?",
-            "answer": "Gradim sa skalabilnošću na umu od prvog dana. Dodavanje novih funkcionalnosti je jednostavno jer je arhitektura čista i dokumentovana."
+            "question": "Šta kada sistem treba proširiti?",
+            "answer": "Pravim ga tako da se lako dograđuje. Sve je uredno napisano i dokumentovano, pa dodavanje novih delova ne znači da se počinje iz početka."
           },
           "q4": {
-            "question": "Ko održava sistem posle isporuke?",
-            "answer": "Vi imate kompletan kod i dokumentaciju. Nudim opcionalnu podršku i održavanje, ali nikada niste zaključani."
+            "question": "Ko ga održava posle isporuke?",
+            "answer": "Dobijate ceo sistem i uputstva. Mogu da ga održavam ja, ali niste u obavezi — možete angažovati bilo koga drugog jer je sve vaše."
           }
         },
         "ctaText": "Zakažite besplatan razgovor"
@@ -270,20 +270,20 @@
         "faqTitle": "Česta pitanja",
         "faq": {
           "q1": {
-            "question": "Šta ako bot ne zna odgovor?",
-            "answer": "Eksplicitno kaže da nema podatak i nudi kontakt (mail/telefon/lead forma). Bolje pošteno 'ne znam' nego izmišljen odgovor koji vas košta klijenta."
+            "question": "Šta ako ne zna odgovor?",
+            "answer": "Jasno kaže da nema tu informaciju i ponudi da vas posetilac kontaktira — mejlom, telefonom ili preko kontakt forme. Bolje pošteno „ne znam“ nego izmišljen odgovor koji vas kasnije košta klijenta."
           },
           "q2": {
-            "question": "Da li moji podaci idu na OpenAI?",
-            "answer": "Mogu koristiti OpenAI, Anthropic ili lokalni model (open-source) — vi birate. Za osetljive podatke koristim Azure OpenAI ili Bedrock sa enterprise privatnošću."
+            "question": "Da li moji podaci idu nekome sa strane?",
+            "answer": "Vi birate gde se obrađuju. Mogu da postavim tako da podaci ostaju na serverima u Evropi i da se ne koriste za učenje programa. Ništa se ne prosleđuje dalje i ništa se ne prodaje."
           },
           "q3": {
             "question": "Koliko košta?",
-            "answer": "Setup 600–2000€ (od malog FAQ bota do full RAG sa integracijama). Mesečno: trošak modela (najčešće 20–50€) + opcioni paket podrške."
+            "answer": "Od 600 evra za jednostavnog asistenta koji odgovara na česta pitanja. Do 2.000 evra kada treba da poznaje celu vašu dokumentaciju i da bude povezan sa programima koje koristite. Mesečno ide 20 do 50 evra za sam rad, plus održavanje ako ga želite (od 60 evra)."
           },
           "q4": {
-            "question": "Koliko traje setup?",
-            "answer": "Prvi prototip 3–5 dana. Production-ready sa testiranim odgovorima i integracijama: 1–2 nedelje."
+            "question": "Koliko traje dok ne proradi?",
+            "answer": "Prvu probu vidite za tri do pet dana. Da bude spreman za prave posetioce, sa proverenim odgovorima i povezan sa vašim sistemom — nedelju do dve."
           }
         },
         "ctaText": "Zakažite besplatan razgovor"
@@ -324,20 +324,20 @@
         "faqTitle": "Česta pitanja",
         "faq": {
           "q1": {
-            "question": "Zvuči li robotski?",
-            "answer": "Ne. Koristim ElevenLabs ili OpenAI Realtime glasove — prirodno, sa pauzama i intonacijom. Klonirati mogu i vaš glas ako želite."
+            "question": "Da li zvuči kao robot?",
+            "answer": "Ne. Glas je prirodan — ima pauze, naglasak i ton kao kod čoveka. Većina ljudi na početku ne primeti da priča sa računarom. Ako želite, možemo napraviti da zvuči kao vaš glas ili glas vašeg zaposlenog."
           },
           "q2": {
-            "question": "Šta ako AI ne razume?",
-            "answer": "Ima fallback: 'Da prebacim kolegi koji vam može pomoći detaljnije?' Poziv ide vama sa kontekstom već zabeleženim."
+            "question": "Šta ako ne razume šta klijent traži?",
+            "answer": "Onda kaže: „Da vas prebacim kolegi koji će vam pomoći detaljnije?“ i poziv prosledi vama. Vi već vidite zapisano šta je klijent tražio, pa ne mora sve da priča ispočetka."
           },
           "q3": {
             "question": "Koliko košta?",
-            "answer": "Setup od ~1500€ (jednostavan recepcionar bot) do ~5000€ (kompleksni outbound + CRM integracija). Po pozivu ~0.10–0.30€ minut (Twilio + AI model)."
+            "answer": "Od oko 1.500 evra za asistenta koji se javlja na pozive, daje informacije i zakazuje termine. Do oko 5.000 evra kada treba i sam da zove klijente i da upisuje podatke u vašu evidenciju. Uz to se plaća i sam telefonski poziv — otprilike 0,10 do 0,30 evra po minutu."
           },
           "q4": {
-            "question": "Koliko traje setup?",
-            "answer": "2–4 nedelje za production. Prva nedelja: snimanje toka, definisanje skripta. Druga: tehnička integracija sa kalendarom/CRM-om. Treća: testiranje i fine-tuning glasa."
+            "question": "Koliko traje dok ne proradi?",
+            "answer": "Dve do četiri nedelje. Prvo se dogovorimo šta asistent treba da priča i šta sme sam da uradi. Zatim ga povežem sa vašim kalendarom i brojem telefona. Na kraju slušamo prve razgovore i doterujemo ga dok ne bude kako treba."
           }
         },
         "ctaText": "Zakažite demo poziv"
@@ -378,20 +378,20 @@
         "faqTitle": "Česta pitanja",
         "faq": {
           "q1": {
-            "question": "Kako da znam da li je moj problem rešiv AI-jem?",
-            "answer": "Zakažite besplatan razgovor — opišete tok, pa vam iskreno kažem da li AI tu pomaže, koliko košta i koliko bi trebalo da donese."
+            "question": "Kako da znam da li se moj problem uopšte može rešiti?",
+            "answer": "Zakažite besplatan razgovor i opišite kako sada radite taj posao. Iskreno ću vam reći da li tu ima smisla ubaciti pomoć računara, koliko bi koštalo i koliko biste realno uštedeli. Ako nema smisla, i to ću vam reći."
           },
           "q2": {
-            "question": "Da li se integriše sa našim trenutnim sistemom?",
-            "answer": "Da, ako ima API ili neki način da se priča sa njim (webhook, email, CSV). Pravim integraciju kao deo projekta."
+            "question": "Da li se to povezuje sa programima koje već koristimo?",
+            "answer": "Uglavnom da. Većina poslovnih programa ima način da razmenjuje podatke sa drugim programima. Ako ga nema, podaci mogu da idu i preko mejla ili tabele. Povezivanje radim kao deo posla."
           },
           "q3": {
             "question": "Koliko košta?",
-            "answer": "Vrlo varijabilno. Mali alat (npr. klasifikacija mejlova) ~800–1500€. Kompleksniji agent sa više integracija 3000–8000€+. Cenu dajem posle prvog razgovora."
+            "answer": "Zavisi od toga koliko je posao složen. Manja stvar, na primer automatsko razvrstavanje mejlova, oko 800 do 1.500 evra. Složenije rešenje koje radi sa više programa 3.000 do 8.000 evra. Tačnu cenu dajem posle prvog razgovora."
           },
           "q4": {
-            "question": "Šta ako AI pogreši?",
-            "answer": "Gradim sa human-in-the-loop tamo gde greška skupo košta — AI predlaže, čovek potvrđuje. Tamo gde su greške jeftine, AI radi sam i loguje sve."
+            "question": "Šta ako pogreši?",
+            "answer": "Tamo gde greška skupo košta, radi tako da predloži, a čovek potvrdi pre nego što se nešto desi. Tamo gde su greške bezopasne, radi sam, ali sve beleži pa uvek možete da proverite šta je uradio."
           }
         },
         "ctaText": "Zakažite besplatan razgovor"
@@ -798,23 +798,23 @@
     "faq": {
       "start": {
         "question": "Kako počinje saradnja?",
-        "answer": "Pošaljete zahtev preko dugmeta „Započnite projekat“ ili kontakt forme. U roku od 24 sata javljam se sa terminom za besplatan uvodni razgovor (oko 30 minuta). Posle razgovora dobijate pisanu ponudu sa fiksnom cenom i rokom."
+        "answer": "Pošaljete poruku preko dugmeta „Započnite projekat“ ili kontakt forme. U roku od 24 sata javljam se sa terminom za besplatan razgovor od tridesetak minuta. Posle razgovora dobijate pisanu ponudu sa fiksnom cenom i rokom."
       },
       "payment": {
         "question": "Kako se plaća?",
-        "answer": "Pola cene na početku, pola pre puštanja u rad. Za projekte veće od 5000€ plaćanje se deli na tri dela. Može preko računa (firma na firmu) ili karticom."
+        "answer": "Pola na početku, pola pre puštanja u rad. Za veće poslove, preko 5.000 evra, plaćanje se deli na tri dela. Može preko računa, firma firmi, ili karticom."
       },
       "changes": {
         "question": "Šta ako poželim izmene tokom rada?",
-        "answer": "Manje izmene (tekst, boje, raspored elemenata) su uključene u cenu. Za veće izmene (nove funkcionalnosti) dajem procenu dodatnog vremena i cene — vi odlučujete da li se radi ili ne."
+        "answer": "Manje izmene — tekst, boje, raspored — uključene su u cenu. Za veće izmene kažem koliko bi to dodatno koštalo i trajalo, pa vi odlučujete da li se radi."
       },
       "delay": {
         "question": "Šta ako dođe do kašnjenja?",
-        "answer": "Ako kasnim ja — rokovi su fiksni i dodatni trošak ide na moj račun. Ako kasnimo zbog čekanja na vaš sadržaj ili odobrenje, dogovaramo novi termin. U svakom trenutku tačno znate gde smo i zašto."
+        "answer": "Ako kasnim ja, rok ostaje isti i dodatni trošak ide na moj račun. Ako se čeka na vaš tekst, slike ili odobrenje, dogovaramo novi termin. U svakom trenutku znate gde smo i zašto."
       },
       "afterLaunch": {
-        "question": "Šta se dešava nakon puštanja u rad?",
-        "answer": "Prvih 30 dana — besplatno ispravljanje grešaka. Posle toga birate: mesečni paket održavanja (fiksna cena) ili rad po potrebi (po satu ili po zadatku). Kod i serveri su vaši — možete da nastavite sami ili sa drugim timom kad god poželite."
+        "question": "Šta se dešava kada sve proradi?",
+        "answer": "Prvih 30 dana ispravljam sve greške besplatno. Posle toga birate: mesečno održavanje po fiksnoj ceni ili plaćanje samo kada nešto zatreba. Sve je vaše, pa možete nastaviti sami ili sa drugim timom kad god poželite."
       }
     },
     "cta": {
@@ -1040,27 +1040,27 @@
   },
   "HomeFaq": {
     "title": "Pitanja koja klijenti najčešće postavljaju",
-    "subtitle": "Iskrene odgovore na ono što obično zanima vlasnike SMB-a pre nego što potpišu.",
+    "subtitle": "Iskreni odgovori na ono što vlasnike firmi obično zanima pre nego što krenu u posao.",
     "items": {
       "security": {
-        "question": "Kako se podaci čuvaju i da li je sigurno?",
-        "answer": "Podaci se čuvaju na serverima u EU (Vercel/Supabase/AWS Frankfurt) ili na vašoj infrastrukturi — vi birate. Za osetljive podatke koristim Azure OpenAI ili AWS Bedrock sa enterprise privatnošću — modeli ne treniraju na vašim podacima. Sve je u skladu sa GDPR-om i ZZPL-om."
+        "question": "Gde se čuvaju podaci i da li je bezbedno?",
+        "answer": "Podaci se čuvaju na serverima u Evropi ili na vašim serverima — vi birate. Programi koje koristim ne uče na vašim podacima i ne dele ih dalje. Sve je usklađeno sa zakonom o zaštiti podataka o ličnosti."
       },
       "switch": {
-        "question": "Da li mogu da pređem na drugog provajdera ako se predomislim?",
-        "answer": "Da. Kod, dokumentacija, kredencijali i sva infrastruktura su na vaše ime od prvog dana. Bez vendor lock-in-a, bez tajnih ključeva, bez „dođite po izvorni kod kad platite još 2000€\". Predaja drugom timu traje par sati — predam šta postoji i to je to."
+        "question": "Mogu li da pređem kod nekog drugog ako se predomislim?",
+        "answer": "Da, u svakom trenutku. Sve — sam program, uputstva, lozinke i serveri — glasi na vaše ime od prvog dana. Nema skrivenih delova ni naplaćivanja da biste dobili ono što je vaše. Predaja drugom timu traje par sati."
       },
       "timeline": {
-        "question": "Koliko dugo traje implementacija?",
-        "answer": "Chatbot 1–2 nedelje, voice agent 2–4 nedelje, interni asistent 2–6 nedelja, AI integracija 1–4 nedelje. Tačan rok dobijate u pisanoj ponudi pre potpisa — ne klizi posle."
+        "question": "Koliko traje dok ne proradi?",
+        "answer": "Asistent za sajt 1 do 2 nedelje. Asistent koji se javlja na telefon 2 do 4 nedelje. Automatizacija posla 1 do 4 nedelje. Tačan rok dobijate u pisanoj ponudi pre potpisa i on se ne pomera posle."
       },
       "changes": {
-        "question": "Šta ako mi treba izmena posle 6 meseci?",
-        "answer": "Dve opcije: mesečni paket održavanja (fiksna cena) ili rad po potrebi (po satu/zadatku). Pošto kod ostaje vaš, možete me angažovati, drugog inženjera ili sami nastaviti — kako god vam odgovara."
+        "question": "Šta ako mi zatreba izmena posle šest meseci?",
+        "answer": "Dve mogućnosti: mesečno održavanje po fiksnoj ceni, ili plaćate samo kada nešto zatreba. Pošto je sve vaše, možete pozvati mene, nekog drugog, ili nastaviti sami."
       },
       "contract": {
-        "question": "Da li radimo ugovor ili je sve usmeno?",
-        "answer": "Ugovor uvek — Ugovor o pružanju usluga (firma na firmu, dvojezičan po potrebi) sa jasno definisanim obimom, rokovima, cenom, garancijom i klauzulom o vlasništvu nad kodom. Predračun za depozit, faktura po isporuci. Sve transparentno."
+        "question": "Da li se pravi ugovor ili je sve na reč?",
+        "answer": "Ugovor uvek. U njemu jasno piše šta se radi, do kada, po kojoj ceni, kakva je garancija i da sve pripada vama. Račun za avans na početku, konačan račun po isporuci. Bez sitnih slova."
       }
     },
     "cta": "Imate drugo pitanje? Pišite mi"

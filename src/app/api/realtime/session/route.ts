@@ -1,0 +1,137 @@
+import { NextRequest, NextResponse } from "next/server";
+
+/**
+ * Mints a short-lived client token for the browser voice demo. The real API key
+ * stays on the server; the browser only ever receives an ephemeral secret that
+ * OpenAI issues per session.
+ *
+ * Every session costs money for as long as it runs, so this is rate limited and
+ * the client also caps session length (see VoiceDemo).
+ */
+
+const MODEL = "gpt-realtime-2.1";
+const VOICE = "marin";
+
+// --- Rate limiting (in-memory, per IP) ---
+const rateLimit = new Map<string, { count: number; resetAt: number }>();
+const WINDOW = 60 * 60 * 1000; // 1 hour
+const MAX_SESSIONS = 3; // per IP per hour
+
+function isRateLimited(ip: string): boolean {
+  const now = Date.now();
+  const entry = rateLimit.get(ip);
+  if (!entry || now > entry.resetAt) {
+    rateLimit.set(ip, { count: 1, resetAt: now + WINDOW });
+    return false;
+  }
+  entry.count++;
+  return entry.count > MAX_SESSIONS;
+}
+
+setInterval(() => {
+  const now = Date.now();
+  for (const [ip, entry] of rateLimit) {
+    if (now > entry.resetAt) rateLimit.delete(ip);
+  }
+}, 10 * 60 * 1000);
+
+/**
+ * The accent needs pinning down: these models see far more Croatian audio than
+ * Serbian, so without this the delivery drifts. Facts are inlined because the
+ * browser talks to OpenAI directly — there's no server hop per turn to run RAG,
+ * so the model must not be left to guess at prices.
+ */
+const INSTRUCTIONS = `Ti si glasovni AI asistent firme Solvera (solveradev.rs) iz Novog Sada. Ovo je demo poziv — posetilac sajta priča sa tobom da bi čuo kako zvuči AI voice agent.
+
+JEZIK I NAGLASAK:
+- Govoriš ISKLJUČIVO srpskim jezikom, ekavicom, sa naglaskom govornika iz Beograda ili Novog Sada.
+- NIJE hrvatski i NIJE bosanski — ne koristi hrvatsku intonaciju, hrvatski melodijski naglasak niti ijekavicu.
+- Ravnija, smirenija intonacija, kraći samoglasnici, bez pevušenja na kraju rečenice.
+
+KAKO PRIČAŠ:
+- Kratko i prirodno, kao čovek na telefonu — 1 do 3 rečenice po odgovoru.
+- Ne nabrajaj duge liste naglas. Ako ima više stvari, pomeni dve i pitaj šta ih zanima.
+- Budi topao i konkretan, bez korporativnih fraza.
+
+OSNOVNO O SOLVERI:
+- Solveru vodi jedan inženjer-osnivač: Milan Julinac. Nije agencija.
+- Primarno gradi AI rešenja: chatbot za sajt, voice agent (ovo što sada slušaš) i AI integracije po meri. Sekundarno radi sajtove i poslovne sisteme.
+- Kontakt: info@solveradev.rs, WhatsApp 063 838 4196.
+
+BAZA ZNANJA — OBAVEZNO KORISTI ALAT:
+- Imaš alat "pretrazi_bazu_znanja". Pozovi ga UVEK kad te pitaju za cenu, rok, tehnologiju, proces rada, konkretnu uslugu ili bilo koji detalj o Solveri.
+- Ne pogađaj po sećanju — čak i ako misliš da znaš cenu, prvo pozovi alat pa odgovori na osnovu onoga što vrati.
+- Dok čekaš rezultat možeš reći kratko "samo trenutak" da ne bude tišine.
+
+STROGO PRAVILO:
+- Ako alat vrati da nema podatka, reci iskreno da nemaš tačnu informaciju i uputi na info@solveradev.rs ili besplatnu konsultaciju. NE IZMIŠLJAJ cene, rokove ni brojke.
+- Nikad ne izmišljaj imena klijenata niti brojke o uspehu.
+
+POČETAK:
+Kad se veza uspostavi, pozdravi kratko: predstavi se kao Solvera AI asistent i pitaj kako možeš da pomogneš.`;
+
+export async function POST(req: NextRequest) {
+  try {
+    if (!process.env.OPENAI_API_KEY) {
+      return NextResponse.json({ error: "Not configured" }, { status: 500 });
+    }
+
+    const ip = req.headers.get("x-forwarded-for")?.split(",")[0]?.trim() || "unknown";
+    if (isRateLimited(ip)) {
+      return NextResponse.json(
+        { error: "Dostigli ste limit demo razgovora. Pokušajte ponovo za sat vremena." },
+        { status: 429 }
+      );
+    }
+
+    const response = await fetch("https://api.openai.com/v1/realtime/client_secrets", {
+      method: "POST",
+      headers: {
+        Authorization: `Bearer ${process.env.OPENAI_API_KEY}`,
+        "Content-Type": "application/json",
+      },
+      body: JSON.stringify({
+        session: {
+          type: "realtime",
+          model: MODEL,
+          instructions: INSTRUCTIONS,
+          audio: {
+            output: { voice: VOICE },
+          },
+          tools: [
+            {
+              type: "function",
+              name: "pretrazi_bazu_znanja",
+              description:
+                "Pretražuje Solvera bazu znanja (usluge, cene, rokovi, proces rada, tehnologije, česta pitanja). Pozovi uvek kad korisnik pita bilo koji konkretan podatak o Solveri.",
+              parameters: {
+                type: "object",
+                properties: {
+                  pitanje: {
+                    type: "string",
+                    description:
+                      "Pitanje korisnika na srpskom, prepričano kao kratak upit za pretragu (npr. 'cena izrade sajta').",
+                  },
+                },
+                required: ["pitanje"],
+              },
+            },
+          ],
+          tool_choice: "auto",
+        },
+      }),
+    });
+
+    if (!response.ok) {
+      const detail = await response.text();
+      console.error("Realtime token error:", response.status, detail.slice(0, 500));
+      return NextResponse.json({ error: "Failed to create session" }, { status: 502 });
+    }
+
+    const data = await response.json();
+    return NextResponse.json({ value: data.value, expires_at: data.expires_at });
+  } catch (error) {
+    console.error("Realtime session error:", error);
+    return NextResponse.json({ error: "Failed to create session" }, { status: 500 });
+  }
+}

@@ -4,6 +4,7 @@ import { useState } from "react";
 import { motion } from "framer-motion";
 import { CalendarCheck, PhoneCall, Settings2, FileText, CheckCircle, AlertCircle } from "lucide-react";
 import { Container } from "@/components/ui/Container";
+import { VoiceDemo } from "@/components/voice/VoiceDemo";
 import { fadeInUp, staggerContainer } from "@/lib/animations";
 import { FORMSPREE_FORMS } from "@/lib/constants";
 import { trackEvent } from "@/lib/analytics";
@@ -134,6 +135,24 @@ export function VoiceDemoBooking() {
             tvoju delatnost, pa čuješ kako bi zvučao kod tebe, a ne uopšteni robot.
           </p>
         </motion.div>
+
+        {/* Live browser demo — hear the voice before booking a real call */}
+        <motion.div
+          initial="hidden"
+          whileInView="visible"
+          viewport={{ once: true, amount: 0.1 }}
+          variants={fadeInUp}
+          id="demo"
+          className="mx-auto mb-12 max-w-2xl scroll-mt-28"
+        >
+          <VoiceDemo />
+        </motion.div>
+
+        <div className="mb-8 text-center">
+          <span className="text-sm text-foreground-muted">
+            Hoćeš pravi poziv, sa agentom podešenim za tvoju delatnost? Zakaži ispod.
+          </span>
+        </div>
 
         {/* How it works */}
         <motion.div

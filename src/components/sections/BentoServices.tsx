@@ -13,6 +13,7 @@ import {
   Building2,
   MessageSquare,
   MessageCircle,
+  Mic,
   Phone,
   Sparkles,
 } from "lucide-react";
@@ -244,6 +245,8 @@ interface BentoCardProps {
   delay?: number;
   price?: string;
   showChatDemo?: boolean;
+  /** Renders a filled "try it live" button linking to an on-page demo. */
+  demoHref?: string;
 }
 
 const accentMap: Record<
@@ -306,6 +309,7 @@ function BentoCard({
   delay = 0,
   price,
   showChatDemo = false,
+  demoHref,
 }: BentoCardProps) {
   const ref = useRef(null);
   const inView = useInView(ref, { once: true, margin: "-60px" });
@@ -348,6 +352,17 @@ function BentoCard({
               <MessageCircle className="w-4 h-4" />
               <span>{t("Common.tryLive")}</span>
             </button>
+          )}
+          {/* Voice demo lives on its own page, so this links there instead of
+              opening something in place like the chat widget does. */}
+          {demoHref && (
+            <Link
+              href={demoHref}
+              className={`inline-flex items-center gap-1.5 px-4 py-2 rounded-lg text-sm font-semibold text-white transition-all ${a.filled}`}
+            >
+              <Mic className="w-4 h-4" />
+              <span>{t("Common.tryLive")}</span>
+            </Link>
           )}
           <Link
             href={href}
@@ -415,6 +430,7 @@ export function BentoServices() {
             accent="emerald"
             delay={0.1}
             animation={<MiniVoice inView={inView} />}
+            demoHref="/usluge/voice#demo"
           />
 
           {/* AI Integrations */}
