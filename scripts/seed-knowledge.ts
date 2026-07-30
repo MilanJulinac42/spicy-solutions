@@ -156,7 +156,7 @@ const SR_CHUNKS: Chunk[] = [
   // --- TRANSPARENTNOST: novi tim ---
   {
     content:
-      "Solvera je nov, fokusiran AI studio — još uvek ne objavljujem javno portfolio jer je većina projekata pod NDA-om ili u fazi razvoja. Ne izmišljam studije slučaja niti lažne testimonijale. Transparentan sam: ako pitate šta smo konkretno radili, iskreno ću reći. Iskustvo: 7+ godina u modernim tehnologijama (Next.js, AI/LLM, voice AI) — Solvera je moj fokusiran konsalting brand. Bot ne sme da izmišlja imena klijenata, kompanija niti specifične brojke o projektima.",
+      "Solvera je nov, fokusiran AI studio. Javno objavljen rad: sajt škole jezika Spiko Edu iz Bačke Palanke (spikoedu.rs) — prezentaciona stranica sa kursevima, cenama, utiscima polaznika i zakazivanjem konsultacija; može se pogledati uživo i stoji u sekciji Radovi na sajtu. Ostali projekti nisu javni. Ne izmišljam studije slučaja niti lažne testimonijale. Transparentan sam: ako pitate šta smo konkretno radili, iskreno ću reći. Iskustvo: 7+ godina u modernim tehnologijama (Next.js, AI/LLM, voice AI) — Solvera je moj fokusiran konsalting brand. Bot ne sme da izmišlja imena klijenata, kompanija niti specifične brojke o projektima.",
     locale: "sr",
     category: "about",
   },
@@ -558,7 +558,7 @@ const SR_CHUNKS: Chunk[] = [
   // --- SOCIAL PROOF: pošteno bez izmišljotina ---
   {
     content:
-      "Solvera je nov tim koji izlazi na tržište. Nemamo javan portfolio sa logotipima klijenata jer su projekti ili pod NDA-om ili u razvoju. Ne pričamo izmišljene priče o klijentima koji su uštedeli 'X evra mesečno' — to rade druge firme koje pune sajt lažima. Naša priča: dva inženjera koji su radili u različitim okruženjima i odlučili da naprave fer ponudu za srpsko tržište. Fer cene, jasan obim posla, kompletno vlasništvo nad kodom — to su stvari za koje garantujemo, jer ih kontrolišemo. Specifične brojke o klijentima ne izmišljamo.",
+      "Solvera je nov tim koji izlazi na tržište. Od javno dostupnih radova tu je sajt škole jezika Spiko Edu (spikoedu.rs); ostali projekti nisu javni jer su pod ugovorom o poverljivosti ili u razvoju. Ne pričamo izmišljene priče o klijentima koji su uštedeli 'X evra mesečno' — to rade druge firme koje pune sajt lažima. Naša priča: dva inženjera koji su radili u različitim okruženjima i odlučili da naprave fer ponudu za srpsko tržište. Fer cene, jasan obim posla, kompletno vlasništvo nad kodom — to su stvari za koje garantujemo, jer ih kontrolišemo. Specifične brojke o klijentima ne izmišljamo.",
     locale: "sr",
     category: "about",
   },
