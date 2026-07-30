@@ -241,7 +241,7 @@ const SR_CHUNKS: Chunk[] = [
   // --- UPOREDBE SA KONKURENCIJOM ---
   {
     content:
-      "Solvera vs. velika agencija: Velike agencije naplaćuju 5-10x više jer imaju skupe kancelarije, account menadžere, PM-ove i marketing timove. Kod Solvere radite direktno sa inženjerom — nema posrednika, nema nepotrebnih troškova. Isti kvalitet, brža isporuka, znatno niža cena. Primer: agencija naplaćuje 5000-15000 EUR za sajt, pravim isti kvalitet od 150-800 EUR.",
+      "Solvera vs. velika agencija: Velike agencije naplaćuju višestruko više jer plaćaju skupe kancelarije, posrednike koji prenose poruke i marketing timove. Kod Solvere radite direktno sa inženjerom koji pravi vaš proizvod — nema posrednika ni nepotrebnih troškova. Isti kvalitet, brža isporuka, znatno niža cena. Primer: agencija za sajt traži nekoliko hiljada evra, kod mene izrada kreće od 300 EUR.",
     locale: "sr",
     category: "about",
   },
