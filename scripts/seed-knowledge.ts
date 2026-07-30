@@ -100,6 +100,13 @@ const SR_CHUNKS: Chunk[] = [
     locale: "sr",
     category: "services",
   },
+  // --- REFERENCA: platforma Spiko Edu ---
+  {
+    content:
+      "Da li ste radili nešto veće od sajta? Da li imate iskustva sa složenijim projektima, većim sistemima, aplikacijama? Odgovor: da — platforma Spiko Edu (kurs.spikoedu.rs) je referenca za poslovne sisteme i veće projekte: sistem po meri za onlajn školu jezika, radi uživo. Škola kroz administratorski panel sama pravi kurseve, lekcije i vežbe, bez programera. Polaznici imaju naloge, prate napredak i ponavljaju gradivo. Časovi uživo se zakazuju kroz sistem — proverava se kada je nastavnik slobodan u Google kalendaru, pravi se Zoom sastanak i termin se upisuje u kalendar. Ima AI tutora koji objašnjava gradivo i greške, video lekcije i plaćanje karticom preko domaće banke. Tri povezane aplikacije (za polaznike, za administratora i server) i baza sa 22 tabele. Ovo je dokaz da Solvera radi sisteme, ne samo sajtove.",
+    locale: "sr",
+    category: "about",
+  },
   // --- CENE ---
   {
     content:
@@ -156,7 +163,7 @@ const SR_CHUNKS: Chunk[] = [
   // --- TRANSPARENTNOST: novi tim ---
   {
     content:
-      "Solvera je nov, fokusiran AI studio. Javno objavljen rad: sajt škole jezika Spiko Edu iz Bačke Palanke (spikoedu.rs) — prezentaciona stranica sa kursevima, cenama, utiscima polaznika i zakazivanjem konsultacija; može se pogledati uživo i stoji u sekciji Radovi na sajtu. Ostali projekti nisu javni. Ne izmišljam studije slučaja niti lažne testimonijale. Transparentan sam: ako pitate šta smo konkretno radili, iskreno ću reći. Iskustvo: 7+ godina u modernim tehnologijama (Next.js, AI/LLM, voice AI) — Solvera je moj fokusiran konsalting brand. Bot ne sme da izmišlja imena klijenata, kompanija niti specifične brojke o projektima.",
+      "Solvera je nov, fokusiran AI studio. Javno objavljeni radovi (dva, oba za školu jezika Spiko Edu iz Bačke Palanke): 1) sajt spikoedu.rs — prezentaciona stranica sa kursevima, cenama i zakazivanjem konsultacija; 2) platforma kurs.spikoedu.rs — ceo sistem za onlajn školu: kursevi i vežbe koje škola sama pravi, nalozi polaznika, praćenje napretka, zakazivanje časova sa automatskim Zoom linkom i upisom u Google kalendar, AI tutor, video lekcije i plaćanje karticom. Oba se vide u sekciji Radovi na sajtu. Ostali projekti nisu javni. Ne izmišljam studije slučaja niti lažne testimonijale. Transparentan sam: ako pitate šta smo konkretno radili, iskreno ću reći. Iskustvo: 7+ godina u modernim tehnologijama (Next.js, AI/LLM, voice AI) — Solvera je moj fokusiran konsalting brand. Bot ne sme da izmišlja imena klijenata, kompanija niti specifične brojke o projektima.",
     locale: "sr",
     category: "about",
   },
@@ -558,7 +565,7 @@ const SR_CHUNKS: Chunk[] = [
   // --- SOCIAL PROOF: pošteno bez izmišljotina ---
   {
     content:
-      "Solvera je nov tim koji izlazi na tržište. Od javno dostupnih radova tu je sajt škole jezika Spiko Edu (spikoedu.rs); ostali projekti nisu javni jer su pod ugovorom o poverljivosti ili u razvoju. Ne pričamo izmišljene priče o klijentima koji su uštedeli 'X evra mesečno' — to rade druge firme koje pune sajt lažima. Naša priča: dva inženjera koji su radili u različitim okruženjima i odlučili da naprave fer ponudu za srpsko tržište. Fer cene, jasan obim posla, kompletno vlasništvo nad kodom — to su stvari za koje garantujemo, jer ih kontrolišemo. Specifične brojke o klijentima ne izmišljamo.",
+      "Solvera je nov tim koji izlazi na tržište. Od javno dostupnih radova tu su sajt škole jezika Spiko Edu (spikoedu.rs) i platforma za onlajn kurseve iste škole (kurs.spikoedu.rs); ostali projekti nisu javni jer su pod ugovorom o poverljivosti ili u razvoju. Ne pričamo izmišljene priče o klijentima koji su uštedeli 'X evra mesečno' — to rade druge firme koje pune sajt lažima. Naša priča: dva inženjera koji su radili u različitim okruženjima i odlučili da naprave fer ponudu za srpsko tržište. Fer cene, jasan obim posla, kompletno vlasništvo nad kodom — to su stvari za koje garantujemo, jer ih kontrolišemo. Specifične brojke o klijentima ne izmišljamo.",
     locale: "sr",
     category: "about",
   },

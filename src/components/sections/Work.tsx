@@ -14,11 +14,39 @@ import { fadeInUp } from "@/lib/animations";
  * grid — a half-empty grid reads as "that's all there is".
  */
 
-const PROJECTS = [
+type Project = {
+  name: string;
+  kind: string;
+  images: { src: string; alt: string }[];
+  /** Omitted while a project has nothing public to open. */
+  href?: string;
+  summary: string;
+  highlights: string[];
+};
+
+const PROJECTS: Project[] = [
+  {
+    name: "Spiko Edu — platforma za kurseve",
+    kind: "Sistem za onlajn školu",
+    images: [
+      { src: "/radovi/kurs.png", alt: "Naslovna strana platforme Spiko Edu" },
+      { src: "/radovi/admin.png", alt: "Administratorski panel platforme Spiko Edu" },
+    ],
+    href: "https://kurs.spikoedu.rs",
+    summary:
+      "Cela škola jezika onlajn. Škola sama pravi kurseve, lekcije i vežbe, polaznik uči i vežba svojim tempom, a čas uživo se zakaže kroz sistem — koji sam napravi Zoom sastanak i upiše termin u kalendar nastavnika.",
+    highlights: [
+      "Kursevi, lekcije i vežbe — škola ih pravi sama, bez programera",
+      "Nalozi polaznika, praćenje napretka i ponavljanje gradiva",
+      "Zakazivanje časa: proverava kad je nastavnik slobodan, pravi Zoom link",
+      "AI tutor koji objašnjava gradivo i greške",
+      "Video lekcije i plaćanje karticom preko domaće banke",
+    ],
+  },
   {
     name: "Spiko Edu",
     kind: "Škola jezika · Bačka Palanka",
-    image: "/radovi/spiko-edu.png",
+    images: [{ src: "/radovi/spiko-edu.png", alt: "Naslovna strana sajta Spiko Edu" }],
     href: "https://www.spikoedu.rs",
     summary:
       "Prezentaciona stranica za školu nemačkog i engleskog jezika. Posetilac vidi kurseve i nivoe, cene i utiske polaznika, pa zakaže besplatne konsultacije — bez traženja i bez zvanja. Radio sam sve sam, od prazne strane do sajta na internetu.",
@@ -47,7 +75,7 @@ export function Work({
         <SectionHeading title={title} subtitle={subtitle} />
 
         <div className="space-y-8">
-          {PROJECTS.map((p) => (
+          {PROJECTS.map((p, i) => (
             <motion.article
               key={p.name}
               initial="hidden"
@@ -57,22 +85,27 @@ export function Work({
               className="group overflow-hidden rounded-2xl border border-border-default bg-surface"
             >
               <div className="grid gap-0 lg:grid-cols-5">
-                {/* Screenshot */}
-                <Link
-                  href={p.href}
-                  target="_blank"
-                  rel="noopener noreferrer"
-                  className="relative block overflow-hidden lg:col-span-3"
+                {/* Screenshots. A second one earns its place when the first can't
+                    show the whole story — a course page says nothing about the
+                    panel the client actually runs it from. */}
+                <div
+                  className={`flex flex-col gap-px bg-border-default lg:col-span-3 ${
+                    i % 2 === 1 ? "lg:order-last" : ""
+                  }`}
                 >
-                  <Image
-                    src={p.image}
-                    alt={`Naslovna strana sajta ${p.name}`}
-                    width={1886}
-                    height={961}
-                    className="h-full w-full object-cover object-top transition-transform duration-500 group-hover:scale-[1.02]"
-                    sizes="(max-width: 1024px) 100vw, 60vw"
-                  />
-                </Link>
+                  {p.images.map((img) => (
+                    <div key={img.src} className="relative flex-1 overflow-hidden bg-surface">
+                      <Image
+                        src={img.src}
+                        alt={img.alt}
+                        width={1886}
+                        height={961}
+                        className="h-full w-full object-cover object-top transition-transform duration-500 group-hover:scale-[1.02]"
+                        sizes="(max-width: 1024px) 100vw, 60vw"
+                      />
+                    </div>
+                  ))}
+                </div>
 
                 {/* Details */}
                 <div className="flex flex-col justify-center p-6 md:p-8 lg:col-span-2">
@@ -96,6 +129,7 @@ export function Work({
                     ))}
                   </ul>
 
+                  {p.href ? (
                   <Link
                     href={p.href}
                     target="_blank"
@@ -103,9 +137,14 @@ export function Work({
                     className="mt-6 inline-flex items-center gap-2 self-start rounded-lg border border-spicy-400/30 bg-spicy-400/10 px-4 py-2.5 text-sm font-semibold text-spicy-400 transition-all hover:border-spicy-400 hover:bg-spicy-400 hover:text-white"
                   >
                     <ExternalLink className="h-4 w-4" />
-                    Pogledaj sajt uživo
+                    Pogledaj uživo
                     <ArrowUpRight className="h-4 w-4 transition-transform group-hover:translate-x-0.5 group-hover:-translate-y-0.5" />
                   </Link>
+                  ) : (
+                    <span className="mt-6 self-start rounded-lg border border-border-default px-4 py-2.5 text-sm text-foreground-muted">
+                      Uskoro dostupno
+                    </span>
+                  )}
                 </div>
               </div>
             </motion.article>
