@@ -15,9 +15,9 @@ import { checkVoiceLimits, recordVoiceSession } from "@/lib/voiceLimits";
 const MODEL = "gpt-realtime-2.1-mini";
 const VOICE = "marin";
 
-/** Roughly 20 seconds of speech — enough for a natural answer, not a monologue.
- *  Output audio bills at twice the input rate, so this is a real saving. */
-const MAX_OUTPUT_TOKENS = 400;
+// No output token cap: it saved a little on billing but cut answers off
+// mid-sentence, which reads as a broken product — the opposite of what a demo
+// is for. Length is kept down by the instructions and by the session limits.
 
 /**
  * The accent needs pinning down: these models see far more Croatian audio than
@@ -100,7 +100,6 @@ export async function POST(req: NextRequest) {
             },
           ],
           tool_choice: "auto",
-          max_output_tokens: MAX_OUTPUT_TOKENS,
         },
       }),
     });

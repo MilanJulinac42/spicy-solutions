@@ -79,7 +79,10 @@ export async function POST(req: NextRequest) {
       model: "gpt-4o-mini",
       messages: [{ role: "system", content: systemPrompt }, ...recentMessages],
       stream: true,
-      max_tokens: 600,
+      // Headroom rather than a budget lever: a reply cut off mid-sentence looks
+      // broken, and text on this model costs a fraction of a cent either way.
+      // Brevity comes from the system prompt, which asks for 3-4 sentences.
+      max_tokens: 1500,
       temperature: 0.6,
     });
 
