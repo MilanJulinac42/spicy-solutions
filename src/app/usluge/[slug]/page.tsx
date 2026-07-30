@@ -297,11 +297,20 @@ export default function ServicePage() {
       {/* Gated demo booking — only on the voice service page */}
       {slug === "voice" && <VoiceDemoBooking />}
 
-      {/* A real site of this kind beats any description of one */}
+      {/* Real work of this kind beats any description of it */}
       {slug === "websites" && (
         <Work
+          service="websites"
           title="Primer iz prakse"
           subtitle="Sajt koji sam napravio — otvorite ga i pogledajte, ne morate mi verovati na reč."
+        />
+      )}
+
+      {slug === "enterprise" && (
+        <Work
+          service="enterprise"
+          title="Primer iz prakse"
+          subtitle="Sistem koji sam napravio i koji radi — otvorite ga i pogledajte."
         />
       )}
 

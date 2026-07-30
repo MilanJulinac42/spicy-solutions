@@ -17,6 +17,8 @@ import { fadeInUp } from "@/lib/animations";
 type Project = {
   name: string;
   kind: string;
+  /** Which service this proves — service pages show only their own work. */
+  service: "websites" | "enterprise";
   images: { src: string; alt: string }[];
   /** Omitted while a project has nothing public to open. */
   href?: string;
@@ -28,6 +30,7 @@ const PROJECTS: Project[] = [
   {
     name: "Spiko Edu — platforma za kurseve",
     kind: "Sistem za onlajn školu",
+    service: "enterprise",
     images: [
       { src: "/radovi/kurs.png", alt: "Naslovna strana platforme Spiko Edu" },
       { src: "/radovi/admin.png", alt: "Administratorski panel platforme Spiko Edu" },
@@ -46,6 +49,7 @@ const PROJECTS: Project[] = [
   {
     name: "Spiko Edu",
     kind: "Škola jezika · Bačka Palanka",
+    service: "websites",
     images: [{ src: "/radovi/spiko-edu.png", alt: "Naslovna strana sajta Spiko Edu" }],
     href: "https://www.spikoedu.rs",
     summary:
@@ -63,19 +67,25 @@ type WorkProps = {
   /** Overridden on service pages, where "Radovi" is less apt than an example. */
   title?: string;
   subtitle?: string;
+  /** Narrows to one service's work; omitted on the home page, which shows all. */
+  service?: Project["service"];
 };
 
 export function Work({
   title = "Radovi",
   subtitle = "Projekti koje sam radio — kliknite i pogledajte uživo, ne na slici.",
+  service,
 }: WorkProps) {
+  const projects = service ? PROJECTS.filter((p) => p.service === service) : PROJECTS;
+  if (projects.length === 0) return null;
+
   return (
     <section className="py-20 md:py-28 bg-surface-secondary">
       <Container>
         <SectionHeading title={title} subtitle={subtitle} />
 
         <div className="space-y-8">
-          {PROJECTS.map((p, i) => (
+          {projects.map((p, i) => (
             <motion.article
               key={p.name}
               initial="hidden"
