@@ -49,3 +49,7 @@ lh-*.json
 
 # Generated voice test samples (regenerate: npx tsx scripts/test-voice-sr.ts)
 scripts/voice-samples/
+
+# Interni dokumenti — strategija, prodaja, detalji klijentskih sistema.
+# Ostaju lokalno; repo je javan.
+docs/
