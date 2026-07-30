@@ -65,8 +65,8 @@
     "secondaryLabel": "Sekundarno — Web i custom razvoj",
     "chatbot": {
       "title": "AI Chatbot na sajtu",
-      "description": "Posetilac sajta ima pitanje u 23h. Bot odgovara trenutno, na osnovu vaše baze znanja — cene, usluge, procedure. Kvalifikuje upit, hvata lead u CRM, šalje vam email. Ujutru dobijate listu kvalifikovanih klijenata umesto liste propuštenih pitanja.",
-      "price": "Setup 600–2000€ · mesečno 20–50€"
+      "description": "Posetilac sajta ima pitanje u 23h. Asistent odgovara odmah, na osnovu vaših podataka — cene, usluge, procedure. Prepozna ozbiljan upit, uzme kontakt i pošalje vam ga na mejl. Ujutru dobijate spisak zainteresovanih umesto spiska propuštenih pitanja.",
+      "price": "Od 600€ · mesečno 20–50€"
     },
     "voice": {
       "title": "AI Voice — prima pozive",
@@ -84,17 +84,17 @@
     },
     "enterprise": {
       "title": "Poslovni sistemi po meri",
-      "description": "Interni alati, dashboardi, SaaS platforme. Ako vam je AI deo većeg sistema — gradim i taj sistem oko njega."
+      "description": "Interni alati, pregledne table, programi koji se prodaju kao usluga. Ako vam je AI deo većeg sistema — gradim i taj sistem oko njega."
     }
   },
   "ChatDemo": {
     "badge": "Uživo na ovom sajtu",
     "title": "Probaj Solvera bota — radi upravo sad",
-    "description": "Ovo je isti RAG chatbot koji gradim za klijente, samo obučen o Solveri. Pitaj ga za cene, proces ili tech stack — odgovara iz naše baze znanja, ne izmišlja.",
+    "description": "Ovo je isti asistent kakav pravim za klijente, samo obučen o Solveri. Pitajte ga za cene, proces ili tehnologije — odgovara iz naše baze znanja, ne izmišlja.",
     "cta": "Otvori chatbot",
     "tryLabel": "Probaj odmah:",
     "q1": "Koliko košta AI chatbot?",
-    "q2": "Koji tech stack koristite?",
+    "q2": "Koje tehnologije koristite?",
     "q3": "Kako izgleda saradnja?"
   },
   "WhyTrustUs": {
@@ -183,10 +183,10 @@
     },
     "enterprise": {
       "title": "Poslovni sistemi po meri",
-      "description": "Pregledne table, SaaS platforme, interni alati, API integracije. Gradim sisteme koji rastu sa vama, spremne za produkciju, sa posvećenošću kvalitetu koda i redovnom komunikacijom tokom razvoja.",
+      "description": "Pregledne table, programi koji se prodaju kao usluga, interni alati i povezivanje sa postojećim programima. Gradim sisteme koji rastu sa vama, spremne za pravi rad, uz redovnu komunikaciju tokom razvoja.",
       "comparison": "Vrhunski poslovni kvalitet sa agilnim razvojem i direktnim pristupom timu.",
       "features": {
-        "f1": "Skalabilna arhitektura koja raste sa vama",
+        "f1": "Sistem koji raste sa vama, bez prepravki iz početka",
         "f2": "Pregledne table i analitika u realnom vremenu",
         "f3": "Kontrola pristupa i bezbednost zasnovana na ulogama",
         "f4": "Automatske provere i automatsko postavljanje koda na server",
@@ -198,7 +198,7 @@
         "examples": {
           "e1": {
             "title": "Interni poslovni alati",
-            "description": "CRM, ERP, sistemi za upravljanje zalihama ili zaposlenima — prilagođeni tačno vašem procesu rada, bez nepotrebnih funkcija."
+            "description": "Evidencija klijenata, upravljanje poslovanjem, praćenje zaliha ili zaposlenih — prilagođeno tačno vašem načinu rada, bez nepotrebnih funkcija."
           },
           "e2": {
             "title": "SaaS platforma",
@@ -209,8 +209,8 @@
             "description": "Svi vaši podaci na jednom mestu. Grafici, izveštaji i ključni pokazatelji uspeha u realnom vremenu — donosite odluke na osnovu podataka, ne na osećaj."
           },
           "e4": {
-            "title": "API integracije",
-            "description": "Povezujem vaše postojeće sisteme da razmenjuju podatke međusobno. ERP sa internet prodavnicom, CRM sa sistemom za slanje imejlova — bez ručnog prebacivanja podataka."
+            "title": "Povezivanje postojećih programa",
+            "description": "Povezujem programe koje već koristite da sami razmenjuju podatke. Program za fakturisanje sa internet prodavnicom, evidencija klijenata sa slanjem mejlova — bez ručnog prekucavanja."
           }
         },
         "faqTitle": "Česta pitanja",
@@ -240,14 +240,14 @@
       "description": "Pametan asistent na vašem sajtu koji odgovara 24/7 na osnovu vaše baze znanja — usluga, cena, procedura. Kvalifikuje upite, prikuplja kontakte i prebacuje vama kad treba ljudski odgovor.",
       "comparison": "Postavka za 5–10 dana. Pošten odgovor (ne izmišlja) jer je vezan za vaše dokumente.",
       "features": {
-        "f1": "RAG nad vašim dokumentima — bot odgovara samo na ono što zna",
-        "f2": "Lead capture — automatski hvata ime, email, opis upita",
+        "f1": "Odgovara iz vaših dokumenata — samo ono što zaista piše, bez izmišljanja",
+        "f2": "Sam uzima ime, mejl i opis upita kada vidi zainteresovanog klijenta",
         "f3": "Srpski + engleski (i drugi jezici po potrebi)",
-        "f4": "Streaming odgovori, prirodan ton, vaš brand voice",
+        "f4": "Odgovara odmah, prirodnim tonom vaše firme",
         "f5": "Analitika razgovora, troška i tema o kojima posetioci pitaju"
       },
       "detail": {
-        "extendedDescription": "Tipičan setup: skenira vaš sajt + dokumente, indeksira u vektorsku bazu, postavlja se kao widget u uglu. Bot zna gde su mu granice i kad da pita za kontakt umesto da izmišlja.",
+        "extendedDescription": "Kako izgleda: pročitam vaš sajt i dokumenta, sredim ih u pretraživu bazu i postavim asistenta u ugao ekrana. Asistent zna gde su mu granice i kada da pita za kontakt umesto da izmišlja.",
         "examplesTitle": "Tipični scenariji",
         "examples": {
           "e1": {
@@ -295,10 +295,10 @@
       "comparison": "Bot odgovara dok ste na sastanku ili posle radnog vremena. Nijedan poziv ne ostaje neodgovoren.",
       "features": {
         "f1": "Prirodan AI glas (srpski) — ne robotski, ne dosadan",
-        "f2": "Twilio/LiveKit telefonija — vaš broj ostaje, samo dobija AI sloj",
+        "f2": "Vaš broj telefona ostaje isti — samo dobija asistenta koji se javlja",
         "f3": "Rezervacije, FAQ, kvalifikacija — definišemo skripta po vašem procesu",
         "f4": "Prebacivanje na vas/tim u realnom vremenu kad treba",
-        "f5": "Transkripti svih poziva u dashboardu — znate šta klijenti pitaju"
+        "f5": "Zapis svakog razgovora na jednom mestu — znate šta klijenti pitaju"
       },
       "detail": {
         "extendedDescription": "Kako radi: poziv stiže → AI se javlja u vaš ime → vodi razgovor po dogovorenom toku → akcija (rezervacija u kalendaru, slanje SMS-a, prosleđivanje vama). Sve zabeleženo, transkriptovano i merljivo.",
@@ -313,12 +313,12 @@
             "description": "Klijent zove u 22h — AI zabeleži problem, prioritet i kontakt, sutra ujutro imate sve sumarizovano."
           },
           "e3": {
-            "title": "Outbound — potvrde i podsećanja",
+            "title": "Pozivi koje asistent sam obavlja",
             "description": "AI zove klijente da potvrdi termin, obavesti o promenama ili prikupi povratnu informaciju nakon usluge."
           },
           "e4": {
             "title": "Kvalifikacija leadova",
-            "description": "AI razgovara sa potencijalnim klijentom, kvalifikuje budžet/potrebu, šalje vam već pripremljen lead."
+            "description": "Asistent razgovara sa zainteresovanim klijentom, proveri šta mu treba i koliki je budžet, pa vam prosledi pripremljen upit."
           }
         },
         "faqTitle": "Česta pitanja",
@@ -351,8 +351,8 @@
         "f1": "Obrada dokumenata — fakture, ugovori, formulari → strukturirani podaci",
         "f2": "Klasifikacija i triage — automatsko razvrstavanje mejlova, tiketa, upita",
         "f3": "Sumarizacija — sastanci, izveštaji, duge konverzacije → kratak rezime",
-        "f4": "AI agenti — autonomni tokovi sa tool use (čitanje API-ja, pisanje u baze)",
-        "f5": "Direktna integracija u vaš postojeći sistem (ERP, CRM, custom)"
+        "f4": "AI koji sam obavlja posao — čita podatke iz vaših programa i upisuje rezultat",
+        "f5": "Ugrađuje se u programe koje već koristite (fakturisanje, evidencija klijenata, vaš sistem)"
       },
       "detail": {
         "extendedDescription": "Pristup: prvo razgovor — gde tačno trošite ručno vreme? Onda gradimo konkretan AI deo koji rešava taj problem i ugrađuje se u vaš postojeći alat. Bez podizanja parallelnih sistema.",
@@ -428,12 +428,12 @@
   },
   "About": {
     "title": "Solvera ≠ agencija",
-    "subtitle": "Iza Solvere sam ja — jedan full-stack inženjer iz Novog Sada. Bez account menadžera, bez 30 zaposlenih, bez nepotrebnih troškova — samo direktan rad i kod koji je vaš od prvog dana.",
+    "subtitle": "Iza Solvere sam ja — jedan inženjer iz Novog Sada. Bez posrednika, bez 30 zaposlenih, bez nepotrebnih troškova — samo direktan rad i kod koji je vaš od prvog dana.",
     "intro": {
       "name": "Milan Julinac",
-      "role": "Osnivač i full-stack inženjer",
+      "role": "Osnivač i inženjer",
       "bio1": "Pravim moderne web aplikacije, AI integracije i automatizacije za firme koje hoće da rastu — bez agencijskih troškova i bez čekanja mesecima na jednostavne stvari.",
-      "bio2": "7+ godina iskustva sa React-om, Next.js-om, TypeScript-om, Node.js-om i cloud infrastrukturom. Radio sam i kao lead na većim timovima i kao solo inženjer na proizvodnim sistemima — znam šta funkcioniše, šta ne, i gde se gube novac i vreme.",
+      "bio2": "Sedam i više godina iskustva u izradi sajtova, poslovnih programa i AI rešenja. Radio sam i kao vođa većih timova i sam na sistemima koji rade u pravom radu — znam šta funkcioniše, šta ne, i gde se gube novac i vreme.",
       "locationLabel": "Direktan rad sa inženjerom",
       "experienceLabel": "7+ godina iskustva",
       "stackLabel": "Odgovor u roku 24h"
@@ -456,11 +456,11 @@
       },
       "speed": {
         "title": "Brže odluke, brža isporuka",
-        "description": "Nema sastanaka radi sastanaka. Kad je potrebno menjati pravac, menjam ga isti dan. Tipičan sajt 1–2 nedelje, MVP aplikacije 3–4 nedelje."
+        "description": "Nema sastanaka radi sastanaka. Kad treba menjati pravac, menjam ga isti dan. Tipičan sajt 1–2 nedelje, prva radna verzija aplikacije 3–4 nedelje."
       },
       "ownership": {
         "title": "Vlasništvo nad kodom od starta",
-        "description": "Kod, repo, domen, hosting — sve je vaše od prvog commit-a. Bez vendor lock-in-a. Možete me zameniti bilo kada — ali nećete hteti."
+        "description": "Kod, adresa sajta i server — sve je vaše od prvog dana. Niste vezani ni za mene ni za bilo koga. Možete me zameniti kad god — ali nećete hteti."
       }
     },
     "collaboration": {
@@ -502,7 +502,7 @@
       "comingSoon": "Pun profil uskoro dolazi",
       "skillCategories": {
         "frontend": "Web aplikacije",
-        "backend": "Serveri i API-ji",
+        "backend": "Serveri i baze podataka",
         "cloud": "Oblak i infrastruktura",
         "database": "Baze podataka"
       },
@@ -543,7 +543,7 @@
           },
           "leadership": {
             "title": "Vođenje tima",
-            "description": "Koordinacija razvoja, arhitektura sistema i direktna komunikacija — bez posrednika."
+            "description": "Vođenje razvoja, plan celog sistema i direktna komunikacija — bez posrednika."
           },
           "performance": {
             "title": "Optimizacija",
@@ -558,7 +558,7 @@
     },
     "tech": {
       "title": "Tehnologije koje koristim",
-      "subtitle": "Stack koji koristim za izgradnju modernih digitalnih rešenja"
+      "subtitle": "Tehnologije kojima gradim moderna digitalna rešenja"
     }
   },
   "Process": {
@@ -641,7 +641,7 @@
       },
       "enterprise": {
         "label": "Poslovni sistem",
-        "overview": "Interni alat, pregledna tabla, sistem za upravljanje klijentima (CRM), softver koji se prodaje kao usluga ili portal za partnere. Gradim prvu radnu verziju, pa se sistem dograđuje u etapama.",
+        "overview": "Interni alat, pregledna tabla, sistem za vođenje klijenata, program koji se prodaje kao usluga ili portal za partnere. Gradim prvu radnu verziju, pa se sistem dograđuje u etapama.",
         "phases": {
           "discovery": {
             "name": "Upoznavanje i planiranje",
@@ -654,11 +654,11 @@
             ]
           },
           "scoping": {
-            "name": "Detaljan opseg i arhitektura",
+            "name": "Detaljan opseg i plan sistema",
             "description": "Pre pisanja koda pravim detaljan tehnički dokument — uloge korisnika, tok podataka, povezivanje sa drugim sistemima, bezbednost i granice rada. Ovaj korak vas štiti od iznenađenja u sredini projekta.",
             "deliverables": [
               "Tehnička specifikacija (PDF i online)",
-              "Dijagram arhitekture sistema",
+              "Dijagram kako je sistem sklopljen",
               "Plan povezivanja sa drugim sistemima",
               "Procena rizika i njihovo ublažavanje"
             ]
@@ -764,18 +764,18 @@
           },
           "voice": {
             "name": "Izbor glasa i tehnička postavka",
-            "description": "Testiranje glasova (ElevenLabs/OpenAI Realtime), povezivanje Twilio broja, integracija sa kalendarom/CRM-om.",
+            "description": "Slušanje i izbor glasa, povezivanje telefonskog broja i spajanje sa vašim kalendarom i evidencijom klijenata.",
             "deliverables": [
               "Izabran glas (test snimci)",
               "Aktivan AI broj u test okruženju",
-              "Integracija sa vašim alatima (Google Calendar, CRM)"
+              "Povezano sa vašim alatima (kalendar, evidencija klijenata)"
             ]
           },
           "pilot": {
-            "name": "Pilot i fine-tuning",
+            "name": "Probni rad i doterivanje",
             "description": "AI prima realne pozive u kontrolisanom režimu. Slušamo transkripte, doteramo skript i ponašanje pre punog lansiranja.",
             "deliverables": [
-              "Dashboard sa transkriptima",
+              "Pregled svih razgovora na jednom mestu",
               "Doteran skript posle prvih 50–100 poziva",
               "Testirani edge case-ovi (žargon, nerazumevanje, prekid)"
             ]
@@ -784,14 +784,14 @@
             "name": "Puštanje i predaja",
             "description": "Prebacivanje pravog broja na AI (ili dodatak postojećem), monitoring i obuka vašeg tima da menja skript po potrebi.",
             "deliverables": [
-              "Production telefonski broj sa AI agentom",
+              "Pravi telefonski broj sa asistentom",
               "Admin panel za pregled i izmenu skripta",
               "Alarmi za probleme (pad latencije, greške)"
             ]
           }
         },
-        "communication": "Deljen dashboard sa transkriptima i nedeljni pregled metrika (broj poziva, prosečna dužina, % prebačeno na čoveka).",
-        "postLaunch": "Prvih 30 dana — uključen fine-tuning glasa i skripta. Posle: mesečni paket optimizacije ili rad po potrebi."
+        "communication": "Zajednički pregled razgovora i nedeljni izveštaj (broj poziva, prosečna dužina, koliko je prebačeno na čoveka).",
+        "postLaunch": "Prvih 30 dana uključeno je doterivanje glasa i onoga što asistent priča. Posle toga: mesečni paket ili rad po potrebi."
       }
     },
     "faqTitle": "Česta pitanja",
@@ -932,8 +932,8 @@
     },
     "section7": {
       "title": "Obrada veštačkom inteligencijom (OpenAI)",
-      "p1": "Za generisanje odgovora chatbot-a koristimo OpenAI (modeli iz GPT porodice) kao spoljnjeg obrađivača. Sadržaj vaših poruka se šalje OpenAI API-ju isključivo radi generisanja odgovora i ne koristi se ni za jedno drugo svrhu.",
-      "p2": "OpenAI ima zero-retention politiku za API pozive: vaše poruke se ne koriste za treniranje modela i ne čuvaju se na njihovoj strani nakon obrade.",
+      "p1": "Za sastavljanje odgovora asistent koristi OpenAI, američku firmu koja pruža tu uslugu. Sadržaj vaših poruka šalje se njima isključivo da bi se sastavio odgovor i ne koristi se ni za šta drugo.",
+      "p2": "Po ugovoru koji imamo sa njima, vaše poruke se ne koriste za obučavanje njihovih programa i ne zadržavaju se kod njih nakon što odgovor bude sastavljen.",
       "p3": "Detaljnije: openai.com/policies/api-data-usage-policies"
     },
     "section8": {
@@ -1147,7 +1147,7 @@
           "internal": "Interni alat",
           "dashboard": "Pregledna tabla / Analitika",
           "saas": "SaaS platforma",
-          "crm": "CRM / ERP sistem",
+          "crm": "Evidencija klijenata / vođenje poslovanja",
           "b2b": "B2B portal"
         },
         "featuresLabel": "Funkcionalnosti",
@@ -1156,7 +1156,7 @@
           "rbac": "Pristup po ulogama",
           "reporting": "Izveštaji / Pregledne table",
           "realtime": "Ažuriranje u realnom vremenu",
-          "api": "API integracije",
+          "api": "Povezivanje sa drugim programima",
           "payment": "Plaćanja i pretplate",
           "multitenant": "Više firmi na istom sistemu",
           "audit": "Zapisnik izmena",
@@ -1194,16 +1194,16 @@
         },
         "featuresLabel": "Funkcionalnosti",
         "features": {
-          "leadCapture": "Hvatanje upita i kontakta (lead capture)",
+          "leadCapture": "Hvatanje upita i kontakta",
           "knowledgeBase": "Baza znanja iz vaših dokumenata",
           "calendarBooking": "Automatsko zakazivanje u kalendaru",
           "smsNotify": "SMS / Email obaveštenje vlasniku za nove leadove",
-          "crmIntegration": "Povezivanje sa CRM-om",
+          "crmIntegration": "Povezivanje sa evidencijom klijenata",
           "handoff": "Eskalacija živom operateru (prebacivanje)",
           "multilang": "Više jezika (srpski + EN/DE itd.)",
           "dashboard": "Pregledna tabla sa razgovorima i leadovima",
           "analytics": "Analitika korišćenja",
-          "apiAccess": "Pristup preko API-ja / custom integracija"
+          "apiAccess": "Povezivanje sa vašim programima"
         },
         "scopeLabel": "Obim rešenja",
         "scopeOptions": {
@@ -1227,12 +1227,12 @@
       },
       "automation": {
         "title": "Automatizacija",
-        "description": "Automatski tokovi, povezivanje sistema, API-jevi",
+        "description": "Automatski tokovi posla i povezivanje programa koje koristite",
         "subtypeLabel": "Šta treba automatizovati?",
         "subtypes": {
           "marketing": "Marketinška automatizacija",
-          "crmSync": "Povezivanje sa CRM sistemom / Obrada upita",
-          "apiIntegration": "Povezivanje sistema (API integracije)",
+          "crmSync": "Povezivanje sa evidencijom klijenata / obrada upita",
+          "apiIntegration": "Povezivanje dva programa",
           "scraping": "Preuzimanje podataka sa sajtova",
           "workflow": "Automatski radni tokovi",
           "reporting": "Automatsko slanje izveštaja"
@@ -1241,7 +1241,7 @@
         "features": {
           "workflow": "Automatski radni tokovi",
           "zapier": "Zapier / Make",
-          "customApi": "Prilagođen API / Posebne poveznice",
+          "customApi": "Posebne veze između programa",
           "dbSync": "Sinhronizacija baze podataka",
           "errorHandling": "Obrada grešaka i obaveštenja",
           "notifications": "Obaveštenja",
