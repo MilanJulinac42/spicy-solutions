@@ -1,39 +1,23 @@
 import { NextRequest, NextResponse } from "next/server";
+import { checkVoiceLimits, recordVoiceSession } from "@/lib/voiceLimits";
 
 /**
  * Mints a short-lived client token for the browser voice demo. The real API key
  * stays on the server; the browser only ever receives an ephemeral secret that
  * OpenAI issues per session.
  *
- * Every session costs money for as long as it runs, so this is rate limited and
- * the client also caps session length (see VoiceDemo).
+ * Audio minutes are the expensive part of this site, so cost control is spread
+ * across several layers: the mini model (roughly a third the price of the full
+ * one, and indistinguishable in Serbian on our tests), database-backed limits,
+ * an output cap, and a session that ends itself on silence (see VoiceDemo).
  */
 
-const MODEL = "gpt-realtime-2.1";
+const MODEL = "gpt-realtime-2.1-mini";
 const VOICE = "marin";
 
-// --- Rate limiting (in-memory, per IP) ---
-const rateLimit = new Map<string, { count: number; resetAt: number }>();
-const WINDOW = 60 * 60 * 1000; // 1 hour
-const MAX_SESSIONS = 3; // per IP per hour
-
-function isRateLimited(ip: string): boolean {
-  const now = Date.now();
-  const entry = rateLimit.get(ip);
-  if (!entry || now > entry.resetAt) {
-    rateLimit.set(ip, { count: 1, resetAt: now + WINDOW });
-    return false;
-  }
-  entry.count++;
-  return entry.count > MAX_SESSIONS;
-}
-
-setInterval(() => {
-  const now = Date.now();
-  for (const [ip, entry] of rateLimit) {
-    if (now > entry.resetAt) rateLimit.delete(ip);
-  }
-}, 10 * 60 * 1000);
+/** Roughly 20 seconds of speech — enough for a natural answer, not a monologue.
+ *  Output audio bills at twice the input rate, so this is a real saving. */
+const MAX_OUTPUT_TOKENS = 400;
 
 /**
  * The accent needs pinning down: these models see far more Croatian audio than
@@ -77,11 +61,9 @@ export async function POST(req: NextRequest) {
     }
 
     const ip = req.headers.get("x-forwarded-for")?.split(",")[0]?.trim() || "unknown";
-    if (isRateLimited(ip)) {
-      return NextResponse.json(
-        { error: "Dostigli ste limit demo razgovora. Pokušajte ponovo za sat vremena." },
-        { status: 429 }
-      );
+    const limit = await checkVoiceLimits(ip);
+    if (!limit.allowed) {
+      return NextResponse.json({ error: limit.reason }, { status: 429 });
     }
 
     const response = await fetch("https://api.openai.com/v1/realtime/client_secrets", {
@@ -118,6 +100,7 @@ export async function POST(req: NextRequest) {
             },
           ],
           tool_choice: "auto",
+          max_output_tokens: MAX_OUTPUT_TOKENS,
         },
       }),
     });
@@ -129,6 +112,7 @@ export async function POST(req: NextRequest) {
     }
 
     const data = await response.json();
+    void recordVoiceSession(ip);
     return NextResponse.json({ value: data.value, expires_at: data.expires_at });
   } catch (error) {
     console.error("Realtime session error:", error);

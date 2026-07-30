@@ -15,7 +15,7 @@ import path from "path";
 import dotenv from "dotenv";
 dotenv.config({ path: ".env.local" });
 
-const MODEL = "gpt-realtime-2.1";
+const MODEL = process.env.VOICE_MODEL || "gpt-realtime-2.1";
 const URL = `wss://api.openai.com/v1/realtime?model=${MODEL}`;
 const SAMPLE_RATE = 24_000;
 const OUT_DIR = path.join(process.cwd(), "scripts/voice-samples");
@@ -147,8 +147,9 @@ function generate(voice: string): Promise<{ voice: string; ms: number; bytes: nu
 
         const pcm = Buffer.concat(chunks);
         fs.mkdirSync(OUT_DIR, { recursive: true });
+        const tag = MODEL.includes("mini") ? "mini" : "full";
         fs.writeFileSync(
-          path.join(OUT_DIR, `${voice}-${VARIANT}.wav`),
+          path.join(OUT_DIR, `${voice}-${VARIANT}-${tag}.wav`),
           toWav(pcm, SAMPLE_RATE)
         );
 

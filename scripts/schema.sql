@@ -42,6 +42,22 @@ ALTER TABLE leads ADD COLUMN IF NOT EXISTS phone VARCHAR(50);
 ALTER TABLE leads ADD COLUMN IF NOT EXISTS industry VARCHAR(100);
 ALTER TABLE leads ADD COLUMN IF NOT EXISTS preferred_time VARCHAR(100);
 
+-- 4c. Voice demo session log.
+-- Serves two purposes: rate limiting that survives serverless cold starts
+-- (in-memory counters reset per instance, so they can't be trusted), and a
+-- record of how much the demo is actually used. IPs are stored hashed.
+CREATE TABLE IF NOT EXISTS voice_sessions (
+  id SERIAL PRIMARY KEY,
+  ip_hash VARCHAR(64),
+  created_at TIMESTAMPTZ DEFAULT NOW()
+);
+
+CREATE INDEX IF NOT EXISTS voice_sessions_created_at_idx
+ON voice_sessions (created_at DESC);
+
+CREATE INDEX IF NOT EXISTS voice_sessions_ip_idx
+ON voice_sessions (ip_hash, created_at DESC);
+
 -- 5. Similarity search RPC used by src/lib/rag.ts
 CREATE OR REPLACE FUNCTION match_knowledge(
   query_embedding VECTOR(1536),

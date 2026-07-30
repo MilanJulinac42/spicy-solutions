@@ -16,6 +16,10 @@ import { trackEvent } from "@/lib/analytics";
 
 const MAX_SECONDS = 120;
 
+/** An open mic keeps streaming audio whether anyone is talking or not, so a
+ *  demo left open in a tab bills for nothing. End it once it goes quiet. */
+const SILENCE_TIMEOUT_MS = 25_000;
+
 type Status = "idle" | "connecting" | "live" | "ended" | "error";
 
 type Line = { role: "user" | "assistant"; text: string };
@@ -33,6 +37,7 @@ export function VoiceDemo() {
   const audioRef = useRef<HTMLAudioElement | null>(null);
   const timerRef = useRef<ReturnType<typeof setInterval> | null>(null);
   const assistantLine = useRef<string>("");
+  const lastActivity = useRef<number>(Date.now());
 
   useEffect(() => stop, []); // eslint-disable-line react-hooks/exhaustive-deps
 
@@ -108,7 +113,13 @@ export function VoiceDemo() {
       await pc.setRemoteDescription({ type: "answer", sdp: await sdpRes.text() });
 
       setStatus("live");
+      lastActivity.current = Date.now();
       timerRef.current = setInterval(() => {
+        if (Date.now() - lastActivity.current > SILENCE_TIMEOUT_MS) {
+          stop("timeout");
+          trackEvent("voice_demo_end", { channel: "ai_voice", reason: "silence" });
+          return;
+        }
         setSecondsLeft((s) => {
           if (s <= 1) {
             stop("timeout");
@@ -166,6 +177,15 @@ export function VoiceDemo() {
     response?: { output?: { type?: string; name?: string; call_id?: string; arguments?: string }[] };
   }) {
     const type = event.type ?? "";
+
+    // Anything that means a live exchange is happening keeps the session alive.
+    if (
+      type.includes("speech_started") ||
+      type.includes("speech_stopped") ||
+      type.startsWith("response.")
+    ) {
+      lastActivity.current = Date.now();
+    }
 
     // Tool calls arrive as function_call items on the completed response.
     if (type === "response.done") {
@@ -250,7 +270,8 @@ export function VoiceDemo() {
             "Klikni, dozvoli mikrofon i pričaj kao da zoveš telefonom. Pitaj ga za cene, usluge ili proces rada."}
           {status === "connecting" && "Traži se dozvola za mikrofon i uspostavlja veza."}
           {isLive && `Preostalo vreme: ${mmss}`}
-          {status === "ended" && "Nadam se da je zvučalo prirodno. Možeš ponovo."}
+          {status === "ended" &&
+            "Razgovor je završen — prekida se i kad se ne priča, da demo ne troši bez potrebe. Možeš ponovo."}
           {status === "error" && error}
         </p>
 

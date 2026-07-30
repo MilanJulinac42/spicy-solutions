@@ -42,7 +42,12 @@ export async function POST(req: NextRequest) {
       return NextResponse.json({ result: "" }, { status: 400 });
     }
 
-    const chunks = await searchKnowledge(query, "sr", 4);
+    // Fewer, shorter chunks than the chatbot uses: whatever comes back here is
+    // appended to the conversation and re-billed on every later turn, so length
+    // costs more in a voice session than it does in chat.
+    const chunks = (await searchKnowledge(query, "sr", 3)).map((c) =>
+      c.length > 500 ? `${c.slice(0, 500)}…` : c
+    );
 
     // An explicit empty answer matters: it tells the model to say it doesn't
     // know rather than fall back on guesswork.
