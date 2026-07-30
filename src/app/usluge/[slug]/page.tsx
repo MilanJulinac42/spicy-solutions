@@ -54,6 +54,7 @@ import { ServiceIllustration } from "@/components/features/ServiceIllustration";
 import { ChatDemoCTA } from "@/components/sections/ChatDemoCTA";
 import { ChatbotPricing } from "@/components/sections/ChatbotPricing";
 import { VoiceDemoBooking } from "@/components/sections/VoiceDemoBooking";
+import { VoiceDemo } from "@/components/voice/VoiceDemo";
 import Link from "next/link";
 import { notFound } from "next/navigation";
 
@@ -142,11 +143,15 @@ export default function ServicePage() {
             </motion.div>
 
             <motion.div
+              id={slug === "voice" ? "demo" : undefined}
               initial="hidden"
               animate="visible"
               variants={fadeInRight}
+              className={slug === "voice" ? "scroll-mt-28" : undefined}
             >
-              <ServiceIllustration serviceId={slug} />
+              {/* The voice page shows the real agent here rather than a mocked
+                  call: it's the same space, but proof instead of illustration. */}
+              {slug === "voice" ? <VoiceDemo /> : <ServiceIllustration serviceId={slug} />}
             </motion.div>
           </div>
         </Container>

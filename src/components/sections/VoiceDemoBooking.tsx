@@ -4,7 +4,6 @@ import { useState } from "react";
 import { motion } from "framer-motion";
 import { CalendarCheck, PhoneCall, Settings2, FileText, CheckCircle, AlertCircle } from "lucide-react";
 import { Container } from "@/components/ui/Container";
-import { VoiceDemo } from "@/components/voice/VoiceDemo";
 import { fadeInUp, staggerContainer } from "@/lib/animations";
 import { FORMSPREE_FORMS } from "@/lib/constants";
 import { trackEvent } from "@/lib/analytics";
@@ -112,14 +111,13 @@ export function VoiceDemoBooking() {
   }
 
   return (
-    <section className="py-20 md:py-28 bg-surface-secondary">
+    <section className="py-16 md:py-20 bg-surface-secondary">
       <Container>
         <motion.div
           initial="hidden"
-          whileInView="visible"
-          viewport={{ once: true, amount: 0.15 }}
+          animate="visible"
           variants={fadeInUp}
-          className="mb-12 text-center max-w-2xl mx-auto"
+          className="mb-8 text-center max-w-2xl mx-auto"
         >
           <div className="mb-3 inline-flex items-center gap-2 rounded-full border border-emerald-400/25 bg-emerald-400/10 px-3 py-1">
             <PhoneCall className="h-3.5 w-3.5 text-emerald-400" />
@@ -136,31 +134,14 @@ export function VoiceDemoBooking() {
           </p>
         </motion.div>
 
-        {/* Live browser demo — hear the voice before booking a real call */}
-        <motion.div
-          initial="hidden"
-          whileInView="visible"
-          viewport={{ once: true, amount: 0.1 }}
-          variants={fadeInUp}
-          id="demo"
-          className="mx-auto mb-12 max-w-2xl scroll-mt-28"
-        >
-          <VoiceDemo />
-        </motion.div>
-
-        <div className="mb-8 text-center">
-          <span className="text-sm text-foreground-muted">
-            Hoćeš pravi poziv, sa agentom podešenim za tvoju delatnost? Zakaži ispod.
-          </span>
-        </div>
-
-        {/* How it works */}
+        {/* How it works. Animated on mount rather than on scroll: a staggered
+            reveal here left a visible hole where the cards should be if the
+            viewport trigger was late, which reads as a broken layout. */}
         <motion.div
           variants={staggerContainer}
           initial="hidden"
-          whileInView="visible"
-          viewport={{ once: true, amount: 0.15 }}
-          className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-4 mb-12"
+          animate="visible"
+          className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-4 mb-10"
         >
           {STEPS.map((step, i) => {
             const Icon = step.icon;
@@ -188,8 +169,7 @@ export function VoiceDemoBooking() {
         {/* Form */}
         <motion.div
           initial="hidden"
-          whileInView="visible"
-          viewport={{ once: true, amount: 0.1 }}
+          animate="visible"
           variants={fadeInUp}
           className="mx-auto max-w-2xl rounded-2xl border border-border-default bg-surface p-6 md:p-8"
         >
