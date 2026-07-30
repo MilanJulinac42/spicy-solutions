@@ -221,7 +221,9 @@ export function VoiceDemo() {
 
     if (type.endsWith("input_audio_transcription.completed") && event.transcript) {
       const text = event.transcript.trim();
-      if (text) setLines((prev) => [...prev, { role: "user", text }].slice(-6));
+      if (text) {
+        setLines((prev) => [...prev, { role: "user" as const, text }].slice(-6));
+      }
     }
   }
 
