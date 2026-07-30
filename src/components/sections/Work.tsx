@@ -31,14 +31,20 @@ const PROJECTS = [
   },
 ];
 
-export function Work() {
+type WorkProps = {
+  /** Overridden on service pages, where "Radovi" is less apt than an example. */
+  title?: string;
+  subtitle?: string;
+};
+
+export function Work({
+  title = "Radovi",
+  subtitle = "Projekti koje sam radio — kliknite i pogledajte uživo, ne na slici.",
+}: WorkProps) {
   return (
     <section className="py-20 md:py-28 bg-surface-secondary">
       <Container>
-        <SectionHeading
-          title="Radovi"
-          subtitle="Projekti koje sam radio — kliknite i pogledajte uživo, ne na slici."
-        />
+        <SectionHeading title={title} subtitle={subtitle} />
 
         <div className="space-y-8">
           {PROJECTS.map((p) => (

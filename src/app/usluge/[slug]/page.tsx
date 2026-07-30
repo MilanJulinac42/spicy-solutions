@@ -55,6 +55,7 @@ import { ChatDemoCTA } from "@/components/sections/ChatDemoCTA";
 import { ChatbotPricing } from "@/components/sections/ChatbotPricing";
 import { VoiceDemoBooking } from "@/components/sections/VoiceDemoBooking";
 import { VoiceDemo } from "@/components/voice/VoiceDemo";
+import { Work } from "@/components/sections/Work";
 import Link from "next/link";
 import { notFound } from "next/navigation";
 
@@ -295,6 +296,14 @@ export default function ServicePage() {
 
       {/* Gated demo booking — only on the voice service page */}
       {slug === "voice" && <VoiceDemoBooking />}
+
+      {/* A real site of this kind beats any description of one */}
+      {slug === "websites" && (
+        <Work
+          title="Primer iz prakse"
+          subtitle="Sajt koji sam napravio — otvorite ga i pogledajte, ne morate mi verovati na reč."
+        />
+      )}
 
       {/* Technologies */}
       <section className="py-20 md:py-28 bg-surface-secondary">
