@@ -38,6 +38,11 @@ export function VoiceDemo() {
   const timerRef = useRef<ReturnType<typeof setInterval> | null>(null);
   const assistantLine = useRef<string>("");
   const lastActivity = useRef<number>(Date.now());
+  /** True between response.created and response.done. Over WebRTC the audio
+   *  travels on the media track, not the event channel, so a long spoken answer
+   *  can pass with no events at all — without this the silence timer would fire
+   *  while the agent is still talking. */
+  const isResponding = useRef(false);
 
   useEffect(() => stop, []); // eslint-disable-line react-hooks/exhaustive-deps
 
@@ -57,6 +62,7 @@ export function VoiceDemo() {
       audioRef.current = null;
     }
 
+    isResponding.current = false;
     setIsSpeaking(false);
     if (reason !== "error") setStatus((s) => (s === "idle" ? "idle" : "ended"));
   }
@@ -115,6 +121,9 @@ export function VoiceDemo() {
       setStatus("live");
       lastActivity.current = Date.now();
       timerRef.current = setInterval(() => {
+        // Never time out mid-answer — only genuine silence counts.
+        if (isResponding.current) lastActivity.current = Date.now();
+
         if (Date.now() - lastActivity.current > SILENCE_TIMEOUT_MS) {
           stop("timeout");
           trackEvent("voice_demo_end", { channel: "ai_voice", reason: "silence" });
@@ -182,9 +191,21 @@ export function VoiceDemo() {
     if (
       type.includes("speech_started") ||
       type.includes("speech_stopped") ||
+      type.includes("audio_buffer") ||
       type.startsWith("response.")
     ) {
       lastActivity.current = Date.now();
+    }
+
+    // Response lifecycle drives both the silence guard and the speaking
+    // indicator: it arrives reliably on the event channel, unlike audio deltas.
+    if (type === "response.created") {
+      isResponding.current = true;
+      setIsSpeaking(true);
+    }
+    if (type === "response.done" || type === "error") {
+      isResponding.current = false;
+      setIsSpeaking(false);
     }
 
     // Tool calls arrive as function_call items on the completed response.
