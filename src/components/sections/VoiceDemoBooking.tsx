@@ -9,32 +9,35 @@ import { FORMSPREE_FORMS } from "@/lib/constants";
 import { trackEvent } from "@/lib/analytics";
 
 /**
- * Gated voice demo booking. The demo is deliberately scheduled rather than a
- * public number: it keeps call costs controlled, and more importantly lets the
- * agent be tailored to the caller's industry before the call — which is a
- * stronger pitch than a generic line anyone can dial.
+ * Gated voice demo booking. Scheduling rather than publishing a number keeps
+ * call costs controlled and lets the agent be tailored to the caller's industry
+ * first, which sells better than a generic line anyone can dial.
+ *
+ * The demo runs on a short video call, not an automated outbound call: the
+ * telephony side isn't built yet, and promising a call we can't place would
+ * fail exactly the prospect we most need to impress.
  */
 
 const STEPS = [
   {
     icon: CalendarCheck,
-    title: "Zakažeš termin",
-    text: "Ostaviš delatnost i kada ti odgovara. Javljam se u roku od 24h sa potvrdom.",
+    title: "Zakažete termin",
+    text: "Ostavite delatnost i kada Vam odgovara. Javljam se u roku od 24h sa potvrdom termina.",
   },
   {
     icon: Settings2,
-    title: "Podesim agenta za tebe",
-    text: "Pre poziva podesim AI za tvoju delatnost — tvoje usluge, radno vreme, tipična pitanja.",
+    title: "Podesim agenta za Vas",
+    text: "Pre razgovora podesim agenta za Vašu delatnost — vaše usluge, radno vreme i tipična pitanja.",
   },
   {
     icon: PhoneCall,
-    title: "AI te pozove",
-    text: "U dogovoreno vreme zazvoni ti telefon. Razgovaraš sa agentom kao što bi tvoj klijent.",
+    title: "Pričate sa njim",
+    text: "Na kratkom video pozivu pustim vam agenta podešenog za vaš posao — pitate ga šta bi vaš klijent pitao.",
   },
   {
     icon: FileText,
-    title: "Dobiješ transkript",
-    text: "Posle poziva šaljem transkript i iskrenu procenu — šta bi u tvom slučaju radilo, a šta ne.",
+    title: "Dobijete procenu",
+    text: "Posle razgovora šaljem iskrenu procenu — šta bi u vašem slučaju radilo, a šta ne, i koliko bi koštalo.",
   },
 ];
 
@@ -126,11 +129,11 @@ export function VoiceDemoBooking() {
             </span>
           </div>
           <h2 className="text-3xl md:text-4xl font-bold text-foreground mb-3">
-            Zakaži voice demo
+            Zakažite demo razgovor
           </h2>
           <p className="text-base md:text-lg text-foreground-muted leading-relaxed">
-            Ne pušta se javan broj koji svako zove — agent se pre poziva podesi za
-            tvoju delatnost, pa čuješ kako bi zvučao kod tebe, a ne uopšteni robot.
+            Ne pušta se javan broj koji svako zove — agent se prvo podesi za Vašu
+            delatnost, pa čujete kako bi zvučao kod Vas, a ne uopšteni robot.
           </p>
         </motion.div>
 
@@ -179,13 +182,13 @@ export function VoiceDemoBooking() {
               <h3 className="text-xl font-semibold text-foreground">Zahtev primljen</h3>
               <p className="max-w-md text-foreground-muted">
                 Javljam se u roku od 24h sa potvrdom termina. Do tada podešavam agenta
-                za tvoju delatnost.
+                za Vašu delatnost.
               </p>
             </div>
           ) : (
             <form onSubmit={handleSubmit} className="space-y-5">
               {/* Names the email in the shared Formspree inbox */}
-              <input type="hidden" name="_subject" value="🎙️ Voice demo — zahtev za poziv" />
+              <input type="hidden" name="_subject" value="🎙️ Voice demo — zahtev za razgovor" />
 
               {/* Honeypot — hidden from users, catches bots */}
               <input
@@ -227,7 +230,7 @@ export function VoiceDemoBooking() {
               <div className="grid gap-5 sm:grid-cols-2">
                 <div>
                   <label htmlFor="vd-phone" className="mb-1.5 block text-sm font-medium text-foreground">
-                    Broj telefona <span className="text-foreground-muted">(AI zove na ovaj broj)</span>
+                    Broj telefona <span className="text-foreground-muted">(za dogovor termina)</span>
                   </label>
                   <input
                     id="vd-phone"
@@ -307,8 +310,8 @@ export function VoiceDemoBooking() {
                   className="mt-0.5 h-4 w-4 shrink-0 accent-spicy-400"
                 />
                 <span className="text-sm leading-relaxed text-foreground-muted">
-                  Saglasan/na sam da me Solvera AI agent pozove na ostavljeni broj radi
-                  demonstracije. Broj koristim isključivo za taj poziv i ne prosleđujem ga
+                  Saglasan/na sam da me Solvera kontaktira na ostavljene podatke radi dogovora
+                  termina za demonstraciju. Podatke koristim isključivo za to i ne prosleđujem ih
                   trećim licima. Saglasnost mogu povući u bilo kom trenutku na{" "}
                   <span className="text-foreground">info@solveradev.rs</span>.
                 </span>
@@ -327,7 +330,7 @@ export function VoiceDemoBooking() {
                 className="inline-flex w-full items-center justify-center gap-2 rounded-lg bg-spicy-400 px-6 py-3.5 text-sm font-semibold text-white shadow-lg shadow-spicy-400/25 transition-colors hover:bg-spicy-500 disabled:cursor-not-allowed disabled:opacity-40"
               >
                 <PhoneCall className="h-4 w-4" />
-                {status === "sending" ? "Šaljem…" : "Zakaži demo poziv"}
+                {status === "sending" ? "Šaljem…" : "Zakažite demo razgovor"}
               </button>
 
               <p className="text-center text-xs text-foreground-muted">
