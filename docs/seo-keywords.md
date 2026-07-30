@@ -39,7 +39,17 @@ Voice se traži kao `glasovni agent` / `telefonski asistent` / `AI sekretarica`,
 - **Namera:** investigativna
 - **Ugao:** privatnost / GDPR (Azure OpenAI, Bedrock, self-hosted) — diferencijator
 
-### 3. AI integracije / automatizacija
+### 3. AI integracije / automatizacija — ⛔ NE GURAMO (odluka, jul 2026)
+
+Ostaje na sajtu namerno neodređeno, kao kofa za custom poslove koji dođu kroz
+razgovor. **Bez blogova i bez kampanje.** Razlozi: opis bi morao da pokrije i
+agentske tokove i integraciju tuđih alata, a to drugo protivreči poruci
+„gradi se jednom, vaše je, bez pretplate". Marketing ide na chatbot i voice,
+gde postoji demo i jasna slika za kupca.
+
+Ako se ikad predomislimo, ispod stoji ranije istraživanje.
+
+
 - **Primarni:** `automatizacija poslovanja AI` (broad — teže)
 - **Long-tail (tu je pobeda):** `automatska obrada faktura AI`, `AI triage mejlova`, `AI automatizacija za mali biznis`, `AI sumarizacija sastanaka`
 - **Namera:** mešovita
