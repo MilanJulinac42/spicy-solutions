@@ -3,6 +3,7 @@ import type { ComponentPropsWithoutRef } from "react";
 import { ChatDemoCTA } from "@/components/sections/ChatDemoCTA";
 import { RagFlowDiagram } from "@/components/blog/RagFlowDiagram";
 import { SaasVsCustom } from "@/components/blog/SaasVsCustom";
+import { VoiceDemoCTA } from "@/components/blog/VoiceDemoCTA";
 
 /**
  * Styling map for MDX-rendered blog content. The site has no typography plugin,
@@ -85,4 +86,5 @@ export const mdxComponents = {
   ChatDemoCTA,
   RagFlowDiagram,
   SaasVsCustom,
+  VoiceDemoCTA,
 };

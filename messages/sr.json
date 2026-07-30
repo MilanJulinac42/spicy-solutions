@@ -71,7 +71,7 @@
     "voice": {
       "title": "AI Voice — prima pozive",
       "description": "Frizerski salon, ordinacija, turistička agencija — klijenti zovu kad ne radite ili kad ste zauzeti. Izgubljeni pozivi = izgubljeni klijenti. AI voice agent prima poziv, razume zahtev na srpskom, zakazuje termin ili prebacuje vama kad je potrebno.",
-      "price": "Od 1000€ · mesečno 30–80€ + Twilio troškovi"
+      "price": "Od 1.500€ · po pozivu 0,10–0,30€ po minutu"
     },
     "aiIntegrations": {
       "title": "AI integracije po meri",

@@ -47,9 +47,17 @@ Voice se traži kao `glasovni agent` / `telefonski asistent` / `AI sekretarica`,
 
 ### 4. AI Voice
 - **Primarni:** `AI glasovni agent`, `AI telefonski asistent`
-- **Long-tail:** `AI sekretarica`, `AI recepcionar`, `voicebot na srpskom`, `AI koji se javlja na telefon`
-- **Namera:** investigativna
-- **Ugao:** "šta je šta" disambiguacija (validovano: wisefox.rs) + srpski glas, niska latencija
+- **Long-tail:** `AI sekretarica`, `AI recepcionar`, `propušteni pozivi`, `AI koji se javlja na telefon`
+- **Konkurencija:** **wisefox.rs je direktan konkurent** — gotov proizvod „AI sekretarica"
+  sa blogom koji drži „šta je AI sekretarica" i disambiguaciju. **Ne ići im u čelo** na te
+  termine. Naša prednost: gradimo po meri (vlasništvo, bez večne pretplate) + iskustvo iz
+  stvarnog testiranja srpskog glasa. Takođe: Chatislav (domaća voice platforma).
+- **Postovi u clusteru:**
+  - `propušteni pozivi` → `/blog/propusteni-pozivi-kostaju` — problem-first, najširi doseg
+  - `cena` → `/blog/koliko-kosta-ai-telefonski-asistent` — komercijalna namera
+  - `opseg / poverenje` → `/blog/sta-ai-moze-a-sta-ne-na-telefonu` — šta NE sme, gradi poverenje
+- **Još neiskorišćeno:** `da li AI zvuči kao robot na srpskom` — rupa (svi vendori tvrde
+  „prirodan glas", niko ne piše pošteno o naglasku); imamo stvarno iskustvo iz testiranja
 
 ## On-page taktike (za svaki post)
 
