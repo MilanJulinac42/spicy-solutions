@@ -1,7 +1,6 @@
 import type { Metadata } from "next";
 import { NextIntlClientProvider } from "next-intl";
 import { getMessages } from "next-intl/server";
-import Script from "next/script";
 import { Geist, Geist_Mono } from "next/font/google";
 import { ThemeProvider } from "next-themes";
 import { Navbar } from "@/components/layout/Navbar";
@@ -9,6 +8,7 @@ import { Footer } from "@/components/layout/Footer";
 import { ScrollProgress } from "@/components/ui/ScrollProgress";
 import { FloatingWidgets } from "@/components/layout/FloatingWidgets";
 import { PageviewTracker } from "@/components/analytics/PageviewTracker";
+import { CookieConsent } from "@/components/shared/CookieConsent";
 import { Suspense } from "react";
 import {
   organizationSchema,
@@ -132,19 +132,9 @@ export default async function RootLayout({
             <main className="min-h-screen">{children}</main>
             <Footer />
             <FloatingWidgets />
-            <Script
-              src="https://www.googletagmanager.com/gtag/js?id=G-WDNDKK0PBT"
-              strategy="lazyOnload"
-            />
-            <Script id="google-analytics" strategy="lazyOnload">
-              {`
-                window.dataLayer = window.dataLayer || [];
-                function gtag(){dataLayer.push(arguments);}
-                window.gtag = gtag;
-                gtag('js', new Date());
-                gtag('config', 'G-WDNDKK0PBT', { send_page_view: false });
-              `}
-            </Script>
+            {/* Analytics is mounted by CookieConsent, and only after the visitor
+                agrees — declining must mean the script never loads. */}
+            <CookieConsent />
             <Suspense fallback={null}>
               <PageviewTracker />
             </Suspense>

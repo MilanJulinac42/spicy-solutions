@@ -1,5 +1,5 @@
 import type { Metadata } from "next";
-import { serviceSchema, jsonLdString } from "@/lib/jsonld";
+import { serviceSchema, serviceFaqSchema, jsonLdString } from "@/lib/jsonld";
 
 const META: Record<string, { title: string; description: string }> = {
   chatbot: {
@@ -53,12 +53,19 @@ export default async function ServiceDetailLayout({
 }) {
   const { slug } = await params;
   const schema = serviceSchema(slug);
+  const faq = serviceFaqSchema(slug);
   return (
     <>
       {schema && (
         <script
           type="application/ld+json"
           dangerouslySetInnerHTML={{ __html: jsonLdString(schema) }}
+        />
+      )}
+      {faq && (
+        <script
+          type="application/ld+json"
+          dangerouslySetInnerHTML={{ __html: jsonLdString(faq) }}
         />
       )}
       {children}

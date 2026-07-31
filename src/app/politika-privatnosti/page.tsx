@@ -76,6 +76,16 @@ export default function PrivacyPage() {
               <p className="text-foreground-muted leading-relaxed">
                 {t("section1.p3")}
               </p>
+
+              {/* Consent has to be as easy to withdraw as it was to give. */}
+              <button
+                onClick={() =>
+                  window.dispatchEvent(new CustomEvent("solvera:open-cookie-settings"))
+                }
+                className="mt-4 inline-flex items-center gap-2 rounded-lg border border-border-default px-4 py-2.5 text-sm font-medium text-foreground-secondary transition-colors hover:border-spicy-400/40 hover:text-spicy-400"
+              >
+                Promeni izbor za merenje posećenosti
+              </button>
             </motion.div>
 
             {/* Section 2: How We Use Your Data */}

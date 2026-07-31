@@ -1,3 +1,10 @@
+import messages from "../../messages/sr.json";
+
+type Faq = Record<string, { question?: string; answer?: string }>;
+type Messages = {
+  Services?: Record<string, { detail?: { faq?: Faq } } | undefined>;
+};
+
 // Structured data builders (JSON-LD / schema.org).
 // Renders as <script type="application/ld+json"> in layouts so Google can
 // surface rich results (knowledge panel, sitelinks, FAQ accordion).
@@ -248,6 +255,30 @@ export const faqPageSchema = {
     },
   ],
 };
+
+// --- FAQPage per service ------------------------------------------------------
+
+/**
+ * Built from the same copy the page renders, so the markup can't drift from
+ * what a visitor sees — which is what Google requires of FAQ rich results.
+ */
+export function serviceFaqSchema(slug: string) {
+  const service = (messages as Messages).Services?.[slug];
+  const faq = service?.detail?.faq;
+  if (!faq) return null;
+
+  const mainEntity = Object.values(faq)
+    .filter((q) => q?.question && q?.answer)
+    .map((q) => ({
+      "@type": "Question",
+      name: q.question,
+      acceptedAnswer: { "@type": "Answer", text: q.answer },
+    }));
+
+  if (mainEntity.length === 0) return null;
+
+  return { "@context": "https://schema.org", "@type": "FAQPage", mainEntity };
+}
 
 // --- BlogPosting (one per /blog/[slug]) --------------------------------------
 
