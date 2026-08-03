@@ -24,6 +24,11 @@ type Project = {
   href?: string;
   summary: string;
   highlights: string[];
+  /** What a visitor can't infer from a screenshot: who did the work, how long
+   *  it took, what it's built on. */
+  role: string;
+  duration: string;
+  stack: string[];
 };
 
 const PROJECTS: Project[] = [
@@ -45,6 +50,9 @@ const PROJECTS: Project[] = [
       "AI tutor koji objašnjava gradivo i greške",
       "Video lekcije i plaćanje karticom preko domaće banke",
     ],
+    role: "Sve sam — plan sistema, izrada, baza, povezivanje sa Zoom-om i kalendarom, puštanje u rad",
+    duration: "3 nedelje",
+    stack: ["Next.js", "Bun", "Supabase", "Zoom", "Google Calendar", "Claude"],
   },
   {
     name: "Spiko Edu",
@@ -59,7 +67,11 @@ const PROJECTS: Project[] = [
       "Tekstovi i raspored stranica",
       "Podešavanje domena i puštanje u rad",
       "Prilagođeno telefonu, tabletu i računaru",
+      "Priprema za Google pretragu",
     ],
+    role: "Sve sam — dizajn, izrada, tekstovi, podešavanje domena i puštanje u rad",
+    duration: "5 dana",
+    stack: ["Next.js", "Tailwind", "Vercel"],
   },
 ];
 
@@ -138,6 +150,38 @@ export function Work({
                       </li>
                     ))}
                   </ul>
+
+                  {/* The part a screenshot can't answer: who did it, how long,
+                      and what it runs on. */}
+                  <dl className="mt-6 space-y-3 border-t border-border-subtle pt-5">
+                    <div>
+                      <dt className="text-xs font-mono uppercase tracking-wider text-foreground-muted">
+                        Moja uloga
+                      </dt>
+                      <dd className="mt-1 text-sm leading-relaxed text-foreground-secondary">
+                        {p.role}
+                      </dd>
+                    </div>
+                    <div className="flex flex-wrap items-baseline gap-x-2">
+                      <dt className="text-xs font-mono uppercase tracking-wider text-foreground-muted">
+                        Trajanje
+                      </dt>
+                      <dd className="text-sm font-medium text-foreground">{p.duration}</dd>
+                    </div>
+                    <div>
+                      <dt className="sr-only">Tehnologije</dt>
+                      <dd className="flex flex-wrap gap-1.5">
+                        {p.stack.map((t) => (
+                          <span
+                            key={t}
+                            className="rounded-md border border-border-default bg-surface-secondary px-2 py-1 text-[11px] font-mono text-foreground-muted"
+                          >
+                            {t}
+                          </span>
+                        ))}
+                      </dd>
+                    </div>
+                  </dl>
 
                   {p.href ? (
                   <Link
