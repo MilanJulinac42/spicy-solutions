@@ -195,6 +195,14 @@ export function Footer() {
                   {t("Footer.terms")}
                 </Link>
               </li>
+              <li>
+                <Link
+                  href="/data-deletion"
+                  className="text-sm text-gray-400 hover:text-spicy-400 transition-colors link-underline"
+                >
+                  {t("Footer.dataDeletion")}
+                </Link>
+              </li>
             </ul>
           </div>
 
