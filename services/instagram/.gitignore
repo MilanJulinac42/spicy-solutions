@@ -1,0 +1,3 @@
+
+# node_modules in nested services, not just the root
+**/node_modules

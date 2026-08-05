@@ -1,0 +1,18 @@
+{
+  "name": "solvera-instagram",
+  "version": "1.0.0",
+  "private": true,
+  "type": "module",
+  "description": "Instagram DM assistant — answers from the same knowledge base as the site",
+  "scripts": {
+    "start": "node src/server.js",
+    "dev": "node --watch src/server.js"
+  },
+  "dependencies": {
+    "@supabase/supabase-js": "^2.100.1",
+    "openai": "^6.33.0"
+  },
+  "engines": {
+    "node": ">=20"
+  }
+}

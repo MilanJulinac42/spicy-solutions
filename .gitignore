@@ -53,3 +53,7 @@ scripts/voice-samples/
 # Interni dokumenti — strategija, prodaja, detalji klijentskih sistema.
 # Ostaju lokalno; repo je javan.
 docs/
+
+# Any env file, anywhere — services/ keep plain .env files.
+.env
+**/.env
