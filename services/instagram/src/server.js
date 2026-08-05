@@ -1,6 +1,6 @@
 import http from "http";
 import crypto from "crypto";
-import { answer } from "./knowledge.js";
+import { answer, describeImage } from "./knowledge.js";
 import { getAccessToken, startRefreshLoop, tokenStatus } from "./token.js";
 
 /**
@@ -61,10 +61,66 @@ async function sendReply(recipientId, text) {
   }
 }
 
+const MAX_IMAGE_BYTES = 5 * 1024 * 1024;
+
+/**
+ * We download the picture ourselves instead of passing Meta's link on. Those
+ * links are signed and expire, so handing one to the model works in testing and
+ * then quietly fails later — and the size cap keeps someone's 20 MB photo from
+ * becoming our memory problem.
+ */
+async function fetchImage(url) {
+  const res = await fetch(url, { signal: AbortSignal.timeout(15000) });
+  if (!res.ok) throw new Error(`preuzimanje slike: ${res.status}`);
+
+  const buf = Buffer.from(await res.arrayBuffer());
+  if (buf.byteLength > MAX_IMAGE_BYTES) throw new Error("slika prevelika");
+
+  const type = res.headers.get("content-type") ?? "image/jpeg";
+  return `data:${type};base64,${buf.toString("base64")}`;
+}
+
+/** Things we can't read. Silence would look like the assistant is broken, so
+ *  each one gets an honest answer that keeps the conversation going. */
+const CANT_READ = {
+  video: "Video nažalost ne mogu da pogledam — možete li ukratko da napišete o čemu se radi?",
+  audio: "Glasovnu poruku ne mogu da preslušam — možete li da mi napišete pitanje?",
+  share: "Ne mogu da otvorim ono što ste podelili — recite mi ukratko šta vas zanima?",
+  story_mention: "Hvala što ste podelili! Recite mi kako mogu da pomognem.",
+  default: "Ovo nažalost ne mogu da otvorim — možete li da napišete šta vas zanima?",
+};
+
 /** Runs after the 200 has already gone back to Meta — see the handler below. */
-async function handleMessage(senderId, text) {
+async function handleMessage(senderId, { text, image, other }) {
   try {
-    const history = remember(senderId, "user", text);
+    if (!text && !image && other) {
+      await sendReply(senderId, CANT_READ[other] ?? CANT_READ.default);
+      return;
+    }
+
+    let description = null;
+    if (image) {
+      try {
+        description = await describeImage(await fetchImage(image));
+      } catch (err) {
+        // A failed picture shouldn't swallow the question typed alongside it.
+        console.error("slika nije obrađena:", err.message);
+      }
+    }
+
+    if (!text && !description) {
+      await sendReply(
+        senderId,
+        "Sliku nisam uspeo da otvorim — možete li da napišete šta vas zanima?"
+      );
+      return;
+    }
+
+    const content = [text, description && `[slika: ${description}]`]
+      .filter(Boolean)
+      .join("\n");
+
+    const history = remember(senderId, "user", content);
     const reply = await answer(history);
     if (!reply) return;
     remember(senderId, "assistant", reply);
@@ -84,9 +140,16 @@ function extractMessages(body) {
     for (const event of entry.messaging ?? []) {
       // Echoes are our own replies coming back; answering them loops forever.
       if (event.message?.is_echo) continue;
-      const text = event.message?.text;
+
       const senderId = event.sender?.id;
-      if (text && senderId) out.push({ senderId, text });
+      if (!senderId) continue;
+
+      const text = event.message?.text ?? "";
+      const attachments = event.message?.attachments ?? [];
+      const image = attachments.find((a) => a.type === "image")?.payload?.url;
+      const other = attachments.find((a) => a.type !== "image")?.type;
+
+      if (text || image || other) out.push({ senderId, text, image, other });
     }
   }
   return out;
@@ -140,8 +203,8 @@ const server = http.createServer((req, res) => {
       } catch {
         return;
       }
-      for (const { senderId, text } of extractMessages(body)) {
-        void handleMessage(senderId, text);
+      for (const { senderId, ...message } of extractMessages(body)) {
+        void handleMessage(senderId, message);
       }
     });
     return;

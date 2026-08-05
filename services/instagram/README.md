@@ -91,3 +91,8 @@ pa prijavu pokreni pre nego što zatreba.
 - **Odjeci** (`is_echo`) se preskaču; bez toga bi asistent odgovarao sam sebi u krug.
 - **Kad baza ne radi**, servis ne pada — javi da ima tehnički problem i uputi na mejl.
 - **Dužina odgovora** je namerno kratka (2–3 rečenice). Ovo je Instagram, ne mejl.
+- **Slike** se opisuju jednim prolazom kroz model, pa se dalje radi sa tim
+  opisom. Jeftinije je nego nositi sliku kroz svaki poziv, a opis je i ono što
+  ima smisla čuvati kad zatreba katalog proizvoda.
+- **Video i glasovne poruke** ne umemo da pročitamo, ali ne ćutimo — javimo to i
+  zamolimo sagovornika da napiše pitanje. Ćutanje izgleda kao da je bot pukao.

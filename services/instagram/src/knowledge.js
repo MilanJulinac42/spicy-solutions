@@ -29,6 +29,38 @@ function openaiClient() {
   return _openai;
 }
 
+/**
+ * Turns a photo into words once, and everything downstream — the knowledge
+ * search, the reply, and eventually a product catalogue — works on those words
+ * instead of the picture. Cheaper than carrying the image through every call,
+ * and the description is the part actually worth storing.
+ *
+ * Low detail on purpose: colour, shape and any readable text survive it, and
+ * that is all we ever ask of these images.
+ */
+export async function describeImage(dataUrl) {
+  const res = await openaiClient().chat.completions.create({
+    model: "gpt-4o-mini",
+    messages: [
+      {
+        role: "user",
+        content: [
+          {
+            type: "text",
+            text: `Opiši šta je na slici, na srpskom, u jednoj do dve rečenice.
+Ako je snimak ekrana, pročitaj glavni tekst i eventualnu poruku o grešci.
+Ako je proizvod, navedi boju, kroj i upadljive detalje.`,
+          },
+          { type: "image_url", image_url: { url: dataUrl, detail: "low" } },
+        ],
+      },
+    ],
+    max_tokens: 200,
+  });
+
+  return res.choices[0]?.message?.content?.trim() || "";
+}
+
 async function embed(text) {
   const res = await openaiClient().embeddings.create({
     model: "text-embedding-3-small",
@@ -75,6 +107,11 @@ KAKO PIŠEŠ:
 - Automatizacija posla po meri — od 800 EUR
 - Sajtovi od 300 EUR, poslovni sistemi od 800 EUR
 - Vodi je jedan inženjer: Milan Julinac. Kontakt: info@solveradev.rs, WhatsApp 063 838 4196.
+
+SLIKE:
+- Kad u poruci stoji „[slika: ...]", to je opis slike koju je sagovornik poslao.
+  Ponašaj se kao da si je video. Ne pominji opis niti da si ga dobio.
+- Ako slika sama ne kaže šta se traži, pitaj kratko šta ih zanima u vezi sa njom.
 
 STROGO:
 - Ako nemaš podatak, reci to i ponudi da se Milan javi. NE IZMIŠLJAJ cene, rokove ni brojke.
