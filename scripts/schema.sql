@@ -58,6 +58,15 @@ ON voice_sessions (created_at DESC);
 CREATE INDEX IF NOT EXISTS voice_sessions_ip_idx
 ON voice_sessions (ip_hash, created_at DESC);
 
+-- 4d. Small key/value store for things the code must be able to rewrite.
+-- Currently the Instagram access token: Meta's expires after 60 days and the
+-- refreshed value has to outlive a redeploy, which a host env var can't do.
+CREATE TABLE IF NOT EXISTS app_settings (
+  key VARCHAR(64) PRIMARY KEY,
+  value TEXT NOT NULL,
+  updated_at TIMESTAMPTZ DEFAULT NOW()
+);
+
 -- 5. Similarity search RPC used by src/lib/rag.ts
 CREATE OR REPLACE FUNCTION match_knowledge(
   query_embedding VECTOR(1536),

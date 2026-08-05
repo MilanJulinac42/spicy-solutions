@@ -1,6 +1,7 @@
 import http from "http";
 import crypto from "crypto";
 import { answer } from "./knowledge.js";
+import { getAccessToken, startRefreshLoop, tokenStatus } from "./token.js";
 
 /**
  * Instagram DM assistant.
@@ -14,7 +15,6 @@ import { answer } from "./knowledge.js";
 const PORT = process.env.PORT || 3000;
 const VERIFY_TOKEN = process.env.IG_VERIFY_TOKEN;
 const APP_SECRET = process.env.IG_APP_SECRET;
-const ACCESS_TOKEN = process.env.IG_ACCESS_TOKEN;
 const GRAPH = "https://graph.instagram.com/v23.0";
 
 /** Conversation memory. In-process and short-lived by design: a DM thread is a
@@ -51,7 +51,7 @@ async function sendReply(recipientId, text) {
   const res = await fetch(`${GRAPH}/me/messages`, {
     method: "POST",
     headers: {
-      Authorization: `Bearer ${ACCESS_TOKEN}`,
+      Authorization: `Bearer ${await getAccessToken()}`,
       "Content-Type": "application/json",
     },
     body: JSON.stringify({ recipient: { id: recipientId }, message: { text } }),
@@ -94,6 +94,14 @@ function extractMessages(body) {
 
 const server = http.createServer((req, res) => {
   const url = new URL(req.url, `http://${req.headers.host}`);
+
+  if (req.method === "GET" && url.pathname === "/token-status") {
+    void tokenStatus().then((status) => {
+      res.writeHead(200, { "Content-Type": "application/json" });
+      res.end(JSON.stringify(status, null, 2));
+    });
+    return;
+  }
 
   if (req.method === "GET" && url.pathname === "/health") {
     res.writeHead(200).end("ok");
@@ -146,4 +154,7 @@ const required = ["IG_VERIFY_TOKEN", "IG_APP_SECRET", "IG_ACCESS_TOKEN", "SUPABA
 const missing = required.filter((k) => !process.env[k]);
 if (missing.length) console.warn("nedostaju promenljive:", missing.join(", "));
 
-server.listen(PORT, () => console.log(`Instagram asistent sluša na portu ${PORT}`));
+server.listen(PORT, () => {
+  console.log(`Instagram asistent sluša na portu ${PORT}`);
+  startRefreshLoop();
+});

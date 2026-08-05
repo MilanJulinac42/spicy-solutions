@@ -55,6 +55,29 @@ Pošalji poruku svom nalogu sa drugog profila. Odgovor stiže za par sekundi.
 curl https://xxx.up.railway.app/health     # → ok
 ```
 
+## Token
+
+Metin token važi 60 dana i posle toga prosto prestane da radi — bez greške i bez
+obaveštenja, samo poruke ostanu bez odgovora. Zato se osvežava sam, na 45. dan,
+a provera ide na svakih 12 sati.
+
+Novi token se upisuje u tabelu `app_settings` u bazi, ne u promenljive okruženja
+— Railway promenljive se ne mogu menjati iz koda, pa bi se osveženi token
+izgubio pri sledećem deploy-u. Tabela se pravi jednom, kroz `scripts/schema.sql`.
+
+Ako baza nije dostupna ili tabela ne postoji, servis nastavlja da radi sa
+tokenom iz `IG_ACCESS_TOKEN` — problem sa čitanjem ne sme da obori dopisivanje.
+
+Stanje se proverava bez otvaranja baze:
+
+```bash
+curl https://xxx.up.railway.app/token-status
+```
+
+Ako osvežavanje padne, u logovima stoji `!!! OSVEŽAVANJE TOKENA NIJE USPELO`.
+Rešenje je novi token iz Meta panela u `IG_ACCESS_TOKEN`, uz brisanje reda
+`ig_access_token` iz `app_settings` da bi ga servis ponovo preuzeo.
+
 ## App Review
 
 **Ne treba za sopstveni nalog** — radi odmah. Potreban je tek kada povezuješ
