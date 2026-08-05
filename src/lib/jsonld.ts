@@ -30,9 +30,15 @@ export const organizationSchema = {
     "Solvera gradi AI rešenja — chatbot-ove, voice agente, interne asistente i AI integracije po meri. Web razvoj sekundarno. Direktan rad sa inženjerom.",
   email: "info@solveradev.rs",
   telephone: "+381638384196",
+  // Registered entity, not the marketing address. The seat is Bačka Palanka
+  // and the work is sold in Novi Sad — areaServed below carries the second.
+  legalName: "Milan Julinac PR Računarsko programiranje JM-IT Bačka Palanka",
+  taxID: "115285099",
+  vatID: "115285099",
   address: {
     "@type": "PostalAddress",
-    addressLocality: "Novi Sad",
+    streetAddress: "Kralja Petra I 77",
+    addressLocality: "Bačka Palanka",
     addressCountry: "RS",
   },
   areaServed: ["RS", "ME", "BA", "HR", "SI", "MK"],

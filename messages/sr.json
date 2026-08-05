@@ -1076,6 +1076,9 @@
     "privacy": "Politika privatnosti",
     "terms": "Uslovi korišćenja",
     "dataDeletion": "Brisanje podataka",
+    "registrationNumber": "Matični broj:",
+    "taxNumber": "PIB:",
+    "seat": "Sedište:",
     "copyright": "© 2026 Solvera. Sva prava zadržana."
   },
   "Common": {

@@ -27,6 +27,24 @@ export const siteConfig = {
   email: "info@solveradev.rs",
   phone: "+381 63 838 4196",
   address: "Novi Sad, Srbija",
+  /**
+   * Registration details as they stand in the business register. Kept separate
+   * from the marketing address above: Novi Sad is where the work happens and
+   * what people search for, Bačka Palanka is the registered seat. Both true,
+   * and platform verifications compare against this one.
+   *
+   * The bank account is deliberately absent — nothing requires it here, and a
+   * published account number is what fake invoices are built from.
+   */
+  legal: {
+    name: "Milan Julinac PR Računarsko programiranje JM-IT Bačka Palanka",
+    shortName: "JM-IT",
+    form: "Preduzetnik",
+    registrationNumber: "68245036",
+    taxNumber: "115285099",
+    address: "Kralja Petra I 77, Bačka Palanka",
+    representative: "Milan Julinac",
+  },
   socials: {
     github: "https://github.com/MilanJulinac42",
     linkedin: "https://www.linkedin.com/in/milanjulinac/",

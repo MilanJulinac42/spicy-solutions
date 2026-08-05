@@ -233,9 +233,18 @@ export function Footer() {
           </div>
         </div>
 
-        {/* Copyright */}
-        <div className="mt-12 pt-8 border-t border-white/5 text-center">
+        {/* Copyright + registration details.
+            Deliberately quiet: nobody comes here to read it, but it has to be
+            findable — platform verifications and business clients both check
+            that the entity behind the site is a real, registered one. */}
+        <div className="mt-12 pt-8 border-t border-white/5 text-center space-y-3">
           <p className="text-sm text-gray-400">{t("Footer.copyright")}</p>
+          <p className="text-xs text-gray-500 leading-relaxed max-w-3xl mx-auto">
+            {siteConfig.legal.name} · {siteConfig.legal.form} ·{" "}
+            {t("Footer.registrationNumber")} {siteConfig.legal.registrationNumber} ·{" "}
+            {t("Footer.taxNumber")} {siteConfig.legal.taxNumber} ·{" "}
+            {t("Footer.seat")} {siteConfig.legal.address}
+          </p>
         </div>
       </div>
     </footer>
