@@ -675,14 +675,19 @@ const SR_CHUNKS: Chunk[] = [
 // SEED SCRIPT
 // ============================================================
 
+/** This script seeds our own knowledge base, never a client's. */
+const TENANT = "solvera";
+
 async function seed() {
   console.log("Connected to Supabase");
 
-  // Clear existing data
+  // Clear Solvera's chunks only. Before there was one client this deleted
+  // every row, which now would wipe a paying client's knowledge base on a
+  // routine reseed of our own copy.
   const { error: deleteError } = await supabase
     .from("knowledge_chunks")
     .delete()
-    .neq("id", 0); // delete all rows
+    .eq("tenant_id", TENANT);
 
   if (deleteError) {
     console.error("Failed to clear existing data:", deleteError.message);
@@ -703,6 +708,7 @@ async function seed() {
     const embedding = await getEmbedding(chunk.content);
 
     const { error } = await supabase.from("knowledge_chunks").insert({
+      tenant_id: TENANT,
       content: chunk.content,
       locale: chunk.locale,
       category: chunk.category,
@@ -719,8 +725,9 @@ async function seed() {
 
   const { count } = await supabase
     .from("knowledge_chunks")
-    .select("*", { count: "exact", head: true });
-  console.log(`\nDone! ${count} chunks in database.`);
+    .select("*", { count: "exact", head: true })
+    .eq("tenant_id", TENANT);
+  console.log(`\nDone! ${count} chunks for ${TENANT}.`);
 }
 
 seed().catch(console.error);

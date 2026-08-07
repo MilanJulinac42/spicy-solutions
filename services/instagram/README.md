@@ -28,8 +28,18 @@ Poruka na Instagramu
 
 ### 2. Promenljive okruženja
 
-Kopiraj `.env.example` u `.env` i popuni. `IG_VERIFY_TOKEN` biraš sam — bilo koji
-niz znakova, samo isti upiši i kod Mete u koraku 4.
+Kopiraj `.env.example` u `.env` i popuni. `IG_VERIFY_TOKEN` i `CONNECT_SECRET`
+biraš sam — bilo koji niz znakova. `IG_VERIFY_TOKEN` mora isti da stoji i kod
+Mete u koraku 4.
+
+| Promenljiva | Šta je |
+|---|---|
+| `IG_APP_ID` | Instagram App ID iz Meta panela |
+| `IG_APP_SECRET` | Instagram App Secret — potpisuje i webhook i `state` |
+| `IG_VERIFY_TOKEN` | biraš sam, isti kao kod Mete |
+| `PUBLIC_URL` | javna adresa servisa, bez kose crte na kraju |
+| `CONNECT_SECRET` | biraš sam, štiti stranicu za povezivanje |
+| `IG_ACCESS_TOKEN` | samo za prvi nalog; posle se ne koristi |
 
 ### 3. Railway
 
@@ -55,28 +65,54 @@ Pošalji poruku svom nalogu sa drugog profila. Odgovor stiže za par sekundi.
 curl https://xxx.up.railway.app/health     # → ok
 ```
 
+## Povezivanje klijenta
+
+Jedan servis opslužuje sve klijente. Koji nalog je primio poruku odlučuje i čija
+baza znanja odgovara i kojim tokenom se šalje odgovor — `entry[].id` iz webhook-a.
+
+**Novi klijent:**
+
+1. Dodaj red u `tenants` (`slug`, `name`, `kontakt_fallback`, po želji
+   `system_prompt_extra`)
+2. Pošalji mu link:
+   `https://xxx.up.railway.app/connect?t=<slug>&k=<CONNECT_SECRET>`
+3. Klikne dugme, prijavi se na Instagram, potvrdi pristup
+4. Proveri `GET /status` — nalog mora da se pojavi
+
+Link je zaštićen `CONNECT_SECRET`-om. Bez toga bi svako ko pogodi adresu mogao
+da zakači svoj nalog i troši naš OpenAI budžet.
+
+**Redirect URI** mora biti upisan i kod Mete, u podešavanjima Instagram
+proizvoda: `https://xxx.up.railway.app/oauth/callback`
+
+Povezivanje radi „redom": kod → kratkotrajni token → dugotrajni → upis u bazu →
+**pretplata na `messages`**. Poslednji korak je onaj koji se zaboravlja: bez
+njega sve izgleda uspešno, token stoji u bazi, klijent je video potvrdu — a
+webhook nikad ne stigne i asistent ćuti bez ijedne greške u logu.
+
 ## Token
 
 Metin token važi 60 dana i posle toga prosto prestane da radi — bez greške i bez
 obaveštenja, samo poruke ostanu bez odgovora. Zato se osvežava sam, na 45. dan,
-a provera ide na svakih 12 sati.
+a provera ide na svakih 12 sati, za **svaki** povezani nalog.
 
-Novi token se upisuje u tabelu `app_settings` u bazi, ne u promenljive okruženja
-— Railway promenljive se ne mogu menjati iz koda, pa bi se osveženi token
-izgubio pri sledećem deploy-u. Tabela se pravi jednom, kroz `scripts/schema.sql`.
+Tokeni žive u tabeli `ig_accounts`, ne u promenljivama okruženja — Railway
+promenljive se ne mogu menjati iz koda, pa bi se osveženi token izgubio pri
+sledećem deploy-u.
 
-Ako baza nije dostupna ili tabela ne postoji, servis nastavlja da radi sa
-tokenom iz `IG_ACCESS_TOKEN` — problem sa čitanjem ne sme da obori dopisivanje.
+Prvi put kad se servis pokrene sa praznom tabelom, token iz `IG_ACCESS_TOKEN`
+se sam prepiše u bazu. Bez toga bi baš nalog zbog kog je servis i nastao bio
+jedini koji se ne osvežava.
 
-Stanje se proverava bez otvaranja baze:
+Ako baza nije dostupna, servis nastavlja sa tokenom iz okruženja — problem sa
+čitanjem ne sme da obori dopisivanje.
 
 ```bash
-curl https://xxx.up.railway.app/token-status
+curl https://xxx.up.railway.app/status
 ```
 
-Ako osvežavanje padne, u logovima stoji `!!! OSVEŽAVANJE TOKENA NIJE USPELO`.
-Rešenje je novi token iz Meta panela u `IG_ACCESS_TOKEN`, uz brisanje reda
-`ig_access_token` iz `app_settings` da bi ga servis ponovo preuzeo.
+Ako osvežavanje padne, u logovima stoji `!!! OSVEŽAVANJE TOKENA NIJE USPELO`
+sa imenom naloga. Rešenje je da klijent ponovo prođe kroz `/connect`.
 
 ## App Review
 
