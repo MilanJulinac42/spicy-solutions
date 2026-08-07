@@ -20,9 +20,12 @@ const GRAPH = "https://graph.instagram.com";
 const APP_ID = process.env.IG_APP_ID;
 const APP_SECRET = process.env.IG_APP_SECRET;
 const PUBLIC_URL = process.env.PUBLIC_URL;
-const CONNECT_SECRET = process.env.CONNECT_SECRET;
+// Trimmed because a value pasted into a hosting panel routinely arrives with a
+// trailing newline. Nobody means to have one, and without this the only
+// symptom is a 403 that looks exactly like a wrong password.
+const CONNECT_SECRET = process.env.CONNECT_SECRET?.trim();
 
-const redirectUri = () => `${PUBLIC_URL}/oauth/callback`;
+const redirectUri = () => `${PUBLIC_URL.trim().replace(/\/+$/, "")}/oauth/callback`;
 
 /**
  * Which client is connecting has to survive the round trip through Instagram,
@@ -59,7 +62,7 @@ function readState(state) {
  *  their own account to this service and start burning our OpenAI budget. */
 export function linkAllowed(key) {
   if (!CONNECT_SECRET) return false;
-  const a = Buffer.from(String(key ?? ""));
+  const a = Buffer.from(String(key ?? "").trim());
   const b = Buffer.from(CONNECT_SECRET);
   return a.length === b.length && crypto.timingSafeEqual(a, b);
 }
