@@ -90,6 +90,11 @@ export function connectPage(tenantId) {
   url.searchParams.set("scope", SCOPES);
   url.searchParams.set("response_type", "code");
   url.searchParams.set("state", signState(tenantId));
+  // Forces a fresh login instead of silently using whichever account the
+  // browser is already signed into. A shop owner logged into their personal
+  // Instagram would otherwise connect that one, and nobody would notice until
+  // the assistant started answering the wrong inbox.
+  url.searchParams.set("force_reauth", "true");
 
   return page(
     "Povežite Instagram",
