@@ -195,7 +195,29 @@ const server = http.createServer((req, res) => {
 
   if (req.method === "GET" && url.pathname === "/status") {
     void accountsStatus().then((s) =>
-      send(res, 200, JSON.stringify(s, null, 2), "application/json")
+      send(
+        res,
+        200,
+        JSON.stringify(
+          {
+            ...s,
+            // Which variables arrived, never their values. A missing or
+            // whitespace-padded secret and a wrong one both produce the same
+            // silent 403 on /connect, and there is otherwise no way to tell
+            // them apart from outside.
+            podesavanja: {
+              IG_APP_ID: Boolean(process.env.IG_APP_ID),
+              PUBLIC_URL: process.env.PUBLIC_URL ?? null,
+              CONNECT_SECRET: process.env.CONNECT_SECRET
+                ? `postavljen, ${process.env.CONNECT_SECRET.length} znakova`
+                : "NEDOSTAJE",
+            },
+          },
+          null,
+          2
+        ),
+        "application/json"
+      )
     );
     return;
   }
