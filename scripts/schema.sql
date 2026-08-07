@@ -80,6 +80,11 @@ CREATE TABLE IF NOT EXISTS tenants (
   created_at          TIMESTAMPTZ DEFAULT NOW()
 );
 
+-- Older databases carry a NOT NULL api_key from an abandoned widget product.
+-- Nothing reads it, and leaving it required means inventing a fake key for
+-- every client just to get the row in.
+ALTER TABLE tenants ALTER COLUMN api_key DROP NOT NULL;
+
 CREATE UNIQUE INDEX IF NOT EXISTS tenants_slug_key ON tenants (slug);
 
 INSERT INTO tenants (name, slug, kontakt_fallback, active)

@@ -14,6 +14,11 @@
 
 ALTER TABLE tenants ADD COLUMN IF NOT EXISTS kontakt_fallback TEXT;
 
+-- `api_key` je iz onog demo widgeta i obavezan je, a ništa ga ne koristi.
+-- Bez ovoga bi svaki novi klijent morao da izmisli lažni ključ samo da bi
+-- upis prošao.
+ALTER TABLE tenants ALTER COLUMN api_key DROP NOT NULL;
+
 CREATE UNIQUE INDEX IF NOT EXISTS tenants_slug_key ON tenants (slug);
 
 INSERT INTO tenants (name, slug, kontakt_fallback, active)
