@@ -1,5 +1,6 @@
 "use client";
 
+import { Fragment } from "react";
 import { useTranslations } from "next-intl";
 import { motion } from "framer-motion";
 import Link from "next/link";
@@ -149,28 +150,32 @@ export function Hero() {
               animate="visible"
               className="text-3xl sm:text-4xl md:text-5xl lg:text-[3rem] xl:text-6xl font-bold text-foreground leading-snug"
             >
+              {/* The gap between words is a real space, not a margin. Each word
+                  needs its own element to animate in, and with margins alone
+                  there is no whitespace in the markup — so the whole headline
+                  extracts as one run-together word. People saw it fine; crawlers
+                  read "VivoditebiznisJabrinemotehnologiji". */}
               {t("title")
                 .split(" ")
                 .map((word, i) => (
-                  <motion.span
-                    key={i}
-                    variants={textRevealWord}
-                    className="inline-block mr-[0.3em]"
-                  >
-                    {word}
-                  </motion.span>
+                  <Fragment key={i}>
+                    <motion.span variants={textRevealWord} className="inline-block">
+                      {word}
+                    </motion.span>{" "}
+                  </Fragment>
                 ))}
               <br />
               {t("titleHighlight")
                 .split(" ")
                 .map((word, i) => (
-                  <motion.span
-                    key={`h-${i}`}
-                    variants={textRevealWord}
-                    className="inline-block mr-[0.3em] animated-gradient-text"
-                  >
-                    {word}
-                  </motion.span>
+                  <Fragment key={`h-${i}`}>
+                    <motion.span
+                      variants={textRevealWord}
+                      className="inline-block animated-gradient-text"
+                    >
+                      {word}
+                    </motion.span>{" "}
+                  </Fragment>
                 ))}
             </motion.h1>
 

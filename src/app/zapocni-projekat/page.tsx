@@ -11,7 +11,8 @@ export default function StartProjectPage() {
   return (
     <section className="pt-32 pb-20 md:pt-40 md:pb-28">
       <Container>
-        <SectionHeading title={t("title")} subtitle={t("subtitle")} centered />
+        <SectionHeading
+          as="h1" title={t("title")} subtitle={t("subtitle")} centered />
         <div className="mt-12">
           <ProjectIntakeForm />
         </div>

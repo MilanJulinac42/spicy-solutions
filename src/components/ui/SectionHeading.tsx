@@ -8,6 +8,12 @@ interface SectionHeadingProps {
   subtitle?: string;
   centered?: boolean;
   className?: string;
+  /**
+   * The page's own top heading should be an h1, and several pages are built
+   * entirely from these sections — so their highest heading was an h2 and the
+   * page had no h1 at all. Stays h2 everywhere else: one h1 per page.
+   */
+  as?: "h1" | "h2";
 }
 
 export function SectionHeading({
@@ -15,6 +21,7 @@ export function SectionHeading({
   subtitle,
   centered = true,
   className = "",
+  as: Heading = "h2",
 }: SectionHeadingProps) {
   return (
     <motion.div
@@ -24,9 +31,9 @@ export function SectionHeading({
       variants={fadeInUp}
       className={`mb-12 md:mb-16 ${centered ? "text-center" : ""} ${className}`}
     >
-      <h2 className="text-3xl md:text-4xl lg:text-5xl font-bold text-foreground">
+      <Heading className="text-3xl md:text-4xl lg:text-5xl font-bold text-foreground">
         {title}
-      </h2>
+      </Heading>
       {subtitle && (
         <p className="mt-4 text-lg md:text-xl text-foreground-muted max-w-2xl mx-auto">
           {subtitle}

@@ -591,6 +591,7 @@ export default function ProcessPage() {
         </div>
         <Container>
           <SectionHeading
+          as="h1"
             title={t("Process.title")}
             subtitle={t("Process.subtitle")}
           />

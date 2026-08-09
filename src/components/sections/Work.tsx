@@ -81,20 +81,26 @@ type WorkProps = {
   subtitle?: string;
   /** Narrows to one service's work; omitted on the home page, which shows all. */
   service?: Project["service"];
+  /** h1 only on /radovi, where this section is the page. */
+  headingAs?: "h1" | "h2";
+  /** The page already sits on a background; a second one stacks visibly. */
+  bare?: boolean;
 };
 
 export function Work({
   title = "Radovi",
   subtitle = "Projekti koje sam radio — kliknite i pogledajte uživo, ne na slici.",
   service,
+  headingAs = "h2",
+  bare = false,
 }: WorkProps) {
   const projects = service ? PROJECTS.filter((p) => p.service === service) : PROJECTS;
   if (projects.length === 0) return null;
 
   return (
-    <section className="py-20 md:py-28 bg-surface-secondary">
+    <section className={`py-20 md:py-28 ${bare ? "" : "bg-surface-secondary"}`}>
       <Container>
-        <SectionHeading title={title} subtitle={subtitle} />
+        <SectionHeading title={title} subtitle={subtitle} as={headingAs} />
 
         <div className="space-y-8">
           {projects.map((p, i) => (

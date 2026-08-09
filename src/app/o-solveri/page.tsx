@@ -55,6 +55,7 @@ export default function AboutPage() {
       <section className="pt-32 pb-12 md:pt-40 md:pb-16">
         <Container>
           <SectionHeading
+          as="h1"
             title={t("About.title")}
             subtitle={t("About.subtitle")}
           />

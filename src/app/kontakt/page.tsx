@@ -20,6 +20,7 @@ export default function ContactPage() {
       <section className="pt-32 pb-16 md:pt-40 md:pb-20">
         <Container>
           <SectionHeading
+          as="h1"
             title={t("Contact.title")}
             subtitle={t("Contact.subtitle")}
           />

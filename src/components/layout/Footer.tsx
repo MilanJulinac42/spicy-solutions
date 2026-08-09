@@ -91,6 +91,14 @@ export function Footer() {
               </li>
               <li>
                 <Link
+                  href="/radovi"
+                  className="text-sm text-gray-400 hover:text-spicy-400 transition-colors link-underline"
+                >
+                  {t("Navbar.work")}
+                </Link>
+              </li>
+              <li>
+                <Link
                   href="/proces"
                   className="text-sm text-gray-400 hover:text-spicy-400 transition-colors link-underline"
                 >
