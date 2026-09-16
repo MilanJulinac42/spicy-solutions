@@ -9,7 +9,7 @@ import { CTABanner } from "@/components/sections/CTABanner";
  */
 
 export const metadata: Metadata = {
-  title: "Radovi — projekti koje sam izradio | Solvera",
+  title: "Radovi — projekti koje sam izradio",
   description:
     "Sajtovi i poslovni sistemi koje sam izradio — za klijente i kao primer šta može. Šta je napravljeno, koliko je trajalo i na čemu radi, sve uživo.",
   alternates: { canonical: "https://www.solveradev.rs/radovi" },
