@@ -11,7 +11,7 @@ import { CTABanner } from "@/components/sections/CTABanner";
 export const metadata: Metadata = {
   title: "Radovi — projekti koje sam izradio | Solvera",
   description:
-    "Sajtovi i poslovni sistemi koje sam izradio za klijente: šta je napravljeno, koliko je trajalo i na čemu radi. Svaki projekat možete pogledati uživo.",
+    "Sajtovi i poslovni sistemi koje sam izradio — za klijente i kao primer šta može. Šta je napravljeno, koliko je trajalo i na čemu radi, sve uživo.",
   alternates: { canonical: "https://www.solveradev.rs/radovi" },
   openGraph: {
     title: "Radovi — projekti koje sam izradio",
@@ -51,7 +51,7 @@ export default function RadoviPage() {
       <Work
         headingAs="h1"
         bare
-        subtitle="Projekti koje sam izradio za klijente — od prazne strane do sajta na internetu. Svaki je uživo, kliknite i pogledajte."
+        subtitle="Projekti za klijente i primeri šta može — od prazne strane do sajta na internetu. Svaki je uživo, kliknite i pogledajte."
       />
       <CTABanner />
     </>

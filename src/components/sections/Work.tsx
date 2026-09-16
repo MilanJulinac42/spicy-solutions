@@ -27,7 +27,9 @@ type Project = {
   /** What a visitor can't infer from a screenshot: who did the work, how long
    *  it took, what it's built on. */
   role: string;
-  duration: string;
+  /** Omitted where there is no honest figure — a demo built in the gaps
+   *  between client work has no start and end to count. */
+  duration?: string;
   stack: string[];
 };
 
@@ -71,6 +73,30 @@ const PROJECTS: Project[] = [
     ],
     role: "Sve sam — dizajn, izrada, tekstovi, podešavanje domena i puštanje u rad",
     duration: "5 dana",
+    stack: ["Next.js", "Tailwind", "Vercel"],
+  },
+  {
+    name: "Forno — picerija",
+    kind: "Demo · Restoran",
+    service: "websites",
+    images: [
+      { src: "/radovi/forno.png", alt: "Naslovna strana demo sajta picerije Forno" },
+      {
+        src: "/radovi/forno-prostor.png",
+        alt: "Interaktivna mapa prostora na demo sajtu Forno — istaknuta zona sa peći",
+      },
+    ],
+    href: "https://forno-taupe.vercel.app",
+    summary:
+      "Forno ne postoji. Napravio sam ga da pokažem kako izgleda sajt restorana kad se uradi kako treba: meni koji se čita sa telefona, priča o tome kako se pravi pica, i mapa lokala po kojoj pređete mišem pa vidite gde je peć, gde je bar i koliko ima mesta na terasi.",
+    highlights: [
+      "Meni po kategorijama, sa oznakama — vege, ljuto, hit, novo",
+      "Interaktivna mapa prostora: svaka zona pokazuje šta je i koliko mesta ima",
+      "Proces pripreme, od fermentacije testa do stola, sa vremenima",
+      "Radno vreme po danima, adresa i uputstva na jednom mestu",
+      "Na srpskom i engleskom, jednim klikom",
+    ],
+    role: "Sve sam — dizajn, tekstovi, izrada, mapa prostora",
     stack: ["Next.js", "Tailwind", "Vercel"],
   },
 ];
@@ -168,12 +194,14 @@ export function Work({
                         {p.role}
                       </dd>
                     </div>
-                    <div className="flex flex-wrap items-baseline gap-x-2">
-                      <dt className="text-xs font-mono uppercase tracking-wider text-foreground-muted">
-                        Trajanje
-                      </dt>
-                      <dd className="text-sm font-medium text-foreground">{p.duration}</dd>
-                    </div>
+                    {p.duration && (
+                      <div className="flex flex-wrap items-baseline gap-x-2">
+                        <dt className="text-xs font-mono uppercase tracking-wider text-foreground-muted">
+                          Trajanje
+                        </dt>
+                        <dd className="text-sm font-medium text-foreground">{p.duration}</dd>
+                      </div>
+                    )}
                     <div>
                       <dt className="sr-only">Tehnologije</dt>
                       <dd className="flex flex-wrap gap-1.5">
