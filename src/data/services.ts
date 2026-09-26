@@ -2,6 +2,36 @@ import type { Service } from "@/types";
 
 export const services: Service[] = [
   {
+    id: "websites",
+    icon: "Globe",
+    titleKey: "ServicesOverview.websites.title",
+    descriptionKey: "ServicesOverview.websites.description",
+    features: [
+      "Services.websites.features.f1",
+      "Services.websites.features.f2",
+      "Services.websites.features.f3",
+      "Services.websites.features.f4",
+      "Services.websites.features.f5",
+    ],
+    technologies: ["Next.js", "React", "TypeScript", "Tailwind CSS", "Vercel"],
+    category: "web",
+  },
+  {
+    id: "enterprise",
+    icon: "Building2",
+    titleKey: "ServicesOverview.enterprise.title",
+    descriptionKey: "ServicesOverview.enterprise.description",
+    features: [
+      "Services.enterprise.features.f1",
+      "Services.enterprise.features.f2",
+      "Services.enterprise.features.f3",
+      "Services.enterprise.features.f4",
+      "Services.enterprise.features.f5",
+    ],
+    technologies: ["Node.js", ".NET", "PostgreSQL", "MongoDB", "Redis", "Docker", "AWS"],
+    category: "web",
+  },
+  {
     id: "chatbot",
     icon: "MessageSquare",
     titleKey: "ServicesOverview.chatbot.title",
@@ -45,37 +75,7 @@ export const services: Service[] = [
     ],
     technologies: ["OpenAI", "Claude", "LangChain", "Vector DB", "REST APIs"],
     category: "ai",
-  },
-  {
-    id: "websites",
-    icon: "Globe",
-    titleKey: "ServicesOverview.websites.title",
-    descriptionKey: "ServicesOverview.websites.description",
-    features: [
-      "Services.websites.features.f1",
-      "Services.websites.features.f2",
-      "Services.websites.features.f3",
-      "Services.websites.features.f4",
-      "Services.websites.features.f5",
-    ],
-    technologies: ["Next.js", "React", "TypeScript", "Tailwind CSS", "Vercel"],
-    category: "web",
-  },
-  {
-    id: "enterprise",
-    icon: "Building2",
-    titleKey: "ServicesOverview.enterprise.title",
-    descriptionKey: "ServicesOverview.enterprise.description",
-    features: [
-      "Services.enterprise.features.f1",
-      "Services.enterprise.features.f2",
-      "Services.enterprise.features.f3",
-      "Services.enterprise.features.f4",
-      "Services.enterprise.features.f5",
-    ],
-    technologies: ["Node.js", ".NET", "PostgreSQL", "MongoDB", "Redis", "Docker", "AWS"],
-    category: "web",
-  },
+  }
 ];
 
 export const primaryServices = services.filter((s) => s.category === "ai");

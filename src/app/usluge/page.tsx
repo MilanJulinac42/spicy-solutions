@@ -2,217 +2,192 @@
 
 import { useTranslations } from "next-intl";
 import { motion } from "framer-motion";
+import Link from "next/link";
 import {
   Globe,
   Building2,
   MessageSquare,
   Phone,
   Sparkles,
-  Search,
-  Palette,
-  Code2,
-  Rocket,
-  CheckCircle2,
-  TrendingDown,
   ArrowRight,
 } from "lucide-react";
 import { Container } from "@/components/ui/Container";
 import { SectionHeading } from "@/components/ui/SectionHeading";
-import { Badge } from "@/components/ui/Badge";
 import { CTABanner } from "@/components/sections/CTABanner";
-import { fadeInUp, fadeInLeft, fadeInRight, staggerContainer } from "@/lib/animations";
+import { fadeInUp, staggerContainer } from "@/lib/animations";
 import { services } from "@/data/services";
 import { ServiceIllustration } from "@/components/features/ServiceIllustration";
-import Link from "next/link";
 
 const serviceIcons: Record<string, typeof Globe> = {
+  websites: Globe,
+  enterprise: Building2,
   chatbot: MessageSquare,
   voice: Phone,
   aiIntegrations: Sparkles,
-  websites: Globe,
-  enterprise: Building2,
 };
 
-const processSteps = [
-  { icon: Search, step: "step1" },
-  { icon: Palette, step: "step2" },
-  { icon: Code2, step: "step3" },
-  { icon: Rocket, step: "step4" },
-];
+const processSteps = ["step1", "step2", "step3", "step4"] as const;
 
 export default function ServicesPage() {
   const t = useTranslations();
 
   return (
     <>
-      {/* Page Header */}
-      <section className="pt-32 pb-16 md:pt-40 md:pb-20">
-        <Container>
+      {/* Page header */}
+      <section className="relative pt-32 pb-2 md:pt-40 md:pb-4">
+        <div
+          aria-hidden="true"
+          className="pointer-events-none absolute inset-0"
+          style={{ background: "radial-gradient(900px 420px at 70% 0%, rgba(214,186,140,0.08), transparent 65%)" }}
+        />
+        <Container className="relative">
           <SectionHeading
-          as="h1"
+            as="h1"
+            eyebrow={t("Services.eyebrow")}
             title={t("Services.title")}
+            accent={t("Services.titleAccent")}
             subtitle={t("Services.subtitle")}
+            centered={false}
+            className="!mb-10"
           />
+
+          {/* Jump links — five services is a long page. */}
+          <nav aria-label={t("Services.title")} className="flex flex-wrap gap-2">
+            {services.map((s) => {
+              const Icon = serviceIcons[s.id];
+              return (
+                <a
+                  key={s.id}
+                  href={`#${s.id}`}
+                  className="btn-matte inline-flex items-center gap-2 rounded-full px-4 py-2 text-sm font-medium"
+                >
+                  <Icon className="h-4 w-4 text-spicy-300" />
+                  {t(`Services.${s.id}.title`)}
+                </a>
+              );
+            })}
+          </nav>
         </Container>
       </section>
 
-      {/* Detailed Service Sections */}
-      {services.map((service, index) => {
-        const Icon = serviceIcons[service.id as keyof typeof serviceIcons];
-        const isReversed = index % 2 !== 0;
+      {/* One block per service */}
+      <div className="pb-8 md:pb-12">
+        {services.map((service, index) => {
+          const Icon = serviceIcons[service.id];
+          const isReversed = index % 2 !== 0;
 
-        return (
-          <section
-            key={service.id}
-            id={service.id}
-            className={`py-16 md:py-20 ${index % 2 === 0 ? "" : "bg-surface-secondary"}`}
-          >
-            <Container>
-              <div
-                className={`grid grid-cols-1 lg:grid-cols-2 gap-12 items-center ${isReversed ? "lg:direction-rtl" : ""}`}
-              >
-                {/* Content */}
-                <motion.div
-                  initial="hidden"
-                  whileInView="visible"
-                  viewport={{ once: true, amount: 0.15 }}
-                  variants={isReversed ? fadeInRight : fadeInLeft}
-                  className={isReversed ? "lg:order-2" : ""}
-                >
-                  <div className="flex items-center gap-3 mb-4">
-                    <div className="w-10 h-10 flex items-center justify-center rounded-xl bg-spicy-400/10 text-spicy-400">
-                      <Icon className="w-5 h-5" />
-                    </div>
-                    <h3 className="text-2xl md:text-3xl font-bold text-foreground">
-                      {t(`Services.${service.id}.title`)}
-                    </h3>
-                  </div>
-                  <p className="text-foreground-muted leading-relaxed mb-6">
-                    {t(`Services.${service.id}.description`)}
-                  </p>
-                  <ul className="space-y-3 mb-6">
-                    {service.features.map((featureKey) => (
-                      <li
-                        key={featureKey}
-                        className="flex items-start gap-2 text-foreground-secondary"
-                      >
-                        <CheckCircle2 className="w-5 h-5 text-spicy-400 shrink-0 mt-0.5" />
-                        <span>{t(featureKey)}</span>
-                      </li>
-                    ))}
-                  </ul>
-                  {/* Pricing comparison callout */}
-                  <div className="p-4 rounded-xl bg-spicy-400/5 border border-spicy-400/20 mb-6">
-                    <div className="flex items-start gap-3">
-                      <TrendingDown className="w-5 h-5 text-spicy-400 shrink-0 mt-0.5" />
-                      <p className="text-sm font-medium text-foreground-secondary">
+          return (
+            <section key={service.id} id={service.id} className="scroll-mt-24 py-10 md:py-14">
+              <Container>
+                <div className="card-matte rounded-[2rem] p-6 md:p-10 lg:p-12">
+                  <div className="grid grid-cols-1 lg:grid-cols-2 gap-10 lg:gap-14 items-center">
+                    <motion.div
+                      initial="hidden"
+                      whileInView="visible"
+                      viewport={{ once: true, amount: 0.15 }}
+                      variants={fadeInUp}
+                      className={isReversed ? "lg:order-2" : ""}
+                    >
+                      <span className="medallion h-12 w-12 rounded-2xl flex items-center justify-center">
+                        <Icon className="h-5 w-5" />
+                      </span>
+                      <h2 className="mt-6 text-2xl md:text-3xl font-semibold text-foreground">
+                        {t(`Services.${service.id}.title`)}
+                      </h2>
+                      <p className="mt-4 text-[15px] md:text-base leading-relaxed text-foreground-muted text-pretty">
+                        {t(`Services.${service.id}.description`)}
+                      </p>
+
+                      <ul className="mt-6 space-y-3">
+                        {service.features.map((featureKey) => (
+                          <li key={featureKey} className="flex items-start gap-3 text-[15px] text-foreground-secondary">
+                            <span className="mt-[9px] h-1 w-1 shrink-0 rounded-full bg-spicy-300" />
+                            <span>{t(featureKey)}</span>
+                          </li>
+                        ))}
+                      </ul>
+
+                      <p className="mt-6 border-l border-spicy-700 pl-4 text-sm leading-relaxed text-foreground-secondary italic">
                         {t(`Services.${service.id}.comparison`)}
                       </p>
-                    </div>
+
+                      <div className="mt-8 flex flex-wrap items-center justify-between gap-5 border-t border-border-default pt-6">
+                        <div>
+                          <p className="text-xs uppercase tracking-[0.18em] text-foreground-muted">
+                            {t("Services.priceLabel")}
+                          </p>
+                          <p className="mt-1.5 text-[15px] font-semibold text-spicy-200">
+                            {t(`ServicesOverview.${service.id}.price`)}
+                          </p>
+                        </div>
+                        <Link
+                          href={`/usluge/${service.id}`}
+                          className="btn-matte group inline-flex items-center gap-2 rounded-full px-5 py-2.5 text-sm font-semibold"
+                        >
+                          {t("Services.learnMore")}
+                          <ArrowRight className="h-4 w-4 text-spicy-300 transition-transform group-hover:translate-x-0.5" />
+                        </Link>
+                      </div>
+                    </motion.div>
+
+                    <motion.div
+                      initial="hidden"
+                      whileInView="visible"
+                      viewport={{ once: true, amount: 0.15 }}
+                      variants={fadeInUp}
+                      className={isReversed ? "lg:order-1" : ""}
+                    >
+                      <ServiceIllustration serviceId={service.id} />
+                    </motion.div>
                   </div>
+                </div>
+              </Container>
+            </section>
+          );
+        })}
+      </div>
 
-                  <div className="flex flex-wrap gap-2 mb-6">
-                    {service.technologies.map((tech) => (
-                      <Badge key={tech}>{tech}</Badge>
-                    ))}
-                  </div>
-
-                  <Link
-                    href={`/usluge/${service.id}`}
-                    className="inline-flex items-center gap-2 text-spicy-400 font-medium text-sm hover:text-spicy-300 transition-colors cursor-pointer group"
-                  >
-                    {t("Services.learnMore")}
-                    <ArrowRight className="w-4 h-4 group-hover:translate-x-1 transition-transform" />
-                  </Link>
-                </motion.div>
-
-                {/* Visual */}
-                <motion.div
-                  initial="hidden"
-                  whileInView="visible"
-                  viewport={{ once: true, amount: 0.15 }}
-                  variants={isReversed ? fadeInLeft : fadeInRight}
-                  className={isReversed ? "lg:order-1" : ""}
-                >
-                  <ServiceIllustration serviceId={service.id} />
-                </motion.div>
-              </div>
-            </Container>
-          </section>
-        );
-      })}
-
-      {/* Process Section */}
-      <section className="py-20 md:py-28">
+      {/* Process */}
+      <section className="py-24 md:py-32 border-t border-border-default bg-surface-secondary">
         <Container>
           <SectionHeading
             title={t("Services.process.title")}
+            accent={t("Services.process.titleAccent")}
             subtitle={t("Services.process.subtitle")}
+            centered={false}
           />
-
-          <motion.div
+          <motion.ol
             variants={staggerContainer}
             initial="hidden"
             whileInView="visible"
             viewport={{ once: true, amount: 0.15 }}
-            className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-8"
+            className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-10 lg:gap-8"
           >
-            {processSteps.map((step, index) => (
-              <motion.div
-                key={step.step}
-                variants={fadeInUp}
-                className="relative text-center"
-              >
-                {/* Connector line */}
-                {index < processSteps.length - 1 && (
-                  <div className="hidden lg:block absolute top-8 left-[60%] w-[80%] h-px bg-border-default" />
-                )}
-
-                <div className="w-16 h-16 mx-auto mb-4 flex items-center justify-center rounded-2xl bg-spicy-400/10 text-spicy-400 relative">
-                  <step.icon className="w-7 h-7" />
-                  <span className="absolute -top-2 -right-2 w-6 h-6 flex items-center justify-center rounded-full bg-spicy-400 text-white text-xs font-bold">
-                    {index + 1}
+            {processSteps.map((step, i) => (
+              <motion.li key={step} variants={fadeInUp}>
+                <div className="flex items-center gap-4">
+                  <span className="text-5xl font-semibold text-metal leading-none tabular-nums">
+                    {String(i + 1).padStart(2, "0")}
                   </span>
+                  {i < processSteps.length - 1 && (
+                    <span aria-hidden="true" className="hidden lg:block hairline-metal flex-1" />
+                  )}
                 </div>
-                <h4 className="text-lg font-semibold text-foreground mb-2">
-                  {t(`Services.process.${step.step}.title`)}
-                </h4>
-                <p className="text-sm text-foreground-muted">
-                  {t(`Services.process.${step.step}.description`)}
+                <h3 className="mt-6 text-lg font-semibold text-foreground">
+                  {t(`Services.process.${step}.title`)}
+                </h3>
+                <p className="mt-2.5 text-[15px] leading-relaxed text-foreground-muted text-pretty">
+                  {t(`Services.process.${step}.description`)}
                 </p>
-              </motion.div>
+              </motion.li>
             ))}
-          </motion.div>
+          </motion.ol>
         </Container>
       </section>
 
-      {/* CTA */}
-      <section className="py-20 md:py-28 bg-surface-secondary">
-        <Container>
-          <motion.div
-            initial="hidden"
-            whileInView="visible"
-            viewport={{ once: true }}
-            variants={fadeInUp}
-            className="text-center"
-          >
-            <h2 className="text-3xl md:text-4xl font-bold text-foreground mb-4">
-              {t("Services.cta.title")}
-            </h2>
-            <p className="text-lg text-foreground-muted mb-8">
-              {t("Services.cta.subtitle")}
-            </p>
-            <Link
-              href="/kontakt"
-              className="inline-flex items-center gap-2 px-8 py-4 bg-spicy-400 text-white rounded-lg text-base font-semibold hover:bg-spicy-500 transition-colors shadow-lg shadow-spicy-400/25"
-            >
-              {t("Services.cta.button")}
-              <ArrowRight className="w-4 h-4" />
-            </Link>
-          </motion.div>
-        </Container>
-      </section>
-
+      <div className="pt-24 md:pt-32">
+        <CTABanner />
+      </div>
     </>
   );
 }

@@ -9,10 +9,10 @@ function BrowserWindow({ children }: { children: React.ReactNode }) {
       <div className="flex items-center gap-2 px-4 py-3 bg-surface-tertiary border-b border-border-default">
         <div className="w-3 h-3 rounded-full bg-red-400/80" />
         <div className="w-3 h-3 rounded-full bg-yellow-400/80" />
-        <div className="w-3 h-3 rounded-full bg-green-400/80" />
+        <div className="w-3 h-3 rounded-full bg-spicy-400/80" />
         <div className="flex-1 mx-2">
           <div className="h-5 rounded-md bg-surface border border-border-default flex items-center px-2">
-            <span className="text-[10px] text-foreground-muted font-mono">solveradev.rs</span>
+            <span className="text-[10px] text-foreground-muted">solveradev.rs</span>
           </div>
         </div>
       </div>
@@ -160,7 +160,7 @@ function ChatbotIllustration() {
         <div>
           <div className="text-xs font-medium text-foreground">Solvera Bot</div>
           <div className="flex items-center gap-1">
-            <div className="w-1.5 h-1.5 rounded-full bg-green-400" />
+            <div className="w-1.5 h-1.5 rounded-full bg-spicy-400" />
             <span className="text-[10px] text-foreground-muted">Online</span>
           </div>
         </div>
@@ -238,10 +238,10 @@ function AutomationIllustration() {
     <div className="w-full max-w-md mx-auto rounded-2xl bg-surface-secondary border border-border-default overflow-hidden shadow-xl">
       <div className="flex items-center gap-2 px-4 py-3 bg-surface-tertiary border-b border-border-default">
         <div className="w-3 h-3 rounded-full bg-spicy-400/60" />
-        <span className="text-[10px] text-foreground-muted font-mono">ai-integration.flow</span>
+        <span className="text-[10px] text-foreground-muted">Automatski tok</span>
         <div className="ml-auto flex items-center gap-1">
-          <div className="w-1.5 h-1.5 rounded-full bg-green-400" />
-          <span className="text-[10px] text-green-400">Active</span>
+          <div className="w-1.5 h-1.5 rounded-full bg-spicy-400" />
+          <span className="text-[10px] text-spicy-300">Active</span>
         </div>
       </div>
 
@@ -322,27 +322,27 @@ function VoiceIllustration() {
   return (
     <div className="w-full max-w-md mx-auto rounded-2xl bg-surface-secondary border border-border-default overflow-hidden shadow-xl">
       {/* Call header */}
-      <div className="flex items-center gap-3 px-4 py-3 bg-gradient-to-r from-emerald-500/10 to-emerald-500/5 border-b border-border-default">
+      <div className="flex items-center gap-3 px-4 py-3 bg-gradient-to-r from-spicy-500/10 to-spicy-500/5 border-b border-border-default">
         <motion.div
           initial={{ scale: 0.8 }}
           animate={{ scale: [0.95, 1.05, 0.95] }}
           transition={{ duration: 2, repeat: Infinity }}
-          className="w-9 h-9 rounded-full bg-emerald-500/20 border border-emerald-400/40 flex items-center justify-center relative"
+          className="w-9 h-9 rounded-full bg-spicy-500/20 border border-spicy-400/40 flex items-center justify-center relative"
         >
-          <Phone className="w-4 h-4 text-emerald-400" />
+          <Phone className="w-4 h-4 text-spicy-300" />
         </motion.div>
         <div className="flex-1">
           <div className="text-xs font-medium text-foreground">+381 63 ••• ••42</div>
           <div className="flex items-center gap-1.5">
             <motion.div
-              className="w-1.5 h-1.5 rounded-full bg-emerald-400"
+              className="w-1.5 h-1.5 rounded-full bg-spicy-400"
               animate={{ opacity: [0.4, 1, 0.4] }}
               transition={{ duration: 1.2, repeat: Infinity }}
             />
-            <span className="text-[10px] text-emerald-400 font-mono">U razgovoru · 00:42</span>
+            <span className="text-[10px] text-spicy-300">U razgovoru · 00:42</span>
           </div>
         </div>
-        <span className="text-[9px] text-foreground-muted font-mono px-1.5 py-0.5 rounded bg-surface-tertiary">
+        <span className="text-[9px] text-foreground-muted px-1.5 py-0.5 rounded bg-surface-tertiary">
           AI
         </span>
       </div>
@@ -362,14 +362,14 @@ function VoiceIllustration() {
               ease: "easeInOut",
             }}
             viewport={{ once: true }}
-            className="w-[3px] rounded-full bg-gradient-to-t from-emerald-500/60 to-emerald-300"
+            className="w-[3px] rounded-full bg-gradient-to-t from-spicy-500/60 to-spicy-300"
           />
         ))}
       </div>
 
       {/* Transcript */}
       <div className="p-4 space-y-2.5 min-h-[180px]">
-        <div className="text-[9px] uppercase tracking-wider text-foreground-muted font-mono mb-1">
+        <div className="text-[9px] uppercase tracking-wider text-foreground-muted mb-1">
           Live transkript
         </div>
         {transcript.map((line, i) => (
@@ -382,9 +382,9 @@ function VoiceIllustration() {
             className="flex gap-2 items-start"
           >
             <span
-              className={`text-[9px] font-mono uppercase shrink-0 mt-0.5 px-1.5 py-0.5 rounded ${
+              className={`text-[9px] uppercase shrink-0 mt-0.5 px-1.5 py-0.5 rounded ${
                 line.who === "ai"
-                  ? "bg-emerald-500/15 text-emerald-400"
+                  ? "bg-spicy-500/15 text-spicy-300"
                   : "bg-surface-tertiary text-foreground-muted"
               }`}
             >
@@ -405,11 +405,11 @@ function VoiceIllustration() {
         viewport={{ once: true }}
         className="flex items-center gap-2 px-4 py-2.5 border-t border-border-default bg-surface-tertiary/30"
       >
-        <Calendar className="w-3.5 h-3.5 text-emerald-400 shrink-0" />
+        <Calendar className="w-3.5 h-3.5 text-spicy-300 shrink-0" />
         <span className="text-[10px] text-foreground-secondary flex-1">
           Termin upisan: sutra 09:00
         </span>
-        <span className="text-[9px] font-mono text-emerald-400">✓ Done</span>
+        <span className="text-[9px] text-spicy-300">✓ Gotovo</span>
       </motion.div>
     </div>
   );
@@ -417,17 +417,17 @@ function VoiceIllustration() {
 
 function AssistantIllustration() {
   const sources = [
-    { icon: FileText, label: "Procedure.pdf", color: "text-blue-400" },
-    { icon: BookOpen, label: "Politika HR", color: "text-violet-400" },
-    { icon: FileText, label: "Ugovor 2025", color: "text-amber-400" },
+    { icon: FileText, label: "Procedure.pdf", color: "text-spicy-300" },
+    { icon: BookOpen, label: "Politika HR", color: "text-spicy-300" },
+    { icon: FileText, label: "Ugovor 2025", color: "text-spicy-300" },
   ];
 
   return (
     <div className="w-full max-w-md mx-auto rounded-2xl bg-surface-secondary border border-border-default overflow-hidden shadow-xl">
       {/* Header */}
       <div className="flex items-center gap-3 px-4 py-3 bg-surface-tertiary border-b border-border-default">
-        <div className="w-8 h-8 rounded-lg bg-blue-500/15 border border-blue-400/30 flex items-center justify-center">
-          <Bot className="w-4 h-4 text-blue-400" />
+        <div className="w-8 h-8 rounded-lg bg-spicy-500/15 border border-spicy-400/30 flex items-center justify-center">
+          <Bot className="w-4 h-4 text-spicy-300" />
         </div>
         <div className="flex-1">
           <div className="text-xs font-medium text-foreground">Interni asistent</div>
@@ -436,7 +436,7 @@ function AssistantIllustration() {
             <span className="text-[10px] text-foreground-muted">Privatno · self-hosted</span>
           </div>
         </div>
-        <span className="text-[9px] font-mono text-emerald-400 px-1.5 py-0.5 rounded bg-emerald-500/10">
+        <span className="text-[9px] text-spicy-300 px-1.5 py-0.5 rounded bg-spicy-500/10">
           Indeksirano
         </span>
       </div>
@@ -467,7 +467,7 @@ function AssistantIllustration() {
           className="text-[11px] text-foreground-secondary leading-relaxed"
         >
           Po važećoj politici, zaposleni u prvoj godini ima{" "}
-          <span className="text-blue-400 font-medium">20 radnih dana</span>{" "}
+          <span className="text-spicy-300 font-medium">20 radnih dana</span>{" "}
           godišnjeg odmora, srazmerno mesecima rada.
         </motion.div>
 
@@ -479,7 +479,7 @@ function AssistantIllustration() {
           viewport={{ once: true }}
           className="space-y-1.5"
         >
-          <div className="text-[9px] uppercase tracking-wider text-foreground-muted font-mono">
+          <div className="text-[9px] uppercase tracking-wider text-foreground-muted">
             Izvor
           </div>
           {sources.map((s, i) => {

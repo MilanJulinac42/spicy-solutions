@@ -90,7 +90,7 @@ export function ChatbotPricing() {
             </p>
 
             <div className="mt-5 rounded-xl border border-border-subtle bg-surface p-4">
-              <div className="mb-2 text-xs font-mono uppercase tracking-wider text-foreground-muted">
+              <div className="mb-2 text-xs uppercase tracking-wider text-foreground-muted">
                 Šta pomera cenu
               </div>
               <ul className="space-y-2">

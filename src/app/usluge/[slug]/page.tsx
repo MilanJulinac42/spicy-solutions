@@ -3,16 +3,13 @@
 import { useState } from "react";
 import { useTranslations } from "next-intl";
 import { useParams } from "next/navigation";
-import { motion } from "framer-motion";
+import { motion, AnimatePresence } from "framer-motion";
 import {
   Globe,
   Building2,
   Phone,
-  Sparkles,
-  TrendingDown,
   ArrowRight,
   ChevronDown,
-  MessageCircleQuestion,
   Monitor,
   ShoppingCart,
   LayoutDashboard,
@@ -35,20 +32,12 @@ import {
   RefreshCw,
   Clock,
   Bell,
-  ExternalLink,
-  Calculator,
+  Sparkles,
 } from "lucide-react";
 import { Container } from "@/components/ui/Container";
-import { Badge } from "@/components/ui/Badge";
+import { SectionHeading } from "@/components/ui/SectionHeading";
 import { CTABanner } from "@/components/sections/CTABanner";
-import {
-  fadeInUp,
-  fadeInLeft,
-  fadeInRight,
-  staggerContainer,
-  staggerContainerFast,
-  scaleSpring,
-} from "@/lib/animations";
+import { fadeInUp, staggerContainer } from "@/lib/animations";
 import { services } from "@/data/services";
 import { ServiceIllustration } from "@/components/features/ServiceIllustration";
 import { ChatDemoCTA } from "@/components/sections/ChatDemoCTA";
@@ -60,11 +49,11 @@ import Link from "next/link";
 import { notFound } from "next/navigation";
 
 const serviceIcons: Record<string, React.ElementType> = {
+  websites: Globe,
+  enterprise: Building2,
   chatbot: MessageSquare,
   voice: Phone,
   aiIntegrations: Sparkles,
-  websites: Globe,
-  enterprise: Building2,
 };
 
 const featureIconsMap: Record<string, React.ElementType[]> = {
@@ -83,6 +72,8 @@ const exampleIconsMap: Record<string, React.ElementType[]> = {
   enterprise: [Building2, LayoutDashboard, BarChart3, Globe],
 };
 
+const ease = [0.22, 1, 0.36, 1] as const;
+
 export default function ServicePage() {
   const params = useParams();
   const slug = params.slug as string;
@@ -92,62 +83,67 @@ export default function ServicePage() {
   if (!service) notFound();
 
   const Icon = serviceIcons[slug] || Globe;
+  const others = services.filter((s) => s.id !== slug);
 
   return (
     <>
       {/* Hero */}
-      <section className="pt-32 pb-16 md:pt-40 md:pb-24 bg-surface-secondary relative overflow-hidden">
-        <div className="absolute inset-0 opacity-30">
-          <div className="absolute top-0 right-0 w-96 h-96 bg-spicy-400/10 rounded-full blur-3xl" />
-          <div className="absolute bottom-0 left-0 w-96 h-96 bg-spicy-400/5 rounded-full blur-3xl" />
-        </div>
+      <section className="relative overflow-hidden pt-32 pb-16 md:pt-40 md:pb-24">
+        <div
+          aria-hidden="true"
+          className="pointer-events-none absolute inset-0"
+          style={{ background: "radial-gradient(900px 480px at 80% 10%, rgba(214,186,140,0.09), transparent 62%)" }}
+        />
         <Container className="relative">
-          <div className="grid grid-cols-1 lg:grid-cols-2 gap-12 items-center">
+          <div className="grid grid-cols-1 lg:grid-cols-2 gap-12 lg:gap-16 items-center">
             <motion.div
-              initial="hidden"
-              animate="visible"
-              variants={fadeInLeft}
+              initial={{ opacity: 0, y: 16 }}
+              animate={{ opacity: 1, y: 0 }}
+              transition={{ duration: 0.8, ease }}
             >
-              <div className="flex items-center gap-3 mb-6">
-                <div className="w-12 h-12 flex items-center justify-center rounded-2xl bg-spicy-400/10 text-spicy-400">
-                  <Icon className="w-6 h-6" />
-                </div>
-                <Link
-                  href="/usluge"
-                  className="text-sm text-foreground-muted hover:text-spicy-400 transition-colors"
-                >
-                  ← {t("Services.title")}
-                </Link>
+              <Link
+                href="/usluge"
+                className="inline-flex items-center gap-2 text-sm text-foreground-muted hover:text-foreground transition-colors"
+              >
+                <ArrowRight className="h-4 w-4 rotate-180 text-spicy-300" />
+                {t("Services.title")}
+              </Link>
+              <div className="mt-8 flex items-center gap-4">
+                <span className="medallion h-12 w-12 rounded-2xl flex items-center justify-center">
+                  <Icon className="h-5 w-5" />
+                </span>
               </div>
-              <h1 className="text-3xl md:text-4xl lg:text-5xl font-bold text-foreground mb-6">
+              <h1 className="mt-6 text-4xl md:text-5xl lg:text-[3.4rem] font-semibold leading-[1.05] text-foreground text-balance">
                 {t(`Services.${slug}.title`)}
               </h1>
-              <p className="text-lg text-foreground-muted leading-relaxed mb-8">
+              <p className="mt-6 text-base md:text-lg leading-relaxed text-foreground-muted text-pretty max-w-xl">
                 {t(`Services.${slug}.detail.extendedDescription`)}
               </p>
-              <div className="flex flex-wrap gap-4">
+              <p className="mt-6 inline-flex rounded-full border border-border-default px-4 py-2 text-sm font-semibold text-spicy-200">
+                {t(`ServicesOverview.${slug}.price`)}
+              </p>
+              <div className="mt-8 flex flex-col sm:flex-row gap-3">
                 <Link
                   href="/kontakt"
-                  className="inline-flex items-center gap-2 px-8 py-4 bg-spicy-400 text-white rounded-lg text-base font-semibold hover:bg-spicy-500 transition-colors shadow-lg shadow-spicy-400/25"
+                  className="btn-metal group inline-flex items-center justify-center gap-2 rounded-full px-7 py-4 text-[15px] font-semibold"
                 >
                   {t(`Services.${slug}.detail.ctaText`)}
-                  <ArrowRight className="w-4 h-4" />
+                  <ArrowRight className="h-4 w-4 transition-transform group-hover:translate-x-0.5" />
                 </Link>
                 <Link
                   href="/zapocni-projekat"
-                  className="inline-flex items-center gap-2 px-8 py-4 border border-border-default rounded-lg text-base font-semibold text-foreground hover:border-spicy-400/30 hover:bg-spicy-400/5 hover:text-spicy-400 transition-colors"
+                  className="btn-matte inline-flex items-center justify-center gap-2 rounded-full px-7 py-4 text-[15px] font-semibold"
                 >
                   {t("Navbar.calculator")}
-                  <ArrowRight className="w-4 h-4" />
                 </Link>
               </div>
             </motion.div>
 
             <motion.div
               id={slug === "voice" ? "demo" : undefined}
-              initial="hidden"
-              animate="visible"
-              variants={fadeInRight}
+              initial={{ opacity: 0, y: 20 }}
+              animate={{ opacity: 1, y: 0 }}
+              transition={{ duration: 0.9, ease, delay: 0.15 }}
               className={slug === "voice" ? "scroll-mt-28" : undefined}
             >
               {/* The voice page shows the real agent here rather than a mocked
@@ -160,126 +156,82 @@ export default function ServicePage() {
 
       {/* Live chatbot demo — only on the chatbot service page */}
       {slug === "chatbot" && (
-        <section className="pt-12 md:pt-16">
+        <section className="pb-8">
           <Container>
             <ChatDemoCTA />
           </Container>
         </section>
       )}
 
-      {/* Features */}
-      <section className="py-20 md:py-28">
+      {/* What you get */}
+      <section className="py-24 md:py-28 border-t border-border-default">
         <Container>
-          <motion.div
-            initial="hidden"
-            whileInView="visible"
-            viewport={{ once: true, amount: 0.15 }}
-            variants={fadeInUp}
-            className="text-center mb-12 md:mb-16 max-w-3xl mx-auto"
-          >
-            <h2 className="text-2xl md:text-3xl font-bold text-foreground mb-3">
-              {t("Services.featuresHeading")}
-            </h2>
-            <p className="text-base md:text-lg text-foreground-muted leading-relaxed">
-              {t(`Services.${slug}.description`)}
-            </p>
-            <motion.div
-              initial={{ width: 0 }}
-              whileInView={{ width: "3rem" }}
-              viewport={{ once: true }}
-              transition={{ duration: 0.8, ease: "easeOut", delay: 0.3 }}
-              className="mt-5 h-0.5 bg-spicy-400 rounded-full mx-auto"
-            />
-          </motion.div>
+          <SectionHeading
+            eyebrow={t("Services.featuresHeading")}
+            title={t(`Services.${slug}.description`)}
+            centered={false}
+            className="[&_h2]:text-2xl [&_h2]:md:text-3xl [&_h2]:lg:text-[2.1rem] [&_h2]:leading-snug max-w-4xl"
+          />
 
           <motion.div
             variants={staggerContainer}
             initial="hidden"
             whileInView="visible"
             viewport={{ once: true, amount: 0.15 }}
-            className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6"
+            className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-4"
           >
             {service.features.map((featureKey, index) => {
               const featureIcons = featureIconsMap[slug] || featureIconsMap.websites;
               const FeatureIcon = featureIcons[index] || Globe;
               return (
-              <motion.div
-                key={featureKey}
-                variants={fadeInUp}
-                className="p-6 rounded-2xl bg-surface-secondary border border-border-default hover:border-spicy-400/20 transition-all group"
-              >
-                <div className="w-10 h-10 flex items-center justify-center rounded-xl bg-spicy-400/10 text-spicy-400 mb-4 group-hover:bg-spicy-400/20 transition-colors">
-                  <FeatureIcon className="w-5 h-5" />
-                </div>
-                <p className="text-foreground font-medium">
-                  {t(featureKey)}
-                </p>
-              </motion.div>
-            );
+                <motion.div key={featureKey} variants={fadeInUp} className="card-matte rounded-3xl p-6">
+                  <span className="medallion h-10 w-10 rounded-xl flex items-center justify-center">
+                    <FeatureIcon className="h-[18px] w-[18px]" />
+                  </span>
+                  <p className="mt-5 text-[15px] font-medium leading-relaxed text-foreground">{t(featureKey)}</p>
+                </motion.div>
+              );
             })}
-            {/* Pricing comparison card */}
             <motion.div
               variants={fadeInUp}
-              className="p-6 rounded-2xl bg-spicy-400/5 border border-spicy-400/20"
+              className="rounded-3xl p-px"
+              style={{ background: "linear-gradient(135deg, rgba(214,186,140,0.5), rgba(255,255,255,0.05) 50%, rgba(214,186,140,0.2))" }}
             >
-              <div className="w-10 h-10 flex items-center justify-center rounded-xl bg-spicy-400/10 text-spicy-400 mb-4">
-                <TrendingDown className="w-5 h-5" />
+              <div className="h-full rounded-[calc(1.5rem-1px)] bg-surface-secondary p-6 flex items-center">
+                <p className="text-[15px] leading-relaxed text-foreground-secondary italic">
+                  {t(`Services.${slug}.comparison`)}
+                </p>
               </div>
-              <p className="text-sm font-medium text-foreground-secondary">
-                {t(`Services.${slug}.comparison`)}
-              </p>
             </motion.div>
           </motion.div>
         </Container>
       </section>
 
-      {/* Examples / Use Cases */}
-      <section className="py-20 md:py-28 bg-surface-secondary">
+      {/* Examples */}
+      <section className="py-24 md:py-28 border-t border-border-default bg-surface-secondary">
         <Container>
-          <motion.div
-            initial="hidden"
-            whileInView="visible"
-            viewport={{ once: true, amount: 0.15 }}
-            variants={fadeInUp}
-            className="text-center mb-12 md:mb-16"
-          >
-            <h2 className="text-3xl md:text-4xl font-bold text-foreground mb-4">
-              {t(`Services.${slug}.detail.examplesTitle`)}
-            </h2>
-            <motion.div
-              initial={{ width: 0 }}
-              whileInView={{ width: "4rem" }}
-              viewport={{ once: true }}
-              transition={{ duration: 0.8, ease: "easeOut", delay: 0.3 }}
-              className="mt-4 h-1 bg-spicy-400 rounded-full mx-auto"
-            />
-          </motion.div>
-
+          <SectionHeading title={t(`Services.${slug}.detail.examplesTitle`)} centered={false} />
           <motion.div
             variants={staggerContainer}
             initial="hidden"
             whileInView="visible"
             viewport={{ once: true, amount: 0.15 }}
-            className="grid grid-cols-1 md:grid-cols-2 gap-6"
+            className="grid grid-cols-1 md:grid-cols-2 gap-4"
           >
             {["e1", "e2", "e3", "e4"].map((key, index) => {
               const icons = exampleIconsMap[slug] || exampleIconsMap.websites;
               const ExIcon = icons[index];
               return (
-                <motion.div
-                  key={key}
-                  variants={fadeInUp}
-                  className="p-6 md:p-8 rounded-2xl bg-surface border border-border-default hover:border-spicy-400/20 transition-all"
-                >
-                  <div className="flex items-start gap-4">
-                    <div className="w-12 h-12 flex items-center justify-center rounded-xl bg-spicy-400/10 text-spicy-400 flex-shrink-0">
-                      <ExIcon className="w-5 h-5" />
-                    </div>
+                <motion.div key={key} variants={fadeInUp} className="card-matte rounded-3xl p-6 md:p-8">
+                  <div className="flex items-start gap-5">
+                    <span className="medallion h-11 w-11 shrink-0 rounded-xl flex items-center justify-center">
+                      <ExIcon className="h-5 w-5" />
+                    </span>
                     <div>
-                      <h3 className="font-semibold text-foreground text-lg mb-2">
+                      <h3 className="text-lg font-semibold text-foreground">
                         {t(`Services.${slug}.detail.examples.${key}.title`)}
                       </h3>
-                      <p className="text-foreground-muted leading-relaxed">
+                      <p className="mt-2 text-[15px] leading-relaxed text-foreground-muted">
                         {t(`Services.${slug}.detail.examples.${key}.description`)}
                       </p>
                     </div>
@@ -301,90 +253,28 @@ export default function ServicePage() {
       {slug === "websites" && (
         <Work
           service="websites"
-          title="Primer iz prakse"
-          subtitle="Sajt koji sam napravio — otvorite ga i pogledajte, ne morate mi verovati na reč."
+          title={t("Services.exampleLabel")}
+          subtitle="Sajtovi koje sam napravio — otvorite ih i pogledajte, ne morate mi verovati na reč."
         />
       )}
-
       {slug === "enterprise" && (
         <Work
           service="enterprise"
-          title="Primer iz prakse"
+          title={t("Services.exampleLabel")}
           subtitle="Sistem koji sam napravio i koji radi — otvorite ga i pogledajte."
         />
       )}
 
-      {/* Technologies */}
-      <section className="py-20 md:py-28 bg-surface-secondary">
-        <Container>
-          <motion.div
-            initial="hidden"
-            whileInView="visible"
-            viewport={{ once: true, amount: 0.15 }}
-            variants={fadeInUp}
-            className="text-center mb-12"
-          >
-            <h2 className="text-2xl md:text-3xl font-bold text-foreground mb-4">
-              Tehnologije koje koristim
-            </h2>
-            <motion.div
-              initial={{ width: 0 }}
-              whileInView={{ width: "4rem" }}
-              viewport={{ once: true }}
-              transition={{ duration: 0.8, ease: "easeOut", delay: 0.3 }}
-              className="mt-4 h-1 bg-spicy-400 rounded-full mx-auto"
-            />
-          </motion.div>
-
-          <motion.div
-            variants={staggerContainerFast}
-            initial="hidden"
-            whileInView="visible"
-            viewport={{ once: true }}
-            className="flex flex-wrap justify-center gap-3"
-          >
-            {service.technologies.map((tech) => (
-              <motion.div key={tech} variants={scaleSpring}>
-                <span className="inline-flex items-center px-5 py-2.5 rounded-xl text-sm font-medium bg-surface-secondary text-foreground border border-border-default hover:border-spicy-400/30 transition-colors">
-                  {tech}
-                </span>
-              </motion.div>
-            ))}
-          </motion.div>
-        </Container>
-      </section>
-
       {/* FAQ */}
-      <section className="py-20 md:py-28 bg-surface-secondary">
-        <Container className="max-w-3xl">
+      <section className="py-24 md:py-28 border-t border-border-default">
+        <Container>
+          <SectionHeading title={t(`Services.${slug}.detail.faqTitle`)} />
           <motion.div
+            variants={staggerContainer}
             initial="hidden"
             whileInView="visible"
             viewport={{ once: true, amount: 0.15 }}
-            variants={fadeInUp}
-            className="text-center mb-12 md:mb-16"
-          >
-            <div className="flex items-center justify-center gap-2 mb-4">
-              <MessageCircleQuestion className="w-6 h-6 text-spicy-400" />
-              <h2 className="text-3xl md:text-4xl font-bold text-foreground">
-                {t(`Services.${slug}.detail.faqTitle`)}
-              </h2>
-            </div>
-            <motion.div
-              initial={{ width: 0 }}
-              whileInView={{ width: "4rem" }}
-              viewport={{ once: true }}
-              transition={{ duration: 0.8, ease: "easeOut", delay: 0.3 }}
-              className="mt-4 h-1 bg-spicy-400 rounded-full mx-auto"
-            />
-          </motion.div>
-
-          <motion.div
-            variants={staggerContainerFast}
-            initial="hidden"
-            whileInView="visible"
-            viewport={{ once: true, amount: 0.15 }}
-            className="space-y-4"
+            className="max-w-3xl mx-auto divide-y divide-border-default border-y border-border-default"
           >
             {["q1", "q2", "q3", "q4"].map((key) => (
               <FAQItem
@@ -397,80 +287,66 @@ export default function ServicePage() {
         </Container>
       </section>
 
-      {/* CTA */}
-      <section className="py-20 md:py-28">
+      {/* Other services */}
+      <section className="pb-8">
         <Container>
-          <motion.div
-            initial="hidden"
-            whileInView="visible"
-            viewport={{ once: true }}
-            variants={fadeInUp}
-            className="text-center p-12 md:p-16 rounded-3xl bg-gradient-to-br from-spicy-400/10 to-spicy-400/5 border border-spicy-400/20"
-          >
-            <h2 className="text-3xl md:text-4xl font-bold text-foreground mb-4">
-              {t("Services.cta.title")}
-            </h2>
-            <p className="text-lg text-foreground-muted mb-8 max-w-xl mx-auto">
-              {t("Services.cta.subtitle")}
-            </p>
-            <div className="flex flex-wrap justify-center gap-4">
-              <Link
-                href="/kontakt"
-                className="inline-flex items-center gap-2 px-8 py-4 bg-spicy-400 text-white rounded-lg text-base font-semibold hover:bg-spicy-500 transition-colors shadow-lg shadow-spicy-400/25"
-              >
-                {t("Services.cta.button")}
-                <ArrowRight className="w-4 h-4" />
-              </Link>
-              <Link
-                href="/zapocni-projekat"
-                className="inline-flex items-center gap-2 px-8 py-4 border-2 border-border-default text-foreground rounded-lg text-base font-semibold hover:border-spicy-400 hover:text-spicy-400 transition-all"
-              >
-                <Calculator className="w-4 h-4" />
-                {t("Navbar.calculator")}
-              </Link>
-            </div>
-          </motion.div>
+          <div className="flex flex-wrap items-center gap-2">
+            <span className="mr-2 text-sm text-foreground-muted">Ostale usluge:</span>
+            {others.map((s) => {
+              const OIcon = serviceIcons[s.id];
+              return (
+                <Link
+                  key={s.id}
+                  href={`/usluge/${s.id}`}
+                  className="btn-matte inline-flex items-center gap-2 rounded-full px-4 py-2 text-sm font-medium"
+                >
+                  <OIcon className="h-4 w-4 text-spicy-300" />
+                  {t(`Services.${s.id}.title`)}
+                </Link>
+              );
+            })}
+          </div>
         </Container>
       </section>
+
+      <div className="pt-16">
+        <CTABanner />
+      </div>
     </>
   );
 }
 
-function FAQItem({
-  question,
-  answer,
-}: {
-  question: string;
-  answer: string;
-}) {
+function FAQItem({ question, answer }: { question: string; answer: string }) {
   const [isOpen, setIsOpen] = useState(false);
 
   return (
-    <motion.div
-      variants={fadeInUp}
-      className="rounded-2xl bg-surface border border-border-default overflow-hidden"
-    >
+    <motion.div variants={fadeInUp}>
       <button
+        type="button"
         onClick={() => setIsOpen(!isOpen)}
-        className="w-full flex items-center justify-between p-5 md:p-6 text-left cursor-pointer"
+        aria-expanded={isOpen}
+        className="group w-full flex items-center gap-6 py-6 text-left cursor-pointer"
       >
-        <span className="font-medium text-foreground pr-4">{question}</span>
+        <span className="flex-1 text-base md:text-lg font-medium text-foreground group-hover:text-spicy-100 transition-colors">
+          {question}
+        </span>
         <ChevronDown
-          className={`w-5 h-5 text-foreground-muted flex-shrink-0 transition-transform duration-200 ${
-            isOpen ? "rotate-180" : ""
-          }`}
+          className={`h-5 w-5 shrink-0 text-spicy-300 transition-transform duration-300 ${isOpen ? "rotate-180" : ""}`}
         />
       </button>
-      <motion.div
-        initial={false}
-        animate={{ height: isOpen ? "auto" : 0, opacity: isOpen ? 1 : 0 }}
-        transition={{ duration: 0.2 }}
-        className="overflow-hidden"
-      >
-        <p className="px-5 md:px-6 pb-5 md:pb-6 text-foreground-muted leading-relaxed">
-          {answer}
-        </p>
-      </motion.div>
+      <AnimatePresence initial={false}>
+        {isOpen && (
+          <motion.div
+            initial={{ height: 0, opacity: 0 }}
+            animate={{ height: "auto", opacity: 1 }}
+            exit={{ height: 0, opacity: 0 }}
+            transition={{ duration: 0.25, ease: "easeOut" }}
+            className="overflow-hidden"
+          >
+            <p className="pb-6 pr-10 text-[15px] md:text-base leading-relaxed text-foreground-muted">{answer}</p>
+          </motion.div>
+        )}
+      </AnimatePresence>
     </motion.div>
   );
 }

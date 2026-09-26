@@ -142,18 +142,18 @@
   },
   "Services": {
     "title": "Usluge",
-    "subtitle": "Moderan razvoj, brza isporuka i direktna komunikacija od početka do kraja projekta.",
+    "subtitle": "Sajtovi, poslovni sistemi i AI asistenti — sve iz jedne ruke, sa fiksnom cenom i ugovorom.",
     "featuresHeading": "Šta dobijate",
     "websites": {
       "title": "Sajtovi i web aplikacije",
-      "description": "Pravim moderne, brze sajtove sa Next.js koji se učitavaju za manje od sekunde. Kompletno vlasništvo nad kodom, bez zavisnosti od provajdera, sa isporukom u kratkim rokovima.",
-      "comparison": "Brz razvoj sa modernim skupom tehnologija i potpunim vlasništvom nad kodom.",
+      "description": "Brz, pregledan sajt koji dobro izgleda na telefonu i spreman je za Google pretragu. Sve je vaše — domen, sajt i sadržaj.",
+      "comparison": "Sajt se otvara za manje od sekunde, a tekstove i slike možete menjati i sami.",
       "features": {
         "f1": "Prilagođen svim uređajima — telefon, tablet, računar",
-        "f2": "Optimizacija za pretraživače (SEO) od prvog dana",
-        "f3": "Učitavanje ispod sekunde uz Next.js",
+        "f2": "Spreman za Google pretragu od prvog dana",
+        "f3": "Otvara se za manje od sekunde",
         "f4": "Sistem za samostalan unos sadržaja — menjajte tekstove kad god",
-        "f5": "Sve je vaše: kod, domen, hosting"
+        "f5": "Sve je vaše: sajt, domen i hosting"
       },
       "detail": {
         "extendedDescription": "Bilo da vam treba jednostavan sajt za prezentaciju firme ili složena web aplikacija sa korisničkim nalozima i preglednom tablom — pravim rešenja koja izgledaju profesionalno, rade munjevito brzo i potpuno su vaša.",
@@ -200,17 +200,17 @@
     },
     "enterprise": {
       "title": "Poslovni sistemi",
-      "description": "Pregledne table, programi koji se prodaju kao usluga, interni alati i povezivanje sa postojećim programima. Gradim sisteme koji rastu sa vama, spremne za pravi rad, uz redovnu komunikaciju tokom razvoja.",
-      "comparison": "Vrhunski poslovni kvalitet sa agilnim razvojem i direktnim pristupom timu.",
+      "description": "Program po kom radi vaša firma: evidencije, zakazivanja, pregledne table i portali za klijente. Povezuje se sa programima koje već koristite.",
+      "comparison": "Umesto Excel tabela i papira — jedno mesto gde je sve i gde svi vide isto.",
       "features": {
-        "f1": "Sistem koji raste sa vama, bez prepravki iz početka",
-        "f2": "Pregledne table i analitika u realnom vremenu",
-        "f3": "Kontrola pristupa i bezbednost zasnovana na ulogama",
-        "f4": "Automatske provere i automatsko postavljanje koda na server",
-        "f5": "Kompletna dokumentacija i predaja izvornog koda"
+        "f1": "Raste zajedno sa firmom — bez pravljenja iz početka",
+        "f2": "Pregledne table sa podacima koji se osvežavaju odmah",
+        "f3": "Svako vidi samo ono što treba — zaposleni, šefovi, klijenti",
+        "f4": "Nove verzije se puštaju u rad automatski i bezbedno",
+        "f5": "Kompletna uputstva i predaja celog programa vama"
       },
       "detail": {
-        "extendedDescription": "Vaš biznis ima specifične potrebe koje gotova rešenja ne pokrivaju. Gradim sisteme koji se savršeno uklapaju u vaš način rada — od internih alata i preglednih tabla do složenih SaaS platformi.",
+        "extendedDescription": "Vaš biznis ima specifične potrebe koje gotova rešenja ne pokrivaju. Gradim sisteme koji se savršeno uklapaju u vaš način rada — od internih alata i preglednih tabla do velikih onlajn platformi.",
         "examplesTitle": "Šta sve gradim",
         "examples": {
           "e1": {
@@ -313,8 +313,8 @@
       "features": {
         "f1": "Prirodan AI glas (srpski) — ne robotski, ne dosadan",
         "f2": "Vaš broj telefona ostaje isti — samo dobija asistenta koji se javlja",
-        "f3": "Rezervacije, FAQ, kvalifikacija — definišemo skripta po vašem procesu",
-        "f4": "Prebacivanje na vas/tim u realnom vremenu kad treba",
+        "f3": "Rezervacije, česta pitanja, prikupljanje upita — po vašem načinu rada",
+        "f4": "Prebacuje poziv na vas ili zaposlenog kad zatreba",
         "f5": "Zapis svakog razgovora na jednom mestu — znate šta klijenti pitaju"
       },
       "detail": {
@@ -362,12 +362,12 @@
     },
     "aiIntegrations": {
       "title": "AI automatizacija",
-      "description": "Konkretan AI tok ugrađen tačno tamo gde gubite vreme. Ne 'general purpose' rešenje — već specifična automatizacija koja radi jedan posao odlično.",
-      "comparison": "Ne plaćate SaaS pretplatu vekovima — gradi se jednom, vaše je, radi koliko vama treba.",
+      "description": "Konkretna automatizacija tačno tamo gde gubite vreme — mejlovi, fakture, dokumenti, sažeci sastanaka. Ne opšte rešenje za sve, već jedan posao urađen dobro.",
+      "comparison": "Nema pretplate zauvek — pravi se jednom, vaše je i radi koliko vam treba.",
       "features": {
-        "f1": "Obrada dokumenata — fakture, ugovori, formulari → strukturirani podaci",
-        "f2": "Klasifikacija i triage — automatsko razvrstavanje mejlova, tiketa, upita",
-        "f3": "Sumarizacija — sastanci, izveštaji, duge konverzacije → kratak rezime",
+        "f1": "Obrada dokumenata — fakture, ugovori i formulari se sami prepisuju u sistem",
+        "f2": "Razvrstavanje — mejlovi i upiti se sami sortiraju po hitnosti",
+        "f3": "Sažeci — sastanci, izveštaji i duge prepiske u par rečenica",
         "f4": "AI koji sam obavlja posao — čita podatke iz vaših programa i upisuje rezultat",
         "f5": "Ugrađuje se u programe koje već koristite (fakturisanje, evidencija klijenata, vaš sistem)"
       },
@@ -422,7 +422,7 @@
       "subtitle": "Jednostavan proces. Bez misterije. Bez iznenađenja.",
       "step1": {
         "title": "Besplatna konsultacija",
-        "description": "Analiziram vašu trenutnu IT organizaciju i pokazujem vam gde gubite vreme i efikasnost. Bez obaveza."
+        "description": "Razgovaramo o tome šta vam treba i gde gubite vreme. Iskreno vam kažem šta ima smisla. Bez obaveza."
       },
       "step2": {
         "title": "Jasan plan",
@@ -430,18 +430,23 @@
       },
       "step3": {
         "title": "Razvoj i isporuka",
-        "description": "Gradim brzo sa modernim alatima. Dobijate redovna ažuriranja i direktan pristup inženjerima."
+        "description": "Gradim brzo i redovno vam pokazujem dokle se stiglo. Uvek razgovarate direktno sa mnom."
       },
       "step4": {
         "title": "Predaja i sloboda",
         "description": "Sve je vaše: kod, podaci, hosting. Nudim opcionalnu podršku, ali nikada niste zaključani."
-      }
+      },
+      "titleAccent": "bez iznenađenja."
     },
     "cta": {
       "title": "Spremni da ubrzate razvoj?",
       "subtitle": "Dobijte besplatnu konsultaciju i saznajte kako da digitalni razvoj bude brži i efikasniji.",
       "button": "Zakažite besplatnu konsultaciju"
-    }
+    },
+    "eyebrow": "Usluge",
+    "titleAccent": "koje vašoj firmi štede vreme.",
+    "priceLabel": "Cena",
+    "exampleLabel": "Primer iz prakse"
   },
   "About": {
     "title": "Solvera ≠ agencija",
