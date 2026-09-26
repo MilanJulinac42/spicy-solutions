@@ -8,7 +8,7 @@ import {
   Eye,
   MessageSquare,
   FileCheck,
-  Key,
+  LifeBuoy,
   Globe,
   Building2,
   Brain,
@@ -17,7 +17,6 @@ import {
   CheckCircle2,
   ChevronDown,
   MessageCircle,
-  LifeBuoy,
   ArrowRight,
   Search,
   Palette,
@@ -67,7 +66,7 @@ const PRINCIPLES: { key: string; icon: LucideIcon }[] = [
   { key: "transparency", icon: Eye },
   { key: "direct", icon: MessageSquare },
   { key: "fixed", icon: FileCheck },
-  { key: "ownership", icon: Key },
+  { key: "ownership", icon: LifeBuoy },
 ];
 
 const TRACKS: TrackMeta[] = [

@@ -28,7 +28,7 @@
     "badge": "Brza isporuka. Direktna komunikacija. Kvalitet bez kompromisa.",
     "title": "Vi vodite biznis.",
     "titleHighlight": "Ja rešavam tehnologiju.",
-    "subtitle": "Pravim sajtove, programe po kojima firma radi i AI asistente koji odgovaraju klijentima. Radite direktno sa inženjerom — fiksna cena, ugovor, i sve ostaje vaše.",
+    "subtitle": "Pravim sajtove, programe po kojima firma radi i AI asistente koji odgovaraju klijentima. Radite direktno sa inženjerom — fiksna cena, ugovor i podrška posle isporuke.",
     "cta": "Zakažite besplatnu konsultaciju",
     "ctaSecondary": "Pogledajte proces",
     "ctaCalculator": "Započnite projekat",
@@ -36,7 +36,7 @@
     "facts": {
       "price": "Fiksna cena, dogovorena unapred",
       "time": "Ugovor i garancija",
-      "direct": "Sve je na vaše ime"
+      "direct": "Podrška i posle isporuke"
     },
     "ctaWork": "Pogledajte radove",
     "collage": {
@@ -66,7 +66,7 @@
     "solution": {
       "title": "Postoji bolji način",
       "point1": "Brza isporuka — radim efikasno sa modernim alatima i ne razvlačim rokove",
-      "point2": "Sve je vaše — kod, podaci, hosting. Imate punu kontrolu, bez zaključavanja kod provajdera",
+      "point2": "Održavanje bez brige — posle isporuke ja pazim da sve radi, a vi se bavite poslom",
       "point3": "Moderne tehnologije — Next.js, AI, automatizacija. Alati koji ubrzavaju razvoj",
       "point4": "Direktan pristup meni — inženjeru koji pravi vaš proizvod. Bez posrednika, bez čekanja"
     },
@@ -95,7 +95,7 @@
     },
     "websites": {
       "title": "Sajtovi i web aplikacije",
-      "description": "Moderni Next.js sajtovi sa SEO-om, brzom isporukom i punim vlasništvom nad kodom. Sekundarni fokus — radim i dalje za klijente kojima treba.",
+      "description": "Moderni sajtovi spremni za Google pretragu, brzo isporučeni — uz održavanje da sve radi i posle puštanja.",
       "price": "Od 300€ · održavanje od 30€ mesečno"
     },
     "enterprise": {
@@ -122,8 +122,8 @@
       "description": "Radite direktno sa mnom — inženjerom koji piše vaš kod. Bez posrednika, bez agencija između, bez gluvih telefona. Brza komunikacija, bolji rezultati."
     },
     "ownership": {
-      "title": "Sve je vaše",
-      "description": "Svaka linija koda, svaki dizajn fajl, svaki dokument — pripada vama. Bez zaključavanja kod provajdera, bez talačkih situacija. Možete otići kad god želite."
+      "title": "Održavanje bez brige",
+      "description": "Posle isporuke ne ostajete sami. Pratim da sve radi, puštam bezbednosna ažuriranja i ispravljam greške — vi se bavite poslom, ne tehnikom."
     },
     "speed": {
       "title": "Moderne tehnologije, brza isporuka",
@@ -146,14 +146,14 @@
     "featuresHeading": "Šta dobijate",
     "websites": {
       "title": "Sajtovi i web aplikacije",
-      "description": "Brz, pregledan sajt koji dobro izgleda na telefonu i spreman je za Google pretragu. Sve je vaše — domen, sajt i sadržaj.",
+      "description": "Brz, pregledan sajt koji dobro izgleda na telefonu i spreman je za Google pretragu. Posle puštanja brinem da radi i da je bezbedan.",
       "comparison": "Sajt se otvara za manje od sekunde, a tekstove i slike možete menjati i sami.",
       "features": {
         "f1": "Prilagođen svim uređajima — telefon, tablet, računar",
         "f2": "Spreman za Google pretragu od prvog dana",
         "f3": "Otvara se za manje od sekunde",
         "f4": "Sistem za samostalan unos sadržaja — menjajte tekstove kad god",
-        "f5": "Sve je vaše: sajt, domen i hosting"
+        "f5": "Održavanje: ažuriranja, sigurnost i sitne izmene"
       },
       "detail": {
         "extendedDescription": "Bilo da vam treba jednostavan sajt za prezentaciju firme ili složena web aplikacija sa korisničkim nalozima i preglednom tablom — pravim rešenja koja izgledaju profesionalno, rade munjevito brzo i potpuno su vaša.",
@@ -183,8 +183,8 @@
             "answer": "Jednostavan sajt za prezentaciju firme 2 do 5 dana. Internet prodavnica 1 do 2 nedelje. Složeniji sajt sa korisničkim nalozima 2 do 4 nedelje. Jasan rok dobijate pre početka rada."
           },
           "q2": {
-            "question": "Ko je vlasnik sajta?",
-            "answer": "Vi, u potpunosti. Sajt, adresa sajta i server glase na vaše ime od prvog dana. Niste vezani za mene ni na koji način."
+            "question": "Ko održava sajt posle puštanja?",
+            "answer": "Ja. Uz mesečno održavanje pratim da sajt radi, puštam bezbednosna ažuriranja, ispravljam greške i menjam sitnice u sadržaju. Vi mi samo pošaljete poruku."
           },
           "q3": {
             "question": "Da li mogu sam da menjam tekst i slike?",
@@ -207,7 +207,7 @@
         "f2": "Pregledne table sa podacima koji se osvežavaju odmah",
         "f3": "Svako vidi samo ono što treba — zaposleni, šefovi, klijenti",
         "f4": "Nove verzije se puštaju u rad automatski i bezbedno",
-        "f5": "Kompletna uputstva i predaja celog programa vama"
+        "f5": "Obuka za vaš tim i podrška kad god zatreba"
       },
       "detail": {
         "extendedDescription": "Vaš biznis ima specifične potrebe koje gotova rešenja ne pokrivaju. Gradim sisteme koji se savršeno uklapaju u vaš način rada — od internih alata i preglednih tabla do velikih onlajn platformi.",
@@ -363,7 +363,7 @@
     "aiIntegrations": {
       "title": "AI automatizacija",
       "description": "Konkretna automatizacija tačno tamo gde gubite vreme — mejlovi, fakture, dokumenti, sažeci sastanaka. Ne opšte rešenje za sve, već jedan posao urađen dobro.",
-      "comparison": "Nema pretplate zauvek — pravi se jednom, vaše je i radi koliko vam treba.",
+      "comparison": "Bez skupih pretplata na gotove alate — rešenje napravljeno za vaš posao, uz podršku kad zatreba.",
       "features": {
         "f1": "Obrada dokumenata — fakture, ugovori i formulari se sami prepisuju u sistem",
         "f2": "Razvrstavanje — mejlovi i upiti se sami sortiraju po hitnosti",
@@ -433,8 +433,8 @@
         "description": "Gradim brzo i redovno vam pokazujem dokle se stiglo. Uvek razgovarate direktno sa mnom."
       },
       "step4": {
-        "title": "Predaja i sloboda",
-        "description": "Sve je vaše: kod, podaci, hosting. Nudim opcionalnu podršku, ali nikada niste zaključani."
+        "title": "Puštanje i podrška",
+        "description": "Puštam rešenje u rad i ostajem uz vas: održavanje, ažuriranja i izmene kad zatrebaju."
       },
       "titleAccent": "bez iznenađenja."
     },
@@ -481,8 +481,8 @@
         "description": "Nema sastanaka radi sastanaka. Kad treba menjati pravac, menjam ga isti dan. Tipičan sajt 1–2 nedelje, prva radna verzija aplikacije 3–4 nedelje."
       },
       "ownership": {
-        "title": "Vlasništvo nad kodom od starta",
-        "description": "Kod, adresa sajta i server — sve je vaše od prvog dana. Niste vezani ni za mene ni za bilo koga. Možete me zameniti kad god — ali nećete hteti."
+        "title": "Podrška i posle isporuke",
+        "description": "Ne nestajem posle puštanja u rad. Pratim da sve radi, ispravljam greške i dodajem izmene — isti čovek koji je sve i napravio."
       }
     },
     "collaboration": {
@@ -512,7 +512,7 @@
       },
       "partnership": {
         "title": "Vaš kod, vaši podaci",
-        "description": "Sve što napravim pripada vama. Bez zaključavanja, bez talačkih situacija. Možete otići kad god hoćete — ali nećete hteti."
+        "description": "Ne radim projekat pa nestanem. Ostajem uz vas i posle isporuke — da sve radi, da raste i da prati vaš posao."
       }
     },
     "team": {
@@ -598,7 +598,7 @@
       "items": {
         "transparency": {
           "title": "Sve vam je dostupno od prvog dana",
-          "description": "Od starta dobijate probni sajt, vizuelni predlog i pristup kodu. Gledate kako projekat napreduje iz dana u dan — ne čekate „veliko otkrivanje“ na kraju."
+          "description": "Od starta dobijate probni sajt i vizuelni predlog. Gledate kako projekat napreduje iz dana u dan — ne čekate „veliko otkrivanje“ na kraju."
         },
         "direct": {
           "title": "Bez posrednika",
@@ -609,8 +609,8 @@
           "description": "Pre početka potpisujemo dokument sa listom poslova i cenom. Sve izmene idu kroz zahtev za izmenu — pregledno i uz vašu saglasnost."
         },
         "ownership": {
-          "title": "Sve je na vaše ime",
-          "description": "Kod, server i baza podataka — sve je vaše. U bilo kom trenutku možete nastaviti sami ili sa drugim timom, bez uslovljavanja."
+          "title": "Podrška posle isporuke",
+          "description": "Prvih 30 dana ispravljam sve greške besplatno. Posle toga, uz mesečno održavanje, brinem o ažuriranjima, sigurnosti i izmenama."
         }
       }
     },
@@ -714,7 +714,7 @@
             ]
           }
         },
-        "communication": "Deljena grupa za razmenu poruka, kratak sastanak jednom nedeljno (oko 30 minuta) i pristup kodu sa pregledom svih izmena.",
+        "communication": "Deljena grupa za razmenu poruka, kratak sastanak jednom nedeljno (oko 30 minuta) i pregled svih izmena.",
         "postLaunch": "Garantovan odgovor na prijavljene greške u roku od 48 sati. Nove funkcionalnosti po fiksnoj ceni ili mesečni paket od 10, 20 ili 40 sati."
       },
       "ai": {
@@ -759,7 +759,7 @@
             ]
           },
           "monitoring": {
-            "name": "Praćenje i predaja",
+            "name": "Praćenje i podrška",
             "description": "Uključivanje sistema za praćenje razgovora, troškova i rezervnih odgovora za slučajeve kada AI ne zna odgovor.",
             "deliverables": [
               "Pregledna tabla (razgovori, trošak, uspešnost odgovora)",
@@ -803,7 +803,7 @@
             ]
           },
           "launch": {
-            "name": "Puštanje i predaja",
+            "name": "Puštanje u rad",
             "description": "Prebacivanje pravog broja na AI (ili dodatak postojećem), monitoring i obuka vašeg tima da menja skript po potrebi.",
             "deliverables": [
               "Pravi telefonski broj sa asistentom",
@@ -836,7 +836,7 @@
       },
       "afterLaunch": {
         "question": "Šta se dešava kada sve proradi?",
-        "answer": "Prvih 30 dana ispravljam sve greške besplatno. Posle toga birate: mesečno održavanje po fiksnoj ceni ili plaćanje samo kada nešto zatreba. Sve je vaše, pa možete nastaviti sami ili sa drugim timom kad god poželite."
+        "answer": "Prvih 30 dana ispravljam sve greške besplatno. Posle toga birate: mesečno održavanje po fiksnoj ceni ili plaćanje samo kada nešto zatreba."
       }
     },
     "cta": {
@@ -1011,7 +1011,7 @@
   "Terms": {
     "title": "Uslovi korišćenja",
     "subtitle": "Pravila i uslovi za korišćenje Solvera usluga",
-    "lastUpdated": "Poslednje ažuriranje: mart 2026.",
+    "lastUpdated": "Poslednje ažuriranje: septembar 2026.",
     "intro": "Korišćenjem sajta solveradev.rs i Solvera usluga, prihvatate sledeće uslove. Molimo vas da ih pažljivo pročitate.",
     "section1": {
       "title": "O Solveri",
@@ -1023,9 +1023,10 @@
       "p2": "Besplatna konsultacija ne obavezuje vas na korišćenje Solvera usluga."
     },
     "section3": {
-      "title": "Vlasništvo nad kodom",
-      "p1": "Po završetku projekta i konačnom plaćanju, klijent dobija puno vlasništvo nad svim isporučenim kodom, dizajnom i dokumentacijom. Solvera ne zadržava nikakva vlasnička prava nad isporučenim radom.",
-      "p2": "Open-source biblioteke i alati treće strane koji se koriste u projektu zadržavaju svoje originalne licence."
+      "title": "Prava na isporučeni rad",
+      "p1": "Po konačnoj isplati klijent dobija trajno pravo da isporučeni sajt, program ili AI rešenje koristi za potrebe svog poslovanja. Izvorni kod, alati i delovi koje Solvera koristi u više projekata ostaju vlasništvo Solvere.",
+      "p2": "Sadržaj koji klijent dostavi (tekstovi, slike, logotip), podaci klijenta i njegovih korisnika, kao i domen i nalozi otvoreni na ime klijenta pripadaju klijentu. Na zahtev klijenta Solvera izvozi njegove podatke u uobičajenom formatu. Open-source biblioteke i alati trećih strana zadržavaju svoje originalne licence.",
+      "p3": "Ako klijent želi da preuzme izvorni kod, na primer da bi ga dalje razvijao sam ili sa drugim izvođačem, prenos prava se posebno dogovara i naplaćuje, pod uslovima navedenim u ponudi ili ugovoru."
     },
     "section4": {
       "title": "Plaćanje",
@@ -1068,9 +1069,9 @@
         "question": "Gde se čuvaju podaci i da li je bezbedno?",
         "answer": "Podaci se čuvaju na serverima u Evropi ili na vašim serverima — vi birate. Programi koje koristim ne uče na vašim podacima i ne dele ih dalje. Sve je usklađeno sa zakonom o zaštiti podataka o ličnosti."
       },
-      "switch": {
-        "question": "Mogu li da pređem kod nekog drugog ako se predomislim?",
-        "answer": "Da, u svakom trenutku. Sve — sam program, uputstva, lozinke i serveri — glasi na vaše ime od prvog dana. Nema skrivenih delova ni naplaćivanja da biste dobili ono što je vaše. Predaja drugom timu traje par sati."
+      "maintenance": {
+        "question": "Šta je uključeno u održavanje?",
+        "answer": "Ispravke grešaka, bezbednosna ažuriranja, praćenje da sve radi i manje izmene sadržaja, uz podršku preko mejla ili WhatsApp-a. Plaća se mesečno, po fiksnoj ceni — bez iznenađenja na računu."
       },
       "timeline": {
         "question": "Koliko traje dok ne proradi?",
@@ -1078,17 +1079,17 @@
       },
       "changes": {
         "question": "Šta ako mi zatreba izmena posle šest meseci?",
-        "answer": "Dve mogućnosti: mesečno održavanje po fiksnoj ceni, ili plaćate samo kada nešto zatreba. Pošto je sve vaše, možete pozvati mene, nekog drugog, ili nastaviti sami."
+        "answer": "Dve mogućnosti: mesečno održavanje po fiksnoj ceni, u kom su sitne izmene već uključene, ili plaćate samo kada nešto zatreba."
       },
       "contract": {
         "question": "Da li se pravi ugovor ili je sve na reč?",
-        "answer": "Ugovor uvek. U njemu jasno piše šta se radi, do kada, po kojoj ceni, kakva je garancija i da sve pripada vama. Račun za avans na početku, konačan račun po isporuci. Bez sitnih slova."
+        "answer": "Ugovor uvek. U njemu jasno piše šta se radi, do kada, po kojoj ceni, kakva je garancija i šta obuhvata održavanje. Račun za avans na početku, konačan račun po isporuci. Bez sitnih slova."
       }
     },
     "cta": "Imate drugo pitanje? Pišite mi"
   },
   "Footer": {
-    "description": "Sajtovi, poslovni sistemi i AI asistenti za firme u Srbiji. Jedan inženjer, fiksna cena, sve ostaje vaše.",
+    "description": "Sajtovi, poslovni sistemi i AI asistenti za firme u Srbiji. Jedan inženjer, fiksna cena, podrška i posle isporuke.",
     "quickLinks": "Brzi linkovi",
     "services": "Usluge",
     "connect": "Povežite se",
@@ -1418,9 +1419,9 @@
           "title": "Ugovor, uvek",
           "body": "Šta se radi, do kada i po kojoj ceni — napisano pre početka."
         },
-        "ownership": {
-          "title": "Sve je vaše",
-          "body": "Program, podaci i nalozi glase na vas od prvog dana."
+        "support": {
+          "title": "Podrška i posle isporuke",
+          "body": "30 dana besplatnih ispravki, pa održavanje po fiksnoj mesečnoj ceni."
         },
         "reply": {
           "title": "Odgovor u roku od 24h",

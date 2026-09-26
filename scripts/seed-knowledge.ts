@@ -31,7 +31,7 @@ const SR_CHUNKS: Chunk[] = [
   // --- USLUGE: Sajtovi ---
   {
     content:
-      "Solvera pravi moderne, brze sajtove sa Next.js koji se učitavaju za manje od sekunde. Kompletno vlasništvo nad kodom, bez zavisnosti od provajdera, sa isporukom u kratkim rokovima. Tehnologije: Next.js, React, TypeScript, Tailwind CSS, Vercel. Funkcionalnosti: responsivan dizajn, SEO ugrađen od prvog dana, učitavanje ispod sekunde, CMS uključen, sve je vaše (kod, domen, hosting).",
+      "Solvera pravi moderne, brze sajtove sa Next.js koji se učitavaju za manje od sekunde. Isporuka u kratkim rokovima, uz održavanje posle puštanja u rad. Tehnologije: Next.js, React, TypeScript, Tailwind CSS, Vercel. Funkcionalnosti: responsivan dizajn, SEO ugrađen od prvog dana, učitavanje ispod sekunde, CMS uključen, održavanje posle isporuke.",
     locale: "sr",
     category: "services",
   },
@@ -96,7 +96,7 @@ const SR_CHUNKS: Chunk[] = [
   // --- USLUGE: Web razvoj (sekundarno) ---
   {
     content:
-      "Solvera i dalje radi sajtove kao SEKUNDARNU uslugu — moderne Next.js sajtove, e-commerce, web aplikacije. Fokus firme je AI, ali web razvoj ostaje u ponudi za klijente kojima treba. Tehnologije: Next.js, React, TypeScript, Tailwind. Često se sajt i AI chatbot prave kao bundle. Pun pristup: kompletno vlasništvo nad kodom, SEO ugrađen, ispod sekunde učitavanje.",
+      "Solvera i dalje radi sajtove kao SEKUNDARNU uslugu — moderne Next.js sajtove, e-commerce, web aplikacije. Fokus firme je AI, ali web razvoj ostaje u ponudi za klijente kojima treba. Tehnologije: Next.js, React, TypeScript, Tailwind. Često se sajt i AI chatbot prave kao bundle. Pun pristup: održavanje posle isporuke, SEO ugrađen, ispod sekunde učitavanje.",
     locale: "sr",
     category: "services",
   },
@@ -170,7 +170,7 @@ const SR_CHUNKS: Chunk[] = [
   // --- ZAŠTO SOLVERA ---
   {
     content:
-      "Zašto izabrati Solvera: 1) AI-first fokus — gradim chatbot-ove, voice agente i AI automatizaciju, ne opšti web shop. 2) Inženjeri, ne prodavci — radite direktno sa developerom. 3) Sve je vaše — kod, dizajn, dokumentacija, bez zaključavanja. 4) Moderan stack — OpenAI, Claude, LangChain, Next.js, Supabase. 5) Direktna komunikacija — odgovor u roku 24h.",
+      "Zašto izabrati Solvera: 1) Sve na jednom mestu — sajtovi, poslovni sistemi i AI asistenti. 2) Inženjer, ne prodavac — radite direktno sa osobom koja pravi vaš projekat. 3) Podrška i posle isporuke — 30 dana besplatnih ispravki, pa održavanje po fiksnoj mesečnoj ceni. 4) Moderan stack — OpenAI, Claude, LangChain, Next.js, Supabase. 5) Direktna komunikacija — odgovor u roku 24h.",
     locale: "sr",
     category: "about",
   },
@@ -234,7 +234,7 @@ const SR_CHUNKS: Chunk[] = [
   // --- PODRŠKA POSLE PROJEKTA ---
   {
     content:
-      "Podrška posle isporuke projekta: Po završetku projekta dobijate kompletan izvorni kod, dokumentaciju i pristup svim servisima. Nudimo opcionalnu mesečnu podršku koja uključuje: ispravke bagova, manje izmene sadržaja, monitoring performansi, bezbednosna ažuriranja i tehničku podršku putem emaila ili WhatsApp-a. Niste obavezni da koristite našu podršku — možete angažovati bilo kog drugog developera jer je kod vaš.",
+      "Podrška posle isporuke projekta: Posle isporuke ne ostajete sami. Nudimo mesečnu podršku koja uključuje: ispravke bagova, manje izmene sadržaja, monitoring performansi, bezbednosna ažuriranja i tehničku podršku putem emaila ili WhatsApp-a. Prvih 30 dana greške se ispravljaju besplatno.",
     locale: "sr",
     category: "services",
   },
@@ -254,7 +254,7 @@ const SR_CHUNKS: Chunk[] = [
   },
   {
     content:
-      "Solvera vs. freelancer: Za razliku od ad-hoc freelancera, Solvera radi po strukturisanom procesu — pisana specifikacija, fiksna cena unapred, code review pre puštanja u rad, profesionalna dokumentacija, vlasništvo nad kodom od prvog dana. Komunikacija ide kroz jasan kanal (WhatsApp grupa + nedeljni demo), a ne 'kad stigne'. Nema rizika da nestanete bez koda i pristupa — sve je vaše od starta. Cilj: kvalitet i poverenje agencije, brzina i cena freelancera.",
+      "Solvera vs. freelancer: Za razliku od ad-hoc freelancera, Solvera radi po strukturisanom procesu — pisana specifikacija, fiksna cena unapred, code review pre puštanja u rad, profesionalna dokumentacija, održavanje posle isporuke. Komunikacija ide kroz jasan kanal (WhatsApp grupa + nedeljni demo), a ne 'kad stigne'. Nema rizika da ostanete bez podrške — isti čovek koji je napravio sistem ga i održava. Cilj: kvalitet i poverenje agencije, brzina i cena freelancera.",
     locale: "sr",
     category: "about",
   },
@@ -454,7 +454,7 @@ const SR_CHUNKS: Chunk[] = [
   },
   {
     content:
-      "Proces za POSLOVNI SISTEM (CRM, SaaS, interni alat, portal — 4 koraka): 1) Upoznavanje i planiranje — radionica sa ljudima iz vaše firme, popis konkretnih scenarija, izbor tehnologija. Isporuka: spisak scenarija po prioritetu, plan baze podataka u dijagramu, vizuelni prikaz ključnih ekrana, dokument o tehnologijama. 2) Prva radna verzija (MVP) — prijavljivanje sa različitim ulogama, prvi glavni tok posla, probna verzija dostupna sa nedeljnim petkovskim prikazom. Isporuka: prijavljivanje sa pravima po ulogama, prvi kompletan tok, probno okruženje sa test podacima. 3) Dodavanje funkcionalnosti — kratki ciklusi, vi testirate čim je spremno, mi ugrađujemo povratne informacije. Isporuka: nove funkcionalnosti na probnom okruženju, automatske provere, kratak osvrt na svaki ciklus. 4) Završna priprema i puštanje u rad — testiranje pri opterećenju, provera bezbednosti, prebacivanje postojećih podataka, sistem za praćenje grešaka. Isporuka: produkcija, automatsko praćenje grešaka, admin panel + priručnik, obuka tima. Komunikacija: deljena grupa za poruke, kratak nedeljni sastanak (~30min), pristup kodu sa pregledom svih izmena. Posle puštanja: garantovan odgovor na prijavljene greške u roku od 48h. Nove funkcionalnosti po fiksnoj ceni ili mesečni paket od 10/20/40 sati.",
+      "Proces za POSLOVNI SISTEM (CRM, SaaS, interni alat, portal — 4 koraka): 1) Upoznavanje i planiranje — radionica sa ljudima iz vaše firme, popis konkretnih scenarija, izbor tehnologija. Isporuka: spisak scenarija po prioritetu, plan baze podataka u dijagramu, vizuelni prikaz ključnih ekrana, dokument o tehnologijama. 2) Prva radna verzija (MVP) — prijavljivanje sa različitim ulogama, prvi glavni tok posla, probna verzija dostupna sa nedeljnim petkovskim prikazom. Isporuka: prijavljivanje sa pravima po ulogama, prvi kompletan tok, probno okruženje sa test podacima. 3) Dodavanje funkcionalnosti — kratki ciklusi, vi testirate čim je spremno, mi ugrađujemo povratne informacije. Isporuka: nove funkcionalnosti na probnom okruženju, automatske provere, kratak osvrt na svaki ciklus. 4) Završna priprema i puštanje u rad — testiranje pri opterećenju, provera bezbednosti, prebacivanje postojećih podataka, sistem za praćenje grešaka. Isporuka: produkcija, automatsko praćenje grešaka, admin panel + priručnik, obuka tima. Komunikacija: deljena grupa za poruke, kratak nedeljni sastanak (~30min), pregled svih izmena. Posle puštanja: garantovan odgovor na prijavljene greške u roku od 48h. Nove funkcionalnosti po fiksnoj ceni ili mesečni paket od 10/20/40 sati.",
     locale: "sr",
     category: "process",
   },
@@ -537,7 +537,7 @@ const SR_CHUNKS: Chunk[] = [
 
   {
     content:
-      "Kada klijent kaže 'našao sam jeftinije' ili 'konkurencija nudi za manje': Ne pričaj loše o konkurenciji. Naglasi vrednost ali budi fleksibilan sa cenom: 'Razumem — uvek je pametno uporediti ponude. Naše cene na sajtu su startne — konkretna cena uvek zavisi od obima projekta i možemo je prilagoditi vašem budžetu. Ono što dobijate kod nas: moderan Next.js stack (3-5x brži od WordPress-a), kompletno vlasništvo nad kodom, SEO ugrađen od prvog dana i 30 dana besplatne garancije. Hajde da zakažemo kratak besplatan poziv od 15 minuta — razgovaramo o tome šta vam treba i dajem vam ponudu koja ima smisla za vaš budžet. Bez ikakvih obaveza.' GLAVNI CILJ: zakazati besplatnu konsultaciju. Lead ne sme da ode bez ponuđenog poziva.",
+      "Kada klijent kaže 'našao sam jeftinije' ili 'konkurencija nudi za manje': Ne pričaj loše o konkurenciji. Naglasi vrednost ali budi fleksibilan sa cenom: 'Razumem — uvek je pametno uporediti ponude. Naše cene na sajtu su startne — konkretna cena uvek zavisi od obima projekta i možemo je prilagoditi vašem budžetu. Ono što dobijate kod nas: moderan Next.js stack (3-5x brži od WordPress-a), održavanje posle isporuke, SEO ugrađen od prvog dana i 30 dana besplatne garancije. Hajde da zakažemo kratak besplatan poziv od 15 minuta — razgovaramo o tome šta vam treba i dajem vam ponudu koja ima smisla za vaš budžet. Bez ikakvih obaveza.' GLAVNI CILJ: zakazati besplatnu konsultaciju. Lead ne sme da ode bez ponuđenog poziva.",
     locale: "sr",
     category: "sales",
   },
@@ -565,7 +565,7 @@ const SR_CHUNKS: Chunk[] = [
   // --- SOCIAL PROOF: pošteno bez izmišljotina ---
   {
     content:
-      "Solvera je nov tim koji izlazi na tržište. Od javno dostupnih radova tu su sajt škole jezika Spiko Edu (spikoedu.rs) i platforma za onlajn kurseve iste škole (kurs.spikoedu.rs); ostali projekti nisu javni jer su pod ugovorom o poverljivosti ili u razvoju. Ne pričamo izmišljene priče o klijentima koji su uštedeli 'X evra mesečno' — to rade druge firme koje pune sajt lažima. Naša priča: dva inženjera koji su radili u različitim okruženjima i odlučili da naprave fer ponudu za srpsko tržište. Fer cene, jasan obim posla, kompletno vlasništvo nad kodom — to su stvari za koje garantujemo, jer ih kontrolišemo. Specifične brojke o klijentima ne izmišljamo.",
+      "Solvera je nov tim koji izlazi na tržište. Od javno dostupnih radova tu su sajt škole jezika Spiko Edu (spikoedu.rs) i platforma za onlajn kurseve iste škole (kurs.spikoedu.rs); ostali projekti nisu javni jer su pod ugovorom o poverljivosti ili u razvoju. Ne pričamo izmišljene priče o klijentima koji su uštedeli 'X evra mesečno' — to rade druge firme koje pune sajt lažima. Naša priča: dva inženjera koji su radili u različitim okruženjima i odlučili da naprave fer ponudu za srpsko tržište. Fer cene, jasan obim posla, podrška i posle isporuke — to su stvari za koje garantujemo, jer ih kontrolišemo. Specifične brojke o klijentima ne izmišljamo.",
     locale: "sr",
     category: "about",
   },
@@ -607,7 +607,7 @@ const SR_CHUNKS: Chunk[] = [
   // --- PRINCIPI KOJI VAŽE ZA SVAKI PROJEKAT ---
   {
     content:
-      "4 principa koji važe za svaki Solvera projekat: 1) Sve vam je dostupno od prvog dana — od starta dobijate probni sajt, vizuelni predlog i pristup kodu. Gledate kako projekat napreduje iz dana u dan, ne čekate veliko otkrivanje na kraju. 2) Bez posrednika — razgovarate direktno sa osobom koja radi vaš projekat. Pitanje ujutru, odgovor istog dana. 3) Fiksna cena i jasan obim posla — pre početka potpisujemo dokument sa listom poslova i cenom. Sve izmene idu kroz zahtev za izmenu, pregledno i uz vašu saglasnost. 4) Sve je na vaše ime — kod, server i baza podataka, sve je vaše. U bilo kom trenutku možete nastaviti sami ili sa drugim timom, bez uslovljavanja.",
+      "4 principa koji važe za svaki Solvera projekat: 1) Sve vam je dostupno od prvog dana — od starta dobijate probni sajt i vizuelni predlog. Gledate kako projekat napreduje iz dana u dan, ne čekate veliko otkrivanje na kraju. 2) Bez posrednika — razgovarate direktno sa osobom koja radi vaš projekat. Pitanje ujutru, odgovor istog dana. 3) Fiksna cena i jasan obim posla — pre početka potpisujemo dokument sa listom poslova i cenom. Sve izmene idu kroz zahtev za izmenu, pregledno i uz vašu saglasnost. 4) Podrška posle isporuke — prvih 30 dana ispravke su besplatne, a posle toga mesečno održavanje brine o ažuriranjima, sigurnosti i izmenama.",
     locale: "sr",
     category: "process",
   },
@@ -623,7 +623,7 @@ const SR_CHUNKS: Chunk[] = [
   // --- VLASNIŠTVO NAD KODOM (detaljnije) ---
   {
     content:
-      "Šta tačno znači 'sve je na vaše ime' u Solveri: Od prvog dana kod ide u GitHub repozitorijum koji je registrovan na vaše ime (ili na ime vaše firme). Server (Vercel, AWS, DigitalOcean) je takođe na vaš nalog, plaćanje ide direktno sa vaše kartice. Domen je registrovan na vaše ime. Baza podataka je vaša. Imam pristup samo dok radim, posle predaje pristup mi možete oduzeti u 5 sekundi. Možete u bilo kom trenutku angažovati drugog developera da nastavi rad — bez 'ali oni koriste neki specijalan framework koji niko drugi ne razume' priče. Stack je standardan industry-grade.",
+      "Ako klijent pita ko je vlasnik koda ili sajta: po konačnoj isplati klijent dobija trajno pravo da isporučeni rad koristi za svoje poslovanje, a izvorni kod ostaje Solverin, kako piše u uslovima korišćenja. Podaci, sadržaj i domen klijenta su njegovi i mogu se izvesti na zahtev. Ako klijent želi da preuzme ceo kod, to se posebno dogovara i naplaćuje. Odgovori kratko i tačno, ali to ne ističi kao prodajni argument — važnije je da posle isporuke Solvera održava ono što je napravila: ispravke grešaka, bezbednosna ažuriranja, praćenje i manje izmene, po fiksnoj mesečnoj ceni.",
     locale: "sr",
     category: "process",
   },

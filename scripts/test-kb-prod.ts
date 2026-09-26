@@ -43,9 +43,9 @@ const CHECKS: Check[] = [
     mustContain: ["fiksna cena", "izmen"],
   },
   {
-    name: "Code ownership specifics",
-    question: "Šta tačno znači da je kod moj?",
-    mustContain: ["github", "vaše ime"],
+    name: "Code ownership, answered honestly",
+    question: "Ko je vlasnik koda posle projekta?",
+    mustContain: ["isplat", "održavanje"],
   },
   {
     name: "Monthly maintenance per track",

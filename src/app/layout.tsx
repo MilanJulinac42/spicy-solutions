@@ -48,7 +48,7 @@ export const metadata: Metadata = {
     template: "%s | Solvera",
   },
   description:
-    "Sajtovi, poslovni sistemi i AI rešenja za firme u Srbiji — web aplikacije, interni alati, AI chatbot i voice agent na srpskom. Fiksna cena, kod ostaje vaš. Direktan rad sa inženjerom iz Novog Sada.",
+    "Sajtovi, poslovni sistemi i AI rešenja za firme u Srbiji — web aplikacije, interni alati, AI chatbot i voice agent na srpskom. Fiksna cena, podrška i posle isporuke. Direktan rad sa inženjerom iz Novog Sada.",
   keywords: [
     "AI automatizacija Srbija",
     "AI chatbot za srpske firme",
@@ -67,13 +67,13 @@ export const metadata: Metadata = {
     siteName: "Solvera",
     title: "Solvera | Vi vodite biznis, ja brinem o tehnologiji",
     description:
-      "Sajtovi, poslovni sistemi i AI rešenja za firme u Srbiji. Fiksna cena, ugovor, kod ostaje vaš.",
+      "Sajtovi, poslovni sistemi i AI rešenja za firme u Srbiji. Fiksna cena, ugovor i podrška posle isporuke.",
   },
   twitter: {
     card: "summary_large_image",
     title: "Solvera | Vi vodite biznis, ja brinem o tehnologiji",
     description:
-      "Sajtovi, poslovni sistemi i AI rešenja za firme u Srbiji. Fiksna cena, ugovor, kod ostaje vaš.",
+      "Sajtovi, poslovni sistemi i AI rešenja za firme u Srbiji. Fiksna cena, ugovor i podrška posle isporuke.",
   },
   icons: {
     icon: [

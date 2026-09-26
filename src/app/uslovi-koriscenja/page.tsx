@@ -72,6 +72,11 @@ export default function TermsPage() {
                     {t(`${section}.p2`)}
                   </p>
                 )}
+                {t.has(`${section}.p3`) && (
+                  <p className="text-foreground-muted leading-relaxed mt-3">
+                    {t(`${section}.p3`)}
+                  </p>
+                )}
               </motion.div>
             ))}
 

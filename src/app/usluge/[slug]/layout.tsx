@@ -20,7 +20,7 @@ const META: Record<string, { title: string; description: string }> = {
   websites: {
     title: "Sajtovi i web aplikacije",
     description:
-      "Brzi, moderni sajtovi u Next.js i React-u. Fiksna cena, lansiranje za 1-3 nedelje, kod ostaje vaš. SEO i performanse uključeni.",
+      "Brzi, moderni sajtovi u Next.js i React-u. Fiksna cena, lansiranje za 1-3 nedelje, održavanje posle isporuke. SEO i performanse uključeni.",
   },
   enterprise: {
     title: "Poslovni sistemi",

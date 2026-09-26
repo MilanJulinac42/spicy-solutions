@@ -11,7 +11,7 @@ import {
   MessageCircle,
   Wallet,
   Zap,
-  Key,
+  LifeBuoy,
   Clock,
   ArrowRight,
 } from "lucide-react";
@@ -40,7 +40,7 @@ const whySoloIcons = {
   direct: MessageCircle,
   price: Wallet,
   speed: Zap,
-  ownership: Key,
+  ownership: LifeBuoy,
 };
 
 const whySoloKeys = ["direct", "price", "speed", "ownership"] as const;

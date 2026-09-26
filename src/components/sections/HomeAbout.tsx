@@ -4,13 +4,13 @@ import { useTranslations } from "next-intl";
 import { motion } from "framer-motion";
 import Image from "next/image";
 import Link from "next/link";
-import { ArrowRight, FileSignature, KeyRound, MessageSquareReply, ShieldCheck } from "lucide-react";
+import { ArrowRight, FileSignature, LifeBuoy, MessageSquareReply, ShieldCheck } from "lucide-react";
 import { Container } from "@/components/ui/Container";
 import { fadeInUp, staggerContainer } from "@/lib/animations";
 
 const POINTS = [
   { key: "contract", icon: FileSignature },
-  { key: "ownership", icon: KeyRound },
+  { key: "support", icon: LifeBuoy },
   { key: "reply", icon: MessageSquareReply },
   { key: "data", icon: ShieldCheck },
 ] as const;

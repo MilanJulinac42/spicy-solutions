@@ -181,7 +181,7 @@ const SERVICE_DATA: Record<
   websites: {
     name: "Sajtovi i web aplikacije",
     description:
-      "Brzi, moderni sajtovi u Next.js i React-u. Fiksna cena, lansiranje za 1-3 nedelje, kod ostaje vaš. Sekundarna usluga.",
+      "Brzi, moderni sajtovi u Next.js i React-u. Fiksna cena, lansiranje za 1-3 nedelje, održavanje posle isporuke.",
     serviceType: "Web development",
   },
   enterprise: {

@@ -9,7 +9,7 @@ import { Container } from "@/components/ui/Container";
 import { SectionHeading } from "@/components/ui/SectionHeading";
 import { fadeInUp, staggerContainer } from "@/lib/animations";
 
-const items = ["security", "switch", "timeline", "changes", "contract"];
+const items = ["security", "maintenance", "timeline", "changes", "contract"];
 
 export function HomeFaq() {
   const t = useTranslations("HomeFaq");
