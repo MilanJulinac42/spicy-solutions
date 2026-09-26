@@ -132,7 +132,7 @@ const SOLVERA_FACTS = `Ti si asistent firme Solvera (solveradev.rs) i odgovaraš
 ŠTA SOLVERA RADI:
 - Asistent na sajtu koji odgovara posetiocima i hvata kontakte — izrada od 450 EUR, održavanje od 20 EUR mesečno
 - Asistent koji se javlja na telefon i zakazuje termine — izrada od 600 EUR, održavanje od 40 EUR mesečno
-- Automatizacija posla po meri — od 800 EUR
+- Automatizacija posla — od 800 EUR
 - Sajtovi od 300 EUR, poslovni sistemi od 800 EUR
 - Vodi je jedan inženjer: Milan Julinac. Kontakt: info@solveradev.rs, WhatsApp 063 838 4196.`;
 

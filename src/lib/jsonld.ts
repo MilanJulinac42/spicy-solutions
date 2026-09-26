@@ -27,7 +27,7 @@ export const organizationSchema = {
   },
   image: LOGO_URL,
   description:
-    "Solvera gradi AI rešenja — chatbot-ove, voice agente, interne asistente i AI integracije po meri. Web razvoj sekundarno. Direktan rad sa inženjerom.",
+    "Solvera pravi sajtove, poslovne sisteme i AI rešenja — chatbot-ove, voice agente i AI automatizaciju. Direktan rad sa inženjerom.",
   email: "info@solveradev.rs",
   telephone: "+381638384196",
   // Registered entity, not the marketing address. The seat is Bačka Palanka
@@ -125,7 +125,7 @@ export const localBusinessSchema = {
       },
       {
         "@type": "Offer",
-        itemOffered: { "@type": "Service", name: "AI integracije po meri" },
+        itemOffered: { "@type": "Service", name: "AI automatizacija" },
       },
     ],
   },
@@ -173,7 +173,7 @@ const SERVICE_DATA: Record<
     serviceType: "Voice AI agent development",
   },
   aiIntegrations: {
-    name: "AI integracije po meri",
+    name: "AI automatizacija",
     description:
       "Konkretne AI automatizacije za vaš proces — obrada dokumenata, klasifikacija mejlova, sumarizacija, agentski tokovi sa tool use.",
     serviceType: "Custom AI integration",

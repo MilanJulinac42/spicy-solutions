@@ -1,196 +1,162 @@
 "use client";
 
-import { Fragment } from "react";
 import { useTranslations } from "next-intl";
 import { motion } from "framer-motion";
+import Image from "next/image";
 import Link from "next/link";
-import { ArrowRight, ChevronDown } from "lucide-react";
-import {
-  fadeInUp,
-  staggerContainer,
-  textRevealContainer,
-  textRevealWord,
-} from "@/lib/animations";
-import { useRef, useCallback, useEffect, useState } from "react";
-import { TerminalAnimation } from "@/components/hero/TerminalAnimation";
+import { ArrowRight, Check, Globe, LayoutDashboard, MessageSquare } from "lucide-react";
 import { trackEvent } from "@/lib/analytics";
 
-// Mobile-only deferred mount: render skeleton on initial paint, mount the heavy
-// terminal animation after the browser is idle. Desktop branch is untouched.
-function MobileTerminal() {
-  const [ready, setReady] = useState(false);
-  useEffect(() => {
-    // Only run on actual mobile viewport (matches lg:hidden = below 1024px).
-    // On desktop this component is hidden by parent CSS, so we skip the heavy
-    // mount entirely to avoid double-rendering the terminal.
-    if (window.matchMedia("(min-width: 1024px)").matches) return;
-    type IdleWindow = Window & {
-      requestIdleCallback?: (cb: () => void, opts?: { timeout: number }) => number;
-    };
-    const w = window as IdleWindow;
-    if (typeof w.requestIdleCallback === "function") {
-      w.requestIdleCallback(() => setReady(true), { timeout: 1500 });
-    } else {
-      const id = setTimeout(() => setReady(true), 600);
-      return () => clearTimeout(id);
-    }
-  }, []);
-  if (!ready) {
-    // Skeleton with same aspect to keep CLS at 0
-    return <div className="w-full aspect-[4/3] rounded-xl bg-surface-secondary/40" />;
-  }
-  return <TerminalAnimation />;
+const ease = [0.22, 1, 0.36, 1] as const;
+
+function Label({ icon: Icon, children }: { icon: typeof Globe; children: React.ReactNode }) {
+  return (
+    <span className="inline-flex items-center gap-1.5 rounded-full border border-spicy-700/60 bg-[#141416]/90 px-2.5 py-1 text-[11px] font-semibold text-spicy-200 backdrop-blur">
+      <Icon className="h-3 w-3" />
+      {children}
+    </span>
+  );
+}
+
+/**
+ * All three things Solvera makes, shown with real work: a client's live site,
+ * the admin panel of a system built for them, and an AI assistant reply.
+ * Screenshots over mock-ups — they are the proof.
+ */
+function HeroCollage() {
+  const t = useTranslations("Hero.collage");
+
+  return (
+    <div className="relative mx-auto w-full max-w-[600px] pb-16 sm:pb-20">
+      {/* Website in a matte browser frame */}
+      <motion.div
+        initial={{ opacity: 0, y: 24 }}
+        animate={{ opacity: 1, y: 0 }}
+        transition={{ duration: 0.9, ease, delay: 0.2 }}
+        className="card-matte relative overflow-hidden rounded-2xl"
+      >
+        <div className="flex items-center gap-1.5 border-b border-border-default px-4 py-3">
+          {[0, 1, 2].map((i) => (
+            <span key={i} className="h-2.5 w-2.5 rounded-full bg-[#3A3A40]" />
+          ))}
+          <span className="ml-3 h-5 flex-1 max-w-[220px] rounded-full bg-[#232327] px-3 text-[10px] leading-5 text-foreground-muted">
+            spikoedu.rs
+          </span>
+        </div>
+        <div className="relative aspect-[1886/961]">
+          <Image
+            src="/radovi/spiko-edu.png"
+            alt="Sajt škole jezika Spiko Edu"
+            fill
+            priority
+            sizes="(max-width: 1024px) 90vw, 600px"
+            className="object-cover object-top"
+          />
+        </div>
+        <div className="absolute left-4 top-14">
+          <Label icon={Globe}>{t("site")}</Label>
+        </div>
+      </motion.div>
+
+      {/* Business system, overlapping bottom-left */}
+      <motion.div
+        initial={{ opacity: 0, y: 24 }}
+        animate={{ opacity: 1, y: 0 }}
+        transition={{ duration: 0.9, ease, delay: 0.45 }}
+        className="card-matte absolute bottom-0 -left-3 sm:-left-10 w-[58%] overflow-hidden rounded-xl shadow-2xl shadow-black/60"
+      >
+        <div className="relative aspect-[1910/978]">
+          <Image
+            src="/radovi/admin.png"
+            alt="Administratorski panel platforme Spiko Edu"
+            fill
+            sizes="(max-width: 1024px) 55vw, 350px"
+            className="object-cover object-top"
+          />
+        </div>
+        <div className="absolute left-3 top-3">
+          <Label icon={LayoutDashboard}>{t("system")}</Label>
+        </div>
+      </motion.div>
+
+      {/* AI assistant reply, bottom-right */}
+      <motion.div
+        initial={{ opacity: 0, y: 24 }}
+        animate={{ opacity: 1, y: 0 }}
+        transition={{ duration: 0.9, ease, delay: 0.7 }}
+        className="card-matte absolute bottom-3 -right-2 sm:-right-8 w-[46%] min-w-[200px] rounded-2xl p-3.5 shadow-2xl shadow-black/60"
+      >
+        <Label icon={MessageSquare}>{t("ai")}</Label>
+        <div className="mt-3 flex flex-col gap-2">
+          <span className="self-end max-w-[90%] rounded-2xl rounded-br-md bg-[#2A2A30] px-3 py-2 text-[12px] leading-snug text-foreground">
+            {t("q")}
+          </span>
+          <span
+            className="self-start max-w-[92%] rounded-2xl rounded-bl-md px-3 py-2 text-[12px] leading-snug text-ink"
+            style={{ background: "var(--metal-champagne-soft)" }}
+          >
+            {t("a")}
+          </span>
+        </div>
+      </motion.div>
+    </div>
+  );
 }
 
 export function Hero() {
   const t = useTranslations("Hero");
-  const heroRef = useRef<HTMLElement>(null);
-
-  const handleMouseMove = useCallback(
-    (e: React.MouseEvent<HTMLElement>) => {
-      const el = heroRef.current;
-      if (!el) return;
-      const rect = el.getBoundingClientRect();
-      const mx = (e.clientX - rect.left) / rect.width;
-      const my = (e.clientY - rect.top) / rect.height;
-      el.style.setProperty("--spot-x", `${mx * 100}%`);
-      el.style.setProperty("--spot-y", `${my * 100}%`);
-    },
-    []
-  );
-
-  const handleMouseLeave = useCallback(() => {
-    heroRef.current?.style.setProperty("--spot-x", "50%");
-    heroRef.current?.style.setProperty("--spot-y", "50%");
-  }, []);
 
   return (
-    <section
-      ref={heroRef}
-      className="relative min-h-screen flex items-center overflow-hidden noise-overlay hero-beam"
-      onMouseMove={handleMouseMove}
-      onMouseLeave={handleMouseLeave}
-      style={
-        { "--spot-x": "50%", "--spot-y": "50%" } as React.CSSProperties
-      }
-    >
-      {/* ── Aurora Background ── */}
-      <div className="absolute inset-0 overflow-hidden hidden md:block">
-        <div
-          className="absolute w-[800px] h-[800px] rounded-full blur-[120px] opacity-[0.07]"
-          style={{
-            background: "radial-gradient(circle, #FF6B35 0%, transparent 70%)",
-            top: "10%",
-            left: "-10%",
-            animation: "aurora-1 20s ease-in-out infinite",
-          }}
-        />
-        <div
-          className="absolute w-[600px] h-[600px] rounded-full blur-[120px] opacity-[0.06]"
-          style={{
-            background: "radial-gradient(circle, #8B5CF6 0%, transparent 70%)",
-            top: "50%",
-            right: "-5%",
-            animation: "aurora-2 25s ease-in-out infinite",
-          }}
-        />
-        <div
-          className="absolute w-[700px] h-[700px] rounded-full blur-[120px] opacity-[0.05]"
-          style={{
-            background: "radial-gradient(circle, #06B6D4 0%, transparent 70%)",
-            bottom: "-10%",
-            left: "30%",
-            animation: "aurora-3 18s ease-in-out infinite",
-          }}
-        />
-      </div>
-
-      {/* ── Mouse-follow spotlight ── */}
+    <section className="relative overflow-hidden">
+      {/* Soft metallic light from the top-right — the only atmosphere. */}
       <div
-        className="absolute inset-0 hidden md:block pointer-events-none"
+        aria-hidden="true"
+        className="pointer-events-none absolute inset-0"
         style={{
           background:
-            "radial-gradient(800px circle at var(--spot-x) var(--spot-y), rgba(255,107,53,0.1), transparent 60%)",
+            "radial-gradient(900px 520px at 78% 18%, rgba(214,186,140,0.10), transparent 60%), radial-gradient(700px 420px at 10% 90%, rgba(255,255,255,0.03), transparent 60%)",
         }}
       />
 
-      {/* ── Grid pattern ── */}
-      <div
-        className="absolute inset-0 opacity-[0.03]"
-        style={{
-          backgroundImage:
-            "linear-gradient(rgba(255,107,53,0.3) 1px, transparent 1px), linear-gradient(90deg, rgba(255,107,53,0.3) 1px, transparent 1px)",
-          backgroundSize: "60px 60px",
-        }}
-      />
-
-      {/* ── Vignette ── */}
-      <div
-        className="absolute inset-0 pointer-events-none"
-        style={{
-          background:
-            "radial-gradient(ellipse 80% 60% at 50% 50%, transparent 40%, rgba(0,0,0,0.4) 100%)",
-        }}
-      />
-
-      {/* ── Content ── */}
-      <div className="relative max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 w-full py-24 lg:py-0 z-[2]">
-        <div className="grid lg:grid-cols-2 gap-10 lg:gap-16 items-center">
-          {/* Left: Text */}
-          <motion.div
-            variants={staggerContainer}
-            initial="hidden"
-            animate="visible"
-            className="space-y-10 text-center lg:text-left"
-          >
-            {/* Headline */}
-            <motion.h1
-              variants={textRevealContainer}
-              initial="hidden"
-              animate="visible"
-              className="text-3xl sm:text-4xl md:text-5xl lg:text-[3rem] xl:text-6xl font-bold text-foreground leading-snug"
+      <div className="relative max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 pt-32 pb-12 md:pt-40 md:pb-16">
+        <div className="grid lg:grid-cols-[1fr_1.05fr] gap-14 lg:gap-12 items-center">
+          <div className="text-center lg:text-left">
+            <motion.p
+              initial={{ opacity: 0, y: 12 }}
+              animate={{ opacity: 1, y: 0 }}
+              transition={{ duration: 0.6, ease }}
+              className="inline-flex items-center gap-2 rounded-full border border-border-default bg-surface-secondary/80 px-3.5 py-1.5 text-xs font-medium text-foreground-secondary"
             >
-              {/* The gap between words is a real space, not a margin. Each word
-                  needs its own element to animate in, and with margins alone
-                  there is no whitespace in the markup — so the whole headline
-                  extracts as one run-together word. People saw it fine; crawlers
-                  read "VivoditebiznisJabrinemotehnologiji". */}
-              {t("title")
-                .split(" ")
-                .map((word, i) => (
-                  <Fragment key={i}>
-                    <motion.span variants={textRevealWord} className="inline-block">
-                      {word}
-                    </motion.span>{" "}
-                  </Fragment>
-                ))}
-              <br />
-              {t("titleHighlight")
-                .split(" ")
-                .map((word, i) => (
-                  <Fragment key={`h-${i}`}>
-                    <motion.span
-                      variants={textRevealWord}
-                      className="inline-block animated-gradient-text"
-                    >
-                      {word}
-                    </motion.span>{" "}
-                  </Fragment>
-                ))}
+              <span className="h-1.5 w-1.5 rounded-full" style={{ background: "var(--metal-champagne)" }} />
+              {t("eyebrow")}
+            </motion.p>
+
+            <motion.h1
+              initial={{ opacity: 0, y: 18 }}
+              animate={{ opacity: 1, y: 0 }}
+              transition={{ duration: 0.8, ease, delay: 0.05 }}
+              className="mt-7 text-[2.6rem] leading-[1.05] sm:text-6xl xl:text-[4.5rem] font-semibold text-foreground text-balance"
+            >
+              {t("title")}{" "}
+              <em className="accent-serif text-metal-sheen block mt-1 text-[1.08em]">
+                {t("titleHighlight")}
+              </em>
             </motion.h1>
 
-            {/* Subtitle */}
             <motion.p
-              variants={fadeInUp}
-              className="max-w-xl text-base sm:text-lg md:text-xl text-foreground-muted leading-relaxed lg:mx-0 mx-auto"
+              initial={{ opacity: 0, y: 14 }}
+              animate={{ opacity: 1, y: 0 }}
+              transition={{ duration: 0.8, ease, delay: 0.15 }}
+              className="mt-7 max-w-xl mx-auto lg:mx-0 text-base sm:text-lg text-foreground-muted leading-relaxed text-pretty"
             >
               {t("subtitle")}
             </motion.p>
 
-            {/* CTAs */}
             <motion.div
-              variants={fadeInUp}
-              className="flex flex-col sm:flex-row items-center lg:items-start gap-4"
+              initial={{ opacity: 0, y: 14 }}
+              animate={{ opacity: 1, y: 0 }}
+              transition={{ duration: 0.8, ease, delay: 0.25 }}
+              className="mt-10 flex flex-col sm:flex-row items-center justify-center lg:justify-start gap-3"
             >
               <Link
                 href="/kontakt"
@@ -201,77 +167,46 @@ export function Hero() {
                     destination: "/kontakt",
                   })
                 }
-                className="group inline-flex items-center gap-2 px-8 py-4 bg-spicy-400 text-white rounded-lg text-base font-semibold hover:bg-spicy-500 transition-all shadow-lg shadow-spicy-400/25 hover:shadow-xl hover:shadow-spicy-400/40"
+                className="btn-metal group w-full sm:w-auto inline-flex items-center justify-center gap-2 rounded-full px-7 py-4 text-[15px] font-semibold"
               >
                 {t("cta")}
-                <ArrowRight className="w-4 h-4 group-hover:translate-x-1 transition-transform" />
+                <ArrowRight className="w-4 h-4 transition-transform group-hover:translate-x-0.5" />
               </Link>
               <Link
-                href="/zapocni-projekat"
+                href="/radovi"
                 onClick={() =>
                   trackEvent("cta_click", {
                     cta_location: "hero",
-                    cta_label: "start_project_secondary",
-                    destination: "/zapocni-projekat",
+                    cta_label: "work_secondary",
+                    destination: "/radovi",
                   })
                 }
-                className="inline-flex items-center gap-2 px-8 py-4 border-2 border-border-default text-foreground rounded-lg text-base font-semibold hover:border-spicy-400 hover:text-spicy-400 transition-all"
+                className="btn-matte w-full sm:w-auto inline-flex items-center justify-center gap-2 rounded-full px-7 py-4 text-[15px] font-semibold"
               >
-                {t("ctaCalculator")}
+                {t("ctaWork")}
               </Link>
             </motion.div>
-          </motion.div>
 
-          {/* Right: Interactive 3D Terminal — Desktop */}
-          <motion.div
-            initial={{ opacity: 0, y: 30 }}
-            animate={{ opacity: 1, y: 0 }}
-            transition={{ delay: 0.4, duration: 0.8, ease: "easeOut" }}
-            className="relative hidden lg:block"
-          >
-            {/* Holographic glow behind terminal */}
-            <div
-              className="absolute -inset-6 rounded-3xl blur-2xl opacity-30"
-              style={{
-                background:
-                  "conic-gradient(from var(--holo-angle, 0deg), rgba(255,107,53,0.2), rgba(139,92,246,0.2), rgba(6,182,212,0.2), rgba(16,185,129,0.2), rgba(255,107,53,0.2))",
-                animation: "holo-spin 6s linear infinite",
-              }}
-            />
+            <motion.ul
+              initial={{ opacity: 0 }}
+              animate={{ opacity: 1 }}
+              transition={{ duration: 0.8, delay: 0.4 }}
+              className="mt-10 flex flex-wrap justify-center lg:justify-start gap-x-6 gap-y-3"
+            >
+              {(["price", "time", "direct"] as const).map((k) => (
+                <li key={k} className="inline-flex items-center gap-2 text-sm text-foreground-secondary">
+                  <Check className="w-4 h-4 text-spicy-300" />
+                  {t(`facts.${k}`)}
+                </li>
+              ))}
+            </motion.ul>
+          </div>
 
-            <div className="holo-border rounded-xl">
-              <TerminalAnimation />
-            </div>
-          </motion.div>
-
-          {/* Terminal — Mobile (lazy-loaded to free up main thread on phones) */}
-          <motion.div
-            initial={{ opacity: 0, y: 20 }}
-            animate={{ opacity: 1, y: 0 }}
-            transition={{ delay: 0.6, duration: 0.6 }}
-            className="lg:hidden mx-auto max-w-md w-full"
-          >
-            <div className="holo-border rounded-xl">
-              <MobileTerminal />
-            </div>
-          </motion.div>
+          <div className="relative px-2 sm:px-8 lg:px-0">
+            <HeroCollage />
+          </div>
         </div>
       </div>
-
-      {/* Scroll indicator */}
-      <motion.div
-        initial={{ opacity: 0 }}
-        animate={{ opacity: 1 }}
-        transition={{ delay: 1.5, duration: 0.8 }}
-        className="absolute bottom-8 left-1/2 -translate-x-1/2 z-[2]"
-      >
-        <motion.div
-          animate={{ y: [0, 8, 0] }}
-          transition={{ repeat: Infinity, duration: 2, ease: "easeInOut" }}
-        >
-          <ChevronDown className="w-6 h-6 text-foreground-muted" />
-        </motion.div>
-      </motion.div>
     </section>
   );
 }

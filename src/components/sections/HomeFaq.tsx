@@ -13,19 +13,20 @@ const items = ["security", "switch", "timeline", "changes", "contract"];
 
 export function HomeFaq() {
   const t = useTranslations("HomeFaq");
+  const tHome = useTranslations("Home.faq");
   const [open, setOpen] = useState<string | null>("security");
 
   return (
-    <section className="py-20 md:py-28 bg-surface-secondary">
+    <section className="py-24 md:py-32 border-t border-border-default">
       <Container>
-        <SectionHeading title={t("title")} subtitle={t("subtitle")} />
+        <SectionHeading eyebrow={tHome("eyebrow")} title={t("title")} subtitle={t("subtitle")} />
 
         <motion.div
           variants={staggerContainer}
           initial="hidden"
           whileInView="visible"
           viewport={{ once: true, amount: 0.15 }}
-          className="max-w-3xl mx-auto space-y-3"
+          className="max-w-3xl mx-auto divide-y divide-border-default border-y border-border-default"
         >
           {items.map((key) => {
             const isOpen = open === key;
@@ -33,19 +34,19 @@ export function HomeFaq() {
               <motion.div
                 key={key}
                 variants={fadeInUp}
-                className="rounded-2xl bg-surface border border-border-default overflow-hidden"
+                className="overflow-hidden"
               >
                 <button
                   type="button"
                   onClick={() => setOpen(isOpen ? null : key)}
                   aria-expanded={isOpen}
-                  className="w-full flex items-center gap-4 text-left px-5 py-4 hover:bg-surface-secondary/60 transition-colors"
+                  className="group w-full flex items-center gap-6 text-left py-6 cursor-pointer"
                 >
-                  <span className="text-base md:text-lg font-semibold text-foreground flex-1">
+                  <span className="text-base md:text-lg font-medium text-foreground flex-1 group-hover:text-spicy-100 transition-colors">
                     {t(`items.${key}.question`)}
                   </span>
                   <ChevronDown
-                    className={`w-5 h-5 text-foreground-muted shrink-0 transition-transform ${
+                    className={`w-5 h-5 text-spicy-300 shrink-0 transition-transform duration-300 ${
                       isOpen ? "rotate-180" : ""
                     }`}
                   />
@@ -60,7 +61,7 @@ export function HomeFaq() {
                       transition={{ duration: 0.25, ease: "easeOut" }}
                       className="overflow-hidden"
                     >
-                      <div className="px-5 pb-5 text-sm md:text-base text-foreground-muted leading-relaxed">
+                      <div className="pb-6 pr-10 text-[15px] md:text-base text-foreground-muted leading-relaxed">
                         {t(`items.${key}.answer`)}
                       </div>
                     </motion.div>
@@ -80,9 +81,9 @@ export function HomeFaq() {
         >
           <Link
             href="/kontakt"
-            className="inline-flex items-center gap-2 text-sm font-medium text-spicy-400 hover:text-spicy-300 transition-colors"
+            className="inline-flex items-center gap-2 text-sm font-medium text-foreground-secondary hover:text-foreground transition-colors"
           >
-            <MessageCircleQuestion className="w-4 h-4" />
+            <MessageCircleQuestion className="w-4 h-4 text-spicy-300" />
             {t("cta")}
           </Link>
         </motion.div>

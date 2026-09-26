@@ -262,26 +262,26 @@ export function ChatPanel({
   const renderPanel = (messagesRef: React.RefObject<HTMLDivElement | null>) => (
     <>
       {/* Header */}
-      <div className="bg-gradient-to-r from-spicy-400 to-spicy-500 px-4 py-3 flex items-center justify-between shrink-0">
+      <div className="bg-surface-tertiary border-b border-border-default px-4 py-3 flex items-center justify-between shrink-0">
         <div>
-          <h3 className="text-white font-semibold text-sm">{t("title")}</h3>
-          <p className="text-white/70 text-xs">{t("subtitle")}</p>
+          <h3 className="text-foreground font-semibold text-sm">{t("title")}</h3>
+          <p className="text-foreground-muted text-xs">{t("subtitle")}</p>
         </div>
         <div className="flex items-center gap-1">
           <button
             onClick={onReset}
-            className="w-8 h-8 flex items-center justify-center rounded-full hover:bg-white/20 transition-colors"
+            className="w-8 h-8 flex items-center justify-center rounded-full hover:bg-surface-elevated transition-colors"
             aria-label={t("newChat")}
             title={t("newChat")}
           >
-            <RotateCcw className="w-3.5 h-3.5 text-white" />
+            <RotateCcw className="w-3.5 h-3.5 text-foreground-muted" />
           </button>
           <button
             onClick={onClose}
-            className="w-8 h-8 flex items-center justify-center rounded-full hover:bg-white/20 transition-colors"
+            className="w-8 h-8 flex items-center justify-center rounded-full hover:bg-surface-elevated transition-colors"
             aria-label={t("close")}
           >
-            <X className="w-4 h-4 text-white" />
+            <X className="w-4 h-4 text-foreground-muted" />
           </button>
         </div>
       </div>

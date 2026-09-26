@@ -3,19 +3,23 @@
 @custom-variant dark (&:is(.dark *));
 
 @theme inline {
-  --font-sans: var(--font-geist-sans);
+  --font-sans: var(--font-body);
+  --font-display: var(--font-serif);
   --font-mono: var(--font-geist-mono);
 
-  --color-spicy-50: #FFF3ED;
-  --color-spicy-100: #FFE4D4;
-  --color-spicy-200: #FFC5A8;
-  --color-spicy-300: #FFA070;
-  --color-spicy-400: #FF6B35;
-  --color-spicy-500: #E55A2B;
-  --color-spicy-600: #C24A22;
-  --color-spicy-700: #9E3B1B;
-  --color-spicy-800: #7A2E15;
-  --color-spicy-900: #5C2310;
+  /* The "spicy" scale is the brand accent. It used to be orange; it is now a
+     brushed champagne metal. The name stays because ~600 class names across
+     the site reference it, and every one of them should follow the brand. */
+  --color-spicy-50: #FAF6EF;
+  --color-spicy-100: #F1E7D6;
+  --color-spicy-200: #E4D1B1;
+  --color-spicy-300: #D6BA8C;
+  --color-spicy-400: #C6A274;
+  --color-spicy-500: #A98761;
+  --color-spicy-600: #8A6D4E;
+  --color-spicy-700: #6B543C;
+  --color-spicy-800: #4C3C2B;
+  --color-spicy-900: #2F261C;
 
   --color-surface: var(--surface);
   --color-surface-secondary: var(--surface-secondary);
@@ -26,6 +30,7 @@
   --color-foreground-muted: var(--fg-muted);
   --color-border-default: var(--border);
   --color-border-subtle: var(--border-subtle);
+  --color-ink: #17140F;
 }
 
 :root {
@@ -38,24 +43,145 @@
   --fg-muted: #737373;
   --border: #e5e5e5;
   --border-subtle: #f0f0f0;
+
+  --metal-champagne: linear-gradient(135deg, #EFE3CC 0%, #CDAE82 32%, #9C7F5B 58%, #D9C3A0 82%, #BFA07A 100%);
+  --metal-champagne-soft: linear-gradient(135deg, #F4EBDC 0%, #D8BE98 40%, #B39570 70%, #E2CFAF 100%);
+  --metal-steel: linear-gradient(135deg, #F4F3F0 0%, #B9B8B4 38%, #7C7B77 62%, #D6D5D1 100%);
+  --metal-ink: #17140F;
 }
 
+/* Matte graphite, slightly warm so the champagne accent sits in it naturally.
+   Steps between surfaces are small on purpose — sections are separated by
+   hairlines and spacing, not by bands of different colour. */
 .dark {
-  --surface: #0a0a0a;
-  --surface-secondary: #111111;
-  --surface-tertiary: #1a1a1a;
-  --surface-elevated: #1a1a1a;
-  --fg: #fafafa;
-  --fg-secondary: #d4d4d4;
-  --fg-muted: #a3a3a3;
-  --border: #262626;
-  --border-subtle: #1a1a1a;
+  --surface: #121214;
+  --surface-secondary: #161619;
+  --surface-tertiary: #1C1C20;
+  --surface-elevated: #202025;
+  --fg: #EDEBE7;
+  --fg-secondary: #C2BEB7;
+  --fg-muted: #8F8B85;
+  --border: #2A2A2F;
+  --border-subtle: #1F1F23;
 }
 
 body {
   background: var(--surface);
   color: var(--fg);
-  font-family: var(--font-geist-sans), system-ui, sans-serif;
+  font-family: var(--font-body), system-ui, sans-serif;
+  font-feature-settings: "ss01", "cv11";
+  letter-spacing: -0.005em;
+}
+
+/* Matte grain over the whole page — the difference between flat black and a
+   surface that reads as a material. Kept very faint. */
+body::before {
+  content: "";
+  position: fixed;
+  inset: 0;
+  z-index: 60;
+  pointer-events: none;
+  opacity: 0.035;
+  background-image: url("data:image/svg+xml,%3Csvg viewBox='0 0 200 200' xmlns='http://www.w3.org/2000/svg'%3E%3Cfilter id='n'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='0.85' numOctaves='3' stitchTiles='stitch'/%3E%3C/filter%3E%3Crect width='100%25' height='100%25' filter='url(%23n)'/%3E%3C/svg%3E");
+  background-size: 200px 200px;
+}
+
+@layer base {
+  h1, h2, h3 {
+    letter-spacing: -0.025em;
+  }
+}
+
+/* Serif accent inside headlines: <em class="accent-serif">. */
+.accent-serif {
+  font-family: var(--font-serif), Georgia, serif;
+  font-style: italic;
+  font-weight: 400;
+  letter-spacing: -0.01em;
+}
+
+/* === METALLIC SURFACES === */
+.text-metal {
+  background: var(--metal-champagne);
+  -webkit-background-clip: text;
+  background-clip: text;
+  -webkit-text-fill-color: transparent;
+}
+
+.text-steel {
+  background: var(--metal-steel);
+  -webkit-background-clip: text;
+  background-clip: text;
+  -webkit-text-fill-color: transparent;
+}
+
+.btn-metal {
+  background: var(--metal-champagne);
+  color: var(--metal-ink);
+  box-shadow:
+    inset 0 1px 0 rgba(255, 255, 255, 0.45),
+    inset 0 -1px 0 rgba(0, 0, 0, 0.18),
+    0 1px 2px rgba(0, 0, 0, 0.4),
+    0 8px 24px -8px rgba(198, 162, 116, 0.35);
+  transition: filter 0.2s ease, box-shadow 0.2s ease, transform 0.2s ease;
+}
+.btn-metal:hover {
+  filter: brightness(1.08);
+  box-shadow:
+    inset 0 1px 0 rgba(255, 255, 255, 0.5),
+    inset 0 -1px 0 rgba(0, 0, 0, 0.18),
+    0 1px 2px rgba(0, 0, 0, 0.4),
+    0 12px 32px -8px rgba(198, 162, 116, 0.45);
+}
+
+.btn-matte {
+  background: linear-gradient(180deg, #232327 0%, #1B1B1F 100%);
+  color: var(--fg);
+  border: 1px solid #34343A;
+  box-shadow: inset 0 1px 0 rgba(255, 255, 255, 0.05), 0 1px 2px rgba(0, 0, 0, 0.4);
+  transition: border-color 0.2s ease, background 0.2s ease;
+}
+.btn-matte:hover {
+  border-color: #4A4A52;
+  background: linear-gradient(180deg, #28282D 0%, #1F1F24 100%);
+}
+
+/* A card that reads as matte material: faint top highlight, soft depth. */
+.card-matte {
+  background: linear-gradient(180deg, #1A1A1E 0%, #161619 100%);
+  border: 1px solid #2A2A2F;
+  box-shadow: inset 0 1px 0 rgba(255, 255, 255, 0.04), 0 20px 40px -24px rgba(0, 0, 0, 0.6);
+}
+
+/* Hairline with a metallic sheen — the only "decoration" between sections. */
+.hairline-metal {
+  height: 1px;
+  background: linear-gradient(90deg, transparent, rgba(214, 186, 140, 0.35), transparent);
+}
+
+/* Metallic medallion for icons. */
+.medallion {
+  background: radial-gradient(120% 120% at 30% 20%, #3A3530 0%, #211F1C 55%, #17150F 100%);
+  border: 1px solid rgba(214, 186, 140, 0.25);
+  box-shadow: inset 0 1px 0 rgba(255, 255, 255, 0.08), 0 6px 16px -6px rgba(0, 0, 0, 0.6);
+  color: #D6BA8C;
+}
+
+/* Filled accent buttons elsewhere on the site were written as
+   "bg-spicy-400 text-white". White on champagne is unreadable, and those pages
+   aren't all redesigned yet — so every filled accent becomes brushed metal with
+   dark ink, site-wide, until each one is moved to .btn-metal. */
+.dark .bg-spicy-400,
+.dark .bg-spicy-500,
+.dark [class~="hover:bg-spicy-400"]:hover,
+.dark [class~="hover:bg-spicy-500"]:hover {
+  background-image: var(--metal-champagne);
+  color: var(--metal-ink);
+}
+.dark .bg-spicy-400 *,
+.dark .bg-spicy-500 *,
+.dark [class~="hover:bg-spicy-400"]:hover * {
+  color: inherit;
 }
 
 /* Smooth scrolling */
@@ -65,17 +191,23 @@ html {
 
 /* Scrollbar styling for dark mode */
 .dark ::-webkit-scrollbar {
-  width: 8px;
+  width: 10px;
 }
 .dark ::-webkit-scrollbar-track {
-  background: #111;
+  background: #121214;
 }
 .dark ::-webkit-scrollbar-thumb {
-  background: #333;
-  border-radius: 4px;
+  background: #2E2E33;
+  border-radius: 6px;
+  border: 2px solid #121214;
 }
 .dark ::-webkit-scrollbar-thumb:hover {
-  background: #555;
+  background: #45454C;
+}
+
+::selection {
+  background: rgba(198, 162, 116, 0.35);
+  color: #fff;
 }
 
 /* === SHIMMER EFFECT === */
@@ -88,16 +220,16 @@ html {
   background: linear-gradient(
     90deg,
     transparent 0%,
-    rgba(255, 107, 53, 0.4) 25%,
-    rgba(255, 107, 53, 0.8) 50%,
-    rgba(255, 107, 53, 0.4) 75%,
+    rgba(214, 186, 140, 0.3) 25%,
+    rgba(214, 186, 140, 0.7) 50%,
+    rgba(214, 186, 140, 0.3) 75%,
     transparent 100%
   );
   background-size: 200% 100%;
   animation: shimmer 3s infinite linear;
 }
 
-/* === GRADIENT TEXT ANIMATION === */
+/* === GRADIENT TEXT === */
 @keyframes gradient-shift {
   0% { background-position: 0% 50%; }
   50% { background-position: 100% 50%; }
@@ -105,28 +237,36 @@ html {
 }
 
 .animated-gradient-text {
-  background: linear-gradient(
-    270deg,
-    #FF6B35,
-    #FFA070,
-    #FF6B35,
-    #E55A2B
-  );
+  background: linear-gradient(270deg, #D6BA8C, #F1E7D6, #C6A274, #A98761);
   background-size: 300% 300%;
-  animation: gradient-shift 4s ease infinite;
+  animation: gradient-shift 6s ease infinite;
   -webkit-background-clip: text;
   background-clip: text;
   -webkit-text-fill-color: transparent;
 }
 
+/* Metallic sheen that slowly travels across text — used sparingly. */
+@keyframes sheen {
+  0% { background-position: 120% 50%; }
+  100% { background-position: -20% 50%; }
+}
+.text-metal-sheen {
+  background: linear-gradient(100deg, #BFA07A 0%, #D6BA8C 35%, #F6EEDF 50%, #D6BA8C 65%, #A98761 100%);
+  background-size: 250% 100%;
+  -webkit-background-clip: text;
+  background-clip: text;
+  -webkit-text-fill-color: transparent;
+  animation: sheen 6s ease-in-out infinite alternate;
+}
+
 /* === GLOW PULSE === */
 @keyframes glow-pulse {
-  0%, 100% { box-shadow: 0 0 20px rgba(255, 107, 53, 0.15); }
-  50% { box-shadow: 0 0 40px rgba(255, 107, 53, 0.3); }
+  0%, 100% { box-shadow: 0 0 20px rgba(198, 162, 116, 0.12); }
+  50% { box-shadow: 0 0 36px rgba(198, 162, 116, 0.24); }
 }
 
 .glow-pulse {
-  animation: glow-pulse 2s ease-in-out infinite;
+  animation: glow-pulse 2.4s ease-in-out infinite;
 }
 
 /* === ANIMATED GRADIENT MESH === */
@@ -139,33 +279,17 @@ html {
 }
 
 .animated-mesh {
-  background: linear-gradient(
-    -45deg,
-    rgba(59, 130, 246, 0.8),
-    rgba(139, 92, 246, 0.8),
-    rgba(236, 72, 153, 0.8),
-    rgba(255, 107, 53, 0.8)
-  );
+  background: linear-gradient(-45deg, #2A2A2F, #4C3C2B, #1C1C20, #6B543C);
   background-size: 400% 400%;
-  animation: mesh-shift 8s ease infinite;
+  animation: mesh-shift 12s ease infinite;
 }
 
 /* === FLOATING PARTICLES === */
 @keyframes float-up {
-  0% {
-    transform: translateY(0) scale(1);
-    opacity: 0;
-  }
-  10% {
-    opacity: 0.6;
-  }
-  90% {
-    opacity: 0.6;
-  }
-  100% {
-    transform: translateY(-200px) scale(0.5);
-    opacity: 0;
-  }
+  0% { transform: translateY(0) scale(1); opacity: 0; }
+  10% { opacity: 0.6; }
+  90% { opacity: 0.6; }
+  100% { transform: translateY(-200px) scale(0.5); opacity: 0; }
 }
 
 /* === ROTATING BORDER GRADIENT === */
@@ -191,17 +315,18 @@ html {
 .holo-border::before {
   content: '';
   position: absolute;
-  inset: -2px;
+  inset: -1px;
   border-radius: inherit;
   background: conic-gradient(
     from var(--holo-angle),
-    #FF6B35 0%,
-    #8B5CF6 25%,
-    #06B6D4 50%,
-    #10B981 75%,
-    #FF6B35 100%
+    #6B543C 0%,
+    #D6BA8C 25%,
+    #F1E7D6 35%,
+    #8A6D4E 55%,
+    #3A3530 80%,
+    #6B543C 100%
   );
-  animation: holo-spin 6s linear infinite;
+  animation: holo-spin 8s linear infinite;
   z-index: -2;
 }
 .holo-border::after {
@@ -209,7 +334,7 @@ html {
   position: absolute;
   inset: 1px;
   border-radius: inherit;
-  background: #0d1117;
+  background: #161619;
   z-index: -1;
 }
 
@@ -249,9 +374,9 @@ html {
   background: linear-gradient(
     90deg,
     transparent 0%,
-    rgba(255, 255, 255, 0.03) 40%,
-    rgba(255, 107, 53, 0.08) 50%,
-    rgba(255, 255, 255, 0.03) 60%,
+    rgba(255, 255, 255, 0.02) 40%,
+    rgba(214, 186, 140, 0.06) 50%,
+    rgba(255, 255, 255, 0.02) 60%,
     transparent 100%
   );
   width: 40%;
@@ -266,14 +391,7 @@ html {
 }
 
 .headline-shimmer {
-  background: linear-gradient(
-    90deg,
-    #FF6B35 0%,
-    #FF6B35 35%,
-    #ffffff 50%,
-    #FF6B35 65%,
-    #FF6B35 100%
-  );
+  background: linear-gradient(90deg, #C6A274 0%, #C6A274 35%, #ffffff 50%, #C6A274 65%, #C6A274 100%);
   background-size: 200% 100%;
   -webkit-background-clip: text;
   background-clip: text;
@@ -308,7 +426,7 @@ html {
   left: 0;
   width: 0;
   height: 1px;
-  background: #FF6B35;
+  background: #C6A274;
   transition: width 0.3s ease;
 }
 
@@ -317,32 +435,13 @@ html {
 }
 
 /* === NOISE / GRAIN TEXTURE OVERLAY === */
+/* The page-wide grain on body::before replaced this; kept as a no-op hook so
+   existing markup doesn't need touching. */
 .noise-overlay {
   position: relative;
 }
 
-.noise-overlay::after {
-  content: '';
-  position: absolute;
-  inset: 0;
-  opacity: 0.03;
-  pointer-events: none;
-  z-index: 1;
-  mix-blend-mode: overlay;
-  background-image: url("data:image/svg+xml,%3Csvg viewBox='0 0 256 256' xmlns='http://www.w3.org/2000/svg'%3E%3Cfilter id='noise'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='0.65' numOctaves='4' stitchTiles='stitch'/%3E%3C/filter%3E%3Crect width='100%25' height='100%25' filter='url(%23noise)'/%3E%3C/svg%3E");
-  background-repeat: repeat;
-  background-size: 256px 256px;
-}
-
-:root .noise-overlay::after {
-  opacity: 0.02;
-}
-
-.dark .noise-overlay::after {
-  opacity: 0.04;
-}
-
-/* === GLASSMORPHISM === */
+/* === GLASSMORPHISM → MATTE === */
 .glass {
   background: rgba(255, 255, 255, 0.6);
   backdrop-filter: blur(12px);
@@ -352,9 +451,11 @@ html {
 }
 
 .dark .glass {
-  background: rgba(255, 255, 255, 0.05);
-  border: 1px solid rgba(255, 255, 255, 0.08);
-  box-shadow: inset 0 1px 0 rgba(255, 255, 255, 0.06);
+  background: linear-gradient(180deg, #1A1A1E 0%, #161619 100%);
+  backdrop-filter: none;
+  -webkit-backdrop-filter: none;
+  border: 1px solid #2A2A2F;
+  box-shadow: inset 0 1px 0 rgba(255, 255, 255, 0.04);
 }
 
 /* === 3D TILT UTILITY === */

@@ -5,6 +5,10 @@ import { fadeInUp } from "@/lib/animations";
 
 interface SectionHeadingProps {
   title: string;
+  /** Rendered after the title in the serif accent face. */
+  accent?: string;
+  /** Short label above the title. */
+  eyebrow?: string;
   subtitle?: string;
   centered?: boolean;
   className?: string;
@@ -18,6 +22,8 @@ interface SectionHeadingProps {
 
 export function SectionHeading({
   title,
+  accent,
+  eyebrow,
   subtitle,
   centered = true,
   className = "",
@@ -29,23 +35,31 @@ export function SectionHeading({
       whileInView="visible"
       viewport={{ once: true, amount: 0.15 }}
       variants={fadeInUp}
-      className={`mb-12 md:mb-16 ${centered ? "text-center" : ""} ${className}`}
+      className={`mb-12 md:mb-14 ${centered ? "text-center" : ""} ${className}`}
     >
-      <Heading className="text-3xl md:text-4xl lg:text-5xl font-bold text-foreground">
+      {eyebrow && (
+        <p className="mb-4 text-xs font-semibold uppercase tracking-[0.22em] text-spicy-300">
+          {eyebrow}
+        </p>
+      )}
+      <Heading className="text-3xl md:text-4xl lg:text-[2.9rem] font-semibold leading-[1.1] text-foreground text-balance">
         {title}
+        {accent && (
+          <>
+            {" "}
+            <em className="accent-serif text-metal">{accent}</em>
+          </>
+        )}
       </Heading>
       {subtitle && (
-        <p className="mt-4 text-lg md:text-xl text-foreground-muted max-w-2xl mx-auto">
+        <p
+          className={`mt-5 text-base md:text-lg text-foreground-muted leading-relaxed max-w-2xl text-pretty ${
+            centered ? "mx-auto" : ""
+          }`}
+        >
           {subtitle}
         </p>
       )}
-      <motion.div
-        initial={{ width: 0 }}
-        whileInView={{ width: "4rem" }}
-        viewport={{ once: true }}
-        transition={{ duration: 0.8, ease: "easeOut", delay: 0.3 }}
-        className={`mt-4 h-1 bg-spicy-400 rounded-full ${centered ? "mx-auto" : ""}`}
-      />
     </motion.div>
   );
 }

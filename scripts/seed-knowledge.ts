@@ -44,7 +44,7 @@ const SR_CHUNKS: Chunk[] = [
   // --- USLUGE: Poslovni sistemi ---
   {
     content:
-      "Solvera gradi poslovne sisteme po meri: dashboard-ove, SaaS platforme, interne alate i API integracije. Skalabilna arhitektura, production-ready kvalitet. Tehnologije: Node.js, .NET, PostgreSQL, MongoDB, Redis, Docker, AWS. Funkcionalnosti: skalabilna arhitektura, dashboard-ovi i analitika, kontrola pristupa, CI/CD pipeline, kompletna dokumentacija.",
+      "Solvera gradi poslovne sisteme: dashboard-ove, SaaS platforme, interne alate i API integracije. Skalabilna arhitektura, production-ready kvalitet. Tehnologije: Node.js, .NET, PostgreSQL, MongoDB, Redis, Docker, AWS. Funkcionalnosti: skalabilna arhitektura, dashboard-ovi i analitika, kontrola pristupa, CI/CD pipeline, kompletna dokumentacija.",
     locale: "sr",
     category: "services",
   },
@@ -80,10 +80,10 @@ const SR_CHUNKS: Chunk[] = [
     locale: "sr",
     category: "services",
   },
-  // --- USLUGE: AI integracije po meri (primarno) ---
+  // --- USLUGE: AI automatizacija ---
   {
     content:
-      "Solvera gradi AI integracije po meri — konkretne automatizacije ugrađene tačno tamo gde firme gube vreme. NE radim Zapier-tip opštih workflow automatizacija; gradim AI-native rešenja: obrada dokumenata (fakture → strukturirani podaci), klasifikacija i triage mejlova, sumarizacija sastanaka i izveštaja, AI agenti sa tool use (autonomni tokovi koji čitaju API-je i pišu u baze). Integriše se direktno u postojeći sistem (ERP, CRM, custom).",
+      "Solvera radi AI automatizaciju — konkretne automatizacije ugrađene tačno tamo gde firme gube vreme. NE radim Zapier-tip opštih workflow automatizacija; gradim AI-native rešenja: obrada dokumenata (fakture → strukturirani podaci), klasifikacija i triage mejlova, sumarizacija sastanaka i izveštaja, AI agenti sa tool use (autonomni tokovi koji čitaju API-je i pišu u baze). Integriše se direktno u postojeći sistem (ERP, CRM, custom).",
     locale: "sr",
     category: "services",
   },
@@ -103,14 +103,14 @@ const SR_CHUNKS: Chunk[] = [
   // --- REFERENCA: platforma Spiko Edu ---
   {
     content:
-      "Da li ste radili nešto veće od sajta? Da li imate iskustva sa složenijim projektima, većim sistemima, aplikacijama? Odgovor: da — platforma Spiko Edu (kurs.spikoedu.rs) je referenca za poslovne sisteme i veće projekte: sistem po meri za onlajn školu jezika, radi uživo. Škola kroz administratorski panel sama pravi kurseve, lekcije i vežbe, bez programera. Polaznici imaju naloge, prate napredak i ponavljaju gradivo. Časovi uživo se zakazuju kroz sistem — proverava se kada je nastavnik slobodan u Google kalendaru, pravi se Zoom sastanak i termin se upisuje u kalendar. Ima AI tutora koji objašnjava gradivo i greške, video lekcije i plaćanje karticom preko domaće banke. Tri povezane aplikacije (za polaznike, za administratora i server) i baza sa 22 tabele. Ovo je dokaz da Solvera radi sisteme, ne samo sajtove.",
+      "Da li ste radili nešto veće od sajta? Da li imate iskustva sa složenijim projektima, većim sistemima, aplikacijama? Odgovor: da — platforma Spiko Edu (kurs.spikoedu.rs) je referenca za poslovne sisteme i veće projekte: kompletan sistem za onlajn školu jezika, radi uživo. Škola kroz administratorski panel sama pravi kurseve, lekcije i vežbe, bez programera. Polaznici imaju naloge, prate napredak i ponavljaju gradivo. Časovi uživo se zakazuju kroz sistem — proverava se kada je nastavnik slobodan u Google kalendaru, pravi se Zoom sastanak i termin se upisuje u kalendar. Ima AI tutora koji objašnjava gradivo i greške, video lekcije i plaćanje karticom preko domaće banke. Tri povezane aplikacije (za polaznike, za administratora i server) i baza sa 22 tabele. Ovo je dokaz da Solvera radi sisteme, ne samo sajtove.",
     locale: "sr",
     category: "about",
   },
   // --- CENE ---
   {
     content:
-      "Cene Solvera usluga (AI primarno): AI Chatbot za sajt — izrada od 450 EUR, održavanje od 20 EUR mesečno (sve uključeno: rad asistenta, praćenje, dopune baze znanja i sitne izmene; nema odvojenog računa za korišćenje). AI Voice agent — izrada od 600 EUR, održavanje od 40 EUR mesečno (uključeno do 200 minuta razgovora, preko toga 0,20 EUR po minutu). AI integracija po meri — izrada od 800 EUR, održavanje od 30 EUR mesečno. Web (sekundarno): sajtovi od 300 EUR, održavanje od 30 EUR mesečno. Poslovni sistemi od 800 EUR, održavanje od 80 EUR mesečno. Nema fiksnih paketa — tačna cena zavisi od obima posla i daje se posle besplatnog razgovora. Sve cene u eurima, bez PDV.",
+      "Cene Solvera usluga (AI primarno): AI Chatbot za sajt — izrada od 450 EUR, održavanje od 20 EUR mesečno (sve uključeno: rad asistenta, praćenje, dopune baze znanja i sitne izmene; nema odvojenog računa za korišćenje). AI Voice agent — izrada od 600 EUR, održavanje od 40 EUR mesečno (uključeno do 200 minuta razgovora, preko toga 0,20 EUR po minutu). AI automatizacija — izrada od 800 EUR, održavanje od 30 EUR mesečno. Web (sekundarno): sajtovi od 300 EUR, održavanje od 30 EUR mesečno. Poslovni sistemi od 800 EUR, održavanje od 80 EUR mesečno. Nema fiksnih paketa — tačna cena zavisi od obima posla i daje se posle besplatnog razgovora. Sve cene u eurima, bez PDV.",
     locale: "sr",
     category: "pricing",
   },
@@ -124,7 +124,7 @@ const SR_CHUNKS: Chunk[] = [
   // --- O NAMA ---
   {
     content:
-      "Solvera je AI-first studio iz Novog Sada, Srbija. Fokusirana na AI rešenja: chatbot-ovi, voice agenti, AI integracije po meri. Web razvoj je sekundarna usluga. Trenutno Solveru vodi 1 inženjer-osnivač: Milan Julinac (full-stack + AI inženjer, 7+ godina iskustva — OpenAI, Claude, LangChain, pgvector, ElevenLabs, Twilio/LiveKit, Next.js, React, TypeScript, Node.js, PostgreSQL, Supabase, AWS, Docker). Po potrebi se uključuju proverene spoljne saradnike. Vrednosti: moderna tehnologija, transparentnost, vaš kod i vaši podaci.",
+      "Solvera je AI-first studio iz Novog Sada, Srbija. Fokusirana na AI rešenja: chatbot-ovi, voice agenti, AI automatizacija. Web razvoj je sekundarna usluga. Trenutno Solveru vodi 1 inženjer-osnivač: Milan Julinac (full-stack + AI inženjer, 7+ godina iskustva — OpenAI, Claude, LangChain, pgvector, ElevenLabs, Twilio/LiveKit, Next.js, React, TypeScript, Node.js, PostgreSQL, Supabase, AWS, Docker). Po potrebi se uključuju proverene spoljne saradnike. Vrednosti: moderna tehnologija, transparentnost, vaš kod i vaši podaci.",
     locale: "sr",
     category: "about",
   },
@@ -170,7 +170,7 @@ const SR_CHUNKS: Chunk[] = [
   // --- ZAŠTO SOLVERA ---
   {
     content:
-      "Zašto izabrati Solvera: 1) AI-first fokus — gradim chatbot-ove, voice agente i AI integracije po meri, ne opšti web shop. 2) Inženjeri, ne prodavci — radite direktno sa developerom. 3) Sve je vaše — kod, dizajn, dokumentacija, bez zaključavanja. 4) Moderan stack — OpenAI, Claude, LangChain, Next.js, Supabase. 5) Direktna komunikacija — odgovor u roku 24h.",
+      "Zašto izabrati Solvera: 1) AI-first fokus — gradim chatbot-ove, voice agente i AI automatizaciju, ne opšti web shop. 2) Inženjeri, ne prodavci — radite direktno sa developerom. 3) Sve je vaše — kod, dizajn, dokumentacija, bez zaključavanja. 4) Moderan stack — OpenAI, Claude, LangChain, Next.js, Supabase. 5) Direktna komunikacija — odgovor u roku 24h.",
     locale: "sr",
     category: "about",
   },
@@ -551,7 +551,7 @@ const SR_CHUNKS: Chunk[] = [
   // --- CONVERSATION STARTERS ---
   {
     content:
-      "Kada posetilac pita 'šta radite' ili 'čime se bavite': Solvera je AI-first studio iz Novog Sada. Primarno gradim 3 AI proizvoda — chatbot za sajt, voice agent koji prima pozive, i AI integracije po meri. Web razvoj i poslovni sistemi rade se sekundarno. Šta vas konkretno zanima — chatbot, voice agent, AI integracija ili nešto drugo?",
+      "Kada posetilac pita 'šta radite' ili 'čime se bavite': Solvera je AI-first studio iz Novog Sada. Primarno gradim 3 AI proizvoda — chatbot za sajt, voice agent koji prima pozive, i AI automatizaciju. Web razvoj i poslovni sistemi rade se sekundarno. Šta vas konkretno zanima — chatbot, voice agent, AI integracija ili nešto drugo?",
     locale: "sr",
     category: "sales",
   },
@@ -579,7 +579,7 @@ const SR_CHUNKS: Chunk[] = [
   },
   {
     content:
-      "Predlozi za upsell: Ako pravite sajt — dodajte AI Chatbot koji hvata leadove dok ne radite. Ako imate chatbot — dodajte AI Voice agent na telefonu (isti brand, isti ton, ista baza znanja). Ako imate konkretan ručni tok koji se ponavlja — AI integracija po meri može da ga automatizuje.",
+      "Predlozi za upsell: Ako pravite sajt — dodajte AI Chatbot koji hvata leadove dok ne radite. Ako imate chatbot — dodajte AI Voice agent na telefonu (isti brand, isti ton, ista baza znanja). Ako imate konkretan ručni tok koji se ponavlja — AI automatizacija može da ga preuzme.",
     locale: "sr",
     category: "sales",
   },
@@ -655,7 +655,7 @@ const SR_CHUNKS: Chunk[] = [
   // --- ŠTA NUDIMO (sažetak za quick reference) ---
   {
     content:
-      "Šta Solvera nudi — PRIMARNO 3 AI PROIZVODA: 1) AI CHATBOT za sajt — RAG asistent obučen na vašoj bazi znanja, 24/7, lead capture. Od 600€. 2) AI VOICE — agent koji prima pozive umesto vas, srpski glas, rezervacije, kvalifikacija. Setup od 1500€. 3) AI INTEGRACIJE po meri — obrada dokumenata, triage mejlova, sumarizacija, agentski tokovi. Od 800€. SEKUNDARNO: web razvoj (sajt od 300€) i poslovni sistemi (od 2000€). Solvera NE radi Zapier-tip opšte workflow automatizacije — samo AI-native rešenja.",
+      "Šta Solvera nudi — PRIMARNO 3 AI PROIZVODA: 1) AI CHATBOT za sajt — RAG asistent obučen na vašoj bazi znanja, 24/7, lead capture. Od 600€. 2) AI VOICE — agent koji prima pozive umesto vas, srpski glas, rezervacije, kvalifikacija. Setup od 1500€. 3) AI AUTOMATIZACIJA — obrada dokumenata, triage mejlova, sumarizacija, agentski tokovi. Od 800€. SEKUNDARNO: web razvoj (sajt od 300€) i poslovni sistemi (od 2000€). Solvera NE radi Zapier-tip opšte workflow automatizacije — samo AI-native rešenja.",
     locale: "sr",
     category: "services",
   },

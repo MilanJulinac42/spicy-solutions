@@ -14,12 +14,14 @@ import { fadeInUp } from "@/lib/animations";
  * grid — a half-empty grid reads as "that's all there is".
  */
 
-type Project = {
+export type Project = {
   name: string;
   kind: string;
   /** Which service this proves — service pages show only their own work. */
   service: "websites" | "enterprise";
   images: { src: string; alt: string }[];
+  /** Which image stands for the project on the home page (default: first). */
+  cover?: number;
   /** Omitted while a project has nothing public to open. */
   href?: string;
   summary: string;
@@ -33,7 +35,7 @@ type Project = {
   stack: string[];
 };
 
-const PROJECTS: Project[] = [
+export const PROJECTS: Project[] = [
   {
     name: "Spiko Edu — platforma za kurseve",
     kind: "Sistem za onlajn školu",
@@ -43,6 +45,9 @@ const PROJECTS: Project[] = [
       { src: "/radovi/admin.png", alt: "Administratorski panel platforme Spiko Edu" },
     ],
     href: "https://kurs.spikoedu.rs",
+    // The course page looks like the school's own site (next card); the admin
+    // panel is what makes this one a system.
+    cover: 1,
     summary:
       "Cela škola jezika onlajn. Škola sama pravi kurseve, lekcije i vežbe, polaznik uči i vežba svojim tempom, a čas uživo se zakaže kroz sistem — koji sam napravi Zoom sastanak i upiše termin u kalendar nastavnika.",
     highlights: [
@@ -136,25 +141,25 @@ export function Work({
               whileInView="visible"
               viewport={{ once: true, amount: 0.1 }}
               variants={fadeInUp}
-              className="group overflow-hidden rounded-2xl border border-border-default bg-surface"
+              className="card-matte group overflow-hidden rounded-3xl"
             >
               <div className="grid gap-0 lg:grid-cols-5">
                 {/* Screenshots. A second one earns its place when the first can't
                     show the whole story — a course page says nothing about the
                     panel the client actually runs it from. */}
                 <div
-                  className={`flex flex-col gap-px bg-border-default lg:col-span-3 ${
+                  className={`flex flex-col justify-center gap-px bg-surface-secondary lg:col-span-3 ${
                     i % 2 === 1 ? "lg:order-last" : ""
                   }`}
                 >
                   {p.images.map((img) => (
-                    <div key={img.src} className="relative flex-1 overflow-hidden bg-surface">
+                    <div key={img.src} className="relative overflow-hidden bg-surface">
                       <Image
                         src={img.src}
                         alt={img.alt}
                         width={1886}
                         height={961}
-                        className="h-full w-full object-cover object-top transition-transform duration-500 group-hover:scale-[1.02]"
+                        className="h-auto w-full transition-transform duration-500 group-hover:scale-[1.02]"
                         sizes="(max-width: 1024px) 100vw, 60vw"
                       />
                     </div>
@@ -163,7 +168,7 @@ export function Work({
 
                 {/* Details */}
                 <div className="flex flex-col justify-center p-6 md:p-8 lg:col-span-2">
-                  <div className="text-xs font-mono uppercase tracking-wider text-foreground-muted">
+                  <div className="text-xs font-semibold uppercase tracking-[0.18em] text-foreground-muted">
                     {p.kind}
                   </div>
                   <h3 className="mt-2 text-2xl font-bold text-foreground">{p.name}</h3>
@@ -177,7 +182,7 @@ export function Work({
                         key={h}
                         className="flex items-start gap-2.5 text-sm text-foreground-secondary"
                       >
-                        <span className="mt-1.5 h-1.5 w-1.5 shrink-0 rounded-full bg-spicy-400" />
+                        <span className="mt-2 h-1 w-1 shrink-0 rounded-full bg-spicy-300" />
                         {h}
                       </li>
                     ))}
@@ -187,7 +192,7 @@ export function Work({
                       and what it runs on. */}
                   <dl className="mt-6 space-y-3 border-t border-border-subtle pt-5">
                     <div>
-                      <dt className="text-xs font-mono uppercase tracking-wider text-foreground-muted">
+                      <dt className="text-xs font-semibold uppercase tracking-[0.18em] text-foreground-muted">
                         Moja uloga
                       </dt>
                       <dd className="mt-1 text-sm leading-relaxed text-foreground-secondary">
@@ -196,7 +201,7 @@ export function Work({
                     </div>
                     {p.duration && (
                       <div className="flex flex-wrap items-baseline gap-x-2">
-                        <dt className="text-xs font-mono uppercase tracking-wider text-foreground-muted">
+                        <dt className="text-xs font-semibold uppercase tracking-[0.18em] text-foreground-muted">
                           Trajanje
                         </dt>
                         <dd className="text-sm font-medium text-foreground">{p.duration}</dd>
@@ -208,7 +213,7 @@ export function Work({
                         {p.stack.map((t) => (
                           <span
                             key={t}
-                            className="rounded-md border border-border-default bg-surface-secondary px-2 py-1 text-[11px] font-mono text-foreground-muted"
+                            className="rounded-full border border-border-default px-2.5 py-1 text-[11px] text-foreground-muted"
                           >
                             {t}
                           </span>
@@ -222,9 +227,9 @@ export function Work({
                     href={p.href}
                     target="_blank"
                     rel="noopener noreferrer"
-                    className="mt-6 inline-flex items-center gap-2 self-start rounded-lg border border-spicy-400/30 bg-spicy-400/10 px-4 py-2.5 text-sm font-semibold text-spicy-400 transition-all hover:border-spicy-400 hover:bg-spicy-400 hover:text-white"
+                    className="btn-matte mt-6 inline-flex items-center gap-2 self-start rounded-full px-5 py-2.5 text-sm font-semibold"
                   >
-                    <ExternalLink className="h-4 w-4" />
+                    <ExternalLink className="h-4 w-4 text-spicy-300" />
                     Pogledaj uživo
                     <ArrowUpRight className="h-4 w-4 transition-transform group-hover:translate-x-0.5 group-hover:-translate-y-0.5" />
                   </Link>

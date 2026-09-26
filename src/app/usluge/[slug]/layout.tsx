@@ -13,7 +13,7 @@ const META: Record<string, { title: string; description: string }> = {
       "AI agent na vašem telefonskom broju. Prirodan srpski glas, rezervacije, FAQ, prebacivanje na vas kad treba. Twilio + ElevenLabs + OpenAI Realtime.",
   },
   aiIntegrations: {
-    title: "AI integracije po meri",
+    title: "AI automatizacija",
     description:
       "Konkretne AI automatizacije za vaš proces — obrada dokumenata, triage mejlova, sumarizacija, agentski tokovi sa tool use.",
   },

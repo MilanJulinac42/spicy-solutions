@@ -1,11 +1,10 @@
 import type { Metadata } from "next";
 import { NextIntlClientProvider } from "next-intl";
 import { getMessages } from "next-intl/server";
-import { Geist, Geist_Mono } from "next/font/google";
+import { Manrope, Instrument_Serif, Geist_Mono } from "next/font/google";
 import { ThemeProvider } from "next-themes";
 import { Navbar } from "@/components/layout/Navbar";
 import { Footer } from "@/components/layout/Footer";
-import { ScrollProgress } from "@/components/ui/ScrollProgress";
 import { FloatingWidgets } from "@/components/layout/FloatingWidgets";
 import { PageviewTracker } from "@/components/analytics/PageviewTracker";
 import { CookieConsent } from "@/components/shared/CookieConsent";
@@ -18,12 +17,21 @@ import {
 } from "@/lib/jsonld";
 import "@/app/globals.css";
 
-const geistSans = Geist({
-  variable: "--font-geist-sans",
-  subsets: ["latin"],
+const manrope = Manrope({
+  variable: "--font-body",
+  subsets: ["latin", "latin-ext"],
   display: "swap",
   preload: true,
   adjustFontFallback: true,
+});
+
+// Serif accent for a word or two inside headlines — never for body copy.
+const instrumentSerif = Instrument_Serif({
+  variable: "--font-serif",
+  weight: "400",
+  style: ["normal", "italic"],
+  subsets: ["latin", "latin-ext"],
+  display: "swap",
 });
 
 const geistMono = Geist_Mono({
@@ -40,7 +48,7 @@ export const metadata: Metadata = {
     template: "%s | Solvera",
   },
   description:
-    "AI automatizacija za srpske firme — AI chatbot za sajt, voice agent na srpskom, interni AI asistent i AI integracije po meri. Brza isporuka, fiksna cena, kod ostaje vaš. Direktan rad sa inženjerom iz Novog Sada.",
+    "Sajtovi, poslovni sistemi i AI rešenja za firme u Srbiji — web aplikacije, interni alati, AI chatbot i voice agent na srpskom. Fiksna cena, kod ostaje vaš. Direktan rad sa inženjerom iz Novog Sada.",
   keywords: [
     "AI automatizacija Srbija",
     "AI chatbot za srpske firme",
@@ -59,13 +67,13 @@ export const metadata: Metadata = {
     siteName: "Solvera",
     title: "Solvera | Vi vodite biznis, ja brinem o tehnologiji",
     description:
-      "AI chatbot, voice agent na srpskom, interni AI asistent i AI integracije za srpske firme. Brza isporuka, fiksna cena, kod ostaje vaš.",
+      "Sajtovi, poslovni sistemi i AI rešenja za firme u Srbiji. Fiksna cena, ugovor, kod ostaje vaš.",
   },
   twitter: {
     card: "summary_large_image",
     title: "Solvera | Vi vodite biznis, ja brinem o tehnologiji",
     description:
-      "AI chatbot, voice agent na srpskom, interni AI asistent i AI integracije za srpske firme. Brza isporuka, fiksna cena, kod ostaje vaš.",
+      "Sajtovi, poslovni sistemi i AI rešenja za firme u Srbiji. Fiksna cena, ugovor, kod ostaje vaš.",
   },
   icons: {
     icon: [
@@ -117,7 +125,7 @@ export default async function RootLayout({
         />
       </head>
       <body
-        className={`${geistSans.variable} ${geistMono.variable} antialiased bg-surface text-foreground`}
+        className={`${manrope.variable} ${instrumentSerif.variable} ${geistMono.variable} antialiased bg-surface text-foreground`}
       >
         <ThemeProvider
           attribute="class"
@@ -127,7 +135,6 @@ export default async function RootLayout({
           disableTransitionOnChange
         >
           <NextIntlClientProvider locale="sr" messages={messages}>
-            <ScrollProgress />
             <Navbar />
             <main className="min-h-screen">{children}</main>
             <Footer />

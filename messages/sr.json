@@ -26,12 +26,26 @@
   },
   "Hero": {
     "badge": "Brza isporuka. Direktna komunikacija. Kvalitet bez kompromisa.",
-    "title": "Vi vodite biznis",
-    "titleHighlight": "Ja brinem o tehnologiji",
-    "subtitle": "Dok druge agencije mesecima razvlače rokove, ja isporučujem brzo i kvalitetno. Direktan pristup inženjeru koji gradi vaš proizvod — bez posrednika, bez čekanja, bez kompromisa.",
-    "cta": "Besplatna konsultacija",
+    "title": "Vi vodite biznis.",
+    "titleHighlight": "Ja rešavam tehnologiju.",
+    "subtitle": "Pravim sajtove, programe po kojima firma radi i AI asistente koji odgovaraju klijentima. Radite direktno sa inženjerom — fiksna cena, ugovor, i sve ostaje vaše.",
+    "cta": "Zakažite besplatnu konsultaciju",
     "ctaSecondary": "Pogledajte proces",
-    "ctaCalculator": "Započnite projekat"
+    "ctaCalculator": "Započnite projekat",
+    "eyebrow": "Sajtovi · Poslovni sistemi · AI asistenti",
+    "facts": {
+      "price": "Fiksna cena, dogovorena unapred",
+      "time": "Ugovor i garancija",
+      "direct": "Sve je na vaše ime"
+    },
+    "ctaWork": "Pogledajte radove",
+    "collage": {
+      "site": "Sajt",
+      "system": "Poslovni sistem",
+      "ai": "AI asistent",
+      "q": "Imate li slobodan termin sutra?",
+      "a": "Imamo u 17:30 — da vas upišem?"
+    }
   },
   "ProblemSection": {
     "title": "Zašto vas IT projekti frustriraju?",
@@ -75,7 +89,7 @@
       "price": "Od 600€ · održavanje od 40€ mesečno"
     },
     "aiIntegrations": {
-      "title": "AI integracije po meri",
+      "title": "AI automatizacija",
       "description": "Email upit dolazi — AI klasifikuje hitnost, izvlači ključne podatke, predlaže odgovor. Faktura stiže — AI parsira, validira, ubacuje u sistem. Sastanak završen — AI generiše sažetak i akcione stavke. Konkretni tokovi za vaš proces.",
       "price": "Od 800€ · održavanje od 30€ mesečno"
     },
@@ -85,7 +99,7 @@
       "price": "Od 300€ · održavanje od 30€ mesečno"
     },
     "enterprise": {
-      "title": "Poslovni sistemi po meri",
+      "title": "Poslovni sistemi",
       "description": "Interni alati, pregledne table, programi koji se prodaju kao usluga. Ako vam je AI deo većeg sistema — gradim i taj sistem oko njega.",
       "price": "Od 800€ · održavanje od 80€ mesečno"
     }
@@ -185,7 +199,7 @@
       }
     },
     "enterprise": {
-      "title": "Poslovni sistemi po meri",
+      "title": "Poslovni sistemi",
       "description": "Pregledne table, programi koji se prodaju kao usluga, interni alati i povezivanje sa postojećim programima. Gradim sisteme koji rastu sa vama, spremne za pravi rad, uz redovnu komunikaciju tokom razvoja.",
       "comparison": "Vrhunski poslovni kvalitet sa agilnim razvojem i direktnim pristupom timu.",
       "features": {
@@ -347,7 +361,7 @@
       }
     },
     "aiIntegrations": {
-      "title": "AI integracije po meri",
+      "title": "AI automatizacija",
       "description": "Konkretan AI tok ugrađen tačno tamo gde gubite vreme. Ne 'general purpose' rešenje — već specifična automatizacija koja radi jedan posao odlično.",
       "comparison": "Ne plaćate SaaS pretplatu vekovima — gradi se jednom, vaše je, radi koliko vama treba.",
       "features": {
@@ -849,9 +863,9 @@
         "audit": "Besplatna konsultacija",
         "chatbot": "AI Chatbot na sajtu",
         "voice": "AI Voice — prima pozive",
-        "aiIntegrations": "AI integracija po meri",
+        "aiIntegrations": "AI automatizacija",
         "websites": "Sajt / Web aplikacija",
-        "enterprise": "Poslovni sistem po meri",
+        "enterprise": "Poslovni sistem",
         "other": "Nešto drugo"
       },
       "message": "Opišite nam vašu trenutnu IT situaciju",
@@ -1069,7 +1083,7 @@
     "cta": "Imate drugo pitanje? Pišite mi"
   },
   "Footer": {
-    "description": "Brz i kvalitetan IT za srpske biznise. Moderna tehnologija, direktna komunikacija, nula čekanja.",
+    "description": "Sajtovi, poslovni sistemi i AI asistenti za firme u Srbiji. Jedan inženjer, fiksna cena, sve ostaje vaše.",
     "quickLinks": "Brzi linkovi",
     "services": "Usluge",
     "connect": "Povežite se",
@@ -1316,5 +1330,120 @@
     "q1": "Koliko košta izrada sajta?",
     "q2": "Koje usluge nudite?",
     "q3": "Koji je rok isporuke?"
+  },
+  "Home": {
+    "services": {
+      "eyebrow": "Usluge",
+      "title": "Jedan inženjer,",
+      "accent": "sve što firmi treba.",
+      "subtitle": "Od sajta koji dovodi klijente, preko programa po kom radi cela firma, do AI asistenta koji odgovara umesto vas.",
+      "from": "od",
+      "upkeep": "održavanje",
+      "more": "Saznajte više",
+      "items": {
+        "websites": {
+          "tag": "Web",
+          "title": "Sajtovi i web aplikacije",
+          "lead": "Sajt koji izgleda ozbiljno, brzo se otvara na telefonu i spreman je za Google pretragu.",
+          "bullets": [
+            "Prezentacioni sajt za firmu",
+            "Online prodavnica",
+            "Web aplikacija sa korisničkim nalozima"
+          ],
+          "price": "300€",
+          "upkeep": "od 30€ mesečno"
+        },
+        "enterprise": {
+          "tag": "Firma",
+          "title": "Poslovni sistemi",
+          "lead": "Program po kom radi vaša firma — umesto Excel tabela, papira i poruka razbacanih po telefonu.",
+          "bullets": [
+            "Evidencije, zakazivanja i interni alati",
+            "Pregledne table sa podacima",
+            "Onlajn platforme i portali za klijente"
+          ],
+          "price": "800€",
+          "upkeep": "od 80€ mesečno"
+        },
+        "ai": {
+          "tag": "AI",
+          "title": "AI asistenti i automatizacija",
+          "lead": "Asistent koji na srpskom odgovara na pitanja i zakazuje termine, i automatizacija posla koji se ponavlja.",
+          "bullets": [
+            "Chatbot na sajtu — od 450€",
+            "Asistent koji se javlja na telefon — od 600€",
+            "Automatizacija mejlova i dokumenata — od 800€"
+          ],
+          "price": "450€",
+          "upkeep": "od 20€ mesečno"
+        }
+      }
+    },
+    "steps": {
+      "eyebrow": "Kako izgleda saradnja",
+      "title": "Od prvog razgovora",
+      "accent": "do gotovog rešenja.",
+      "items": {
+        "s1": {
+          "title": "Besplatan razgovor",
+          "body": "Telefonom ili uživo. Kažete mi šta vam treba i gde gubite vreme, a ja vam iskreno kažem šta ima smisla — i šta nema."
+        },
+        "s2": {
+          "title": "Pisana ponuda i ugovor",
+          "body": "Tačna cena i rok, crno na belo, pre bilo kakvog plaćanja. Avans na početku, ostatak po isporuci."
+        },
+        "s3": {
+          "title": "Isporuka i podrška",
+          "body": "Pratite napredak od prvog dana i dajete svoje mišljenje usput. Posle puštanja u rad tu sam za izmene i održavanje."
+        }
+      },
+      "more": "Detaljno o procesu"
+    },
+    "about": {
+      "eyebrow": "Ko stoji iza Solvere",
+      "title": "Radite direktno sa mnom.",
+      "accent": "Od prvog poziva do isporuke.",
+      "body": "Ja sam Milan, inženjer iz Novog Sada. Solveru vodim sam — pa onaj ko vas sasluša je isti onaj ko pravi vaš projekat i ko se javlja kad nešto zatreba.",
+      "photoAlt": "Milan Julinac, osnivač Solvere",
+      "name": "Milan Julinac",
+      "role": "Osnivač i inženjer",
+      "more": "Više o meni",
+      "points": {
+        "contract": {
+          "title": "Ugovor, uvek",
+          "body": "Šta se radi, do kada i po kojoj ceni — napisano pre početka."
+        },
+        "ownership": {
+          "title": "Sve je vaše",
+          "body": "Program, podaci i nalozi glase na vas od prvog dana."
+        },
+        "reply": {
+          "title": "Odgovor u roku od 24h",
+          "body": "Uvek znate dokle se stiglo, bez jurenja."
+        },
+        "data": {
+          "title": "Podaci ostaju u Evropi",
+          "body": "Ne koriste se za treniranje i ne dele se dalje."
+        }
+      }
+    },
+    "work": {
+      "eyebrow": "Radovi",
+      "title": "Urađeno",
+      "accent": "i pušteno u rad.",
+      "subtitle": "Ne slike iz prezentacije — kliknite i pogledajte uživo.",
+      "live": "Pogledaj uživo",
+      "all": "Svi radovi"
+    },
+    "faq": {
+      "eyebrow": "Pitanja"
+    },
+    "cta": {
+      "title": "Imate ideju ili problem?",
+      "accent": "Hajde da ga rešimo.",
+      "subtitle": "Besplatan razgovor, bez obaveza. Posle njega znate šta vam treba, koliko košta i koliko traje.",
+      "primary": "Zakažite besplatnu konsultaciju",
+      "whatsapp": "Pišite na WhatsApp"
+    }
   }
 }

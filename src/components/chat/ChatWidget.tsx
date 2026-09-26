@@ -85,16 +85,6 @@ export function ChatWidget() {
 
   const handleQuestionConsumed = useCallback(() => setPendingQuestion(null), []);
 
-  useEffect(() => {
-    if (!isVisible || isOpen) return;
-    const showTimer = setTimeout(() => setShowTooltip(true), 5000);
-    const hideTimer = setTimeout(() => setShowTooltip(false), 12000);
-    return () => {
-      clearTimeout(showTimer);
-      clearTimeout(hideTimer);
-    };
-  }, [isVisible, isOpen]);
-
   function handleToggle() {
     setIsOpen((prev) => {
       const next = !prev;
@@ -137,18 +127,16 @@ export function ChatWidget() {
               initial={{ opacity: 0, y: 10, scale: 0.9 }}
               animate={{ opacity: 1, y: 0, scale: 1 }}
               exit={{ opacity: 0, y: 10, scale: 0.9 }}
-              className="relative bg-white text-gray-800 px-4 py-2.5 rounded-xl shadow-lg text-sm font-medium max-w-[200px]"
+              className="card-matte relative max-sm:hidden text-foreground px-4 py-2.5 rounded-2xl text-sm font-medium max-w-[220px]"
             >
               {t("tooltip")}
               <button
                 onClick={() => setShowTooltip(false)}
                 aria-label="Zatvori obaveštenje"
-                className="absolute -top-1.5 -left-1.5 w-5 h-5 bg-gray-200 rounded-full flex items-center justify-center hover:bg-gray-300 transition-colors"
+                className="absolute -top-2 -left-2 w-5 h-5 bg-surface-elevated border border-border-default rounded-full flex items-center justify-center hover:bg-surface-tertiary transition-colors"
               >
-                <X className="w-3 h-3 text-gray-600" aria-hidden="true" />
+                <X className="w-3 h-3 text-foreground-muted" aria-hidden="true" />
               </button>
-              {/* Arrow pointing down */}
-              <div className="absolute bottom-[-6px] right-5 w-0 h-0 border-l-[6px] border-l-transparent border-r-[6px] border-r-transparent border-t-[6px] border-t-white" />
             </motion.div>
           )}
         </AnimatePresence>
@@ -158,9 +146,9 @@ export function ChatWidget() {
           initial={{ scale: 0, opacity: 0 }}
           animate={{ scale: 1, opacity: 1 }}
           transition={{ type: "spring", stiffness: 300, damping: 20 }}
-          whileHover={{ scale: 1.1 }}
+          whileHover={{ scale: 1.05 }}
           whileTap={{ scale: 0.95 }}
-          className="w-14 h-14 bg-spicy-400 rounded-full flex items-center justify-center shadow-lg shadow-spicy-400/30 hover:shadow-xl hover:shadow-spicy-400/40 transition-shadow"
+          className="btn-metal w-14 h-14 rounded-full flex items-center justify-center"
           aria-label={isOpen ? t("close") : t("tooltip")}
         >
           <AnimatePresence mode="wait" initial={false}>
@@ -172,7 +160,7 @@ export function ChatWidget() {
                 exit={{ rotate: 90, opacity: 0 }}
                 transition={{ duration: 0.15 }}
               >
-                <X className="w-6 h-6 text-white" />
+                <X className="w-6 h-6 text-ink" />
               </motion.span>
             ) : (
               <motion.span
@@ -182,7 +170,7 @@ export function ChatWidget() {
                 exit={{ rotate: -90, opacity: 0 }}
                 transition={{ duration: 0.15 }}
               >
-                <MessageCircle className="w-6 h-6 text-white" />
+                <MessageCircle className="w-6 h-6 text-ink" />
               </motion.span>
             )}
           </AnimatePresence>

@@ -14,14 +14,14 @@ import {
 import { useTranslations } from "next-intl";
 import Link from "next/link";
 import { navLinks } from "@/lib/constants";
-import { ThemeToggle } from "@/components/shared/ThemeToggle";
+import { Logo } from "@/components/ui/Logo";
 
 const serviceSublinks = [
+  { id: "websites", icon: Globe, titleKey: "Services.websites.title" },
+  { id: "enterprise", icon: Building2, titleKey: "Services.enterprise.title" },
   { id: "chatbot", icon: MessageSquare, titleKey: "Services.chatbot.title" },
   { id: "voice", icon: Phone, titleKey: "Services.voice.title" },
   { id: "aiIntegrations", icon: Sparkles, titleKey: "Services.aiIntegrations.title" },
-  { id: "websites", icon: Globe, titleKey: "Services.websites.title" },
-  { id: "enterprise", icon: Building2, titleKey: "Services.enterprise.title" },
 ];
 
 interface MobileMenuProps {
@@ -42,7 +42,7 @@ export function MobileMenu({ isOpen, onClose, pathname }: MobileMenuProps) {
             initial={{ opacity: 0 }}
             animate={{ opacity: 1 }}
             exit={{ opacity: 0 }}
-            className="fixed inset-0 bg-black/60 z-40"
+            className="fixed inset-0 bg-black/70 backdrop-blur-sm z-40"
             onClick={onClose}
           />
           <motion.div
@@ -50,12 +50,13 @@ export function MobileMenu({ isOpen, onClose, pathname }: MobileMenuProps) {
             animate={{ x: 0 }}
             exit={{ x: "100%" }}
             transition={{ type: "tween", duration: 0.25, ease: "easeOut" }}
-            className="fixed right-0 top-0 bottom-0 w-72 bg-surface-elevated border-l border-border-default z-50 flex flex-col"
+            className="fixed right-0 top-0 bottom-0 w-[86%] max-w-sm bg-surface-secondary border-l border-border-default z-50 flex flex-col"
           >
             <div className="flex items-center justify-between p-4 border-b border-border-default">
-              <span className="text-lg font-bold text-spicy-400">Menu</span>
+              <Logo size={30} />
               <button
                 onClick={onClose}
+                aria-label="Zatvori meni"
                 className="p-2 rounded-lg hover:bg-surface-tertiary transition-colors cursor-pointer"
               >
                 <X className="w-5 h-5" />
@@ -75,7 +76,7 @@ export function MobileMenu({ isOpen, onClose, pathname }: MobileMenuProps) {
                           onClick={() => setServicesExpanded(!servicesExpanded)}
                           className={`w-full flex items-center justify-between px-4 py-3 rounded-lg text-base font-medium transition-colors cursor-pointer ${
                             isActive || pathname.startsWith("/usluge/")
-                              ? "bg-spicy-400/10 text-spicy-400"
+                              ? "bg-surface-tertiary text-foreground"
                               : "text-foreground-secondary hover:bg-surface-tertiary hover:text-foreground"
                           }`}
                         >
@@ -97,7 +98,7 @@ export function MobileMenu({ isOpen, onClose, pathname }: MobileMenuProps) {
                                   onClick={onClose}
                                   className={`block pl-8 pr-4 py-2.5 text-sm transition-colors ${
                                     pathname === "/usluge"
-                                      ? "text-spicy-400"
+                                      ? "text-spicy-300"
                                       : "text-foreground-muted hover:text-foreground"
                                   }`}
                                 >
@@ -114,7 +115,7 @@ export function MobileMenu({ isOpen, onClose, pathname }: MobileMenuProps) {
                                       onClick={onClose}
                                       className={`flex items-center gap-2.5 pl-8 pr-4 py-2.5 text-sm transition-colors ${
                                         isSubActive
-                                          ? "text-spicy-400"
+                                          ? "text-spicy-300"
                                           : "text-foreground-muted hover:text-foreground"
                                       }`}
                                     >
@@ -138,7 +139,7 @@ export function MobileMenu({ isOpen, onClose, pathname }: MobileMenuProps) {
                         onClick={onClose}
                         className={`block px-4 py-3 rounded-lg text-base font-medium transition-colors ${
                           isActive
-                            ? "bg-spicy-400/10 text-spicy-400"
+                            ? "bg-surface-tertiary text-foreground"
                             : "text-foreground-secondary hover:bg-surface-tertiary hover:text-foreground"
                         }`}
                       >
@@ -152,13 +153,19 @@ export function MobileMenu({ isOpen, onClose, pathname }: MobileMenuProps) {
 
             <div className="p-4 border-t border-border-default space-y-3">
               <Link
+                href="/kontakt"
+                onClick={onClose}
+                className="btn-metal block w-full text-center px-4 py-3.5 rounded-full text-sm font-semibold"
+              >
+                {t("Navbar.getStarted")}
+              </Link>
+              <Link
                 href="/zapocni-projekat"
                 onClick={onClose}
-                className="block w-full text-center px-4 py-3 bg-spicy-400/10 text-spicy-400 rounded-lg text-sm font-semibold hover:bg-spicy-400/20 transition-colors"
+                className="btn-matte block w-full text-center px-4 py-3.5 rounded-full text-sm font-semibold"
               >
-                {t("Navbar.calculator")} →
+                {t("Navbar.calculator")}
               </Link>
-              <ThemeToggle />
             </div>
           </motion.div>
         </>
