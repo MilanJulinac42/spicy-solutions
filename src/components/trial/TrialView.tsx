@@ -77,7 +77,6 @@ function CapacityBadge({ capacity }: { capacity: Capacity | null }) {
           {remaining > 0 ? t("left", { n: remaining, total: slots }) : t("full")}
         </span>
       </div>
-      <p className="mt-1.5 text-xs text-foreground-muted">{t("why")}</p>
     </div>
   );
 }

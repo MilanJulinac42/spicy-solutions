@@ -1566,8 +1566,7 @@
     },
     "capacity": {
       "left": "Ove nedelje još {n} od {total} mesta",
-      "full": "Ova nedelja je popunjena — prijave idu za ponedeljak",
-      "why": "Probne verzije pravim ručno, za svaku firmu posebno — zato ih je malo."
+      "full": "Ova nedelja je popunjena — prijave idu za ponedeljak"
     },
     "outcome": {
       "trial": {
