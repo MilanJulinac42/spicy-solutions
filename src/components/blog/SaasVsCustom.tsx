@@ -63,8 +63,8 @@ export function SaasVsCustom() {
       <p className="mt-3 text-center text-[13px] text-foreground-muted">
         Gruba računica: na ~100€ mesečno, pretplata te za dve godine košta{" "}
         <strong className="text-foreground">oko 2.400€</strong>. Sopstveni asistent — izrada
-        od 690€ i Partner paket od 39€ mesečno — oko{" "}
-        <strong className="text-foreground">1.600€</strong> za isti period, i napravljen je{" "}
+        od 450€ i Partner paket od 39€ mesečno — oko{" "}
+        <strong className="text-foreground">1.400€</strong> za isti period, i napravljen je{" "}
         <strong className="text-foreground">baš za vaš posao</strong>.
       </p>
     </div>

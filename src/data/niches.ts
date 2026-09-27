@@ -37,9 +37,9 @@ export const niches: Niche[] = [
       { title: "Pitanja posle radnog vremena", body: "Roditelji i polaznici pišu uveče. Ko ne dobije odgovor do sutra, često se upiše na drugo mesto." },
     ],
     solutions: [
-      { title: "Sajt škole", body: "Kursevi, nivoi, cene i utisci polaznika, uz prijavu za besplatnu konsultaciju.", price: "od 1.190€", href: "/usluge/websites" },
+      { title: "Sajt škole", body: "Kursevi, nivoi, cene i utisci polaznika, uz prijavu za besplatnu konsultaciju.", price: "od 850€", href: "/usluge/websites" },
       { title: "Onlajn platforma", body: "Kursevi i vežbe koje škola sama pravi, nalozi polaznika, zakazivanje časova sa Zoom-om, plaćanje karticom.", price: "od 1.500€", href: "/usluge/enterprise" },
-      { title: "AI asistent za upite", body: "Odgovara o terminima, nivoima i cenama iz vaših podataka i šalje vam kontakt zainteresovanih.", price: "od 690€", href: "/usluge/chatbot" },
+      { title: "AI asistent za upite", body: "Odgovara o terminima, nivoima i cenama iz vaših podataka i šalje vam kontakt zainteresovanih.", price: "od 450€", href: "/usluge/chatbot" },
     ],
     proof: {
       label: "Primer iz prakse",
@@ -67,9 +67,9 @@ export const niches: Niche[] = [
       { title: "Zaboravljeni termini", body: "Mušterija zaboravi da dođe, a vi ste taj termin već odbili nekom drugom." },
     ],
     solutions: [
-      { title: "Sajt sa online zakazivanjem", body: "Usluge, cene i slobodni termini — mušterija sama izabere i zakaže, i danju i noću.", price: "od 1.190€", href: "/usluge/websites" },
+      { title: "Sajt sa online zakazivanjem", body: "Usluge, cene i slobodni termini — mušterija sama izabere i zakaže, i danju i noću.", price: "od 850€", href: "/usluge/websites" },
       { title: "Asistent na telefonu", body: "Javlja se u ime salona, kaže cenu, zakaže termin ili prebaci vama kad treba. Može i da pozove radi potvrde termina.", price: "od 990€", href: "/usluge/voice" },
-      { title: "Asistent na sajtu", body: "Odgovara na pitanja o uslugama i cenama i uzima kontakt kad vi ne stižete.", price: "od 690€", href: "/usluge/chatbot" },
+      { title: "Asistent na sajtu", body: "Odgovara na pitanja o uslugama i cenama i uzima kontakt kad vi ne stižete.", price: "od 450€", href: "/usluge/chatbot" },
     ],
     proof: {
       label: "Probajte sami",

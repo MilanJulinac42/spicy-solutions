@@ -20,7 +20,7 @@ export const websitePackages: Package[] = [
   {
     id: "start",
     name: "Start",
-    price: "590€",
+    price: "350€",
     delivery: "7 dana",
     forWho: "Frizer, kafić, servis, advokat — firma kojoj treba ozbiljno lice na internetu.",
     includes: [
@@ -33,7 +33,7 @@ export const websitePackages: Package[] = [
   {
     id: "biznis",
     name: "Biznis",
-    price: "1.190€",
+    price: "850€",
     delivery: "14 dana",
     forWho: "Restoran, salon, ordinacija, škola — firma kojoj sajt treba da dovodi klijente.",
     includes: [
@@ -48,7 +48,7 @@ export const websitePackages: Package[] = [
   {
     id: "prodavnica",
     name: "Prodavnica ili aplikacija",
-    price: "2.400€",
+    price: "1.500€",
     from: true,
     delivery: "3–5 nedelja",
     forWho: "Online prodaja, korisnički nalozi, plaćanje karticom.",
@@ -80,7 +80,7 @@ export const aiPackages: Package[] = [
   {
     id: "chatbot",
     name: "AI asistent na sajtu",
-    price: "690€",
+    price: "450€",
     from: true,
     delivery: "1–2 nedelje",
     forWho: "Odgovara posetiocima 24/7 iz vaših cena i usluga i uzima kontakt.",
@@ -143,9 +143,9 @@ export const partnerIncludes = [
 
 /** Short strings used in cards and prompts. */
 export const priceFrom = {
-  websites: "590€",
+  websites: "350€",
   enterprise: "1.500€",
-  chatbot: "690€",
+  chatbot: "450€",
   voice: "990€",
   aiIntegrations: "1.200€",
 } as const;

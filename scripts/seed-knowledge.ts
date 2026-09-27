@@ -96,7 +96,7 @@ const SR_CHUNKS: Chunk[] = [
   // --- USLUGE: Web razvoj ---
   {
     content:
-      "Solvera pravi sajtove i web aplikacije — prezentacione sajtove, online prodavnice i aplikacije sa korisničkim nalozima. Sajt se često pravi zajedno sa AI asistentom. Fiksni paketi: Start 590 EUR (7 dana), Biznis 1.190 EUR (14 dana), prodavnica ili aplikacija od 2.400 EUR. Uz to Partner paket posle isporuke, SEO ugrađen, učitavanje ispod sekunde.",
+      "Solvera pravi sajtove i web aplikacije — prezentacione sajtove, online prodavnice i aplikacije sa korisničkim nalozima. Sajt se često pravi zajedno sa AI asistentom. Fiksni paketi: Start 350 EUR (7 dana), Biznis 850 EUR (14 dana), prodavnica ili aplikacija od 1.500 EUR. Uz to Partner paket posle isporuke, SEO ugrađen, učitavanje ispod sekunde.",
     locale: "sr",
     category: "services",
   },
@@ -110,7 +110,7 @@ const SR_CHUNKS: Chunk[] = [
   // --- CENE ---
   {
     content:
-      "Cene Solvera usluga: Sajtovi — paket Start 590 EUR (do 5 stranica, gotovo za 7 dana), paket Biznis 1.190 EUR (do 10 stranica, online zakazivanje ili porudžbina, 14 dana), prodavnica ili web aplikacija od 2.400 EUR. Poslovni sistemi od 1.500 EUR. AI asistent na sajtu od 690 EUR. AI asistent na telefonu od 990 EUR. AI automatizacija od 1.200 EUR. Partner paket (mesečna briga posle isporuke): sajt 49 EUR, AI asistent na sajtu 39 EUR, AI asistent na telefonu 79 EUR (do 200 minuta, preko toga 0,20 EUR po minutu), AI automatizacija 49 EUR, poslovni sistem od 149 EUR mesečno. Pre bilo kakve uplate: besplatan probni sajt za 48h. Sve cene u eurima, bez PDV. Sve cene su na solveradev.rs/cene.",
+      "Cene Solvera usluga: Sajtovi — paket Start 350 EUR (do 5 stranica, gotovo za 7 dana), paket Biznis 850 EUR (do 10 stranica, online zakazivanje ili porudžbina, 14 dana), prodavnica ili web aplikacija od 1.500 EUR. Poslovni sistemi od 1.500 EUR. AI asistent na sajtu od 450 EUR. AI asistent na telefonu od 990 EUR. AI automatizacija od 1.200 EUR. Partner paket (mesečna briga posle isporuke): sajt 49 EUR, AI asistent na sajtu 39 EUR, AI asistent na telefonu 79 EUR (do 200 minuta, preko toga 0,20 EUR po minutu), AI automatizacija 49 EUR, poslovni sistem od 149 EUR mesečno. Pre bilo kakve uplate: besplatan probni sajt za 48h. Sve cene u eurima, bez PDV. Sve cene su na solveradev.rs/cene.",
     locale: "sr",
     category: "pricing",
   },
@@ -182,7 +182,7 @@ const SR_CHUNKS: Chunk[] = [
   // --- CENE: Detaljnije ---
   {
     content:
-      "Detaljne cene sajtova: Paket Start košta 590 EUR (do 5 stranica, gotovo za 7 dana), paket Biznis 1.190 EUR (do 10 stranica, online zakazivanje ili porudžbina), a prodavnica ili web aplikacija kreće od 2.400 EUR. U to ulazi prilagođavanje telefonu i računaru, priprema za Google pretragu i sistem za samostalnu izmenu teksta i slika. Cena zavisi od broja stranica, potrebnih funkcija (internet prodavnica, korisnički nalozi) i složenosti izgleda. Partner paket za sajt je 49 EUR mesečno: praćenje, bezbednost, rezervne kopije, izmene bez čekanja i mesečni izveštaj. Svaki projekat dobija tačnu ponudu pre početka rada.",
+      "Detaljne cene sajtova: Paket Start košta 350 EUR (do 5 stranica, gotovo za 7 dana), paket Biznis 850 EUR (do 10 stranica, online zakazivanje ili porudžbina), a prodavnica ili web aplikacija kreće od 1.500 EUR. U to ulazi prilagođavanje telefonu i računaru, priprema za Google pretragu i sistem za samostalnu izmenu teksta i slika. Cena zavisi od broja stranica, potrebnih funkcija (internet prodavnica, korisnički nalozi) i složenosti izgleda. Partner paket za sajt je 49 EUR mesečno: praćenje, bezbednost, rezervne kopije, izmene bez čekanja i mesečni izveštaj. Svaki projekat dobija tačnu ponudu pre početka rada.",
     locale: "sr",
     category: "pricing",
   },
@@ -194,7 +194,7 @@ const SR_CHUNKS: Chunk[] = [
   },
   {
     content:
-      "Detaljne cene AI rešenja: AI asistent na sajtu — izrada od 690 EUR. Cena zavisi od toga koliko toga asistent treba da zna, da li se povezuje sa postojećim programima i da li samo odgovara ili i zakazuje. Partner paket od 39 EUR mesečno — u to je uključen i rad asistenta i praćenje i dopune baze znanja, nema odvojenog računa za korišćenje. Prva tri meseca doterivanja odgovora su uključena. Automatska obrada dokumenata (fakture, ugovori, prijave) — od 1.200 EUR.",
+      "Detaljne cene AI rešenja: AI asistent na sajtu — izrada od 450 EUR. Cena zavisi od toga koliko toga asistent treba da zna, da li se povezuje sa postojećim programima i da li samo odgovara ili i zakazuje. Partner paket od 39 EUR mesečno — u to je uključen i rad asistenta i praćenje i dopune baze znanja, nema odvojenog računa za korišćenje. Prva tri meseca doterivanja odgovora su uključena. Automatska obrada dokumenata (fakture, ugovori, prijave) — od 1.200 EUR.",
     locale: "sr",
     category: "pricing",
   },
@@ -248,7 +248,7 @@ const SR_CHUNKS: Chunk[] = [
   // --- UPOREDBE SA KONKURENCIJOM ---
   {
     content:
-      "Solvera vs. velika agencija: Velike agencije naplaćuju višestruko više jer plaćaju skupe kancelarije, posrednike koji prenose poruke i marketing timove. Kod Solvere radite direktno sa inženjerom koji pravi vaš proizvod — nema posrednika ni nepotrebnih troškova. Isti kvalitet, brža isporuka, znatno niža cena. Primer: agencija za sajt traži nekoliko hiljada evra, kod mene sajt u paketu Start košta 590 EUR i gotov je za 7 dana.",
+      "Solvera vs. velika agencija: Velike agencije naplaćuju višestruko više jer plaćaju skupe kancelarije, posrednike koji prenose poruke i marketing timove. Kod Solvere radite direktno sa inženjerom koji pravi vaš proizvod — nema posrednika ni nepotrebnih troškova. Isti kvalitet, brža isporuka, znatno niža cena. Primer: agencija za sajt traži nekoliko hiljada evra, kod mene sajt u paketu Start košta 350 EUR i gotov je za 7 dana.",
     locale: "sr",
     category: "about",
   },
@@ -282,19 +282,19 @@ const SR_CHUNKS: Chunk[] = [
   // --- SPECIFIČNI SCENARIJI ---
   {
     content:
-      "Rešenje za restorane i kafiće: Solvera pravi sajtove za ugostiteljske objekte sa online menijem, rezervacijom stolova, radnim vremenom, galerijom fotografija i integracijom sa Google Maps. Opciono: online naručivanje hrane, integracija sa servisima za dostavu, QR kod za digitalni meni. Cena izrade sajta od 590 EUR, sa online porudžbinom 1.190 EUR (paket Biznis) (ovo je cena web sajta, ne AI usluge).",
+      "Rešenje za restorane i kafiće: Solvera pravi sajtove za ugostiteljske objekte sa online menijem, rezervacijom stolova, radnim vremenom, galerijom fotografija i integracijom sa Google Maps. Opciono: online naručivanje hrane, integracija sa servisima za dostavu, QR kod za digitalni meni. Cena izrade sajta od 350 EUR, sa online porudžbinom 850 EUR (paket Biznis) (ovo je cena web sajta, ne AI usluge).",
     locale: "sr",
     category: "services",
   },
   {
     content:
-      "Rešenje za lekare, stomatologe i ordinacije: Profesionalan sajt sa opisom usluga, timom lekara, online zakazivanjem termina, kontakt formom i mapom lokacije. GDPR/ZZPL usklađen za zaštitu podataka pacijenata. Opciono: integracija sa kalendarom za automatsko zakazivanje, SMS/email podsetnici za pacijente. Cena od 590 EUR, sa online zakazivanjem 1.190 EUR (paket Biznis).",
+      "Rešenje za lekare, stomatologe i ordinacije: Profesionalan sajt sa opisom usluga, timom lekara, online zakazivanjem termina, kontakt formom i mapom lokacije. GDPR/ZZPL usklađen za zaštitu podataka pacijenata. Opciono: integracija sa kalendarom za automatsko zakazivanje, SMS/email podsetnici za pacijente. Cena od 350 EUR, sa online zakazivanjem 850 EUR (paket Biznis).",
     locale: "sr",
     category: "services",
   },
   {
     content:
-      "Rešenje za advokate i advokatske kancelarije: Profesionalan sajt sa oblastima prava, biografijama advokata, kontakt formom za konsultacije, blog za pravne savete i FAQ sekcijom. SEO optimizovan za lokalne pretrage (npr. 'advokat Novi Sad'). Cena izrade sajta od 590 EUR (ovo je cena web sajta, ne AI usluge).",
+      "Rešenje za advokate i advokatske kancelarije: Profesionalan sajt sa oblastima prava, biografijama advokata, kontakt formom za konsultacije, blog za pravne savete i FAQ sekcijom. SEO optimizovan za lokalne pretrage (npr. 'advokat Novi Sad'). Cena izrade sajta od 350 EUR (ovo je cena web sajta, ne AI usluge).",
     locale: "sr",
     category: "services",
   },
@@ -306,13 +306,13 @@ const SR_CHUNKS: Chunk[] = [
   },
   {
     content:
-      "Rešenje za nekretnine i agencije za nekretnine: Sajt sa katalogom nekretnina, naprednom pretragom (lokacija, cena, tip), galerijom fotografija, mapom i kontakt formom za svaku nekretninu. Admin panel za dodavanje i uređivanje nekretnina. Opciono: integracija sa portalima za nekretnine. Cena izrade sajta od 1.190 EUR (ovo je cena web sajta, ne AI usluge).",
+      "Rešenje za nekretnine i agencije za nekretnine: Sajt sa katalogom nekretnina, naprednom pretragom (lokacija, cena, tip), galerijom fotografija, mapom i kontakt formom za svaku nekretninu. Admin panel za dodavanje i uređivanje nekretnina. Opciono: integracija sa portalima za nekretnine. Cena izrade sajta od 850 EUR (ovo je cena web sajta, ne AI usluge).",
     locale: "sr",
     category: "services",
   },
   {
     content:
-      "Rešenje za fitnes centre i teretane: Sajt sa rasporedom treninga, opisom programa, cenama članarina, online prijavom i integracijom sa društvenim mrežama. Opciono: sistem za rezervaciju termina, praćenje napretka članova, mobilna aplikacija. Cena od 590 EUR.",
+      "Rešenje za fitnes centre i teretane: Sajt sa rasporedom treninga, opisom programa, cenama članarina, online prijavom i integracijom sa društvenim mrežama. Opciono: sistem za rezervaciju termina, praćenje napretka članova, mobilna aplikacija. Cena od 350 EUR.",
     locale: "sr",
     category: "services",
   },
@@ -478,7 +478,7 @@ const SR_CHUNKS: Chunk[] = [
   // --- OBJECTION HANDLING ---
   {
     content:
-      "Kada klijent kaže 'preskupo je': Razmislite koliko vas košta da NEMATE sajt. Istraživanja pokazuju da 80% kupaca u Srbiji pretražuje firmu online pre nego što pozove ili dođe. Bez sajta, gubite te ljude — oni odu kod konkurencije koja ima online prisustvo. Sajt od 590 EUR se isplati već sa 2-3 nova klijenta koje dobijete preko njega. Plus, sajt radi za vas 24/7 — to je najjeftiniji 'zaposleni' kojeg ćete ikada imati.",
+      "Kada klijent kaže 'preskupo je': Razmislite koliko vas košta da NEMATE sajt. Istraživanja pokazuju da 80% kupaca u Srbiji pretražuje firmu online pre nego što pozove ili dođe. Bez sajta, gubite te ljude — oni odu kod konkurencije koja ima online prisustvo. Sajt od 350 EUR se isplati već sa 2-3 nova klijenta koje dobijete preko njega. Plus, sajt radi za vas 24/7 — to je najjeftiniji 'zaposleni' kojeg ćete ikada imati.",
     locale: "sr",
     category: "sales",
   },
@@ -502,7 +502,7 @@ const SR_CHUNKS: Chunk[] = [
   },
   {
     content:
-      "Kada klijent kaže 'treba mi samo jednostavan sajt': Čak i najjednostavniji sajt treba da radi posao — da privuče posetioce, da ih ubedi i da ih pretvori u klijente. Sajt koji samo postoji ali ne konvertuje je bačen novac. Pravim sajtove koji su optimizovani za konverziju: jasan poziv na akciju, brzo učitavanje, SEO od prvog dana, kontakt forma koja radi. Sajt od 590 EUR koji vam donese 5 novih klijenata mesečno — to je investicija, ne trošak.",
+      "Kada klijent kaže 'treba mi samo jednostavan sajt': Čak i najjednostavniji sajt treba da radi posao — da privuče posetioce, da ih ubedi i da ih pretvori u klijente. Sajt koji samo postoji ali ne konvertuje je bačen novac. Pravim sajtove koji su optimizovani za konverziju: jasan poziv na akciju, brzo učitavanje, SEO od prvog dana, kontakt forma koja radi. Sajt od 350 EUR koji vam donese 5 novih klijenata mesečno — to je investicija, ne trošak.",
     locale: "sr",
     category: "sales",
   },
@@ -510,7 +510,7 @@ const SR_CHUNKS: Chunk[] = [
   // --- ROI I BUSINESS CASE ---
   {
     content:
-      "Koliko košta firma BEZ sajta ili sa lošim sajtom: 93% kupovnih odluka počinje pretragom na internetu. Firma bez sajta je nevidljiva za te ljude. U Srbiji, e-commerce raste 20-30% godišnje. Firme sa profesionalnim sajtom prijavljuju 40-60% više upita nego firme bez online prisustva. Svaka sekunda sporijeg učitavanja sajta smanjuje konverziju za 7%. Sajt od 590 EUR koji vam donese samo 3-4 nova klijenta mesečno se isplati višestruko.",
+      "Koliko košta firma BEZ sajta ili sa lošim sajtom: 93% kupovnih odluka počinje pretragom na internetu. Firma bez sajta je nevidljiva za te ljude. U Srbiji, e-commerce raste 20-30% godišnje. Firme sa profesionalnim sajtom prijavljuju 40-60% više upita nego firme bez online prisustva. Svaka sekunda sporijeg učitavanja sajta smanjuje konverziju za 7%. Sajt od 350 EUR koji vam donese samo 3-4 nova klijenta mesečno se isplati višestruko.",
     locale: "sr",
     category: "sales",
   },
@@ -655,7 +655,7 @@ const SR_CHUNKS: Chunk[] = [
   // --- ŠTA NUDIMO (sažetak za quick reference) ---
   {
     content:
-      "Šta Solvera nudi: 1) SAJTOVI — paket Start 590€ (7 dana), Biznis 1.190€, prodavnica ili aplikacija od 2.400€. 2) POSLOVNI SISTEMI — evidencije, zakazivanja, pregledne table, onlajn platforme, od 1.500€. 3) AI ASISTENT NA SAJTU — obučen na vašim podacima, 24/7, uzima kontakt, od 690€. 4) AI ASISTENT NA TELEFONU — javlja se umesto vas, srpski glas, zakazuje termine, od 990€. 5) AI AUTOMATIZACIJA — obrada dokumenata, razvrstavanje mejlova, sažeci, od 1.200€. Uz sve: Partner paket posle isporuke i besplatan probni sajt za 48h pre uplate. Solvera NE radi Zapier-tip opšte workflow automatizacije.",
+      "Šta Solvera nudi: 1) SAJTOVI — paket Start 350€ (7 dana), Biznis 850€, prodavnica ili aplikacija od 1.500€. 2) POSLOVNI SISTEMI — evidencije, zakazivanja, pregledne table, onlajn platforme, od 1.500€. 3) AI ASISTENT NA SAJTU — obučen na vašim podacima, 24/7, uzima kontakt, od 450€. 4) AI ASISTENT NA TELEFONU — javlja se umesto vas, srpski glas, zakazuje termine, od 990€. 5) AI AUTOMATIZACIJA — obrada dokumenata, razvrstavanje mejlova, sažeci, od 1.200€. Uz sve: Partner paket posle isporuke i besplatan probni sajt za 48h pre uplate. Solvera NE radi Zapier-tip opšte workflow automatizacije.",
     locale: "sr",
     category: "services",
   },

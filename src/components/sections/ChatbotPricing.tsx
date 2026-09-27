@@ -59,7 +59,7 @@ export function ChatbotPricing() {
             className="card-matte rounded-3xl p-6 md:p-8"
           >
             <div className="text-sm font-medium text-foreground-secondary">Izrada</div>
-            <div className="mt-1 text-4xl font-semibold text-metal">od 690€</div>
+            <div className="mt-1 text-4xl font-semibold text-metal">od 450€</div>
             <div className="mt-1 text-xs text-foreground-muted">jednokratno, plaća se jednom</div>
 
             <ul className="mt-6 space-y-2.5">

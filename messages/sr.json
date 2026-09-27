@@ -83,7 +83,7 @@
     "chatbot": {
       "title": "AI Chatbot na sajtu",
       "description": "Posetilac sajta ima pitanje u 23h. Asistent odgovara odmah, na osnovu vaših podataka — cene, usluge, procedure. Prepozna ozbiljan upit, uzme kontakt i pošalje vam ga na mejl. Ujutru dobijate spisak zainteresovanih umesto spiska propuštenih pitanja.",
-      "price": "Od 690€ · Partner paket od 39€ mesečno"
+      "price": "Od 450€ · Partner paket od 39€ mesečno"
     },
     "voice": {
       "title": "AI Voice — prima pozive",
@@ -98,7 +98,7 @@
     "websites": {
       "title": "Sajtovi i web aplikacije",
       "description": "Moderni sajtovi spremni za Google pretragu, brzo isporučeni — uz održavanje da sve radi i posle puštanja.",
-      "price": "Od 590€ · Partner paket od 49€ mesečno"
+      "price": "Od 350€ · Partner paket od 49€ mesečno"
     },
     "enterprise": {
       "title": "Poslovni sistemi",
@@ -298,7 +298,7 @@
           },
           "q3": {
             "question": "Koliko košta?",
-            "answer": "Izrada kreće od 690 evra. Tačan iznos zavisi od toga koliko toga asistent treba da zna i da li se povezuje sa programima koje već koristite. Partner paket je od 39 evra mesečno i u njemu je sve uključeno — rad asistenta, praćenje razgovora i dopune znanja."
+            "answer": "Izrada kreće od 450 evra. Tačan iznos zavisi od toga koliko toga asistent treba da zna i da li se povezuje sa programima koje već koristite. Partner paket je od 39 evra mesečno i u njemu je sve uključeno — rad asistenta, praćenje razgovora i dopune znanja."
           },
           "q4": {
             "question": "Koliko traje dok ne proradi?",
@@ -1358,7 +1358,7 @@
             "Online prodavnica",
             "Web aplikacija sa korisničkim nalozima"
           ],
-          "price": "590€",
+          "price": "350€",
           "upkeep": "od 49€ mesečno"
         },
         "enterprise": {
@@ -1378,11 +1378,11 @@
           "title": "AI asistenti i automatizacija",
           "lead": "Asistent koji na srpskom odgovara na pitanja i zakazuje termine, i automatizacija posla koji se ponavlja.",
           "bullets": [
-            "Asistent na sajtu — od 690€",
+            "Asistent na sajtu — od 450€",
             "Asistent koji se javlja na telefon — od 990€",
             "Automatizacija mejlova i dokumenata — od 1.200€"
           ],
-          "price": "690€",
+          "price": "450€",
           "upkeep": "od 39€ mesečno"
         }
       },
