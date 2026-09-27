@@ -5,7 +5,7 @@ import { CTABanner } from "@/components/sections/CTABanner";
 export const metadata: Metadata = {
   title: "Cene — sajtovi, poslovni sistemi i AI asistenti",
   description:
-    "Fiksne cene i rokovi: sajt od 590€ za 7 dana, poslovni sistemi od 2.900€, AI asistent od 690€. Partner paket od 39€ mesečno. Besplatan probni sajt pre plaćanja.",
+    "Fiksne cene i rokovi: sajt od 590€ za 7 dana, poslovni sistemi od 1.500€, AI asistent od 690€. Partner paket od 39€ mesečno. Besplatan probni sajt pre plaćanja.",
   alternates: { canonical: "https://www.solveradev.rs/cene" },
   openGraph: {
     title: "Cene — Solvera",

@@ -103,7 +103,7 @@
     "enterprise": {
       "title": "Poslovni sistemi",
       "description": "Interni alati, pregledne table, programi koji se prodaju kao usluga. Ako vam je AI deo većeg sistema — gradim i taj sistem oko njega.",
-      "price": "Od 2.900€ · Partner paket od 149€ mesečno"
+      "price": "Od 1.500€ · Partner paket od 149€ mesečno"
     }
   },
   "ChatDemo": {
@@ -1370,7 +1370,7 @@
             "Pregledne table sa podacima",
             "Onlajn platforme i portali za klijente"
           ],
-          "price": "2.900€",
+          "price": "1.500€",
           "upkeep": "od 149€ mesečno"
         },
         "ai": {

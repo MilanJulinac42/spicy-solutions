@@ -110,7 +110,7 @@ const SR_CHUNKS: Chunk[] = [
   // --- CENE ---
   {
     content:
-      "Cene Solvera usluga: Sajtovi — paket Start 590 EUR (do 5 stranica, gotovo za 7 dana), paket Biznis 1.190 EUR (do 10 stranica, online zakazivanje ili porudžbina, 14 dana), prodavnica ili web aplikacija od 2.400 EUR. Poslovni sistemi od 2.900 EUR. AI asistent na sajtu od 690 EUR. AI asistent na telefonu od 990 EUR. AI automatizacija od 1.200 EUR. Partner paket (mesečna briga posle isporuke): sajt 49 EUR, AI asistent na sajtu 39 EUR, AI asistent na telefonu 79 EUR (do 200 minuta, preko toga 0,20 EUR po minutu), AI automatizacija 49 EUR, poslovni sistem od 149 EUR mesečno. Pre bilo kakve uplate: besplatan probni sajt za 48h. Sve cene u eurima, bez PDV. Sve cene su na solveradev.rs/cene.",
+      "Cene Solvera usluga: Sajtovi — paket Start 590 EUR (do 5 stranica, gotovo za 7 dana), paket Biznis 1.190 EUR (do 10 stranica, online zakazivanje ili porudžbina, 14 dana), prodavnica ili web aplikacija od 2.400 EUR. Poslovni sistemi od 1.500 EUR. AI asistent na sajtu od 690 EUR. AI asistent na telefonu od 990 EUR. AI automatizacija od 1.200 EUR. Partner paket (mesečna briga posle isporuke): sajt 49 EUR, AI asistent na sajtu 39 EUR, AI asistent na telefonu 79 EUR (do 200 minuta, preko toga 0,20 EUR po minutu), AI automatizacija 49 EUR, poslovni sistem od 149 EUR mesečno. Pre bilo kakve uplate: besplatan probni sajt za 48h. Sve cene u eurima, bez PDV. Sve cene su na solveradev.rs/cene.",
     locale: "sr",
     category: "pricing",
   },
@@ -188,7 +188,7 @@ const SR_CHUNKS: Chunk[] = [
   },
   {
     content:
-      "Detaljne cene poslovnih sistema: Izrada kreće od 2.900 EUR za prvu radnu verziju, a puni sistem zavisi od broja tokova posla i povezivanja sa programima koje već koristite. Partner paket je od 149 EUR mesečno — u to ulazi server, praćenje grešaka i garantovan odgovor na prijavljenu grešku u roku od 48 sati. Nove funkcije se dogovaraju posebno, po fiksnoj ceni ili kroz mesečni paket sati.",
+      "Detaljne cene poslovnih sistema: Izrada kreće od 1.500 EUR za prvu radnu verziju, a puni sistem zavisi od broja tokova posla i povezivanja sa programima koje već koristite. Partner paket je od 149 EUR mesečno — u to ulazi server, praćenje grešaka i garantovan odgovor na prijavljenu grešku u roku od 48 sati. Nove funkcije se dogovaraju posebno, po fiksnoj ceni ili kroz mesečni paket sati.",
     locale: "sr",
     category: "pricing",
   },
@@ -300,7 +300,7 @@ const SR_CHUNKS: Chunk[] = [
   },
   {
     content:
-      "Rešenje za online kurseve i edukaciju: Platforma za e-learning sa video lekcijama, kvizovima, sertifikatima, korisničkim nalozima i praćenjem napretka. Integracija sa platnim sistemima za naplatu kurseva. Opciono: live streaming predavanja, forum za diskusije, affiliate program. Cena izrade platforme od 2.900 EUR (ovo je cena web platforme, ne AI usluge).",
+      "Rešenje za online kurseve i edukaciju: Platforma za e-learning sa video lekcijama, kvizovima, sertifikatima, korisničkim nalozima i praćenjem napretka. Integracija sa platnim sistemima za naplatu kurseva. Opciono: live streaming predavanja, forum za diskusije, affiliate program. Cena izrade platforme od 1.500 EUR (ovo je cena web platforme, ne AI usluge).",
     locale: "sr",
     category: "services",
   },
@@ -655,7 +655,7 @@ const SR_CHUNKS: Chunk[] = [
   // --- ŠTA NUDIMO (sažetak za quick reference) ---
   {
     content:
-      "Šta Solvera nudi: 1) SAJTOVI — paket Start 590€ (7 dana), Biznis 1.190€, prodavnica ili aplikacija od 2.400€. 2) POSLOVNI SISTEMI — evidencije, zakazivanja, pregledne table, onlajn platforme, od 2.900€. 3) AI ASISTENT NA SAJTU — obučen na vašim podacima, 24/7, uzima kontakt, od 690€. 4) AI ASISTENT NA TELEFONU — javlja se umesto vas, srpski glas, zakazuje termine, od 990€. 5) AI AUTOMATIZACIJA — obrada dokumenata, razvrstavanje mejlova, sažeci, od 1.200€. Uz sve: Partner paket posle isporuke i besplatan probni sajt za 48h pre uplate. Solvera NE radi Zapier-tip opšte workflow automatizacije.",
+      "Šta Solvera nudi: 1) SAJTOVI — paket Start 590€ (7 dana), Biznis 1.190€, prodavnica ili aplikacija od 2.400€. 2) POSLOVNI SISTEMI — evidencije, zakazivanja, pregledne table, onlajn platforme, od 1.500€. 3) AI ASISTENT NA SAJTU — obučen na vašim podacima, 24/7, uzima kontakt, od 690€. 4) AI ASISTENT NA TELEFONU — javlja se umesto vas, srpski glas, zakazuje termine, od 990€. 5) AI AUTOMATIZACIJA — obrada dokumenata, razvrstavanje mejlova, sažeci, od 1.200€. Uz sve: Partner paket posle isporuke i besplatan probni sajt za 48h pre uplate. Solvera NE radi Zapier-tip opšte workflow automatizacije.",
     locale: "sr",
     category: "services",
   },

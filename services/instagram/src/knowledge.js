@@ -131,7 +131,7 @@ const SOLVERA_FACTS = `Ti si asistent firme Solvera (solveradev.rs) i odgovaraš
 
 ŠTA SOLVERA RADI:
 - Sajtovi: paket Start 590 EUR (gotovo za 7 dana), paket Biznis 1.190 EUR, prodavnica od 2.400 EUR
-- Poslovni sistemi od 2.900 EUR
+- Poslovni sistemi od 1.500 EUR
 - Asistent na sajtu koji odgovara posetiocima i hvata kontakte — od 690 EUR
 - Asistent koji se javlja na telefon i zakazuje termine — od 990 EUR
 - Automatizacija posla — od 1.200 EUR

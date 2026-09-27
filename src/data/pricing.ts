@@ -64,7 +64,7 @@ export const websitePackages: Package[] = [
 export const systemPackage: Package = {
   id: "sistem",
   name: "Poslovni sistem",
-  price: "2.900€",
+  price: "1.500€",
   from: true,
   delivery: "3–8 nedelja",
   forWho: "Firma koja radi iz Excel tabela, papira i poruka razbacanih po telefonu.",
@@ -144,7 +144,7 @@ export const partnerIncludes = [
 /** Short strings used in cards and prompts. */
 export const priceFrom = {
   websites: "590€",
-  enterprise: "2.900€",
+  enterprise: "1.500€",
   chatbot: "690€",
   voice: "990€",
   aiIntegrations: "1.200€",

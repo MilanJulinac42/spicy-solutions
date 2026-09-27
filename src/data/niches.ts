@@ -38,7 +38,7 @@ export const niches: Niche[] = [
     ],
     solutions: [
       { title: "Sajt škole", body: "Kursevi, nivoi, cene i utisci polaznika, uz prijavu za besplatnu konsultaciju.", price: "od 1.190€", href: "/usluge/websites" },
-      { title: "Onlajn platforma", body: "Kursevi i vežbe koje škola sama pravi, nalozi polaznika, zakazivanje časova sa Zoom-om, plaćanje karticom.", price: "od 2.900€", href: "/usluge/enterprise" },
+      { title: "Onlajn platforma", body: "Kursevi i vežbe koje škola sama pravi, nalozi polaznika, zakazivanje časova sa Zoom-om, plaćanje karticom.", price: "od 1.500€", href: "/usluge/enterprise" },
       { title: "AI asistent za upite", body: "Odgovara o terminima, nivoima i cenama iz vaših podataka i šalje vam kontakt zainteresovanih.", price: "od 690€", href: "/usluge/chatbot" },
     ],
     proof: {
