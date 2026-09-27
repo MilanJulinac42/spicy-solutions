@@ -1,6 +1,7 @@
 import type { MetadataRoute } from "next";
 import { getAllPosts } from "@/lib/blog";
 import { services } from "@/data/services";
+import { niches } from "@/data/niches";
 
 const baseUrl = "https://www.solveradev.rs";
 
@@ -14,7 +15,10 @@ const baseUrl = "https://www.solveradev.rs";
 const staticRoutes = [
   "",
   "/usluge",
+  "/cene",
+  "/probni-sajt",
   "/radovi",
+  "/radovi/spiko-edu",
   "/proces",
   "/o-solveri",
   "/blog",
@@ -30,7 +34,7 @@ const LOW_PRIORITY = ["/politika-privatnosti", "/uslovi-koriscenja", "/data-dele
 
 function priority(route: string) {
   if (route === "") return 1;
-  if (route === "/usluge") return 0.9;
+  if (route === "/usluge" || route === "/cene" || route === "/probni-sajt") return 0.9;
   if (LOW_PRIORITY.includes(route)) return 0.3;
   return 0.7;
 }
@@ -57,5 +61,12 @@ export default function sitemap(): MetadataRoute.Sitemap {
     priority: 0.6,
   }));
 
-  return [...staticEntries, ...serviceEntries, ...postEntries];
+  const nicheEntries: MetadataRoute.Sitemap = niches.map((n) => ({
+    url: `${baseUrl}/za/${n.slug}`,
+    lastModified: new Date(),
+    changeFrequency: "monthly",
+    priority: 0.8,
+  }));
+
+  return [...staticEntries, ...serviceEntries, ...nicheEntries, ...postEntries];
 }

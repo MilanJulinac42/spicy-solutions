@@ -159,12 +159,12 @@ export function Hero() {
               className="mt-10 flex flex-col sm:flex-row items-center justify-center lg:justify-start gap-3"
             >
               <Link
-                href="/kontakt"
+                href="/probni-sajt"
                 onClick={() =>
                   trackEvent("cta_click", {
                     cta_location: "hero",
-                    cta_label: "kontakt_primary",
-                    destination: "/kontakt",
+                    cta_label: "trial_primary",
+                    destination: "/probni-sajt",
                   })
                 }
                 className="btn-metal group w-full sm:w-auto inline-flex items-center justify-center gap-2 rounded-full px-7 py-4 text-[15px] font-semibold"

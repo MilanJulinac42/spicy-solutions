@@ -56,10 +56,10 @@ export function ChatbotPricing() {
           {/* One-off */}
           <motion.div
             variants={fadeInUp}
-            className="rounded-2xl border border-spicy-400/30 bg-spicy-400/[0.05] p-6 md:p-8"
+            className="card-matte rounded-3xl p-6 md:p-8"
           >
             <div className="text-sm font-medium text-foreground-secondary">Izrada</div>
-            <div className="mt-1 text-4xl font-bold text-foreground">od 450€</div>
+            <div className="mt-1 text-4xl font-semibold text-metal">od 690€</div>
             <div className="mt-1 text-xs text-foreground-muted">jednokratno, plaća se jednom</div>
 
             <ul className="mt-6 space-y-2.5">
@@ -68,7 +68,7 @@ export function ChatbotPricing() {
                   key={item}
                   className="flex items-start gap-2.5 text-sm text-foreground-secondary"
                 >
-                  <Check className="mt-0.5 h-4 w-4 shrink-0 text-spicy-400" />
+                  <Check className="mt-0.5 h-4 w-4 shrink-0 text-spicy-300" />
                   {item}
                 </li>
               ))}
@@ -78,15 +78,16 @@ export function ChatbotPricing() {
           {/* Monthly */}
           <motion.div
             variants={fadeInUp}
-            className="flex flex-col rounded-2xl border border-border-default bg-surface-secondary p-6 md:p-8"
+            className="card-matte flex flex-col rounded-3xl p-6 md:p-8"
           >
-            <div className="text-sm font-medium text-foreground-secondary">Održavanje</div>
-            <div className="mt-1 text-4xl font-bold text-foreground">od 20€</div>
-            <div className="mt-1 text-xs text-foreground-muted">mesečno, opciono</div>
+            <div className="text-sm font-medium text-foreground-secondary">Partner paket</div>
+            <div className="mt-1 text-4xl font-semibold text-metal">od 39€</div>
+            <div className="mt-1 text-xs text-foreground-muted">mesečno</div>
 
             <p className="mt-6 text-sm leading-relaxed text-foreground-muted">
-              Sve uključeno u jedan iznos — rad asistenta, praćenje, dopune baze znanja
-              i sitne izmene. Nema odvojenog računa za korišćenje.
+              Asistent koji je svakog meseca pametniji: rad asistenta, pregled razgovora,
+              dopune znanja na osnovu onoga što klijenti pitaju i mesečni izveštaj. Jedna
+              cena, bez odvojenih računa za korišćenje.
             </p>
 
             <div className="mt-5 rounded-xl border border-border-subtle bg-surface p-4">
@@ -112,22 +113,22 @@ export function ChatbotPricing() {
           className="mt-8 flex flex-col items-center gap-4 text-center"
         >
           <p className="max-w-xl text-sm text-foreground-muted">
-            Prva tri meseca doterivanja odgovora su uključena. Asistent i podaci ostaju
-            vaši — održavanje je opciono, bez njega i dalje radi.
+            Prva tri meseca doterivanja odgovora su uključena. Pre bilo kakve uplate
+            dobijate probnog asistenta, obučenog na vašem sajtu.
           </p>
           <div className="flex flex-wrap justify-center gap-3">
             <Link
-              href="/kontakt"
-              className="inline-flex items-center gap-2 rounded-lg bg-spicy-400 px-6 py-3 text-sm font-semibold text-white shadow-lg shadow-spicy-400/25 transition-colors hover:bg-spicy-500"
+              href="/probni-sajt?usluga=asistent"
+              className="btn-metal inline-flex items-center gap-2 rounded-full px-6 py-3 text-sm font-semibold"
             >
-              Besplatna konsultacija
+              Besplatan probni asistent
               <ArrowRight className="h-4 w-4" />
             </Link>
             <Link
-              href="/zapocni-projekat"
-              className="inline-flex items-center gap-2 rounded-lg border border-border-default px-6 py-3 text-sm font-semibold text-foreground transition-colors hover:border-spicy-400/30 hover:text-spicy-400"
+              href="/cene"
+              className="btn-matte inline-flex items-center gap-2 rounded-full px-6 py-3 text-sm font-semibold"
             >
-              Započni projekat
+              Sve cene
             </Link>
           </div>
         </motion.div>

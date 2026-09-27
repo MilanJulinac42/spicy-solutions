@@ -52,7 +52,7 @@ export function SaasVsCustom() {
           <ul className="space-y-2.5">
             {CUSTOM.map((item) => (
               <li key={item} className="flex items-start gap-2.5 text-sm text-foreground-secondary">
-                <Check className="mt-0.5 h-4 w-4 shrink-0 text-emerald-400" />
+                <Check className="mt-0.5 h-4 w-4 shrink-0 text-spicy-300" />
                 {item}
               </li>
             ))}
@@ -63,9 +63,9 @@ export function SaasVsCustom() {
       <p className="mt-3 text-center text-[13px] text-foreground-muted">
         Gruba računica: na ~100€ mesečno, pretplata te za dve godine košta{" "}
         <strong className="text-foreground">oko 2.400€</strong>. Sopstveni asistent — izrada
-        od 450€ i 20€ mesečno — ispod{" "}
-        <strong className="text-foreground">1.000€</strong> za isti period, i ostaje{" "}
-        <strong className="text-foreground">vaš</strong>.
+        od 690€ i Partner paket od 39€ mesečno — oko{" "}
+        <strong className="text-foreground">1.600€</strong> za isti period, i napravljen je{" "}
+        <strong className="text-foreground">baš za vaš posao</strong>.
       </p>
     </div>
   );

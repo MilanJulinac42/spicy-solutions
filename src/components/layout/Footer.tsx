@@ -27,7 +27,7 @@ export function Footer() {
               {t("Footer.description")}
             </p>
             <Link
-              href="/kontakt"
+              href="/probni-sajt"
               className="btn-metal mt-6 inline-flex items-center gap-2 rounded-full px-5 py-2.5 text-sm font-semibold"
             >
               {t("Navbar.getStarted")}
@@ -41,11 +41,12 @@ export function Footer() {
             </h3>
             <ul className="space-y-3">
               <li><Link href="/usluge" className={linkCls}>{t("Navbar.services")}</Link></li>
+              <li><Link href="/cene" className={linkCls}>{t("Navbar.pricing")}</Link></li>
               <li><Link href="/radovi" className={linkCls}>{t("Navbar.work")}</Link></li>
               <li><Link href="/proces" className={linkCls}>{t("Navbar.process")}</Link></li>
               <li><Link href="/o-solveri" className={linkCls}>{t("Navbar.about")}</Link></li>
               <li><Link href="/blog" className={linkCls}>{t("Navbar.blog")}</Link></li>
-              <li><Link href="/zapocni-projekat" className={linkCls}>{t("Navbar.calculator")}</Link></li>
+              <li><Link href="/kontakt" className={linkCls}>{t("Navbar.contact")}</Link></li>
             </ul>
           </nav>
 
@@ -59,6 +60,8 @@ export function Footer() {
               <li><Link href="/usluge/chatbot" className={linkCls}>{t("ServicesOverview.chatbot.title")}</Link></li>
               <li><Link href="/usluge/voice" className={linkCls}>{t("ServicesOverview.voice.title")}</Link></li>
               <li><Link href="/usluge/aiIntegrations" className={linkCls}>{t("ServicesOverview.aiIntegrations.title")}</Link></li>
+              <li className="pt-2"><Link href="/za/skole-jezika" className={linkCls}>Za škole jezika</Link></li>
+              <li><Link href="/za/saloni" className={linkCls}>Za salone i frizere</Link></li>
             </ul>
           </nav>
 

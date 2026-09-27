@@ -46,9 +46,9 @@ export function CTABanner() {
             </p>
             <div className="mt-10 flex flex-col sm:flex-row items-center justify-center gap-3">
               <Link
-                href="/kontakt"
+                href="/probni-sajt"
                 onClick={() =>
-                  trackEvent("cta_click", { cta_location: "cta_banner", cta_label: "kontakt", destination: "/kontakt" })
+                  trackEvent("cta_click", { cta_location: "cta_banner", cta_label: "trial", destination: "/probni-sajt" })
                 }
                 className="btn-metal group w-full sm:w-auto inline-flex items-center justify-center gap-2 rounded-full px-7 py-4 text-[15px] font-semibold"
               >

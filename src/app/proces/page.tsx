@@ -882,15 +882,15 @@ export default function ProcessPage() {
               {t("Process.cta.subtitle")}
             </p>
             <Link
-              href="/zapocni-projekat"
+              href="/probni-sajt"
               onClick={() =>
                 trackEvent("cta_click", {
                   cta_location: "process_page_bottom",
-                  cta_label: "start_project",
-                  destination: "/zapocni-projekat",
+                  cta_label: "trial",
+                  destination: "/probni-sajt",
                 })
               }
-              className="inline-flex items-center gap-2 px-8 py-4 bg-spicy-400 text-white rounded-xl font-semibold hover:bg-spicy-500 transition-colors shadow-lg shadow-spicy-400/25 hover:shadow-xl hover:shadow-spicy-400/40"
+              className="btn-metal inline-flex items-center gap-2 px-8 py-4 rounded-full font-semibold"
             >
               {t("Process.cta.button")}
               <ArrowRight className="w-4 h-4" />

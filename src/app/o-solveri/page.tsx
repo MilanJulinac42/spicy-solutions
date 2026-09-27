@@ -376,15 +376,15 @@ export default function AboutPage() {
             </p>
             <div className="flex flex-col sm:flex-row items-center justify-center gap-4">
               <Link
-                href="/kontakt"
+                href="/probni-sajt"
                 onClick={() =>
                   trackEvent("cta_click", {
                     cta_location: "about_bottom",
-                    cta_label: "schedule_call",
-                    destination: "/kontakt",
+                    cta_label: "trial",
+                    destination: "/probni-sajt",
                   })
                 }
-                className="group inline-flex items-center gap-2 px-8 py-4 bg-spicy-400 text-white rounded-lg text-base font-semibold hover:bg-spicy-500 transition-all shadow-lg shadow-spicy-400/25 hover:shadow-xl hover:shadow-spicy-400/40"
+                className="btn-metal group inline-flex items-center gap-2 px-8 py-4 rounded-full text-base font-semibold"
               >
                 {t("About.cta.button")}
                 <ArrowRight className="w-4 h-4 group-hover:translate-x-1 transition-transform" />

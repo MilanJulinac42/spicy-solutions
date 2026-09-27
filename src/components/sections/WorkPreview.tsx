@@ -68,17 +68,28 @@ export function WorkPreview() {
                     Urađeno za <span className="font-semibold text-foreground">{p.duration}</span>
                   </p>
                 )}
-                {p.href && (
-                  <a
-                    href={p.href}
-                    target="_blank"
-                    rel="noopener noreferrer"
-                    className="mt-auto pt-6 inline-flex items-center gap-1.5 self-start text-sm font-semibold text-spicy-200 hover:text-spicy-100 transition-colors"
-                  >
-                    {t("live")}
-                    <ArrowUpRight className="h-4 w-4" />
-                  </a>
-                )}
+                <div className="mt-auto pt-6 flex flex-wrap gap-x-5 gap-y-2">
+                  {p.caseStudy && (
+                    <Link
+                      href={p.caseStudy}
+                      className="inline-flex items-center gap-1.5 text-sm font-semibold text-spicy-200 hover:text-spicy-100 transition-colors"
+                    >
+                      Studija slučaja
+                      <ArrowRight className="h-4 w-4" />
+                    </Link>
+                  )}
+                  {p.href && (
+                    <a
+                      href={p.href}
+                      target="_blank"
+                      rel="noopener noreferrer"
+                      className="inline-flex items-center gap-1.5 text-sm font-semibold text-foreground-secondary hover:text-foreground transition-colors"
+                    >
+                      {t("live")}
+                      <ArrowUpRight className="h-4 w-4" />
+                    </a>
+                  )}
+                </div>
               </div>
             </motion.article>
             );

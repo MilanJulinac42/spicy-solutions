@@ -74,6 +74,14 @@ const exampleIconsMap: Record<string, React.ElementType[]> = {
 
 const ease = [0.22, 1, 0.36, 1] as const;
 
+const trialFor: Record<string, string> = {
+  websites: "sajt",
+  enterprise: "sistem",
+  chatbot: "asistent",
+  voice: "asistent",
+  aiIntegrations: "asistent",
+};
+
 export default function ServicePage() {
   const params = useParams();
   const slug = params.slug as string;
@@ -124,17 +132,17 @@ export default function ServicePage() {
               </p>
               <div className="mt-8 flex flex-col sm:flex-row gap-3">
                 <Link
-                  href="/kontakt"
+                  href={`/probni-sajt?usluga=${trialFor[slug] ?? "sajt"}`}
                   className="btn-metal group inline-flex items-center justify-center gap-2 rounded-full px-7 py-4 text-[15px] font-semibold"
                 >
                   {t(`Services.${slug}.detail.ctaText`)}
                   <ArrowRight className="h-4 w-4 transition-transform group-hover:translate-x-0.5" />
                 </Link>
                 <Link
-                  href="/zapocni-projekat"
+                  href="/cene"
                   className="btn-matte inline-flex items-center justify-center gap-2 rounded-full px-7 py-4 text-[15px] font-semibold"
                 >
-                  {t("Navbar.calculator")}
+                  {t("Home.services.pricesLink")}
                 </Link>
               </div>
             </motion.div>

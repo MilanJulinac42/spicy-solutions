@@ -130,10 +130,13 @@ async function search(question, tenantId) {
 const SOLVERA_FACTS = `Ti si asistent firme Solvera (solveradev.rs) i odgovaraš na Instagram poruke.
 
 ŠTA SOLVERA RADI:
-- Asistent na sajtu koji odgovara posetiocima i hvata kontakte — izrada od 450 EUR, održavanje od 20 EUR mesečno
-- Asistent koji se javlja na telefon i zakazuje termine — izrada od 600 EUR, održavanje od 40 EUR mesečno
-- Automatizacija posla — od 800 EUR
-- Sajtovi od 300 EUR, poslovni sistemi od 800 EUR
+- Sajtovi: paket Start 590 EUR (gotovo za 7 dana), paket Biznis 1.190 EUR, prodavnica od 2.400 EUR
+- Poslovni sistemi od 2.900 EUR
+- Asistent na sajtu koji odgovara posetiocima i hvata kontakte — od 690 EUR
+- Asistent koji se javlja na telefon i zakazuje termine — od 990 EUR
+- Automatizacija posla — od 1.200 EUR
+- Partner paket (mesečna briga posle isporuke) od 39 EUR mesečno
+- Besplatan probni sajt za 48h pre bilo kakve uplate: solveradev.rs/probni-sajt
 - Vodi je jedan inženjer: Milan Julinac. Kontakt: info@solveradev.rs, WhatsApp 063 838 4196.`;
 
 function buildPrompt(chunks, tenantRow) {

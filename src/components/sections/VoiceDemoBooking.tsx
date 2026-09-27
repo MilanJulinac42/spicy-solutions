@@ -334,7 +334,7 @@ export function VoiceDemoBooking() {
               </button>
 
               <p className="text-center text-xs text-foreground-muted">
-                Bez obaveza. Demo je besplatan, a posle poziva dobijaš transkript i iskrenu
+                Demo je besplatan, a posle poziva dobijaš transkript i iskrenu
                 procenu.
               </p>
             </form>

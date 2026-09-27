@@ -153,15 +153,15 @@ export default async function BlogPostPage({ params }: Params) {
         )}
 
         {/* End-of-post CTA */}
-        <div className="mt-14 rounded-2xl border border-spicy-400/20 bg-gradient-to-br from-spicy-400/10 to-spicy-400/5 p-6 md:p-8">
+        <div className="card-matte mt-14 rounded-3xl p-6 md:p-8">
           <h2 className="text-xl md:text-2xl font-bold text-foreground">
             {t("ctaTitle")}
           </h2>
           <p className="mt-2 text-foreground-muted">{t("ctaText")}</p>
           <div className="mt-5 flex flex-wrap gap-3">
             <Link
-              href="/kontakt"
-              className="inline-flex items-center gap-2 rounded-lg bg-spicy-400 px-6 py-3 text-sm font-semibold text-white shadow-lg shadow-spicy-400/25 transition-colors hover:bg-spicy-500"
+              href="/probni-sajt"
+              className="btn-metal inline-flex items-center gap-2 rounded-full px-6 py-3 text-sm font-semibold"
             >
               {t("ctaButton")}
               <ArrowRight className="h-4 w-4" />
@@ -169,7 +169,7 @@ export default async function BlogPostPage({ params }: Params) {
             {post.service && (
               <Link
                 href={`/usluge/${post.service}`}
-                className="inline-flex items-center gap-2 rounded-lg border border-border-default px-6 py-3 text-sm font-semibold text-foreground transition-colors hover:border-spicy-400/30 hover:text-spicy-400"
+                className="btn-matte inline-flex items-center gap-2 rounded-full px-6 py-3 text-sm font-semibold"
               >
                 {t("relatedServiceLabel")}
                 <ArrowRight className="h-4 w-4" />

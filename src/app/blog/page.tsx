@@ -19,10 +19,11 @@ export default async function BlogPage() {
     <section className="pt-32 pb-20 md:pt-40 md:pb-28">
       <Container>
         <header className="max-w-2xl mb-10 md:mb-12">
-          <h1 className="text-3xl md:text-4xl lg:text-5xl font-bold text-foreground">
+          <p className="mb-4 text-xs font-semibold uppercase tracking-[0.22em] text-spicy-300">Blog</p>
+          <h1 className="text-4xl md:text-5xl lg:text-[3.4rem] font-semibold leading-[1.05] text-foreground text-balance">
             {t("title")}
           </h1>
-          <p className="mt-4 text-lg text-foreground-muted leading-relaxed">
+          <p className="mt-5 text-base md:text-lg text-foreground-muted leading-relaxed">
             {t("subtitle")}
           </p>
         </header>

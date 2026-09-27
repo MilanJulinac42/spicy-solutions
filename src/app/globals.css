@@ -184,6 +184,36 @@ body::before {
   color: inherit;
 }
 
+/* Range slider for the calculator: matte track, champagne fill, metal thumb. */
+.calc-range {
+  -webkit-appearance: none;
+  appearance: none;
+  height: 6px;
+  border-radius: 999px;
+  background: linear-gradient(90deg, #C6A274 0%, #D6BA8C var(--pct), #2A2A2F var(--pct));
+  outline: none;
+  cursor: pointer;
+}
+.calc-range::-webkit-slider-thumb {
+  -webkit-appearance: none;
+  width: 22px;
+  height: 22px;
+  border-radius: 50%;
+  background: var(--metal-champagne);
+  border: 2px solid #121214;
+  box-shadow: 0 0 0 1px rgba(214, 186, 140, 0.5), 0 4px 10px rgba(0, 0, 0, 0.5);
+}
+.calc-range::-moz-range-thumb {
+  width: 20px;
+  height: 20px;
+  border-radius: 50%;
+  background: var(--metal-champagne);
+  border: 2px solid #121214;
+}
+.calc-range:focus-visible {
+  box-shadow: 0 0 0 3px rgba(214, 186, 140, 0.35);
+}
+
 /* Smooth scrolling */
 html {
   scroll-behavior: smooth;

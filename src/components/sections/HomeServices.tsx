@@ -3,7 +3,7 @@
 import { useTranslations } from "next-intl";
 import { motion } from "framer-motion";
 import Link from "next/link";
-import { ArrowUpRight, Globe, LayoutDashboard, Sparkles } from "lucide-react";
+import { ArrowRight, ArrowUpRight, Globe, LayoutDashboard, Sparkles } from "lucide-react";
 import { Container } from "@/components/ui/Container";
 import { SectionHeading } from "@/components/ui/SectionHeading";
 import { fadeInUp, staggerContainer } from "@/lib/animations";
@@ -93,6 +93,16 @@ export function HomeServices() {
             );
           })}
         </motion.div>
+
+        <div className="mt-8 flex justify-center">
+          <Link
+            href="/cene"
+            className="btn-matte group inline-flex items-center gap-2 rounded-full px-6 py-3 text-sm font-semibold"
+          >
+            {t("pricesLink")}
+            <ArrowRight className="h-4 w-4 text-spicy-300 transition-transform group-hover:translate-x-0.5" />
+          </Link>
+        </div>
       </Container>
     </section>
   );

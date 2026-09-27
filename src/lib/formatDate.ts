@@ -7,7 +7,7 @@ export function formatDateSr(iso: string): string {
   if (!iso) return "";
   const d = new Date(iso);
   if (Number.isNaN(d.getTime())) return iso;
-  return new Intl.DateTimeFormat("sr-RS", {
+  return new Intl.DateTimeFormat("sr-Latn-RS", {
     day: "numeric",
     month: "long",
     year: "numeric",

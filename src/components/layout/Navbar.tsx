@@ -143,11 +143,18 @@ export function Navbar() {
                                   {t("Services.viewAll")}
                                 </Link>
                                 <Link
-                                  href="/zapocni-projekat"
+                                  href="/za/skole-jezika"
                                   onClick={() => setServicesOpen(false)}
-                                  className="flex items-center gap-3 px-3.5 py-2.5 rounded-xl text-sm font-medium text-spicy-300 hover:bg-surface-tertiary transition-colors"
+                                  className="flex items-center gap-3 px-3.5 py-2.5 rounded-xl text-sm text-foreground-muted hover:bg-surface-tertiary hover:text-foreground transition-colors"
                                 >
-                                  {t("Navbar.calculator")} →
+                                  Za škole jezika
+                                </Link>
+                                <Link
+                                  href="/za/saloni"
+                                  onClick={() => setServicesOpen(false)}
+                                  className="flex items-center gap-3 px-3.5 py-2.5 rounded-xl text-sm text-foreground-muted hover:bg-surface-tertiary hover:text-foreground transition-colors"
+                                >
+                                  Za salone i frizere
                                 </Link>
                               </div>
                             </div>
@@ -188,7 +195,7 @@ export function Navbar() {
             {/* Desktop Actions */}
             <div className="hidden lg:flex items-center gap-3">
               <Link
-                href="/kontakt"
+                href="/probni-sajt"
                 className="btn-metal px-5 py-2.5 rounded-full text-sm font-semibold"
               >
                 {t("Navbar.getStarted")}

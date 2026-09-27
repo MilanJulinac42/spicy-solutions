@@ -22,6 +22,8 @@ export type Project = {
   images: { src: string; alt: string }[];
   /** Which image stands for the project on the home page (default: first). */
   cover?: number;
+  /** Long-form write-up on this site, when there is one. */
+  caseStudy?: string;
   /** Omitted while a project has nothing public to open. */
   href?: string;
   summary: string;
@@ -48,6 +50,7 @@ export const PROJECTS: Project[] = [
     // The course page looks like the school's own site (next card); the admin
     // panel is what makes this one a system.
     cover: 1,
+    caseStudy: "/radovi/spiko-edu",
     summary:
       "Cela škola jezika onlajn. Škola sama pravi kurseve, lekcije i vežbe, polaznik uči i vežba svojim tempom, a čas uživo se zakaže kroz sistem — koji sam napravi Zoom sastanak i upiše termin u kalendar nastavnika.",
     highlights: [
@@ -67,6 +70,7 @@ export const PROJECTS: Project[] = [
     service: "websites",
     images: [{ src: "/radovi/spiko-edu.png", alt: "Naslovna strana sajta Spiko Edu" }],
     href: "https://www.spikoedu.rs",
+    caseStudy: "/radovi/spiko-edu",
     summary:
       "Prezentaciona stranica za školu nemačkog i engleskog jezika. Posetilac vidi kurseve i nivoe, cene i utiske polaznika, pa zakaže besplatne konsultacije — bez traženja i bez zvanja. Radio sam sve sam, od prazne strane do sajta na internetu.",
     highlights: [
@@ -222,22 +226,33 @@ export function Work({
                     </div>
                   </dl>
 
+                  <div className="mt-6 flex flex-wrap gap-3">
+                  {p.caseStudy && (
+                    <Link
+                      href={p.caseStudy}
+                      className="btn-metal inline-flex items-center gap-2 rounded-full px-5 py-2.5 text-sm font-semibold"
+                    >
+                      Studija slučaja
+                      <ArrowUpRight className="h-4 w-4" />
+                    </Link>
+                  )}
                   {p.href ? (
                   <Link
                     href={p.href}
                     target="_blank"
                     rel="noopener noreferrer"
-                    className="btn-matte mt-6 inline-flex items-center gap-2 self-start rounded-full px-5 py-2.5 text-sm font-semibold"
+                    className="btn-matte inline-flex items-center gap-2 rounded-full px-5 py-2.5 text-sm font-semibold"
                   >
                     <ExternalLink className="h-4 w-4 text-spicy-300" />
                     Pogledaj uživo
                     <ArrowUpRight className="h-4 w-4 transition-transform group-hover:translate-x-0.5 group-hover:-translate-y-0.5" />
                   </Link>
                   ) : (
-                    <span className="mt-6 self-start rounded-lg border border-border-default px-4 py-2.5 text-sm text-foreground-muted">
+                    <span className="rounded-full border border-border-default px-4 py-2.5 text-sm text-foreground-muted">
                       Uskoro dostupno
                     </span>
                   )}
+                  </div>
                 </div>
               </div>
             </motion.article>

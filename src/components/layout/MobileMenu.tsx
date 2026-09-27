@@ -153,18 +153,11 @@ export function MobileMenu({ isOpen, onClose, pathname }: MobileMenuProps) {
 
             <div className="p-4 border-t border-border-default space-y-3">
               <Link
-                href="/kontakt"
+                href="/probni-sajt"
                 onClick={onClose}
                 className="btn-metal block w-full text-center px-4 py-3.5 rounded-full text-sm font-semibold"
               >
                 {t("Navbar.getStarted")}
-              </Link>
-              <Link
-                href="/zapocni-projekat"
-                onClick={onClose}
-                className="btn-matte block w-full text-center px-4 py-3.5 rounded-full text-sm font-semibold"
-              >
-                {t("Navbar.calculator")}
               </Link>
             </div>
           </motion.div>

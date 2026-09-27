@@ -8,19 +8,19 @@ import { PhoneCall, ArrowRight } from "lucide-react";
  */
 export function VoiceDemoCTA() {
   return (
-    <div className="my-8 rounded-2xl border border-emerald-400/25 bg-emerald-400/[0.05] p-5 md:p-6">
-      <div className="mb-3 inline-flex items-center gap-2 rounded-full border border-emerald-400/25 bg-emerald-400/10 px-3 py-1">
+    <div className="my-8 rounded-2xl border border-spicy-400/25 bg-spicy-400/[0.05] p-5 md:p-6">
+      <div className="mb-3 inline-flex items-center gap-2 rounded-full border border-spicy-400/25 bg-spicy-400/10 px-3 py-1">
         <span className="relative flex h-2 w-2">
-          <span className="absolute inline-flex h-full w-full animate-ping rounded-full bg-emerald-400/70" />
-          <span className="relative inline-flex h-2 w-2 rounded-full bg-emerald-400" />
+          <span className="absolute inline-flex h-full w-full animate-ping rounded-full bg-spicy-400/70" />
+          <span className="relative inline-flex h-2 w-2 rounded-full bg-spicy-400" />
         </span>
-        <span className="text-[11px] font-mono uppercase tracking-wider text-emerald-400">
+        <span className="text-[11px] uppercase tracking-wider text-spicy-300">
           Radi uživo
         </span>
       </div>
 
       <h3 className="flex items-center gap-2 text-lg font-semibold text-foreground">
-        <PhoneCall className="h-5 w-5 shrink-0 text-emerald-400" />
+        <PhoneCall className="h-5 w-5 shrink-0 text-spicy-300" />
         <span>Čuj kako zvuči — pričaj sa njim odmah</span>
       </h3>
       <p className="mt-1.5 text-sm leading-relaxed text-foreground-muted">
@@ -30,7 +30,7 @@ export function VoiceDemoCTA() {
 
       <Link
         href="/usluge/voice#demo"
-        className="group mt-4 inline-flex items-center gap-2 rounded-xl bg-emerald-500 px-5 py-3 text-sm font-semibold text-white shadow-lg shadow-emerald-500/25 transition-colors hover:bg-emerald-600"
+        className="group mt-4 inline-flex items-center gap-2 rounded-xl bg-spicy-500 px-5 py-3 text-sm font-semibold text-white shadow-lg shadow-spicy-500/25 transition-colors hover:bg-spicy-600"
       >
         <PhoneCall className="h-4 w-4" />
         <span>Probaj glasovni demo</span>

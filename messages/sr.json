@@ -6,13 +6,15 @@
     "about": "O Solveri",
     "blog": "Blog",
     "contact": "Kontakt",
-    "getStarted": "Besplatna konsultacija",
+    "getStarted": "Besplatan probni sajt",
     "calculator": "Započnite projekat",
-    "work": "Radovi"
+    "work": "Radovi",
+    "pricing": "Cene",
+    "trial": "Probni sajt"
   },
   "Blog": {
     "title": "Blog",
-    "subtitle": "AI, automatizacija i praktični saveti za srpske firme — konkretno, bez marketinškog blabla.",
+    "subtitle": "Sajtovi, poslovni programi i AI — praktični saveti za firme u Srbiji, konkretno i bez marketinškog blabla.",
     "readingTime": "{minutes} min čitanja",
     "backToBlog": "Nazad na blog",
     "breadcrumbHome": "Početna",
@@ -21,21 +23,21 @@
     "readPost": "Pročitaj tekst",
     "relatedServiceLabel": "Povezana usluga",
     "ctaTitle": "Hoćeš ovakvo rešenje za svoju firmu?",
-    "ctaText": "Zakaži besplatnu konsultaciju — pogledamo tvoj slučaj i iskreno ti kažem da li se isplati i koliko bi koštalo.",
-    "ctaButton": "Besplatna konsultacija"
+    "ctaText": "Pošalji ime firme i čime se baviš — za 48h dobijaš probnu verziju napravljenu za tebe, pre bilo kakve uplate.",
+    "ctaButton": "Besplatan probni sajt"
   },
   "Hero": {
     "badge": "Brza isporuka. Direktna komunikacija. Kvalitet bez kompromisa.",
     "title": "Vi vodite biznis.",
     "titleHighlight": "Ja rešavam tehnologiju.",
     "subtitle": "Pravim sajtove, programe po kojima firma radi i AI asistente koji odgovaraju klijentima. Radite direktno sa inženjerom — fiksna cena, ugovor i podrška posle isporuke.",
-    "cta": "Zakažite besplatnu konsultaciju",
+    "cta": "Besplatan probni sajt",
     "ctaSecondary": "Pogledajte proces",
     "ctaCalculator": "Započnite projekat",
     "eyebrow": "Sajtovi · Poslovni sistemi · AI asistenti",
     "facts": {
-      "price": "Fiksna cena, dogovorena unapred",
-      "time": "Ugovor i garancija",
+      "price": "Sajt za 7 dana",
+      "time": "Probni sajt pre plaćanja",
       "direct": "Podrška i posle isporuke"
     },
     "ctaWork": "Pogledajte radove",
@@ -66,7 +68,7 @@
     "solution": {
       "title": "Postoji bolji način",
       "point1": "Brza isporuka — radim efikasno sa modernim alatima i ne razvlačim rokove",
-      "point2": "Održavanje bez brige — posle isporuke ja pazim da sve radi, a vi se bavite poslom",
+      "point2": "Partner i posle isporuke — ja pazim da sve radi, a vi se bavite poslom",
       "point3": "Moderne tehnologije — Next.js, AI, automatizacija. Alati koji ubrzavaju razvoj",
       "point4": "Direktan pristup meni — inženjeru koji pravi vaš proizvod. Bez posrednika, bez čekanja"
     },
@@ -81,27 +83,27 @@
     "chatbot": {
       "title": "AI Chatbot na sajtu",
       "description": "Posetilac sajta ima pitanje u 23h. Asistent odgovara odmah, na osnovu vaših podataka — cene, usluge, procedure. Prepozna ozbiljan upit, uzme kontakt i pošalje vam ga na mejl. Ujutru dobijate spisak zainteresovanih umesto spiska propuštenih pitanja.",
-      "price": "Od 450€ · održavanje od 20€ mesečno"
+      "price": "Od 690€ · Partner paket od 39€ mesečno"
     },
     "voice": {
       "title": "AI Voice — prima pozive",
       "description": "Frizerski salon, ordinacija, turistička agencija — klijenti zovu kad ne radite ili kad ste zauzeti. Izgubljeni pozivi = izgubljeni klijenti. AI voice agent prima poziv, razume zahtev na srpskom, zakazuje termin ili prebacuje vama kad je potrebno.",
-      "price": "Od 600€ · održavanje od 40€ mesečno"
+      "price": "Od 990€ · Partner paket od 79€ mesečno"
     },
     "aiIntegrations": {
       "title": "AI automatizacija",
       "description": "Email upit dolazi — AI klasifikuje hitnost, izvlači ključne podatke, predlaže odgovor. Faktura stiže — AI parsira, validira, ubacuje u sistem. Sastanak završen — AI generiše sažetak i akcione stavke. Konkretni tokovi za vaš proces.",
-      "price": "Od 800€ · održavanje od 30€ mesečno"
+      "price": "Od 1.200€ · Partner paket od 49€ mesečno"
     },
     "websites": {
       "title": "Sajtovi i web aplikacije",
       "description": "Moderni sajtovi spremni za Google pretragu, brzo isporučeni — uz održavanje da sve radi i posle puštanja.",
-      "price": "Od 300€ · održavanje od 30€ mesečno"
+      "price": "Od 590€ · Partner paket od 49€ mesečno"
     },
     "enterprise": {
       "title": "Poslovni sistemi",
       "description": "Interni alati, pregledne table, programi koji se prodaju kao usluga. Ako vam je AI deo većeg sistema — gradim i taj sistem oko njega.",
-      "price": "Od 800€ · održavanje od 80€ mesečno"
+      "price": "Od 2.900€ · Partner paket od 149€ mesečno"
     }
   },
   "ChatDemo": {
@@ -122,7 +124,7 @@
       "description": "Radite direktno sa mnom — inženjerom koji piše vaš kod. Bez posrednika, bez agencija između, bez gluvih telefona. Brza komunikacija, bolji rezultati."
     },
     "ownership": {
-      "title": "Održavanje bez brige",
+      "title": "Partner i posle isporuke",
       "description": "Posle isporuke ne ostajete sami. Pratim da sve radi, puštam bezbednosna ažuriranja i ispravljam greške — vi se bavite poslom, ne tehnikom."
     },
     "speed": {
@@ -136,7 +138,7 @@
   },
   "CTA": {
     "title": "Spremni za brži razvoj?",
-    "subtitle": "Dobijte besplatnu konsultaciju bez ikakvih obaveza. Pokazaću vam gde gubite vreme i kako da ubrzate digitalni razvoj.",
+    "subtitle": "Pokazaću vam gde gubite vreme i klijente — i šta bi to rešilo, sa rokom i cenom.",
     "button": "Zakažite besplatnu konsultaciju",
     "calculatorButton": "Započnite projekat →"
   },
@@ -153,7 +155,7 @@
         "f2": "Spreman za Google pretragu od prvog dana",
         "f3": "Otvara se za manje od sekunde",
         "f4": "Sistem za samostalan unos sadržaja — menjajte tekstove kad god",
-        "f5": "Održavanje: ažuriranja, sigurnost i sitne izmene"
+        "f5": "Partner paket: sajt koji stalno radi i napreduje"
       },
       "detail": {
         "extendedDescription": "Bilo da vam treba jednostavan sajt za prezentaciju firme ili složena web aplikacija sa korisničkim nalozima i preglednom tablom — pravim rešenja koja izgledaju profesionalno, rade munjevito brzo i potpuno su vaša.",
@@ -184,7 +186,7 @@
           },
           "q2": {
             "question": "Ko održava sajt posle puštanja?",
-            "answer": "Ja. Uz mesečno održavanje pratim da sajt radi, puštam bezbednosna ažuriranja, ispravljam greške i menjam sitnice u sadržaju. Vi mi samo pošaljete poruku."
+            "answer": "Ja. Uz Partner paket pratim da sajt radi, puštam bezbednosna ažuriranja, menjam sadržaj kad vam zatreba i jednom mesečno vam šaljem izveštaj. Vi mi samo pošaljete poruku."
           },
           "q3": {
             "question": "Da li mogu sam da menjam tekst i slike?",
@@ -192,10 +194,10 @@
           },
           "q4": {
             "question": "Šta ako mi treba nešto posebno?",
-            "answer": "Javite se za besplatan razgovor. Pogledamo šta vam treba i dajem jasan predlog sa rokom i cenom, bez obaveze."
+            "answer": "Pošaljite upit za besplatan probni sajt ili mi pišite. Pogledamo šta vam treba i dobijate jasan predlog sa rokom i cenom — pre nego što bilo šta platite."
           }
         },
-        "ctaText": "Zakažite besplatan razgovor"
+        "ctaText": "Besplatan probni sajt"
       }
     },
     "enterprise": {
@@ -246,10 +248,10 @@
           },
           "q4": {
             "question": "Ko ga održava posle isporuke?",
-            "answer": "Dobijate ceo sistem i uputstva. Mogu da ga održavam ja, ali niste u obavezi — možete angažovati bilo koga drugog jer je sve vaše."
+            "answer": "Ja, uz Partner paket za sistem (od 149 evra mesečno): pratim da sve radi, puštam ažuriranja, sređujem izmene kad zatrebaju i predlažem šta da se doradi. Prvih 30 dana ispravke su besplatne."
           }
         },
-        "ctaText": "Zakažite besplatan razgovor"
+        "ctaText": "Besplatan probni sajt"
       }
     },
     "chatbot": {
@@ -296,14 +298,14 @@
           },
           "q3": {
             "question": "Koliko košta?",
-            "answer": "Izrada kreće od 450 evra. Tačan iznos zavisi od toga koliko toga asistent treba da zna i da li se povezuje sa programima koje već koristite. Održavanje je od 20 evra mesečno i u to je sve uključeno — nema odvojenog računa za korišćenje."
+            "answer": "Izrada kreće od 690 evra. Tačan iznos zavisi od toga koliko toga asistent treba da zna i da li se povezuje sa programima koje već koristite. Partner paket je od 39 evra mesečno i u njemu je sve uključeno — rad asistenta, praćenje razgovora i dopune znanja."
           },
           "q4": {
             "question": "Koliko traje dok ne proradi?",
             "answer": "Prvu probu vidite za tri do pet dana. Da bude spreman za prave posetioce, sa proverenim odgovorima i povezan sa vašim sistemom — nedelju do dve."
           }
         },
-        "ctaText": "Zakažite besplatan razgovor"
+        "ctaText": "Besplatan probni asistent"
       }
     },
     "voice": {
@@ -350,14 +352,14 @@
           },
           "q3": {
             "question": "Koliko košta?",
-            "answer": "Izrada kreće od 600 evra, a tačan iznos zavisi od toga šta asistent treba da radi — samo da se javlja i daje informacije, ili i da zakazuje i upisuje podatke. Održavanje je od 40 evra mesečno i u to je uključeno do 200 minuta razgovora; preko toga se plaća 0,20 evra po minutu."
+            "answer": "Izrada kreće od 990 evra, a tačan iznos zavisi od toga šta asistent treba da radi — samo da se javlja i daje informacije, ili i da zakazuje i upisuje podatke. Partner paket je od 79 evra mesečno i u njega je uključeno do 200 minuta razgovora; preko toga se plaća 0,20 evra po minutu."
           },
           "q4": {
             "question": "Koliko traje dok ne proradi?",
             "answer": "Dve do četiri nedelje. Prvo se dogovorimo šta asistent treba da priča i šta sme sam da uradi. Zatim ga povežem sa vašim kalendarom i brojem telefona. Na kraju slušamo prve razgovore i doterujemo ga dok ne bude kako treba."
           }
         },
-        "ctaText": "Zakažite demo poziv"
+        "ctaText": "Besplatan probni asistent"
       }
     },
     "aiIntegrations": {
@@ -404,14 +406,14 @@
           },
           "q3": {
             "question": "Koliko košta?",
-            "answer": "Izrada kreće od 800 evra i zavisi od toga koliko je posao složen i sa koliko programa se povezuje. Održavanje je od 30 evra mesečno — pokriva praćenje i doterivanje kada se nešto promeni kod vas, na primer novi izgled faktura ili drugi program."
+            "answer": "Izrada kreće od 1.200 evra i zavisi od toga koliko je posao složen i sa koliko programa se povezuje. Partner paket je od 49 evra mesečno — pratim da sve radi i doterujem kad se nešto promeni kod vas, na primer novi izgled faktura ili drugi program."
           },
           "q4": {
             "question": "Šta ako pogreši?",
             "answer": "Tamo gde greška skupo košta, radi tako da predloži, a čovek potvrdi pre nego što se nešto desi. Tamo gde su greške bezopasne, radi sam, ali sve beleži pa uvek možete da proverite šta je uradio."
           }
         },
-        "ctaText": "Zakažite besplatan razgovor"
+        "ctaText": "Besplatna analiza za 48h"
       }
     },
     "detailComingSoon": "Detaljnije informacije uskoro dolaze. U međuvremenu, javite mi se za besplatan razgovor.",
@@ -422,7 +424,7 @@
       "subtitle": "Jednostavan proces. Bez misterije. Bez iznenađenja.",
       "step1": {
         "title": "Besplatna konsultacija",
-        "description": "Razgovaramo o tome šta vam treba i gde gubite vreme. Iskreno vam kažem šta ima smisla. Bez obaveza."
+        "description": "Razgovaramo o tome šta vam treba i gde gubite vreme. Iskreno vam kažem šta ima smisla — i kad to znači da vam ne trebam."
       },
       "step2": {
         "title": "Jasan plan",
@@ -433,8 +435,8 @@
         "description": "Gradim brzo i redovno vam pokazujem dokle se stiglo. Uvek razgovarate direktno sa mnom."
       },
       "step4": {
-        "title": "Puštanje i podrška",
-        "description": "Puštam rešenje u rad i ostajem uz vas: održavanje, ažuriranja i izmene kad zatrebaju."
+        "title": "Puštanje i Partner paket",
+        "description": "Puštam rešenje u rad i ostajem uz vas: pratim da radi, menjam šta zatreba i svakog meseca predlažem šta da bude bolje."
       },
       "titleAccent": "bez iznenađenja."
     },
@@ -492,8 +494,8 @@
     },
     "cta": {
       "title": "Da li odgovaramo jedno drugom?",
-      "subtitle": "Zakažite besplatan video poziv od 30 minuta. Pogledamo vaš problem, ja kažem iskreno da li mogu da pomognem (i koliko bi koštalo) — bez obaveza.",
-      "button": "Zakažite poziv",
+      "subtitle": "Pošaljite ime firme i čime se bavite. Za 48h dobijate probnu verziju sajta ili asistenta napravljenu za vas — pa odlučite kad vidite.",
+      "button": "Besplatan probni sajt",
       "secondary": "Ili pišite na WhatsApp"
     },
     "values": {
@@ -609,8 +611,8 @@
           "description": "Pre početka potpisujemo dokument sa listom poslova i cenom. Sve izmene idu kroz zahtev za izmenu — pregledno i uz vašu saglasnost."
         },
         "ownership": {
-          "title": "Podrška posle isporuke",
-          "description": "Prvih 30 dana ispravljam sve greške besplatno. Posle toga, uz mesečno održavanje, brinem o ažuriranjima, sigurnosti i izmenama."
+          "title": "Partner i posle isporuke",
+          "description": "Prvih 30 dana ispravljam sve greške besplatno. Posle toga Partner paket brine da sve radi, da je bezbedno i da svakog meseca bude malo bolje."
         }
       }
     },
@@ -659,7 +661,7 @@
           }
         },
         "communication": "WhatsApp grupa za brza pitanja i kratak video pregled napretka svakog petka.",
-        "postLaunch": "Trideset dana besplatnog ispravljanja grešaka. Mesečno održavanje od 30€ pokriva server, rezervne kopije i sitne izmene."
+        "postLaunch": "Trideset dana besplatnog ispravljanja grešaka. Posle toga Partner paket od 49€ mesečno: sajt uvek radi, bezbedan je, izmene se rade bez čekanja, a svakog meseca stiže izveštaj."
       },
       "enterprise": {
         "label": "Poslovni sistem",
@@ -836,18 +838,18 @@
       },
       "afterLaunch": {
         "question": "Šta se dešava kada sve proradi?",
-        "answer": "Prvih 30 dana ispravljam sve greške besplatno. Posle toga birate: mesečno održavanje po fiksnoj ceni ili plaćanje samo kada nešto zatreba."
+        "answer": "Prvih 30 dana ispravljam sve greške besplatno. Posle toga birate: Partner paket po fiksnoj mesečnoj ceni ili plaćanje samo kada nešto zatreba."
       }
     },
     "cta": {
       "title": "Spremni da počnemo?",
-      "subtitle": "Popunite kratku formu — ponudu sa fiksnom cenom dobijate u roku od 48 sati.",
-      "button": "Započnite projekat"
+      "subtitle": "Pošaljite ime firme i čime se bavite — za 48h dobijate probnu verziju, a uz nju i ponudu sa fiksnom cenom.",
+      "button": "Besplatan probni sajt"
     }
   },
   "Contact": {
     "title": "Besplatna konsultacija",
-    "subtitle": "Recite mi o vašoj trenutnoj IT organizaciji i pokazaću vam gde gubite vreme i efikasnost. Bez ikakvih obaveza.",
+    "subtitle": "Recite mi šta vam treba. Odgovor stiže u roku od 24h, direktno od mene — sa iskrenim predlogom šta ima smisla.",
     "audit": {
       "title": "Šta dobijate (besplatno)",
       "description": "Konsultacija pokriva sve što treba da znate:",
@@ -1070,8 +1072,8 @@
         "answer": "Podaci se čuvaju na serverima u Evropi ili na vašim serverima — vi birate. Programi koje koristim ne uče na vašim podacima i ne dele ih dalje. Sve je usklađeno sa zakonom o zaštiti podataka o ličnosti."
       },
       "maintenance": {
-        "question": "Šta je uključeno u održavanje?",
-        "answer": "Ispravke grešaka, bezbednosna ažuriranja, praćenje da sve radi i manje izmene sadržaja, uz podršku preko mejla ili WhatsApp-a. Plaća se mesečno, po fiksnoj ceni — bez iznenađenja na računu."
+        "question": "Šta dobijam uz Partner paket?",
+        "answer": "Sajt ili asistent koji stalno radi i svakog meseca je malo bolji: praćenje da je sve dostupno, bezbednosna ažuriranja i rezervne kopije, izmene kad vam zatrebaju, mesečni izveštaj o tome odakle dolaze upiti i predlozi šta da doradimo. Fiksna mesečna cena, direktno sa mnom preko mejla ili WhatsApp-a."
       },
       "timeline": {
         "question": "Koliko traje dok ne proradi?",
@@ -1079,11 +1081,11 @@
       },
       "changes": {
         "question": "Šta ako mi zatreba izmena posle šest meseci?",
-        "answer": "Dve mogućnosti: mesečno održavanje po fiksnoj ceni, u kom su sitne izmene već uključene, ili plaćate samo kada nešto zatreba."
+        "answer": "Uz Partner paket izmene su već uključene — pošaljete poruku i sredim. Bez paketa plaćate samo kad nešto zatreba."
       },
       "contract": {
         "question": "Da li se pravi ugovor ili je sve na reč?",
-        "answer": "Ugovor uvek. U njemu jasno piše šta se radi, do kada, po kojoj ceni, kakva je garancija i šta obuhvata održavanje. Račun za avans na početku, konačan račun po isporuci. Bez sitnih slova."
+        "answer": "Ugovor uvek. U njemu jasno piše šta se radi, do kada, po kojoj ceni, kakva je garancija i šta obuhvata Partner paket. Račun za avans na početku, konačan račun po isporuci. Bez sitnih slova."
       }
     },
     "cta": "Imate drugo pitanje? Pišite mi"
@@ -1344,7 +1346,7 @@
       "accent": "sve što firmi treba.",
       "subtitle": "Od sajta koji dovodi klijente, preko programa po kom radi cela firma, do AI asistenta koji odgovara umesto vas.",
       "from": "od",
-      "upkeep": "održavanje",
+      "upkeep": "+ Partner paket",
       "more": "Saznajte više",
       "items": {
         "websites": {
@@ -1356,8 +1358,8 @@
             "Online prodavnica",
             "Web aplikacija sa korisničkim nalozima"
           ],
-          "price": "300€",
-          "upkeep": "od 30€ mesečno"
+          "price": "590€",
+          "upkeep": "od 49€ mesečno"
         },
         "enterprise": {
           "tag": "Firma",
@@ -1368,22 +1370,23 @@
             "Pregledne table sa podacima",
             "Onlajn platforme i portali za klijente"
           ],
-          "price": "800€",
-          "upkeep": "od 80€ mesečno"
+          "price": "2.900€",
+          "upkeep": "od 149€ mesečno"
         },
         "ai": {
           "tag": "AI",
           "title": "AI asistenti i automatizacija",
           "lead": "Asistent koji na srpskom odgovara na pitanja i zakazuje termine, i automatizacija posla koji se ponavlja.",
           "bullets": [
-            "Chatbot na sajtu — od 450€",
-            "Asistent koji se javlja na telefon — od 600€",
-            "Automatizacija mejlova i dokumenata — od 800€"
+            "Asistent na sajtu — od 690€",
+            "Asistent koji se javlja na telefon — od 990€",
+            "Automatizacija mejlova i dokumenata — od 1.200€"
           ],
-          "price": "450€",
-          "upkeep": "od 20€ mesečno"
+          "price": "690€",
+          "upkeep": "od 39€ mesečno"
         }
-      }
+      },
+      "pricesLink": "Svi paketi i cene"
     },
     "steps": {
       "eyebrow": "Kako izgleda saradnja",
@@ -1391,8 +1394,8 @@
       "accent": "do gotovog rešenja.",
       "items": {
         "s1": {
-          "title": "Besplatan razgovor",
-          "body": "Telefonom ili uživo. Kažete mi šta vam treba i gde gubite vreme, a ja vam iskreno kažem šta ima smisla — i šta nema."
+          "title": "Besplatan probni sajt",
+          "body": "Pošaljete ime firme i čime se bavite. Za 48h vidite probnu verziju napravljenu baš za vas — pre bilo kakve uplate."
         },
         "s2": {
           "title": "Pisana ponuda i ugovor",
@@ -1400,7 +1403,7 @@
         },
         "s3": {
           "title": "Isporuka i podrška",
-          "body": "Pratite napredak od prvog dana i dajete svoje mišljenje usput. Posle puštanja u rad tu sam za izmene i održavanje."
+          "body": "Pratite napredak od prvog dana i dajete svoje mišljenje usput. Posle puštanja u rad ostajem uz vas kao Partner — da sve radi i da bude sve bolje."
         }
       },
       "more": "Detaljno o procesu"
@@ -1421,7 +1424,7 @@
         },
         "support": {
           "title": "Podrška i posle isporuke",
-          "body": "30 dana besplatnih ispravki, pa održavanje po fiksnoj mesečnoj ceni."
+          "body": "30 dana besplatnih ispravki, pa Partner paket po fiksnoj mesečnoj ceni."
         },
         "reply": {
           "title": "Odgovor u roku od 24h",
@@ -1445,11 +1448,130 @@
       "eyebrow": "Pitanja"
     },
     "cta": {
-      "title": "Imate ideju ili problem?",
-      "accent": "Hajde da ga rešimo.",
-      "subtitle": "Besplatan razgovor, bez obaveza. Posle njega znate šta vam treba, koliko košta i koliko traje.",
-      "primary": "Zakažite besplatnu konsultaciju",
+      "title": "Pogledajte svoj novi sajt",
+      "accent": "pre nego što platite.",
+      "subtitle": "Pošaljite ime firme i čime se bavite. Za 48h dobijate probnu verziju napravljenu za vas. Plaćate tek kad vidite nešto što vam se sviđa.",
+      "primary": "Besplatan probni sajt",
       "whatsapp": "Pišite na WhatsApp"
     }
+  },
+  "Pricing": {
+    "eyebrow": "Cene",
+    "title": "Jasne cene,",
+    "accent": "bez iznenađenja.",
+    "subtitle": "Fiksna cena i rok pre početka, u pisanoj ponudi. A pre bilo kakve uplate — besplatan probni sajt, da vidite šta dobijate.",
+    "websites": "Sajtovi",
+    "websitesSub": "Tri paketa. Najčešće se bira Biznis.",
+    "popular": "Najčešći izbor",
+    "delivery": "Gotovo za",
+    "from": "od",
+    "ai": "AI asistenti i automatizacija",
+    "aiSub": "Tačna cena zavisi od toga koliko asistent treba da zna i sa čim se povezuje.",
+    "system": "Poslovni sistemi",
+    "partnerEyebrow": "Partner paket",
+    "partnerTitle": "Sajt nije gotov kad se pusti.",
+    "partnerAccent": "Tada tek počinje da radi.",
+    "partnerSubtitle": "Partner paket je vaš tehnički čovek na mesečnoj bazi: sve radi, sve je bezbedno, izmene se rade bez čekanja — i svakog meseca predlažem šta da bude bolje. Prvih 30 dana posle puštanja ispravke su besplatne bez obzira na paket.",
+    "partnerPrice": "mesečno",
+    "vatNote": "Cene su bez PDV-a. Plaćanje: avans na početku, ostatak po isporuci.",
+    "choose": "Probni sajt za ovaj paket",
+    "chooseAi": "Probni asistent za 48h",
+    "chooseSystem": "Predlog sistema za 48h",
+    "systemProofLabel": "Primer iz prakse",
+    "systemProofTitle": "Spiko Edu: cela škola jezika onlajn za 3 nedelje",
+    "systemProofBody": "Kursevi i vežbe koje škola sama pravi, nalozi polaznika, zakazivanje časova sa Zoom-om i plaćanje karticom — od prvog dana do puštanja u rad za tri nedelje.",
+    "systemProofCta": "Pogledajte studiju slučaja"
+  },
+  "Trial": {
+    "eyebrow": "Besplatno · Plaćate tek kad vam se svidi",
+    "steps": {
+      "s1": {
+        "title": "Popunite formu",
+        "body": "Dva minuta: ime firme, čime se bavite i kako da vam javim."
+      },
+      "s2": {
+        "title": "Pravim probnu verziju",
+        "body": "Na osnovu vaše delatnosti, postojećeg sajta ili Instagrama."
+      },
+      "s3": {
+        "title": "Za 48h dobijate link",
+        "body": "Pogledate i isprobate na telefonu ili računaru. Ako već imate sajt, uz to dobijate i kratku video analizu šta vas na njemu košta klijenata."
+      }
+    },
+    "form": {
+      "business": "Ime firme",
+      "businessPh": "npr. Salon Lana",
+      "activity": "Čime se bavite",
+      "activityPh": "npr. frizerski salon u Novom Sadu",
+      "service": "Šta vas zanima",
+      "serviceOptions": {
+        "sajt": "Sajt",
+        "asistent": "AI asistent (sajt ili telefon)",
+        "sistem": "Poslovni sistem",
+        "nisam": "Nisam siguran — predložite"
+      },
+      "link": "Postojeći sajt ili Instagram (nije obavezno)",
+      "linkPh": "https://…",
+      "name": "Vaše ime",
+      "contact": "Mejl ili telefon",
+      "contactPh": "Gde da pošaljem link",
+      "submit": "Pošalji — stiže za 48h",
+      "sending": "Šaljem…",
+      "success": "Primljeno! Javljam se u roku od 48h sa linkom.",
+      "error": "Nešto nije uspelo. Pišite mi na info@solveradev.rs ili WhatsApp.",
+      "privacy": "Podatke koristim samo da vam pošaljem probnu verziju."
+    },
+    "faq": {
+      "q1": {
+        "q": "Da li je stvarno besplatno?",
+        "a": "Da. Ako vam se probna verzija ne svidi, ne plaćate ništa — rizik je na meni. Pravim je jer je lakše da odlučite kad vidite nego kad čitate ponudu."
+      },
+      "q2": {
+        "q": "Šta tačno dobijam za 48h?",
+        "a": "Link do probne verzije naslovne strane i ključnih delova sajta, sa vašim imenom i delatnošću. Za AI asistenta — probnog asistenta kome možete da postavite pitanja."
+      },
+      "q3": {
+        "q": "Šta ako mi se ne svidi?",
+        "a": "Ništa. Probna verzija se briše i ne dugujete ništa. Ako želite izmene, kažete šta — tako ionako počinje svaki projekat."
+      }
+    },
+    "variants": {
+      "sajt": {
+        "title": "Pogledajte svoj novi sajt",
+        "accent": "pre nego što platite.",
+        "subtitle": "Pošaljite ime firme i čime se bavite. Za 48h dobijate link do probne verzije sajta napravljene baš za vas. Plaćate tek ako vam se svidi."
+      },
+      "asistent": {
+        "title": "Isprobajte svog AI asistenta",
+        "accent": "pre nego što platite.",
+        "subtitle": "Pošaljite ime firme i link do sajta ili Instagrama. Za 48h dobijate probnog asistenta obučenog na vašim podacima — pitajte ga ono što pitaju vaši klijenti. Plaćate tek ako vam se svidi."
+      },
+      "sistem": {
+        "title": "Pogledajte predlog svog sistema",
+        "accent": "pre nego što platite.",
+        "subtitle": "Opišite ukratko kako firma danas radi. Za 48h dobijate predlog sistema sa prikazom glavnih ekrana, rokom i cenom. Plaćate tek ako vam se svidi."
+      },
+      "nisam": {
+        "title": "Pogledajte šta vam možemo napraviti",
+        "accent": "pre nego što platite.",
+        "subtitle": "Pošaljite ime firme i čime se bavite. Za 48h dobijate predlog šta bi vam najviše donelo, uz probnu verziju. Plaćate tek ako vam se svidi."
+      }
+    }
+  },
+  "Calculator": {
+    "eyebrow": "Računica",
+    "title": "Koliko vas koštaju",
+    "accent": "propušteni pozivi i poruke?",
+    "subtitle": "Pomerite klizače prema svom poslu. Brojevi su vaši — računica je jednostavna.",
+    "missed": "Propuštenih poziva i poruka nedeljno",
+    "rate": "Koliko njih bi postalo klijent",
+    "value": "Prosečna vrednost jednog klijenta",
+    "monthly": "Mesečno odlazi kod konkurencije",
+    "yearly": "Godišnje",
+    "payback": "Asistent na telefonu od 990€ se isplati za",
+    "months": "meseci",
+    "month": "mesec",
+    "cta": "Probni asistent za vaš posao",
+    "note": "Računica: propušteni × 4,3 nedelje × procenat × vrednost klijenta."
   }
 }

@@ -30,7 +30,7 @@ export function RagFlowDiagram() {
       ref={ref}
       className="my-8 rounded-2xl border border-border-default bg-surface-secondary p-5 md:p-6"
     >
-      <figcaption className="mb-5 text-xs font-mono uppercase tracking-wider text-foreground-muted">
+      <figcaption className="mb-5 text-xs uppercase tracking-wider text-foreground-muted">
         Kako RAG chatbot dolazi do odgovora
       </figcaption>
 
@@ -45,13 +45,13 @@ export function RagFlowDiagram() {
                 transition={{ delay: i * 0.15, duration: 0.4 }}
                 className={`flex-1 rounded-xl border p-3 text-center ${
                   step.accent
-                    ? "border-emerald-400/25 bg-emerald-400/[0.05]"
+                    ? "border-spicy-400/25 bg-spicy-400/[0.05]"
                     : "border-border-default bg-surface"
                 }`}
               >
                 <div
                   className={`mx-auto mb-2 flex h-9 w-9 items-center justify-center rounded-lg bg-surface-secondary ${
-                    step.accent ? "text-emerald-400" : "text-foreground-muted"
+                    step.accent ? "text-spicy-300" : "text-foreground-muted"
                   }`}
                 >
                   <Icon className="h-5 w-5" />
