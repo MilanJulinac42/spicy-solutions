@@ -8,9 +8,12 @@ import { Cookie } from "lucide-react";
 import { GA_ID } from "@/lib/analytics";
 
 /**
- * Analytics consent. Nothing measuring the visitor may run before they agree,
- * so GA is mounted from here rather than from the layout — declining means the
- * script is never fetched, not merely told to behave.
+ * Analytics consent via Google Consent Mode v2 (advanced). gtag loads for
+ * everyone, but starts with every storage type denied: until the visitor
+ * accepts, no cookies are set and Google only receives cookieless pings
+ * (page viewed, form sent) that it uses for aggregate modelling. That keeps
+ * lead conversions countable for Google Ads without tracking anyone who said
+ * no. Accepting upgrades consent in place; declining leaves it denied.
  *
  * The choice is remembered so the banner asks once, and can be changed later
  * from the privacy policy.
@@ -19,6 +22,19 @@ import { GA_ID } from "@/lib/analytics";
 const STORAGE_KEY = "solvera-cookie-consent";
 
 type Choice = "accepted" | "declined";
+
+const GRANTED = {
+  ad_storage: "granted",
+  ad_user_data: "granted",
+  ad_personalization: "granted",
+  analytics_storage: "granted",
+};
+const DENIED = {
+  ad_storage: "denied",
+  ad_user_data: "denied",
+  ad_personalization: "denied",
+  analytics_storage: "denied",
+};
 
 export function CookieConsent() {
   const [choice, setChoice] = useState<Choice | null>(null);
@@ -50,28 +66,36 @@ export function CookieConsent() {
     try {
       localStorage.setItem(STORAGE_KEY, next);
     } catch {}
+    window.gtag?.("consent", "update", next === "accepted" ? GRANTED : DENIED);
     setChoice(next);
   }
 
   return (
     <>
-      {choice === "accepted" && (
-        <>
-          <Script
-            src={`https://www.googletagmanager.com/gtag/js?id=${GA_ID}`}
-            strategy="afterInteractive"
-          />
-          <Script id="google-analytics" strategy="afterInteractive">
-            {`
-              window.dataLayer = window.dataLayer || [];
-              function gtag(){dataLayer.push(arguments);}
-              window.gtag = gtag;
-              gtag('js', new Date());
-              gtag('config', '${GA_ID}', { send_page_view: false, anonymize_ip: true });
-            `}
-          </Script>
-        </>
-      )}
+      {/* Consent defaults are set in the same script, before config, from the
+          stored choice — so a returning visitor who accepted is measured fully
+          from the first hit, and nobody is ever measured with cookies before
+          saying yes. */}
+      <Script id="google-consent" strategy="afterInteractive">
+        {`
+          window.dataLayer = window.dataLayer || [];
+          function gtag(){dataLayer.push(arguments);}
+          window.gtag = gtag;
+          var accepted = false;
+          try { accepted = localStorage.getItem('${STORAGE_KEY}') === 'accepted'; } catch (e) {}
+          gtag('consent', 'default', Object.assign(
+            accepted ? ${JSON.stringify(GRANTED)} : ${JSON.stringify(DENIED)},
+            { wait_for_update: 500 }
+          ));
+          gtag('set', 'ads_data_redaction', true);
+          gtag('js', new Date());
+          gtag('config', '${GA_ID}', { send_page_view: false, anonymize_ip: true });
+        `}
+      </Script>
+      <Script
+        src={`https://www.googletagmanager.com/gtag/js?id=${GA_ID}`}
+        strategy="afterInteractive"
+      />
 
       <AnimatePresence>
         {decided && choice === null && (
@@ -86,10 +110,10 @@ export function CookieConsent() {
           >
             <div className="flex flex-col gap-4 sm:flex-row sm:items-center">
               <div className="flex flex-1 items-start gap-3">
-                <Cookie className="mt-0.5 h-5 w-5 shrink-0 text-spicy-400" />
+                <Cookie className="mt-0.5 h-5 w-5 shrink-0 text-spicy-300" />
                 <p className="text-sm leading-relaxed text-foreground-muted">
-                  Koristim Google Analytics da vidim koliko ljudi poseti sajt i koje
-                  stranice čitaju. Bez toga sajt radi isto.{" "}
+                  Uz vašu saglasnost koristim Google kolačiće da vidim koliko ljudi
+                  poseti sajt i odakle dolaze upiti. Bez toga sajt radi isto.{" "}
                   <Link
                     href="/politika-privatnosti"
                     className="text-foreground underline decoration-border-default underline-offset-2 hover:decoration-spicy-400"
@@ -102,13 +126,13 @@ export function CookieConsent() {
               <div className="flex shrink-0 gap-2">
                 <button
                   onClick={() => decide("declined")}
-                  className="flex-1 rounded-lg border border-border-default px-4 py-2.5 text-sm font-medium text-foreground-secondary transition-colors hover:border-foreground-muted sm:flex-none"
+                  className="btn-matte flex-1 rounded-full px-4 py-2.5 text-sm font-medium sm:flex-none"
                 >
                   Ne, hvala
                 </button>
                 <button
                   onClick={() => decide("accepted")}
-                  className="flex-1 rounded-lg bg-spicy-400 px-4 py-2.5 text-sm font-semibold text-white transition-colors hover:bg-spicy-500 sm:flex-none"
+                  className="btn-metal flex-1 rounded-full px-4 py-2.5 text-sm font-semibold sm:flex-none"
                 >
                   Prihvatam
                 </button>

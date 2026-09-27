@@ -895,11 +895,11 @@
   "Privacy": {
     "title": "Politika privatnosti",
     "subtitle": "Kako prikupljam, koristim i štitim vaše podatke",
-    "lastUpdated": "Poslednje ažuriranje: mart 2026.",
+    "lastUpdated": "Poslednje ažuriranje: septembar 2026.",
     "intro": "Solvera, brand pod kojim posluje Milan Julinac, posvećena je zaštiti vaše privatnosti. Ova politika objašnjava kako postupam sa vašim podacima u skladu sa Zakonom o zaštiti podataka o ličnosti Republike Srbije.",
     "section1": {
       "title": "Koji podaci se prikupljaju",
-      "p1": "Prikupljam samo podatke koje mi vi dobrovoljno dostavite putem kontakt forme:",
+      "p1": "Prikupljam samo podatke koje mi vi dobrovoljno dostavite putem kontakt forme ili forme za probni sajt:",
       "items": {
         "i1": "Ime i prezime",
         "i2": "Imejl adresa",
@@ -907,7 +907,7 @@
         "i4": "Sadržaj vaše poruke",
         "i5": "Broj telefona i delatnost — isključivo ako sami zatražite demo poziv AI voice agenta. Broj se koristi samo za taj dogovoreni poziv, ne prosleđuje se trećim licima i briše se na vaš zahtev."
       },
-      "p2": "Pored toga, sajt koristi Google Analytics 4 za merenje posećenosti. On postavlja kolačiće i beleži podatke o korišćenju sajta — koje stranice posećujete, koliko se zadržavate, sa kog uređaja i iz koje zemlje dolazite, i osnovne radnje (na primer otvaranje chata ili slanje forme). IP adresa se anonimizuje, a ti podaci se ne povezuju sa vašim imenom ni imejlom. Obradu vrši Google kao pružalac usluge. Merenje možete isključiti blokiranjem kolačića u pregledaču ili zvaničnim Google dodatkom za onemogućavanje Analytics-a.",
+      "p2": "Pored toga, sajt koristi Google Analytics 4 za merenje posećenosti i uspešnosti oglasa. Ako prihvatite kolačiće, beleže se podaci o korišćenju sajta — koje stranice posećujete, koliko se zadržavate, sa kog uređaja i iz koje zemlje dolazite, i osnovne radnje (na primer otvaranje chata ili slanje forme). Ako kolačiće odbijete, ne postavlja se nijedan kolačić: Google dobija samo anonimne signale bez identifikatora (na primer da je stranica otvorena ili forma poslata), koje koristi za zbirnu statistiku. IP adresa se anonimizuje, a ti podaci se ne povezuju sa vašim imenom ni imejlom. Obradu vrši Google kao pružalac usluge. Izbor možete promeniti u svakom trenutku.",
       "p3": "Chat na sajtu čuva istoriju razgovora samo u vašem pregledaču, tokom te posete. Ako u razgovoru ostavite imejl, poruka se čuva kao upit kako bih mogao da vam odgovorim."
     },
     "section2": {
@@ -1517,9 +1517,12 @@
       "contactPh": "Gde da pošaljem link",
       "submit": "Pošalji — stiže za 48h",
       "sending": "Šaljem…",
-      "success": "Primljeno! Javljam se u roku od 48h sa linkom.",
       "error": "Nešto nije uspelo. Pišite mi na info@solveradev.rs ili WhatsApp.",
-      "privacy": "Podatke koristim samo da vam pošaljem probnu verziju."
+      "privacy": "Podatke koristim samo da vam pošaljem probnu verziju.",
+      "timing": "Kada vam treba?",
+      "budget": "Okvirni budžet",
+      "qualifyNote": "Probne verzije pravim za firme koje kreću u narednih mesec dana. Ako se samo raspitujete, dobijate pisanu ponudu sa cenom i rokom.",
+      "submitQueued": "Rezervišite mesto za ponedeljak"
     },
     "faq": {
       "q1": {
@@ -1533,6 +1536,10 @@
       "q3": {
         "q": "Šta ako mi se ne svidi?",
         "a": "Ništa. Probna verzija se briše i ne dugujete ništa. Ako želite izmene, kažete šta — tako ionako počinje svaki projekat."
+      },
+      "q4": {
+        "q": "Zašto je broj mesta ograničen?",
+        "a": "Svaku probnu verziju pravim ručno, za vašu firmu — ne iz šablona. Zato ih je nekoliko nedeljno, da svaka bude urađena kako treba."
       }
     },
     "variants": {
@@ -1555,6 +1562,25 @@
         "title": "Pogledajte šta vam možemo napraviti",
         "accent": "pre nego što platite.",
         "subtitle": "Pošaljite ime firme i čime se bavite. Za 48h dobijate predlog šta bi vam najviše donelo, uz probnu verziju. Plaćate tek ako vam se svidi."
+      }
+    },
+    "capacity": {
+      "left": "Ove nedelje još {n} od {total} mesta",
+      "full": "Ova nedelja je popunjena — prijave idu za ponedeljak",
+      "why": "Probne verzije pravim ručno, za svaku firmu posebno — zato ih je malo."
+    },
+    "outcome": {
+      "trial": {
+        "title": "Primljeno!",
+        "body": "Vaša probna verzija je u izradi. Link stiže u roku od 48h."
+      },
+      "queued": {
+        "title": "Primljeno — prvi ste na redu.",
+        "body": "Ova nedelja je popunjena, pa vašu probnu verziju pravim od ponedeljka, prvu. U roku od 24h vam se javljam da potvrdim."
+      },
+      "offer": {
+        "title": "Primljeno!",
+        "body": "U roku od 24h dobijate pisanu ponudu sa cenom i rokom. Kad budete spremni da krenete, pravim i probnu verziju."
       }
     }
   },
